@@ -36,9 +36,9 @@ from pylab import *
 #----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
 
-class Reservoir:
+class ESN(object):
     ''' 
-    A firing-rate reservoir.
+    A firing-rate esn.
     Internal weights are normalized following the echo-state algorithm
     plus a correction of the infinitesimal rotation/expansion ratio.
     The output function of all units is a positive-truncated tanh.
@@ -59,7 +59,7 @@ class Reservoir:
             weight_mean  = 0.0,
             th           = 0.0,
             amp          = 1.0,
-            radius_amp   = 2.0,
+            radius_amp   = 1.2,
             trunk        = True,
             noise        = False,
             noise_std    = 0.1,
@@ -165,21 +165,25 @@ class Reservoir:
 
     def normalize(self) :
         ''' 
-        Reservoir normalization leading to spectral radius = 1.0
+        Weight normalization leading to spectral radius = 1.0
         '''
         
         # random sparse weigths 
         self.w = (randn(self.N, self.N) + self.WEIGHT_MEAN )* ( 
                 ( rand(self.N, self.N) < self.SPARSENESS) )
+        
         # decompose rotation and translation
         self.w = ( self.ALPHA*(self.w + self.w.T) + 
                   self.BETA*(self.w - self.w.T) +
                   self.GAMMA*eye(self.N) )
+        
         # normalize to spectral radius 1
         self.scale = 1.0 / max(abs(eigvals(self.w)))     
 
     def reset(self):
-
+        '''
+        Reset internal units to the initial state
+        '''
         self.pot *= 0
         self.out *= 0
 
@@ -192,17 +196,10 @@ class Reservoir:
         self.inp = inp
        
         # Collect inputs
-        if not self.NOISE :
-            increment = ( 
-                    + dot(self.w, self.out) 
-                    + inp 
-                    )
-        else :
-            increment = (
-                    + dot(self.w, self.out) 
-                    + self.NOISE_STD*rand(self.N)
-                    + inp 
-                    )
+        increment = dot(self.w, self.out) + inp 
+   
+        if  self.NOISE :
+            increment +=  self.NOISE_STD*rand(self.N)
 
         # Integrate
         self.pot += (self.DT/self.TAU) * \
@@ -212,10 +209,9 @@ class Reservoir:
                 )
 
         # Transfer function
+        self.out = tanh(self.AMP*(self.pot-self.TH))
         if self.TRUNK : 
-            self.out = maximum(0, tanh(self.AMP * (self.pot-self.TH)))
-        else :
-            self.out = tanh(self.AMP*(self.pot-self.TH))
+            self.out = maximum(0, self.out)
 
     def store(self, tt):
         '''
@@ -238,7 +234,7 @@ class Reservoir:
 
 #----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
-#-- MAIN --------------------------------------------------------------------
+#-- TEST --------------------------------------------------------------------
 #----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
 
@@ -247,32 +243,36 @@ if __name__ == "__main__":
 
     close('all')
 
-    reservoir = Reservoir( )      
+    esn = ESN( )      
 
     # prepare an exponenetial decay input function
-    inp =  exp(-linspace(0, 10, reservoir.STIME))
+    inp =  exp(-linspace(0, 10, esn.STIME))
     
-    # the reservoir is randomly connected
-    inp_to_reservoir_w = rand(reservoir.N) * (rand(reservoir.N) <.1)
+    # the esn is randomly connected
+    inp_to_esn_w = rand(esn.N) * (rand(esn.N) <.1)
 
     # integrate
-    for t in xrange(reservoir.STIME) :
-        reservoir.step(inp_to_reservoir_w*inp[t])
-        reservoir.store(t)
+    for t in xrange(esn.STIME) :
+        esn.step(inp_to_esn_w*inp[t])
+        esn.store(t)
     
 
-    X = reservoir.data[reservoir.out_lab].T
-    M = reservoir.w
-    N = reservoir.N
+    X = esn.data[esn.out_lab].T
+    M = esn.w
+    N = esn.N
 
     #plot outputs
     figure("OutputsVsInput")
-    plot(X, linewidth=2)
-    plot(inp*0.1, linewidth=15, color="red")
-    plot(inp*0.1, linewidth=4, color="white")
+    subplot(211)
+    title("ESN activation")
+    plot(X, linewidth=1)
+    subplot(212)
+    title("input")
+    plot(inp*0.1, linewidth=10, color="red")
     
     # plot the spectrogram of the M matrix 
     figure("spectrogram")
+    title("spectrogram of the weight matrix")
     EM, _ = eig( M )     
     radius = max(abs(EM))
     scatter(real(EM), imag(EM))
@@ -288,11 +288,12 @@ if __name__ == "__main__":
     W = W[:, :3]    # get first 3 eigenvectors
     T = dot(B, W)   # first 3 principal components
     
-    # plot the trajectory made by the first 3 principal components    
+    # plot the trajectory made by the first 3 principal components 
     from mpl_toolkits.mplot3d import Axes3D    
     fig = figure("PCA")
-    colors = cm.coolwarm(np.linspace(0, 1, reservoir.STIME))
+    colors = cm.coolwarm(np.linspace(0, 1, esn.STIME))
     ax = fig.add_subplot(111, projection='3d')
+    ax.set_title("trajectory of the first 3 principal components of units'activity")
     ax.plot(
             T[:, 0],
             T[:, 1],
@@ -324,5 +325,5 @@ if __name__ == "__main__":
             facecolor = colors[-1,],
             edgecolor = colors[-1,]
             )
-
+    tight_layout()
     show()
