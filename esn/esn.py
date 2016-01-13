@@ -26,9 +26,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 """
 
-from math import *
-from pylab import *
-
+import numpy as np
+import math
 
 #----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
@@ -49,20 +48,20 @@ class ESN(object):
             name         = "r",
             stime        = 1000,
             dt           = 0.001,
-            tau          = 0.04,
-            N            = 20,
-            alpha        = 0.2,
-            beta         = 0.8,
-            gamma        = 0.0,
-            epsilon      = 0.00001,
+            tau          = 0.01,
+            N            = 100,
+            alpha        = 0.5,
+            beta         = 0.5,
+            epsilon      = .5e-8,
             sparseness   = 1.0,
             weight_mean  = 0.0,
             th           = 0.0,
             amp          = 1.0,
-            radius_amp   = 1.2,
+            radius_amp   = 1.0,
             trunk        = True,
             noise        = False,
             noise_std    = 0.1,
+            spectral_par = [1077.44, -5.42, -1125.28]
             ) :
         """
             name         string:    name of the object 
@@ -72,7 +71,6 @@ class ESN(object):
             N            int:       number of units
             alpha        float:     infinitesimal expansion
             beta         float:     infinitesimal rotation
-            gamma        float:     shift of real eigenvalues
             epsilon      float:     epsilon - spectral radius between is  epsilon and 1
             sparseness   float:     sparseness of weights
             weight_mean  float:     initial mean of random weights 
@@ -92,7 +90,6 @@ class ESN(object):
         self.N = N 
         self.ALPHA = alpha
         self.BETA = beta
-        self.GAMMA = gamma
         self.TH = th
         self.AMP = amp
         self.RADIUS_AMP = radius_amp
@@ -102,11 +99,16 @@ class ESN(object):
         self.SPARSENESS = sparseness 
         self.WEIGHT_MEAN = weight_mean
 
+
         # Variables
-        self.pot = zeros(self.N)    # potentials 
-        self.out = zeros(self.N)    # outputs 
-        self.w = zeros([self.N, self.N])    # inner weights
+        self.pot = np.zeros(self.N)    # potentials 
+        self.out = np.zeros(self.N)    # outputs 
+        self.w = np.zeros([self.N, self.N])    # inner weights
         
+    
+
+        self.normalize_to_echo( epsilon) 
+
         # define labels 
         ( 
             self.pot_lab,
@@ -119,66 +121,49 @@ class ESN(object):
         self.data = dict()    # dictionary of stores 
         
         # initialize to zeros
-        self.data[self.pot_lab] = zeros([self.N, self.STIME])
-        self.data[self.out_lab] = zeros([self.N, self.STIME])
-        self.data[self.inp_lab] = zeros([self.N, self.STIME])
-        self.data[self.w_norm_lab] = zeros(self.STIME)
-        self.data[self.out_mean_lab] = zeros(self.STIME)
-  
-        # optimize weights
-        self.find_max_radius(epsilon)
-
-    def find_max_radius(self, epsilon) :
+        self.data[self.pot_lab] = np.zeros([self.N, self.STIME])
+        self.data[self.out_lab] = np.zeros([self.N, self.STIME])
+        self.data[self.inp_lab] = np.zeros([self.N, self.STIME])
+        self.data[self.w_norm_lab] = np.zeros(self.STIME)
+        self.data[self.out_mean_lab] = np.zeros(self.STIME)
+        
+    def normalize_to_echo(self, epsilon) :
         '''
-        Iteratively find the optimized spectral radius of W so that
-        epsilon < ((dt/tau)*W+(1-(dt/tau))*eye) < 1
-        epsilon    float:      spectral radius must be between epsilon and 1
+        find the optimized spectral radius of W so that rho(1-epsilon) < Wd  < 1,
+        where Wd = (dt/tau)*W+(1-(dt/tau))*eye. See Proposition 2 in Jaeger et al. (2007) http://goo.gl/bqGAJu.
+        
+        epsilon    float:      spectral radius must be between epsilon and 1   
         '''        
         
-        dynamic_spectral = 2    # spectral radius of ((dt/tau)*W+(1-(dt/tau))*eye)
-        effective_spectral = .1    # spectral radius of W
-         
-        # normalize spectral radius to 1
-        self.normalize()
+        self.w = self.randomize()
+ 
+        # the matrix Wd whose spectral radius has to be between 1-epsilon and 1
+        dynamic_w = (self.DT/self.TAU)*self.w + (1 - (self.DT/self.TAU))*np.eye(self.N,self.N)    
+        # normalize the spectral radius (to 1-epsilon)
+        dynamic_w = self.normalize( dynamic_w, (1-epsilon)*self.RADIUS_AMP)
+        # Get W from Wd
+        self.w = (self.TAU/self.DT)*(dynamic_w - (1 - (self.DT/self.TAU))*np.eye(self.N,self.N))
 
-        # iterate to find epsilon < dynamic_spectral < 1
-        while not (((1-epsilon) < dynamic_spectral) 
-                and (dynamic_spectral < 1.0)) :
-        
-            # scale to effective_spectral
-            self.wt = effective_spectral*self.scale*self.w 
-            
-            # find current dynamic_spectral 
-            dynamic_spectral = max( abs( eigvals( 
-                (self.DT/self.TAU)*self.wt + 
-                (1 - (self.DT/self.TAU))*eye(self.N) ) ) )   
-            
-            # increase effective_spectral 
-            # based on current dynamic_spectral
-            effective_spectral = \
-                    effective_spectral/dynamic_spectral 
-        
-        # finally scale weights based on effective_spectral 
-        # and requested amplitude
-        self.w = self.RADIUS_AMP * effective_spectral * \
-                self.scale * self.w 
-
-    def normalize(self) :
+    def randomize(self) :
         ''' 
-        Weight normalization leading to spectral radius = 1.0
+        Make a random sparse matrix with modulated infinitesimal rotation and translation 
         '''
         
         # random sparse weigths 
-        self.w = (randn(self.N, self.N) + self.WEIGHT_MEAN )* ( 
-                ( rand(self.N, self.N) < self.SPARSENESS) )
+        M = (np.random.randn(self.N, self.N) + self.WEIGHT_MEAN )* ( 
+                (np.random.rand(self.N, self.N) < self.SPARSENESS) )
         
         # decompose rotation and translation
-        self.w = ( self.ALPHA*(self.w + self.w.T) + 
-                  self.BETA*(self.w - self.w.T) +
-                  self.GAMMA*eye(self.N) )
-        
+        M = self.ALPHA*(M+ M.T) + self.BETA*(M - M.T) 
+
+        return M
+  
+    def normalize(self, M, rho) :
+        '''
+        Normalize the matrix M so that the spectral radius is rho
+        '''
         # normalize to spectral radius 1
-        self.scale = 1.0 / max(abs(eigvals(self.w)))     
+        return rho * M / np.max(np.abs(np.linalg.eigvals(M)))     
 
     def reset(self):
         '''
@@ -196,10 +181,10 @@ class ESN(object):
         self.inp = inp
        
         # Collect inputs
-        increment = dot(self.w, self.out) + inp 
+        increment = np.dot(self.w, self.out) + inp 
    
         if  self.NOISE :
-            increment +=  self.NOISE_STD*rand(self.N)
+            increment +=  self.NOISE_STD*np.random.rand(self.N)
 
         # Integrate
         self.pot += (self.DT/self.TAU) * \
@@ -209,9 +194,9 @@ class ESN(object):
                 )
 
         # Transfer function
-        self.out = tanh(self.AMP*(self.pot-self.TH))
+        self.out = np.tanh(self.AMP*(self.pot-self.TH))
         if self.TRUNK : 
-            self.out = maximum(0, self.out)
+            self.out = np.maximum(0, self.out)
 
     def store(self, tt):
         '''
@@ -221,7 +206,7 @@ class ESN(object):
         self.data[self.pot_lab][:, t] = self.pot
         self.data[self.out_lab][:, t] = self.out 
         self.data[self.inp_lab][:, t] = self.inp 
-        self.data[self.w_norm_lab][t] = norm(self.w) 
+        self.data[self.w_norm_lab][t] = np.linalg.norm(self.w) 
         self.data[self.out_mean_lab][t] = self.out.mean()
 
     def reset_data(self):
@@ -230,7 +215,6 @@ class ESN(object):
         '''
         for k in self.data :
             self.data[k] = self.data[k]*0
-
 
 #----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
@@ -241,89 +225,13 @@ class ESN(object):
 
 if __name__ == "__main__":
 
-    close('all')
+    sim = ESN(
+        N       = 20,
+        dt      = 0.001,
+        tau     = 0.05,
+        alpha   = 0.1,
+        beta    = 0.9,
+        epsilon = 1.0e-8
+        )
 
-    esn = ESN( )      
-
-    # prepare an exponenetial decay input function
-    inp =  exp(-linspace(0, 10, esn.STIME))
     
-    # the esn is randomly connected
-    inp_to_esn_w = rand(esn.N) * (rand(esn.N) <.1)
-
-    # integrate
-    for t in xrange(esn.STIME) :
-        esn.step(inp_to_esn_w*inp[t])
-        esn.store(t)
-    
-
-    X = esn.data[esn.out_lab].T
-    M = esn.w
-    N = esn.N
-
-    #plot outputs
-    figure("OutputsVsInput")
-    subplot(211)
-    title("ESN activation")
-    plot(X, linewidth=1)
-    subplot(212)
-    title("input")
-    plot(inp*0.1, linewidth=10, color="red")
-    
-    # plot the spectrogram of the M matrix 
-    figure("spectrogram")
-    title("spectrogram of the weight matrix")
-    EM, _ = eig( M )     
-    radius = max(abs(EM))
-    scatter(real(EM), imag(EM))
-    xlim([-(radius*6./4.), (radius*6./4.)])
-    ylim([-(radius*6./4.), (radius*6./4.)])
-    
-    #PCA
-    B = X - X.mean(0)   # subtract mean
-    C = dot(B.T, B)/float(N-1)    # covariance matrix
-    E, W = eig( dot(C.T, C) )     # eigenvalues, eigenvectors
-    E = real(E)    # throw off 0j imag part
-    W = real(W[argsort(E)[::-1]])    # sort eigenvector (throw off 0j imag part)
-    W = W[:, :3]    # get first 3 eigenvectors
-    T = dot(B, W)   # first 3 principal components
-    
-    # plot the trajectory made by the first 3 principal components 
-    from mpl_toolkits.mplot3d import Axes3D    
-    fig = figure("PCA")
-    colors = cm.coolwarm(np.linspace(0, 1, esn.STIME))
-    ax = fig.add_subplot(111, projection='3d')
-    ax.set_title("trajectory of the first 3 principal components of units'activity")
-    ax.plot(
-            T[:, 0],
-            T[:, 1],
-            T[:, 2],
-            linewidth = 0.5,
-            color = "grey"
-            )
-    ax.scatter(
-            T[:, 0],
-            T[:, 1],
-            T[:, 2],
-            s = 40,
-            facecolor = colors,
-            edgecolor = colors
-            )
-    ax.scatter(
-            T[0, 0],
-            T[0, 1],
-            T[0, 2],
-            s = 300,
-            facecolor = colors[0,],
-            edgecolor = colors[0,]
-            )
-    ax.scatter(
-            T[-1::, 0],
-            T[-1::, 1], 
-            T[-1::, 2],
-            s = 300,
-            facecolor = colors[-1,],
-            edgecolor = colors[-1,]
-            )
-    tight_layout()
-    show()

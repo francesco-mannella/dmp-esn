@@ -14,7 +14,10 @@
    id="svg3543"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="esn_discrete.svg">
+   sodipodi:docname="esn_discrete.svg"
+   inkscape:export-filename="/home/francescomannella/Dropbox/Projects/dmp-esn/esn/esn_discrete.png"
+   inkscape:export-xdpi="400"
+   inkscape:export-ydpi="400">
   <defs
      id="defs3545">
     <marker
@@ -82,7 +85,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.3191157"
-     inkscape:cx="113.38008"
+     inkscape:cx="113.98265"
      inkscape:cy="94.273449"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
