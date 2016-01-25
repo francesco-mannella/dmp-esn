@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
-from math import *
-from pylab import *
-
+import numpy as np
+import numpy.random as rnd
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
@@ -16,7 +15,7 @@ def get_matrix(n=200, alpha=0.5, radius=1.0):
     radius (float):  desired spectral radius of the matrix
     '''
     # build a matrix based on alpha
-    W = randn(n,n)
+    W = rnd.randn(n,n)
 
     # decompose
     W1 = (W - W.T)/2.   # rotation
@@ -26,7 +25,7 @@ def get_matrix(n=200, alpha=0.5, radius=1.0):
     W = alpha*W1 + (1-alpha)*W2     
 
     # scale so that the spectral radius is 'radius'
-    W = radius*W*(1/max(abs(eigvals(W))))
+    W = radius*W*(1/np.max(np.abs(np.linalg.eigvals(W))))
     
     return W
     
@@ -48,24 +47,24 @@ def run_dynamics(W, m=1000, n =200,  h=0.1) :
     '''
 
     # dynamics
-    x = randn(n)   # initial values
+    x = rnd.randn(n)   # initial values
     h = 0.1    # integration step
 
-    X = zeros([m,n])    # data storage
+    X = np.zeros([m,n])    # data storage
 
     # integrate over time
     for t in range(m) :
-        x += h*(-x + tanh(dot(W,x)))
+        x += h*(-x + np.tanh(np.dot(W,x)))
         X[t,:] = x
 
     #PCA
     B = X - X.mean(0)   # subtract mean
-    C = dot(B.T,B)/float(n-1)    # covariance matrix
-    E, W = eig( dot(C.T,C) )     # eigenvalues, eigenvectors
-    E = real(E)    # throw off 0j imag part
-    W = real(W[argsort(E)[::-1]])    # sort eigenvector (throw of 0j imag part)
+    C = np.dot(B.T,B)/float(n-1)    # covariance matrix
+    E, W = np.linalg.eig( np.dot(C.T,C) )     # eigenvalues, eigenvectors
+    E = np.real(E)    # throw off 0j imag part
+    W = np.real(W[np.argsort(E)[::-1]])    # sort eigenvector (throw of 0j imag part)
     W = W[:,:3]    # get first 3 eigenvectors
-    T = dot(B,W)   # first 3 principal components
+    T = np.dot(B,W)   # first 3 principal components
     
     return T,X
 
@@ -79,13 +78,13 @@ def plot_matrix(W, T) :
     T (Mx3):         time series of on the first 3 principal components
     '''
     fig = plt.figure(figsize=(8,4))
-    
+   
     # plot the spectrogram of the W matrix 
     ax = fig.add_subplot(121)
-    EM, _ = eig( W )     
-    ax.scatter(real(EM),imag(EM))
-    xlim([-(radius*6./4.),(radius*6./4.)])
-    ylim([-(radius*6./4.),(radius*6./4.)])
+    EM, _ = np.linalg.eig( W )     
+    ax.scatter(np.real(EM),np.imag(EM))
+    ax.set_xlim([-(radius*6./4.),(radius*6./4.)])
+    ax.set_ylim([-(radius*6./4.),(radius*6./4.)])
 
 
     # plot the trajectory made by the first 3 principal components
@@ -102,9 +101,6 @@ def plot_matrix(W, T) :
 
 if __name__ == "__main__" :
 
-    ion()
-    close('all')
-
     n = 200    # number of units 
     radius = 6    # final spectral radius
 
@@ -118,4 +114,4 @@ if __name__ == "__main__" :
         # plot 
         plot_matrix(W, T)
 
-    raw_input()
+    plt.show()
