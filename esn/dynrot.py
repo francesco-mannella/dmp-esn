@@ -3,115 +3,187 @@
 import numpy as np
 import numpy.random as rnd
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
+import sys
 
-def get_matrix(n=200, alpha=0.5, radius=1.0): 
+def get_matrix(n=200, alpha=0.5, radius=1.0, h=0.1, epsilon=1e-4): 
     '''
     Build a random nxn matrix of weights.
 
     n (int):         Number of variables
     alpha (float):   proportion of infinitesimal rotation
     radius (float):  desired spectral radius of the matrix
+    h (float):       decay rate (1/tau) 
+    epsilon (float): infinitesimal distance from the chaotic boundary 
     '''
     # build a matrix based on alpha
-    W = rnd.randn(n,n)
+    W = rnd.randn(n,n) 
 
     # decompose
     W1 = (W - W.T)/2.   # rotation
     W2 = (W + W.T)/2.   # expansion/rotation
-
+    
     # recompose
     W = alpha*W1 + (1-alpha)*W2     
-
-    # scale so that the spectral radius is 'radius'
-    W = radius*W*(1/np.max(np.abs(np.linalg.eigvals(W))))
-    
+  
+    # # compute the infinitesimal dynamic matrix of the system dx = -x + W*tanh(x)  
+    dW = h*W + (1-h)*np.eye(n,n)         
+    # # scale so that the spectral radius is 'radius'
+    dW = (1-epsilon)*((radius*dW)*(1.0/np.max(np.abs(np.linalg.eigvals(dW)))))
+    # # extract W from dW 
+    W = (1.0/h)*(dW - (1-h)*np.eye(n,n))
+     
     return W
     
-def run_dynamics(W, m=1000, n =200,  h=0.1) :
+def run_dynamics(W, m=100, n =200,  h=0.1) :
     ''' 
     Run the dynamics of the system and compute PCA on 
     the time-series.
     
-    dx = -x + W*z
-    z = tanh(x)
+    dx = -x + W*tanh(x)
     
     W (nxn matrix):  Matrix of weights of the system
     m (int):         number of timesteps
     n (int):         Number of independent variables
+    h (float):       decay rate (1/tau) 
 
     return:
     X (Mxn):         time series of the n variables 
     T (Mx3):         time series of on the first 3 principal components
     '''
 
-    # dynamics
-    x = rnd.randn(n)   # initial values
-    h = 0.1    # integration step
 
     X = np.zeros([m,n])    # data storage
+    x = rnd.randn(n)  
+ 
+    def fun(x) : 
+        return np.tanh(x)
 
     # integrate over time
     for t in range(m) :
-        x += h*(-x + np.tanh(np.dot(W,x)))
-        X[t,:] = x
+        x += h*(-x + np.dot(W,fun(x))) 
+        X[t,:] = fun(x)
 
     #PCA
     B = X - X.mean(0)   # subtract mean
     C = np.dot(B.T,B)/float(n-1)    # covariance matrix
-    E, W = np.linalg.eig( np.dot(C.T,C) )     # eigenvalues, eigenvectors
+    E, M = np.linalg.eig( np.dot(C.T,C) )     # eigenvalues, eigenvectors
     E = np.real(E)    # throw off 0j imag part
-    W = np.real(W[np.argsort(E)[::-1]])    # sort eigenvector (throw of 0j imag part)
-    W = W[:,:3]    # get first 3 eigenvectors
-    T = np.dot(B,W)   # first 3 principal components
-    
-    return T,X
+    M = np.real(M[np.argsort(E)[::-1]])    # sort eigenvector (throw of 0j imag part)
+    M = M[:,:3]    # get first 3 eigenvectors
+    T = np.dot(B,M)   # first 3 principal components
 
-def plot_matrix(W, T) :
+    return X,T
+
+
+from matplotlib.gridspec import GridSpec 
+from mpl_toolkits.mplot3d import Axes3D
+def plot_matrix(W, X, T, fig, grid_pos ) :
     '''
-    Plot the spectrogram of the weight matrix
-    and the trajectory of the first 3 principal components
+    Plot the spectrogram of the weight matrix,
+    the timeseries and the trajectory of the first 3 principal components
 
-
-    W (nxn matrix):  Matrix of weights of the system
-    T (Mx3):         time series of on the first 3 principal components
+    W (nxn matrix):             Matrix of weights of the system
+    X (Mxn):                    time series of the n variables 
+    T (Mx3):                    time series of on the first 3 principal components
+    fig (Figure object):
+    grid_pos list(GridSpecs):
     '''
-    fig = plt.figure(figsize=(8,4))
    
-    # plot the spectrogram of the W matrix 
-    ax = fig.add_subplot(121)
-    EM, _ = np.linalg.eig( W )     
-    ax.scatter(np.real(EM),np.imag(EM))
-    ax.set_xlim([-(radius*6./4.),(radius*6./4.)])
-    ax.set_ylim([-(radius*6./4.),(radius*6./4.)])
+    stime = X.shape[0]
 
+    # plot the spectrogram of the W matrix 
+    ax1 = fig.add_subplot(grid_pos[0])
+    EM, _ = np.linalg.eig( W )     
+    ax1.scatter(np.real(EM),np.imag(EM))
+    radius = np.max(np.abs(EM)) 
+    ax1.set_xlim([-radius, radius])
+    ax1.set_ylim([-radius, radius])
+    ax1.xaxis.set_ticks([-radius,0, radius])
+    ax1.yaxis.set_ticks([-radius,0, radius])
+
+
+    
+    # plot the time-series
+    ax2 = fig.add_subplot(grid_pos[1])
+    ax2.plot(X) 
+    ax2.xaxis.set_ticks([0, stime])
+
+   
+    # plot the time-series  zoom
+    ax2 = fig.add_subplot(grid_pos[2])
+    ax2.plot(X[int(stime*0.5):int(stime*0.51),:])  
+    ax2.xaxis.set_ticks([0, int(stime*0.01)])
+    ax2.xaxis.set_ticklabels([int(stime*0.5), int(stime*0.51)])
+    
 
     # plot the trajectory made by the first 3 principal components
-    ax = fig.add_subplot(122, projection='3d')
-    ax.plot(T[:,0],T[:,1],T[:,2])
-    ax.scatter(T[0,0],T[0,1],T[0,2],c="red")
-    ax.scatter(T[-1::,0],T[-1::,1],T[-1::,2],c="blue")
+    ax3 = fig.add_subplot(grid_pos[3],projection="3d")
+    ax3.plot(T[:,0],T[:,1],T[:,2])
+    ax3.scatter(T[0,0],T[0,1],T[0,2],s=60,c ="#ff6666")
+    ax3.scatter(T[-1::,0],T[-1::,1],T[-1::,2],c="blue")
+    ax3.xaxis.set_ticks([  ])
+    ax3.yaxis.set_ticks([  ])
+    ax3.zaxis.set_ticks([  ])
+  
+    
     
     fig.canvas.draw()
+
+def demo() :
+
+    # ------------------------------------------------------------
+    # ------------------------------------------------------------
+    # GRAPHICS 
+    fig = plt.figure(figsize=(12, 12))
+    gs = GridSpec(9, 4)
+    labels = ["spectrogram", 
+            "time-series",
+            "zoom", 
+            "PCA trajectory"]
+    for k in xrange(4):
+        ax = fig.add_subplot(gs[0,k])
+        ax.text(.2,.5,labels[k])
+        ax.set_axis_off()
+    # ------------------------------------------------------------
+    # ------------------------------------------------------------
+  
+    count = 1
+   
+    n = 200    # number of units 
+    m = 10000 
+    
+    # iterate alpha parameter - balance betweeen rot and exp/contr  
+    for alpha in np.linspace(.1,.9,8) :
+         
+        # build the weight matrix
+        W = get_matrix(n, alpha=alpha, h=0.1)
+        # run the dynamics
+        X,T = run_dynamics(W = W, n = n, m = m, h=0.1) 
+  
+        # --------------------------------------------------------
+        # --------------------------------------------------------
+        # GRAPHICS
+        gs_row = [ gs[count, k] for k in xrange(4)]
+        label = "alpha={:4.2f} ".format(alpha )
+        plot_matrix(W, X, T,fig, gs_row )   
+        # --------------------------------------------------------
+        # --------------------------------------------------------
+
+        count += 1
+
+    plt.tight_layout()
 
 
 ############################################################################
 
-
 if __name__ == "__main__" :
+    
 
-    n = 200    # number of units 
-    radius = 6    # final spectral radius
+    plt.ion()
+    plt.close("all")
+    
+    demo()
 
-    # iterate alpha parameter - balance betweeen rot and exp/contr  
-    for alpha in (0.2, 0.5, 0.8) :
+    raw_input()
 
-        # build the weight matrix
-        W = get_matrix(n, alpha, radius)
-        # run the dynamics
-        X,T = run_dynamics(W = W, n = n) 
-        # plot 
-        plot_matrix(W, T)
-
-    plt.show()
