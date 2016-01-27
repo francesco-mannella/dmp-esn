@@ -6,18 +6,24 @@ import matplotlib.pyplot as plt
 
 import sys
 
-def get_matrix(n=200, alpha=0.5, radius=1.0, h=0.1, epsilon=1e-4): 
+def get_matrix(n=200, Winit=np.array([]),  alpha=0.5, radius=1.0, h=0.1, epsilon=1e-4): 
     '''
     Build a random nxn matrix of weights.
 
-    n (int):         Number of variables
-    alpha (float):   proportion of infinitesimal rotation
-    radius (float):  desired spectral radius of the matrix
-    h (float):       decay rate (1/tau) 
-    epsilon (float): infinitesimal distance from the chaotic boundary 
+    n (int):            Number of variables
+    Winit array(float): Number of variables
+    alpha (float):      Proportion of infinitesimal rotation
+    radius (float):     Desired spectral radius of the matrix
+    h (float):          Decay rate (1/tau) 
+    epsilon (float):    Infinitesimal distance from the chaotic boundary 
     '''
-    # build a matrix based on alpha
-    W = rnd.randn(n,n) 
+
+    # initialize random matrix
+    if Winit.size == 0 :
+        # build a matrix based on alpha
+        W = rnd.randn(n,n) 
+    else:
+        W = Winit.copy()
 
     # decompose
     W1 = (W - W.T)/2.   # rotation
@@ -69,7 +75,7 @@ def run_dynamics(W, m=100, n =200,  h=0.1) :
     C = np.dot(B.T,B)/float(n-1)    # covariance matrix
     E, M = np.linalg.eig( np.dot(C.T,C) )     # eigenvalues, eigenvectors
     E = np.real(E)    # throw off 0j imag part
-    M = np.real(M[np.argsort(E)[::-1]])    # sort eigenvector (throw of 0j imag part)
+    M = np.real(M[np.argsort(E)[::-1]])    # sort eigenvector (throw off 0j imag part)
     M = M[:,:3]    # get first 3 eigenvectors
     T = np.dot(B,M)   # first 3 principal components
 
@@ -111,14 +117,19 @@ def plot_matrix(W, X, T, fig, grid_pos ) :
 
    
     # plot the time-series  zoom
-    ax2 = fig.add_subplot(grid_pos[2])
-    ax2.plot(X[int(stime*0.5):int(stime*0.51),:])  
-    ax2.xaxis.set_ticks([0, int(stime*0.01)])
-    ax2.xaxis.set_ticklabels([int(stime*0.5), int(stime*0.51)])
+    ax3 = fig.add_subplot(grid_pos[2])
+    ax3.plot(X[int(stime*0.1):int(stime*0.15),:])  
+    ax3.xaxis.set_ticks([0, int(stime*0.05)])
+    ax3.xaxis.set_ticklabels([int(stime*0.1), int(stime*0.15)])
     
-
+    # plot the time-series  zoom
+    ax4 = fig.add_subplot(grid_pos[3])
+    ax4.plot(X[int(stime*0.5):int(stime*0.55),:])  
+    ax4.xaxis.set_ticks([0, int(stime*0.05)])
+    ax4.xaxis.set_ticklabels([int(stime*0.5), int(stime*0.55)])
+    
     # plot the trajectory made by the first 3 principal components
-    ax3 = fig.add_subplot(grid_pos[3],projection="3d")
+    ax3 = fig.add_subplot(grid_pos[4],projection="3d")
     ax3.plot(T[:,0],T[:,1],T[:,2])
     ax3.scatter(T[0,0],T[0,1],T[0,2],s=60,c ="#ff6666")
     ax3.scatter(T[-1::,0],T[-1::,1],T[-1::,2],c="blue")
@@ -136,14 +147,16 @@ def demo() :
     # ------------------------------------------------------------
     # GRAPHICS 
     fig = plt.figure(figsize=(12, 12))
-    gs = GridSpec(9, 4)
+    gs = GridSpec(9, 6)
     labels = ["spectrogram", 
             "time-series",
-            "zoom", 
-            "PCA trajectory"]
-    for k in xrange(4):
+            "zoom1", 
+            "zoom2", 
+            "PCA\ntrajectory"]
+
+    for k in xrange(1,6):
         ax = fig.add_subplot(gs[0,k])
-        ax.text(.2,.5,labels[k])
+        ax.text(.2,.5,labels[k-1], size=20)
         ax.set_axis_off()
     # ------------------------------------------------------------
     # ------------------------------------------------------------
@@ -151,21 +164,27 @@ def demo() :
     count = 1
    
     n = 200    # number of units 
-    m = 10000 
+    m = 1000 
+    
+    # all simulation start from the same random population of weights
+    Winit = rnd.randn(n,n)
     
     # iterate alpha parameter - balance betweeen rot and exp/contr  
     for alpha in np.linspace(.1,.9,8) :
          
         # build the weight matrix
-        W = get_matrix(n, alpha=alpha, h=0.1)
+        W = get_matrix(n = n, Winit = Winit, alpha = alpha, h = 0.1)
         # run the dynamics
-        X,T = run_dynamics(W = W, n = n, m = m, h=0.1) 
+        X,T = run_dynamics(W = W, n = n, m = m, h = 0.1) 
   
         # --------------------------------------------------------
         # --------------------------------------------------------
         # GRAPHICS
-        gs_row = [ gs[count, k] for k in xrange(4)]
         label = "alpha={:4.2f} ".format(alpha )
+        ax = fig.add_subplot(gs[count,0])
+        ax.text(.05,.5,label, size=20)
+        ax.set_axis_off()
+        gs_row = [ gs[count, k] for k in xrange(1,6)]
         plot_matrix(W, X, T,fig, gs_row )   
         # --------------------------------------------------------
         # --------------------------------------------------------
