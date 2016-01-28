@@ -224,14 +224,26 @@ class ESN(object):
 
 
 if __name__ == "__main__":
+    
+    N = 200
 
     sim = ESN(
-        N       = 20,
+        N       = N,
         dt      = 0.001,
-        tau     = 0.05,
+        tau     = 0.3,
         alpha   = 0.1,
         beta    = 0.9,
         epsilon = 1.0e-8
         )
+
+    for t in xrange(sim.STIME) :
+        inp = np.zeros(N)
+        if t==0:
+            inp = np.random.randn(N)
+        sim.step(inp)
+        sim.store(t)
+
+    np.savetxt("data", sim.data[sim.out_lab].T)
+
 
     
