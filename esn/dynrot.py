@@ -5,8 +5,11 @@ import numpy.random as rnd
 import matplotlib.pyplot as plt
 
 import sys
+  
+def evaluate_rho(m) :
+    return np.max(np.abs(np.linalg.eigvals(m)))
 
-def get_matrix(n=200, Winit=np.array([]),  alpha=0.5, radius=1.0, h=0.1, epsilon=1e-4): 
+def get_matrix(n=200, Winit=np.array([]),  alpha=0.5, radius=1.0, h=0.1, epsilon=1e-8): 
     '''
     Build a random nxn matrix of weights.
 
@@ -25,21 +28,45 @@ def get_matrix(n=200, Winit=np.array([]),  alpha=0.5, radius=1.0, h=0.1, epsilon
     else:
         W = Winit.copy()
 
+    # convenience alias for the identity matrix
+    I = np.eye(n,n)
+    
     # decompose
     W1 = (W - W.T)/2.   # rotation
     W2 = (W + W.T)/2.   # expansion/rotation
     
     # recompose
-    W = alpha*W1 + (1-alpha)*W2     
-  
-    # # compute the infinitesimal dynamic matrix of the system dx = -x + W*tanh(x)  
-    dW = h*W + (1-h)*np.eye(n,n)         
-    # # scale so that the spectral radius is 'radius'
-    dW = (1-epsilon)*((radius*dW)*(1.0/np.max(np.abs(np.linalg.eigvals(dW)))))
-    # # extract W from dW 
-    W = (1.0/h)*(dW - (1-h)*np.eye(n,n))
-     
-    return W
+    W = alpha*W1 + (1-alpha)*W2  
+    
+    # normalize W so that rho = 1
+    W = radius*W/evaluate_rho(W)
+
+    # the iteration has to reach this value 
+    target = 1.0 - epsilon/2.0
+            
+    # initial estimate of required rho
+    rho_estimate = 100
+
+    # compute the effective matrix
+    e_W = h*rho_estimate*W + (1-h)*I 
+
+    # initial estimate of effective rho
+    effective_rho_estimate = evaluate_rho(e_W)
+
+    # while rho of the effective matrix is not 
+    while not ( target < effective_rho_estimate <1.0) :
+        
+        # compute the effective matrix
+        e_W = h*rho_estimate*W + (1-h)*I
+            
+        # compute the effective matrix
+        effective_rho_estimate = evaluate_rho(e_W)
+        
+        # update the estimate of rho so that the estimate of the
+        # effective rho get closer to the target
+        rho_estimate += (1.0/h)*(target-effective_rho_estimate)
+        
+    return rho_estimate*W
     
 def run_dynamics(W, m=100, n =200,  h=0.1) :
     ''' 
@@ -63,7 +90,7 @@ def run_dynamics(W, m=100, n =200,  h=0.1) :
     x = rnd.randn(n)  
  
     def fun(x) : 
-        return np.tanh(x)
+        return np.maximum(0,np.tanh(x))
 
     # integrate over time
     for t in range(m) :
@@ -170,22 +197,25 @@ def demo() :
     Winit = rnd.randn(n,n)
     
     # iterate alpha parameter - balance betweeen rot and exp/contr  
-    for alpha in np.linspace(.1,.9,8) :
+    for alpha in np.linspace(.001,.999,6) :
          
         # build the weight matrix
-        W = get_matrix(n = n, Winit = Winit, alpha = alpha, h = 0.1)
+        W = get_matrix(n = n, Winit = Winit, radius=1.0,  alpha = alpha, h = 0.01)
         # run the dynamics
-        X,T = run_dynamics(W = W, n = n, m = m, h = 0.1) 
+        X,T = run_dynamics(W = W, n = n, m = m, h = 0.01) 
   
         # --------------------------------------------------------
         # --------------------------------------------------------
         # GRAPHICS
-        label = "alpha={:4.2f} ".format(alpha )
+        label = "alpha={:4.2f} ".format(alpha)
         ax = fig.add_subplot(gs[count,0])
         ax.text(.05,.5,label, size=20)
         ax.set_axis_off()
         gs_row = [ gs[count, k] for k in xrange(1,6)]
-        plot_matrix(W, X, T,fig, gs_row )   
+        plot_matrix(W, X, T,fig, gs_row)  
+        fig.canvas.draw()
+        plt.pause(0.01)
+
         # --------------------------------------------------------
         # --------------------------------------------------------
 

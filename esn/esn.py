@@ -29,6 +29,20 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 import numpy as np
 import math
 
+
+def evaluate_rho(m):
+
+    if m.shape [0] != m.shape[1] :
+        raise ValueError( "evaluate_rho(m) requires square matrix" );
+    
+    # find eigenvalues
+    eigenvalues = np.linalg.eigvals(m)
+    
+    # the spectral radius is the maximum between the 
+    # absolute values of eigenvalues.
+    return  np.abs(eigenvalues).max();
+
+
 #----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
 #-- RESERVOIR ---------------------------------------------------------------
@@ -60,8 +74,7 @@ class ESN(object):
             radius_amp   = 1.0,
             trunk        = True,
             noise        = False,
-            noise_std    = 0.1,
-            spectral_par = [1077.44, -5.42, -1125.28]
+            noise_std    = 0.1
             ) :
         """
             name         string:    name of the object 
@@ -99,14 +112,11 @@ class ESN(object):
         self.SPARSENESS = sparseness 
         self.WEIGHT_MEAN = weight_mean
 
-
         # Variables
         self.pot = np.zeros(self.N)    # potentials 
         self.out = np.zeros(self.N)    # outputs 
         self.w = np.zeros([self.N, self.N])    # inner weights
         
-    
-
         self.normalize_to_echo( epsilon) 
 
         # define labels 
@@ -126,7 +136,7 @@ class ESN(object):
         self.data[self.inp_lab] = np.zeros([self.N, self.STIME])
         self.data[self.w_norm_lab] = np.zeros(self.STIME)
         self.data[self.out_mean_lab] = np.zeros(self.STIME)
-        
+
     def normalize_to_echo(self, epsilon) :
         '''
         find the optimized spectral radius of W so that rho(1-epsilon) < Wd  < 1,
@@ -136,13 +146,37 @@ class ESN(object):
         '''        
         
         self.w = self.randomize()
- 
-        # the matrix Wd whose spectral radius has to be between 1-epsilon and 1
-        dynamic_w = (self.DT/self.TAU)*self.w + (1 - (self.DT/self.TAU))*np.eye(self.N,self.N)    
-        # normalize the spectral radius (to 1-epsilon)
-        dynamic_w = self.normalize( dynamic_w, (1-epsilon)*self.RADIUS_AMP)
-        # Get W from Wd
-        self.w = (self.TAU/self.DT)*(dynamic_w - (1 - (self.DT/self.TAU))*np.eye(self.N,self.N))
+        
+        # normalize W so that rho = 1
+        self.w = self.normalize(self.w, 1.0)
+        
+        # the iteration has to reach this value 
+        target = 1.0 - epsilon/2.0
+        
+        # integration step (dt/tau)
+        if np.isscalar(self.TAU): 
+            h = self.DT/self.TAU
+        else:
+            h = self.DT/self.TAU.max()
+        
+        # convenience alias for the identity matrix
+        I = np.eye(self.N,self.N) 
+        
+        e = np.linalg.eigvals(self.w)
+        rho = abs(e).max()
+        x = e.real
+        y = e.imag
+        
+        # solve quadratic equations
+        a = x**2*h**2 + y**2*h**2
+        b = 2*x*h - 2*x*h**2
+        c = 1 + h**2 - 2*h - target**2
+        # just get the positive solutions
+        sol = (-b + np.sqrt(b**2 - 4*a*c))/(2*a)
+        # and take the minor amongst them
+        effective_rho = sol.min()
+        
+        self.w *= effective_rho
 
     def randomize(self) :
         ''' 
@@ -163,7 +197,7 @@ class ESN(object):
         Normalize the matrix M so that the spectral radius is rho
         '''
         # normalize to spectral radius 1
-        return rho * M / np.max(np.abs(np.linalg.eigvals(M)))     
+        return rho * M / evaluate_rho(M)     
 
     def reset(self):
         '''
@@ -230,10 +264,10 @@ if __name__ == "__main__":
     sim = ESN(
         N       = N,
         dt      = 0.001,
-        tau     = 0.3,
-        alpha   = 0.1,
-        beta    = 0.9,
-        epsilon = 1.0e-8
+        tau     = 0.5,
+        alpha   = 0.2,
+        beta    = 0.8,
+        epsilon = 1.0e-5
         )
 
     for t in xrange(sim.STIME) :
@@ -242,6 +276,26 @@ if __name__ == "__main__":
             inp = np.random.randn(N)
         sim.step(inp)
         sim.store(t)
+        
+    
+    try:
+        import matplotlib.pyplot as plt
+        # activity
+        fig = plt.figure(figsize=(12,4))
+        ax = fig.add_subplot(121)
+        x = sim.data[sim.out_lab].T
+        pl = ax.plot(x)
+
+        # spectrogram
+        ax = fig.add_subplot(122)
+        l = np.linalg.eigvals(sim.w)
+        sr = np.max(np.abs(l))
+        sc = ax.scatter(np.real(l), np.imag(l))
+        ax.set_xlim([-sr,sr])
+        ax.set_ylim([-sr,sr])
+        plt.show()
+    except:
+        pass
 
     np.savetxt("data", sim.data[sim.out_lab].T)
 
