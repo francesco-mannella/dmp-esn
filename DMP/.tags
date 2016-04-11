@@ -1,0 +1,140 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CanonicalSystem	../pydmps/cs.py	/^class CanonicalSystem():$/;"	c	inherits:
+DMPs	../pydmps/dmp.py	/^class DMPs(object):$/;"	c	inherits:object
+DMPs_discrete	../pydmps/dmp_discrete.py	/^class DMPs_discrete(DMPs):$/;"	c	inherits:DMPs
+DMPs_rhythmic	../pydmps/dmp_rhythmic.py	/^class DMPs_rhythmic(DMPs):$/;"	c	inherits:DMPs
+ESN	../esn/esn.py	/^class ESN(object):$/;"	c	inherits:object
+ESN	../esn/esn_comp.py	/^class ESN(object):$/;"	c	inherits:object
+ESN_discrete	../esn/esn_discrete.py	/^class ESN_discrete(object) :$/;"	c	inherits:object
+ESN_discrete	../esn/esn_discrete_2d.py	/^class ESN_discrete(object) :$/;"	c	inherits:object
+I	../esn/rho.py	/^I = np.eye(n,n)$/;"	v
+M	../esn/jpca.py	/^M = np.random.randn(n,n)$/;"	v
+Mnew	../esn/jpca.py	/^Mnew = np.zeros(M.shape)$/;"	v
+Mskew	../esn/jpca.py	/^Mskew = (M-M.T)\/2.$/;"	v
+N	../esn/esn.py	/^    N = 200$/;"	v
+N	../esn/esn_comp.py	/^    N = 200$/;"	v
+W	../esn/rho.py	/^W = W\/evaluate_rho(W)$/;"	v
+W	../esn/rho.py	/^W = np.random.randn(n,n)$/;"	v
+__init__	../esn/esn.py	/^    def __init__($/;"	m	class:ESN	access:public
+__init__	../esn/esn_comp.py	/^    def __init__($/;"	m	class:ESN	access:public
+__init__	../esn/esn_discrete.py	/^    def __init__(self, y0=0., goal=1., timesteps=1000, lmbd = 1e-4, input_amplitude=50,  **kargs) :$/;"	m	class:ESN_discrete	access:public
+__init__	../esn/esn_discrete_2d.py	/^    def __init__(self, timesteps=1000, lmbd = 1e-4, input_amplitude=50,  **kargs) :$/;"	m	class:ESN_discrete	access:public
+__init__	../pydmps/cs.py	/^    def __init__(self, dt, pattern='discrete'):$/;"	m	class:CanonicalSystem	access:public
+__init__	../pydmps/dmp.py	/^    def __init__(self, dmps, bfs, dt=.01,$/;"	m	class:DMPs	access:public
+__init__	../pydmps/dmp_discrete.py	/^    def __init__(self, **kwargs): $/;"	m	class:DMPs_discrete	access:public
+__init__	../pydmps/dmp_rhythmic.py	/^    def __init__(self, **kwargs): $/;"	m	class:DMPs_rhythmic	access:public
+a	../pydmps/dmp_discrete.py	/^    a = plt.plot(path1 \/ path1[-1] * dmp.goal[0], 'r--', lw=2)$/;"	v	class:DMPs_discrete
+a	../pydmps/dmp_rhythmic.py	/^    a = plt.plot(path1, 'r--', lw=2)$/;"	v	class:DMPs_rhythmic
+activations	../esn/esn_discrete.py	/^    def activations(self) :$/;"	m	class:ESN_discrete	access:public
+activations	../esn/esn_discrete_2d.py	/^    def activations(self) :$/;"	m	class:ESN_discrete	access:public
+alpha	../pydmps/dmp_tests.py	/^alpha = 1$/;"	v
+ax2	../pydmps/cs.py	/^    ax2 = ax1.twinx()$/;"	v
+b	../pydmps/dmp_discrete.py	/^    b = plt.plot(path2 \/ path2[-1] * dmp.goal[1], 'r--', lw=2)$/;"	v	class:DMPs_discrete
+b	../pydmps/dmp_rhythmic.py	/^    b = plt.plot(path2, 'r--', lw=2)$/;"	v	class:DMPs_rhythmic
+beta	../pydmps/dmp_tests.py	/^beta = alpha\/4.$/;"	v
+build_h	../esn/jpca.py	/^def build_h(n) :$/;"	f	access:public
+check_offset	../pydmps/dmp.py	/^    def check_offset(self):$/;"	m	class:DMPs	access:public
+cs	../pydmps/cs.py	/^    cs = CanonicalSystem(dt=.001, pattern='discrete')$/;"	v
+cs	../pydmps/cs.py	/^    cs = CanonicalSystem(dt=.001, pattern='rhythmic')$/;"	v
+dW	../esn/rho.py	/^dW = dW\/evaluate_rho(dW)$/;"	v
+dW	../esn/rho.py	/^dW = h*r0*W + (1-h)*I$/;"	v
+dW	../esn/rho.py	/^dW = h*r00*W + (1-h)*I$/;"	v
+data	../pydmps/dmp_tests.py	/^data = zeros([stime,2])$/;"	v
+demo	../esn/dynrot.py	/^def demo() :$/;"	f	access:public
+dmp	../pydmps/dmp_discrete.py	/^    dmp = DMPs_discrete(dmps=1, bfs=10, w=np.zeros((1,10)))$/;"	v	class:DMPs_discrete
+dmp	../pydmps/dmp_rhythmic.py	/^    dmp = DMPs_rhythmic(dmps=1, bfs=10, w=np.zeros((1,10)))$/;"	v	class:DMPs_rhythmic
+err	../pydmps/cs.py	/^    err = np.zeros(timesteps)$/;"	v
+err_coup	../pydmps/cs.py	/^    err_coup = 1.0 \/ (1 + err)$/;"	v
+evaluate_rho	../esn/dynrot.py	/^def evaluate_rho(m) :$/;"	f	access:public
+evaluate_rho	../esn/esn.py	/^def evaluate_rho(m):$/;"	f	access:public
+evaluate_rho	../esn/esn_comp.py	/^def evaluate_rho(m):$/;"	f	access:public
+evaluate_rho	../esn/rho.py	/^def evaluate_rho(m) :$/;"	f	access:public
+fd	../esn/fit_spectr.py	/^fd = np.array( [[0.2,0.15,0.1,0.05,0.02],[2000,1300,700,250,70]])$/;"	v
+fitFunc	../esn/fit_spectr.py	/^def fitFunc(t, a, b, c):$/;"	f	access:public
+fun	../esn/dynrot.py	/^    def fun(x) : $/;"	f	function:run_dynamics	access:public
+g	../pydmps/dmp_tests.py	/^g = 1.0$/;"	v
+gen_centers	../pydmps/dmp_discrete.py	/^    def gen_centers(self):$/;"	m	class:DMPs_discrete	access:public
+gen_centers	../pydmps/dmp_rhythmic.py	/^    def gen_centers(self):$/;"	m	class:DMPs_rhythmic	access:public
+gen_front_term	../pydmps/dmp.py	/^    def gen_front_term(self, x, dmp_num): raise NotImplementedError()$/;"	m	class:DMPs	access:public
+gen_front_term	../pydmps/dmp_discrete.py	/^    def gen_front_term(self, x, dmp_num):$/;"	m	class:DMPs_discrete	access:public
+gen_front_term	../pydmps/dmp_rhythmic.py	/^    def gen_front_term(self, x, dmp_num):$/;"	m	class:DMPs_rhythmic	access:public
+gen_goal	../pydmps/dmp.py	/^    def gen_goal(self, y_des): raise NotImplementedError()$/;"	m	class:DMPs	access:public
+gen_goal	../pydmps/dmp_discrete.py	/^    def gen_goal(self, y_des): $/;"	m	class:DMPs_discrete	access:public
+gen_goal	../pydmps/dmp_rhythmic.py	/^    def gen_goal(self, y_des): $/;"	m	class:DMPs_rhythmic	access:public
+gen_psi	../pydmps/dmp.py	/^    def gen_psi(self): raise NotImplementedError()$/;"	m	class:DMPs	access:public
+gen_psi	../pydmps/dmp_discrete.py	/^    def gen_psi(self, x):$/;"	m	class:DMPs_discrete	access:public
+gen_psi	../pydmps/dmp_rhythmic.py	/^    def gen_psi(self, x):$/;"	m	class:DMPs_rhythmic	access:public
+gen_weights	../pydmps/dmp.py	/^    def gen_weights(self, f_target): raise NotImplementedError()$/;"	m	class:DMPs	access:public
+gen_weights	../pydmps/dmp_discrete.py	/^    def gen_weights(self, f_target):$/;"	m	class:DMPs_discrete	access:public
+gen_weights	../pydmps/dmp_rhythmic.py	/^    def gen_weights(self, f_target): $/;"	m	class:DMPs_rhythmic	access:public
+get_matrix	../esn/dynrot.py	/^def get_matrix(n=200, Winit=np.array([]),  alpha=0.5, radius=1.0, h=0.1, epsilon=1e-8): $/;"	f	access:public
+h	../esn/rho.py	/^h = 0.1$/;"	v
+idcs	../esn/jpca.py	/^idcs = np.hstack([kidcs,knidcs])$/;"	v
+imitate_path	../esn/esn_discrete.py	/^    def imitate_path(self, y_des) :$/;"	m	class:ESN_discrete	access:public
+imitate_path	../esn/esn_discrete_2d.py	/^    def imitate_path(self,  y_des) :$/;"	m	class:ESN_discrete	access:public
+imitate_path	../pydmps/dmp.py	/^    def imitate_path(self, y_des):$/;"	m	class:DMPs	access:public
+index	../esn/jpca.py	/^def index(idcs,nBin) :$/;"	f	access:public
+indices	../esn/jpca.py	/^def indices(x,nDim,nBin) :$/;"	f	access:public
+interpolate	../esn/esn_discrete.py	/^    def interpolate(self, path) :$/;"	m	class:ESN_discrete	access:public
+interpolate	../esn/esn_discrete_2d.py	/^    def interpolate(self, path) :$/;"	m	class:ESN_discrete	access:public
+k	../esn/jpca.py	/^k = []$/;"	v
+k	../esn/jpca.py	/^k = np.array(k)$/;"	v
+m	../esn/jpca.py	/^m = np.dot(H,k)$/;"	v
+n	../esn/jpca.py	/^n = 5$/;"	v
+n	../esn/rho.py	/^n = 10$/;"	v
+normalize	../esn/esn.py	/^    def normalize(self, M, rho) :$/;"	m	class:ESN	access:public
+normalize	../esn/esn_comp.py	/^    def normalize(self, M, rho) :$/;"	m	class:ESN	access:public
+normalize_to_echo	../esn/esn.py	/^    def normalize_to_echo(self, epsilon) :$/;"	m	class:ESN	access:public
+normalize_to_echo	../esn/esn_comp.py	/^    def normalize_to_echo(self, epsilon) :$/;"	m	class:ESN	access:public
+num_bfs	../pydmps/dmp_discrete.py	/^    num_bfs = [10, 30, 50, 100, 10000]$/;"	v	class:DMPs_discrete
+num_bfs	../pydmps/dmp_rhythmic.py	/^    num_bfs = [10, 30, 50, 100, 10000]$/;"	v	class:DMPs_rhythmic
+path1	../pydmps/dmp_discrete.py	/^    path1 = np.sin(np.arange(0,1,.01)*5)$/;"	v	class:DMPs_discrete
+path1	../pydmps/dmp_rhythmic.py	/^    path1 = np.sin(np.arange(0,2*np.pi,.01)*5)$/;"	v	class:DMPs_rhythmic
+path2	../pydmps/dmp_discrete.py	/^    path2 = np.zeros(path1.shape)$/;"	v	class:DMPs_discrete
+path2	../pydmps/dmp_rhythmic.py	/^    path2 = np.zeros(path1.shape)$/;"	v	class:DMPs_rhythmic
+plot_matrix	../esn/dynrot.py	/^def plot_matrix(W, X, T, fig, grid_pos ) :$/;"	f	access:public
+r0	../esn/rho.py	/^r0 = 1$/;"	v
+r00	../esn/rho.py	/^r00 = evaluate_rho( (1.\/h)*(dW -(1-h)*I) )$/;"	v
+randomize	../esn/esn.py	/^    def randomize(self) :$/;"	m	class:ESN	access:public
+randomize	../esn/esn_comp.py	/^    def randomize(self) :$/;"	m	class:ESN	access:public
+reset	../esn/esn.py	/^    def reset(self):$/;"	m	class:ESN	access:public
+reset	../esn/esn_comp.py	/^    def reset(self):$/;"	m	class:ESN	access:public
+reset_data	../esn/esn.py	/^    def reset_data(self):$/;"	m	class:ESN	access:public
+reset_data	../esn/esn_comp.py	/^    def reset_data(self):$/;"	m	class:ESN	access:public
+reset_state	../pydmps/cs.py	/^    def reset_state(self):$/;"	m	class:CanonicalSystem	access:public
+reset_state	../pydmps/dmp.py	/^    def reset_state(self):$/;"	m	class:DMPs	access:public
+rollout	../esn/esn_discrete.py	/^    def rollout(self, y0=0., goal=1.) :$/;"	m	class:ESN_discrete	access:public
+rollout	../esn/esn_discrete_2d.py	/^    def rollout(self, y0=(0., 0.), goal=(1., 1.) ) :$/;"	m	class:ESN_discrete	access:public
+rollout	../pydmps/cs.py	/^    def rollout(self, **kwargs):$/;"	m	class:CanonicalSystem	access:public
+rollout	../pydmps/dmp.py	/^    def rollout(self, timesteps=None, **kwargs):$/;"	m	class:DMPs	access:public
+run_dynamics	../esn/dynrot.py	/^def run_dynamics(W, m=100, n =200,  h=0.1) :$/;"	f	access:public
+sigma	../esn/fit_spectr.py	/^         ]$/;"	v
+sim	../esn/esn.py	/^    sim = ESN($/;"	v
+sim	../esn/esn_comp.py	/^    sim = ESN($/;"	v
+sim	../esn/esn_discrete.py	/^    sim = ESN_discrete()$/;"	v	class:ESN_discrete
+sim	../esn/esn_discrete_2d.py	/^    sim = ESN_discrete()$/;"	v	class:ESN_discrete
+step	../esn/esn.py	/^    def step(self, inp):  $/;"	m	class:ESN	access:public
+step	../esn/esn_comp.py	/^    def step(self, inp):  $/;"	m	class:ESN	access:public
+step	../pydmps/dmp.py	/^    def step(self, tau=1.0, state_fb=None):$/;"	m	class:DMPs	access:public
+step_discrete	../pydmps/cs.py	/^    def step_discrete(self, tau=1.0, error_coupling=1.0):$/;"	m	class:CanonicalSystem	access:public
+step_rhythmic	../pydmps/cs.py	/^    def step_rhythmic(self, tau=1.0, error_coupling=1.0):$/;"	m	class:CanonicalSystem	access:public
+stime	../pydmps/dmp_tests.py	/^stime = 250$/;"	v
+store	../esn/esn.py	/^    def store(self, tt):$/;"	m	class:ESN	access:public
+store	../esn/esn_comp.py	/^    def store(self, tt):$/;"	m	class:ESN	access:public
+tau	../pydmps/dmp_tests.py	/^tau = 10.0$/;"	v
+timesteps	../pydmps/cs.py	/^    timesteps = int(1.0\/.001)$/;"	v
+trajectory	../esn/esn_discrete.py	/^    trajectory = sim.rollout(y0=0.0, goal=1.0)$/;"	v	class:ESN_discrete
+trajectory	../esn/esn_discrete_2d.py	/^    trajectory = sim.rollout(y0=(0., 0.), goal=(1., 1.))$/;"	v	class:ESN_discrete
+x	../esn/esn_discrete.py	/^    x = np.linspace(0,1,1000)$/;"	v	class:ESN_discrete
+x	../esn/esn_discrete_2d.py	/^    x = np.linspace(0,1,1000)$/;"	v	class:ESN_discrete
+x_track1	../pydmps/cs.py	/^    x_track1 = cs.rollout()$/;"	v
+x_track2	../pydmps/cs.py	/^    x_track2 = np.zeros(timesteps)$/;"	v
+y	../pydmps/dmp_tests.py	/^y = 1$/;"	v
+y1	../esn/esn_discrete.py	/^    y1 = x $/;"	v	class:ESN_discrete
+y1	../esn/esn_discrete_2d.py	/^    y1 = np.vstack((x,np.sin(x))).T $/;"	v	class:ESN_discrete
+z	../pydmps/dmp_tests.py	/^z = 1$/;"	v

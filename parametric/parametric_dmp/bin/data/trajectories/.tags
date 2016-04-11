@@ -1,0 +1,22 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ax	../results/plot.py	/^ax = fig.add_subplot(111)$/;"	v
+ax	../trajectories/plot.py	/^ax = fig.add_subplot(111)$/;"	v
+fig	../results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../trajectories/plot.py	/^fig = plt.figure()$/;"	v
+pathname	../results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+t	../results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+test_results	../results/plot.py	/^test_results= []$/;"	v
+test_results	../trajectories/plot.py	/^test_results= []$/;"	v
+tests	../results/plot.py	/^tests = []$/;"	v
+tests	../trajectories/plot.py	/^tests = []$/;"	v
+trains	../results/plot.py	/^trains = []$/;"	v
+trains	../trajectories/plot.py	/^trains = []$/;"	v
+trial_results	../results/plot.py	/^trial_results= []$/;"	v
+trial_results	../trajectories/plot.py	/^trial_results= []$/;"	v

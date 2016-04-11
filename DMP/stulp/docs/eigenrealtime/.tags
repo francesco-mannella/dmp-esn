@@ -1,0 +1,71 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN_DIR	../images/makefile	/^BIN_DIR = .\/$/;"	m
+Black-box Optimization with Evolution Strategies	../tutorial/tutorial.tex	/^\\input{ ..\/..\/build_dir\/docs\/latex\/page_func_approx}$/;"	c
+Dynamical Movement Primitives	../tutorial/tutorial.tex	/^\\input{ ..\/..\/build_dir\/docs\/latex\/page_dyn_sys}$/;"	c
+Dynamical Systems	../tutorial/tutorial.tex	/^\\newpage$/;"	c
+EIGEN_RUNTIME_NO_MALLOC	../eigenrealtime/gaussian.cpp	4;"	d	file:
+EIGEN_RUNTIME_NO_MALLOC	../eigenrealtime/realtimechecks.hpp	5;"	d
+ENTERING_REAL_TIME_CRITICAL_CODE	../eigenrealtime/realtimechecks.hpp	15;"	d
+ENTERING_REAL_TIME_CRITICAL_CODE	../eigenrealtime/realtimechecks.hpp	8;"	d
+EXITING_REAL_TIME_CRITICAL_CODE	../eigenrealtime/realtimechecks.hpp	16;"	d
+EXITING_REAL_TIME_CRITICAL_CODE	../eigenrealtime/realtimechecks.hpp	9;"	d
+Eigen::internal::set_is_malloc_allowed	../eigenrealtime/gaussian.cpp	/^  Eigen::internal::set_is_malloc_allowed(false);$/;"	p	class:Eigen::internal	file:	signature:(false)
+Eigen::internal::set_is_malloc_allowed	../eigenrealtime/gaussian.cpp	/^  Eigen::internal::set_is_malloc_allowed(true);$/;"	p	class:Eigen::internal	file:	signature:(true)
+Function Approximation for the Forcing Term	../tutorial/tutorial.tex	/^\\bibliography{..\/dmp}$/;"	c
+SOURCE_PDF	../images/makefile	/^SOURCE_PDF := $(shell find -name '*.pdf')$/;"	m
+SOURCE_PNG	../images/makefile	/^SOURCE_PNG := $(shell find -name '*.png')$/;"	m
+SOURCE_SVG	../images/makefile	/^SOURCE_SVG := $(shell find -name '*.svg')$/;"	m
+SVG_EXPORT	../images/makefile	/^SVG_EXPORT=inkscape --without-gui --export-area-drawing $/;"	m
+TARGETS	../eigenrealtime/Makefile	/^TARGETS = nonrealtime realtime realtime_check_eigen gaussian_check_eigen$/;"	m
+TARGETS	../tutorial/makefile	/^TARGETS := tutorial.pdf$/;"	m
+TARGET_PDF_PDF	../images/makefile	/^TARGET_PDF_PDF := $(addprefix ${BIN_DIR}\/,${TARGET_PDF_PDF})$/;"	m
+TARGET_PDF_PDF	../images/makefile	/^TARGET_PDF_PDF = $(SOURCE_PDF:.pdf=-pdf.pdf)$/;"	m
+TARGET_PNG_PNG	../images/makefile	/^TARGET_PNG_PNG := $(addprefix ${BIN_DIR}\/,${TARGET_PNG_PNG})$/;"	m
+TARGET_PNG_PNG	../images/makefile	/^TARGET_PNG_PNG = $(SOURCE_PNG:.png=-png.png)$/;"	m
+TARGET_SVG_PDF	../images/makefile	/^TARGET_SVG_PDF := $(addprefix ${BIN_DIR}\/,${TARGET_SVG_PDF})$/;"	m
+TARGET_SVG_PDF	../images/makefile	/^TARGET_SVG_PDF = $(SOURCE_SVG:.svg=-svg.pdf)$/;"	m
+TARGET_SVG_PNG	../images/makefile	/^TARGET_SVG_PNG := $(addprefix ${BIN_DIR}\/,${TARGET_SVG_PNG})$/;"	m
+TARGET_SVG_PNG	../images/makefile	/^TARGET_SVG_PNG = $(SOURCE_SVG:.svg=-svg.png)$/;"	m
+a	../eigenrealtime/nonrealtime.cpp	/^  MatrixXd a,b,c;$/;"	l
+a	../eigenrealtime/realtime.cpp	/^  MatrixXd a,b,c;$/;"	l
+b	../eigenrealtime/nonrealtime.cpp	/^  MatrixXd a,b,c;$/;"	l
+b	../eigenrealtime/realtime.cpp	/^  MatrixXd a,b,c;$/;"	l
+b	../eigenrealtime/realtime.cpp	/^  b += c;$/;"	l
+c	../eigenrealtime/nonrealtime.cpp	/^  MatrixXd a,b,c;$/;"	l
+c	../eigenrealtime/realtime.cpp	/^  MatrixXd a,b,c;$/;"	l
+covar_determinant	../eigenrealtime/gaussian.cpp	/^  double covar_determinant = covar.determinant();$/;"	l
+covar_inverse	../eigenrealtime/gaussian.cpp	/^  MatrixXd covar_inverse = covar.inverse();$/;"	l
+covar_times_diff_prealloc	../eigenrealtime/gaussian.cpp	/^  VectorXd covar_times_diff_prealloc(mean.size());$/;"	p	file:	signature:(mean.size())
+diff_prealloc	../eigenrealtime/gaussian.cpp	/^  VectorXd diff_prealloc(mean.size());$/;"	p	file:	signature:(mean.size())
+endl	../eigenrealtime/gaussian.cpp	/^  cout << "  covar=" << endl << covar << endl;$/;"	l
+endl	../eigenrealtime/gaussian.cpp	/^  cout << "  input=" << endl << input << endl;$/;"	l
+endl	../eigenrealtime/gaussian.cpp	/^  cout << "  mean=" << endl << mean << endl;  $/;"	l
+endl	../eigenrealtime/realtime.cpp	/^  cout << a << endl; $/;"	l
+images_for_docs	../images/images_for_docs.m	/^function images_for_docs$/;"	f
+init	../eigenrealtime/nonrealtime.cpp	/^void init(MatrixXd& a, MatrixXd& b, MatrixXd& c, int size)$/;"	f	signature:(MatrixXd& a, MatrixXd& b, MatrixXd& c, int size)
+init	../eigenrealtime/realtime.cpp	/^void init(MatrixXd& a, MatrixXd& b, MatrixXd& c, int size)$/;"	f	signature:(MatrixXd& a, MatrixXd& b, MatrixXd& c, int size)
+inside_exp	../eigenrealtime/gaussian.cpp	/^  double inside_exp = -0.5*(diff_prealloc).dot(covar_times_diff_prealloc);$/;"	l
+inside_exp	../eigenrealtime/gaussian.cpp	/^  double inside_exp = -0.5*(mean-input).dot(covar.inverse()*(mean-input));$/;"	l
+main	../eigenrealtime/gaussian.cpp	/^int main(int n_args, char** args)$/;"	f	signature:(int n_args, char** args)
+main	../eigenrealtime/nonrealtime.cpp	/^int main(int n_args, char** args)$/;"	f	signature:(int n_args, char** args)
+main	../eigenrealtime/realtime.cpp	/^int main(int n_args, char** args)$/;"	f	signature:(int n_args, char** args)
+mean	../eigenrealtime/gaussian.cpp	/^  VectorXd mean  = VectorXd::Zero(2);$/;"	l
+noalias	../eigenrealtime/gaussian.cpp	/^  covar_times_diff_prealloc.noalias() = covar_inverse*diff_prealloc;$/;"	p	file:	signature:()
+noalias	../eigenrealtime/realtime.cpp	/^  a.noalias() += b*c;$/;"	p	file:	signature:()
+noalias	../eigenrealtime/realtime.cpp	/^  tmp.noalias() = b*c;$/;"	p	file:	signature:()
+normalPDF	../eigenrealtime/gaussian.cpp	/^double normalPDF(const VectorXd& mean, const MatrixXd& covar, const VectorXd& input) {$/;"	f	signature:(const VectorXd& mean, const MatrixXd& covar, const VectorXd& input)
+normalPDFRealTime	../eigenrealtime/gaussian.cpp	/^double normalPDFRealTime(const VectorXd& mean, const MatrixXd& covar, const VectorXd& input) {$/;"	f	signature:(const VectorXd& mean, const MatrixXd& covar, const VectorXd& input)
+normalization	../eigenrealtime/gaussian.cpp	/^  double normalization = pow(pow(2*M_PI,input.size()*covar_determinant),-0.5);$/;"	l
+prealloc	../eigenrealtime/realtime.cpp	/^  MatrixXd prealloc = MatrixXd(size,size);$/;"	l
+set_is_malloc_allowed	../eigenrealtime/gaussian.cpp	/^  Eigen::internal::set_is_malloc_allowed(false);$/;"	p	class:Eigen::internal	file:	signature:(false)
+set_is_malloc_allowed	../eigenrealtime/gaussian.cpp	/^  Eigen::internal::set_is_malloc_allowed(true);$/;"	p	class:Eigen::internal	file:	signature:(true)
+size	../eigenrealtime/nonrealtime.cpp	/^  int size = 3;$/;"	l
+size	../eigenrealtime/realtime.cpp	/^  int size = 2;$/;"	l
+update	../eigenrealtime/nonrealtime.cpp	/^void update(MatrixXd& a, MatrixXd& b, MatrixXd& c)$/;"	f	signature:(MatrixXd& a, MatrixXd& b, MatrixXd& c)
+update	../eigenrealtime/realtime.cpp	/^    update(a,b,c,prealloc);$/;"	p	file:	signature:(a,b,c,prealloc)
+update	../eigenrealtime/realtime.cpp	/^void update(MatrixXd& a, MatrixXd& b, MatrixXd& c, MatrixXd& tmp)$/;"	f	signature:(MatrixXd& a, MatrixXd& b, MatrixXd& c, MatrixXd& tmp)

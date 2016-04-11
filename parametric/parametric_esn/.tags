@@ -1,0 +1,564 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	../parametric_esn/scripts/make_trajectories.py	/^            A = a_s[a]$/;"	v
+A1	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^A1 = np.linspace(np.pi*.25,np.pi+np.pi*.25,NY)$/;"	v
+A2	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^A2 = np.linspace(np.pi*.25 + da2, np.pi+np.pi*.25 -da2, NT)$/;"	v
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	326;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	329;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	332;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	335;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	338;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	341;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	344;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	348;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	319;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	322;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	325;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	328;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	331;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	334;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	337;"	d	file:
+ARCHITECTURE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	341;"	d	file:
+B	../parametric_esn/scripts/make_trajectories.py	/^            B = b_s[b]$/;"	v
+CMAKE_BINARY_DIR	../parametric_dmp/build/Makefile	/^CMAKE_BINARY_DIR = \/home\/francescomannella\/Dropbox\/Projects\/dmp-esn\/parametric\/parametric_dmp\/build$/;"	m
+CMAKE_BINARY_DIR	../parametric_dmp/build/src/Makefile	/^CMAKE_BINARY_DIR = \/home\/francescomannella\/Dropbox\/Projects\/dmp-esn\/parametric\/parametric_dmp\/build$/;"	m
+CMAKE_COMMAND	../parametric_dmp/build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	../parametric_dmp/build/src/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	../parametric_dmp/build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/francescomannella\/Dropbox\/Projects\/dmp-esn\/parametric\/parametric_dmp$/;"	m
+CMAKE_SOURCE_DIR	../parametric_dmp/build/src/Makefile	/^CMAKE_SOURCE_DIR = \/home\/francescomannella\/Dropbox\/Projects\/dmp-esn\/parametric\/parametric_dmp$/;"	m
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	106;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	109;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	111;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	120;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	133;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	143;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	154;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	181;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	186;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	191;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	198;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	215;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	218;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	221;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	59;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	65;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	71;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	77;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	91;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	98;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	103;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	111;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	114;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	133;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	138;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	145;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	148;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	156;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	175;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	183;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	188;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	191;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	208;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	211;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	214;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	39;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	48;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	64;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	70;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	76;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	82;"	d	file:
+COMPILER_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	96;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	100;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	114;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	121;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	129;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	135;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	147;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	156;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	15;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	175;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	193;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	201;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	206;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	35;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	48;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	60;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	67;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	73;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	85;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	93;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	105;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	126;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	14;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	158;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	177;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	199;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	20;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	40;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	53;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	72;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	78;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	85;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	90;"	d	file:
+COMPILER_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	101;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	115;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	130;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	136;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	148;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	157;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	176;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	194;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	207;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	36;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	61;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	68;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	74;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	81;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	86;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	94;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	106;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	120;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	127;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	135;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	141;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	150;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	159;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	178;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	195;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	200;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	41;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	54;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	66;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	73;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	79;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	86;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	91;"	d	file:
+COMPILER_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	99;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	102;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	124;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	150;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	164;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	177;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	18;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	195;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	203;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	208;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	20;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	38;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	50;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	62;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	82;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	87;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	95;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	100;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	121;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	129;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	142;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	163;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	166;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	179;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	196;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	201;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	23;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	25;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	43;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	55;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	67;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	87;"	d	file:
+COMPILER_VERSION_PATCH	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+COMPILER_VERSION_TWEAK	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	168;"	d	file:
+COMPILER_VERSION_TWEAK	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	24;"	d	file:
+COMPILER_VERSION_TWEAK	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	44;"	d	file:
+COMPILER_VERSION_TWEAK	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+COMPILER_VERSION_TWEAK	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	29;"	d	file:
+COMPILER_VERSION_TWEAK	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	49;"	d	file:
+DEC	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	352;"	d	file:
+DEC	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	345;"	d	file:
+EQUALS	../parametric_dmp/build/Makefile	/^EQUALS = =$/;"	m
+EQUALS	../parametric_dmp/build/src/Makefile	/^EQUALS = =$/;"	m
+ESN_ALPHA	../parametric_esn/esn_parametric.py	/^ESN_ALPHA = 0.2$/;"	v
+ESN_BETA	../parametric_esn/esn_parametric.py	/^ESN_BETA = 0.8$/;"	v
+ESN_DT	../parametric_esn/esn_parametric.py	/^ESN_DT = 0.001$/;"	v
+ESN_EPSILON	../parametric_esn/esn_parametric.py	/^ESN_EPSILON = 1.0e-60 $/;"	v
+ESN_INP_AMPLIFICATION	../parametric_esn/esn_parametric.py	/^ESN_INP_AMPLIFICATION = 0.5$/;"	v
+ESN_LMBD	../parametric_esn/esn_parametric.py	/^ESN_LMBD = 5e-4$/;"	v
+ESN_N	../parametric_esn/esn_parametric.py	/^ESN_N = 3000 $/;"	v
+ESN_N_DIM	../parametric_esn/esn_parametric.py	/^ESN_N_DIM = 2$/;"	v
+ESN_START_WINDOW	../parametric_esn/esn_parametric.py	/^ESN_START_WINDOW = 20$/;"	v
+ESN_TAU	../parametric_esn/esn_parametric.py	/^ESN_TAU = 0.05$/;"	v
+HEX	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	363;"	d	file:
+HEX	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	356;"	d	file:
+ID_VOID_MAIN	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	9;"	d	file:
+N	../parametric_esn/esn_parametric.py	/^            N=ESN_N, $/;"	v
+NBF	../parametric_dmp/src/one_dimensional_task.cpp	/^    VectorXi NBF = VectorXi::Constant(N_INPUT_DIM, 3);$/;"	l
+NT	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^NT = NY-1$/;"	v
+NT	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^NT = 9-1$/;"	v
+NY	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^NY = 9$/;"	v
+NY	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^NY  = 9$/;"	v
+N_DIMS	../parametric_dmp/src/one_dimensional_task.cpp	/^    int N_DIMS = 1; \/\/ number of dimensions of the trajectory $/;"	l
+N_INPUT_DIM	../parametric_dmp/src/one_dimensional_task.cpp	/^    int N_INPUT_DIM = 1; \/\/ number of expected dimensions of each $/;"	l
+N_TASK_PARAMETERS	../parametric_dmp/src/one_dimensional_task.cpp	/^    int N_TASK_PARAMETERS = 1; \/\/ number of task parameters$/;"	l
+N_TESTSET	../parametric_dmp/src/one_dimensional_task.cpp	/^    int N_TESTSET = 0; \/\/ number of trajectories in the test set (to be read)$/;"	l
+N_TRAINSET	../parametric_dmp/src/one_dimensional_task.cpp	/^    int N_TRAINSET = 0; \/\/ number of trajectories in the training set (to be read)$/;"	l
+P1	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^P1 = np.linspace(0.0005, 0.005, NY)$/;"	v
+P2	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^P2 = np.linspace(0.0005 + dp2, 0.005 - dp2, NT)$/;"	v
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	240;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	243;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	246;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	249;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	252;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	255;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	258;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	261;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	264;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	267;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	270;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	273;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	276;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	279;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	282;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	285;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	288;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	291;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	294;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	297;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	300;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	303;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	306;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	309;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	312;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	315;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	233;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	236;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	239;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	242;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	245;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	248;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	251;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	254;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	257;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	260;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	263;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	266;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	269;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	272;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	275;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	278;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	281;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	284;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	287;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	290;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	293;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	296;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	299;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	302;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	305;"	d	file:
+PLATFORM_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	308;"	d	file:
+PLOT_ONLINE	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^PLOT_ONLINE = True$/;"	v
+PLOT_ONLINE	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^PLOT_ONLINE = False$/;"	v
+RM	../parametric_dmp/build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	../parametric_dmp/build/src/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+SHELL	../parametric_dmp/build/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	../parametric_dmp/build/src/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SIMULATE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	27;"	d	file:
+SIMULATE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
+SIMULATE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	32;"	d	file:
+SIMULATE_ID	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	57;"	d	file:
+SIMULATE_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	29;"	d	file:
+SIMULATE_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	54;"	d	file:
+SIMULATE_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	34;"	d	file:
+SIMULATE_VERSION_MAJOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	59;"	d	file:
+SIMULATE_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	30;"	d	file:
+SIMULATE_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	55;"	d	file:
+SIMULATE_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	35;"	d	file:
+SIMULATE_VERSION_MINOR	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	60;"	d	file:
+SUFFIXES	../parametric_dmp/build/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	../parametric_dmp/build/src/Makefile	/^SUFFIXES =$/;"	m
+T	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^T = []$/;"	v
+TIMESTEPS	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^TIMESTEPS = 200$/;"	v
+TIMESTEPS	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^TIMESTEPS = 200$/;"	v
+Y	../parametric_esn/esn_parametric.py	/^        Y = []$/;"	v
+Y	../parametric_esn/esn_parametric.py	/^        Y = np.vstack(Y).T$/;"	v
+Y	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^Y = []$/;"	v
+Y_formatted	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^    Y_formatted = format_trajectories(Y, LY, SY, EY, tsY)$/;"	v
+a	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^a =  atot[np.arange(NT)*2+1]$/;"	v
+a	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^a =  atot[np.arange(NY)*2]$/;"	v
+a_n	../parametric_esn/scripts/make_trajectories.py	/^a_n = 10$/;"	v
+a_s	../parametric_esn/scripts/make_trajectories.py	/^a_s = np.linspace(0.0, 1.0 ,a_n)$/;"	v
+alpha	../parametric_esn/esn_parametric.py	/^            alpha=ESN_ALPHA,$/;"	v
+analyticalSolution	../parametric_dmp/src/one_dimensional_task.cpp	/^         dmp->analyticalSolution($/;"	p	file:	signature:( testset_trajectories[i_test].ts(), reproduced_trajectories[i_test], forcing_terms[i_test])
+angle_range	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^angle_range = 0.9$/;"	v
+args	../parametric_esn/esn_parametric.py	/^    args = parser.parse_args()$/;"	v
+artl	../parametric_esn/esn_parametric.py	/^        artl = [ts1.reshape(len(ts1),1)]$/;"	v
+artl	../parametric_esn/esn_parametric.py	/^        artl = [ts2.reshape(len(ts2),1)]$/;"	v
+artl	../parametric_esn/esn_parametric.py	/^        artl = np.hstack(artl)$/;"	v
+atot	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^atot = np.linspace(np.pi,0,NY+NT)$/;"	v
+ax	../parametric_dmp/bin/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../parametric_dmp/bin/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../parametric_esn/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../parametric_esn/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../parametric_esn/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^    ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../parametric_esn/scripts/make_trajectories.py	/^ax = fig.add_subplot(111, projection='3d')$/;"	v
+b_n	../parametric_esn/scripts/make_trajectories.py	/^b_n =  10$/;"	v
+b_s	../parametric_esn/scripts/make_trajectories.py	/^b_s = np.linspace(0.0, 1.0 ,b_n)$/;"	v
+beta	../parametric_esn/esn_parametric.py	/^            beta=ESN_BETA, $/;"	v
+boost::filesystem::remove	../parametric_dmp/src/one_dimensional_task.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
+c	../parametric_esn/scripts/make_trajectories.py	/^            c = B $/;"	v
+cc	../parametric_esn/scripts/make_trajectories.py	/^cc = matplotlib.colors.LinearSegmentedColormap.from_list($/;"	v
+cy	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^        cy = y[:,d].ravel()$/;"	v
+da	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^da = np.pi\/float(NT)$/;"	v
+da2	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^da2 = (A1[1]-A1[0])*0.5$/;"	v
+directory	../parametric_esn/esn_parametric.py	/^    directory = "data\/trajectories"$/;"	v
+directory	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^directory = "data\/trajectories"$/;"	v
+directory	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^directory = "data\/trajectories"$/;"	v
+directory	../parametric_esn/scripts/make_trajectories.py	/^directory = "trajectories"$/;"	v
+dmp	../parametric_dmp/src/one_dimensional_task.cpp	/^    DmpContextual* dmp = new DmpContextualOneStep($/;"	l
+dp2	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^dp2 = (P1[1]-P1[0])*0.5$/;"	v
+dt	../parametric_esn/esn_parametric.py	/^            dt=ESN_DT,$/;"	v
+dt	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^dt = ts[1]-ts[0]$/;"	v
+dt	../parametric_esn/scripts/make_trajectories.py	/^dt = t[1] - t[0]$/;"	v
+dt1	../parametric_esn/esn_parametric.py	/^    dt1 = ts1[1]-ts1[0]$/;"	v
+dt2	../parametric_esn/esn_parametric.py	/^    dt2 = ts2[1]-ts2[0]$/;"	v
+dx	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^dx = xr\/float(NT)$/;"	v
+end_itr	../parametric_dmp/src/one_dimensional_task.cpp	/^    boost::filesystem::directory_iterator end_itr; $/;"	l
+endl	../parametric_dmp/src/one_dimensional_task.cpp	/^         cout << endl;$/;"	l
+endl	../parametric_dmp/src/one_dimensional_task.cpp	/^        cout << "Saving reproduced trajectories to " << results << endl;$/;"	l
+endl	../parametric_dmp/src/one_dimensional_task.cpp	/^    cout << "    task parameters :=" << endl;$/;"	l
+endl	../parametric_dmp/src/one_dimensional_task.cpp	/^    cout << "Integrate the Contextual Dmp: " << endl;$/;"	l
+epsilon	../parametric_esn/esn_parametric.py	/^            epsilon=ESN_EPSILON )$/;"	v
+exists	../parametric_dmp/src/one_dimensional_task.cpp	/^    assert(boost::filesystem::exists(trajectories) && "there's no directory called 'data\/trajectories'");$/;"	p	file:	signature:(trajectories)
+fig	../parametric_dmp/bin/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../parametric_dmp/bin/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../parametric_esn/data/plot.py	/^fig = plt.figure()$/;"	v
+fig	../parametric_esn/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../parametric_esn/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^    fig = plt.figure()$/;"	v
+fig	../parametric_esn/scripts/make_trajectories.py	/^fig = plt.figure()$/;"	v
+filename	../parametric_dmp/src/one_dimensional_task.cpp	/^        auto filename = i->path().filename().string();$/;"	l
+filepath	../parametric_dmp/src/one_dimensional_task.cpp	/^        auto filepath = i->path().string();$/;"	l
+fmt	../parametric_esn/esn_parametric.py	/^                fmt="%#14.6f")$/;"	v
+forcing_terms	../parametric_dmp/src/one_dimensional_task.cpp	/^    vector<MatrixXd> forcing_terms(N_TESTSET);$/;"	p	file:	signature:(N_TESTSET)
+format_trajectories	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^    def format_trajectories(Y, L, S, E, ts ):$/;"	f	access:public
+function_approximators	../parametric_dmp/src/one_dimensional_task.cpp	/^    vector<FunctionApproximator*> function_approximators(N_DIMS);    $/;"	p	file:	signature:(N_DIMS)
+further_ltimesteps	../parametric_esn/esn_parametric.py	/^            further_ltimesteps = ltimesteps\/2$/;"	v
+further_ltimesteps	../parametric_esn/esn_parametric.py	/^    further_ltimesteps = None    # number of trial further timesteps $/;"	v
+further_ttimesteps	../parametric_esn/esn_parametric.py	/^            further_ttimesteps = ttimesteps\/2$/;"	v
+further_ttimesteps	../parametric_esn/esn_parametric.py	/^    further_ttimesteps = None    # number of trial further timesteps $/;"	v
+gen_trajectory	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^def gen_trajectory(start, goal, $/;"	f	access:public
+gen_trajectory	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^def gen_trajectory(start, goal, $/;"	f	access:public
+get_angle	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^def get_angle(v1,v2) :$/;"	f	access:public
+get_angle	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^def get_angle(v1,v2) :$/;"	f	access:public
+goal	../parametric_esn/esn_parametric.py	/^                goal=test_trajectories[x][-1],$/;"	v
+goal	../parametric_esn/esn_parametric.py	/^                goal=trial_trajectories[x][-1],$/;"	v
+goal_T	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^goal_T =[]$/;"	v
+goal_Y	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^goal_Y =[]$/;"	v
+help	../parametric_esn/esn_parametric.py	/^            help="number of parameters",$/;"	v
+info_arch	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_platform	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_simulate	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate_version	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v
+info_simulate_version	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v
+info_version	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
+info_version	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
+inp_amplification	../parametric_esn/esn_parametric.py	/^            inp_amplification=ESN_INP_AMPLIFICATION,$/;"	v
+lmbd	../parametric_esn/esn_parametric.py	/^            lmbd=ESN_LMBD,$/;"	v
+log	../parametric_dmp/src/one_dimensional_task.cpp	/^    string log = "\/tmp";$/;"	l
+ltimesteps	../parametric_esn/esn_parametric.py	/^            ltimesteps = len(ts1)$/;"	v
+ltimesteps	../parametric_esn/esn_parametric.py	/^    ltimesteps = None    # number of trial timesteps $/;"	v
+ltimesteps	../parametric_esn/esn_parametric.py	/^    ltimesteps = ltimesteps+further_ltimesteps$/;"	v
+lw	../parametric_esn/scripts/make_trajectories.py	/^            lw = 2 - 2*(A*0.1-2.0)\/6.0  $/;"	v
+main	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+main	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+main	../parametric_dmp/src/one_dimensional_task.cpp	/^int main()$/;"	f	signature:()
+meta_parameters	../parametric_dmp/src/one_dimensional_task.cpp	/^    MetaParametersLWR meta_parameters(N_INPUT_DIM, NBF);$/;"	p	file:	signature:(N_INPUT_DIM, NBF)
+misc	../parametric_esn/scripts/make_trajectories.py	/^            misc = np.tile((A, B), [len(x),1]).T$/;"	v
+n_dim	../parametric_dmp/bin/data/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../parametric_dmp/bin/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../parametric_esn/data/plot.py	/^n_dim = None$/;"	v
+n_dim	../parametric_esn/data/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../parametric_esn/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../parametric_esn/esn_parametric.py	/^            n_dim = int((tr.shape[1]-1-n_params)\/3)$/;"	v
+n_dim	../parametric_esn/esn_parametric.py	/^            n_dim=ESN_N_DIM,$/;"	v
+n_dim	../parametric_esn/esn_parametric.py	/^        n_dim = int((tr.shape[1]-1-n_params)\/3)$/;"	v
+n_dim	../parametric_esn/esn_parametric.py	/^    n_dim = None$/;"	v
+n_params	../parametric_esn/esn_parametric.py	/^            n_params=n_params,$/;"	v
+n_params	../parametric_esn/esn_parametric.py	/^    n_params = int(args.num_of_params)$/;"	v
+n_tests	../parametric_esn/esn_parametric.py	/^    n_tests = len(test_trajectories)$/;"	v
+n_trials	../parametric_esn/esn_parametric.py	/^    n_trials = len(trial_trajectories)$/;"	v
+overwrite	../parametric_dmp/src/one_dimensional_task.cpp	/^        bool overwrite = true;$/;"	l
+overwrite	../parametric_dmp/src/one_dimensional_task.cpp	/^    bool overwrite = true; \/\/ if we can overvrite files in the results$/;"	l
+p	../parametric_esn/esn_parametric.py	/^        p = np.outer(np.ones(len(rtl)), test_params[x])$/;"	v
+p	../parametric_esn/esn_parametric.py	/^        p = np.outer(np.ones(len(rtl)), trial_params[x])$/;"	v
+param	../parametric_esn/esn_parametric.py	/^                param=test_params[x] )$/;"	v
+param	../parametric_esn/esn_parametric.py	/^                param=trial_params[x] )$/;"	v
+params	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^params = np.linspace(0,1,len(Y))$/;"	v
+params	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^params = params[1]\/2 + np.linspace(0,1-params[1],len(T))$/;"	v
+params	../parametric_esn/scripts/make_trajectories.py	/^params = []$/;"	v
+parser	../parametric_esn/esn_parametric.py	/^    parser = argparse.ArgumentParser()$/;"	v
+pathname	../parametric_dmp/bin/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../parametric_dmp/bin/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../parametric_esn/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../parametric_esn/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../parametric_esn/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+plot_trajectories	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^def plot_trajectories(Y, L, ax, color):$/;"	f	access:public
+prms	../parametric_esn/esn_parametric.py	/^        prms = tr[0,-n_params:].ravel()      $/;"	v
+prms	../parametric_esn/esn_parametric.py	/^        prms = tr[0,-n_params:].ravel()$/;"	v
+push_back	../parametric_dmp/src/one_dimensional_task.cpp	/^            testset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
+push_back	../parametric_dmp/src/one_dimensional_task.cpp	/^            trainset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
+qnxnto	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto";$/;"	v
+qnxnto	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto";$/;"	v
+r	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^r = .15$/;"	v
+remove	../parametric_dmp/src/one_dimensional_task.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
+reproduced_trajectories	../parametric_dmp/src/one_dimensional_task.cpp	/^    vector<Trajectory> reproduced_trajectories(N_TESTSET);$/;"	p	file:	signature:(N_TESTSET)
+require	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^  int require = 0;$/;"	l
+require	../parametric_dmp/build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  int require = 0;$/;"	l
+res_names	../parametric_esn/esn_parametric.py	/^    res_names = glob.glob(results+"\/rtl*") + glob.glob(results+"\/rtt*")$/;"	v
+results	../parametric_dmp/src/one_dimensional_task.cpp	/^    string results = "data\/results";$/;"	l
+results	../parametric_esn/esn_parametric.py	/^    results = 'data\/results' $/;"	v
+results	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^results = 'data\/results' $/;"	v
+results	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^results = 'data\/results' $/;"	v
+rr	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^rr = rrtot[np.arange(NT)*2+1]$/;"	v
+rr	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^rr = rrtot[np.arange(NY)*2]$/;"	v
+rrtot	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^rrtot = .2 + np.linspace(0,1,NY+NT)*r$/;"	v
+rtl	../parametric_esn/esn_parametric.py	/^        rtl = sim.rollout($/;"	v
+rtl_dim	../parametric_esn/esn_parametric.py	/^            rtl_dim = []$/;"	v
+rtl_dim	../parametric_esn/esn_parametric.py	/^            rtl_dim = np.vstack(rtl_dim).T$/;"	v
+rtld	../parametric_esn/esn_parametric.py	/^            rtld = np.hstack((0,rtl[1:,d]-rtl[:-1,d]))\/dt1$/;"	v
+rtld	../parametric_esn/esn_parametric.py	/^            rtld = np.hstack((0,rtl[1:,d]-rtl[:-1,d]))\/dt2$/;"	v
+rtldd	../parametric_esn/esn_parametric.py	/^            rtldd = np.hstack((0,rtld[1:]-rtld[:-1]))\/dt1$/;"	v
+rtldd	../parametric_esn/esn_parametric.py	/^            rtldd = np.hstack((0,rtld[1:]-rtld[:-1]))\/dt2$/;"	v
+saveToFile	../parametric_dmp/src/one_dimensional_task.cpp	/^            reproduced_trajectories[i_test].saveToFile(results,stream.str(),overwrite);$/;"	p	file:	signature:(results,stream.str(),overwrite)
+set_task_parameters	../parametric_dmp/src/one_dimensional_task.cpp	/^         dmp->set_task_parameters(testset_task_parameters.row(i_test));$/;"	p	file:	signature:(testset_task_parameters.row(i_test))
+sim	../parametric_esn/esn_parametric.py	/^    sim = ESN_discrete($/;"	v
+start_T	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^start_T =[]$/;"	v
+start_Y	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^start_Y =[]$/;"	v
+start_window	../parametric_esn/esn_parametric.py	/^            start_window=ESN_START_WINDOW,$/;"	v
+stime	../parametric_esn/scripts/make_trajectories.py	/^stime = 500$/;"	v
+stream	../parametric_dmp/src/one_dimensional_task.cpp	/^            stringstream stream;$/;"	l
+t	../parametric_dmp/bin/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../parametric_dmp/bin/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../parametric_esn/data/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../parametric_esn/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../parametric_esn/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../parametric_esn/scripts/make_trajectories.py	/^t = np.linspace(0.,1.,stime+2)$/;"	v
+tau	../parametric_esn/esn_parametric.py	/^            tau=ESN_TAU,$/;"	v
+test_files	../parametric_dmp/src/one_dimensional_task.cpp	/^    std::vector< std::string > test_files;$/;"	l
+test_params	../parametric_esn/esn_parametric.py	/^    test_params = []$/;"	v
+test_results	../parametric_dmp/bin/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../parametric_dmp/bin/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../parametric_esn/data/plot.py	/^test_results= []$/;"	v
+test_results	../parametric_esn/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../parametric_esn/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_trajectories	../parametric_esn/esn_parametric.py	/^    test_trajectories = []$/;"	v
+test_trajectories_names	../parametric_esn/esn_parametric.py	/^    test_trajectories_names = glob.glob(directory+"\/tt*")   $/;"	v
+tests	../parametric_dmp/bin/data/results/plot.py	/^tests = []$/;"	v
+tests	../parametric_dmp/bin/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../parametric_esn/data/plot.py	/^tests = []$/;"	v
+tests	../parametric_esn/data/results/plot.py	/^tests = []$/;"	v
+tests	../parametric_esn/data/trajectories/plot.py	/^tests = []$/;"	v
+testset_task_parameters	../parametric_dmp/src/one_dimensional_task.cpp	/^            cout << testset_task_parameters(i_test, p) << " ";$/;"	p	file:	signature:(i_test, p)
+testset_task_parameters	../parametric_dmp/src/one_dimensional_task.cpp	/^    MatrixXd testset_task_parameters(N_TESTSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TESTSET, N_TASK_PARAMETERS)
+testset_trajectories	../parametric_dmp/src/one_dimensional_task.cpp	/^    vector<Trajectory> testset_trajectories;  $/;"	l
+timesteps	../parametric_esn/esn_parametric.py	/^            timesteps=ttimesteps,$/;"	v
+tl_count	../parametric_esn/scripts/make_trajectories.py	/^tl_count = 0$/;"	v
+tr	../parametric_esn/esn_parametric.py	/^        tr = np.loadtxt(tr_name)$/;"	v
+tr_names	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^tr_names = glob.glob(directory+"\/tl*")+ glob.glob(directory+"\/tt*")$/;"	v
+tr_names	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^tr_names = glob.glob(directory+"\/tl*")+ glob.glob(directory+"\/tt*")$/;"	v
+train	../parametric_dmp/src/one_dimensional_task.cpp	/^    dmp->train(trainset_trajectories, log, overwrite);$/;"	p	file:	signature:(trainset_trajectories, log, overwrite)
+train_files	../parametric_dmp/src/one_dimensional_task.cpp	/^    std::vector< std::string > train_files;$/;"	l
+train_task_parameters	../parametric_dmp/src/one_dimensional_task.cpp	/^    MatrixXd train_task_parameters(N_TRAINSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TRAINSET, N_TASK_PARAMETERS)
+trains	../parametric_dmp/bin/data/results/plot.py	/^trains = []$/;"	v
+trains	../parametric_dmp/bin/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../parametric_esn/data/plot.py	/^trains = []$/;"	v
+trains	../parametric_esn/data/results/plot.py	/^trains = []$/;"	v
+trains	../parametric_esn/data/trajectories/plot.py	/^trains = []$/;"	v
+trainset_trajectories	../parametric_dmp/src/one_dimensional_task.cpp	/^    vector<Trajectory> trainset_trajectories;  $/;"	l
+trajectories	../parametric_dmp/src/one_dimensional_task.cpp	/^    string trajectories = "data\/trajectories";$/;"	l
+trajectories	../parametric_esn/scripts/make_parametric_cursive_e_trajectories.py	/^def trajectories(cursive_es, angles):$/;"	f	access:public
+trajectories	../parametric_esn/scripts/make_trajectories.py	/^trajectories = []$/;"	v
+trial_params	../parametric_esn/esn_parametric.py	/^    trial_params = []$/;"	v
+trial_results	../parametric_dmp/bin/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../parametric_dmp/bin/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../parametric_esn/data/plot.py	/^trial_results= []$/;"	v
+trial_results	../parametric_esn/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../parametric_esn/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_trajectories	../parametric_esn/esn_parametric.py	/^    trial_trajectories = []$/;"	v
+trial_trajectories_names	../parametric_esn/esn_parametric.py	/^    trial_trajectories_names = glob.glob(directory+"\/tl*")   $/;"	v
+trj	../parametric_dmp/src/one_dimensional_task.cpp	/^            Trajectory trj = Trajectory::readFromFile(filepath, $/;"	l
+trj	../parametric_dmp/src/one_dimensional_task.cpp	/^            Trajectory trj = Trajectory::readFromFile(filepath,$/;"	l
+ts	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^ts = np.linspace(0,1,TIMESTEPS)$/;"	v
+ts1	../parametric_esn/esn_parametric.py	/^            ts1 = tr[:,0].ravel()$/;"	v
+ts1	../parametric_esn/esn_parametric.py	/^    ts1 = None    # timesteps$/;"	v
+ts1	../parametric_esn/esn_parametric.py	/^    ts1 = np.hstack((ts1, np.linspace(ts1[-1]+dt1,$/;"	v
+ts2	../parametric_esn/esn_parametric.py	/^            ts2 = tr[:,0].ravel()$/;"	v
+ts2	../parametric_esn/esn_parametric.py	/^    ts2 = None    # timesteps$/;"	v
+ts2	../parametric_esn/esn_parametric.py	/^    ts2 = np.hstack((ts2, np.linspace(ts2[-1]+dt2,$/;"	v
+tt_count	../parametric_esn/scripts/make_trajectories.py	/^tt_count = 0 $/;"	v
+ttimesteps	../parametric_esn/esn_parametric.py	/^            ttimesteps = len(ts2)$/;"	v
+ttimesteps	../parametric_esn/esn_parametric.py	/^    ttimesteps = None    # number of trial timesteps $/;"	v
+ttimesteps	../parametric_esn/esn_parametric.py	/^    ttimesteps = ttimesteps+further_ttimesteps$/;"	v
+what	../parametric_dmp/src/one_dimensional_task.cpp	/^        boost::smatch what;$/;"	l
+x	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^x = xtot[np.arange(NT)*2+1]$/;"	v
+x	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^x = xtot[np.arange(NY)*2]$/;"	v
+x	../parametric_esn/scripts/make_trajectories.py	/^            x = t $/;"	v
+x	../parametric_esn/scripts/make_trajectories.py	/^            x = x[2:]$/;"	v
+xr	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^xr = 0.1$/;"	v
+xtot	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^xtot = 0.5 + np.linspace(-xr,xr, NY+NT)$/;"	v
+y	../parametric_esn/esn_parametric.py	/^            y = np.hstack((y, y[-1]*np.ones(further_ltimesteps) ))$/;"	v
+y	../parametric_esn/esn_parametric.py	/^            y = np.hstack((y, y[-1]*np.ones(further_ttimesteps) ))$/;"	v
+y	../parametric_esn/esn_parametric.py	/^            y = tr[:,1+y_idx*3].ravel()$/;"	v
+y	../parametric_esn/scripts/make_trajectories.py	/^            y = np.ones(t.shape)*A $/;"	v
+y0	../parametric_esn/esn_parametric.py	/^                y0=test_trajectories[x][0],$/;"	v
+y0	../parametric_esn/esn_parametric.py	/^                y0=trial_trajectories[x][0],$/;"	v
+ycomp	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^    ycomp = [ts]$/;"	v
+ycomp	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^    ycomp = np.vstack(ycomp).T$/;"	v
+yd	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^        yd = np.hstack((0,cy[1:]-cy[:-1]))\/dt$/;"	v
+ydd	../parametric_esn/scripts/make_cursive_e_trajectories.py	/^        ydd = np.hstack((0,yd[1:]-yd[:-1]))\/dt$/;"	v
+z	../parametric_esn/scripts/make_trajectories.py	/^            z = t+ 0.25*np.exp(-(1.\/(.0015 + A*0.01))*(t-((B*.3)+.35))**2)$/;"	v
+z	../parametric_esn/scripts/make_trajectories.py	/^            z = z[2:]$/;"	v
+zd	../parametric_esn/scripts/make_trajectories.py	/^            zd = (z[1:] -z[:-1])\/dt$/;"	v
+zd	../parametric_esn/scripts/make_trajectories.py	/^            zd = zd[1:]$/;"	v
+zdd	../parametric_esn/scripts/make_trajectories.py	/^            zdd = (zd[1:] -zd[:-1])\/dt$/;"	v

@@ -1,0 +1,694 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BOOST_SERIALIZATION_BASE_OBJECT_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TaskSolverParallel);$/;"	p	signature:(TaskSolverParallel)
+BOOST_SERIALIZATION_BASE_OBJECT_NVP	../TaskSolverParallel.hpp	/^    ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TaskSolver);$/;"	p	signature:(TaskSolver)
+BOOST_SERIALIZATION_BASE_OBJECT_NVP	../TaskWithTrajectoryDemonstrator.hpp	/^    ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(Task);$/;"	p	signature:(Task)
+BOOST_SERIALIZATION_BASE_OBJECT_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TaskWithTrajectoryDemonstrator);$/;"	p	file:	signature:(TaskWithTrajectoryDemonstrator)
+BOOST_SERIALIZATION_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_NVP(dmp_);$/;"	p	signature:(dmp_)
+BOOST_SERIALIZATION_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_NVP(integrate_time_);$/;"	p	signature:(integrate_time_)
+BOOST_SERIALIZATION_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_NVP(n_time_steps_);    $/;"	p	signature:(n_time_steps_)
+BOOST_SERIALIZATION_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_NVP(use_normalized_parameter_);$/;"	p	signature:(use_normalized_parameter_)
+BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.cost_eval);$/;"	p	signature:(update_summary.cost_eval)
+BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.cost_vars);$/;"	p	signature:(update_summary.cost_vars)
+BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.cost_vars_eval);$/;"	p	signature:(update_summary.cost_vars_eval)
+BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.costs);$/;"	p	signature:(update_summary.costs)
+BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.distributions);$/;"	p	signature:(update_summary.distributions)
+BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.distributions_new);$/;"	p	signature:(update_summary.distributions_new)
+BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.samples);$/;"	p	signature:(update_summary.samples)
+BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.weights);$/;"	p	signature:(update_summary.weights)
+BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(acceleration_weight_);$/;"	p	file:	signature:(acceleration_weight_)
+BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(goal_);$/;"	p	file:	signature:(goal_)
+BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(goal_time_);$/;"	p	file:	signature:(goal_time_)
+BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(goal_weight_);$/;"	p	file:	signature:(goal_weight_)
+BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(viapoint_);$/;"	p	file:	signature:(viapoint_)
+BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(viapoint_radius_);    $/;"	p	file:	signature:(viapoint_radius_)
+BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(viapoint_time_);    $/;"	p	file:	signature:(viapoint_time_)
+BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(viapoint_weight_);    $/;"	p	file:	signature:(viapoint_weight_)
+BOOST_SERIALIZATION_NVP	../tests/testTaskViapoint.cpp	/^    ia >> BOOST_SERIALIZATION_NVP(task_out);$/;"	p	file:	signature:(task_out)
+Constant	../tasks/TaskViapoint.cpp	/^	y_yd_ydd_viapoint << task_parameters.row(0), VectorXd::Constant(n_dims,1.0), VectorXd::Constant(n_dims,0.0);$/;"	p	class:DmpBbo::VectorXd	file:	signature:(n_dims,0.0)
+Constant	../tasks/TaskViapoint.cpp	/^	y_yd_ydd_viapoint << task_parameters.row(0), VectorXd::Constant(n_dims,1.0), VectorXd::Constant(n_dims,0.0);$/;"	p	class:DmpBbo::VectorXd	file:	signature:(n_dims,1.0)
+DistributionGaussian	../UpdateSummaryParallel.hpp	/^class DistributionGaussian;$/;"	x
+DistributionGaussian	../runEvolutionaryOptimizationParallel.hpp	/^class DistributionGaussian;$/;"	x
+Dmp	../TaskSolverDmp.hpp	/^class Dmp;$/;"	x
+DmpBbo	../TaskSolverDmp.cpp	/^namespace DmpBbo {$/;"	n	file:
+DmpBbo	../TaskSolverDmp.hpp	/^namespace DmpBbo {$/;"	n
+DmpBbo	../TaskSolverParallel.hpp	/^namespace DmpBbo {$/;"	n
+DmpBbo	../TaskWithTrajectoryDemonstrator.hpp	/^namespace DmpBbo {$/;"	n
+DmpBbo	../UpdateSummaryParallel.cpp	/^namespace DmpBbo {$/;"	n	file:
+DmpBbo	../UpdateSummaryParallel.hpp	/^namespace DmpBbo {$/;"	n
+DmpBbo	../runEvolutionaryOptimizationParallel.cpp	/^namespace DmpBbo {$/;"	n	file:
+DmpBbo	../runEvolutionaryOptimizationParallel.hpp	/^namespace DmpBbo {$/;"	n
+DmpBbo	../tasks/TaskViapoint.cpp	/^namespace DmpBbo {$/;"	n	file:
+DmpBbo	../tasks/TaskViapoint.hpp	/^namespace DmpBbo {$/;"	n
+DmpBbo::BOOST_SERIALIZATION_BASE_OBJECT_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TaskWithTrajectoryDemonstrator);$/;"	p	file:	signature:(TaskWithTrajectoryDemonstrator)
+DmpBbo::BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(acceleration_weight_);$/;"	p	file:	signature:(acceleration_weight_)
+DmpBbo::BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(goal_);$/;"	p	file:	signature:(goal_)
+DmpBbo::BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(goal_time_);$/;"	p	file:	signature:(goal_time_)
+DmpBbo::BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(goal_weight_);$/;"	p	file:	signature:(goal_weight_)
+DmpBbo::BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(viapoint_);$/;"	p	file:	signature:(viapoint_)
+DmpBbo::BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(viapoint_radius_);    $/;"	p	file:	signature:(viapoint_radius_)
+DmpBbo::BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(viapoint_time_);    $/;"	p	file:	signature:(viapoint_time_)
+DmpBbo::BOOST_SERIALIZATION_NVP	../tasks/TaskViapoint.cpp	/^  ar & BOOST_SERIALIZATION_NVP(viapoint_weight_);    $/;"	p	file:	signature:(viapoint_weight_)
+DmpBbo::DistributionGaussian	../UpdateSummaryParallel.hpp	/^class DistributionGaussian;$/;"	x
+DmpBbo::DistributionGaussian	../runEvolutionaryOptimizationParallel.hpp	/^class DistributionGaussian;$/;"	x
+DmpBbo::Dmp	../TaskSolverDmp.hpp	/^class Dmp;$/;"	x
+DmpBbo::MAX_UPDATE	../UpdateSummaryParallel.cpp	/^  int MAX_UPDATE = 99999; \/\/ Cannot store more in %05d format$/;"	l
+DmpBbo::Task	../runEvolutionaryOptimizationParallel.hpp	/^class Task;$/;"	x
+DmpBbo::TaskSolverDmp	../TaskSolverDmp.hpp	/^class TaskSolverDmp : public TaskSolverParallel$/;"	c	namespace:DmpBbo	inherits:TaskSolverParallel
+DmpBbo::TaskSolverDmp::BOOST_SERIALIZATION_BASE_OBJECT_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TaskSolverParallel);$/;"	p	signature:(TaskSolverParallel)
+DmpBbo::TaskSolverDmp::BOOST_SERIALIZATION_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_NVP(dmp_);$/;"	p	signature:(dmp_)
+DmpBbo::TaskSolverDmp::BOOST_SERIALIZATION_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_NVP(integrate_time_);$/;"	p	signature:(integrate_time_)
+DmpBbo::TaskSolverDmp::BOOST_SERIALIZATION_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_NVP(n_time_steps_);    $/;"	p	signature:(n_time_steps_)
+DmpBbo::TaskSolverDmp::BOOST_SERIALIZATION_NVP	../TaskSolverDmp.hpp	/^    ar & BOOST_SERIALIZATION_NVP(use_normalized_parameter_);$/;"	p	signature:(use_normalized_parameter_)
+DmpBbo::TaskSolverDmp::TaskSolverDmp	../TaskSolverDmp.cpp	/^TaskSolverDmp::TaskSolverDmp(Dmp* dmp, std::set<std::string> optimize_parameters, double dt, double integrate_dmp_beyond_tau_factor, bool use_normalized_parameter)$/;"	f	class:DmpBbo::TaskSolverDmp	signature:(Dmp* dmp, std::set<std::string> optimize_parameters, double dt, double integrate_dmp_beyond_tau_factor, bool use_normalized_parameter)
+DmpBbo::TaskSolverDmp::TaskSolverDmp	../TaskSolverDmp.hpp	/^  TaskSolverDmp(Dmp* dmp, std::set<std::string> optimize_parameters, double dt=0.01, double integrate_dmp_beyond_tau_factor=1.0, bool use_normalized_parameter=false);$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	signature:(Dmp* dmp, std::set<std::string> optimize_parameters, double dt=0.01, double integrate_dmp_beyond_tau_factor=1.0, bool use_normalized_parameter=false)
+DmpBbo::TaskSolverDmp::TaskSolverDmp	../TaskSolverDmp.hpp	/^  TaskSolverDmp(void) {};$/;"	f	class:DmpBbo::TaskSolverDmp	access:private	signature:(void)
+DmpBbo::TaskSolverDmp::dmp_	../TaskSolverDmp.hpp	/^  Dmp* dmp_;$/;"	m	class:DmpBbo::TaskSolverDmp	access:private
+DmpBbo::TaskSolverDmp::integrate_time_	../TaskSolverDmp.hpp	/^  double integrate_time_;$/;"	m	class:DmpBbo::TaskSolverDmp	access:private
+DmpBbo::TaskSolverDmp::n_time_steps_	../TaskSolverDmp.hpp	/^  int n_time_steps_;$/;"	m	class:DmpBbo::TaskSolverDmp	access:private
+DmpBbo::TaskSolverDmp::performRollouts	../TaskSolverDmp.cpp	/^void TaskSolverDmp::performRollouts(const Eigen::MatrixXd& samples, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const$/;"	f	class:DmpBbo::TaskSolverDmp	signature:(const Eigen::MatrixXd& samples, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const
+DmpBbo::TaskSolverDmp::performRollouts	../TaskSolverDmp.cpp	/^void TaskSolverDmp::performRollouts(const vector<MatrixXd>& samples, const MatrixXd& task_parameters, MatrixXd& cost_vars) const $/;"	f	class:DmpBbo::TaskSolverDmp	signature:(const vector<MatrixXd>& samples, const MatrixXd& task_parameters, MatrixXd& cost_vars) const
+DmpBbo::TaskSolverDmp::performRollouts	../TaskSolverDmp.hpp	/^  virtual void performRollouts(const Eigen::MatrixXd& samples, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const;$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	implementation:virtual	signature:(const Eigen::MatrixXd& samples, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const
+DmpBbo::TaskSolverDmp::performRollouts	../TaskSolverDmp.hpp	/^  virtual void performRollouts(const std::vector<Eigen::MatrixXd>& samples_vec, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const;$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	implementation:virtual	signature:(const std::vector<Eigen::MatrixXd>& samples_vec, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const
+DmpBbo::TaskSolverDmp::serialize	../TaskSolverDmp.hpp	/^  void serialize(Archive & ar, const unsigned int version)$/;"	f	class:DmpBbo::TaskSolverDmp	access:private	signature:(Archive & ar, const unsigned int version)
+DmpBbo::TaskSolverDmp::set_perturbation	../TaskSolverDmp.cpp	/^void TaskSolverDmp::set_perturbation(double perturbation_standard_deviation)$/;"	f	class:DmpBbo::TaskSolverDmp	signature:(double perturbation_standard_deviation)
+DmpBbo::TaskSolverDmp::set_perturbation	../TaskSolverDmp.hpp	/^  void set_perturbation(double perturbation_standard_deviation);$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	signature:(double perturbation_standard_deviation)
+DmpBbo::TaskSolverDmp::toString	../TaskSolverDmp.cpp	/^string TaskSolverDmp::toString(void) const$/;"	f	class:DmpBbo::TaskSolverDmp	signature:(void) const
+DmpBbo::TaskSolverDmp::toString	../TaskSolverDmp.hpp	/^	virtual std::string toString(void) const;$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	implementation:virtual	signature:(void) const
+DmpBbo::TaskSolverDmp::use_normalized_parameter_	../TaskSolverDmp.hpp	/^  bool use_normalized_parameter_;$/;"	m	class:DmpBbo::TaskSolverDmp	access:private
+DmpBbo::TaskSolverParallel	../TaskSolverParallel.hpp	/^class TaskSolverParallel: public TaskSolver$/;"	c	namespace:DmpBbo	inherits:TaskSolver
+DmpBbo::TaskSolverParallel	../runEvolutionaryOptimizationParallel.hpp	/^class TaskSolverParallel;$/;"	x
+DmpBbo::TaskSolverParallel::BOOST_SERIALIZATION_BASE_OBJECT_NVP	../TaskSolverParallel.hpp	/^    ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(TaskSolver);$/;"	p	signature:(TaskSolver)
+DmpBbo::TaskSolverParallel::performRollouts	../TaskSolverParallel.hpp	/^  virtual void performRollouts(const std::vector<Eigen::MatrixXd>& samples_vec, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const = 0;$/;"	p	class:DmpBbo::TaskSolverParallel	access:public	implementation:pure virtual	signature:(const std::vector<Eigen::MatrixXd>& samples_vec, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const
+DmpBbo::TaskSolverParallel::performRollouts	../TaskSolverParallel.hpp	/^  void performRollouts(const std::vector<Eigen::MatrixXd>& samples_vec, Eigen::MatrixXd& cost_vars) const $/;"	f	class:DmpBbo::TaskSolverParallel	access:public	signature:(const std::vector<Eigen::MatrixXd>& samples_vec, Eigen::MatrixXd& cost_vars) const
+DmpBbo::TaskSolverParallel::serialize	../TaskSolverParallel.hpp	/^  void serialize(Archive & ar, const unsigned int version)$/;"	f	class:DmpBbo::TaskSolverParallel	access:private	signature:(Archive & ar, const unsigned int version)
+DmpBbo::TaskViapoint	../tasks/TaskViapoint.hpp	/^class TaskViapoint : public TaskWithTrajectoryDemonstrator$/;"	c	namespace:DmpBbo	inherits:TaskWithTrajectoryDemonstrator
+DmpBbo::TaskViapoint::TIME_AT_MINIMUM_DIST	../tasks/TaskViapoint.hpp	/^  static const int TIME_AT_MINIMUM_DIST=-1; $/;"	m	class:DmpBbo::TaskViapoint	access:public
+DmpBbo::TaskViapoint::TaskViapoint	../tasks/TaskViapoint.cpp	/^TaskViapoint::TaskViapoint(const Eigen::VectorXd& viapoint, double  viapoint_time, const Eigen::VectorXd& goal,  double goal_time)$/;"	f	class:DmpBbo::TaskViapoint	signature:(const Eigen::VectorXd& viapoint, double viapoint_time, const Eigen::VectorXd& goal, double goal_time)
+DmpBbo::TaskViapoint::TaskViapoint	../tasks/TaskViapoint.cpp	/^TaskViapoint::TaskViapoint(const Eigen::VectorXd& viapoint, double  viapoint_time, double viapoint_radius)$/;"	f	class:DmpBbo::TaskViapoint	signature:(const Eigen::VectorXd& viapoint, double viapoint_time, double viapoint_radius)
+DmpBbo::TaskViapoint::TaskViapoint	../tasks/TaskViapoint.hpp	/^  TaskViapoint(const Eigen::VectorXd& viapoint, double  viapoint_time, const Eigen::VectorXd& goal, double goal_time=-1);$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(const Eigen::VectorXd& viapoint, double viapoint_time, const Eigen::VectorXd& goal, double goal_time=-1)
+DmpBbo::TaskViapoint::TaskViapoint	../tasks/TaskViapoint.hpp	/^  TaskViapoint(const Eigen::VectorXd& viapoint, double  viapoint_time=TIME_AT_MINIMUM_DIST, double viapoint_radius=0.0);$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(const Eigen::VectorXd& viapoint, double viapoint_time=TIME_AT_MINIMUM_DIST, double viapoint_radius=0.0)
+DmpBbo::TaskViapoint::TaskViapoint	../tasks/TaskViapoint.hpp	/^  TaskViapoint(void) {};$/;"	f	class:DmpBbo::TaskViapoint	access:private	signature:(void)
+DmpBbo::TaskViapoint::TaskViapointArm	../tasks/TaskViapoint.hpp	/^  friend class TaskViapointArm;$/;"	x
+DmpBbo::TaskViapoint::acceleration_weight_	../tasks/TaskViapoint.hpp	/^  double   acceleration_weight_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+DmpBbo::TaskViapoint::evaluate	../tasks/TaskViapoint.cpp	/^void TaskViapoint::evaluate(const MatrixXd& cost_vars, const MatrixXd& task_parameters, VectorXd& costs) const$/;"	f	class:DmpBbo::TaskViapoint	signature:(const MatrixXd& cost_vars, const MatrixXd& task_parameters, VectorXd& costs) const
+DmpBbo::TaskViapoint::evaluate	../tasks/TaskViapoint.hpp	/^  void evaluate(const Eigen::MatrixXd& cost_vars, const Eigen::MatrixXd& task_parameters, Eigen::VectorXd& costs) const;$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(const Eigen::MatrixXd& cost_vars, const Eigen::MatrixXd& task_parameters, Eigen::VectorXd& costs) const
+DmpBbo::TaskViapoint::generateDemonstration	../tasks/TaskViapoint.cpp	/^void TaskViapoint::generateDemonstration(const MatrixXd& task_parameters, const VectorXd& ts, Trajectory& demonstration) const$/;"	f	class:DmpBbo::TaskViapoint	signature:(const MatrixXd& task_parameters, const VectorXd& ts, Trajectory& demonstration) const
+DmpBbo::TaskViapoint::generateDemonstration	../tasks/TaskViapoint.hpp	/^  void generateDemonstration(const Eigen::MatrixXd& task_parameters, const Eigen::VectorXd& ts, Trajectory& demonstration) const;$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(const Eigen::MatrixXd& task_parameters, const Eigen::VectorXd& ts, Trajectory& demonstration) const
+DmpBbo::TaskViapoint::goal_	../tasks/TaskViapoint.hpp	/^  Eigen::VectorXd goal_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+DmpBbo::TaskViapoint::goal_time_	../tasks/TaskViapoint.hpp	/^  double   goal_time_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+DmpBbo::TaskViapoint::goal_weight_	../tasks/TaskViapoint.hpp	/^  double   goal_weight_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+DmpBbo::TaskViapoint::savePerformRolloutsPlotScript	../tasks/TaskViapoint.cpp	/^bool TaskViapoint::savePerformRolloutsPlotScript(string directory) const$/;"	f	class:DmpBbo::TaskViapoint	signature:(string directory) const
+DmpBbo::TaskViapoint::savePerformRolloutsPlotScript	../tasks/TaskViapoint.hpp	/^  bool savePerformRolloutsPlotScript(std::string directory) const;$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(std::string directory) const
+DmpBbo::TaskViapoint::serialize	../tasks/TaskViapoint.cpp	/^void TaskViapoint::serialize(Archive & ar, const unsigned int version)$/;"	f	class:DmpBbo::TaskViapoint	signature:(Archive & ar, const unsigned int version)
+DmpBbo::TaskViapoint::serialize	../tasks/TaskViapoint.hpp	/^  void serialize(Archive & ar, const unsigned int version);$/;"	p	class:DmpBbo::TaskViapoint	access:private	signature:(Archive & ar, const unsigned int version)
+DmpBbo::TaskViapoint::setCostFunctionWeighting	../tasks/TaskViapoint.cpp	/^void TaskViapoint::setCostFunctionWeighting(double viapoint_weight, double acceleration_weight, double goal_weight)$/;"	f	class:DmpBbo::TaskViapoint	signature:(double viapoint_weight, double acceleration_weight, double goal_weight)
+DmpBbo::TaskViapoint::setCostFunctionWeighting	../tasks/TaskViapoint.hpp	/^  void setCostFunctionWeighting(double viapoint_weight, double acceleration_weight, double goal_weight=0.0);$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(double viapoint_weight, double acceleration_weight, double goal_weight=0.0)
+DmpBbo::TaskViapoint::toString	../tasks/TaskViapoint.cpp	/^string TaskViapoint::toString(void) const {$/;"	f	class:DmpBbo::TaskViapoint	signature:(void) const
+DmpBbo::TaskViapoint::toString	../tasks/TaskViapoint.hpp	/^	std::string toString(void) const;$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(void) const
+DmpBbo::TaskViapoint::viapoint_	../tasks/TaskViapoint.hpp	/^  Eigen::VectorXd viapoint_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+DmpBbo::TaskViapoint::viapoint_radius_	../tasks/TaskViapoint.hpp	/^  double   viapoint_radius_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+DmpBbo::TaskViapoint::viapoint_time_	../tasks/TaskViapoint.hpp	/^  double   viapoint_time_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+DmpBbo::TaskViapoint::viapoint_weight_	../tasks/TaskViapoint.hpp	/^  double   viapoint_weight_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+DmpBbo::TaskViapoint::~TaskViapoint	../tasks/TaskViapoint.hpp	/^  virtual ~TaskViapoint(void) {}$/;"	f	class:DmpBbo::TaskViapoint	access:public	implementation:virtual	signature:(void)
+DmpBbo::TaskWithTrajectoryDemonstrator	../TaskWithTrajectoryDemonstrator.hpp	/^class TaskWithTrajectoryDemonstrator : public Task$/;"	c	namespace:DmpBbo	inherits:Task
+DmpBbo::TaskWithTrajectoryDemonstrator::BOOST_SERIALIZATION_BASE_OBJECT_NVP	../TaskWithTrajectoryDemonstrator.hpp	/^    ar & BOOST_SERIALIZATION_BASE_OBJECT_NVP(Task);$/;"	p	signature:(Task)
+DmpBbo::TaskWithTrajectoryDemonstrator::generateDemonstration	../TaskWithTrajectoryDemonstrator.hpp	/^  virtual void generateDemonstration(const Eigen::MatrixXd& task_parameters, const Eigen::VectorXd& ts, Trajectory& demonstration) const = 0;$/;"	p	class:DmpBbo::TaskWithTrajectoryDemonstrator	access:public	implementation:pure virtual	signature:(const Eigen::MatrixXd& task_parameters, const Eigen::VectorXd& ts, Trajectory& demonstration) const
+DmpBbo::TaskWithTrajectoryDemonstrator::generateDemonstrations	../TaskWithTrajectoryDemonstrator.hpp	/^  void generateDemonstrations(DistributionGaussian* task_parameter_distribution, int n_demos, const Eigen::VectorXd& ts, std::vector<Trajectory>& demonstrations) const$/;"	f	class:DmpBbo::TaskWithTrajectoryDemonstrator	access:public	signature:(DistributionGaussian* task_parameter_distribution, int n_demos, const Eigen::VectorXd& ts, std::vector<Trajectory>& demonstrations) const
+DmpBbo::TaskWithTrajectoryDemonstrator::generateDemonstrations	../TaskWithTrajectoryDemonstrator.hpp	/^  void generateDemonstrations(const std::vector<Eigen::MatrixXd>& task_parameters, const std::vector<Eigen::VectorXd>& ts, std::vector<Trajectory>& demonstrations) const$/;"	f	class:DmpBbo::TaskWithTrajectoryDemonstrator	access:public	signature:(const std::vector<Eigen::MatrixXd>& task_parameters, const std::vector<Eigen::VectorXd>& ts, std::vector<Trajectory>& demonstrations) const
+DmpBbo::TaskWithTrajectoryDemonstrator::generateSamples	../TaskWithTrajectoryDemonstrator.hpp	/^      task_parameter_distribution->generateSamples(n_demos,task_parameters);$/;"	p	signature:(n_demos,task_parameters)
+DmpBbo::TaskWithTrajectoryDemonstrator::n_demos	../TaskWithTrajectoryDemonstrator.hpp	/^    unsigned int n_demos = task_parameters.size();$/;"	l
+DmpBbo::TaskWithTrajectoryDemonstrator::serialize	../TaskWithTrajectoryDemonstrator.hpp	/^  void serialize(Archive & ar, const unsigned int version)$/;"	f	class:DmpBbo::TaskWithTrajectoryDemonstrator	access:private	signature:(Archive & ar, const unsigned int version)
+DmpBbo::TaskWithTrajectoryDemonstrator::task_parameters	../TaskWithTrajectoryDemonstrator.hpp	/^    Eigen::MatrixXd task_parameters;$/;"	l
+DmpBbo::UpdateSummaryParallel	../UpdateSummaryParallel.hpp	/^class UpdateSummaryParallel {$/;"	c	namespace:DmpBbo
+DmpBbo::UpdateSummaryParallel::cost_eval	../UpdateSummaryParallel.hpp	/^  double cost_eval;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+DmpBbo::UpdateSummaryParallel::cost_vars	../UpdateSummaryParallel.hpp	/^  Eigen::MatrixXd cost_vars;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+DmpBbo::UpdateSummaryParallel::cost_vars_eval	../UpdateSummaryParallel.hpp	/^  Eigen::MatrixXd cost_vars_eval;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+DmpBbo::UpdateSummaryParallel::costs	../UpdateSummaryParallel.hpp	/^  Eigen::VectorXd costs;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+DmpBbo::UpdateSummaryParallel::distributions	../UpdateSummaryParallel.hpp	/^  std::vector<DistributionGaussian*> distributions;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+DmpBbo::UpdateSummaryParallel::distributions_new	../UpdateSummaryParallel.hpp	/^  std::vector<DistributionGaussian*> distributions_new;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+DmpBbo::UpdateSummaryParallel::samples	../UpdateSummaryParallel.hpp	/^  std::vector<Eigen::MatrixXd> samples;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+DmpBbo::UpdateSummaryParallel::weights	../UpdateSummaryParallel.hpp	/^  Eigen::MatrixXd weights;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+DmpBbo::Updater	../runEvolutionaryOptimizationParallel.hpp	/^class Updater;$/;"	x
+DmpBbo::VectorXd::Constant	../tasks/TaskViapoint.cpp	/^	y_yd_ydd_viapoint << task_parameters.row(0), VectorXd::Constant(n_dims,1.0), VectorXd::Constant(n_dims,0.0);$/;"	p	class:DmpBbo::VectorXd	file:	signature:(n_dims,0.0)
+DmpBbo::VectorXd::Constant	../tasks/TaskViapoint.cpp	/^	y_yd_ydd_viapoint << task_parameters.row(0), VectorXd::Constant(n_dims,1.0), VectorXd::Constant(n_dims,0.0);$/;"	p	class:DmpBbo::VectorXd	file:	signature:(n_dims,1.0)
+DmpBbo::__LINE__	../UpdateSummaryParallel.cpp	/^      cerr << __FILE__ << ":" << __LINE__ << ":";$/;"	l
+DmpBbo::analyticalSolution	../TaskSolverDmp.cpp	/^    dmp_->analyticalSolution(ts,xs_ana,xds_ana,forcing_terms);$/;"	p	file:	signature:(ts,xs_ana,xds_ana,forcing_terms)
+DmpBbo::block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,1) = ts.row(tt);       offset += 1; $/;"	p	file:	signature:(k,offset,1,1)
+DmpBbo::block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,n_dofs) = forcing_terms.row(tt); offset += n_dofs;       $/;"	p	file:	signature:(k,offset,1,n_dofs)
+DmpBbo::block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,n_dofs) = ydds_ana.row(tt); offset += n_dofs; $/;"	p	file:	signature:(k,offset,1,n_dofs)
+DmpBbo::block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,n_dofs) = yds_ana.row(tt);  offset += n_dofs; $/;"	p	file:	signature:(k,offset,1,n_dofs)
+DmpBbo::block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,n_dofs) = ys_ana.row(tt);   offset += n_dofs; $/;"	p	file:	signature:(k,offset,1,n_dofs)
+DmpBbo::close	../tasks/TaskViapoint.cpp	/^  file.close();$/;"	p	file:	signature:()
+DmpBbo::cost_eval	../runEvolutionaryOptimizationParallel.cpp	/^      cout << i_update+1 << "  cost_eval=" << cost_eval << "  ";$/;"	l
+DmpBbo::cost_eval	../runEvolutionaryOptimizationParallel.cpp	/^  VectorXd costs, cost_eval;$/;"	l
+DmpBbo::cost_eval_vec	../UpdateSummaryParallel.cpp	/^  VectorXd cost_eval_vec = VectorXd::Constant(1,summary.cost_eval);$/;"	l
+DmpBbo::cost_vars	../runEvolutionaryOptimizationParallel.cpp	/^  MatrixXd cost_vars, cost_vars_eval;$/;"	l
+DmpBbo::cost_vars_eval	../runEvolutionaryOptimizationParallel.cpp	/^  MatrixXd cost_vars, cost_vars_eval;$/;"	l
+DmpBbo::costs	../UpdateSummaryParallel.cpp	/^  VectorXd costs;$/;"	l
+DmpBbo::costs	../runEvolutionaryOptimizationParallel.cpp	/^  VectorXd costs, cost_eval;$/;"	l
+DmpBbo::cur_summaries	../runEvolutionaryOptimizationParallel.cpp	/^  vector<UpdateSummary> cur_summaries(n_parallel);$/;"	p	file:	signature:(n_parallel)
+DmpBbo::delay_cost	../tasks/TaskViapoint.cpp	/^    double delay_cost = 0.0;$/;"	l
+DmpBbo::dir	../UpdateSummaryParallel.cpp	/^  string dir = directory;$/;"	l
+DmpBbo::directory_update	../UpdateSummaryParallel.cpp	/^    string directory_update = stream.str();$/;"	l
+DmpBbo::dist_to_viapoint	../tasks/TaskViapoint.cpp	/^    double dist_to_viapoint = 0.0;$/;"	l
+DmpBbo::distribution	../UpdateSummaryParallel.cpp	/^      DistributionGaussian* distribution = update_summaries[i_update].distributions[i_parallel];$/;"	l
+DmpBbo::eigen_values	../UpdateSummaryParallel.cpp	/^      MatrixXd eigen_values = distribution->covar().eigenvalues().real();$/;"	l
+DmpBbo::endl	../UpdateSummaryParallel.cpp	/^      cerr << "Couldn't make directory file '" << directory << "'." << endl;$/;"	l
+DmpBbo::endl	../runEvolutionaryOptimizationParallel.cpp	/^      cout << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^    file << "        line_handles = ax.plot(t,y,linewidth=0.5)" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^    file << "        line_handles = ax.plot(y[:,0],y[:,1],linewidth=0.5)" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^    file << "    ax.plot(viapoint[0],viapoint[1],'ok')" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^    file << "    ax.plot(viapoint_time,viapoint,'ok')" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "        K = len(cost_vars);" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "        K=1;" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "        cost_vars = np.reshape(cost_vars,(K,n_cost_vars))" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "        n_cost_vars = len(cost_vars)" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "        n_cost_vars = len(cost_vars[0])" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "        t = x[:,3*n_dims]" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "        x = np.reshape(cost_vars[k,:],(n_time_steps, n_vars))" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "        y = x[:,0:n_dims]" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "      directory = str(sys.argv[1])" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "      print 'Usage: '+sys.argv[0]+' <directory>';" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "      sys.exit()" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    # See if input directory was passed" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    # n_dofs n_dofs n_dofs ts n_dofs" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    # y      yd     ydd    1  forcing" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    ax = fig.gca()" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    cost_vars = np.loadtxt(directory+\\"cost_vars.txt\\")" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    else:" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    fig = plt.figure()" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    for k in range(len(cost_vars)):" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    if (len(cost_vars.shape)==1):" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    if (len(sys.argv)==2):" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    n_time_steps = n_cost_vars\/n_vars;" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    n_vars = (1+n_dims*4)" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    plotRollouts(cost_vars,ax)" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    plt.show()" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    return line_handles" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "    viapoint_time = "<< viapoint_time_<< endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "]" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "def plotRollouts(cost_vars,ax):" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "if __name__=='__main__':" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "import matplotlib.pyplot as plt" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "import numpy as np" << endl;$/;"	l
+DmpBbo::endl	../tasks/TaskViapoint.cpp	/^  file << "import sys, os" << endl;$/;"	l
+DmpBbo::evaluate	../runEvolutionaryOptimizationParallel.cpp	/^    task->evaluate(cost_vars,costs);$/;"	p	file:	signature:(cost_vars,costs)
+DmpBbo::evaluate	../runEvolutionaryOptimizationParallel.cpp	/^    task->evaluate(cost_vars_eval,cost_eval);$/;"	p	file:	signature:(cost_vars_eval,cost_eval)
+DmpBbo::file	../tasks/TaskViapoint.cpp	/^  std::ofstream file;$/;"	l
+DmpBbo::filename	../tasks/TaskViapoint.cpp	/^  string filename = directory + "\/plotRollouts.py";$/;"	l
+DmpBbo::fixed	../tasks/TaskViapoint.cpp	/^  file << fixed;$/;"	l
+DmpBbo::forcing_terms	../TaskSolverDmp.cpp	/^    MatrixXd forcing_terms(n_time_steps_,n_dofs);$/;"	p	file:	signature:(n_time_steps_,n_dofs)
+DmpBbo::generateSamples	../runEvolutionaryOptimizationParallel.cpp	/^      distributions[pp]->generateSamples(n_samples_per_update, samples[pp]);$/;"	p	file:	signature:(n_samples_per_update, samples[pp])
+DmpBbo::goal_time_step	../tasks/TaskViapoint.cpp	/^      int goal_time_step = 0;$/;"	l
+DmpBbo::i_update	../UpdateSummaryParallel.cpp	/^  int i_update=1;$/;"	l
+DmpBbo::learning_curve	../UpdateSummaryParallel.cpp	/^  MatrixXd learning_curve(n_updates,3+n_parallel);$/;"	p	file:	signature:(n_updates,3+n_parallel)
+DmpBbo::mean_costs	../UpdateSummaryParallel.cpp	/^    double mean_costs = update_summaries[i_update].costs.sum()\/n_samples;$/;"	l
+DmpBbo::model_parameters	../TaskSolverDmp.cpp	/^  VectorXd model_parameters;$/;"	l
+DmpBbo::model_parameters_vec	../TaskSolverDmp.cpp	/^  vector<VectorXd> model_parameters_vec(n_dofs);$/;"	p	file:	signature:(n_dofs)
+DmpBbo::n_cost_vars	../TaskSolverDmp.cpp	/^  int n_cost_vars = 4*n_dofs+1;$/;"	l
+DmpBbo::n_cost_vars	../tasks/TaskViapoint.cpp	/^  int n_cost_vars = 4*n_dims + 1; \/\/ y_1..y_D  yd_1..yd_D  ydd_1..ydd_D  t forcing_term_1..forcing_term_D$/;"	l
+DmpBbo::n_dims	../TaskSolverDmp.cpp	/^    int n_dims = dmp_->dim(); \/\/ Dimensionality of the system$/;"	l
+DmpBbo::n_dims	../tasks/TaskViapoint.cpp	/^  int n_dims = viapoint_.size();$/;"	l
+DmpBbo::n_dofs	../TaskSolverDmp.cpp	/^  int n_dofs = dmp_->dim_orig();$/;"	l
+DmpBbo::n_dofs	../TaskSolverDmp.cpp	/^  int n_dofs = samples.size();$/;"	l
+DmpBbo::n_parallel	../UpdateSummaryParallel.cpp	/^  int n_parallel = summary.distributions.size();$/;"	l
+DmpBbo::n_parallel	../UpdateSummaryParallel.cpp	/^  int n_parallel = update_summaries[0].distributions.size();$/;"	l
+DmpBbo::n_parallel	../runEvolutionaryOptimizationParallel.cpp	/^  int n_parallel = distributions.size();$/;"	l
+DmpBbo::n_parallel_vec	../UpdateSummaryParallel.cpp	/^  VectorXi n_parallel_vec = VectorXi::Constant(1,n_parallel);$/;"	l
+DmpBbo::n_samples	../TaskSolverDmp.cpp	/^  int n_samples = samples.rows();$/;"	l
+DmpBbo::n_samples	../TaskSolverDmp.cpp	/^  int n_samples = samples[0].rows();$/;"	l
+DmpBbo::n_samples	../UpdateSummaryParallel.cpp	/^    int n_samples = costs.rows();$/;"	l
+DmpBbo::n_samples	../tasks/TaskViapoint.cpp	/^  int n_samples = cost_vars.rows();$/;"	l
+DmpBbo::n_time_steps	../tasks/TaskViapoint.cpp	/^  int n_time_steps = cost_vars.cols()\/n_cost_vars;$/;"	l
+DmpBbo::n_updates	../UpdateSummaryParallel.cpp	/^  int n_updates = update_summaries.size();  $/;"	l
+DmpBbo::offset	../TaskSolverDmp.cpp	/^    int offset = 0;$/;"	l
+DmpBbo::open	../tasks/TaskViapoint.cpp	/^  file.open(filename.c_str());$/;"	p	file:	signature:(filename.c_str())
+DmpBbo::overwrite	../UpdateSummaryParallel.cpp	/^      bool overwrite=true;$/;"	l
+DmpBbo::overwrite	../UpdateSummaryParallel.cpp	/^    bool overwrite=true;$/;"	l
+DmpBbo::ow	../UpdateSummaryParallel.cpp	/^  bool ow = overwrite;$/;"	l
+DmpBbo::performRollouts	../runEvolutionaryOptimizationParallel.cpp	/^    task_solver->performRollouts(sample_eval,cost_vars_eval);$/;"	p	file:	signature:(sample_eval,cost_vars_eval)
+DmpBbo::performRollouts	../runEvolutionaryOptimizationParallel.cpp	/^    task_solver->performRollouts(samples, cost_vars);$/;"	p	file:	signature:(samples, cost_vars)
+DmpBbo::push_back	../runEvolutionaryOptimizationParallel.cpp	/^      update_summaries.push_back(update_summary);$/;"	p	file:	signature:(update_summary)
+DmpBbo::resize	../TaskSolverDmp.cpp	/^  cost_vars.resize(n_samples,n_time_steps_*n_cost_vars); $/;"	p	file:	signature:(n_samples,n_time_steps_*n_cost_vars)
+DmpBbo::resize	../runEvolutionaryOptimizationParallel.cpp	/^  update_summary.distributions.resize(n_parallel); \/\/ Pre-allocate enough space here$/;"	p	file:	signature:(n_parallel)
+DmpBbo::resize	../runEvolutionaryOptimizationParallel.cpp	/^  update_summary.distributions_new.resize(n_parallel); \/\/ Pre-allocate enough space here$/;"	p	file:	signature:(n_parallel)
+DmpBbo::resize	../runEvolutionaryOptimizationParallel.cpp	/^  update_summary.samples.resize(n_parallel); \/\/ Pre-allocate enough space here$/;"	p	file:	signature:(n_parallel)
+DmpBbo::resize	../tasks/TaskViapoint.cpp	/^  costs.resize(n_samples);$/;"	p	file:	signature:(n_samples)
+DmpBbo::rollout	../tasks/TaskViapoint.cpp	/^  MatrixXd rollout; \/\/(n_time_steps,n_cost_vars);$/;"	l
+DmpBbo::runEvolutionaryOptimizationParallel	../runEvolutionaryOptimizationParallel.cpp	/^void runEvolutionaryOptimizationParallel(Task* task, TaskSolverParallel* task_solver, std::vector<DistributionGaussian*> distributions, Updater* updater, int n_updates, int n_samples_per_update, std::string save_directory, bool overwrite, bool only_learning_curve)$/;"	f	namespace:DmpBbo	signature:(Task* task, TaskSolverParallel* task_solver, std::vector<DistributionGaussian*> distributions, Updater* updater, int n_updates, int n_samples_per_update, std::string save_directory, bool overwrite, bool only_learning_curve)
+DmpBbo::runEvolutionaryOptimizationParallel	../runEvolutionaryOptimizationParallel.hpp	/^void runEvolutionaryOptimizationParallel(Task* task, TaskSolverParallel* task_solver, std::vector<DistributionGaussian*> distributions, Updater* updater, int n_updates, int n_samples_per_update, std::string save_directory=std::string(""),bool overwrite=false,$/;"	p	namespace:DmpBbo	signature:(Task* task, TaskSolverParallel* task_solver, std::vector<DistributionGaussian*> distributions, Updater* updater, int n_updates, int n_samples_per_update, std::string save_directory=std::string(Ó),bool overwrite=false, bool only_learning_curve=false)
+DmpBbo::sample_eval	../runEvolutionaryOptimizationParallel.cpp	/^  vector<MatrixXd> sample_eval(n_parallel);$/;"	p	file:	signature:(n_parallel)
+DmpBbo::samples	../runEvolutionaryOptimizationParallel.cpp	/^  vector<MatrixXd> samples(n_parallel);$/;"	p	file:	signature:(n_parallel)
+DmpBbo::savePerformRolloutsPlotScript	../runEvolutionaryOptimizationParallel.cpp	/^      task->savePerformRolloutsPlotScript(save_directory);$/;"	p	file:	signature:(save_directory)
+DmpBbo::saveToDirectory	../UpdateSummaryParallel.cpp	/^bool saveToDirectory(const UpdateSummaryParallel& summary, std::string directory, bool overwrite)$/;"	f	namespace:DmpBbo	signature:(const UpdateSummaryParallel& summary, std::string directory, bool overwrite)
+DmpBbo::saveToDirectory	../UpdateSummaryParallel.cpp	/^bool saveToDirectory(const std::vector<UpdateSummaryParallel>& update_summaries, std::string directory, bool overwrite, bool only_learning_curve)$/;"	f	namespace:DmpBbo	signature:(const std::vector<UpdateSummaryParallel>& update_summaries, std::string directory, bool overwrite, bool only_learning_curve)
+DmpBbo::saveToDirectory	../UpdateSummaryParallel.hpp	/^bool saveToDirectory(const UpdateSummaryParallel& update_summary, std::string directory, bool overwrite=false);$/;"	p	namespace:DmpBbo	signature:(const UpdateSummaryParallel& update_summary, std::string directory, bool overwrite=false)
+DmpBbo::saveToDirectory	../UpdateSummaryParallel.hpp	/^bool saveToDirectory(const std::vector<UpdateSummaryParallel>& update_summaries, std::string directory, bool overwrite=false, bool only_learning_curve=false);$/;"	p	namespace:DmpBbo	signature:(const std::vector<UpdateSummaryParallel>& update_summaries, std::string directory, bool overwrite=false, bool only_learning_curve=false)
+DmpBbo::saveToDirectoryNewUpdate	../UpdateSummaryParallel.cpp	/^bool saveToDirectoryNewUpdate(const UpdateSummaryParallel& update_summary, std::string directory)$/;"	f	namespace:DmpBbo	signature:(const UpdateSummaryParallel& update_summary, std::string directory)
+DmpBbo::saveToDirectoryNewUpdate	../UpdateSummaryParallel.hpp	/^bool saveToDirectoryNewUpdate(const UpdateSummaryParallel& update_summary, std::string directory);$/;"	p	namespace:DmpBbo	signature:(const UpdateSummaryParallel& update_summary, std::string directory)
+DmpBbo::setParameterVectorSelected	../TaskSolverDmp.cpp	/^    dmp_->setParameterVectorSelected(model_parameters, use_normalized_parameter_);$/;"	p	file:	signature:(model_parameters, use_normalized_parameter_)
+DmpBbo::setParameterVectorSelected	../TaskSolverDmp.cpp	/^    dmp_->setParameterVectorSelected(model_parameters_vec, use_normalized_parameter_);$/;"	p	file:	signature:(model_parameters_vec, use_normalized_parameter_)
+DmpBbo::setSelectedParameters	../TaskSolverDmp.cpp	/^  dmp_->setSelectedParameters(optimize_parameters);$/;"	p	file:	signature:(optimize_parameters)
+DmpBbo::set_perturbation_analytical_solution	../TaskSolverDmp.cpp	/^  dmp_->set_perturbation_analytical_solution(perturbation_standard_deviation);$/;"	p	file:	signature:(perturbation_standard_deviation)
+DmpBbo::statesAsTrajectory	../TaskSolverDmp.cpp	/^    dmp_->statesAsTrajectory(xs_ana,xds_ana,ys_ana,yds_ana,ydds_ana);$/;"	p	file:	signature:(xs_ana,xds_ana,ys_ana,yds_ana,ydds_ana)
+DmpBbo::std::endl	../UpdateSummaryParallel.cpp	/^  std::cerr << "Sorry, directory " << directory << " is already full with update subdirectories." << std::endl;$/;"	m	class:DmpBbo::std	file:
+DmpBbo::std::endl	../tasks/TaskViapoint.cpp	/^    std::cerr << "Couldn't open file '" << filename << "' for writing." << std::endl;$/;"	m	class:DmpBbo::std	file:
+DmpBbo::std_costs	../UpdateSummaryParallel.cpp	/^    double std_costs = (update_summaries[i_update].costs.array() - mean_costs).abs2().sum();$/;"	l
+DmpBbo::stream	../UpdateSummaryParallel.cpp	/^      stringstream stream;$/;"	l
+DmpBbo::stream	../UpdateSummaryParallel.cpp	/^    stringstream stream;$/;"	l
+DmpBbo::suf	../UpdateSummaryParallel.cpp	/^    string suf = stream.str();$/;"	l
+DmpBbo::sum_ydd	../tasks/TaskViapoint.cpp	/^    double sum_ydd = 0.0;$/;"	l
+DmpBbo::ts	../TaskSolverDmp.cpp	/^  VectorXd ts = VectorXd::LinSpaced(n_time_steps_,0.0,integrate_time_);$/;"	l
+DmpBbo::ts	../tasks/TaskViapoint.cpp	/^    VectorXd ts = rollout.col(3 * n_dims);$/;"	l
+DmpBbo::update_summaries	../runEvolutionaryOptimizationParallel.cpp	/^  vector<UpdateSummaryParallel> update_summaries;$/;"	l
+DmpBbo::update_summary	../runEvolutionaryOptimizationParallel.cpp	/^  UpdateSummaryParallel update_summary;$/;"	l
+DmpBbo::viapoint_	../tasks/TaskViapoint.cpp	/^    file << viapoint_[ii];$/;"	l
+DmpBbo::viapoint_time_step	../tasks/TaskViapoint.cpp	/^        int viapoint_time_step = 0;$/;"	l
+DmpBbo::xds_ana	../TaskSolverDmp.cpp	/^    MatrixXd xds_ana(n_time_steps_,n_dims);$/;"	p	file:	signature:(n_time_steps_,n_dims)
+DmpBbo::xs_ana	../TaskSolverDmp.cpp	/^    MatrixXd xs_ana(n_time_steps_,n_dims);$/;"	p	file:	signature:(n_time_steps_,n_dims)
+DmpBbo::y	../tasks/TaskViapoint.cpp	/^        const MatrixXd y = rollout.block(0, 0, rollout.rows(), n_dims);$/;"	l
+DmpBbo::y_after_goal	../tasks/TaskViapoint.cpp	/^      const MatrixXd y_after_goal = rollout.block(goal_time_step, 0,$/;"	l
+DmpBbo::y_from	../tasks/TaskViapoint.cpp	/^	VectorXd y_from    = VectorXd::Constant(n_dims,0.0);$/;"	l
+DmpBbo::y_to	../tasks/TaskViapoint.cpp	/^	VectorXd y_to      = goal_;$/;"	l
+DmpBbo::ydd	../tasks/TaskViapoint.cpp	/^      MatrixXd ydd = rollout.block(0,2*n_dims,n_time_steps,n_dims);$/;"	l
+DmpBbo::ydds_ana	../TaskSolverDmp.cpp	/^    MatrixXd ydds_ana;$/;"	l
+DmpBbo::yds_ana	../TaskSolverDmp.cpp	/^    MatrixXd yds_ana;$/;"	l
+DmpBbo::ys_ana	../TaskSolverDmp.cpp	/^    MatrixXd ys_ana;$/;"	l
+MAX_UPDATE	../UpdateSummaryParallel.cpp	/^  int MAX_UPDATE = 99999; \/\/ Cannot store more in %05d format$/;"	l
+RUNEVOLUTIONARYOPTIMIZATIONPARALLEL_H	../runEvolutionaryOptimizationParallel.hpp	25;"	d
+TASKVIAPOINT_H	../tasks/TaskViapoint.hpp	25;"	d
+TASKWITHTRAJECTORYDEMONSTRATOR_H	../TaskWithTrajectoryDemonstrator.hpp	25;"	d
+TASK_SOLVER_PARALLEL_H	../TaskSolverParallel.hpp	25;"	d
+TIME_AT_MINIMUM_DIST	../tasks/TaskViapoint.hpp	/^  static const int TIME_AT_MINIMUM_DIST=-1; $/;"	m	class:DmpBbo::TaskViapoint	access:public
+Task	../runEvolutionaryOptimizationParallel.hpp	/^class Task;$/;"	x
+TaskSolverDmp	../TaskSolverDmp.cpp	/^BOOST_CLASS_EXPORT_IMPLEMENT(DmpBbo::TaskSolverDmp);$/;"	v
+TaskSolverDmp	../TaskSolverDmp.cpp	/^TaskSolverDmp::TaskSolverDmp(Dmp* dmp, std::set<std::string> optimize_parameters, double dt, double integrate_dmp_beyond_tau_factor, bool use_normalized_parameter)$/;"	f	class:DmpBbo::TaskSolverDmp	signature:(Dmp* dmp, std::set<std::string> optimize_parameters, double dt, double integrate_dmp_beyond_tau_factor, bool use_normalized_parameter)
+TaskSolverDmp	../TaskSolverDmp.hpp	/^  TaskSolverDmp(Dmp* dmp, std::set<std::string> optimize_parameters, double dt=0.01, double integrate_dmp_beyond_tau_factor=1.0, bool use_normalized_parameter=false);$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	signature:(Dmp* dmp, std::set<std::string> optimize_parameters, double dt=0.01, double integrate_dmp_beyond_tau_factor=1.0, bool use_normalized_parameter=false)
+TaskSolverDmp	../TaskSolverDmp.hpp	/^  TaskSolverDmp(void) {};$/;"	f	class:DmpBbo::TaskSolverDmp	access:private	signature:(void)
+TaskSolverDmp	../TaskSolverDmp.hpp	/^class TaskSolverDmp : public TaskSolverParallel$/;"	c	namespace:DmpBbo	inherits:TaskSolverParallel
+TaskSolverDmp_H	../TaskSolverDmp.hpp	25;"	d
+TaskSolverParallel	../TaskSolverParallel.hpp	/^class TaskSolverParallel: public TaskSolver$/;"	c	namespace:DmpBbo	inherits:TaskSolver
+TaskSolverParallel	../runEvolutionaryOptimizationParallel.hpp	/^class TaskSolverParallel;$/;"	x
+TaskViapoint	../tasks/TaskViapoint.cpp	/^BOOST_CLASS_EXPORT_IMPLEMENT(DmpBbo::TaskViapoint);$/;"	v
+TaskViapoint	../tasks/TaskViapoint.cpp	/^TaskViapoint::TaskViapoint(const Eigen::VectorXd& viapoint, double  viapoint_time, const Eigen::VectorXd& goal,  double goal_time)$/;"	f	class:DmpBbo::TaskViapoint	signature:(const Eigen::VectorXd& viapoint, double viapoint_time, const Eigen::VectorXd& goal, double goal_time)
+TaskViapoint	../tasks/TaskViapoint.cpp	/^TaskViapoint::TaskViapoint(const Eigen::VectorXd& viapoint, double  viapoint_time, double viapoint_radius)$/;"	f	class:DmpBbo::TaskViapoint	signature:(const Eigen::VectorXd& viapoint, double viapoint_time, double viapoint_radius)
+TaskViapoint	../tasks/TaskViapoint.hpp	/^  TaskViapoint(const Eigen::VectorXd& viapoint, double  viapoint_time, const Eigen::VectorXd& goal, double goal_time=-1);$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(const Eigen::VectorXd& viapoint, double viapoint_time, const Eigen::VectorXd& goal, double goal_time=-1)
+TaskViapoint	../tasks/TaskViapoint.hpp	/^  TaskViapoint(const Eigen::VectorXd& viapoint, double  viapoint_time=TIME_AT_MINIMUM_DIST, double viapoint_radius=0.0);$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(const Eigen::VectorXd& viapoint, double viapoint_time=TIME_AT_MINIMUM_DIST, double viapoint_radius=0.0)
+TaskViapoint	../tasks/TaskViapoint.hpp	/^  TaskViapoint(void) {};$/;"	f	class:DmpBbo::TaskViapoint	access:private	signature:(void)
+TaskViapoint	../tasks/TaskViapoint.hpp	/^class TaskViapoint : public TaskWithTrajectoryDemonstrator$/;"	c	namespace:DmpBbo	inherits:TaskWithTrajectoryDemonstrator
+TaskViapointArm	../tasks/TaskViapoint.hpp	/^  friend class TaskViapointArm;$/;"	x
+TaskWithTrajectoryDemonstrator	../TaskWithTrajectoryDemonstrator.hpp	/^class TaskWithTrajectoryDemonstrator : public Task$/;"	c	namespace:DmpBbo	inherits:Task
+UPDATESUMMARYPARALLEL_H	../UpdateSummaryParallel.hpp	25;"	d
+UpdateSummaryParallel	../UpdateSummaryParallel.hpp	/^class UpdateSummaryParallel {$/;"	c	namespace:DmpBbo
+Updater	../runEvolutionaryOptimizationParallel.hpp	/^class Updater;$/;"	x
+__LINE__	../UpdateSummaryParallel.cpp	/^      cerr << __FILE__ << ":" << __LINE__ << ":";$/;"	l
+acceleration_weight_	../tasks/TaskViapoint.hpp	/^  double   acceleration_weight_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+analyticalSolution	../TaskSolverDmp.cpp	/^    dmp_->analyticalSolution(ts,xs_ana,xds_ana,forcing_terms);$/;"	p	file:	signature:(ts,xs_ana,xds_ana,forcing_terms)
+analyticalSolution	../demos/demoImitationAndOptimization.cpp	/^  dmp->analyticalSolution(trajectory.ts(),trajectory_repro);$/;"	p	file:	signature:(trajectory.ts(),trajectory_repro)
+axs	../demos/demoDmpBbo.py	/^    axs = [ fig.add_subplot(143), fig.add_subplot(144), fig.add_subplot(142) , fig.add_subplot(141)]$/;"	v
+axs	../demos/demoDmpBboMultiDim.py	/^    axs = [ fig.add_subplot(143), fig.add_subplot(144), fig.add_subplot(142) , fig.add_subplot(141) ]$/;"	v
+axs	../plotting/plotEvolutionaryOptimizationParallel.py	/^            axs = [ fig.add_subplot(132), fig.add_subplot(133), fig.add_subplot(131) ]$/;"	v
+axs	../plotting/plotEvolutionaryOptimizationParallel.py	/^            axs = [ fig.add_subplot(143), fig.add_subplot(144), fig.add_subplot(142) , fig.add_subplot(141) ]$/;"	v
+axs	../plotting/plotEvolutionaryOptimizationParallel.py	/^        axs = [ fig.add_subplot(121),  fig.add_subplot(122) ]$/;"	v
+base_level	../demos/demoImitationAndOptimization.cpp	/^  VectorXd base_level = VectorXd::Constant(n_basis_functions,5.0);$/;"	l
+block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,1) = ts.row(tt);       offset += 1; $/;"	p	file:	signature:(k,offset,1,1)
+block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,n_dofs) = forcing_terms.row(tt); offset += n_dofs;       $/;"	p	file:	signature:(k,offset,1,n_dofs)
+block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,n_dofs) = ydds_ana.row(tt); offset += n_dofs; $/;"	p	file:	signature:(k,offset,1,n_dofs)
+block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,n_dofs) = yds_ana.row(tt);  offset += n_dofs; $/;"	p	file:	signature:(k,offset,1,n_dofs)
+block	../TaskSolverDmp.cpp	/^      cost_vars.block(k,offset,1,n_dofs) = ys_ana.row(tt);   offset += n_dofs; $/;"	p	file:	signature:(k,offset,1,n_dofs)
+boost	../UpdateSummaryParallel.hpp	/^namespace boost {$/;"	n
+boost::serialization	../UpdateSummaryParallel.hpp	/^namespace serialization {$/;"	n	namespace:boost
+boost::serialization::BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.cost_eval);$/;"	p	signature:(update_summary.cost_eval)
+boost::serialization::BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.cost_vars);$/;"	p	signature:(update_summary.cost_vars)
+boost::serialization::BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.cost_vars_eval);$/;"	p	signature:(update_summary.cost_vars_eval)
+boost::serialization::BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.costs);$/;"	p	signature:(update_summary.costs)
+boost::serialization::BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.distributions);$/;"	p	signature:(update_summary.distributions)
+boost::serialization::BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.distributions_new);$/;"	p	signature:(update_summary.distributions_new)
+boost::serialization::BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.samples);$/;"	p	signature:(update_summary.samples)
+boost::serialization::BOOST_SERIALIZATION_NVP	../UpdateSummaryParallel.hpp	/^  ar & BOOST_SERIALIZATION_NVP(update_summary.weights);$/;"	p	signature:(update_summary.weights)
+boost::serialization::serialize	../UpdateSummaryParallel.hpp	/^void serialize(Archive & ar, DmpBbo::UpdateSummaryParallel& update_summary, const unsigned int version)$/;"	f	namespace:boost::serialization	signature:(Archive & ar, DmpBbo::UpdateSummaryParallel& update_summary, const unsigned int version)
+centers	../demos/demoDmpBbo.cpp	/^  VectorXd centers = VectorXd::LinSpaced(n_basis_functions,0,1);$/;"	l
+centers	../demos/demoDmpBboMultiDim.cpp	/^  VectorXd centers = VectorXd::LinSpaced(n_basis_functions,0,1);$/;"	l
+close	../demos/demoImitationAndOptimization.cpp	/^    outfile.close();$/;"	p	file:	signature:()
+close	../tasks/TaskViapoint.cpp	/^  file.close();$/;"	p	file:	signature:()
+close	../tests/testTaskViapoint.cpp	/^      outfile.close();$/;"	p	file:	signature:()
+close	../tests/testTaskViapoint.cpp	/^    ifs.close();$/;"	p	file:	signature:()
+close	../tests/testTaskViapoint.cpp	/^    ofs.close();$/;"	p	file:	signature:()
+command	../demos/demoDmpBbo.py	/^    command = executable+" "+directory$/;"	v
+command	../demos/demoDmpBboMultiDim.py	/^    command = executable+" "+directory$/;"	v
+cost_eval	../UpdateSummaryParallel.hpp	/^  double cost_eval;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+cost_eval	../runEvolutionaryOptimizationParallel.cpp	/^      cout << i_update+1 << "  cost_eval=" << cost_eval << "  ";$/;"	l
+cost_eval	../runEvolutionaryOptimizationParallel.cpp	/^  VectorXd costs, cost_eval;$/;"	l
+cost_eval_vec	../UpdateSummaryParallel.cpp	/^  VectorXd cost_eval_vec = VectorXd::Constant(1,summary.cost_eval);$/;"	l
+cost_vars	../UpdateSummaryParallel.hpp	/^  Eigen::MatrixXd cost_vars;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+cost_vars	../runEvolutionaryOptimizationParallel.cpp	/^  MatrixXd cost_vars, cost_vars_eval;$/;"	l
+cost_vars_eval	../UpdateSummaryParallel.hpp	/^  Eigen::MatrixXd cost_vars_eval;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+cost_vars_eval	../runEvolutionaryOptimizationParallel.cpp	/^  MatrixXd cost_vars, cost_vars_eval;$/;"	l
+costs	../UpdateSummaryParallel.cpp	/^  VectorXd costs;$/;"	l
+costs	../UpdateSummaryParallel.hpp	/^  Eigen::VectorXd costs;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+costs	../runEvolutionaryOptimizationParallel.cpp	/^  VectorXd costs, cost_eval;$/;"	l
+covar_decay_factor	../demos/demoDmpBbo.cpp	/^  double covar_decay_factor = 0.8;$/;"	l
+covar_decay_factor	../demos/demoDmpBboMultiDim.cpp	/^  double covar_decay_factor = 0.9;$/;"	l
+covar_decay_factor	../demos/demoImitationAndOptimization.cpp	/^  double covar_decay_factor = 0.9;$/;"	l
+covar_init	../demos/demoDmpBbo.cpp	/^  MatrixXd covar_init = 1000.0*MatrixXd::Identity(mean_init.size(),mean_init.size());$/;"	l
+covar_init	../demos/demoDmpBboMultiDim.cpp	/^    MatrixXd covar_init = 1000.0*MatrixXd::Identity(mean_init.size(),mean_init.size());$/;"	l
+covar_init	../demos/demoImitationAndOptimization.cpp	/^    MatrixXd covar_init = 1000.0*MatrixXd::Identity(mean_init.size(),mean_init.size());$/;"	l
+cur_directory	../plotting/plotEvolutionaryOptimizationParallel.py	/^      cur_directory = '%s\/update%05d' % (directories[0], n_updates)$/;"	v
+cur_summaries	../runEvolutionaryOptimizationParallel.cpp	/^  vector<UpdateSummary> cur_summaries(n_parallel);$/;"	p	file:	signature:(n_parallel)
+delay_cost	../tasks/TaskViapoint.cpp	/^    double delay_cost = 0.0;$/;"	l
+demonstration	../tests/testTaskViapoint.cpp	/^      outfile << demonstration;$/;"	l
+demonstration	../tests/testTaskViapoint.cpp	/^  Trajectory demonstration;$/;"	l
+diag_only	../demos/demoImitationAndOptimization.cpp	/^  bool diag_only = false;$/;"	l
+dir	../UpdateSummaryParallel.cpp	/^  string dir = directory;$/;"	l
+dir_exists	../plotting/plotEvolutionaryOptimizationParallel.py	/^      dir_exists = os.path.isdir(cur_directory)$/;"	v
+dir_exists	../plotting/plotEvolutionaryOptimizationParallel.py	/^    dir_exists = True;$/;"	v
+directories	../plotting/plotEvolutionaryOptimizationParallel.py	/^    directories = []$/;"	v
+directory	../demos/demoDmpBbo.cpp	/^  string directory;$/;"	l
+directory	../demos/demoDmpBbo.py	/^    directory = "\/tmp\/demoDmpBbo"$/;"	v
+directory	../demos/demoDmpBboMultiDim.cpp	/^  string directory;$/;"	l
+directory	../demos/demoDmpBboMultiDim.py	/^    directory = "\/tmp\/demoDmpBboMultiDim"$/;"	v
+directory	../demos/demoImitationAndOptimization.cpp	/^  string directory;$/;"	l
+directory	../tests/testTaskViapoint.cpp	/^  string directory;$/;"	l
+directory_update	../UpdateSummaryParallel.cpp	/^    string directory_update = stream.str();$/;"	l
+dist_to_viapoint	../tasks/TaskViapoint.cpp	/^    double dist_to_viapoint = 0.0;$/;"	l
+distribution	../UpdateSummaryParallel.cpp	/^      DistributionGaussian* distribution = update_summaries[i_update].distributions[i_parallel];$/;"	l
+distribution	../demos/demoDmpBbo.cpp	/^  DistributionGaussian* distribution = new DistributionGaussian(mean_init,covar_init);$/;"	l
+distributions	../UpdateSummaryParallel.hpp	/^  std::vector<DistributionGaussian*> distributions;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+distributions	../demos/demoDmpBboMultiDim.cpp	/^  vector<DistributionGaussian*> distributions(n_dim);$/;"	p	file:	signature:(n_dim)
+distributions	../demos/demoImitationAndOptimization.cpp	/^  vector<DistributionGaussian*> distributions(n_dims);$/;"	p	file:	signature:(n_dims)
+distributions_new	../UpdateSummaryParallel.hpp	/^  std::vector<DistributionGaussian*> distributions_new;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+dmp	../demos/demoDmpBbo.cpp	/^  Dmp* dmp = new Dmp(tau, y_init, y_attr, function_approximators, Dmp::KULVICIUS_2012_JOINING);$/;"	l
+dmp	../demos/demoDmpBboMultiDim.cpp	/^  Dmp* dmp = new Dmp(tau, y_init, y_attr, function_approximators, Dmp::KULVICIUS_2012_JOINING);$/;"	l
+dmp	../demos/demoImitationAndOptimization.cpp	/^  Dmp* dmp = new Dmp(n_dims_dmp, function_approximators, Dmp::KULVICIUS_2012_JOINING);$/;"	l
+dmp_	../TaskSolverDmp.hpp	/^  Dmp* dmp_;$/;"	m	class:DmpBbo::TaskSolverDmp	access:private
+dt	../demos/demoDmpBbo.cpp	/^  double dt=0.01;$/;"	l
+dt	../demos/demoDmpBboMultiDim.cpp	/^  double dt=0.01;$/;"	l
+eigen_values	../UpdateSummaryParallel.cpp	/^      MatrixXd eigen_values = distribution->covar().eigenvalues().real();$/;"	l
+eliteness	../demos/demoDmpBbo.cpp	/^  double eliteness = 10;$/;"	l
+eliteness	../demos/demoDmpBboMultiDim.cpp	/^  double eliteness = 10;$/;"	l
+eliteness	../demos/demoImitationAndOptimization.cpp	/^  double eliteness = 10;$/;"	l
+endl	../UpdateSummaryParallel.cpp	/^      cerr << "Couldn't make directory file '" << directory << "'." << endl;$/;"	l
+endl	../UpdateSummaryParallel.cpp	/^  std::cerr << "Sorry, directory " << directory << " is already full with update subdirectories." << std::endl;$/;"	m	class:DmpBbo::std	file:
+endl	../demos/demoDmpBbo.cpp	/^      cout << "Usage: " << args[0] << " [directory]         (directory: optional directory to save data to)" << endl;$/;"	l
+endl	../demos/demoDmpBboMultiDim.cpp	/^      cout << "Usage: " << args[0] << " [directory]         (directory: optional directory to save data to)" << endl;$/;"	l
+endl	../runEvolutionaryOptimizationParallel.cpp	/^      cout << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^    file << "        line_handles = ax.plot(t,y,linewidth=0.5)" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^    file << "        line_handles = ax.plot(y[:,0],y[:,1],linewidth=0.5)" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^    file << "    ax.plot(viapoint[0],viapoint[1],'ok')" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^    file << "    ax.plot(viapoint_time,viapoint,'ok')" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^    std::cerr << "Couldn't open file '" << filename << "' for writing." << std::endl;$/;"	m	class:DmpBbo::std	file:
+endl	../tasks/TaskViapoint.cpp	/^  file << "        K = len(cost_vars);" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "        K=1;" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "        cost_vars = np.reshape(cost_vars,(K,n_cost_vars))" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "        n_cost_vars = len(cost_vars)" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "        n_cost_vars = len(cost_vars[0])" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "        t = x[:,3*n_dims]" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "        x = np.reshape(cost_vars[k,:],(n_time_steps, n_vars))" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "        y = x[:,0:n_dims]" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "      directory = str(sys.argv[1])" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "      print 'Usage: '+sys.argv[0]+' <directory>';" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "      sys.exit()" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    # See if input directory was passed" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    # n_dofs n_dofs n_dofs ts n_dofs" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    # y      yd     ydd    1  forcing" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    ax = fig.gca()" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    cost_vars = np.loadtxt(directory+\\"cost_vars.txt\\")" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    else:" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    fig = plt.figure()" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    for k in range(len(cost_vars)):" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    if (len(cost_vars.shape)==1):" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    if (len(sys.argv)==2):" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    n_time_steps = n_cost_vars\/n_vars;" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    n_vars = (1+n_dims*4)" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    plotRollouts(cost_vars,ax)" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    plt.show()" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    return line_handles" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "    viapoint_time = "<< viapoint_time_<< endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "]" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "def plotRollouts(cost_vars,ax):" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "if __name__=='__main__':" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "import matplotlib.pyplot as plt" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "import numpy as np" << endl;$/;"	l
+endl	../tasks/TaskViapoint.cpp	/^  file << "import sys, os" << endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^      cout << "Saving to " << filename << endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^      cout << "______________________" << endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^      cout << demonstration << endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^      cout << task_parameters << endl<< endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^    cout << "  filename_xml=" << filename_xml << endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^    cout << "___________________________________________" << endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^    cout << endl << "Plot results in Matlab as follows:" << endl << endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^    cout << task << endl;$/;"	l
+endl	../tests/testTaskViapoint.cpp	/^    cout << task_out << endl;$/;"	l
+evaluate	../runEvolutionaryOptimizationParallel.cpp	/^    task->evaluate(cost_vars,costs);$/;"	p	file:	signature:(cost_vars,costs)
+evaluate	../runEvolutionaryOptimizationParallel.cpp	/^    task->evaluate(cost_vars_eval,cost_eval);$/;"	p	file:	signature:(cost_vars_eval,cost_eval)
+evaluate	../tasks/TaskViapoint.cpp	/^void TaskViapoint::evaluate(const MatrixXd& cost_vars, const MatrixXd& task_parameters, VectorXd& costs) const$/;"	f	class:DmpBbo::TaskViapoint	signature:(const MatrixXd& cost_vars, const MatrixXd& task_parameters, VectorXd& costs) const
+evaluate	../tasks/TaskViapoint.hpp	/^  void evaluate(const Eigen::MatrixXd& cost_vars, const Eigen::MatrixXd& task_parameters, Eigen::VectorXd& costs) const;$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(const Eigen::MatrixXd& cost_vars, const Eigen::MatrixXd& task_parameters, Eigen::VectorXd& costs) const
+executable	../demos/demoDmpBbo.py	/^    executable = "..\/..\/..\/bin\/demoDmpBbo"$/;"	v
+executable	../demos/demoDmpBboMultiDim.py	/^    executable = "..\/..\/..\/bin\/demoDmpBboMultiDim"$/;"	v
+fig	../demos/demoDmpBbo.py	/^    fig = plt.figure(1,figsize=(12, 4))$/;"	v
+fig	../demos/demoDmpBboMultiDim.py	/^    fig = plt.figure(1,figsize=(12, 4))$/;"	v
+fig	../plotting/plotEvolutionaryOptimizationParallel.py	/^    fig = plt.figure(1,figsize=(12, 4))$/;"	v
+file	../tasks/TaskViapoint.cpp	/^  std::ofstream file;$/;"	l
+filename	../tasks/TaskViapoint.cpp	/^  string filename = directory + "\/plotRollouts.py";$/;"	l
+filename	../tests/testTaskViapoint.cpp	/^      string filename = stream.str();$/;"	l
+fill	../tests/testTaskViapoint.cpp	/^    task_parameters.fill(task_parameter_values[i_demo]);$/;"	p	file:	signature:(task_parameter_values[i_demo])
+fixed	../tasks/TaskViapoint.cpp	/^  file << fixed;$/;"	l
+forcing_terms	../TaskSolverDmp.cpp	/^    MatrixXd forcing_terms(n_time_steps_,n_dofs);$/;"	p	file:	signature:(n_time_steps_,n_dofs)
+function_approximators	../demos/demoDmpBbo.cpp	/^  vector<FunctionApproximator*> function_approximators(n_dims);$/;"	p	file:	signature:(n_dims)
+function_approximators	../demos/demoDmpBboMultiDim.cpp	/^  vector<FunctionApproximator*> function_approximators(n_dim);$/;"	p	file:	signature:(n_dim)
+function_approximators	../demos/demoImitationAndOptimization.cpp	/^  vector<FunctionApproximator*> function_approximators(n_dims);    $/;"	p	file:	signature:(n_dims)
+generateDemonstration	../TaskWithTrajectoryDemonstrator.hpp	/^  virtual void generateDemonstration(const Eigen::MatrixXd& task_parameters, const Eigen::VectorXd& ts, Trajectory& demonstration) const = 0;$/;"	p	class:DmpBbo::TaskWithTrajectoryDemonstrator	access:public	implementation:pure virtual	signature:(const Eigen::MatrixXd& task_parameters, const Eigen::VectorXd& ts, Trajectory& demonstration) const
+generateDemonstration	../tasks/TaskViapoint.cpp	/^void TaskViapoint::generateDemonstration(const MatrixXd& task_parameters, const VectorXd& ts, Trajectory& demonstration) const$/;"	f	class:DmpBbo::TaskViapoint	signature:(const MatrixXd& task_parameters, const VectorXd& ts, Trajectory& demonstration) const
+generateDemonstration	../tasks/TaskViapoint.hpp	/^  void generateDemonstration(const Eigen::MatrixXd& task_parameters, const Eigen::VectorXd& ts, Trajectory& demonstration) const;$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(const Eigen::MatrixXd& task_parameters, const Eigen::VectorXd& ts, Trajectory& demonstration) const
+generateDemonstration	../tests/testTaskViapoint.cpp	/^    task.generateDemonstration(task_parameters, ts, demonstration);$/;"	p	file:	signature:(task_parameters, ts, demonstration)
+generateDemonstrations	../TaskWithTrajectoryDemonstrator.hpp	/^  void generateDemonstrations(DistributionGaussian* task_parameter_distribution, int n_demos, const Eigen::VectorXd& ts, std::vector<Trajectory>& demonstrations) const$/;"	f	class:DmpBbo::TaskWithTrajectoryDemonstrator	access:public	signature:(DistributionGaussian* task_parameter_distribution, int n_demos, const Eigen::VectorXd& ts, std::vector<Trajectory>& demonstrations) const
+generateDemonstrations	../TaskWithTrajectoryDemonstrator.hpp	/^  void generateDemonstrations(const std::vector<Eigen::MatrixXd>& task_parameters, const std::vector<Eigen::VectorXd>& ts, std::vector<Trajectory>& demonstrations) const$/;"	f	class:DmpBbo::TaskWithTrajectoryDemonstrator	access:public	signature:(const std::vector<Eigen::MatrixXd>& task_parameters, const std::vector<Eigen::VectorXd>& ts, std::vector<Trajectory>& demonstrations) const
+generateSamples	../TaskWithTrajectoryDemonstrator.hpp	/^      task_parameter_distribution->generateSamples(n_demos,task_parameters);$/;"	p	signature:(n_demos,task_parameters)
+generateSamples	../runEvolutionaryOptimizationParallel.cpp	/^      distributions[pp]->generateSamples(n_samples_per_update, samples[pp]);$/;"	p	file:	signature:(n_samples_per_update, samples[pp])
+getParameterVectorSelected	../demos/demoDmpBbo.cpp	/^  dmp->getParameterVectorSelected(mean_init);$/;"	p	file:	signature:(mean_init)
+getParameterVectorSelected	../demos/demoDmpBboMultiDim.cpp	/^  dmp->getParameterVectorSelected(mean_init_vec);$/;"	p	file:	signature:(mean_init_vec)
+getParameterVectorSelected	../demos/demoImitationAndOptimization.cpp	/^  dmp->getParameterVectorSelected(mean_init_vec);$/;"	p	file:	signature:(mean_init_vec)
+goal_	../tasks/TaskViapoint.hpp	/^  Eigen::VectorXd goal_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+goal_time_	../tasks/TaskViapoint.hpp	/^  double   goal_time_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+goal_time_step	../tasks/TaskViapoint.cpp	/^      int goal_time_step = 0;$/;"	l
+goal_weight_	../tasks/TaskViapoint.hpp	/^  double   goal_weight_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+i_update	../UpdateSummaryParallel.cpp	/^  int i_update=1;$/;"	l
+ia	../tests/testTaskViapoint.cpp	/^    boost::archive::xml_iarchive ia(ifs);$/;"	p	file:	signature:(ifs)
+ifs	../tests/testTaskViapoint.cpp	/^    std::ifstream ifs(filename_xml);$/;"	p	file:	signature:(filename_xml)
+integrate_dmp_beyond_tau_factor	../demos/demoDmpBbo.cpp	/^  double integrate_dmp_beyond_tau_factor=1.2;$/;"	l
+integrate_dmp_beyond_tau_factor	../demos/demoDmpBboMultiDim.cpp	/^  double integrate_dmp_beyond_tau_factor = 1.25;$/;"	l
+integrate_time_	../TaskSolverDmp.hpp	/^  double integrate_time_;$/;"	m	class:DmpBbo::TaskSolverDmp	access:private
+intersection	../demos/demoImitationAndOptimization.cpp	/^  double intersection = 0.5;$/;"	l
+learning_curve	../UpdateSummaryParallel.cpp	/^  MatrixXd learning_curve(n_updates,3+n_parallel);$/;"	p	file:	signature:(n_updates,3+n_parallel)
+learning_rate	../demos/demoImitationAndOptimization.cpp	/^  double learning_rate = 0.5;$/;"	l
+lib_path	../demos/demoDmpBbo.py	/^lib_path = os.path.abspath('..\/..\/bbo\/plotting')$/;"	v
+lib_path	../demos/demoDmpBboMultiDim.py	/^lib_path = os.path.abspath('..\/..\/dmp_bbo\/plotting')$/;"	v
+lib_path	../plotting/plotEvolutionaryOptimizationParallel.py	/^            lib_path = os.path.abspath(directories[0])$/;"	v
+lib_path	../plotting/plotEvolutionaryOptimizationParallel.py	/^lib_path = os.path.abspath('..\/..\/bbo\/plotting')$/;"	v
+lib_path	../plotting/plotUpdateSummaryParallel.py	/^lib_path = os.path.abspath('..\/..\/bbo\/plotting')$/;"	v
+main	../demos/demoDmpBbo.cpp	/^int main(int n_args, char* args[])$/;"	f	signature:(int n_args, char* args[])
+main	../demos/demoDmpBboMultiDim.cpp	/^int main(int n_args, char* args[])$/;"	f	signature:(int n_args, char* args[])
+main	../demos/demoImitationAndOptimization.cpp	/^int main(int n_args, char* args[])$/;"	f	signature:(int n_args, char* args[])
+main	../tests/testTaskViapoint.cpp	/^int main(int n_args, char* args[])$/;"	f	signature:(int n_args, char* args[])
+mean_costs	../UpdateSummaryParallel.cpp	/^    double mean_costs = update_summaries[i_update].costs.sum()\/n_samples;$/;"	l
+mean_init	../demos/demoDmpBbo.cpp	/^  VectorXd mean_init;$/;"	l
+mean_init	../demos/demoDmpBboMultiDim.cpp	/^    VectorXd mean_init = mean_init_vec[i_dim];$/;"	l
+mean_init	../demos/demoImitationAndOptimization.cpp	/^    VectorXd mean_init = mean_init_vec[i_dim];$/;"	l
+mean_init_vec	../demos/demoDmpBboMultiDim.cpp	/^  vector<VectorXd> mean_init_vec;$/;"	l
+mean_init_vec	../demos/demoImitationAndOptimization.cpp	/^  vector<VectorXd> mean_init_vec;$/;"	l
+meta_parameters	../demos/demoImitationAndOptimization.cpp	/^  MetaParametersLWR* meta_parameters = new MetaParametersLWR(n_input_dims,n_basis_functions,intersection);      $/;"	l
+model_parameters	../TaskSolverDmp.cpp	/^  VectorXd model_parameters;$/;"	l
+model_parameters	../demos/demoDmpBbo.cpp	/^  ModelParametersLWR* model_parameters = new ModelParametersLWR(centers,widths,slopes,offsets);$/;"	l
+model_parameters	../demos/demoDmpBboMultiDim.cpp	/^  ModelParametersLWR* model_parameters = new ModelParametersLWR(centers,widths,slopes,offsets);$/;"	l
+model_parameters_vec	../TaskSolverDmp.cpp	/^  vector<VectorXd> model_parameters_vec(n_dofs);$/;"	p	file:	signature:(n_dofs)
+n_basis_functions	../demos/demoDmpBbo.cpp	/^  int n_basis_functions = 4;$/;"	l
+n_basis_functions	../demos/demoDmpBboMultiDim.cpp	/^  int n_basis_functions = 4;$/;"	l
+n_basis_functions	../demos/demoImitationAndOptimization.cpp	/^  int n_basis_functions = 21;$/;"	l
+n_cost_vars	../TaskSolverDmp.cpp	/^  int n_cost_vars = 4*n_dofs+1;$/;"	l
+n_cost_vars	../tasks/TaskViapoint.cpp	/^  int n_cost_vars = 4*n_dims + 1; \/\/ y_1..y_D  yd_1..yd_D  ydd_1..ydd_D  t forcing_term_1..forcing_term_D$/;"	l
+n_demos	../TaskWithTrajectoryDemonstrator.hpp	/^    unsigned int n_demos = task_parameters.size();$/;"	l
+n_demos	../tests/testTaskViapoint.cpp	/^  int n_demos = 9;$/;"	l
+n_dim	../demos/demoDmpBboMultiDim.cpp	/^  int n_dim=2;$/;"	l
+n_dims	../TaskSolverDmp.cpp	/^    int n_dims = dmp_->dim(); \/\/ Dimensionality of the system$/;"	l
+n_dims	../demos/demoDmpBbo.cpp	/^  int n_dims = 2;$/;"	l
+n_dims	../demos/demoImitationAndOptimization.cpp	/^  int n_dims = 2;$/;"	l
+n_dims	../demos/demoImitationAndOptimization.cpp	/^  int n_dims = dmp->dim_orig();$/;"	l
+n_dims	../tasks/TaskViapoint.cpp	/^  int n_dims = viapoint_.size();$/;"	l
+n_dims	../tests/testTaskViapoint.cpp	/^  int n_dims = 1;$/;"	l
+n_dims_dmp	../demos/demoImitationAndOptimization.cpp	/^  int n_dims_dmp = trajectory.dim();$/;"	l
+n_dofs	../TaskSolverDmp.cpp	/^  int n_dofs = dmp_->dim_orig();$/;"	l
+n_dofs	../TaskSolverDmp.cpp	/^  int n_dofs = samples.size();$/;"	l
+n_input_dims	../demos/demoImitationAndOptimization.cpp	/^  int n_input_dims = 1; \/\/ Each function approximator only takes phase as input$/;"	l
+n_parallel	../UpdateSummaryParallel.cpp	/^  int n_parallel = summary.distributions.size();$/;"	l
+n_parallel	../UpdateSummaryParallel.cpp	/^  int n_parallel = update_summaries[0].distributions.size();$/;"	l
+n_parallel	../runEvolutionaryOptimizationParallel.cpp	/^  int n_parallel = distributions.size();$/;"	l
+n_parallel_vec	../UpdateSummaryParallel.cpp	/^  VectorXi n_parallel_vec = VectorXi::Constant(1,n_parallel);$/;"	l
+n_samples	../TaskSolverDmp.cpp	/^  int n_samples = samples.rows();$/;"	l
+n_samples	../TaskSolverDmp.cpp	/^  int n_samples = samples[0].rows();$/;"	l
+n_samples	../UpdateSummaryParallel.cpp	/^    int n_samples = costs.rows();$/;"	l
+n_samples	../tasks/TaskViapoint.cpp	/^  int n_samples = cost_vars.rows();$/;"	l
+n_samples_per_update	../demos/demoDmpBbo.cpp	/^  int n_samples_per_update = 15;$/;"	l
+n_samples_per_update	../demos/demoDmpBboMultiDim.cpp	/^  int n_samples_per_update = 15;$/;"	l
+n_samples_per_update	../demos/demoImitationAndOptimization.cpp	/^  int n_samples_per_update = 15;$/;"	l
+n_time_steps	../demos/demoImitationAndOptimization.cpp	/^  int n_time_steps = 51;$/;"	l
+n_time_steps	../tasks/TaskViapoint.cpp	/^  int n_time_steps = cost_vars.cols()\/n_cost_vars;$/;"	l
+n_time_steps	../tests/testTaskViapoint.cpp	/^  int n_time_steps = 51;$/;"	l
+n_time_steps_	../TaskSolverDmp.hpp	/^  int n_time_steps_;$/;"	m	class:DmpBbo::TaskSolverDmp	access:private
+n_updates	../UpdateSummaryParallel.cpp	/^  int n_updates = update_summaries.size();  $/;"	l
+n_updates	../demos/demoDmpBbo.cpp	/^  int n_updates = 40;$/;"	l
+n_updates	../demos/demoDmpBboMultiDim.cpp	/^  int n_updates = 40;$/;"	l
+n_updates	../demos/demoImitationAndOptimization.cpp	/^  int n_updates = 50;$/;"	l
+n_updates	../plotting/plotEvolutionaryOptimizationParallel.py	/^    n_updates = 0;$/;"	v
+oa	../tests/testTaskViapoint.cpp	/^    boost::archive::xml_oarchive oa(ofs);$/;"	p	file:	signature:(ofs)
+offset	../TaskSolverDmp.cpp	/^    int offset = 0;$/;"	l
+offsets	../demos/demoDmpBbo.cpp	/^  VectorXd offsets = VectorXd::Zero(n_basis_functions);$/;"	l
+offsets	../demos/demoDmpBboMultiDim.cpp	/^  VectorXd offsets = VectorXd::Zero(n_basis_functions);$/;"	l
+ofs	../tests/testTaskViapoint.cpp	/^    std::ofstream ofs(filename_xml);$/;"	p	file:	signature:(filename_xml)
+open	../tasks/TaskViapoint.cpp	/^  file.open(filename.c_str());$/;"	p	file:	signature:(filename.c_str())
+open	../tests/testTaskViapoint.cpp	/^      outfile.open(filename.c_str()); $/;"	p	file:	signature:(filename.c_str())
+outfile	../demos/demoImitationAndOptimization.cpp	/^    outfile.open((directory+"traj_demo.txt").c_str()); $/;"	p	file:	signature:(directory+Ó).c_str()
+outfile	../demos/demoImitationAndOptimization.cpp	/^    outfile.open((directory+"traj_repro.txt").c_str()); $/;"	p	file:	signature:(directory+Ó).c_str()
+outfile	../demos/demoImitationAndOptimization.cpp	/^    std::ofstream outfile;$/;"	l
+outfile	../tests/testTaskViapoint.cpp	/^      std::ofstream outfile;$/;"	l
+overwrite	../UpdateSummaryParallel.cpp	/^      bool overwrite=true;$/;"	l
+overwrite	../UpdateSummaryParallel.cpp	/^    bool overwrite=true;$/;"	l
+overwrite	../demos/demoDmpBbo.cpp	/^  bool overwrite = true;$/;"	l
+overwrite	../demos/demoDmpBboMultiDim.cpp	/^  bool overwrite = true;$/;"	l
+ow	../UpdateSummaryParallel.cpp	/^  bool ow = overwrite;$/;"	l
+parameters_to_optimize	../demos/demoDmpBbo.cpp	/^  set<string> parameters_to_optimize;$/;"	l
+parameters_to_optimize	../demos/demoDmpBboMultiDim.cpp	/^  set<string> parameters_to_optimize;$/;"	l
+parameters_to_optimize	../demos/demoImitationAndOptimization.cpp	/^  set<string> parameters_to_optimize;$/;"	l
+performRollouts	../TaskSolverDmp.cpp	/^void TaskSolverDmp::performRollouts(const Eigen::MatrixXd& samples, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const$/;"	f	class:DmpBbo::TaskSolverDmp	signature:(const Eigen::MatrixXd& samples, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const
+performRollouts	../TaskSolverDmp.cpp	/^void TaskSolverDmp::performRollouts(const vector<MatrixXd>& samples, const MatrixXd& task_parameters, MatrixXd& cost_vars) const $/;"	f	class:DmpBbo::TaskSolverDmp	signature:(const vector<MatrixXd>& samples, const MatrixXd& task_parameters, MatrixXd& cost_vars) const
+performRollouts	../TaskSolverDmp.hpp	/^  virtual void performRollouts(const Eigen::MatrixXd& samples, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const;$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	implementation:virtual	signature:(const Eigen::MatrixXd& samples, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const
+performRollouts	../TaskSolverDmp.hpp	/^  virtual void performRollouts(const std::vector<Eigen::MatrixXd>& samples_vec, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const;$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	implementation:virtual	signature:(const std::vector<Eigen::MatrixXd>& samples_vec, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const
+performRollouts	../TaskSolverParallel.hpp	/^  virtual void performRollouts(const std::vector<Eigen::MatrixXd>& samples_vec, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const = 0;$/;"	p	class:DmpBbo::TaskSolverParallel	access:public	implementation:pure virtual	signature:(const std::vector<Eigen::MatrixXd>& samples_vec, const Eigen::MatrixXd& task_parameters, Eigen::MatrixXd& cost_vars) const
+performRollouts	../TaskSolverParallel.hpp	/^  void performRollouts(const std::vector<Eigen::MatrixXd>& samples_vec, Eigen::MatrixXd& cost_vars) const $/;"	f	class:DmpBbo::TaskSolverParallel	access:public	signature:(const std::vector<Eigen::MatrixXd>& samples_vec, Eigen::MatrixXd& cost_vars) const
+performRollouts	../runEvolutionaryOptimizationParallel.cpp	/^    task_solver->performRollouts(sample_eval,cost_vars_eval);$/;"	p	file:	signature:(sample_eval,cost_vars_eval)
+performRollouts	../runEvolutionaryOptimizationParallel.cpp	/^    task_solver->performRollouts(samples, cost_vars);$/;"	p	file:	signature:(samples, cost_vars)
+plotEvolutionaryOptimizationParallel	../plotting/plotEvolutionaryOptimizationParallel.py	/^def plotEvolutionaryOptimizationParallel(directory,axs,plot_all_rollouts=False):$/;"	f	access:public
+plotEvolutionaryOptimizationsParallel	../plotting/plotEvolutionaryOptimizationParallel.py	/^def plotEvolutionaryOptimizationsParallel(directories,axs):$/;"	f	access:public
+plotUpdateSummaryParallelFromDirectory	../plotting/plotUpdateSummaryParallel.py	/^def plotUpdateSummaryParallelFromDirectory(directory,ax,highlight=True,plot_samples=False):$/;"	f	access:public
+push_back	../runEvolutionaryOptimizationParallel.cpp	/^      update_summaries.push_back(update_summary);$/;"	p	file:	signature:(update_summary)
+resize	../TaskSolverDmp.cpp	/^  cost_vars.resize(n_samples,n_time_steps_*n_cost_vars); $/;"	p	file:	signature:(n_samples,n_time_steps_*n_cost_vars)
+resize	../runEvolutionaryOptimizationParallel.cpp	/^  update_summary.distributions.resize(n_parallel); \/\/ Pre-allocate enough space here$/;"	p	file:	signature:(n_parallel)
+resize	../runEvolutionaryOptimizationParallel.cpp	/^  update_summary.distributions_new.resize(n_parallel); \/\/ Pre-allocate enough space here$/;"	p	file:	signature:(n_parallel)
+resize	../runEvolutionaryOptimizationParallel.cpp	/^  update_summary.samples.resize(n_parallel); \/\/ Pre-allocate enough space here$/;"	p	file:	signature:(n_parallel)
+resize	../tasks/TaskViapoint.cpp	/^  costs.resize(n_samples);$/;"	p	file:	signature:(n_samples)
+rollout	../tasks/TaskViapoint.cpp	/^  MatrixXd rollout; \/\/(n_time_steps,n_cost_vars);$/;"	l
+rollouts_python_script	../plotting/plotEvolutionaryOptimizationParallel.py	/^        rollouts_python_script = directories[0]+'\/plotRollouts.py'$/;"	v
+runEvolutionaryOptimizationParallel	../runEvolutionaryOptimizationParallel.cpp	/^void runEvolutionaryOptimizationParallel(Task* task, TaskSolverParallel* task_solver, std::vector<DistributionGaussian*> distributions, Updater* updater, int n_updates, int n_samples_per_update, std::string save_directory, bool overwrite, bool only_learning_curve)$/;"	f	namespace:DmpBbo	signature:(Task* task, TaskSolverParallel* task_solver, std::vector<DistributionGaussian*> distributions, Updater* updater, int n_updates, int n_samples_per_update, std::string save_directory, bool overwrite, bool only_learning_curve)
+runEvolutionaryOptimizationParallel	../runEvolutionaryOptimizationParallel.hpp	/^void runEvolutionaryOptimizationParallel(Task* task, TaskSolverParallel* task_solver, std::vector<DistributionGaussian*> distributions, Updater* updater, int n_updates, int n_samples_per_update, std::string save_directory=std::string(""),bool overwrite=false,$/;"	p	namespace:DmpBbo	signature:(Task* task, TaskSolverParallel* task_solver, std::vector<DistributionGaussian*> distributions, Updater* updater, int n_updates, int n_samples_per_update, std::string save_directory=std::string(Ó),bool overwrite=false, bool only_learning_curve=false)
+runImitationAndOptimization	../demos/demoImitationAndOptimization.cpp	/^void runImitationAndOptimization(vector<FunctionApproximator*> function_approximators, const Trajectory& trajectory, Task* task, Updater* updater, string directory)$/;"	f	signature:(vector<FunctionApproximator*> function_approximators, const Trajectory& trajectory, Task* task, Updater* updater, string directory)
+sample_eval	../runEvolutionaryOptimizationParallel.cpp	/^  vector<MatrixXd> sample_eval(n_parallel);$/;"	p	file:	signature:(n_parallel)
+samples	../UpdateSummaryParallel.hpp	/^  std::vector<Eigen::MatrixXd> samples;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+samples	../runEvolutionaryOptimizationParallel.cpp	/^  vector<MatrixXd> samples(n_parallel);$/;"	p	file:	signature:(n_parallel)
+savePerformRolloutsPlotScript	../runEvolutionaryOptimizationParallel.cpp	/^      task->savePerformRolloutsPlotScript(save_directory);$/;"	p	file:	signature:(save_directory)
+savePerformRolloutsPlotScript	../tasks/TaskViapoint.cpp	/^bool TaskViapoint::savePerformRolloutsPlotScript(string directory) const$/;"	f	class:DmpBbo::TaskViapoint	signature:(string directory) const
+savePerformRolloutsPlotScript	../tasks/TaskViapoint.hpp	/^  bool savePerformRolloutsPlotScript(std::string directory) const;$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(std::string directory) const
+saveToDirectory	../UpdateSummaryParallel.cpp	/^bool saveToDirectory(const UpdateSummaryParallel& summary, std::string directory, bool overwrite)$/;"	f	namespace:DmpBbo	signature:(const UpdateSummaryParallel& summary, std::string directory, bool overwrite)
+saveToDirectory	../UpdateSummaryParallel.cpp	/^bool saveToDirectory(const std::vector<UpdateSummaryParallel>& update_summaries, std::string directory, bool overwrite, bool only_learning_curve)$/;"	f	namespace:DmpBbo	signature:(const std::vector<UpdateSummaryParallel>& update_summaries, std::string directory, bool overwrite, bool only_learning_curve)
+saveToDirectory	../UpdateSummaryParallel.hpp	/^bool saveToDirectory(const UpdateSummaryParallel& update_summary, std::string directory, bool overwrite=false);$/;"	p	namespace:DmpBbo	signature:(const UpdateSummaryParallel& update_summary, std::string directory, bool overwrite=false)
+saveToDirectory	../UpdateSummaryParallel.hpp	/^bool saveToDirectory(const std::vector<UpdateSummaryParallel>& update_summaries, std::string directory, bool overwrite=false, bool only_learning_curve=false);$/;"	p	namespace:DmpBbo	signature:(const std::vector<UpdateSummaryParallel>& update_summaries, std::string directory, bool overwrite=false, bool only_learning_curve=false)
+saveToDirectoryNewUpdate	../UpdateSummaryParallel.cpp	/^bool saveToDirectoryNewUpdate(const UpdateSummaryParallel& update_summary, std::string directory)$/;"	f	namespace:DmpBbo	signature:(const UpdateSummaryParallel& update_summary, std::string directory)
+saveToDirectoryNewUpdate	../UpdateSummaryParallel.hpp	/^bool saveToDirectoryNewUpdate(const UpdateSummaryParallel& update_summary, std::string directory);$/;"	p	namespace:DmpBbo	signature:(const UpdateSummaryParallel& update_summary, std::string directory)
+serialization	../UpdateSummaryParallel.hpp	/^namespace serialization {$/;"	n	namespace:boost
+serialize	../TaskSolverDmp.hpp	/^  void serialize(Archive & ar, const unsigned int version)$/;"	f	class:DmpBbo::TaskSolverDmp	access:private	signature:(Archive & ar, const unsigned int version)
+serialize	../TaskSolverParallel.hpp	/^  void serialize(Archive & ar, const unsigned int version)$/;"	f	class:DmpBbo::TaskSolverParallel	access:private	signature:(Archive & ar, const unsigned int version)
+serialize	../TaskWithTrajectoryDemonstrator.hpp	/^  void serialize(Archive & ar, const unsigned int version)$/;"	f	class:DmpBbo::TaskWithTrajectoryDemonstrator	access:private	signature:(Archive & ar, const unsigned int version)
+serialize	../UpdateSummaryParallel.hpp	/^void serialize(Archive & ar, DmpBbo::UpdateSummaryParallel& update_summary, const unsigned int version)$/;"	f	namespace:boost::serialization	signature:(Archive & ar, DmpBbo::UpdateSummaryParallel& update_summary, const unsigned int version)
+serialize	../tasks/TaskViapoint.cpp	/^void TaskViapoint::serialize(Archive & ar, const unsigned int version)$/;"	f	class:DmpBbo::TaskViapoint	signature:(Archive & ar, const unsigned int version)
+serialize	../tasks/TaskViapoint.hpp	/^  void serialize(Archive & ar, const unsigned int version);$/;"	p	class:DmpBbo::TaskViapoint	access:private	signature:(Archive & ar, const unsigned int version)
+setCostFunctionWeighting	../tasks/TaskViapoint.cpp	/^void TaskViapoint::setCostFunctionWeighting(double viapoint_weight, double acceleration_weight, double goal_weight)$/;"	f	class:DmpBbo::TaskViapoint	signature:(double viapoint_weight, double acceleration_weight, double goal_weight)
+setCostFunctionWeighting	../tasks/TaskViapoint.hpp	/^  void setCostFunctionWeighting(double viapoint_weight, double acceleration_weight, double goal_weight=0.0);$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(double viapoint_weight, double acceleration_weight, double goal_weight=0.0)
+setParameterVectorSelected	../TaskSolverDmp.cpp	/^    dmp_->setParameterVectorSelected(model_parameters, use_normalized_parameter_);$/;"	p	file:	signature:(model_parameters, use_normalized_parameter_)
+setParameterVectorSelected	../TaskSolverDmp.cpp	/^    dmp_->setParameterVectorSelected(model_parameters_vec, use_normalized_parameter_);$/;"	p	file:	signature:(model_parameters_vec, use_normalized_parameter_)
+setSelectedParameters	../TaskSolverDmp.cpp	/^  dmp_->setSelectedParameters(optimize_parameters);$/;"	p	file:	signature:(optimize_parameters)
+set_perturbation	../TaskSolverDmp.cpp	/^void TaskSolverDmp::set_perturbation(double perturbation_standard_deviation)$/;"	f	class:DmpBbo::TaskSolverDmp	signature:(double perturbation_standard_deviation)
+set_perturbation	../TaskSolverDmp.hpp	/^  void set_perturbation(double perturbation_standard_deviation);$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	signature:(double perturbation_standard_deviation)
+set_perturbation_analytical_solution	../TaskSolverDmp.cpp	/^  dmp_->set_perturbation_analytical_solution(perturbation_standard_deviation);$/;"	p	file:	signature:(perturbation_standard_deviation)
+slopes	../demos/demoDmpBbo.cpp	/^  VectorXd slopes  = VectorXd::Zero(n_basis_functions);$/;"	l
+slopes	../demos/demoDmpBboMultiDim.cpp	/^  VectorXd slopes  = VectorXd::Zero(n_basis_functions);$/;"	l
+statesAsTrajectory	../TaskSolverDmp.cpp	/^    dmp_->statesAsTrajectory(xs_ana,xds_ana,ys_ana,yds_ana,ydds_ana);$/;"	p	file:	signature:(xs_ana,xds_ana,ys_ana,yds_ana,ydds_ana)
+std_costs	../UpdateSummaryParallel.cpp	/^    double std_costs = (update_summaries[i_update].costs.array() - mean_costs).abs2().sum();$/;"	l
+stream	../UpdateSummaryParallel.cpp	/^      stringstream stream;$/;"	l
+stream	../UpdateSummaryParallel.cpp	/^    stringstream stream;$/;"	l
+stream	../tests/testTaskViapoint.cpp	/^      stringstream stream;$/;"	l
+stream2	../tests/testTaskViapoint.cpp	/^      stringstream stream2;$/;"	l
+stream3	../tests/testTaskViapoint.cpp	/^      stringstream stream3;$/;"	l
+suf	../UpdateSummaryParallel.cpp	/^    string suf = stream.str();$/;"	l
+sum_ydd	../tasks/TaskViapoint.cpp	/^    double sum_ydd = 0.0;$/;"	l
+task	../demos/demoDmpBbo.cpp	/^  TaskViapoint* task = new TaskViapoint(viapoint,viapoint_time);$/;"	l
+task	../demos/demoDmpBboMultiDim.cpp	/^  TaskViapoint* task = new TaskViapoint(viapoint,viapoint_time);$/;"	l
+task	../demos/demoImitationAndOptimization.cpp	/^  Task* task = new TaskViapoint(viapoint,viapoint_time);$/;"	l
+task	../tests/testTaskViapoint.cpp	/^  TaskViapoint task = TaskViapoint(viapoint, viapoint_time);$/;"	l
+task_out	../tests/testTaskViapoint.cpp	/^    TaskViapoint* task_out;$/;"	l
+task_parameter_values	../tests/testTaskViapoint.cpp	/^  VectorXd task_parameter_values = VectorXd::LinSpaced(n_demos,-0.4,1.4);$/;"	l
+task_parameters	../TaskWithTrajectoryDemonstrator.hpp	/^    Eigen::MatrixXd task_parameters;$/;"	l
+task_parameters	../tests/testTaskViapoint.cpp	/^      outfile << task_parameters;$/;"	l
+task_parameters	../tests/testTaskViapoint.cpp	/^  MatrixXd task_parameters = MatrixXd(1,n_dims);$/;"	l
+task_solver	../demos/demoDmpBbo.cpp	/^  TaskSolverDmp* task_solver = new TaskSolverDmp(dmp,parameters_to_optimize,$/;"	l
+task_solver	../demos/demoDmpBboMultiDim.cpp	/^  TaskSolverParallel* task_solver = new TaskSolverDmp(dmp, parameters_to_optimize, dt, integrate_dmp_beyond_tau_factor);$/;"	l
+task_solver	../demos/demoImitationAndOptimization.cpp	/^  TaskSolverDmp* task_solver = new TaskSolverDmp(dmp,parameters_to_optimize);$/;"	l
+tau	../demos/demoDmpBbo.cpp	/^  double tau = 1;$/;"	l
+tau	../demos/demoDmpBboMultiDim.cpp	/^  double tau = 0.6;$/;"	l
+toString	../TaskSolverDmp.cpp	/^string TaskSolverDmp::toString(void) const$/;"	f	class:DmpBbo::TaskSolverDmp	signature:(void) const
+toString	../TaskSolverDmp.hpp	/^	virtual std::string toString(void) const;$/;"	p	class:DmpBbo::TaskSolverDmp	access:public	implementation:virtual	signature:(void) const
+toString	../tasks/TaskViapoint.cpp	/^string TaskViapoint::toString(void) const {$/;"	f	class:DmpBbo::TaskViapoint	signature:(void) const
+toString	../tasks/TaskViapoint.hpp	/^	std::string toString(void) const;$/;"	p	class:DmpBbo::TaskViapoint	access:public	signature:(void) const
+train	../demos/demoImitationAndOptimization.cpp	/^  dmp->train(trajectory);$/;"	p	file:	signature:(trajectory)
+traj_demo	../demos/demoImitationAndOptimization.cpp	/^  Trajectory traj_demo = Trajectory::generateMinJerkTrajectory(ts, y_first, y_last);$/;"	l
+trajectory	../demos/demoImitationAndOptimization.cpp	/^    outfile << trajectory; $/;"	l
+trajectory_repro	../demos/demoImitationAndOptimization.cpp	/^    outfile << trajectory_repro; $/;"	l
+trajectory_repro	../demos/demoImitationAndOptimization.cpp	/^  Trajectory trajectory_repro;$/;"	l
+ts	../TaskSolverDmp.cpp	/^  VectorXd ts = VectorXd::LinSpaced(n_time_steps_,0.0,integrate_time_);$/;"	l
+ts	../demos/demoImitationAndOptimization.cpp	/^  VectorXd ts = VectorXd::LinSpaced(n_time_steps,0,0.5  );$/;"	l
+ts	../tasks/TaskViapoint.cpp	/^    VectorXd ts = rollout.col(3 * n_dims);$/;"	l
+ts	../tests/testTaskViapoint.cpp	/^  VectorXd ts = VectorXd::LinSpaced(n_time_steps,0,1);$/;"	l
+update_summaries	../runEvolutionaryOptimizationParallel.cpp	/^  vector<UpdateSummaryParallel> update_summaries;$/;"	l
+update_summary	../runEvolutionaryOptimizationParallel.cpp	/^  UpdateSummaryParallel update_summary;$/;"	l
+updater	../demos/demoDmpBbo.cpp	/^  Updater* updater = new UpdaterCovarDecay(eliteness, covar_decay_factor, weighting_method);$/;"	l
+updater	../demos/demoDmpBboMultiDim.cpp	/^  Updater* updater = new UpdaterCovarDecay(eliteness, covar_decay_factor, weighting_method);$/;"	l
+updater	../demos/demoImitationAndOptimization.cpp	/^  Updater* updater = new UpdaterCovarDecay(eliteness, covar_decay_factor, weighting_method);$/;"	l
+use_normalized_parameter	../demos/demoDmpBbo.cpp	/^  bool use_normalized_parameter=true;  $/;"	l
+use_normalized_parameter_	../TaskSolverDmp.hpp	/^  bool use_normalized_parameter_;$/;"	m	class:DmpBbo::TaskSolverDmp	access:private
+viapoint	../demos/demoDmpBbo.cpp	/^  VectorXd viapoint = VectorXd::Constant(n_dims,2.0);$/;"	l
+viapoint	../demos/demoDmpBboMultiDim.cpp	/^  VectorXd viapoint = VectorXd::LinSpaced(n_dim,1.5,2);$/;"	l
+viapoint	../demos/demoImitationAndOptimization.cpp	/^  VectorXd viapoint = VectorXd::LinSpaced(n_dims,0.3,0.7);$/;"	l
+viapoint	../tests/testTaskViapoint.cpp	/^  VectorXd viapoint = VectorXd::Constant(n_dims,0.5);$/;"	l
+viapoint_	../tasks/TaskViapoint.cpp	/^    file << viapoint_[ii];$/;"	l
+viapoint_	../tasks/TaskViapoint.hpp	/^  Eigen::VectorXd viapoint_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+viapoint_radius_	../tasks/TaskViapoint.hpp	/^  double   viapoint_radius_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+viapoint_time	../demos/demoDmpBbo.cpp	/^  double viapoint_time = 0.3;$/;"	l
+viapoint_time	../demos/demoDmpBboMultiDim.cpp	/^  double viapoint_time = 0.2;$/;"	l
+viapoint_time	../demos/demoImitationAndOptimization.cpp	/^  double viapoint_time = 0.5*traj_demo.duration();$/;"	l
+viapoint_time	../tests/testTaskViapoint.cpp	/^      outfile << viapoint_time;$/;"	l
+viapoint_time	../tests/testTaskViapoint.cpp	/^  double viapoint_time = 0.5;$/;"	l
+viapoint_time_	../tasks/TaskViapoint.hpp	/^  double   viapoint_time_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+viapoint_time_step	../tasks/TaskViapoint.cpp	/^        int viapoint_time_step = 0;$/;"	l
+viapoint_weight_	../tasks/TaskViapoint.hpp	/^  double   viapoint_weight_;$/;"	m	class:DmpBbo::TaskViapoint	access:private
+weights	../UpdateSummaryParallel.hpp	/^  Eigen::MatrixXd weights;$/;"	m	class:DmpBbo::UpdateSummaryParallel	access:public
+widths	../demos/demoDmpBbo.cpp	/^  VectorXd widths  = VectorXd::Constant(n_basis_functions,0.2);$/;"	l
+widths	../demos/demoDmpBboMultiDim.cpp	/^  VectorXd widths  = VectorXd::Constant(n_basis_functions,0.2);$/;"	l
+xds_ana	../TaskSolverDmp.cpp	/^    MatrixXd xds_ana(n_time_steps_,n_dims);$/;"	p	file:	signature:(n_time_steps_,n_dims)
+xs_ana	../TaskSolverDmp.cpp	/^    MatrixXd xs_ana(n_time_steps_,n_dims);$/;"	p	file:	signature:(n_time_steps_,n_dims)
+y	../tasks/TaskViapoint.cpp	/^        const MatrixXd y = rollout.block(0, 0, rollout.rows(), n_dims);$/;"	l
+y_after_goal	../tasks/TaskViapoint.cpp	/^      const MatrixXd y_after_goal = rollout.block(goal_time_step, 0,$/;"	l
+y_attr	../demos/demoDmpBbo.cpp	/^  VectorXd y_attr = VectorXd::Constant(n_dims,3.0);$/;"	l
+y_attr	../demos/demoDmpBboMultiDim.cpp	/^  VectorXd y_attr = VectorXd::Constant(n_dim,3.0);$/;"	l
+y_first	../demos/demoImitationAndOptimization.cpp	/^  VectorXd y_first(n_dims); y_first << 0.0,0.1;$/;"	p	file:	signature:(n_dims)
+y_from	../tasks/TaskViapoint.cpp	/^	VectorXd y_from    = VectorXd::Constant(n_dims,0.0);$/;"	l
+y_init	../demos/demoDmpBbo.cpp	/^  VectorXd y_init = VectorXd::Constant(n_dims,1.0);$/;"	l
+y_init	../demos/demoDmpBboMultiDim.cpp	/^  VectorXd y_init = VectorXd::Constant(n_dim,1.0);$/;"	l
+y_last	../demos/demoImitationAndOptimization.cpp	/^  VectorXd y_last(n_dims);  y_last  << 1.0,0.9;$/;"	p	file:	signature:(n_dims)
+y_to	../tasks/TaskViapoint.cpp	/^	VectorXd y_to      = goal_;$/;"	l
+ydd	../tasks/TaskViapoint.cpp	/^      MatrixXd ydd = rollout.block(0,2*n_dims,n_time_steps,n_dims);$/;"	l
+ydds_ana	../TaskSolverDmp.cpp	/^    MatrixXd ydds_ana;$/;"	l
+yds_ana	../TaskSolverDmp.cpp	/^    MatrixXd yds_ana;$/;"	l
+ys_ana	../TaskSolverDmp.cpp	/^    MatrixXd ys_ana;$/;"	l
+~TaskViapoint	../tasks/TaskViapoint.hpp	/^  virtual ~TaskViapoint(void) {}$/;"	f	class:DmpBbo::TaskViapoint	access:public	implementation:virtual	signature:(void)

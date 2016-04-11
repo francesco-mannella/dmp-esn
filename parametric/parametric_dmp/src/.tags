@@ -1,0 +1,685 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	326;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	329;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	332;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	335;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	338;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	341;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	344;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	348;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	319;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	322;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	325;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	328;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	331;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	334;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	337;"	d	file:
+ARCHITECTURE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	341;"	d	file:
+CMAKE_BINARY_DIR	../build/Makefile	/^CMAKE_BINARY_DIR = \/home\/fra\/Dropbox\/Projects\/dmp-esn\/parametric\/parametric_dmp\/build$/;"	m
+CMAKE_BINARY_DIR	../build/src/Makefile	/^CMAKE_BINARY_DIR = \/home\/fra\/Dropbox\/Projects\/dmp-esn\/parametric\/parametric_dmp\/build$/;"	m
+CMAKE_COMMAND	../build/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_COMMAND	../build/src/Makefile	/^CMAKE_COMMAND = \/usr\/bin\/cmake$/;"	m
+CMAKE_SOURCE_DIR	../build/Makefile	/^CMAKE_SOURCE_DIR = \/home\/fra\/Dropbox\/Projects\/dmp-esn\/parametric\/parametric_dmp$/;"	m
+CMAKE_SOURCE_DIR	../build/src/Makefile	/^CMAKE_SOURCE_DIR = \/home\/fra\/Dropbox\/Projects\/dmp-esn\/parametric\/parametric_dmp$/;"	m
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	106;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	109;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	111;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	120;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	128;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	133;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	13;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	140;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	143;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	146;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	154;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	173;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	181;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	186;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	191;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	198;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	215;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	218;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	221;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	34;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	43;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	46;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	59;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	65;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	71;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	77;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	91;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	98;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	103;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	111;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	114;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	116;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	125;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	12;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	133;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	138;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	145;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	148;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	156;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	175;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	183;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	188;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	18;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	191;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	208;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	211;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	214;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	39;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	48;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	51;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	64;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	70;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	76;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	82;"	d	file:
+COMPILER_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	96;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	100;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	114;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	121;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	129;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	135;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	147;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	156;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	15;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	175;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	193;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	201;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	206;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	35;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	48;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	60;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	67;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	73;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	80;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	85;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	93;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	105;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	119;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	126;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	134;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	140;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	149;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	14;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	158;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	177;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	194;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	199;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	20;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	40;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	53;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	65;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	72;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	78;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	85;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	90;"	d	file:
+COMPILER_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	98;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	101;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	115;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	122;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	130;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	136;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	148;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	157;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	16;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	176;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	194;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	202;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	207;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	36;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	49;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	61;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	68;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	74;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	81;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	86;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	94;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	106;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	120;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	127;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	135;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	141;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	150;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	159;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	15;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	178;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	195;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	200;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	21;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	41;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	54;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	66;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	73;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	79;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	86;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	91;"	d	file:
+COMPILER_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	99;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	102;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	116;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	124;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	137;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	150;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	161;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	164;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	177;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	18;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	195;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	203;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	208;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	20;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	38;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	50;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	62;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	82;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	87;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	95;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	100;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	107;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	121;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	129;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	142;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	152;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	163;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	166;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	179;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	196;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	201;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	23;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	25;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	43;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	55;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	67;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	87;"	d	file:
+COMPILER_VERSION_PATCH	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	92;"	d	file:
+COMPILER_VERSION_TWEAK	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	168;"	d	file:
+COMPILER_VERSION_TWEAK	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	24;"	d	file:
+COMPILER_VERSION_TWEAK	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	44;"	d	file:
+COMPILER_VERSION_TWEAK	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	170;"	d	file:
+COMPILER_VERSION_TWEAK	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	29;"	d	file:
+COMPILER_VERSION_TWEAK	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	49;"	d	file:
+DEC	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	352;"	d	file:
+DEC	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	345;"	d	file:
+EQUALS	../build/Makefile	/^EQUALS = =$/;"	m
+EQUALS	../build/src/Makefile	/^EQUALS = =$/;"	m
+HEX	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	363;"	d	file:
+HEX	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	356;"	d	file:
+ID_VOID_MAIN	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	9;"	d	file:
+NBF	../src/fixed_se_dmp.cpp	/^    VectorXi NBF = VectorXi::Constant(N_INPUT_DIM, 3);$/;"	l
+NBF	../src/parametric_se_dmp.cpp	/^    VectorXi NBF = VectorXi::Constant(N_INPUT_DIM, 5);$/;"	l
+N_DIMS	../src/fixed_se_dmp.cpp	/^        istr >> N_DIMS;$/;"	l
+N_DIMS	../src/fixed_se_dmp.cpp	/^    int N_DIMS = 1; \/\/ number of dimensions of the trajectory $/;"	l
+N_DIMS	../src/parametric_se_dmp.cpp	/^        istr >> N_DIMS;$/;"	l
+N_DIMS	../src/parametric_se_dmp.cpp	/^    int N_DIMS = 1; \/\/ number of dimensions of the trajectory $/;"	l
+N_INPUT_DIM	../src/fixed_se_dmp.cpp	/^    int N_INPUT_DIM = 1; \/\/ number of expected dimensions of each $/;"	l
+N_INPUT_DIM	../src/parametric_se_dmp.cpp	/^    int N_INPUT_DIM = 1; \/\/ number of expected dimensions of each $/;"	l
+N_TASK_PARAMETERS	../src/fixed_se_dmp.cpp	/^        istr >> N_TASK_PARAMETERS;$/;"	l
+N_TASK_PARAMETERS	../src/fixed_se_dmp.cpp	/^    int N_TASK_PARAMETERS = 1; \/\/ number of task parameters$/;"	l
+N_TASK_PARAMETERS	../src/parametric_se_dmp.cpp	/^        istr >> N_TASK_PARAMETERS;$/;"	l
+N_TASK_PARAMETERS	../src/parametric_se_dmp.cpp	/^    int N_TASK_PARAMETERS = 1; \/\/ number of task parameters$/;"	l
+N_TESTSET	../src/fixed_se_dmp.cpp	/^    int N_TESTSET = 0; \/\/ number of trajectories in the test set (to be read)$/;"	l
+N_TESTSET	../src/parametric_se_dmp.cpp	/^    int N_TESTSET = 0; \/\/ number of trajectories in the test set (to be read)$/;"	l
+N_TRAINSET	../src/fixed_se_dmp.cpp	/^    int N_TRAINSET = 0; \/\/ number of trajectories in the training set (to be read)$/;"	l
+N_TRAINSET	../src/parametric_se_dmp.cpp	/^    int N_TRAINSET = 0; \/\/ number of trajectories in the training set (to be read)$/;"	l
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	240;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	243;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	246;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	249;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	252;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	255;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	258;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	261;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	264;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	267;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	270;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	273;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	276;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	279;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	282;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	285;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	288;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	291;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	294;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	297;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	300;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	303;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	306;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	309;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	312;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	315;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	233;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	236;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	239;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	242;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	245;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	248;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	251;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	254;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	257;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	260;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	263;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	266;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	269;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	272;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	275;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	278;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	281;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	284;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	287;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	290;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	293;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	296;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	299;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	302;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	305;"	d	file:
+PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	308;"	d	file:
+RM	../build/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+RM	../build/src/Makefile	/^RM = \/usr\/bin\/cmake -E remove -f$/;"	m
+SHELL	../build/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SHELL	../build/src/Makefile	/^SHELL = \/bin\/sh$/;"	m
+SIMULATE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	27;"	d	file:
+SIMULATE_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	52;"	d	file:
+SIMULATE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	32;"	d	file:
+SIMULATE_ID	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	57;"	d	file:
+SIMULATE_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	29;"	d	file:
+SIMULATE_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	54;"	d	file:
+SIMULATE_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	34;"	d	file:
+SIMULATE_VERSION_MAJOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	59;"	d	file:
+SIMULATE_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	30;"	d	file:
+SIMULATE_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	55;"	d	file:
+SIMULATE_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	35;"	d	file:
+SIMULATE_VERSION_MINOR	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	60;"	d	file:
+SUFFIXES	../build/Makefile	/^SUFFIXES =$/;"	m
+SUFFIXES	../build/src/Makefile	/^SUFFIXES =$/;"	m
+analyticalSolution	../src/fixed_se_dmp.cpp	/^        dmp->analyticalSolution($/;"	p	file:	signature:( testset_trajectories[i_test].ts(), reproduced_trajectories[i_test], forcing_terms[i_test])
+analyticalSolution	../src/fixed_se_dmp.cpp	/^        dmp->analyticalSolution($/;"	p	file:	signature:( trainset_trajectories[i_train].ts(), reproduced_trains[i_train], forcing_train_terms[i_train])
+analyticalSolution	../src/parametric_se_dmp.cpp	/^         dmp->analyticalSolution($/;"	p	file:	signature:( testset_trajectories[0].ts(), reproduced_trajectories[N_TESTSET + i_test], forcing_terms[N_TESTSET + i_test])
+analyticalSolution	../src/parametric_se_dmp.cpp	/^         dmp->analyticalSolution($/;"	p	file:	signature:( testset_trajectories[i_test].ts(), reproduced_trajectories[i_test], forcing_terms[i_test])
+attractor	../src/parametric_se_dmp.cpp	/^         VectorXd attractor(N_DIMS);$/;"	p	file:	signature:(N_DIMS)
+ax	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^ax = fig.add_subplot(211, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^ax = fig.add_subplot(212, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/stulp/data/plot.py	/^ax = fig.add_subplot(111, aspect='auto' )$/;"	v
+ax	../bin/tr_datasets/stulp/data/results/plot.py	/^ax = fig.add_subplot(111)$/;"	v
+ax	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^ax = fig.add_subplot(111)$/;"	v
+boost::filesystem::remove	../src/fixed_se_dmp.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
+boost::filesystem::remove	../src/parametric_se_dmp.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
+common_plot	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/stulp/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+coords	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^coords = None$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^coords = None$/;"	v
+dmp	../src/fixed_se_dmp.cpp	/^    DmpContextual* dmp = new DmpContextualOneStep($/;"	l
+dmp	../src/parametric_se_dmp.cpp	/^    DmpContextual* dmp = new DmpContextualOneStep($/;"	l
+dr	../bin/scripts/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
+dr	../bin/tr_datasets/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
+dr	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
+dr	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
+dr	../bin/tr_datasets/stulp/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
+dt	../bin/scripts/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
+dt	../bin/tr_datasets/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
+dt	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
+dt	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
+dt	../bin/tr_datasets/stulp/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
+e	../bin/scripts/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
+e	../bin/tr_datasets/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
+e	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
+e	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
+e	../bin/tr_datasets/stulp/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
+end_itr	../src/fixed_se_dmp.cpp	/^    boost::filesystem::directory_iterator end_itr; $/;"	l
+end_itr	../src/parametric_se_dmp.cpp	/^    boost::filesystem::directory_iterator end_itr; $/;"	l
+endl	../src/fixed_se_dmp.cpp	/^        cout << "Saving reproduced trajectories to " << results << endl;$/;"	l
+endl	../src/fixed_se_dmp.cpp	/^        cout << "Wrong number of parameters." << endl;$/;"	l
+endl	../src/fixed_se_dmp.cpp	/^        cout << endl;$/;"	l
+endl	../src/parametric_se_dmp.cpp	/^            cout << i_test << endl;$/;"	l
+endl	../src/parametric_se_dmp.cpp	/^         cout << endl;$/;"	l
+endl	../src/parametric_se_dmp.cpp	/^        cout << "Saving reproduced trajectories to " << results << endl;$/;"	l
+endl	../src/parametric_se_dmp.cpp	/^        cout << "Wrong number of parameters." << endl;$/;"	l
+endl	../src/parametric_se_dmp.cpp	/^    cout << "    task parameters :=" << endl;$/;"	l
+endl	../src/parametric_se_dmp.cpp	/^    cout << "Integrate the Contextual Dmp: " << endl;$/;"	l
+exists	../src/fixed_se_dmp.cpp	/^    assert(boost::filesystem::exists(trajectories) && "there's no directory called 'data\/trajectories'");$/;"	p	file:	signature:(trajectories)
+exists	../src/parametric_se_dmp.cpp	/^    assert(boost::filesystem::exists(trajectories) && "there's no directory called 'data\/trajectories'");$/;"	p	file:	signature:(trajectories)
+fig	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(14,5))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/stulp/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(10,4))$/;"	v
+fig	../bin/tr_datasets/stulp/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+filename	../src/fixed_se_dmp.cpp	/^        auto filename = i->path().filename().string();$/;"	l
+filename	../src/parametric_se_dmp.cpp	/^        auto filename = i->path().filename().string();$/;"	l
+filepath	../src/fixed_se_dmp.cpp	/^        auto filepath = i->path().string();$/;"	l
+filepath	../src/parametric_se_dmp.cpp	/^        auto filepath = i->path().string();$/;"	l
+forcing_terms	../src/fixed_se_dmp.cpp	/^    vector<MatrixXd> forcing_terms(N_TESTSET);$/;"	p	file:	signature:(N_TESTSET)
+forcing_train_terms	../src/fixed_se_dmp.cpp	/^    vector<MatrixXd> forcing_train_terms(N_TRAINSET);$/;"	p	file:	signature:(N_TRAINSET)
+frtl	../bin/scripts/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
+frtl	../bin/tr_datasets/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
+frtl	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
+frtl	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
+frtl	../bin/tr_datasets/stulp/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
+frtt	../bin/scripts/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
+frtt	../bin/tr_datasets/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
+frtt	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
+frtt	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
+frtt	../bin/tr_datasets/stulp/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
+ftl	../bin/scripts/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
+ftl	../bin/tr_datasets/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
+ftl	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
+ftl	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
+ftl	../bin/tr_datasets/stulp/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
+ftt	../bin/scripts/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
+ftt	../bin/tr_datasets/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
+ftt	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
+ftt	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
+ftt	../bin/tr_datasets/stulp/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
+function_approximators	../src/fixed_se_dmp.cpp	/^    vector<FunctionApproximator*> function_approximators(N_DIMS);    $/;"	p	file:	signature:(N_DIMS)
+function_approximators	../src/parametric_se_dmp.cpp	/^    vector<FunctionApproximator*> function_approximators(N_DIMS);    $/;"	p	file:	signature:(N_DIMS)
+get_trajectories	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/stulp/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+idcs	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/stulp/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+info_arch	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_arch	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
+info_compiler	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_compiler	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_compiler = "INFO" ":" "compiler[" COMPILER_ID "]";$/;"	v
+info_platform	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_platform	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_platform = "INFO" ":" "platform[" PLATFORM_ID "]";$/;"	v
+info_simulate	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_simulate = "INFO" ":" "simulate[" SIMULATE_ID "]";$/;"	v
+info_simulate_version	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_simulate_version[] = {$/;"	v
+info_simulate_version	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_simulate_version[] = {$/;"	v
+info_version	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const info_version[] = {$/;"	v
+info_version	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
+istr	../src/fixed_se_dmp.cpp	/^        istringstream istr( argv[1] );$/;"	p	file:	signature:( argv[1] )
+istr	../src/parametric_se_dmp.cpp	/^        istringstream istr( argv[1] );$/;"	p	file:	signature:( argv[1] )
+lall	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^lall = []$/;"	v
+lall	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^lall = []$/;"	v
+lall	../bin/tr_datasets/stulp/data/plot.py	/^lall = []$/;"	v
+lalltest	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^lalltest = []$/;"	v
+lalltrain	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^lalltrain = []$/;"	v
+log	../src/fixed_se_dmp.cpp	/^    string log = "\/tmp";$/;"	l
+log	../src/parametric_se_dmp.cpp	/^    string log = "\/tmp";$/;"	l
+ltest	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/stulp/data/plot.py	/^ltest = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/stulp/data/plot.py	/^ltrain = None$/;"	v
+main	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+main	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
+main	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
+main	../src/fixed_se_dmp.cpp	/^int main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
+main	../src/parametric_se_dmp.cpp	/^int main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
+meta_parameters	../src/fixed_se_dmp.cpp	/^    MetaParametersLWR meta_parameters(N_INPUT_DIM, NBF);$/;"	p	file:	signature:(N_INPUT_DIM, NBF)
+meta_parameters	../src/parametric_se_dmp.cpp	/^    MetaParametersLWR meta_parameters(N_INPUT_DIM, NBF);$/;"	p	file:	signature:(N_INPUT_DIM, NBF)
+n_dim	../bin/scripts/calculate_error.py	/^n_dim = 2$/;"	v
+n_dim	../bin/tr_datasets/calculate_error.py	/^n_dim = 2$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^n_dim = 2$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^n_dim = 2$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/stulp/calculate_error.py	/^n_dim = 1$/;"	v
+n_dim	../bin/tr_datasets/stulp/data/plot.py	/^n_dim = None$/;"	v
+nrmse	../bin/scripts/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
+nrmse	../bin/tr_datasets/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
+nrmse	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
+nrmse	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
+nrmse	../bin/tr_datasets/stulp/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
+overwrite	../src/fixed_se_dmp.cpp	/^        bool overwrite = true;$/;"	l
+overwrite	../src/fixed_se_dmp.cpp	/^    bool overwrite = true; \/\/ if we can overvrite files in the results $/;"	l
+overwrite	../src/parametric_se_dmp.cpp	/^        bool overwrite = true;$/;"	l
+overwrite	../src/parametric_se_dmp.cpp	/^    bool overwrite = true; \/\/ if we can overvrite files in the results $/;"	l
+pathname	../bin/scripts/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/stulp/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/stulp/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/stulp/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+plot_trajectories	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/stulp/data/plot.py	/^def plot_trajectories(ax, ttype, **kargs):$/;"	f	access:public
+push_back	../src/fixed_se_dmp.cpp	/^            test_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
+push_back	../src/fixed_se_dmp.cpp	/^            train_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
+push_back	../src/fixed_se_dmp.cpp	/^        testset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
+push_back	../src/fixed_se_dmp.cpp	/^        trainset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
+push_back	../src/parametric_se_dmp.cpp	/^            test_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
+push_back	../src/parametric_se_dmp.cpp	/^            train_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
+push_back	../src/parametric_se_dmp.cpp	/^        testset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
+push_back	../src/parametric_se_dmp.cpp	/^        trainset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
+qnxnto	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto";$/;"	v
+qnxnto	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto";$/;"	v
+remove	../src/fixed_se_dmp.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
+remove	../src/parametric_se_dmp.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
+repr_test	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/stulp/data/plot.py	/^repr_test = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/stulp/data/plot.py	/^repr_train = {    $/;"	v
+reproduced_trains	../src/fixed_se_dmp.cpp	/^    vector<Trajectory> reproduced_trains(N_TRAINSET);$/;"	p	file:	signature:(N_TRAINSET)
+reproduced_trajectories	../src/fixed_se_dmp.cpp	/^    vector<Trajectory> reproduced_trajectories(N_TESTSET);$/;"	p	file:	signature:(N_TESTSET)
+require	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^  int require = 0;$/;"	l
+require	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^  int require = 0;$/;"	l
+results	../bin/scripts/calculate_error.py	/^results = 'data\/results' $/;"	v
+results	../bin/tr_datasets/calculate_error.py	/^results = 'data\/results' $/;"	v
+results	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^results = 'data\/results' $/;"	v
+results	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^results = 'data\/results' $/;"	v
+results	../bin/tr_datasets/stulp/calculate_error.py	/^results = 'data\/results' $/;"	v
+results	../src/fixed_se_dmp.cpp	/^    string results = "data\/results";$/;"	l
+results	../src/parametric_se_dmp.cpp	/^    string results = "data\/results";$/;"	l
+rtldata	../bin/scripts/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
+rtldata	../bin/scripts/calculate_error.py	/^rtldata =[]$/;"	v
+rtldata	../bin/tr_datasets/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
+rtldata	../bin/tr_datasets/calculate_error.py	/^rtldata =[]$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^rtldata =[]$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^rtldata =[]$/;"	v
+rtldata	../bin/tr_datasets/stulp/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
+rtldata	../bin/tr_datasets/stulp/calculate_error.py	/^rtldata =[]$/;"	v
+rttdata	../bin/scripts/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
+rttdata	../bin/scripts/calculate_error.py	/^rttdata =[]$/;"	v
+rttdata	../bin/tr_datasets/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
+rttdata	../bin/tr_datasets/calculate_error.py	/^rttdata =[]$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^rttdata =[]$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^rttdata =[]$/;"	v
+rttdata	../bin/tr_datasets/stulp/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
+rttdata	../bin/tr_datasets/stulp/calculate_error.py	/^rttdata =[]$/;"	v
+saveToFile	../src/fixed_se_dmp.cpp	/^            reproduced_trains[i_train].saveToFile(results,stream.str(),overwrite);$/;"	p	file:	signature:(results,stream.str(),overwrite)
+saveToFile	../src/fixed_se_dmp.cpp	/^            reproduced_trajectories[i_test].saveToFile(results,stream.str(),overwrite);$/;"	p	file:	signature:(results,stream.str(),overwrite)
+saveToFile	../src/parametric_se_dmp.cpp	/^            reproduced_trajectories[i_test].saveToFile(results, stream.str(),overwrite);$/;"	p	file:	signature:(results, stream.str(),overwrite)
+set_attractor_state	../src/parametric_se_dmp.cpp	/^         dmp->set_attractor_state(attractor);$/;"	p	file:	signature:(attractor)
+set_initial_state	../src/fixed_se_dmp.cpp	/^        dmp->set_initial_state(testset_trajectories[i_test].initial_y());$/;"	p	file:	signature:(testset_trajectories[i_test].initial_y())
+set_initial_state	../src/fixed_se_dmp.cpp	/^        dmp->set_initial_state(trainset_trajectories[i_train].initial_y());$/;"	p	file:	signature:(trainset_trajectories[i_train].initial_y())
+set_misc	../src/fixed_se_dmp.cpp	/^        reproduced_trains[i_train].set_misc($/;"	p	file:	signature:( trainset_trajectories[i_train].misc())
+set_misc	../src/fixed_se_dmp.cpp	/^        reproduced_trajectories[i_test].set_misc($/;"	p	file:	signature:( testset_trajectories[i_test].misc())
+set_task_parameters	../src/fixed_se_dmp.cpp	/^        dmp->set_task_parameters(testset_task_parameters.row(i_test));$/;"	p	file:	signature:(testset_task_parameters.row(i_test))
+set_task_parameters	../src/fixed_se_dmp.cpp	/^        dmp->set_task_parameters(train_task_parameters.row(i_train));$/;"	p	file:	signature:(train_task_parameters.row(i_train))
+set_task_parameters	../src/parametric_se_dmp.cpp	/^         dmp->set_task_parameters(testset_task_parameters.row(i_test));$/;"	p	file:	signature:(testset_task_parameters.row(i_test))
+sort	../src/fixed_se_dmp.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
+sort	../src/fixed_se_dmp.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
+sort	../src/parametric_se_dmp.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
+sort	../src/parametric_se_dmp.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
+std::sort	../src/fixed_se_dmp.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
+std::sort	../src/fixed_se_dmp.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
+std::sort	../src/parametric_se_dmp.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
+std::sort	../src/parametric_se_dmp.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
+stream	../src/fixed_se_dmp.cpp	/^            stringstream stream;$/;"	l
+stream	../src/parametric_se_dmp.cpp	/^            stringstream stream;$/;"	l
+t	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/stulp/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+test_files	../src/fixed_se_dmp.cpp	/^    std::vector< std::string > test_files;$/;"	l
+test_files	../src/parametric_se_dmp.cpp	/^    std::vector< std::string > test_files;$/;"	l
+test_results	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/stulp/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/stulp/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^test_results= []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/stulp/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/stulp/data/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^tests = []$/;"	v
+testset_task_parameters	../src/fixed_se_dmp.cpp	/^            cout << testset_task_parameters(i_test, p) << " ";$/;"	p	file:	signature:(i_test, p)
+testset_task_parameters	../src/fixed_se_dmp.cpp	/^    MatrixXd testset_task_parameters(N_TESTSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TESTSET, N_TASK_PARAMETERS)
+testset_task_parameters	../src/parametric_se_dmp.cpp	/^            cout << testset_task_parameters(i_test, p) << " ";$/;"	p	file:	signature:(i_test, p)
+testset_task_parameters	../src/parametric_se_dmp.cpp	/^    MatrixXd testset_task_parameters(N_TESTSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TESTSET, N_TASK_PARAMETERS)
+testset_trajectories	../src/fixed_se_dmp.cpp	/^    vector<Trajectory> testset_trajectories;  $/;"	l
+testset_trajectories	../src/parametric_se_dmp.cpp	/^    vector<Trajectory> testset_trajectories;  $/;"	l
+theo_test	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/stulp/data/plot.py	/^theo_test = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/stulp/data/plot.py	/^theo_train = {    $/;"	v
+theoric	../bin/scripts/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
+theoric	../bin/tr_datasets/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
+theoric	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
+theoric	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
+theoric	../bin/tr_datasets/stulp/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
+tldata	../bin/scripts/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
+tldata	../bin/scripts/calculate_error.py	/^tldata =[]$/;"	v
+tldata	../bin/tr_datasets/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
+tldata	../bin/tr_datasets/calculate_error.py	/^tldata =[]$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^tldata =[]$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^tldata =[]$/;"	v
+tldata	../bin/tr_datasets/stulp/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
+tldata	../bin/tr_datasets/stulp/calculate_error.py	/^tldata =[]$/;"	v
+tle	../bin/scripts/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
+tle	../bin/tr_datasets/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
+tle	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
+tle	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
+tle	../bin/tr_datasets/stulp/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
+train	../src/fixed_se_dmp.cpp	/^    dmp->train(trainset_trajectories, log, overwrite);$/;"	p	file:	signature:(trainset_trajectories, log, overwrite)
+train	../src/parametric_se_dmp.cpp	/^    dmp->train(trainset_trajectories, log, overwrite);$/;"	p	file:	signature:(trainset_trajectories, log, overwrite)
+train_files	../src/fixed_se_dmp.cpp	/^    std::vector< std::string > train_files;$/;"	l
+train_files	../src/parametric_se_dmp.cpp	/^    std::vector< std::string > train_files;$/;"	l
+train_results	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/stulp/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_task_parameters	../src/fixed_se_dmp.cpp	/^            cout << train_task_parameters(i_train, p) << " ";$/;"	p	file:	signature:(i_train, p)
+train_task_parameters	../src/fixed_se_dmp.cpp	/^    MatrixXd train_task_parameters(N_TRAINSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TRAINSET, N_TASK_PARAMETERS)
+train_task_parameters	../src/parametric_se_dmp.cpp	/^    MatrixXd train_task_parameters(N_TRAINSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TRAINSET, N_TASK_PARAMETERS)
+trains	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/stulp/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/stulp/data/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^trains = []$/;"	v
+trainset_trajectories	../src/fixed_se_dmp.cpp	/^    vector<Trajectory> trainset_trajectories;  $/;"	l
+trainset_trajectories	../src/parametric_se_dmp.cpp	/^    vector<Trajectory> trainset_trajectories;  $/;"	l
+trajectories	../src/fixed_se_dmp.cpp	/^    string trajectories = "data\/trajectories";$/;"	l
+trajectories	../src/parametric_se_dmp.cpp	/^    string trajectories = "data\/trajectories";$/;"	l
+trial_results	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/stulp/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trj	../src/fixed_se_dmp.cpp	/^        Trajectory trj = Trajectory::readFromFile(path, N_TASK_PARAMETERS);$/;"	l
+trj	../src/parametric_se_dmp.cpp	/^        Trajectory trj = Trajectory::readFromFile(path, N_TASK_PARAMETERS);$/;"	l
+ts	../bin/scripts/calculate_error.py	/^ts = None$/;"	v
+ts	../bin/tr_datasets/calculate_error.py	/^ts = None$/;"	v
+ts	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ts = None$/;"	v
+ts	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ts = None$/;"	v
+ts	../bin/tr_datasets/stulp/calculate_error.py	/^ts = None$/;"	v
+ttdata	../bin/scripts/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
+ttdata	../bin/scripts/calculate_error.py	/^ttdata =[]$/;"	v
+ttdata	../bin/tr_datasets/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
+ttdata	../bin/tr_datasets/calculate_error.py	/^ttdata =[]$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ttdata =[]$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ttdata =[]$/;"	v
+ttdata	../bin/tr_datasets/stulp/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
+ttdata	../bin/tr_datasets/stulp/calculate_error.py	/^ttdata =[]$/;"	v
+tte	../bin/scripts/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
+tte	../bin/tr_datasets/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
+tte	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
+tte	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
+tte	../bin/tr_datasets/stulp/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
+what	../src/fixed_se_dmp.cpp	/^        boost::smatch what;$/;"	l
+what	../src/parametric_se_dmp.cpp	/^        boost::smatch what;$/;"	l
