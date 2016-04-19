@@ -45,10 +45,15 @@ set(dmp_LIBS
     "-l dmp" 
     "-l dynamicalsystems" 
     "-l functionapproximators" 
+    "-l lwpr"
     )
+
+
 
 ###########################################################################
 # altogether
+
+
 
 set( INCLUDES 
     ${Boost_INCLUDES}

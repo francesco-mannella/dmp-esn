@@ -12,7 +12,6 @@
 #include "functionapproximators/FunctionApproximator.hpp"
 #include "functionapproximators/FunctionApproximatorLWR.hpp"
 #include "functionapproximators/MetaParametersLWR.hpp"
-#include "functionapproximators/ModelParametersLWR.hpp"
 
 #include "dmpbbo_io/EigenFileIO.hpp"
 

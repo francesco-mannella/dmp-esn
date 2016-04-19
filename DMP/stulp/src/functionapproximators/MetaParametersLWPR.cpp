@@ -63,6 +63,7 @@ MetaParametersLWPR::MetaParametersLWPR(
   assert(w_gen_<w_prune_);
 }
 
+
 MetaParametersLWPR* MetaParametersLWPR::clone(void) const
 {
   return new MetaParametersLWPR(
