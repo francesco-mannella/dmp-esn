@@ -63,7 +63,6 @@ class ESN_discrete(object) :
 
         self.readout_w = np.zeros(self.res.N)
 
-
     def imitate_path(self, y_des) :
         '''
         Learn through ridge regression the weights 
@@ -108,14 +107,13 @@ class ESN_discrete(object) :
         L = self.LMBD
         # including the bias
         N = self.res.N   
-        w += np.dot(np.linalg.inv(np.dot(X,X.T) + L*np.eye(N, N)), np.dot(X,Y) )
-
+        w += np.dot(np.linalg.inv(np.dot(X,X.T) + L*np.eye(N, N)), np.dot(X.T,Y) )
+    
     def activations(self) :
         return self.res.data[self.res.out_lab]*\
                 np.outer(np.ones(self.res.N),\
                 np.exp(-np.linspace(1,0,self.timesteps)))
-
-
+    
     def rollout(self, y0=0., goal=1.) :
  
         # input pattern
@@ -129,12 +127,12 @@ class ESN_discrete(object) :
             self.res.store(t)
         # network activity time-series 
         x = self.activations()
-
+        
         return np.dot(self.readout_w, x)+goal 
-
-
+    
+    
     def interpolate(self, path) :
-
+        
         import scipy.interpolate
         x = np.linspace( 0, self.timesteps, len(path) )
         y = np.zeros(self.timesteps )
