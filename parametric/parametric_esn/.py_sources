@@ -1,8 +1,0 @@
-
-./data/plot.py
-./data/results/plot.py
-./data/trajectories/plot.py
-./esn_parametric.py
-./scripts/make_cursive_e_trajectories.py
-./scripts/make_parametric_cursive_e_trajectories.py
-./scripts/make_trajectories.py
