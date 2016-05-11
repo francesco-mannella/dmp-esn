@@ -1,0 +1,320 @@
+\hypertarget{demoTrainFunctionApproximators_8cpp}{\subsection{demo\+Train\+Function\+Approximators.\+cpp File Reference}
+\label{demoTrainFunctionApproximators_8cpp}\index{demo\+Train\+Function\+Approximators.\+cpp@{demo\+Train\+Function\+Approximators.\+cpp}}
+}
+
+
+Demonstrates how to initialize and train a function approximator..  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+G\+M\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+I\+R\+F\+R\+L\+S.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+L\+W\+P\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+R\+B\+F\+N.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+G\+P\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+G\+M\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+I\+R\+F\+R\+L\+S.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+L\+W\+P\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+R\+B\+F\+N.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+G\+P\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}target\+Function.\+hpp\char`\"{}}\\*
+Include dependency graph for demo\+Train\+Function\+Approximators.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoTrainFunctionApproximators_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Vector\+Xd \hyperlink{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{mean\+Absolute\+Error\+Per\+Output\+Dimension} (const Matrix\+Xd \&mat1, const Matrix\+Xd \&mat2)
+\begin{DoxyCompactList}\small\item\em Compute mean absolute error for each column of two matrices. \end{DoxyCompactList}\item 
+int \hyperlink{demoTrainFunctionApproximators_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{main} (int n\+\_\+args, char $\ast$$\ast$args)
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Demonstrates how to initialize and train a function approximator.. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{demoTrainFunctionApproximators_8cpp_source}{demo\+Train\+Function\+Approximators.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{\index{demo\+Train\+Function\+Approximators.\+cpp@{demo\+Train\+Function\+Approximators.\+cpp}!mean\+Absolute\+Error\+Per\+Output\+Dimension@{mean\+Absolute\+Error\+Per\+Output\+Dimension}}
+\index{mean\+Absolute\+Error\+Per\+Output\+Dimension@{mean\+Absolute\+Error\+Per\+Output\+Dimension}!demo\+Train\+Function\+Approximators.\+cpp@{demo\+Train\+Function\+Approximators.\+cpp}}
+\paragraph[{mean\+Absolute\+Error\+Per\+Output\+Dimension}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Xd mean\+Absolute\+Error\+Per\+Output\+Dimension (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Xd \&}]{mat1, }
+\item[{const Matrix\+Xd \&}]{mat2}
+\end{DoxyParamCaption}
+)}}\label{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}
+
+
+Compute mean absolute error for each column of two matrices. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mat1} & First matrix of data \\
+\hline
+\mbox{\tt in}  & {\em mat2} & Second matrix of data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mean absolute error between the matrices (one value for each column) 
+\end{DoxyReturn}
+
+
+Definition at line 59 of file demo\+Train\+Function\+Approximators.\+cpp.
+
+
+\begin{DoxyCode}
+60 \{
+61   MatrixXd abs\_error = (mat1.array()-mat2.array()).abs();
+62   VectorXd mean\_abs\_error\_per\_output\_dim = abs\_error.colwise().mean();
+63      
+64   cout << fixed << setprecision(5);
+65   cout << \textcolor{stringliteral}{"         Mean absolute error "};
+66   \textcolor{keywordflow}{if} (mean\_abs\_error\_per\_output\_dim.size()>1) cout << \textcolor{stringliteral}{" (per dimension)"};
+67   cout << \textcolor{stringliteral}{": "} << mean\_abs\_error\_per\_output\_dim.transpose();      
+68   cout << \textcolor{stringliteral}{"   \(\backslash\)t(range of target data is "} << mat1.colwise().maxCoeff().array()-mat1.colwise().minCoeff().
+      array() << \textcolor{stringliteral}{")"};
+69   
+70   \textcolor{keywordflow}{return} mean\_abs\_error\_per\_output\_dim;
+71 \}
+\end{DoxyCode}
+\hypertarget{demoTrainFunctionApproximators_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{\index{demo\+Train\+Function\+Approximators.\+cpp@{demo\+Train\+Function\+Approximators.\+cpp}!main@{main}}
+\index{main@{main}!demo\+Train\+Function\+Approximators.\+cpp@{demo\+Train\+Function\+Approximators.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+args, }
+\item[{char $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{demoTrainFunctionApproximators_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}
+
+
+Main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+args} & Number of arguments \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments themselves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success of exection. 0 if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 78 of file demo\+Train\+Function\+Approximators.\+cpp.
+
+
+\begin{DoxyCode}
+79 \{
+80   \textcolor{comment}{// First argument may be optional directory to write data to}
+81   \textcolor{keywordtype}{string} directory, directory\_fa;
+82   \textcolor{keywordflow}{if} (n\_args>1)
+83     directory = string(args[1]);
+84   \textcolor{keywordtype}{bool} overwrite = \textcolor{keyword}{true};
+85 
+86   
+87   
+88   \textcolor{comment}{// Generate training data }
+89   \textcolor{keywordtype}{int} n\_input\_dims = 1;
+90   VectorXi n\_samples\_per\_dim = VectorXi::Constant(1,25);
+91   \textcolor{keywordflow}{if} (n\_input\_dims==2) 
+92     n\_samples\_per\_dim = VectorXi::Constant(2,25);
+93     
+94   MatrixXd inputs, targets, outputs;
+95   \hyperlink{demoEvolutionaryOptimizationTask_8cpp_a8dd69e1c4b8036ab6c2b6f386fe5b6bc}{targetFunction}(n\_samples\_per\_dim,inputs,targets);
+96   
+97   \textcolor{comment}{// Add some noise}
+98   \textcolor{comment}{//targets = targets + 0.1*VectorXd::Random(targets.rows(),targets.cols());}
+99 
+100   \hyperlink{classDmpBbo_1_1FunctionApproximator}{FunctionApproximator}* fa;
+101   
+102   \textcolor{comment}{// Locally Weighted Regression}
+103   \textcolor{keywordtype}{double} intersection = 0.5;
+104   \textcolor{keywordtype}{int} n\_rfs = 9;
+105   \textcolor{keywordflow}{if} (n\_input\_dims==2) n\_rfs = 5;
+106   VectorXi num\_rfs\_per\_dim = VectorXi::Constant(n\_input\_dims,n\_rfs);
+107   \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}* meta\_parameters\_lwr = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}(n\_input\_dims,num\_rfs\_per\_dim,intersection);
+108   fa = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}(meta\_parameters\_lwr);
+109 
+110   cout << \textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"} << endl << fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}() << endl;
+111   cout << \textcolor{stringliteral}{"    Training"}  << endl;
+112   \textcolor{keywordflow}{if} (!directory.empty()) directory\_fa =  directory+\textcolor{stringliteral}{"/"}+fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}();
+113   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets,directory\_fa,overwrite);
+114   cout << \textcolor{stringliteral}{"    Predicting"} << endl;
+115   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs,outputs);
+116   \hyperlink{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{meanAbsoluteErrorPerOutputDimension}(targets,outputs);
+117   cout << endl << endl;
+118   
+119   \textcolor{keyword}{delete} fa;
+120   \textcolor{keyword}{delete} meta\_parameters\_lwr;
+121     
+122   \textcolor{comment}{// Weighted Least Squares}
+123   \textcolor{comment}{// LWR with only one basis function}
+124   vector<VectorXd> centers\_per\_dim(1);
+125   \textcolor{comment}{// Choose one center between min and max of inputs}
+126   centers\_per\_dim[0] = 0.5*(inputs.colwise().minCoeff()+inputs.colwise().maxCoeff());
+127   meta\_parameters\_lwr = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}(n\_input\_dims, centers\_per\_dim);
+128 
+129   fa = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}(meta\_parameters\_lwr);
+130 
+131   cout << \textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"} << endl << fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}() << endl;
+132   cout << \textcolor{stringliteral}{"    Training"}  << endl;
+133   \textcolor{keywordflow}{if} (!directory.empty()) directory\_fa =  directory+\textcolor{stringliteral}{"/WLS"};
+134   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets,directory\_fa,overwrite);
+135   cout << \textcolor{stringliteral}{"    Predicting"} << endl;
+136   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs,outputs);
+137   \hyperlink{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{meanAbsoluteErrorPerOutputDimension}(targets,outputs);
+138   cout << endl << endl;
+139   
+140   \textcolor{keyword}{delete} fa;
+141   \textcolor{keyword}{delete} meta\_parameters\_lwr;
+142 
+143   
+144   \textcolor{comment}{// IRFRLS}
+145   \textcolor{keywordtype}{int} number\_of\_basis\_functions=100;
+146   \textcolor{keywordtype}{double} lambda=0.2;
+147   \textcolor{keywordtype}{double} gamma=10;
+148   \hyperlink{classDmpBbo_1_1MetaParametersIRFRLS}{MetaParametersIRFRLS}* meta\_parameters\_irfrls = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1MetaParametersIRFRLS}{MetaParametersIRFRLS}(n\_input\_dims,number\_of\_basis\_functions,lambda,gamma);
+149   fa = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS}{FunctionApproximatorIRFRLS}(meta\_parameters\_irfrls);
+150   
+151   cout << \textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"} << endl << fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}() << endl;
+152   cout << \textcolor{stringliteral}{"    Training"}  << endl;
+153   \textcolor{keywordflow}{if} (!directory.empty()) directory\_fa =  directory+\textcolor{stringliteral}{"/"}+fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}();
+154   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets,directory\_fa,overwrite);
+155   cout << \textcolor{stringliteral}{"    Predicting"} << endl;
+156   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs,outputs);
+157   \hyperlink{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{meanAbsoluteErrorPerOutputDimension}(targets,outputs);
+158   cout << endl << endl;
+159   
+160   \textcolor{keyword}{delete} fa;
+161   \textcolor{keyword}{delete} meta\_parameters\_irfrls;
+162   
+163   
+164   
+165   \textcolor{comment}{// Gaussian Mixture Regression (GMR)}
+166   \textcolor{keywordtype}{int} number\_of\_gaussians = pow(5,n\_input\_dims);
+167   \hyperlink{classDmpBbo_1_1MetaParametersGMR}{MetaParametersGMR}* meta\_parameters\_gmr = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1MetaParametersGMR}{MetaParametersGMR}(n\_input\_dims,number\_of\_gaussians);
+168   fa = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR}{FunctionApproximatorGMR}(meta\_parameters\_gmr);
+169     
+170   cout << \textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"} << endl << fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}() << endl;
+171   cout << \textcolor{stringliteral}{"    Training"}  << endl;
+172   \textcolor{keywordflow}{if} (!directory.empty()) directory\_fa =  directory+\textcolor{stringliteral}{"/"}+fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}();
+173   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets,directory\_fa,overwrite);
+174   cout << \textcolor{stringliteral}{"    Predicting"} << endl;
+175   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs,outputs);
+176   \hyperlink{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{meanAbsoluteErrorPerOutputDimension}(targets,outputs);
+177   cout << endl << endl;
+178   
+179   \textcolor{keyword}{delete} fa;
+180   \textcolor{keyword}{delete} meta\_parameters\_gmr;
+181 
+182   
+183     \textcolor{comment}{// Locally Weighted Projection Regression}
+184 \textcolor{preprocessor}{#ifdef USE\_LWPR}
+185     \textcolor{keywordtype}{double}   w\_gen=0.2;
+186     \textcolor{keywordtype}{double}   w\_prune=0.8;
+187     \textcolor{keywordtype}{bool}     update\_D=\textcolor{keyword}{true};
+188     \textcolor{keywordtype}{double}   init\_alpha=0.1;
+189     \textcolor{keywordtype}{double}   penalty=0.005;
+190     VectorXd init\_D=VectorXd::Constant(n\_input\_dims,200);
+191   \hyperlink{classDmpBbo_1_1MetaParametersLWPR}{MetaParametersLWPR}* meta\_parameters\_lwpr = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1MetaParametersLWPR}{MetaParametersLWPR}(n\_input\_dims,init\_D,w\_gen,w\_prune,update\_D,init\_alpha,penalty);
+192   fa = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR}{FunctionApproximatorLWPR}(meta\_parameters\_lwpr);
+193     
+194   cout << \textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"} << endl << fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}() << endl;
+195   cout << \textcolor{stringliteral}{"    Training"}  << endl;
+196   \textcolor{keywordflow}{if} (!directory.empty()) directory\_fa =  directory+\textcolor{stringliteral}{"/"}+fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}();
+197   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets,directory\_fa,overwrite);
+198   cout << \textcolor{stringliteral}{"    Predicting"} << endl;
+199   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs,outputs);
+200   \hyperlink{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{meanAbsoluteErrorPerOutputDimension}(targets,outputs);
+201   cout << endl << endl;
+202   
+203   \textcolor{keyword}{delete} fa;
+204   \textcolor{keyword}{delete} meta\_parameters\_lwpr;
+205 \textcolor{preprocessor}{#endif // USE\_LWPR}
+206 
+207   \textcolor{comment}{// Radial Basis Function Network}
+208   intersection = 0.7;
+209   n\_rfs = 9;
+210   \textcolor{keywordflow}{if} (n\_input\_dims==2) n\_rfs = 5;
+211   num\_rfs\_per\_dim = VectorXi::Constant(n\_input\_dims,n\_rfs);
+212   \hyperlink{classDmpBbo_1_1MetaParametersRBFN}{MetaParametersRBFN}* meta\_parameters\_rbfn = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1MetaParametersRBFN}{MetaParametersRBFN}(n\_input\_dims,num\_rfs\_per\_dim,intersection);
+213   fa = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorRBFN}{FunctionApproximatorRBFN}(meta\_parameters\_rbfn);
+214 
+215   cout << \textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"} << endl << fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}() << endl;
+216   cout << \textcolor{stringliteral}{"    Training"}  << endl;
+217   \textcolor{keywordflow}{if} (!directory.empty()) directory\_fa =  directory+\textcolor{stringliteral}{"/"}+fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}();
+218   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets,directory\_fa,overwrite);
+219   cout << \textcolor{stringliteral}{"    Predicting"} << endl;
+220   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs,outputs);
+221   \hyperlink{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{meanAbsoluteErrorPerOutputDimension}(targets,outputs);
+222   cout << endl << endl;
+223 
+224   \textcolor{keyword}{delete} fa;
+225   \textcolor{keyword}{delete} meta\_parameters\_rbfn;
+226   
+227   \textcolor{comment}{// Gaussian Process Regression}
+228   \textcolor{keywordtype}{double} maximum\_covariance = 3;
+229   \textcolor{keywordtype}{double} length = 0.1;
+230   \hyperlink{classDmpBbo_1_1MetaParametersGPR}{MetaParametersGPR}* meta\_parameters\_gpr = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1MetaParametersGPR}{MetaParametersGPR}(n\_input\_dims,maximum\_covariance,length);
+231   fa = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR}{FunctionApproximatorGPR}(meta\_parameters\_gpr);
+232 
+233   cout << \textcolor{stringliteral}{"\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_"} << endl << fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}() << endl;
+234   cout << \textcolor{stringliteral}{"    Training"}  << endl;
+235   \textcolor{keywordflow}{if} (!directory.empty()) directory\_fa =  directory+\textcolor{stringliteral}{"/"}+fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}();
+236   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets,directory\_fa,overwrite);
+237   cout << \textcolor{stringliteral}{"    Predicting"} << endl;
+238   fa->\hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs,outputs);
+239   \hyperlink{demoTrainFunctionApproximators_8cpp_a718388cd48f1ddd8003e3cb4815d8c16}{meanAbsoluteErrorPerOutputDimension}(targets,outputs);
+240   cout << endl << endl;
+241 
+242   \textcolor{keyword}{delete} fa;
+243   \textcolor{keyword}{delete} meta\_parameters\_gpr;
+244  
+245   \textcolor{keywordflow}{return} 0;
+246 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{demoTrainFunctionApproximators_8cpp_a22577c6525b3f2fefecc0c741ba46a9a_cgraph}
+\end{center}
+\end{figure}
+
+

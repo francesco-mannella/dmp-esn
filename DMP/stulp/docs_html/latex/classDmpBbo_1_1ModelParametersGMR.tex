@@ -1,0 +1,814 @@
+\hypertarget{classDmpBbo_1_1ModelParametersGMR}{\subsection{Model\+Parameters\+G\+M\+R Class Reference}
+\label{classDmpBbo_1_1ModelParametersGMR}\index{Model\+Parameters\+G\+M\+R@{Model\+Parameters\+G\+M\+R}}
+}
+
+
+Model parameters for the G\+M\+R function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Parameters\+G\+M\+R.\+hpp$>$}
+
+
+
+Inheritance diagram for Model\+Parameters\+G\+M\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classDmpBbo_1_1ModelParametersGMR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+Parameters\+G\+M\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classDmpBbo_1_1ModelParametersGMR__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a537f71cbd3b658dc15a722ed9008e9d5}{{\bfseries Model\+Parameters\+G\+M\+R} (std\+::vector$<$ double $>$ priors, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ means, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ covars, int n\+\_\+output\+\_\+dims=1)}\label{classDmpBbo_1_1ModelParametersGMR_a537f71cbd3b658dc15a722ed9008e9d5}
+
+\item 
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a248fa3b5f6d86e9316129b73863e9278}{\hyperlink{classDmpBbo_1_1ModelParametersGMR_a248fa3b5f6d86e9316129b73863e9278}{Model\+Parameters\+G\+M\+R} (std\+::vector$<$ double $>$ priors, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ mu\+\_\+xs, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ mu\+\_\+ys, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ sigma\+\_\+xs, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ sigma\+\_\+ys, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ sigma\+\_\+x\+\_\+ys)}\label{classDmpBbo_1_1ModelParametersGMR_a248fa3b5f6d86e9316129b73863e9278}
+
+\begin{DoxyCompactList}\small\item\em Constructor for the model parameters of the G\+M\+R function approximator. \end{DoxyCompactList}\item 
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a1ab606b9eb475b891b726df05ccd3012}{unsigned int {\bfseries get\+Number\+Of\+Gaussians} (void) const }\label{classDmpBbo_1_1ModelParametersGMR_a1ab606b9eb475b891b726df05ccd3012}
+
+\item 
+virtual int \hyperlink{classDmpBbo_1_1ModelParametersGMR_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}{get\+Expected\+Output\+Dim} (void) const 
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the output data. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classDmpBbo_1_1ModelParametersGMR_a2dadd5878cbb2d453e311d8d1adb314c}{get\+Expected\+Input\+Dim} (void) const 
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the input data. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1ModelParametersGMR_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} $\ast$ \hyperlink{classDmpBbo_1_1ModelParametersGMR_a0a71d403a2e0560e058c03394648d773}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGMR_a887f4747734bd8b7cc4f799092ff31b4}{get\+Selectable\+Parameters} (std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels) const 
+\begin{DoxyCompactList}\small\item\em Return all the names of the parameter types that can be selected. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGMR_a9dba1f93e426e7511630ec1ece4ace17}{get\+Parameter\+Vector\+Mask} (const std\+::set$<$ std\+::string $>$ selected\+\_\+values\+\_\+labels, Eigen\+::\+Vector\+Xi \&selected\+\_\+mask) const 
+\begin{DoxyCompactList}\small\item\em Get a mask for selecting parameters. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGMR_a29429ff2771d1e56cfba7250d38da4b1}{get\+Parameter\+Vector\+All} (Eigen\+::\+Vector\+Xd \&all\+\_\+values) const 
+\begin{DoxyCompactList}\small\item\em Return a vector that returns all available parameter values. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1ModelParametersGMR_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the size of the parameter values vector when it contains all available parameter values. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1ModelParametersGMR_a264d7db9f3a3a0f6371da28c5f0afef0}{save\+G\+M\+M} (std\+::string directory, bool overwrite=false) const 
+\begin{DoxyCompactList}\small\item\em Save a Gaussian mixture model to a directory; useful for debugging. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGMR_aa5c1479a40880e96565cff656369e3b5}{to\+Matrix} (Eigen\+::\+Matrix\+Xd \&gmm\+\_\+as\+\_\+matrix) const 
+\begin{DoxyCompactList}\small\item\em This function represents the Gaussian Mixture Model as one big matrix. \end{DoxyCompactList}\item 
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a2d90273c2c9bbe3cb05e4ab72d4c3dcc}{bool {\bfseries save\+G\+M\+M\+To\+Matrix} (std\+::string filename, bool overwrite=false) const }\label{classDmpBbo_1_1ModelParametersGMR_a2d90273c2c9bbe3cb05e4ab72d4c3dcc}
+
+\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel}{Unified\+Model} $\ast$ \hyperlink{classDmpBbo_1_1ModelParametersGMR_a6e3534f93333334c2f0126f8fc4d29d1}{to\+Unified\+Model} (void) const 
+\begin{DoxyCompactList}\small\item\em Convert these model parameters to unified model parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classDmpBbo_1_1ModelParametersGMR_aa72f6b9228bddbd48c217022317da836}{save\+G\+M\+M} (std\+::string directory, const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&centers, const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&covars, bool overwrite=false, int iter=-\/1)
+\begin{DoxyCompactList}\small\item\em Save a Gaussian mixture model to a directory; useful for debugging. \end{DoxyCompactList}\item 
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a1cdfcf930e53d0a3b5d080fa1472d771}{static \hyperlink{classDmpBbo_1_1ModelParametersGMR}{Model\+Parameters\+G\+M\+R} $\ast$ {\bfseries from\+Matrix} (const Eigen\+::\+Matrix\+Xd \&gmm\+\_\+matrix)}\label{classDmpBbo_1_1ModelParametersGMR_a1cdfcf930e53d0a3b5d080fa1472d771}
+
+\item 
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a341d9a87feb0d3ab1a668a8d14dc4140}{static \hyperlink{classDmpBbo_1_1ModelParametersGMR}{Model\+Parameters\+G\+M\+R} $\ast$ {\bfseries load\+G\+M\+M\+From\+Matrix} (std\+::string filename)}\label{classDmpBbo_1_1ModelParametersGMR_a341d9a87feb0d3ab1a668a8d14dc4140}
+
+\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGMR_a9d3c8f22e8237a805af4935a647e5a50}{set\+Parameter\+Vector\+All} (const Eigen\+::\+Vector\+Xd \&values)
+\begin{DoxyCompactList}\small\item\em Set all available parameter values with one vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a6f9f278fd7746f1df449e4a6af500b0f}{class {\bfseries Function\+Approximator\+G\+M\+R}}\label{classDmpBbo_1_1ModelParametersGMR_a6f9f278fd7746f1df449e4a6af500b0f}
+
+\item 
+class \hyperlink{classDmpBbo_1_1ModelParametersGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Model parameters for the G\+M\+R function approximator. 
+
+Definition at line 38 of file Model\+Parameters\+G\+M\+R.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!get\+Expected\+Output\+Dim@{get\+Expected\+Output\+Dim}}
+\index{get\+Expected\+Output\+Dim@{get\+Expected\+Output\+Dim}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{get\+Expected\+Output\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}virtual int get\+Expected\+Output\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}
+
+
+The expected dimensionality of the output data. 
+
+For now, we only consider 1-\/dimensional output by default. \begin{DoxyReturn}{Returns}
+Expected dimensionality of the output data 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1ModelParameters_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}{Model\+Parameters}.
+
+
+
+Definition at line 59 of file Model\+Parameters\+G\+M\+R.\+hpp.
+
+
+\begin{DoxyCode}
+60   \{
+61           assert(means\_y\_.size()>0); \textcolor{comment}{// This is also checked in the constructor}
+62     \textcolor{keywordflow}{return} means\_y\_[0].size();
+63   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a2dadd5878cbb2d453e311d8d1adb314c}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}}
+\index{get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{get\+Expected\+Input\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}virtual int get\+Expected\+Input\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_a2dadd5878cbb2d453e311d8d1adb314c}
+
+
+The expected dimensionality of the input data. 
+
+\begin{DoxyReturn}{Returns}
+Expected dimensionality of the input data 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_af4d8412e83487a72b7f8929c716d6d8f}{Model\+Parameters}.
+
+
+
+Definition at line 65 of file Model\+Parameters\+G\+M\+R.\+hpp.
+
+
+\begin{DoxyCode}
+66         \{
+67           assert(means\_x\_.size()>0); \textcolor{comment}{// This is also checked in the constructor}
+68           \textcolor{keywordflow}{return} means\_x\_[0].size();
+69         \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_af084bff2ddd6233e9a898faa23f6195c}{Model\+Parameters}.
+
+
+
+Definition at line 208 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+209 \{
+210   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"ModelParametersGMR"}
+      );
+211 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a0a71d403a2e0560e058c03394648d773}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\+Parameters} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_a0a71d403a2e0560e058c03394648d773}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_a491a5c84b21c8577748ca7e83a9b4751}{Model\+Parameters}.
+
+
+
+Definition at line 169 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+170 \{
+171   std::vector<double> priors;
+172   std::vector<VectorXd> means\_x;
+173   std::vector<VectorXd> means\_y;
+174   std::vector<MatrixXd> covars\_x;
+175   std::vector<MatrixXd> covars\_y;
+176   std::vector<MatrixXd> covars\_y\_x;
+177 
+178   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < priors\_.size(); i++)
+179   \{
+180     priors.push\_back(priors\_[i]);
+181     means\_x.push\_back(VectorXd(means\_x\_[i]));
+182     means\_y.push\_back(VectorXd(means\_y\_[i]));
+183     covars\_x.push\_back(MatrixXd(covars\_x\_[i]));
+184     covars\_y.push\_back(MatrixXd(covars\_y\_[i]));
+185     covars\_y\_x.push\_back(MatrixXd(covars\_y\_x\_[i]));
+186   \}
+187 
+188   \textcolor{keywordflow}{return} \textcolor{keyword}{new} ModelParametersGMR(priors, means\_x, means\_y, covars\_x, covars\_y, covars\_y\_x); 
+189 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a887f4747734bd8b7cc4f799092ff31b4}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!get\+Selectable\+Parameters@{get\+Selectable\+Parameters}}
+\index{get\+Selectable\+Parameters@{get\+Selectable\+Parameters}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{get\+Selectable\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Selectable\+Parameters (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_a887f4747734bd8b7cc4f799092ff31b4}
+
+
+Return all the names of the parameter types that can be selected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em selected\+\_\+values\+\_\+labels} & Names of the parameter types that can be selected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000014}{Todo}]Determine which parameters should be modifiable in G\+M\+R. \end{DoxyRefDesc}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{Parameterizable}.
+
+
+
+Definition at line 372 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+373 \{
+374   selected\_values\_labels = set<string>();
+375   \textcolor{comment}{// selected\_values\_labels.insert("centers");}
+376   \textcolor{comment}{// selected\_values\_labels.insert("priors");}
+377   \textcolor{comment}{// selected\_values\_labels.insert("slopes");}
+378   \textcolor{comment}{// selected\_values\_labels.insert("biases");}
+379   \textcolor{comment}{// selected\_values\_labels.insert("inverse\_covars\_l");}
+380 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a9dba1f93e426e7511630ec1ece4ace17}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}}
+\index{get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{get\+Parameter\+Vector\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Mask (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$}]{selected\+\_\+values\+\_\+labels, }
+\item[{Eigen\+::\+Vector\+Xi \&}]{selected\+\_\+mask}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_a9dba1f93e426e7511630ec1ece4ace17}
+
+
+Get a mask for selecting parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & Labels of the selected parameter values \\
+\hline
+\mbox{\tt out}  & {\em selected\+\_\+mask} & A mask indicating indices of selected parameters. 0 indicates not selected, $>$0 indicates selected.\\
+\hline
+\end{DoxyParams}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ In this case, if selected\+\_\+values\+\_\+labels contains \char`\"{}centers\char`\"{} and \char`\"{}slopes\char`\"{}, the mask will be\+: \begin{DoxyVerb}    centers     widths    slopes
+[   1   1   1  0  0  0   3   3   3 ]
+\end{DoxyVerb}
+ The '0' indicates that these parameters are not selected. The other ones have different numbers so that they may be discerned from one another (as required in \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{Parameterizable\+::get\+Parameter\+Vector\+Selected\+Min\+Max} for instance. 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{Parameterizable}.
+
+
+
+Definition at line 382 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+383 \{
+384   \textcolor{comment}{// selected\_mask.resize(getParameterVectorAllSize());}
+385   \textcolor{comment}{// selected\_mask.fill(0);}
+386   
+387   \textcolor{comment}{// int offset = 0;}
+388   \textcolor{comment}{// int size;}
+389 
+390   \textcolor{comment}{// size = centers\_.size() * centers\_[0].size();}
+391   \textcolor{comment}{// if (selected\_values\_labels.find("centers")!=selected\_values\_labels.end())}
+392   \textcolor{comment}{//   selected\_mask.segment(offset,size).fill(1);}
+393   \textcolor{comment}{// offset += size;}
+394   
+395   \textcolor{comment}{// size = priors\_.size();}
+396   \textcolor{comment}{// if (selected\_values\_labels.find("priors")!=selected\_values\_labels.end())}
+397   \textcolor{comment}{//   selected\_mask.segment(offset,size).fill(2);}
+398   \textcolor{comment}{// offset += size;}
+399 
+400   \textcolor{comment}{// size = slopes\_.size() * slopes\_[0].rows() * slopes\_[0].cols();}
+401   \textcolor{comment}{// if (selected\_values\_labels.find("slopes")!=selected\_values\_labels.end())}
+402   \textcolor{comment}{//   selected\_mask.segment(offset,size).fill(3);}
+403   \textcolor{comment}{// offset += size;}
+404 
+405     
+406   \textcolor{comment}{// size = biases\_.size() * biases\_[0].size();}
+407   \textcolor{comment}{// if (selected\_values\_labels.find("biases")!=selected\_values\_labels.end())}
+408   \textcolor{comment}{//   selected\_mask.segment(offset,size).fill(4);}
+409   \textcolor{comment}{// offset += size;}
+410 
+411   \textcolor{comment}{// size = inverseCovarsL\_.size() * (inverseCovarsL\_[0].rows() * (inverseCovarsL\_[0].cols() + 1))/2;}
+412   \textcolor{comment}{// if (selected\_values\_labels.find("inverse\_covars\_l")!=selected\_values\_labels.end())}
+413   \textcolor{comment}{//   selected\_mask.segment(offset,size).fill(5);}
+414   \textcolor{comment}{// offset += size;}
+415     
+416   \textcolor{comment}{// assert(offset == getParameterVectorAllSize());   }
+417 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a29429ff2771d1e56cfba7250d38da4b1}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}}
+\index{get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{get\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_a29429ff2771d1e56cfba7250d38da4b1}
+
+
+Return a vector that returns all available parameter values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, which return only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{Parameterizable}.
+
+
+
+Definition at line 420 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+421 \{
+422   \textcolor{comment}{// values.resize(getParameterVectorAllSize());}
+423   \textcolor{comment}{// int offset = 0;}
+424 
+425   \textcolor{comment}{// for (size\_t i = 0; i < centers\_.size(); i++)}
+426   \textcolor{comment}{// \{}
+427   \textcolor{comment}{//   values.segment(offset, centers\_[i].size()) = centers\_[i];}
+428   \textcolor{comment}{//   offset += centers\_[i].size();}
+429   \textcolor{comment}{// \}}
+430 
+431   \textcolor{comment}{// for (size\_t i = 0; i < centers\_.size(); i++)}
+432   \textcolor{comment}{// \{}
+433   \textcolor{comment}{//   values[offset] = priors\_[i];}
+434   \textcolor{comment}{//   offset += 1;}
+435   \textcolor{comment}{// \}}
+436 
+437   \textcolor{comment}{// for (size\_t i = 0; i < slopes\_.size(); i++)}
+438   \textcolor{comment}{// \{}
+439   \textcolor{comment}{//   for (int col = 0; col < slopes\_[i].cols(); col++)}
+440   \textcolor{comment}{//   \{}
+441   \textcolor{comment}{//     values.segment(offset, slopes\_[i].rows()) = slopes\_[i].col(col);}
+442   \textcolor{comment}{//     offset += slopes\_[i].rows();}
+443   \textcolor{comment}{//   \}}
+444   \textcolor{comment}{// \}}
+445 
+446   \textcolor{comment}{// for (size\_t i = 0; i < centers\_.size(); i++)}
+447   \textcolor{comment}{// \{}
+448   \textcolor{comment}{//   values.segment(offset, biases\_[i].size()) = biases\_[i];}
+449   \textcolor{comment}{//   offset += biases\_[i].size();}
+450   \textcolor{comment}{// \}}
+451 
+452   \textcolor{comment}{// for (size\_t i = 0; i < inverseCovarsL\_.size(); i++)}
+453   \textcolor{comment}{// \{}
+454   \textcolor{comment}{//   for (int row = 0; row < inverseCovarsL\_[i].rows(); row++)}
+455   \textcolor{comment}{//     for (int col = 0; col < row + 1; col++)}
+456   \textcolor{comment}{//     \{}
+457   \textcolor{comment}{//       values[offset] = inverseCovarsL\_[i](row, col);}
+458   \textcolor{comment}{//       offset += 1;}
+459   \textcolor{comment}{//     \}}
+460   \textcolor{comment}{// \}}
+461   
+462   \textcolor{comment}{// assert(offset == getParameterVectorAllSize());   }
+463 
+464 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_ab24d2485b3b795b516f4844f225100eb}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}}
+\index{get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{get\+Parameter\+Vector\+All\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Vector\+All\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_ab24d2485b3b795b516f4844f225100eb}
+
+
+Get the size of the parameter values vector when it contains all available parameter values. 
+
+\begin{DoxyReturn}{Returns}
+The size of the parameter vector
+\end{DoxyReturn}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ then \hyperlink{classDmpBbo_1_1ModelParametersGMR_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size()} will return 9 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{Parameterizable}.
+
+
+
+Definition at line 83 of file Model\+Parameters\+G\+M\+R.\+hpp.
+
+
+\begin{DoxyCode}
+84   \{
+85     \textcolor{keywordflow}{return} all\_values\_vector\_size\_;
+86   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_aa72f6b9228bddbd48c217022317da836}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!save\+G\+M\+M@{save\+G\+M\+M}}
+\index{save\+G\+M\+M@{save\+G\+M\+M}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{save\+G\+M\+M}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+G\+M\+M (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{directory, }
+\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{centers, }
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{covars, }
+\item[{bool}]{overwrite = {\ttfamily false}, }
+\item[{int}]{iter = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classDmpBbo_1_1ModelParametersGMR_aa72f6b9228bddbd48c217022317da836}
+
+
+Save a Gaussian mixture model to a directory; useful for debugging. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em directory} & Directory to save to \\
+\hline
+\mbox{\tt in}  & {\em centers} & Centers of the Gaussians \\
+\hline
+\mbox{\tt in}  & {\em covars} & Covariance matrices of the Gaussians \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Whether to overwrite existing files or not. \\
+\hline
+\mbox{\tt in}  & {\em iter} & Iteration number when running Expectation-\/\+Maximization. Allows the G\+M\+M to be stored with a different filename (in the same directory) at each iteration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 213 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+214 \{
+215   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+216   \{
+217     stringstream stream;
+218     stream << \textcolor{stringliteral}{"gmm"};
+219     \textcolor{keywordflow}{if} (iter>=0)
+220       stream << \textcolor{stringliteral}{"\_iter"} << setw(2) << setfill(\textcolor{charliteral}{'0'}) << iter;
+221     stream  << \textcolor{stringliteral}{"\_mu"} << setw(3) << setfill(\textcolor{charliteral}{'0'}) << i\_gau << \textcolor{stringliteral}{".txt"};
+222     \textcolor{keywordtype}{string} filename = stream.str();
+223     \textcolor{keywordflow}{if} (!saveMatrix(directory, filename,  centers[i\_gau],  overwrite))
+224       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+225     \textcolor{comment}{//cout << "  filename=" << filename << endl;}
+226     
+227     stringstream stream2;
+228     stream2 << \textcolor{stringliteral}{"gmm"};
+229     \textcolor{keywordflow}{if} (iter>=0)
+230       stream2 << \textcolor{stringliteral}{"\_iter"} << setw(2) << setfill(\textcolor{charliteral}{'0'}) << iter;
+231     stream2  << \textcolor{stringliteral}{"\_covar"} << setw(3) << setfill(\textcolor{charliteral}{'0'}) << i\_gau << \textcolor{stringliteral}{".txt"};
+232     filename = stream2.str();
+233     \textcolor{comment}{//cout << "  filename=" << filename << endl;}
+234     \textcolor{keywordflow}{if} (!saveMatrix(directory, filename,  covars[i\_gau],  overwrite))
+235       \textcolor{keywordflow}{return} \textcolor{keyword}{false};    
+236   \}
+237   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+238 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a264d7db9f3a3a0f6371da28c5f0afef0}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!save\+G\+M\+M@{save\+G\+M\+M}}
+\index{save\+G\+M\+M@{save\+G\+M\+M}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{save\+G\+M\+M}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+G\+M\+M (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{directory, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1ModelParametersGMR_a264d7db9f3a3a0f6371da28c5f0afef0}
+
+
+Save a Gaussian mixture model to a directory; useful for debugging. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em directory} & Directory to save to \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Whether to overwrite existing files or not. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 240 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+241 \{
+242   \textcolor{keywordflow}{if} (save\_directory.empty())
+243     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+244   
+245   \textcolor{comment}{//MatrixXd inputs;}
+246   \textcolor{comment}{//FunctionApproximator::generateInputsGrid(min, max, n\_samples\_per\_dim, inputs);}
+247   \textcolor{comment}{//saveMatrix(save\_directory,"n\_samples\_per\_dim.txt",n\_samples\_per\_dim,overwrite);}
+248 
+249   \textcolor{keywordtype}{int} n\_gaussians = means\_x\_.size();
+250   \textcolor{keywordtype}{int} n\_dims\_in = means\_x\_[0].size();
+251   \textcolor{keywordtype}{int} n\_dims\_out = means\_y\_[0].size();
+252   \textcolor{keywordtype}{int} n\_dims\_gmm = n\_dims\_in + n\_dims\_out;
+253   
+254   
+255   std::vector<VectorXd> means(n\_gaussians);
+256   std::vector<MatrixXd> covars(n\_gaussians);
+257   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_gau = 0; i\_gau < n\_gaussians; i\_gau++)
+258   \{
+259     means[i\_gau] = VectorXd(n\_dims\_gmm);
+260     means[i\_gau].segment(0, n\_dims\_in) = means\_x\_[i\_gau];
+261     means[i\_gau].segment(n\_dims\_in, n\_dims\_out) = means\_y\_[i\_gau];
+262 
+263     covars[i\_gau] = MatrixXd(n\_dims\_gmm,n\_dims\_gmm);
+264     covars[i\_gau].fill(0);
+265     covars[i\_gau].block(0, 0, n\_dims\_in, n\_dims\_in) = covars\_x\_[i\_gau]; 
+266     covars[i\_gau].block(n\_dims\_in, n\_dims\_in, n\_dims\_out, n\_dims\_out) = covars\_y\_[i\_gau]; 
+267     covars[i\_gau].block(n\_dims\_in, 0, n\_dims\_out, n\_dims\_in) = covars\_y\_x\_[i\_gau];
+268     covars[i\_gau].block(0, n\_dims\_in, n\_dims\_in, n\_dims\_out) = covars\_y\_x\_[i\_gau].transpose();
+269   \}
+270   
+271   \hyperlink{classDmpBbo_1_1ModelParametersGMR_aa72f6b9228bddbd48c217022317da836}{saveGMM}(save\_directory,means,covars,overwrite);
+272  
+273   
+274   \textcolor{keywordflow}{return} \textcolor{keyword}{true};  
+275 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{classDmpBbo_1_1ModelParametersGMR_a264d7db9f3a3a0f6371da28c5f0afef0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_aa5c1479a40880e96565cff656369e3b5}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!to\+Matrix@{to\+Matrix}}
+\index{to\+Matrix@{to\+Matrix}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{to\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}void to\+Matrix (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Matrix\+Xd \&}]{gmm\+\_\+as\+\_\+matrix}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1ModelParametersGMR_aa5c1479a40880e96565cff656369e3b5}
+
+
+This function represents the Gaussian Mixture Model as one big matrix. 
+
+This matrix contains the following rows (example for two Gaussians, with dimensionality 3)
+
+\begin{DoxyVerb} 0. meta_data  (n_gaussians and n_output_dims)
+ __________________________
+ 1. prior1     (only column 0 contains the prior, the rest is zero)
+ 2. mean1      (size: 3)
+ 3. covar1     (row1 of covar matrix)
+ 4. covar1     (row2 of covar matrix)
+ 5. covar1     (row3 of covar matrix)
+ __________________________
+ 6. prior2     (only column 0 contains the prior, the rest is zero) 
+ 7. mean2      (size: 3)
+ 8. covar2     (row1 of covar matrix)
+ 9. covar2     (row2 of covar matrix)
+10. covar2     (row3 of covar matrix)
+\end{DoxyVerb}
+ \begin{DoxyVerb} Thus, the number of rows in the Matrix is 1 (for meta-data) + n_gaussians * (1+1+n_dims)
+
+ In combination with ModelParametersGMR::saveGMMToMatrix and ModelParametersGMR::loadGMMToMatrix, this hacky function allowed for easier exchange with some Matlab code we wrote.\end{DoxyVerb}
+ 
+
+Definition at line 277 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+278 \{
+279   \textcolor{keywordtype}{int} n\_gaussians = means\_x\_.size();
+280   assert(n\_gaussians>0);
+281   \textcolor{keywordtype}{int} n\_dims\_in = means\_x\_[0].size();
+282   \textcolor{keywordtype}{int} n\_dims\_out = means\_y\_[0].size();
+283   \textcolor{keywordtype}{int} n\_dims\_gmm = n\_dims\_in + n\_dims\_out;
+284   
+285   \textcolor{keywordtype}{int} n\_rows = 1; \textcolor{comment}{// First row contains n\_gaussians, n\_output\_dims}
+286   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_gau = 0; i\_gau < n\_gaussians; i\_gau++)
+287   \{
+288     n\_rows += 1; \textcolor{comment}{// Add one row for the prior (only first entry used)}
+289     n\_rows += 1; \textcolor{comment}{// Add one row for the mean}
+290     n\_rows += n\_dims\_gmm; \textcolor{comment}{// For the covariance matrix }
+291   \}
+292   
+293   gmm\_as\_matrix = MatrixXd::Zero(n\_rows,n\_dims\_gmm);
+294   
+295   gmm\_as\_matrix(0,0) = n\_gaussians;
+296   gmm\_as\_matrix(0,1) = n\_dims\_out;
+297   
+298   VectorXd mean = VectorXd(n\_dims\_gmm);
+299   MatrixXd covar = MatrixXd(n\_dims\_gmm,n\_dims\_gmm);
+300   \textcolor{keywordtype}{int} cur\_row = 1;
+301   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_gau = 0; i\_gau < n\_gaussians; i\_gau++)
+302   \{
+303     mean.segment(0, n\_dims\_in) = means\_x\_[i\_gau];
+304     mean.segment(n\_dims\_in, n\_dims\_out) = means\_y\_[i\_gau];
+305 
+306     covar.block(0, 0, n\_dims\_in, n\_dims\_in) = covars\_x\_[i\_gau]; 
+307     covar.block(n\_dims\_in, n\_dims\_in, n\_dims\_out, n\_dims\_out) = covars\_y\_[i\_gau]; 
+308     covar.block(n\_dims\_in, 0, n\_dims\_out, n\_dims\_in) = covars\_y\_x\_[i\_gau];
+309     covar.block(0, n\_dims\_in, n\_dims\_in, n\_dims\_out) = covars\_y\_x\_[i\_gau].transpose();
+310     
+311     gmm\_as\_matrix(cur\_row  ,0) = priors\_[i\_gau];
+312     gmm\_as\_matrix.row(cur\_row+1) = mean;
+313     gmm\_as\_matrix.block(cur\_row+2,0,n\_dims\_gmm,n\_dims\_gmm) = covar;
+314     
+315     cur\_row += 1 + 1 + n\_dims\_gmm;
+316   \}  
+317 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a6e3534f93333334c2f0126f8fc4d29d1}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!to\+Unified\+Model@{to\+Unified\+Model}}
+\index{to\+Unified\+Model@{to\+Unified\+Model}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{to\+Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} $\ast$ to\+Unified\+Model (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_a6e3534f93333334c2f0126f8fc4d29d1}
+
+
+Convert these model parameters to unified model parameters. 
+
+\begin{DoxyReturn}{Returns}
+Unified model parameter representation (N\+U\+L\+L if not implemented for a particular subclass) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_a9d1c72e871e8fa37857f9ce7eabe5a04}{Model\+Parameters}.
+
+
+
+Definition at line 517 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+518 \{
+519   \textcolor{keywordtype}{int} n\_gaussians = means\_x\_.size();
+520     
+521   \textcolor{comment}{// This copying is not necessary. It is just done to show which variable in GMR relates to which}
+522   \textcolor{comment}{// variable in the unified model. }
+523   vector<VectorXd> centers = means\_x\_;
+524   vector<MatrixXd> covars  = covars\_x\_;
+525 
+526   vector<VectorXd> slopes(n\_gaussians);
+527   vector<double> offsets(n\_gaussians);
+528   VectorXd rest;
+529   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_gau=0; i\_gau<n\_gaussians; i\_gau++)
+530   \{
+531     slopes[i\_gau] = (covars\_y\_x\_[i\_gau] * covars\_x\_inv\_[i\_gau]).transpose();
+532     
+533     assert(means\_y\_[i\_gau].size()==1); \textcolor{comment}{// Only works for 1D y output for now}
+534     offsets[i\_gau] = means\_y\_[i\_gau][0] - slopes[i\_gau].dot(means\_x\_[i\_gau]);
+535   \}
+536   
+537 
+538   \textcolor{keywordtype}{bool} normalized\_basis\_functions = \textcolor{keyword}{true};
+539   \textcolor{keywordtype}{bool} lines\_pivot\_at\_max\_activation = \textcolor{keyword}{false};
+540 
+541   \textcolor{keywordflow}{return} \textcolor{keyword}{new} UnifiedModel(centers, covars, slopes, offsets, priors\_,  normalized\_basis\_functions,
+      lines\_pivot\_at\_max\_activation); 
+542   
+543 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_a9d3c8f22e8237a805af4935a647e5a50}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}}
+\index{set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{set\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGMR_a9d3c8f22e8237a805af4935a647e5a50}
+
+
+Set all available parameter values with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{Parameterizable\+::set\+Parameter\+Vector\+Selected}, which sets only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{Parameterizable}.
+
+
+
+Definition at line 466 of file Model\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+467 \{
+468   \textcolor{comment}{// if (all\_values\_vector\_size\_ != values.size())}
+469   \textcolor{comment}{// \{}
+470   \textcolor{comment}{//   cerr << \_\_FILE\_\_ << ":" << \_\_LINE\_\_ << ": values is of wrong size." << endl;}
+471   \textcolor{comment}{//   return;}
+472   \textcolor{comment}{// \}}
+473   
+474   \textcolor{comment}{// int offset = 0;}
+475 
+476   \textcolor{comment}{// for (size\_t i = 0; i < centers\_.size(); i++)}
+477   \textcolor{comment}{// \{}
+478   \textcolor{comment}{//   centers\_[i] = values.segment(offset, centers\_[i].size());}
+479   \textcolor{comment}{//   offset += centers\_[i].size();}
+480   \textcolor{comment}{// \}}
+481   \textcolor{comment}{// for (size\_t i = 0; i < centers\_.size(); i++)}
+482   \textcolor{comment}{// \{}
+483   \textcolor{comment}{//   priors\_[i] = values[offset];}
+484   \textcolor{comment}{//   offset += 1;}
+485   \textcolor{comment}{// \}}
+486 
+487   \textcolor{comment}{// for (size\_t i = 0; i < slopes\_.size(); i++)}
+488   \textcolor{comment}{// \{}
+489   \textcolor{comment}{//   for (int col = 0; col < slopes\_[i].cols(); col++)}
+490   \textcolor{comment}{//   \{}
+491   \textcolor{comment}{//     slopes\_[i].col(col) = values.segment(offset, slopes\_[i].rows());}
+492   \textcolor{comment}{//     offset += slopes\_[i].rows();}
+493   \textcolor{comment}{//   \}}
+494   \textcolor{comment}{// \}}
+495 
+496   \textcolor{comment}{// for (size\_t i = 0; i < centers\_.size(); i++)}
+497   \textcolor{comment}{// \{}
+498   \textcolor{comment}{//   biases\_[i] = values.segment(offset, biases\_[i].size());}
+499   \textcolor{comment}{//   offset += biases\_[i].size();}
+500   \textcolor{comment}{// \}}
+501 
+502   \textcolor{comment}{// for (size\_t i = 0; i < inverseCovarsL\_.size(); i++)}
+503   \textcolor{comment}{// \{}
+504   \textcolor{comment}{//   for (int row = 0; row < inverseCovarsL\_[i].rows(); row++)}
+505   \textcolor{comment}{//     for (int col = 0; col < row + 1; col++)}
+506   \textcolor{comment}{//     \{}
+507   \textcolor{comment}{//       inverseCovarsL\_[i](row, col) = values[offset];}
+508   \textcolor{comment}{//       offset += 1;}
+509   \textcolor{comment}{//     \}}
+510   \textcolor{comment}{// \}}
+511   
+512   \textcolor{comment}{// assert(offset == getParameterVectorAllSize());}
+513 
+514 \};
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1ModelParametersGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+M\+R}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1ModelParametersGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 168 of file Model\+Parameters\+G\+M\+R.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ModelParametersGMR_8hpp}{Model\+Parameters\+G\+M\+R.\+hpp}\item 
+\hyperlink{ModelParametersGMR_8cpp}{Model\+Parameters\+G\+M\+R.\+cpp}\end{DoxyCompactItemize}

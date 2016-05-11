@@ -1,0 +1,1248 @@
+\hypertarget{classDmpBbo_1_1UnifiedModel}{\subsection{Unified\+Model Class Reference}
+\label{classDmpBbo_1_1UnifiedModel}\index{Unified\+Model@{Unified\+Model}}
+}
+
+
+The unified model, which can be used to represent the model of all other function approximators.  
+
+
+
+
+{\ttfamily \#include $<$Unified\+Model.\+hpp$>$}
+
+
+
+Inheritance diagram for Unified\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classDmpBbo_1_1UnifiedModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Unified\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{classDmpBbo_1_1UnifiedModel__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel_a597f14110f208256ba9124d9c839d520}{Unified\+Model} (const Eigen\+::\+Matrix\+Xd \&centers, const Eigen\+::\+Matrix\+Xd \&widths, const Eigen\+::\+Vector\+Xd \&weights, bool normalized\+\_\+basis\+\_\+functions, bool lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the unified model parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel_ab217b9dbb87440828bd80f294621f6ea}{Unified\+Model} (const Eigen\+::\+Matrix\+Xd \&centers, const Eigen\+::\+Matrix\+Xd \&widths, const Eigen\+::\+Matrix\+Xd \&slopes, const Eigen\+::\+Vector\+Xd \&offsets, bool normalized\+\_\+basis\+\_\+functions, bool lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the unified model parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel_a805750e8fa38cebe8dd37ce1d161ef04}{Unified\+Model} (const Eigen\+::\+Matrix\+Xd \&angular\+\_\+frequencies, const Eigen\+::\+Vector\+Xd \&phases, const Eigen\+::\+Vector\+Xd \&weights)
+\begin{DoxyCompactList}\small\item\em Constructor for the unified model parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel_afa95162d1e912a9d254a0e253fd5f87a}{Unified\+Model} (const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&centers, const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&widths, const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&slopes, const std\+::vector$<$ double $>$ \&offsets, const std\+::vector$<$ double $>$ \&priors, bool normalized\+\_\+basis\+\_\+functions=false, bool lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the unified model parameters. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1UnifiedModel_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel}{Unified\+Model} $\ast$ \hyperlink{classDmpBbo_1_1UnifiedModel_aaf24473bfe62ff5d8665379c9b2bb0e0}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the object. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1UnifiedModel_af5a550bcf65d5a29a153a594cc4e3fa1}{get\+Expected\+Input\+Dim} (void) const 
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the input data. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_a125cc60559b55f7348beb15f25834b6f}{kernel\+Activations} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&kernel\+\_\+activations) const 
+\begin{DoxyCompactList}\small\item\em Get the kernel activations for given inputs. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_ae8174f3d5e718d18c587c9bd50dc333f}{get\+Lines} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&lines) const 
+\begin{DoxyCompactList}\small\item\em Get the output of each linear model (unweighted) for the given inputs. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_a7f75b15a5b46d4efa1974290cab4b901}{evaluate} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&output) const 
+\begin{DoxyCompactList}\small\item\em Compute the sum of the locally weighted lines. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_add0186ca30d91928b887805fe0d24598}{set\+Parameter\+Vector\+Modifier\+Private} (std\+::string modifier, bool new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Turn certain modifiers on or off, see \hyperlink{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{Parameterizable\+::set\+Parameter\+Vector\+Modifier()}. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_aea1a05d703891f1bab48039a23cb78b4}{set\+\_\+lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation} (bool lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation)
+\begin{DoxyCompactList}\small\item\em Set whether the offsets should be adapted so that the line segments pivot around the mode of the basis function, rather than the intersection with the y-\/axis. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_a812ed8332b71789b6d8fd9355ff94fa7}{set\+\_\+slopes\+\_\+as\+\_\+angles} (bool slopes\+\_\+as\+\_\+angles)
+\begin{DoxyCompactList}\small\item\em Whether to return slopes as angles or slopes in \hyperlink{classDmpBbo_1_1UnifiedModel_a29429ff2771d1e56cfba7250d38da4b1}{Unified\+Model\+::get\+Parameter\+Vector\+All()} \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_a887f4747734bd8b7cc4f799092ff31b4}{get\+Selectable\+Parameters} (std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels) const 
+\begin{DoxyCompactList}\small\item\em Return all the names of the parameter types that can be selected. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_a9dba1f93e426e7511630ec1ece4ace17}{get\+Parameter\+Vector\+Mask} (const std\+::set$<$ std\+::string $>$ selected\+\_\+values\+\_\+labels, Eigen\+::\+Vector\+Xi \&selected\+\_\+mask) const 
+\begin{DoxyCompactList}\small\item\em Get a mask for selecting parameters. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_a29429ff2771d1e56cfba7250d38da4b1}{get\+Parameter\+Vector\+All} (Eigen\+::\+Vector\+Xd \&all\+\_\+values) const 
+\begin{DoxyCompactList}\small\item\em Return a vector that returns all available parameter values. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the size of the parameter values vector when it contains all available parameter values. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1UnifiedModel_a53d95f63de3b49491b1204f45a24ae25}{save\+Grid\+Data} (const Eigen\+::\+Vector\+Xd \&min, const Eigen\+::\+Vector\+Xd \&max, const Eigen\+::\+Vector\+Xi \&n\+\_\+samples\+\_\+per\+\_\+dim, std\+::string directory, bool overwrite=false) const 
+\begin{DoxyCompactList}\small\item\em Generate a grid of inputs, and output the response of the basis functions and line segments for these inputs. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_a9defb2d398362ff5663a1fde70903651}{set\+\_\+caching} (bool caching)
+\begin{DoxyCompactList}\small\item\em Turn caching for the function normalized\+Kernel\+Activations() on or off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1UnifiedModel_a9d3c8f22e8237a805af4935a647e5a50}{set\+Parameter\+Vector\+All} (const Eigen\+::\+Vector\+Xd \&values)
+\begin{DoxyCompactList}\small\item\em Set all available parameter values with one vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1UnifiedModel_ac0d40e39a36fa48c89fcf37f518af0cd}{class {\bfseries Function\+Approximator\+L\+W\+R}}\label{classDmpBbo_1_1UnifiedModel_ac0d40e39a36fa48c89fcf37f518af0cd}
+
+\item 
+class \hyperlink{classDmpBbo_1_1UnifiedModel_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The unified model, which can be used to represent the model of all other function approximators. 
+
+Also see the page on the \hyperlink{page_unified_model}{Unified Model} 
+
+Definition at line 47 of file Unified\+Model.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a597f14110f208256ba9124d9c839d520}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!Unified\+Model@{Unified\+Model}}
+\index{Unified\+Model@{Unified\+Model}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{centers, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{widths, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{weights, }
+\item[{bool}]{normalized\+\_\+basis\+\_\+functions, }
+\item[{bool}]{lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1UnifiedModel_a597f14110f208256ba9124d9c839d520}
+
+
+Constructor for the unified model parameters. 
+
+This version is used by for example R\+B\+F\+N and G\+P\+R. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em centers} & Centers of the basis functions (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em widths} & Widths of the basis functions (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em weights} & Weights of each basis function (n\+\_\+bfs X 1) \\
+\hline
+\mbox{\tt in}  & {\em normalized\+\_\+basis\+\_\+functions} & Whether to use normalized basis functions \\
+\hline
+\mbox{\tt in}  & {\em lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation} & Whether line models should pivot at x=0 (false), or at the center of the kernel (x=x\+\_\+c) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+56 \{
+57   \textcolor{keywordtype}{int} n\_basis\_functions = centers.rows();
+58   \textcolor{keywordtype}{int} n\_dims = centers.cols();
+59   
+60   assert(n\_basis\_functions==widths.rows());
+61   assert(n\_dims           ==widths.cols());
+62   assert(n\_basis\_functions==weights.size());
+63   
+64   centers\_.resize(n\_basis\_functions);
+65   covars\_.resize(n\_basis\_functions);
+66   slopes\_.resize(n\_basis\_functions);
+67   offsets\_.resize(n\_basis\_functions);
+68   priors\_.resize(n\_basis\_functions);
+69   
+70   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<n\_basis\_functions; i++)
+71   \{
+72     centers\_[i] = centers.row(i);
+73     covars\_[i] = widths.row(i).asDiagonal();
+74     covars\_[i] = covars\_[i].array().square();
+75     offsets\_[i] = weights[i];
+76     
+77     slopes\_[i] = VectorXd::Zero(n\_dims);
+78     priors\_[i] = 1.0;
+79   \}
+80   
+81   normalized\_basis\_functions\_ = normalized\_basis\_functions;
+82   lines\_pivot\_at\_max\_activation\_ = lines\_pivot\_at\_max\_activation;
+83   slopes\_as\_angles\_ = \textcolor{keyword}{false};
+84  
+85   cosine\_basis\_functions\_ = \textcolor{keyword}{false};
+86   
+87   initializeAllValuesVectorSize();
+88 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_ab217b9dbb87440828bd80f294621f6ea}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!Unified\+Model@{Unified\+Model}}
+\index{Unified\+Model@{Unified\+Model}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{centers, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{widths, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{slopes, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{offsets, }
+\item[{bool}]{normalized\+\_\+basis\+\_\+functions, }
+\item[{bool}]{lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1UnifiedModel_ab217b9dbb87440828bd80f294621f6ea}
+
+
+Constructor for the unified model parameters. 
+
+This version is used by for example L\+W\+R and L\+W\+P\+R 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em centers} & Centers of the basis functions (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em widths} & Widths of the basis functions (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em slopes} & Slopes of the line segments (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em offsets} & Offsets of the line segments, i.\+e. the value of the line segment at its intersection with the y-\/axis (n\+\_\+bfs X 1) \\
+\hline
+\mbox{\tt in}  & {\em normalized\+\_\+basis\+\_\+functions} & Whether to use normalized basis functions or not \\
+\hline
+\mbox{\tt in}  & {\em lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation} & Whether line models should pivot at x=0 (false), or at the center of the kernel (x=x\+\_\+c) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+91 \{
+92   \textcolor{keywordtype}{int} n\_basis\_functions = centers.rows();
+93 \textcolor{preprocessor}{#ifndef NDEBUG // Variables below are only required for asserts; check for NDEBUG to avoid warnings.}
+94   \textcolor{keywordtype}{int} n\_dims = centers.cols();
+95 \textcolor{preprocessor}{#endif }
+96 
+97   assert(n\_basis\_functions==widths.rows());
+98   assert(n\_dims           ==widths.cols());
+99   assert(n\_basis\_functions==slopes.rows());
+100   assert(n\_dims           ==slopes.cols());
+101   assert(n\_basis\_functions==offsets.size());
+102   
+103   centers\_.resize(n\_basis\_functions);
+104   covars\_.resize(n\_basis\_functions);
+105   slopes\_.resize(n\_basis\_functions);
+106   offsets\_.resize(n\_basis\_functions);
+107   priors\_.resize(n\_basis\_functions);
+108   
+109   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<n\_basis\_functions; i++)
+110   \{
+111     centers\_[i] = centers.row(i);
+112     covars\_[i] = widths.row(i).asDiagonal();
+113     covars\_[i] = covars\_[i].array().square();
+114     slopes\_[i] = slopes.row(i);
+115     offsets\_[i] = offsets[i];
+116     
+117     priors\_[i] = 1.0;
+118   \}
+119   
+120   normalized\_basis\_functions\_ = normalized\_basis\_functions;
+121   lines\_pivot\_at\_max\_activation\_ = lines\_pivot\_at\_max\_activation;
+122   slopes\_as\_angles\_ = \textcolor{keyword}{false};
+123   
+124   cosine\_basis\_functions\_ = \textcolor{keyword}{false};
+125 
+126   initializeAllValuesVectorSize();  
+127 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a805750e8fa38cebe8dd37ce1d161ef04}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!Unified\+Model@{Unified\+Model}}
+\index{Unified\+Model@{Unified\+Model}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{angular\+\_\+frequencies, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{phases, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{weights}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1UnifiedModel_a805750e8fa38cebe8dd37ce1d161ef04}
+
+
+Constructor for the unified model parameters. 
+
+This version is used by for example I\+R\+F\+R\+L\+S 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em angular\+\_\+frequencies} & Angular frequency for each dimension and each cosine basis function (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em phases} & Phase of each cosine basis function (n\+\_\+bfs X 1) \\
+\hline
+\mbox{\tt in}  & {\em weights} & Weights of each basis function (n\+\_\+bfs X 1) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+131 \{
+132   \textcolor{keywordtype}{int} n\_basis\_functions = angular\_frequencies.rows();
+133   \textcolor{keywordtype}{int} n\_dims = angular\_frequencies.cols();
+134   
+135   assert(n\_basis\_functions==phases.size());
+136   assert(n\_basis\_functions==weights.size());
+137   
+138   centers\_.resize(n\_basis\_functions); \textcolor{comment}{// phase}
+139   covars\_.resize(n\_basis\_functions);  \textcolor{comment}{// angular\_frequencies}
+140   slopes\_.resize(n\_basis\_functions);  
+141   offsets\_.resize(n\_basis\_functions); \textcolor{comment}{// weights}
+142   priors\_.resize(n\_basis\_functions);  
+143   
+144   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i=0; i<n\_basis\_functions; i++)
+145   \{
+146     centers\_[i] = VectorXd(1);
+147     centers\_[i][0] = phases[i];
+148     
+149     covars\_[i] = MatrixXd(1,n\_dims);
+150     covars\_[i] = angular\_frequencies.row(i);
+151 
+152     offsets\_[i] = weights[i];
+153     
+154     slopes\_[i] = VectorXd::Zero(n\_dims);
+155     priors\_[i] = 1.0;
+156   \}
+157 
+158   \textcolor{comment}{// These aren't relevant for cosing basis functions}
+159   normalized\_basis\_functions\_ = \textcolor{keyword}{false};
+160   lines\_pivot\_at\_max\_activation\_ = \textcolor{keyword}{false};
+161   slopes\_as\_angles\_ = \textcolor{keyword}{false};
+162   
+163   cosine\_basis\_functions\_ = \textcolor{keyword}{true};
+164   
+165   initializeAllValuesVectorSize();
+166 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_afa95162d1e912a9d254a0e253fd5f87a}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!Unified\+Model@{Unified\+Model}}
+\index{Unified\+Model@{Unified\+Model}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{centers, }
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{widths, }
+\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{slopes, }
+\item[{const std\+::vector$<$ double $>$ \&}]{offsets, }
+\item[{const std\+::vector$<$ double $>$ \&}]{priors, }
+\item[{bool}]{normalized\+\_\+basis\+\_\+functions = {\ttfamily false}, }
+\item[{bool}]{lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1UnifiedModel_afa95162d1e912a9d254a0e253fd5f87a}
+
+
+Constructor for the unified model parameters. 
+
+This version is used by for example G\+M\+R. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em centers} & Centers of the basis functions (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em widths} & Widths of the basis functions (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em slopes} & Slopes of the line segments (n\+\_\+bfs X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em offsets} & Offsets of the line segments, i.\+e. the value of the line segment at its intersection with the y-\/axis (n\+\_\+bfs X 1) \\
+\hline
+\mbox{\tt in}  & {\em priors} & Prior of each basis function (n\+\_\+bfs X 1) \\
+\hline
+\mbox{\tt in}  & {\em normalized\+\_\+basis\+\_\+functions} & Whether to use normalized basis functions or not \\
+\hline
+\mbox{\tt in}  & {\em lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation} & Whether line models should pivot at x=0 (false), or at the center of the kernel (x=x\+\_\+c) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 168 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+176 :
+177   centers\_(centers),
+178   covars\_(covars),
+179   slopes\_(slopes), 
+180   offsets\_(offsets),
+181   priors\_(priors), 
+182   normalized\_basis\_functions\_(normalized\_basis\_functions),
+183   lines\_pivot\_at\_max\_activation\_(lines\_pivot\_at\_max\_activation),
+184   slopes\_as\_angles\_(\textcolor{keyword}{false})
+185 \{
+186   cosine\_basis\_functions\_ = \textcolor{keyword}{false};
+187 
+188   initializeAllValuesVectorSize();
+189 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1UnifiedModel_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Definition at line 408 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+409 \{
+410   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"UnifiedModel"});
+411 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_aaf24473bfe62ff5d8665379c9b2bb0e0}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1UnifiedModel_aaf24473bfe62ff5d8665379c9b2bb0e0}
+
+
+Return a pointer to a deep copy of the object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Definition at line 208 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+208                                             \{
+209   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1UnifiedModel_a597f14110f208256ba9124d9c839d520}{UnifiedModel}(centers\_,covars\_,slopes\_,offsets\_,priors\_,normalized\_basis\_functions\_
+      ,lines\_pivot\_at\_max\_activation\_); 
+210 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_af5a550bcf65d5a29a153a594cc4e3fa1}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}}
+\index{get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{get\+Expected\+Input\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Expected\+Input\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1UnifiedModel_af5a550bcf65d5a29a153a594cc4e3fa1}
+
+
+The expected dimensionality of the input data. 
+
+\begin{DoxyReturn}{Returns}
+Expected dimensionality of the input data 
+\end{DoxyReturn}
+
+
+Definition at line 110 of file Unified\+Model.\+hpp.
+
+
+\begin{DoxyCode}
+110                                        \{
+111     \textcolor{keywordflow}{if} (centers\_.size()>0)
+112       \textcolor{keywordflow}{return} centers\_[0].size();
+113     \textcolor{keywordflow}{else}
+114       \textcolor{keywordflow}{return} 0;
+115   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a125cc60559b55f7348beb15f25834b6f}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!kernel\+Activations@{kernel\+Activations}}
+\index{kernel\+Activations@{kernel\+Activations}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{kernel\+Activations}]{\setlength{\rightskip}{0pt plus 5cm}void kernel\+Activations (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{kernel\+\_\+activations}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1UnifiedModel_a125cc60559b55f7348beb15f25834b6f}
+
+
+Get the kernel activations for given inputs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & The input data (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt out}  & {\em kernel\+\_\+activations} & The kernel activations, computed for each of the samples in the input data (size\+: n\+\_\+samples X n\+\_\+basis\+\_\+functions) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 348 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+349 \{
+350   \textcolor{keywordflow}{if} (caching\_)
+351   \{
+352     \textcolor{comment}{// If the cached inputs matrix has the same size as the one now requested}
+353     \textcolor{comment}{//     (this also takes care of the case when inputs\_cached is empty and need to be initialized)}
+354     \textcolor{keywordflow}{if} ( inputs.rows()==inputs\_cached\_.rows() && inputs.cols()==inputs\_cached\_.cols() )
+355     \{
+356       \textcolor{comment}{// And they have the same values}
+357       \textcolor{keywordflow}{if} ( (inputs.array()==inputs\_cached\_.array()).all() )
+358       \{
+359         \textcolor{comment}{// Then you can return the cached values}
+360         kernel\_activations = kernel\_activations\_cached\_;
+361         \textcolor{keywordflow}{return};
+362       \}
+363     \}
+364   \}
+365 
+366   \textcolor{comment}{// Cache could not be used, actually do the work}
+367   \textcolor{keywordflow}{if} (cosine\_basis\_functions\_)
+368   \{
+369     \textcolor{comment}{// centers\_.resize(n\_basis\_functions); // phase}
+370     \textcolor{comment}{// covars\_.resize(n\_basis\_functions);  // angular\_frequencies}
+371     \textcolor{comment}{// slopes\_.resize(n\_basis\_functions);  }
+372     \textcolor{comment}{// offsets\_.resize(n\_basis\_functions); // weights}
+373     \textcolor{comment}{// priors\_.resize(n\_basis\_functions);  }
+374     BasisFunction::Cosine::activations(covars\_,centers\_,inputs,kernel\_activations);
+375   \}
+376   \textcolor{keywordflow}{else}
+377   \{
+378     BasisFunction::Gaussian::activations(centers\_,covars\_,priors\_,inputs,kernel\_activations,
+      normalized\_basis\_functions\_);
+379   \}
+380 
+381   \textcolor{keywordflow}{if} (caching\_)
+382   \{
+383     \textcolor{comment}{// Cache the current results now.  }
+384     inputs\_cached\_ = inputs;
+385     kernel\_activations\_cached\_ = kernel\_activations;
+386   \}
+387   
+388 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_ae8174f3d5e718d18c587c9bd50dc333f}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!get\+Lines@{get\+Lines}}
+\index{get\+Lines@{get\+Lines}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{get\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Lines (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{lines}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1UnifiedModel_ae8174f3d5e718d18c587c9bd50dc333f}
+
+
+Get the output of each linear model (unweighted) for the given inputs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & The inputs for which to compute the output of the lines models (size\+: n\+\_\+samples X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt out}  & {\em lines} & The output of the linear models (size\+: n\+\_\+samples X n\+\_\+output\+\_\+dim) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 267 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+268 \{
+269   \textcolor{keywordtype}{int} n\_time\_steps = inputs.rows();
+270 
+271   \textcolor{comment}{//cout << "centers\_ = " << centers\_.rows() << "X" << centers\_.cols() << endl;}
+272   \textcolor{comment}{//cout << "slopes\_ = " << slopes\_.rows() << "X" << slopes\_.cols() << endl;}
+273   \textcolor{comment}{//cout << "offsets\_ = " << offsets\_.rows() << "X" << offsets\_.cols() << endl;}
+274   \textcolor{comment}{//cout << "inputs = " << inputs.rows() << "X" << inputs.cols() << endl;}
+275   
+276   \textcolor{comment}{// Compute values along lines for each time step  }
+277   \textcolor{comment}{// Line representation is "y = ax + b"}
+278   \textcolor{keywordtype}{int} n\_lines = centers\_.size();
+279   lines.resize(n\_time\_steps,n\_lines);
+280   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_line=0; i\_line<n\_lines; i\_line++)
+281   \{
+282     lines.col(i\_line) = inputs*slopes\_[i\_line];
+283     lines.col(i\_line).array() += offsets\_[i\_line];
+284   
+285     \textcolor{keywordflow}{if} (lines\_pivot\_at\_max\_activation\_)
+286     \{
+287       \textcolor{comment}{// Line representation is "y = a(x-c) + b", which is  "y = ax - ac + b"}
+288       \textcolor{comment}{// Therefore, we still have to subtract "ac"}
+289       \textcolor{keywordtype}{double} ac = slopes\_[i\_line].dot(centers\_[i\_line]);
+290       lines.col(i\_line).array() -= ac;
+291     \}
+292   \}
+293   \textcolor{comment}{//cout << "lines = " << lines.rows() << "X" << lines.cols() << endl;}
+294 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a7f75b15a5b46d4efa1974290cab4b901}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{output}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1UnifiedModel_a7f75b15a5b46d4efa1974290cab4b901}
+
+
+Compute the sum of the locally weighted lines. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & The inputs for which to compute the output (size\+: n\+\_\+samples X n\+\_\+input\+\_\+dims) \\
+\hline
+\mbox{\tt out}  & {\em output} & The weighted linear models (size\+: n\+\_\+samples X n\+\_\+output\+\_\+dim) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 296 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+297 \{
+298   
+299   MatrixXd lines;
+300   \hyperlink{classDmpBbo_1_1UnifiedModel_ae8174f3d5e718d18c587c9bd50dc333f}{getLines}(inputs, lines);
+301 
+302   \textcolor{comment}{// Weight the values for each line with the normalized basis function activations  }
+303   MatrixXd activations;
+304   \hyperlink{classDmpBbo_1_1UnifiedModel_a125cc60559b55f7348beb15f25834b6f}{kernelActivations}(inputs,activations);
+305   
+306   output = (lines.array()*activations.array()).rowwise().sum();
+307 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=269pt]{classDmpBbo_1_1UnifiedModel_a7f75b15a5b46d4efa1974290cab4b901_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1UnifiedModel_add0186ca30d91928b887805fe0d24598}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!set\+Parameter\+Vector\+Modifier\+Private@{set\+Parameter\+Vector\+Modifier\+Private}}
+\index{set\+Parameter\+Vector\+Modifier\+Private@{set\+Parameter\+Vector\+Modifier\+Private}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{set\+Parameter\+Vector\+Modifier\+Private}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+Modifier\+Private (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{modifier, }
+\item[{bool}]{new\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1UnifiedModel_add0186ca30d91928b887805fe0d24598}
+
+
+Turn certain modifiers on or off, see \hyperlink{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{Parameterizable\+::set\+Parameter\+Vector\+Modifier()}. 
+
+Parameterizable\+::set\+Parameter\+Vector\+Modifier\+Private(), This function may (but must not be) overridden by subclasses of \hyperlink{classDmpBbo_1_1Parameterizable}{Parameterizable}, depending on whether the subclass has modifiers (or not)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em modifier} & The name of the modifier \\
+\hline
+\mbox{\tt in}  & {\em new\+\_\+value} & Whether to turn the modifier on (true) or off (false) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Parameterizable}{Parameterizable}.
+
+
+
+Definition at line 621 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+622 \{
+623   \textcolor{keywordflow}{if} (modifier.compare(\textcolor{stringliteral}{"lines\_pivot\_at\_max\_activation"})==0)
+624     \hyperlink{classDmpBbo_1_1UnifiedModel_aea1a05d703891f1bab48039a23cb78b4}{set\_lines\_pivot\_at\_max\_activation}(new\_value);
+625   
+626   \textcolor{keywordflow}{if} (modifier.compare(\textcolor{stringliteral}{"slopes\_as\_angles"})==0)
+627     \hyperlink{classDmpBbo_1_1UnifiedModel_a812ed8332b71789b6d8fd9355ff94fa7}{set\_slopes\_as\_angles}(new\_value);
+628   
+629 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1UnifiedModel_add0186ca30d91928b887805fe0d24598_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1UnifiedModel_aea1a05d703891f1bab48039a23cb78b4}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!set\+\_\+lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation@{set\+\_\+lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation}}
+\index{set\+\_\+lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation@{set\+\_\+lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{set\+\_\+lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation (
+\begin{DoxyParamCaption}
+\item[{bool}]{lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1UnifiedModel_aea1a05d703891f1bab48039a23cb78b4}
+
+
+Set whether the offsets should be adapted so that the line segments pivot around the mode of the basis function, rather than the intersection with the y-\/axis. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em lines\+\_\+pivot\+\_\+at\+\_\+max\+\_\+activation} & Whether to pivot around the mode or not. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 213 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+214 \{
+215   \textcolor{comment}{// If no change, just return}
+216   \textcolor{keywordflow}{if} (lines\_pivot\_at\_max\_activation\_ == lines\_pivot\_at\_max\_activation)
+217     \textcolor{keywordflow}{return};
+218 
+219   \textcolor{comment}{//cout << "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" << endl;}
+220   \textcolor{comment}{//cout << centers\_.transpose() << endl;  }
+221   \textcolor{comment}{//cout << slopes\_.transpose() << endl;  }
+222   \textcolor{comment}{//cout << offsets\_.transpose() << endl;  }
+223   \textcolor{comment}{//cout << "centers\_ = " << centers\_.rows() << "X" << centers\_.cols() << endl;}
+224   \textcolor{comment}{//cout << "slopes\_ = " << slopes\_.rows() << "X" << slopes\_.cols() << endl;}
+225   \textcolor{comment}{//cout << "offsets\_ = " << offsets\_.rows() << "X" << offsets\_.cols() << endl;}
+226 
+227   \textcolor{comment}{// If you pivot lines around the point when the basis function has maximum activation (i.e.}
+228   \textcolor{comment}{// at the center of the Gaussian), you must compute the new offset corresponding to this}
+229   \textcolor{comment}{// slope, and vice versa    }
+230   \textcolor{keywordtype}{int} n\_lines = centers\_.size();
+231   VectorXd ac(n\_lines); \textcolor{comment}{// slopes*centers}
+232   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_line=0; i\_line<n\_lines; i\_line++)
+233   \{
+234     ac[i\_line] = slopes\_[i\_line].dot(centers\_[i\_line]);
+235     
+236     \textcolor{keywordflow}{if} (lines\_pivot\_at\_max\_activation)
+237     \{
+238       \textcolor{comment}{// Representation was "y = ax + b", now it will be "y = a(x-c) + b^new" }
+239       \textcolor{comment}{// Since "y = ax + b" can be rewritten as "y = a(x-c) + (b+ac)", we know that "b^new = (ac+b)"}
+240       offsets\_[i\_line] = offsets\_[i\_line] + ac[i\_line];
+241     \}
+242     \textcolor{keywordflow}{else}
+243     \{
+244       \textcolor{comment}{// Representation was "y = a(x-c) + b", now it will be "y = ax + b^new" }
+245       \textcolor{comment}{// Since "y = a(x-c) + b" can be rewritten as "y = ax + (b-ac)", we know that "b^new = (b-ac)"}
+246       offsets\_[i\_line] = offsets\_[i\_line] - ac[i\_line];
+247     \} 
+248   \}
+249   
+250   \textcolor{comment}{//cout << offsets\_.transpose() << endl;  }
+251   \textcolor{comment}{//cout << "offsets\_ = " << offsets\_.rows() << "X" << offsets\_.cols() << endl;}
+252   
+253   lines\_pivot\_at\_max\_activation\_ = lines\_pivot\_at\_max\_activation;
+254 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a812ed8332b71789b6d8fd9355ff94fa7}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!set\+\_\+slopes\+\_\+as\+\_\+angles@{set\+\_\+slopes\+\_\+as\+\_\+angles}}
+\index{set\+\_\+slopes\+\_\+as\+\_\+angles@{set\+\_\+slopes\+\_\+as\+\_\+angles}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{set\+\_\+slopes\+\_\+as\+\_\+angles}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+slopes\+\_\+as\+\_\+angles (
+\begin{DoxyParamCaption}
+\item[{bool}]{slopes\+\_\+as\+\_\+angles}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1UnifiedModel_a812ed8332b71789b6d8fd9355ff94fa7}
+
+
+Whether to return slopes as angles or slopes in \hyperlink{classDmpBbo_1_1UnifiedModel_a29429ff2771d1e56cfba7250d38da4b1}{Unified\+Model\+::get\+Parameter\+Vector\+All()} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em slopes\+\_\+as\+\_\+angles} & Whether to return as slopes (true) or angles (false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000019}{Todo}]Implement and document \end{DoxyRefDesc}
+
+
+Definition at line 256 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+257 \{
+258   slopes\_as\_angles\_ = slopes\_as\_angles;
+259   cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+260   cerr << \textcolor{stringliteral}{"Not implemented yet!!!"} << endl;
+261   slopes\_as\_angles\_ = \textcolor{keyword}{false};
+262 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a887f4747734bd8b7cc4f799092ff31b4}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!get\+Selectable\+Parameters@{get\+Selectable\+Parameters}}
+\index{get\+Selectable\+Parameters@{get\+Selectable\+Parameters}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{get\+Selectable\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Selectable\+Parameters (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1UnifiedModel_a887f4747734bd8b7cc4f799092ff31b4}
+
+
+Return all the names of the parameter types that can be selected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em selected\+\_\+values\+\_\+labels} & Names of the parameter types that can be selected \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{Parameterizable}.
+
+
+
+Definition at line 413 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+414 \{
+415   selected\_values\_labels = set<string>();
+416   selected\_values\_labels.insert(\textcolor{stringliteral}{"centers"});
+417   selected\_values\_labels.insert(\textcolor{stringliteral}{"widths"});
+418   selected\_values\_labels.insert(\textcolor{stringliteral}{"offsets"});
+419   selected\_values\_labels.insert(\textcolor{stringliteral}{"slopes"});
+420   selected\_values\_labels.insert(\textcolor{stringliteral}{"priors"});
+421 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a9dba1f93e426e7511630ec1ece4ace17}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}}
+\index{get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{get\+Parameter\+Vector\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Mask (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$}]{selected\+\_\+values\+\_\+labels, }
+\item[{Eigen\+::\+Vector\+Xi \&}]{selected\+\_\+mask}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1UnifiedModel_a9dba1f93e426e7511630ec1ece4ace17}
+
+
+Get a mask for selecting parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & Labels of the selected parameter values \\
+\hline
+\mbox{\tt out}  & {\em selected\+\_\+mask} & A mask indicating indices of selected parameters. 0 indicates not selected, $>$0 indicates selected.\\
+\hline
+\end{DoxyParams}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ In this case, if selected\+\_\+values\+\_\+labels contains \char`\"{}centers\char`\"{} and \char`\"{}slopes\char`\"{}, the mask will be\+: \begin{DoxyVerb}    centers     widths    slopes
+[   1   1   1  0  0  0   3   3   3 ]
+\end{DoxyVerb}
+ The '0' indicates that these parameters are not selected. The other ones have different numbers so that they may be discerned from one another (as required in \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{Parameterizable\+::get\+Parameter\+Vector\+Selected\+Min\+Max} for instance. 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{Parameterizable}.
+
+
+
+Definition at line 424 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+425 \{
+426 
+427   selected\_mask.resize(\hyperlink{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+428   selected\_mask.fill(0);
+429   
+430   \textcolor{keywordtype}{int} offset = 0;
+431   \textcolor{keywordtype}{int} size;
+432   
+433   \textcolor{comment}{// Centers}
+434   size = centers\_.size()*centers\_[0].size();
+435   \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"centers"})!=selected\_values\_labels.end())
+436     selected\_mask.segment(offset,size).fill(1);
+437   offset += size;
+438   
+439   \textcolor{comment}{// Widths}
+440   size = covars\_.size()*covars\_[0].cols();
+441   \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"widths"})!=selected\_values\_labels.end())
+442     selected\_mask.segment(offset,size).fill(2);
+443   offset += size;
+444   
+445   \textcolor{comment}{// Offsets}
+446   size = offsets\_.size();
+447   \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"offsets"})!=selected\_values\_labels.end())
+448     selected\_mask.segment(offset,size).fill(3);
+449   offset += size;
+450 
+451   \textcolor{comment}{// Slopes}
+452   size = slopes\_.size()*slopes\_[0].size();
+453   \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"slopes"})!=selected\_values\_labels.end())
+454     selected\_mask.segment(offset,size).fill(4);
+455   offset += size;
+456 
+457   assert(offset == \hyperlink{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());   
+458 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1UnifiedModel_a9dba1f93e426e7511630ec1ece4ace17_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1UnifiedModel_a29429ff2771d1e56cfba7250d38da4b1}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}}
+\index{get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{get\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1UnifiedModel_a29429ff2771d1e56cfba7250d38da4b1}
+
+
+Return a vector that returns all available parameter values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, which return only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{Parameterizable}.
+
+
+
+Definition at line 460 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+461 \{
+462   values.resize(\hyperlink{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+463   \textcolor{keywordtype}{int} offset = 0;
+464   \textcolor{keywordtype}{int} n\_basis\_functions = centers\_.size();
+465   \textcolor{keywordtype}{int} n\_dims = \hyperlink{classDmpBbo_1_1UnifiedModel_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}();
+466   
+467   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_bfs=0; i\_bfs<n\_basis\_functions; i\_bfs++)
+468   \{
+469     values.segment(offset,n\_dims) = centers\_[i\_bfs];              offset += n\_dims;
+470     values.segment(offset,n\_dims) = covars\_[i\_bfs].diagonal();    offset += n\_dims;
+471     values.segment(offset,n\_dims) = slopes\_[i\_bfs];               offset += n\_dims;
+472     values[offset]                = offsets\_[i\_bfs];              offset += 1;
+473     values[offset]                = priors\_[i\_bfs];               offset += 1;
+474   \}
+475   
+476   \textcolor{comment}{/*}
+477 \textcolor{comment}{  Dead code. But kept in for reference in case slopes\_as\_angles\_ will be implemented}
+478 \textcolor{comment}{  VectorXd cur\_slopes;}
+479 \textcolor{comment}{  for (int i\_dim=0; i\_dim<slopes\_.cols(); i\_dim++)}
+480 \textcolor{comment}{  \{}
+481 \textcolor{comment}{    cur\_slopes = slopes\_.col(i\_dim);}
+482 \textcolor{comment}{    if (slopes\_as\_angles\_)}
+483 \textcolor{comment}{    \{}
+484 \textcolor{comment}{      // cur\_slopes is a slope, but the values vector expects the angle with the x-axis. Do the }
+485 \textcolor{comment}{      // conversion here.}
+486 \textcolor{comment}{      for (int ii=0; ii<cur\_slopes.size(); ii++)}
+487 \textcolor{comment}{        cur\_slopes[ii] = atan2(cur\_slopes[ii],1.0);}
+488 \textcolor{comment}{    \}}
+489 \textcolor{comment}{    }
+490 \textcolor{comment}{    values.segment(offset,slopes\_.rows()) = cur\_slopes;}
+491 \textcolor{comment}{    offset += slopes\_.rows();}
+492 \textcolor{comment}{  \}}
+493 \textcolor{comment}{    */}
+494   
+495   assert(offset == \hyperlink{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());   
+496 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1UnifiedModel_a29429ff2771d1e56cfba7250d38da4b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}}
+\index{get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{get\+Parameter\+Vector\+All\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Vector\+All\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}
+
+
+Get the size of the parameter values vector when it contains all available parameter values. 
+
+\begin{DoxyReturn}{Returns}
+The size of the parameter vector
+\end{DoxyReturn}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ then \hyperlink{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size()} will return 9 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{Parameterizable}.
+
+
+
+Definition at line 154 of file Unified\+Model.\+hpp.
+
+
+\begin{DoxyCode}
+155   \{
+156     \textcolor{keywordflow}{return} all\_values\_vector\_size\_;
+157   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UnifiedModel_a53d95f63de3b49491b1204f45a24ae25}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!save\+Grid\+Data@{save\+Grid\+Data}}
+\index{save\+Grid\+Data@{save\+Grid\+Data}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{save\+Grid\+Data}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+Grid\+Data (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{max, }
+\item[{const Eigen\+::\+Vector\+Xi \&}]{n\+\_\+samples\+\_\+per\+\_\+dim, }
+\item[{std\+::string}]{directory, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1UnifiedModel_a53d95f63de3b49491b1204f45a24ae25}
+
+
+Generate a grid of inputs, and output the response of the basis functions and line segments for these inputs. 
+
+This function is not pure virtual, because this might not make sense for every model parameters class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em min} & Minimum values for the grid (one for each dimension) \\
+\hline
+\mbox{\tt in}  & {\em max} & Maximum values for the grid (one for each dimension) \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+samples\+\_\+per\+\_\+dim} & Number of samples in the grid along each dimension \\
+\hline
+\mbox{\tt in}  & {\em directory} & Directory to which to save the results to. \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Whether to overwrite existing files. true=do overwrite, false=don't overwrite and give a warning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether saving the data was successful. 
+\end{DoxyReturn}
+
+
+Definition at line 575 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+576 \{
+577   \textcolor{keywordflow}{if} (save\_directory.empty())
+578     \textcolor{keywordflow}{return} \textcolor{keyword}{true};  
+579  
+580 \textcolor{preprocessor}{#ifndef NDEBUG // Variables below are only required for asserts; check for NDEBUG to avoid warnings.}
+581   \textcolor{keywordtype}{int} n\_dims = min.size();
+582   assert(n\_dims==max.size());
+583   assert(n\_dims==n\_samples\_per\_dim.size());
+584 \textcolor{preprocessor}{#endif}
+585 
+586   MatrixXd inputs;
+587   \hyperlink{classDmpBbo_1_1FunctionApproximator_a61da4383ffab7d919c98d628c1d217d1}{FunctionApproximator::generateInputsGrid}(min, max, 
+      n\_samples\_per\_dim, inputs);
+588 
+589   MatrixXd lines;
+590   \hyperlink{classDmpBbo_1_1UnifiedModel_ae8174f3d5e718d18c587c9bd50dc333f}{getLines}(inputs, lines);
+591   
+592   MatrixXd activations;
+593   \textcolor{keywordflow}{if} (cosine\_basis\_functions\_)
+594   \{
+595     BasisFunction::Cosine::activations(covars\_,centers\_,inputs,activations);
+596   \}
+597   \textcolor{keywordflow}{else}
+598   \{
+599     BasisFunction::Gaussian::activations(centers\_,covars\_,priors\_,inputs,activations,
+      normalized\_basis\_functions\_);
+600     \textcolor{keywordflow}{if} (normalized\_basis\_functions\_)
+601     \{
+602       MatrixXd unnormalized\_activations;
+603       BasisFunction::Gaussian::activations(centers\_,covars\_,priors\_,inputs,unnormalized\_activations,\textcolor{keyword}{false});
+604       saveMatrix(save\_directory,\textcolor{stringliteral}{"activations\_unnormalized\_grid.txt"},unnormalized\_activations,overwrite);
+605     \}
+606   \}
+607     
+608   MatrixXd predictions;
+609   \hyperlink{classDmpBbo_1_1UnifiedModel_a7f75b15a5b46d4efa1974290cab4b901}{evaluate}(inputs,predictions);
+610   
+611   saveMatrix(save\_directory,\textcolor{stringliteral}{"n\_samples\_per\_dim.txt"},n\_samples\_per\_dim,overwrite);
+612   saveMatrix(save\_directory,\textcolor{stringliteral}{"inputs\_grid.txt"},inputs,overwrite);
+613   saveMatrix(save\_directory,\textcolor{stringliteral}{"lines\_grid.txt"},lines,overwrite);
+614   saveMatrix(save\_directory,\textcolor{stringliteral}{"activations\_grid.txt"},activations,overwrite);
+615   saveMatrix(save\_directory,\textcolor{stringliteral}{"predictions\_grid.txt"},predictions,overwrite);
+616   
+617   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+618   
+619 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1UnifiedModel_a53d95f63de3b49491b1204f45a24ae25_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1UnifiedModel_a9d3c8f22e8237a805af4935a647e5a50}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}}
+\index{set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{set\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1UnifiedModel_a9d3c8f22e8237a805af4935a647e5a50}
+
+
+Set all available parameter values with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{Parameterizable\+::set\+Parameter\+Vector\+Selected}, which sets only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{Parameterizable}.
+
+
+
+Definition at line 498 of file Unified\+Model.\+cpp.
+
+
+\begin{DoxyCode}
+498                                                                \{
+499 
+500   \textcolor{keywordflow}{if} (all\_values\_vector\_size\_ != values.size())
+501   \{
+502     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{": values is of wrong size."} << endl;
+503     \textcolor{keywordflow}{return};
+504   \}
+505 
+506   \textcolor{keywordtype}{int} offset = 0;
+507   \textcolor{keywordtype}{int} n\_basis\_functions = centers\_.size();
+508   \textcolor{keywordtype}{int} n\_dims = \hyperlink{classDmpBbo_1_1UnifiedModel_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}();
+509   
+510   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_bfs=0; i\_bfs<n\_basis\_functions; i\_bfs++)
+511   \{
+512     VectorXd cur\_center = values.segment(offset,n\_dims);
+513     \textcolor{comment}{// If the centers change, the cache for normalizedKernelActivations() must be cleared,}
+514     \textcolor{comment}{// because this function will return different values for different centers}
+515     \textcolor{keywordflow}{if} ( !(centers\_[i\_bfs].array() == cur\_center.array()).all() )
+516       clearCache();
+517     
+518     centers\_[i\_bfs]           = values.segment(offset,n\_dims) ;   offset += n\_dims;
+519     
+520     VectorXd cur\_width = values.segment(offset,n\_dims);
+521     \textcolor{comment}{// If the centers change, the cache for normalizedKernelActivations() must be cleared,}
+522     \textcolor{comment}{// because this function will return different values for different centers}
+523     \textcolor{keywordflow}{if} ( !(covars\_[i\_bfs].diagonal().array() == cur\_width.array()).all() )
+524       clearCache();
+525     
+526     covars\_[i\_bfs].diagonal() = values.segment(offset,n\_dims) ;   offset += n\_dims;
+527     
+528     
+529     \textcolor{comment}{// Cache must not be cleared, because normalizedKernelActivations() returns the same values.}
+530     slopes\_[i\_bfs]            = values.segment(offset,n\_dims) ;   offset += n\_dims;
+531     offsets\_[i\_bfs]           = values[offset]                ;   offset += 1;
+532     priors\_[i\_bfs]            = values[offset]                ;   offset += 1;
+533   \}
+534   
+535   \textcolor{comment}{/*}
+536 \textcolor{comment}{  int offset = 0;}
+537 \textcolor{comment}{  int size = centers\_.rows();}
+538 \textcolor{comment}{  int n\_dims = centers\_.cols();}
+539 \textcolor{comment}{  for (int i\_dim=0; i\_dim<n\_dims; i\_dim++)}
+540 \textcolor{comment}{  \{}
+541 \textcolor{comment}{    // If the centers change, the cache for normalizedKernelActivations() must be cleared,}
+542 \textcolor{comment}{    // because this function will return different values for different centers}
+543 \textcolor{comment}{    if ( !(centers\_.col(i\_dim).array() == values.segment(offset,size).array()).all() )}
+544 \textcolor{comment}{      clearCache();}
+545 \textcolor{comment}{    }
+546 \textcolor{comment}{    centers\_.col(i\_dim) = values.segment(offset,size);}
+547 \textcolor{comment}{    offset += size;}
+548 \textcolor{comment}{  \}}
+549 \textcolor{comment}{  for (int i\_dim=0; i\_dim<n\_dims; i\_dim++)}
+550 \textcolor{comment}{  \{}
+551 \textcolor{comment}{    // If the centers change, the cache for normalizedKernelActivations() must be cleared,}
+552 \textcolor{comment}{    // because this function will return different values for different centers}
+553 \textcolor{comment}{    if ( !(covars\_.col(i\_dim).array() == values.segment(offset,size).array()).all() )}
+554 \textcolor{comment}{      clearCache();}
+555 \textcolor{comment}{    }
+556 \textcolor{comment}{    covars\_.col(i\_dim) = values.segment(offset,size);}
+557 \textcolor{comment}{    offset += size;}
+558 \textcolor{comment}{  \}}
+559 \textcolor{comment}{}
+560 \textcolor{comment}{  offsets\_ = values.segment(offset,size);}
+561 \textcolor{comment}{  offset += size;}
+562 \textcolor{comment}{  // Cache must not be cleared, because normalizedKernelActivations() returns the same values.}
+563 \textcolor{comment}{}
+564 \textcolor{comment}{  MatrixXd old\_slopes = slopes\_;}
+565 \textcolor{comment}{  for (int i\_dim=0; i\_dim<n\_dims; i\_dim++)}
+566 \textcolor{comment}{  \{}
+567 \textcolor{comment}{    slopes\_.col(i\_dim) = values.segment(offset,size);}
+568 \textcolor{comment}{    offset += size;}
+569 \textcolor{comment}{    // Cache must not be cleared, because normalizedKernelActivations() returns the same values.}
+570 \textcolor{comment}{  \}}
+571 \textcolor{comment}{*/}
+572   assert(offset == \hyperlink{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());   
+573 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1UnifiedModel_a9d3c8f22e8237a805af4935a647e5a50_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1UnifiedModel_a9defb2d398362ff5663a1fde70903651}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!set\+\_\+caching@{set\+\_\+caching}}
+\index{set\+\_\+caching@{set\+\_\+caching}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{set\+\_\+caching}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+caching (
+\begin{DoxyParamCaption}
+\item[{bool}]{caching}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1UnifiedModel_a9defb2d398362ff5663a1fde70903651}
+
+
+Turn caching for the function normalized\+Kernel\+Activations() on or off. 
+
+Turning this on should lead to substantial improvements in execution time if the centers and widths of the kernels do not change often A\+N\+D you call normalized\+Kernel\+Activations with the same inputs over and over again. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em caching} & Whether to turn caching on or off \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+In the constructor, caching is set to true, so by default it is on. 
+\end{DoxyRemark}
+
+
+Definition at line 198 of file Unified\+Model.\+hpp.
+
+
+\begin{DoxyCode}
+199         \{
+200           caching\_ = caching;
+201           \textcolor{keywordflow}{if} (!caching\_) clearCache();
+202         \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1UnifiedModel_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Unified\+Model@{Dmp\+Bbo\+::\+Unified\+Model}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1UnifiedModel_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 221 of file Unified\+Model.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{UnifiedModel_8hpp}{Unified\+Model.\+hpp}\item 
+\hyperlink{UnifiedModel_8cpp}{Unified\+Model.\+cpp}\end{DoxyCompactItemize}

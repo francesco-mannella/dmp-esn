@@ -1,0 +1,151 @@
+\hypertarget{classDmpBbo_1_1DemoCostFunctionDistanceToPoint}{\subsection{Demo\+Cost\+Function\+Distance\+To\+Point Class Reference}
+\label{classDmpBbo_1_1DemoCostFunctionDistanceToPoint}\index{Demo\+Cost\+Function\+Distance\+To\+Point@{Demo\+Cost\+Function\+Distance\+To\+Point}}
+}
+
+
+\hyperlink{classDmpBbo_1_1CostFunction}{Cost\+Function} in which the distance to a pre-\/defined point must be minimized.  
+
+
+
+
+Inheritance diagram for Demo\+Cost\+Function\+Distance\+To\+Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classDmpBbo_1_1DemoCostFunctionDistanceToPoint__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Demo\+Cost\+Function\+Distance\+To\+Point\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classDmpBbo_1_1DemoCostFunctionDistanceToPoint__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a6d89a9e9f151cbac696edf37087b9aa2}{Demo\+Cost\+Function\+Distance\+To\+Point} (const Vector\+Xd \&point)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a52da51bc9ad0d5f5c8ddd8ca79235ac9}{evaluate} (const Matrix\+Xd \&samples, Vector\+Xd \&costs) const 
+\begin{DoxyCompactList}\small\item\em The cost function which defines the cost\+\_\+function. \end{DoxyCompactList}\item 
+string \hyperlink{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\hyperlink{classDmpBbo_1_1CostFunction}{Cost\+Function} in which the distance to a pre-\/defined point must be minimized. 
+
+Definition at line 54 of file demo\+Evolutionary\+Optimization.\+cpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a6d89a9e9f151cbac696edf37087b9aa2}{\index{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point@{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point}!Demo\+Cost\+Function\+Distance\+To\+Point@{Demo\+Cost\+Function\+Distance\+To\+Point}}
+\index{Demo\+Cost\+Function\+Distance\+To\+Point@{Demo\+Cost\+Function\+Distance\+To\+Point}!Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point@{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point}}
+\paragraph[{Demo\+Cost\+Function\+Distance\+To\+Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demo\+Cost\+Function\+Distance\+To\+Point} (
+\begin{DoxyParamCaption}
+\item[{const Vector\+Xd \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a6d89a9e9f151cbac696edf37087b9aa2}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em point} & Point to which distance must be minimized. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 60 of file demo\+Evolutionary\+Optimization.\+cpp.
+
+
+\begin{DoxyCode}
+61   \{
+62     point\_ = point;
+63   \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a52da51bc9ad0d5f5c8ddd8ca79235ac9}{\index{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point@{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point@{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point}}
+\paragraph[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Xd \&}]{samples, }
+\item[{Vector\+Xd \&}]{costs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a52da51bc9ad0d5f5c8ddd8ca79235ac9}
+
+
+The cost function which defines the cost\+\_\+function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples} & The samples \\
+\hline
+\mbox{\tt out}  & {\em costs} & The scalar cost for each sample. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file demo\+Evolutionary\+Optimization.\+cpp.
+
+
+\begin{DoxyCode}
+70                                                                 \{
+71 \textcolor{preprocessor}{#ifndef NDEBUG // Variables below are only required for asserts; check for NDEBUG to avoid warnings.}
+72     \textcolor{keywordtype}{int} n\_dims    = samples.cols();
+73 \textcolor{preprocessor}{#endif}
+74     assert(n\_dims==point\_.size());
+75     
+76     \textcolor{keywordtype}{int} n\_samples = samples.rows();
+77 
+78     costs.resize(n\_samples);
+79     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ss=0; ss<n\_samples; ss++)
+80     \{
+81       \textcolor{comment}{// Cost is distance to point}
+82       costs[ss] = sqrt((samples.row(ss) - point\_.transpose()).array().pow(2).sum());
+83     \}
+84   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point@{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point@{Dmp\+Bbo\+::\+Demo\+Cost\+Function\+Distance\+To\+Point}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1CostFunction_af084bff2ddd6233e9a898faa23f6195c}{Cost\+Function}.
+
+
+
+Definition at line 89 of file demo\+Evolutionary\+Optimization.\+cpp.
+
+
+\begin{DoxyCode}
+89                               \{
+90     \textcolor{keywordtype}{string} str = \textcolor{stringliteral}{"CostFunctionDistanceToPoint"};
+91     \textcolor{keywordflow}{return} str;
+92   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{demoEvolutionaryOptimization_8cpp}{demo\+Evolutionary\+Optimization.\+cpp}\end{DoxyCompactItemize}

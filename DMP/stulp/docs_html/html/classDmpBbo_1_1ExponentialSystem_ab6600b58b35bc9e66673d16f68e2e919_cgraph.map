@@ -1,0 +1,6 @@
+<map id="analyticalSolution" name="analyticalSolution">
+<area shape="rect" id="node2" href="$group__DynamicalSystems.html#ga6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the dynamical system, i.e. " alt="" coords="184,5,404,32"/>
+<area shape="rect" id="node3" href="$group__DynamicalSystems.html#ga4c7f24e7deec1629548a075015bdc693" title="Accessor function for the initial state of the dynamical system. " alt="" coords="198,57,390,98"/>
+<area shape="rect" id="node4" href="$group__DynamicalSystems.html#gaebe3c462bc4a725cb17bcc3d13285f13" title="Accessor function for the attractor state of the dynamical system. " alt="" coords="198,122,390,163"/>
+<area shape="rect" id="node5" href="$group__DynamicalSystems.html#ga50eec7ad4c9664b5809ace45b22200d5" title="Accessor function for the time constant. " alt="" coords="185,188,403,215"/>
+</map>

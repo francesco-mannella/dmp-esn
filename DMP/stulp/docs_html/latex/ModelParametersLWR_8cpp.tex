@@ -1,0 +1,68 @@
+\hypertarget{ModelParametersLWR_8cpp}{\subsection{Model\+Parameters\+L\+W\+R.\+cpp File Reference}
+\label{ModelParametersLWR_8cpp}\index{Model\+Parameters\+L\+W\+R.\+cpp@{Model\+Parameters\+L\+W\+R.\+cpp}}
+}
+
+
+Model\+Parameters\+L\+W\+R class source file.  
+
+
+{\ttfamily \#include $<$boost/serialization/export.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/text\+\_\+iarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/text\+\_\+oarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/xml\+\_\+iarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/xml\+\_\+oarchive.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Model\+Parameters\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Unified\+Model.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Basis\+Function.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Boost\+Serialization\+To\+String.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Eigen\+Boost\+Serialization.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+Include dependency graph for Model\+Parameters\+L\+W\+R.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ModelParametersLWR_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ModelParametersLWR_8cpp_a75cc9b5ff31dd933d39ee808778ca173}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T} (\hyperlink{classDmpBbo_1_1ModelParametersLWR}{Dmp\+Bbo\+::\+Model\+Parameters\+L\+W\+R})
+\begin{DoxyCompactList}\small\item\em For boost\+::serialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Model\+Parameters\+L\+W\+R class source file. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{ModelParametersLWR_8cpp_source}{Model\+Parameters\+L\+W\+R.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{ModelParametersLWR_8cpp_a75cc9b5ff31dd933d39ee808778ca173}{\index{Model\+Parameters\+L\+W\+R.\+cpp@{Model\+Parameters\+L\+W\+R.\+cpp}!B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T@{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T}}
+\index{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T@{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T}!Model\+Parameters\+L\+W\+R.\+cpp@{Model\+Parameters\+L\+W\+R.\+cpp}}
+\paragraph[{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T (
+\begin{DoxyParamCaption}
+\item[{{\bf Dmp\+Bbo\+::\+Model\+Parameters\+L\+W\+R}}]{}
+\end{DoxyParamCaption}
+)}}\label{ModelParametersLWR_8cpp_a75cc9b5ff31dd933d39ee808778ca173}
+
+
+For boost\+::serialization. 
+
+See \href{http://www.boost.org/doc/libs/1_55_0/libs/serialization/doc/special.html#export}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+55\+\_\+0/libs/serialization/doc/special.\+html\#export} 

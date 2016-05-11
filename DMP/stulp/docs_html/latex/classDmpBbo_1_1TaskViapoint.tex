@@ -1,0 +1,538 @@
+\hypertarget{classDmpBbo_1_1TaskViapoint}{\subsection{Task\+Viapoint Class Reference}
+\label{classDmpBbo_1_1TaskViapoint}\index{Task\+Viapoint@{Task\+Viapoint}}
+}
+
+
+\hyperlink{classDmpBbo_1_1Task}{Task} for passing through a viapoint with minimal acceleration.  
+
+
+
+
+{\ttfamily \#include $<$Task\+Viapoint.\+hpp$>$}
+
+
+
+Inheritance diagram for Task\+Viapoint\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classDmpBbo_1_1TaskViapoint__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Task\+Viapoint\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classDmpBbo_1_1TaskViapoint__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1TaskViapoint_a381ee9e25f464ddd1e82437dddd9ee79}{Task\+Viapoint} (const Eigen\+::\+Vector\+Xd \&viapoint, double viapoint\+\_\+time=\hyperlink{classDmpBbo_1_1TaskViapoint_a4cdb8b00e89770014fb33674de175a39}{T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T}, double viapoint\+\_\+radius=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1TaskViapoint_a7a23a9befa5d9f59b33db2ea6dab7bab}{Task\+Viapoint} (const Eigen\+::\+Vector\+Xd \&viapoint, double viapoint\+\_\+time, const Eigen\+::\+Vector\+Xd \&goal, double goal\+\_\+time=-\/1)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1TaskViapoint_a715d478b0c2d6b896afff04f07e86e3b}{evaluate} (const Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars, const Eigen\+::\+Matrix\+Xd \&task\+\_\+parameters, Eigen\+::\+Vector\+Xd \&costs) const 
+\begin{DoxyCompactList}\small\item\em The cost function which defines the task. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1TaskViapoint_a92f8601280e143bde063dc80f47288ed}{set\+Cost\+Function\+Weighting} (double viapoint\+\_\+weight, double acceleration\+\_\+weight, double goal\+\_\+weight=0.\+0)
+\begin{DoxyCompactList}\small\item\em Set the relative weights of the components of the cost function. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1TaskViapoint_a046ab7b96b5bd3f6df595dc141c1dad6}{generate\+Demonstration} (const Eigen\+::\+Matrix\+Xd \&task\+\_\+parameters, const Eigen\+::\+Vector\+Xd \&ts, \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&demonstration) const 
+\begin{DoxyCompactList}\small\item\em Generate one (optimal) demonstration for this task. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1TaskViapoint_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1TaskViapoint_aba32082ed78ee88beda0e8f907244e65}{save\+Perform\+Rollouts\+Plot\+Script} (std\+::string directory) const 
+\begin{DoxyCompactList}\small\item\em Save a python script that is able to visualize the rollouts, given the cost-\/relevant variables stored in a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{classDmpBbo_1_1TaskViapoint_a4cdb8b00e89770014fb33674de175a39}{T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T} =-\/1
+\begin{DoxyCompactList}\small\item\em If the viapoint\+\_\+time is set to M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T, we do not compute the distance between the trajectory and the viapoint at \char`\"{}viapoint\+\_\+time\char`\"{}, but use the minimum distance instead. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1TaskViapoint_a9cf7db79fe8dd5ac9b595809253e89e7}{class {\bfseries Task\+Viapoint\+Arm}}\label{classDmpBbo_1_1TaskViapoint_a9cf7db79fe8dd5ac9b595809253e89e7}
+
+\item 
+class \hyperlink{classDmpBbo_1_1TaskViapoint_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\hyperlink{classDmpBbo_1_1Task}{Task} for passing through a viapoint with minimal acceleration. 
+
+There are three components that this task penalizes\+: 
+\begin{DoxyItemize}
+\item The distance to a viapoint 
+\begin{DoxyItemize}
+\item if viapoint\+\_\+radius $>$ 0, the penalty is the distance minus the radius (and not smaller than 0) 
+\item if the viapoint\+\_\+time is set, the trajectory must pass through the viapoint at a certain time. If not the shortest distance to the viapoint along the trajectory is used. 
+\end{DoxyItemize}
+\item The squared accelerations at each time step 
+\item Not being at the goal after a certain time 
+\end{DoxyItemize}The relative weights of these cost components are also member variables 
+
+Definition at line 47 of file Task\+Viapoint.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1TaskViapoint_a381ee9e25f464ddd1e82437dddd9ee79}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!Task\+Viapoint@{Task\+Viapoint}}
+\index{Task\+Viapoint@{Task\+Viapoint}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{Task\+Viapoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\+Viapoint} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{viapoint, }
+\item[{double}]{viapoint\+\_\+time = {\ttfamily {\bf T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T}}, }
+\item[{double}]{viapoint\+\_\+radius = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1TaskViapoint_a381ee9e25f464ddd1e82437dddd9ee79}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em viapoint} & The viapoint to which to pass through. \\
+\hline
+\mbox{\tt in}  & {\em viapoint\+\_\+time} & The time at which to pass through the viapoint. \\
+\hline
+\mbox{\tt in}  & {\em viapoint\+\_\+radius} & The distance to the viapoint within which this cost is 0 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file Task\+Viapoint.\+cpp.
+
+
+\begin{DoxyCode}
+50 : viapoint\_(viapoint), viapoint\_time\_(viapoint\_time), viapoint\_radius\_(viapoint\_radius), 
+51   goal\_(VectorXd::Ones(viapoint.size())), goal\_time\_(-1),
+52   viapoint\_weight\_(1.0), acceleration\_weight\_(0.0001),  goal\_weight\_(0.0)
+53 \{
+54   assert(viapoint\_radius\_>=0.0);
+55 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1TaskViapoint_a7a23a9befa5d9f59b33db2ea6dab7bab}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!Task\+Viapoint@{Task\+Viapoint}}
+\index{Task\+Viapoint@{Task\+Viapoint}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{Task\+Viapoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\+Viapoint} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{viapoint, }
+\item[{double}]{viapoint\+\_\+time, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{goal, }
+\item[{double}]{goal\+\_\+time = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1TaskViapoint_a7a23a9befa5d9f59b33db2ea6dab7bab}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em viapoint} & The viapoint to which to pass through. \\
+\hline
+\mbox{\tt in}  & {\em viapoint\+\_\+time} & The time at which to pass through the viapoint. \\
+\hline
+\mbox{\tt in}  & {\em goal} & The goal to reach at the end of the movement \\
+\hline
+\mbox{\tt in}  & {\em goal\+\_\+time} & The time at which the goal should have been reached \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file Task\+Viapoint.\+cpp.
+
+
+\begin{DoxyCode}
+58 : viapoint\_(viapoint), viapoint\_time\_(viapoint\_time), viapoint\_radius\_(0.0),
+59   goal\_(goal), goal\_time\_(goal\_time),
+60   viapoint\_weight\_(1.0), acceleration\_weight\_(0.0001),  goal\_weight\_(1.0)
+61 \{
+62   assert(viapoint\_.size()==goal.size());
+63 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskViapoint_a715d478b0c2d6b896afff04f07e86e3b}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{costs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1TaskViapoint_a715d478b0c2d6b896afff04f07e86e3b}
+
+
+The cost function which defines the task. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cost\+\_\+vars} & All the variables relevant to computing the cost. These are determined by \hyperlink{classDmpBbo_1_1TaskSolver_aea5c8e55f828886dae52bacf466dc707}{Task\+Solver\+::perform\+Rollouts()}. For further information see the section on \hyperlink{page_bbo_sec_bbo_task_and_task_solver}{Cost\+Function vs Task/\+Task\+Solver} \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & Optional parameters of the task, and thus the cost function. \\
+\hline
+\mbox{\tt out}  & {\em costs} & The scalar cost for each sample. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1Task_a6534c0378bdfa540946ce2a02c914417}{Task}.
+
+
+
+Definition at line 65 of file Task\+Viapoint.\+cpp.
+
+
+\begin{DoxyCode}
+66 \{
+67   \textcolor{keywordtype}{int} n\_samples = cost\_vars.rows();
+68   \textcolor{keywordtype}{int} n\_dims = viapoint\_.size();
+69   \textcolor{keywordtype}{int} n\_cost\_vars = 4*n\_dims + 1; \textcolor{comment}{// y\_1..y\_D  yd\_1..yd\_D  ydd\_1..ydd\_D  t forcing\_term\_1..forcing\_term\_D}
+70   \textcolor{keywordtype}{int} n\_time\_steps = cost\_vars.cols()/n\_cost\_vars;
+71   \textcolor{comment}{// cost\_vars  = n\_samples x (n\_time\_steps*n\_cost\_vars)}
+72 
+73   \textcolor{comment}{//cout << "  n\_samples=" << n\_samples << endl;}
+74   \textcolor{comment}{//cout << "  n\_dims=" << n\_dims << endl;}
+75   \textcolor{comment}{//cout << "  n\_cost\_vars=" << n\_cost\_vars << endl;}
+76   \textcolor{comment}{//cout << "  cost\_vars.cols()=" << cost\_vars.cols() << endl;  }
+77   \textcolor{comment}{//cout << "  n\_time\_steps=" << n\_time\_steps << endl;}
+78 
+79   costs.resize(n\_samples);
+80   
+81   \textcolor{comment}{// y\_1..y\_D  yd\_1..yd\_D  ydd\_1..ydd\_D  t=0}
+82   \textcolor{comment}{// y\_1..y\_D  yd\_1..yd\_D  ydd\_1..ydd\_D  t=1}
+83   \textcolor{comment}{//  |    |     |     |      |     |     |}
+84   \textcolor{comment}{// y\_1..y\_D  yd\_1..yd\_D  ydd\_1..ydd\_D  t=T}
+85   MatrixXd rollout; \textcolor{comment}{//(n\_time\_steps,n\_cost\_vars);}
+86   MatrixXd my\_row(1,n\_time\_steps*n\_cost\_vars);
+87   
+88   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k=0; k<n\_samples; k++)
+89   \{
+90     my\_row = cost\_vars.row(k);
+91     rollout = (Map<MatrixXd>(my\_row.data(),n\_cost\_vars,n\_time\_steps)).transpose();   
+92     
+93     \textcolor{comment}{// rollout is of size   n\_time\_steps x n\_cost\_vars}
+94     VectorXd ts = rollout.col(3 * n\_dims);
+95 
+96     \textcolor{keywordtype}{double} dist\_to\_viapoint = 0.0;
+97     \textcolor{keywordflow}{if} (viapoint\_weight\_!=0.0)
+98     \{
+99       \textcolor{keywordflow}{if} (viapoint\_time\_ == \hyperlink{classDmpBbo_1_1TaskViapoint_a4cdb8b00e89770014fb33674de175a39}{TIME\_AT\_MINIMUM\_DIST})
+100       \{
+101         \textcolor{comment}{// Don't compute the distance at some time, but rather get the minimum distance}
+102         \textcolor{keyword}{const} MatrixXd y = rollout.block(0, 0, rollout.rows(), n\_dims);
+103         dist\_to\_viapoint = (y.rowwise() - viapoint\_.transpose()).rowwise().squaredNorm().minCoeff();
+104       \}
+105       \textcolor{keywordflow}{else}
+106       \{
+107         \textcolor{comment}{// Compute the minimum distance at a specific time}
+108         
+109         \textcolor{comment}{// Get the time\_step at which viapoint\_time\_step approx ts[time\_step]}
+110         \textcolor{keywordtype}{int} viapoint\_time\_step = 0;
+111         \textcolor{keywordflow}{while} (viapoint\_time\_step < ts.size() && ts[viapoint\_time\_step] < viapoint\_time\_)
+112           viapoint\_time\_step++;
+113 
+114         assert(viapoint\_time\_step < ts.size());
+115 
+116         VectorXd y\_via = rollout.row(viapoint\_time\_step).segment(0,n\_dims);
+117         dist\_to\_viapoint = sqrt((y\_via-viapoint\_).array().pow(2).sum());
+118       \}
+119       
+120       \textcolor{keywordflow}{if} (viapoint\_radius\_>0.0)
+121       \{
+122         \textcolor{comment}{// The viapoint\_radius defines a radius within which the cost is always 0}
+123         dist\_to\_viapoint -= viapoint\_radius\_;
+124         \textcolor{keywordflow}{if} (dist\_to\_viapoint<0.0)
+125           dist\_to\_viapoint = 0.0;
+126       \}
+127     \}
+128     
+129     \textcolor{keywordtype}{double} sum\_ydd = 0.0;
+130     \textcolor{keywordflow}{if} (acceleration\_weight\_!=0.0)
+131     \{
+132       MatrixXd ydd = rollout.block(0,2*n\_dims,n\_time\_steps,n\_dims);
+133       \textcolor{comment}{// ydd = n\_time\_steps x n\_dims}
+134       sum\_ydd = ydd.array().pow(2).sum();
+135     \}
+136 
+137     \textcolor{keywordtype}{double} delay\_cost = 0.0;
+138     \textcolor{keywordflow}{if} (goal\_weight\_!=0.0)
+139     \{
+140       \textcolor{keywordtype}{int} goal\_time\_step = 0;
+141       \textcolor{keywordflow}{while} (goal\_time\_step < ts.size() && ts[goal\_time\_step] < goal\_time\_)
+142         goal\_time\_step++;
+143 
+144       \textcolor{keyword}{const} MatrixXd y\_after\_goal = rollout.block(goal\_time\_step, 0,
+145         rollout.rows() - goal\_time\_step, n\_dims);
+146 
+147       delay\_cost = (y\_after\_goal.rowwise() - goal\_.transpose()).rowwise().squaredNorm().sum();
+148     \}
+149 
+150     costs[k] =  
+151       viapoint\_weight\_*dist\_to\_viapoint + 
+152       acceleration\_weight\_*sum\_ydd/n\_time\_steps + 
+153       goal\_weight\_*delay\_cost;
+154   \}
+155 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1TaskViapoint_a92f8601280e143bde063dc80f47288ed}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!set\+Cost\+Function\+Weighting@{set\+Cost\+Function\+Weighting}}
+\index{set\+Cost\+Function\+Weighting@{set\+Cost\+Function\+Weighting}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{set\+Cost\+Function\+Weighting}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Cost\+Function\+Weighting (
+\begin{DoxyParamCaption}
+\item[{double}]{viapoint\+\_\+weight, }
+\item[{double}]{acceleration\+\_\+weight, }
+\item[{double}]{goal\+\_\+weight = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1TaskViapoint_a92f8601280e143bde063dc80f47288ed}
+
+
+Set the relative weights of the components of the cost function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em viapoint\+\_\+weight} & Weight for the cost related to not passing through the viapoint \\
+\hline
+\mbox{\tt in}  & {\em acceleration\+\_\+weight} & Weight for the cost of accelerations \\
+\hline
+\mbox{\tt in}  & {\em goal\+\_\+weight} & Weight for the cost of not being at the goal at the end of the movement \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 157 of file Task\+Viapoint.\+cpp.
+
+
+\begin{DoxyCode}
+158 \{
+159   viapoint\_weight\_      = viapoint\_weight;
+160   acceleration\_weight\_  = acceleration\_weight;
+161   goal\_weight\_          = goal\_weight;            
+162 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1TaskViapoint_a046ab7b96b5bd3f6df595dc141c1dad6}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!generate\+Demonstration@{generate\+Demonstration}}
+\index{generate\+Demonstration@{generate\+Demonstration}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{generate\+Demonstration}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Demonstration (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{{\bf Trajectory} \&}]{demonstration}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1TaskViapoint_a046ab7b96b5bd3f6df595dc141c1dad6}
+
+
+Generate one (optimal) demonstration for this task. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em task\+\_\+parameters} & The task parameters for which to generate a demonstration. A matrix of size T X D, where T is the number of time steps, and D is the number of task parameters. If T=1, the task parameters are assumed to be constant over time. \\
+\hline
+\mbox{\tt in}  & {\em ts} & The times at which to sample the trajectory \\
+\hline
+\mbox{\tt out}  & {\em demonstration} & The demonstration trajectory \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a3f4561d78c6163ff208b776944f347eb}{Task\+With\+Trajectory\+Demonstrator}.
+
+
+
+Definition at line 164 of file Task\+Viapoint.\+cpp.
+
+
+\begin{DoxyCode}
+165 \{
+166   \textcolor{keywordtype}{int} n\_dims = viapoint\_.size();
+167   
+168   assert(task\_parameters.rows()==1);
+169   assert(task\_parameters.cols()==n\_dims);       
+170         
+171         VectorXd y\_from    = VectorXd::Constant(n\_dims,0.0);
+172         VectorXd y\_to      = goal\_;
+173 
+174         VectorXd y\_yd\_ydd\_viapoint(3*n\_dims);
+175         y\_yd\_ydd\_viapoint << task\_parameters.row(0), VectorXd::Constant(n\_dims,1.0), VectorXd::Constant(
+      n\_dims,0.0);
+176   
+177   demonstration = \hyperlink{classDmpBbo_1_1Trajectory_a8e4bc03c6f535f4c9983ffe77a2d971b}{Trajectory::generatePolynomialTrajectoryThroughViapoint}
+      (ts, y\_from, y\_yd\_ydd\_viapoint, viapoint\_time\_, y\_to);
+178 
+179 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1TaskViapoint_a046ab7b96b5bd3f6df595dc141c1dad6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1TaskViapoint_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1TaskViapoint_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1Task_af084bff2ddd6233e9a898faa23f6195c}{Task}.
+
+
+
+Definition at line 199 of file Task\+Viapoint.\+cpp.
+
+
+\begin{DoxyCode}
+199                                         \{
+200   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"TaskViapoint"});
+201 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1TaskViapoint_aba32082ed78ee88beda0e8f907244e65}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!save\+Perform\+Rollouts\+Plot\+Script@{save\+Perform\+Rollouts\+Plot\+Script}}
+\index{save\+Perform\+Rollouts\+Plot\+Script@{save\+Perform\+Rollouts\+Plot\+Script}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{save\+Perform\+Rollouts\+Plot\+Script}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+Perform\+Rollouts\+Plot\+Script (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{directory}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1TaskViapoint_aba32082ed78ee88beda0e8f907244e65}
+
+
+Save a python script that is able to visualize the rollouts, given the cost-\/relevant variables stored in a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em directory} & Directory in which to save the python script \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if saving the script was successful, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Task_aed72bdbcdd0ed6359fa863b5a057adb7}{Task}.
+
+
+
+Definition at line 204 of file Task\+Viapoint.\+cpp.
+
+
+\begin{DoxyCode}
+205 \{
+206   \textcolor{keywordtype}{string} filename = directory + \textcolor{stringliteral}{"/plotRollouts.py"};
+207   
+208   std::ofstream file;
+209   file.open(filename.c\_str());
+210   \textcolor{keywordflow}{if} (!file.is\_open())
+211   \{
+212     std::cerr << \textcolor{stringliteral}{"Couldn't open file '"} << filename << \textcolor{stringliteral}{"' for writing."} << std::endl;
+213     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+214   \}
+215 
+216   file << \textcolor{stringliteral}{"import numpy as np"} << endl;
+217   file << \textcolor{stringliteral}{"import matplotlib.pyplot as plt"} << endl;
+218   file << \textcolor{stringliteral}{"import sys, os"} << endl;
+219   file << \textcolor{stringliteral}{"def plotRollouts(cost\_vars,ax):"} << endl;
+220   file << \textcolor{stringliteral}{"    viapoint = ["};
+221   file << fixed;
+222   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<viapoint\_.size(); ii++)
+223   \{
+224     \textcolor{keywordflow}{if} (ii>0) file << \textcolor{stringliteral}{", "};
+225     file << viapoint\_[ii];
+226   \}
+227   file << \textcolor{stringliteral}{"]"} << endl;
+228   file << \textcolor{stringliteral}{"    viapoint\_time = "}<< viapoint\_time\_<< endl;
+229   file << \textcolor{stringliteral}{"    # y      yd     ydd    1  forcing"} << endl;
+230   file << \textcolor{stringliteral}{"    # n\_dofs n\_dofs n\_dofs ts n\_dofs"} << endl;
+231   file << \textcolor{stringliteral}{"    n\_dims = "}<<viapoint\_.size()<<\textcolor{stringliteral}{";"} << endl;
+232   file << \textcolor{stringliteral}{"    n\_vars = (1+n\_dims*4)"} << endl;
+233   file << \textcolor{stringliteral}{"    if (len(cost\_vars.shape)==1):"} << endl;
+234   file << \textcolor{stringliteral}{"        K=1;"} << endl;
+235   file << \textcolor{stringliteral}{"        n\_cost\_vars = len(cost\_vars)"} << endl;
+236   file << \textcolor{stringliteral}{"        cost\_vars = np.reshape(cost\_vars,(K,n\_cost\_vars))"} << endl;
+237   file << \textcolor{stringliteral}{"    else:"} << endl;
+238   file << \textcolor{stringliteral}{"        K = len(cost\_vars);"} << endl;
+239   file << \textcolor{stringliteral}{"        n\_cost\_vars = len(cost\_vars[0])"} << endl;
+240   file << \textcolor{stringliteral}{"    n\_time\_steps = n\_cost\_vars/n\_vars;"} << endl;
+241   file << \textcolor{stringliteral}{"    for k in range(len(cost\_vars)):"} << endl;
+242   file << \textcolor{stringliteral}{"        x = np.reshape(cost\_vars[k,:],(n\_time\_steps, n\_vars))"} << endl;
+243   file << \textcolor{stringliteral}{"        y = x[:,0:n\_dims]"} << endl;
+244   file << \textcolor{stringliteral}{"        t = x[:,3*n\_dims]"} << endl;
+245   \textcolor{keywordflow}{if} (viapoint\_.size()==1)
+246   \{
+247     file << \textcolor{stringliteral}{"        line\_handles = ax.plot(t,y,linewidth=0.5)"} << endl;
+248     file << \textcolor{stringliteral}{"    ax.plot(viapoint\_time,viapoint,'ok')"} << endl;
+249   \}
+250   \textcolor{keywordflow}{else}
+251   \{
+252     file << \textcolor{stringliteral}{"        line\_handles = ax.plot(y[:,0],y[:,1],linewidth=0.5)"} << endl;
+253     file << \textcolor{stringliteral}{"    ax.plot(viapoint[0],viapoint[1],'ok')"} << endl;
+254   \}
+255   file << \textcolor{stringliteral}{"    return line\_handles"} << endl;
+256   file << \textcolor{stringliteral}{"if \_\_name\_\_=='\_\_main\_\_':"} << endl;
+257   file << \textcolor{stringliteral}{"    # See if input directory was passed"} << endl;
+258   file << \textcolor{stringliteral}{"    if (len(sys.argv)==2):"} << endl;
+259   file << \textcolor{stringliteral}{"      directory = str(sys.argv[1])"} << endl;
+260   file << \textcolor{stringliteral}{"    else:"} << endl;
+261   file << \textcolor{stringliteral}{"      print 'Usage: '+sys.argv[0]+' <directory>';"} << endl;
+262   file << \textcolor{stringliteral}{"      sys.exit()"} << endl;
+263   file << \textcolor{stringliteral}{"    cost\_vars = np.loadtxt(directory+\(\backslash\)"cost\_vars.txt\(\backslash\)")"} << endl;
+264   file << \textcolor{stringliteral}{"    fig = plt.figure()"} << endl;
+265   file << \textcolor{stringliteral}{"    ax = fig.gca()"} << endl;
+266   file << \textcolor{stringliteral}{"    plotRollouts(cost\_vars,ax)"} << endl;
+267   file << \textcolor{stringliteral}{"    plt.show()"} << endl;
+268   
+269   file.close();
+270   
+271   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+272 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskViapoint_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1TaskViapoint_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 113 of file Task\+Viapoint.\+hpp.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classDmpBbo_1_1TaskViapoint_a4cdb8b00e89770014fb33674de175a39}{\index{Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}!T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T@{T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T}}
+\index{T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T@{T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T}!Dmp\+Bbo\+::\+Task\+Viapoint@{Dmp\+Bbo\+::\+Task\+Viapoint}}
+\paragraph[{T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T}]{\setlength{\rightskip}{0pt plus 5cm}const int T\+I\+M\+E\+\_\+\+A\+T\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T =-\/1\hspace{0.3cm}{\ttfamily [static]}}}\label{classDmpBbo_1_1TaskViapoint_a4cdb8b00e89770014fb33674de175a39}
+
+
+If the viapoint\+\_\+time is set to M\+I\+N\+I\+M\+U\+M\+\_\+\+D\+I\+S\+T, we do not compute the distance between the trajectory and the viapoint at \char`\"{}viapoint\+\_\+time\char`\"{}, but use the minimum distance instead. 
+
+
+
+Definition at line 53 of file Task\+Viapoint.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TaskViapoint_8hpp}{Task\+Viapoint.\+hpp}\item 
+\hyperlink{TaskViapoint_8cpp}{Task\+Viapoint.\+cpp}\end{DoxyCompactItemize}

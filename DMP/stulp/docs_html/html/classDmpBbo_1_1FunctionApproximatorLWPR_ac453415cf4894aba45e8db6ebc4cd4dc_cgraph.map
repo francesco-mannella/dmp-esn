@@ -1,0 +1,9 @@
+<map id="train" name="train">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1FunctionApproximator.html#a178135f623d9b9058870851a53299c6e" title="Determine whether the function approximator has already been trained with data or not..." alt="" coords="371,93,589,135"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#af5a550bcf65d5a29a153a594cc4e3fa1" title="The expected dimensionality of the input data. " alt="" coords="104,5,323,47"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1FunctionApproximator.html#a6f1a44062eac61d88b647c358bcda155" title="Accessor for FunctionApproximator::meta_parameters_. " alt="" coords="104,123,323,164"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1FunctionApproximatorLWPR.html#afe8dcfb9cd065dfde38dce1f6e6cd3e6" title="Query the function approximator to make a prediction. " alt="" coords="181,189,246,215"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1FunctionApproximator.html#afd6f9d480456b90c4740c7aaca084ba4" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="104,240,323,281"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1UnifiedModel.html#af5a550bcf65d5a29a153a594cc4e3fa1" title="The expected dimensionality of the input data. " alt="" coords="398,5,562,47"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="371,181,589,223"/>
+</map>

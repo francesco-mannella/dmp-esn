@@ -1,0 +1,52 @@
+\hypertarget{UpdateSummary_8cpp}{\subsection{Update\+Summary.\+cpp File Reference}
+\label{UpdateSummary_8cpp}\index{Update\+Summary.\+cpp@{Update\+Summary.\+cpp}}
+}
+
+
+Update\+Summary class source file.  
+
+
+{\ttfamily \#include \char`\"{}bbo/\+Update\+Summary.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Distribution\+Gaussian.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Eigen\+File\+I\+O.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Eigenvalues$>$}\\*
+Include dependency graph for Update\+Summary.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{UpdateSummary_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries save\+To\+Directory} (const Update\+Summary \&update\+\_\+summary, std\+::string directory, bool overwrite=false)
+\begin{DoxyCompactList}\small\item\em Save an update summary to a directory. \end{DoxyCompactList}\item 
+bool {\bfseries save\+To\+Directory} (const std\+::vector$<$ Update\+Summary $>$ \&update\+\_\+summaries, std\+::string directory, bool overwrite=false, bool only\+\_\+learning\+\_\+curve=false)
+\begin{DoxyCompactList}\small\item\em Save a vector of update summaries to a directory. \end{DoxyCompactList}\item 
+bool {\bfseries save\+To\+Directory\+New\+Update} (const Update\+Summary \&update\+\_\+summary, std\+::string directory)
+\begin{DoxyCompactList}\small\item\em Save an update summary to a directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Update\+Summary class source file. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{UpdateSummary_8cpp_source}{Update\+Summary.\+cpp}.
+

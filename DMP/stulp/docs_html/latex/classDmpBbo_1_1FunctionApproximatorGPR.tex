@@ -1,0 +1,525 @@
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR}{\subsection{Function\+Approximator\+G\+P\+R Class Reference}
+\label{classDmpBbo_1_1FunctionApproximatorGPR}\index{Function\+Approximator\+G\+P\+R@{Function\+Approximator\+G\+P\+R}}
+}
+
+
+G\+P\+R (Gaussian Process Regression) function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Function\+Approximator\+G\+P\+R.\+hpp$>$}
+
+
+
+Inheritance diagram for Function\+Approximator\+G\+P\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classDmpBbo_1_1FunctionApproximatorGPR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Function\+Approximator\+G\+P\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{classDmpBbo_1_1FunctionApproximatorGPR__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_afdf0d2f8b1ddfa701e58f7476da24f65}{Function\+Approximator\+G\+P\+R} (const \hyperlink{classDmpBbo_1_1MetaParametersGPR}{Meta\+Parameters\+G\+P\+R} $\ast$const meta\+\_\+parameters, const \hyperlink{classDmpBbo_1_1ModelParametersGPR}{Model\+Parameters\+G\+P\+R} $\ast$const model\+\_\+parameters=N\+U\+L\+L)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with meta-\/ and model-\/parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_a24f8841f307c66117f585f639b0a464e}{Function\+Approximator\+G\+P\+R} (const \hyperlink{classDmpBbo_1_1ModelParametersGPR}{Model\+Parameters\+G\+P\+R} $\ast$const model\+\_\+parameters)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with model parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_ad792a46ac006916c5c1ffed2fa42dd24}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_ac453415cf4894aba45e8db6ebc4cd4dc}{train} (const Eigen\+::\+Matrix\+Xd \&input, const Eigen\+::\+Matrix\+Xd \&target)
+\begin{DoxyCompactList}\small\item\em Train the function approximator with corresponding input and target examples. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{predict} (const Eigen\+::\+Matrix\+Xd \&input, Eigen\+::\+Matrix\+Xd \&output)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_a81bcaa6c544bee98c1c625c81860fe4c}{predict\+Variance} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&variances)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to get the variance of a prediction This function is not implemented by all function approximators. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_ad4c95407e44ba3e16b9651f9b81cd0e6}{get\+Name} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the name of this function approximator. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_a53d95f63de3b49491b1204f45a24ae25}{save\+Grid\+Data} (const Eigen\+::\+Vector\+Xd \&min, const Eigen\+::\+Vector\+Xd \&max, const Eigen\+::\+Vector\+Xi \&n\+\_\+samples\+\_\+per\+\_\+dim, std\+::string directory, bool overwrite=false) const 
+\begin{DoxyCompactList}\small\item\em Generate a grid of inputs, and output the response of the basis functions and line segments for these inputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+G\+P\+R (Gaussian Process Regression) function approximator. 
+
+Definition at line 43 of file Function\+Approximator\+G\+P\+R.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_afdf0d2f8b1ddfa701e58f7476da24f65}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!Function\+Approximator\+G\+P\+R@{Function\+Approximator\+G\+P\+R}}
+\index{Function\+Approximator\+G\+P\+R@{Function\+Approximator\+G\+P\+R}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{Function\+Approximator\+G\+P\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator\+G\+P\+R} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Meta\+Parameters\+G\+P\+R} $\ast$const}]{meta\+\_\+parameters, }
+\item[{const {\bf Model\+Parameters\+G\+P\+R} $\ast$const}]{model\+\_\+parameters = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorGPR_afdf0d2f8b1ddfa701e58f7476da24f65}
+
+
+Initialize a function approximator with meta-\/ and model-\/parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em meta\+\_\+parameters} & The training algorithm meta-\/parameters \\
+\hline
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the trained model. If this parameter is not passed, the function approximator is initialized as untrained. In this case, you must call \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator\+::train()} before being able to call \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator\+::predict()}. Either meta\+\_\+parameters X\+O\+R model-\/parameters can passed as N\+U\+L\+L, but not both. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Function\+Approximator\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+51 :
+52   \hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{FunctionApproximator}(meta\_parameters,model\_parameters)
+53 \{
+54 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_a24f8841f307c66117f585f639b0a464e}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!Function\+Approximator\+G\+P\+R@{Function\+Approximator\+G\+P\+R}}
+\index{Function\+Approximator\+G\+P\+R@{Function\+Approximator\+G\+P\+R}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{Function\+Approximator\+G\+P\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator\+G\+P\+R} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model\+Parameters\+G\+P\+R} $\ast$const}]{model\+\_\+parameters}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorGPR_a24f8841f307c66117f585f639b0a464e}
+
+
+Initialize a function approximator with model parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the (previously) trained model. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file Function\+Approximator\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+57 :
+58   \hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{FunctionApproximator}(model\_parameters)
+59 \{
+60 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_ad792a46ac006916c5c1ffed2fa42dd24}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGPR_ad792a46ac006916c5c1ffed2fa42dd24}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a9b6a690060f1d845da16d6d739ded2d9}{Function\+Approximator}.
+
+
+
+Definition at line 63 of file Function\+Approximator\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+63                                                                \{
+64   \textcolor{comment}{// All error checking and cloning is left to the FunctionApproximator constructor.}
+65   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_afdf0d2f8b1ddfa701e58f7476da24f65}{FunctionApproximatorGPR}(
+66     dynamic\_cast<const MetaParametersGPR*>(\hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{getMetaParameters}()),
+67     dynamic\_cast<const ModelParametersGPR*>(\hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}())
+68     );
+69 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classDmpBbo_1_1FunctionApproximatorGPR_ad792a46ac006916c5c1ffed2fa42dd24_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_ac453415cf4894aba45e8db6ebc4cd4dc}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}void train (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{targets}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGPR_ac453415cf4894aba45e8db6ebc4cd4dc}
+
+
+Train the function approximator with corresponding input and target examples. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em targets} & Target values of the training examples \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator}.
+
+
+
+Definition at line 71 of file Function\+Approximator\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+72 \{
+73   \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+74   \{
+75     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorGPR::train more than once. Doing nothing."} << 
+      endl;
+76     cerr << \textcolor{stringliteral}{"   (if you really want to retrain, call reTrain function instead)"} << endl;
+77     \textcolor{keywordflow}{return};
+78   \}
+79   
+80   assert(inputs.rows() == targets.rows());
+81   assert(inputs.cols()==\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}());
+82 
+83   \textcolor{keyword}{const} MetaParametersGPR* meta\_parameters\_gpr = 
+84     \textcolor{keyword}{dynamic\_cast<}\textcolor{keyword}{const }MetaParametersGPR*\textcolor{keyword}{>}(\hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{getMetaParameters}());
+85   
+86   \textcolor{keywordtype}{double} max\_covar = meta\_parameters\_gpr->maximum\_covariance();
+87   VectorXd sigmas = meta\_parameters\_gpr->sigmas();
+88   
+89   
+90   \textcolor{comment}{// Compute the gram matrix}
+91   \textcolor{comment}{// In a gram matrix, every input point is itself a center}
+92   MatrixXd centers = inputs;
+93   \textcolor{comment}{// Replicate sigmas, because they are the same for each data point/center}
+94   MatrixXd widths = sigmas.transpose().colwise().replicate(centers.rows()); 
+95 
+96   MatrixXd gram(inputs.rows(),inputs.rows());
+97   \textcolor{keywordtype}{bool} normalize\_activations = \textcolor{keyword}{false};
+98   \textcolor{keywordtype}{bool} asymmetric\_kernels = \textcolor{keyword}{false};
+99   BasisFunction::Gaussian::activations(centers,widths,inputs,gram,normalize\_activations,asymmetric\_kernels)
+      ;
+100   
+101   gram *= max\_covar;
+102 
+103   \hyperlink{classDmpBbo_1_1FunctionApproximator_afd6f9d480456b90c4740c7aaca084ba4}{setModelParameters}(\textcolor{keyword}{new} ModelParametersGPR(inputs,targets,gram,max\_covar,sigmas));
+104   
+105 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorGPR_ac453415cf4894aba45e8db6ebc4cd4dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!predict@{predict}}
+\index{predict@{predict}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{predict}]{\setlength{\rightskip}{0pt plus 5cm}void predict (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}
+
+
+Query the function approximator to make a prediction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator}.
+
+
+
+Definition at line 107 of file Function\+Approximator\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+108 \{
+109   \textcolor{keywordflow}{if} (!\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+110   \{
+111     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorLWPR::predict if you have not trained yet. Doing
+       nothing."} << endl;
+112     \textcolor{keywordflow}{return};
+113   \}
+114 
+115   \textcolor{keyword}{const} ModelParametersGPR* model\_parameters\_gpr = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }ModelParametersGPR*\textcolor{keyword}{>}(
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}());
+116   
+117   assert(inputs.cols()==\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}());
+118   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_samples = inputs.rows();
+119   
+120   outputs.resize(n\_samples,1);
+121   
+122   MatrixXd ks;
+123   model\_parameters\_gpr->kernelActivations(inputs, ks);
+124   
+125   VectorXd weights = model\_parameters\_gpr->weights();
+126   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ii=0; ii<n\_samples; ii++)
+127     outputs(ii) = ks.row(ii).dot(weights);
+128   
+129 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorGPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_a81bcaa6c544bee98c1c625c81860fe4c}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!predict\+Variance@{predict\+Variance}}
+\index{predict\+Variance@{predict\+Variance}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{predict\+Variance}]{\setlength{\rightskip}{0pt plus 5cm}void predict\+Variance (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{variances}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGPR_a81bcaa6c544bee98c1c625c81860fe4c}
+
+
+Query the function approximator to get the variance of a prediction This function is not implemented by all function approximators. 
+
+Therefore, the default implementation fills outputs with 0s. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query (n\+\_\+samples X n\+\_\+dims\+\_\+in) \\
+\hline
+\mbox{\tt out}  & {\em variances} & Predicted variances for the output values (n\+\_\+samples X n\+\_\+dims\+\_\+out). Note that if the output has a dimensionality$>$1, these variances should actuall be covariance matrices (use function \hyperlink{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}{predict(const Eigen\+::\+Matrix\+Xd\& inputs, Eigen\+::\+Matrix\+Xd\& outputs, std\+::vector$<$\+Eigen\+::\+Matrix\+Xd$>$\& variances)} to get the full covariance matrices). So for an output dimensionality of 1 this function works fine. For dimensionality$>$1 we return only the diagional of the covariance matrix, which may not always be what you want.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1FunctionApproximator_ae7931f49eb4d095e1c007edcbad58684}{Function\+Approximator}.
+
+
+
+Definition at line 131 of file Function\+Approximator\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+132 \{
+133   \textcolor{keywordflow}{if} (!\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+134   \{
+135     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorLWPR::predict if you have not trained yet. Doing
+       nothing."} << endl;
+136     \textcolor{keywordflow}{return};
+137   \}
+138 
+139   \textcolor{keyword}{const} ModelParametersGPR* model\_parameters\_gpr = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }ModelParametersGPR*\textcolor{keyword}{>}(
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}());
+140   
+141   
+142   assert(inputs.cols()==\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}());
+143   
+144   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_samples = inputs.rows();
+145   variances.resize(n\_samples,1);
+146   
+147   MatrixXd ks;
+148   model\_parameters\_gpr->kernelActivations(inputs, ks);  
+149 
+150   \textcolor{keywordtype}{double} maximum\_covariance = model\_parameters\_gpr->maximum\_covariance();
+151   MatrixXd gram\_inv = model\_parameters\_gpr->gram\_inv();
+152   
+153   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ii=0; ii<n\_samples; ii++)
+154     variances(ii) = maximum\_covariance - (ks.row(ii)*gram\_inv).dot(ks.row(ii).transpose());
+155 
+156 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorGPR_a81bcaa6c544bee98c1c625c81860fe4c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_ad4c95407e44ba3e16b9651f9b81cd0e6}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string get\+Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGPR_ad4c95407e44ba3e16b9651f9b81cd0e6}
+
+
+Get the name of this function approximator. 
+
+\begin{DoxyReturn}{Returns}
+Name of this function approximator 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{Function\+Approximator}.
+
+
+
+Definition at line 70 of file Function\+Approximator\+G\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+70                                              \{
+71     \textcolor{keywordflow}{return} std::string(\textcolor{stringliteral}{"GPR"});  
+72   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_a53d95f63de3b49491b1204f45a24ae25}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!save\+Grid\+Data@{save\+Grid\+Data}}
+\index{save\+Grid\+Data@{save\+Grid\+Data}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{save\+Grid\+Data}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+Grid\+Data (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{max, }
+\item[{const Eigen\+::\+Vector\+Xi \&}]{n\+\_\+samples\+\_\+per\+\_\+dim, }
+\item[{std\+::string}]{directory, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGPR_a53d95f63de3b49491b1204f45a24ae25}
+
+
+Generate a grid of inputs, and output the response of the basis functions and line segments for these inputs. 
+
+This function is not pure virtual, because this might not make sense for every model parameters class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em min} & Minimum values for the grid (one for each dimension) \\
+\hline
+\mbox{\tt in}  & {\em max} & Maximum values for the grid (one for each dimension) \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+samples\+\_\+per\+\_\+dim} & Number of samples in the grid along each dimension \\
+\hline
+\mbox{\tt in}  & {\em directory} & Directory to which to save the results to. \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Whether to overwrite existing files. true=do overwrite, false=don't overwrite and give a warning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether saving the data was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1FunctionApproximator_a53d95f63de3b49491b1204f45a24ae25}{Function\+Approximator}.
+
+
+
+Definition at line 158 of file Function\+Approximator\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+159 \{
+160   \textcolor{keywordflow}{if} (save\_directory.empty())
+161     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+162   
+163   MatrixXd inputs\_grid;
+164   \hyperlink{classDmpBbo_1_1FunctionApproximator_a61da4383ffab7d919c98d628c1d217d1}{FunctionApproximator::generateInputsGrid}(min, max, 
+      n\_samples\_per\_dim, inputs\_grid);
+165       
+166   \textcolor{keyword}{const} ModelParametersGPR* model\_parameters\_gpr = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }ModelParametersGPR*\textcolor{keyword}{>}(
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}());
+167 
+168   MatrixXd activations\_grid;
+169   model\_parameters\_gpr->kernelActivations(inputs\_grid, activations\_grid);
+170   
+171   saveMatrix(save\_directory,\textcolor{stringliteral}{"n\_samples\_per\_dim.txt"},n\_samples\_per\_dim,overwrite);
+172   saveMatrix(save\_directory,\textcolor{stringliteral}{"inputs\_grid.txt"},inputs\_grid,overwrite);
+173   saveMatrix(save\_directory,\textcolor{stringliteral}{"activations\_grid.txt"},activations\_grid,overwrite);
+174 
+175   \textcolor{comment}{// Weight the basis function activations  }
+176   VectorXd weights = model\_parameters\_gpr->weights();
+177   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} b=0; b<activations\_grid.cols(); b++)
+178     activations\_grid.col(b).array() *= weights(b);
+179   saveMatrix(save\_directory,\textcolor{stringliteral}{"activations\_weighted\_grid.txt"},activations\_grid,overwrite);
+180   
+181   \textcolor{comment}{// Sum over weighed basis functions}
+182   MatrixXd predictions\_grid = activations\_grid.rowwise().sum();
+183   saveMatrix(save\_directory,\textcolor{stringliteral}{"predictions\_grid.txt"},predictions\_grid,overwrite);
+184   
+185   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+186   
+187 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorGPR_a53d95f63de3b49491b1204f45a24ae25_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+P\+R}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1FunctionApproximatorGPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 83 of file Function\+Approximator\+G\+P\+R.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{FunctionApproximatorGPR_8hpp}{Function\+Approximator\+G\+P\+R.\+hpp}\item 
+\hyperlink{FunctionApproximatorGPR_8cpp}{Function\+Approximator\+G\+P\+R.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,24 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$demoDmp_8cpp.html#a343aa3a742299a0967d4f70cfbe21723" title="Get a demonstration trajectory. " alt="" coords="147,20,289,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Trajectory.html#a6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the trajectory. " alt="" coords="403,5,577,32"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1FunctionApproximatorLWR.html#ad792a46ac006916c5c1ffed2fa42dd24" title="Return a pointer to a deep copy of the FunctionApproximator object. " alt="" coords="109,187,327,229"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1Dmp.html#a5d14dedc6736ec5675b4026437b8a597" title="Train a DMP with a trajectory. " alt="" coords="146,253,290,280"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1Dmp.html#ad62585b1e0bab2b9743782e15e01d694" title="Return analytical solution of the system at certain times (and return forcing terms) ..." alt="" coords="105,596,331,623"/>
+<area shape="rect" id="node21" href="$classDmpBbo_1_1Trajectory.html#aad0f629a8d7be7400d0b5f6e990c9a1d" title="Save a trajectory to a file. " alt="" coords="145,122,291,163"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1FunctionApproximator.html#a6f1a44062eac61d88b647c358bcda155" title="Accessor for FunctionApproximator::meta_parameters_. " alt="" coords="381,187,599,229"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="381,253,599,294"/>
+<area shape="rect" id="node9" href="$group__DynamicalSystems.html#ga6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the dynamical system, i.e. " alt="" coords="649,800,869,827"/>
+<area shape="rect" id="node10" href="$classDmpBbo_1_1DynamicalSystem.html#ab6092038efc51ebd122e7c0878f6557d" title="Return analytical solution of the system at certain times. " alt="" coords="394,917,586,958"/>
+<area shape="rect" id="node11" href="$group__DynamicalSystems.html#ga93d7cbbf2e471b00f124e41706405a05" title="Get the dimensionality of the dynamical system, i.e. " alt="" coords="663,347,855,389"/>
+<area shape="rect" id="node12" href="$classDmpBbo_1_1Dmp.html#a89078b732a4579130e24e3bc59c1713c" title="Compute the outputs of the function approximators. " alt="" coords="379,318,601,359"/>
+<area shape="rect" id="node13" href="$group__DynamicalSystems.html#gaebe3c462bc4a725cb17bcc3d13285f13" title="Accessor function for the attractor state of the dynamical system. " alt="" coords="663,618,855,659"/>
+<area shape="rect" id="node14" href="$group__DynamicalSystems.html#ga4c7f24e7deec1629548a075015bdc693" title="Accessor function for the initial state of the dynamical system. " alt="" coords="394,435,586,477"/>
+<area shape="rect" id="node15" href="$classDmpBbo_1_1SpringDamperSystem.html#a1e0acb1d6298104e74f81f53768f5bf1" title="Accessor function for damping coefficient. " alt="" coords="381,501,599,542"/>
+<area shape="rect" id="node16" href="$group__DynamicalSystems.html#ga50eec7ad4c9664b5809ace45b22200d5" title="Accessor function for the time constant. " alt="" coords="651,720,868,747"/>
+<area shape="rect" id="node17" href="$group__DynamicalSystems.html#ga32a975e60b5f001308368c7f06b90e18" title="Mutator function for the attractor state of the dynamical system. " alt="" coords="394,618,586,659"/>
+<area shape="rect" id="node18" href="$classDmpBbo_1_1DynamicalSystem.html#a44dd496535fde494d8465e7603c93db3" title="Start integrating the system. " alt="" coords="394,851,586,893"/>
+<area shape="rect" id="node20" href="$classDmpBbo_1_1SpringDamperSystem.html#ab564468764e7e4dc7c11e2a786e22c19" title="The differential equation which defines the system. " alt="" coords="381,683,599,725"/>
+<area shape="rect" id="node19" href="$classDmpBbo_1_1DynamicalSystem.html#a70acc98a8e024f9b6e0e6de1b519e260" title="The differential equation which defines the system. " alt="" coords="663,851,855,893"/>
+<area shape="rect" id="node22" href="$classDmpBbo_1_1Trajectory.html#a7811beb090dc6ad38f0876f6b0fdc832" title="Get the length of the trajectory, i.e. " alt="" coords="417,57,563,98"/>
+<area shape="rect" id="node23" href="$classDmpBbo_1_1Trajectory.html#a54e86a99496037df2355a51d712f5d54" title="Get the dimensionality of the misc variables. " alt="" coords="417,122,563,163"/>
+</map>

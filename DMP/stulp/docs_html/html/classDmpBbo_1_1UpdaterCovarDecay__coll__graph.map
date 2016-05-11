@@ -1,0 +1,4 @@
+<map id="UpdaterCovarDecay" name="UpdaterCovarDecay">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1UpdaterMean.html" title="Updater that updates the mean (but not the covariance matrix) of the parameter distribution. " alt="" coords="26,80,135,107"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Updater.html" title="Interface for the distribution update step in evolution strategies. " alt="" coords="44,5,117,32"/>
+</map>

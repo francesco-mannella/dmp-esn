@@ -1,0 +1,249 @@
+\hypertarget{classDemoTaskApproximateQuadraticFunction}{\subsection{Demo\+Task\+Approximate\+Quadratic\+Function Class Reference}
+\label{classDemoTaskApproximateQuadraticFunction}\index{Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}}
+}
+
+
+The task is to choose the parameters a and c such that the function $ y = a*x^2 + c $ best matches a set of target values y\+\_\+target for a set of input values x.  
+
+
+
+
+Inheritance diagram for Demo\+Task\+Approximate\+Quadratic\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classDemoTaskApproximateQuadraticFunction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Demo\+Task\+Approximate\+Quadratic\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classDemoTaskApproximateQuadraticFunction__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDemoTaskApproximateQuadraticFunction_ac81f6a65537026fd59d52478253e1661}{Demo\+Task\+Approximate\+Quadratic\+Function} (double a, double c, const Vector\+Xd \&inputs)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classDemoTaskApproximateQuadraticFunction_a0f2698f5da124e2a2df8e5894b42d612}{evaluate} (const Matrix\+Xd \&cost\+\_\+vars, const Matrix\+Xd \&task\+\_\+parameters, Vector\+Xd \&costs) const 
+\begin{DoxyCompactList}\small\item\em Cost function. \end{DoxyCompactList}\item 
+bool \hyperlink{classDemoTaskApproximateQuadraticFunction_a7ae605c4456b382c9d4ecccc1379213d}{save\+Perform\+Rollouts\+Plot\+Script} (string directory) const 
+\begin{DoxyCompactList}\small\item\em Save a python script that is able to visualize the rollouts, given the cost-\/relevant variables stored in a file. \end{DoxyCompactList}\item 
+string \hyperlink{classDemoTaskApproximateQuadraticFunction_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The task is to choose the parameters a and c such that the function $ y = a*x^2 + c $ best matches a set of target values y\+\_\+target for a set of input values x. 
+
+Definition at line 60 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDemoTaskApproximateQuadraticFunction_ac81f6a65537026fd59d52478253e1661}{\index{Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}!Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}}
+\index{Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}!Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}}
+\paragraph[{Demo\+Task\+Approximate\+Quadratic\+Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demo\+Task\+Approximate\+Quadratic\+Function} (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{c, }
+\item[{const Vector\+Xd \&}]{inputs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDemoTaskApproximateQuadraticFunction_ac81f6a65537026fd59d52478253e1661}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em a} & a in $ y = a*x^2 + c $ \\
+\hline
+\mbox{\tt in}  & {\em c} & c in $ y = a*x^2 + c $ \\
+\hline
+\mbox{\tt in}  & {\em inputs} & x in $ y = a*x^2 + c $ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+\begin{DoxyCode}
+69   \{
+70     inputs\_ = inputs;
+71     \hyperlink{demoEvolutionaryOptimizationTask_8cpp_a8dd69e1c4b8036ab6c2b6f386fe5b6bc}{targetFunction}(a,c,inputs\_,targets\_);
+72   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDemoTaskApproximateQuadraticFunction_ac81f6a65537026fd59d52478253e1661_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDemoTaskApproximateQuadraticFunction_a0f2698f5da124e2a2df8e5894b42d612}{\index{Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}}
+\paragraph[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Xd \&}]{cost\+\_\+vars, }
+\item[{const Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{Vector\+Xd \&}]{costs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDemoTaskApproximateQuadraticFunction_a0f2698f5da124e2a2df8e5894b42d612}
+
+
+Cost function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cost\+\_\+vars} & y in $ y = a*x^2 + c $ \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & Ignored \\
+\hline
+\mbox{\tt out}  & {\em costs} & Costs of the cost\+\_\+vars \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 79 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+\begin{DoxyCode}
+80   \{
+81     \textcolor{keywordtype}{int} n\_samples = cost\_vars.rows();
+82     costs.resize(n\_samples);
+83     
+84     VectorXd predictions, diff\_square;
+85     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k=0; k<n\_samples; k++)
+86     \{
+87       predictions = cost\_vars.row(k);
+88       diff\_square = (predictions.array()-targets\_.array()).square();
+89       costs[k] = diff\_square.mean();
+90     \}
+91   \}
+\end{DoxyCode}
+\hypertarget{classDemoTaskApproximateQuadraticFunction_a7ae605c4456b382c9d4ecccc1379213d}{\index{Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}!save\+Perform\+Rollouts\+Plot\+Script@{save\+Perform\+Rollouts\+Plot\+Script}}
+\index{save\+Perform\+Rollouts\+Plot\+Script@{save\+Perform\+Rollouts\+Plot\+Script}!Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}}
+\paragraph[{save\+Perform\+Rollouts\+Plot\+Script}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+Perform\+Rollouts\+Plot\+Script (
+\begin{DoxyParamCaption}
+\item[{string}]{directory}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDemoTaskApproximateQuadraticFunction_a7ae605c4456b382c9d4ecccc1379213d}
+
+
+Save a python script that is able to visualize the rollouts, given the cost-\/relevant variables stored in a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em directory} & Directory in which to save the python script \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if saving the script was successful, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 98 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+\begin{DoxyCode}
+99   \{
+100     \textcolor{keywordtype}{string} filename = directory + \textcolor{stringliteral}{"/plotRollouts.py"};
+101     
+102     std::ofstream file;
+103     file.open(filename.c\_str());
+104     \textcolor{keywordflow}{if} (!file.is\_open())
+105     \{
+106       std::cerr << \textcolor{stringliteral}{"Couldn't open file '"} << filename << \textcolor{stringliteral}{"' for writing."} << std::endl;
+107       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+108     \}
+109     
+110     
+111     file << \textcolor{stringliteral}{"import numpy as np"} << endl;
+112     file << \textcolor{stringliteral}{"import matplotlib.pyplot as plt"} << endl;
+113     file << \textcolor{stringliteral}{"import sys, os"} << endl;
+114     file << \textcolor{stringliteral}{"def plotRollouts(cost\_vars,ax):"} << endl;
+115     file << \textcolor{stringliteral}{"    inputs = ["};
+116     file << fixed;
+117     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<inputs\_.size(); ii++)
+118     \{
+119       \textcolor{keywordflow}{if} (ii>0) file << \textcolor{stringliteral}{", "};
+120       file << inputs\_[ii];
+121     \}
+122     file << \textcolor{stringliteral}{"]"} << endl;
+123     file << \textcolor{stringliteral}{"    targets = ["};
+124     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<targets\_.size(); ii++)
+125     \{
+126       \textcolor{keywordflow}{if} (ii>0) file << \textcolor{stringliteral}{", "};
+127       file << targets\_[ii];
+128     \}
+129     file << \textcolor{stringliteral}{"]"} << endl;
+130     file << \textcolor{stringliteral}{"    line\_handles = ax.plot(inputs,cost\_vars.T,linewidth=0.5)"} << endl;
+131     file << \textcolor{stringliteral}{"    ax.plot(inputs,targets,'-o',color='k',linewidth=2)"} << endl;
+132     file << \textcolor{stringliteral}{"    return line\_handles"} << endl;
+133     file << \textcolor{stringliteral}{"if \_\_name\_\_=='\_\_main\_\_':"} << endl;
+134     file << \textcolor{stringliteral}{"    # See if input directory was passed"} << endl;
+135     file << \textcolor{stringliteral}{"    if (len(sys.argv)==2):"} << endl;
+136     file << \textcolor{stringliteral}{"      directory = str(sys.argv[1])"} << endl;
+137     file << \textcolor{stringliteral}{"    else:"} << endl;
+138     file << \textcolor{stringliteral}{"      print 'Usage: '+sys.argv[0]+' <directory>';"} << endl;
+139     file << \textcolor{stringliteral}{"      sys.exit()"} << endl;
+140     file << \textcolor{stringliteral}{"    cost\_vars = np.loadtxt(directory+\(\backslash\)"cost\_vars.txt\(\backslash\)")"} << endl;
+141     file << \textcolor{stringliteral}{"    fig = plt.figure()"} << endl;
+142     file << \textcolor{stringliteral}{"    ax = fig.gca()"} << endl;
+143     file << \textcolor{stringliteral}{"    plotRollouts(cost\_vars,ax)"} << endl;
+144     file << \textcolor{stringliteral}{"    plt.show()"} << endl;
+145     
+146     file.close();
+147     
+148     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+149   \}
+\end{DoxyCode}
+\hypertarget{classDemoTaskApproximateQuadraticFunction_a1aca816b42cf0d36118be0ab91120d77}{\index{Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Demo\+Task\+Approximate\+Quadratic\+Function@{Demo\+Task\+Approximate\+Quadratic\+Function}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDemoTaskApproximateQuadraticFunction_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1Task_af084bff2ddd6233e9a898faa23f6195c}{Task}.
+
+
+
+Definition at line 154 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+\begin{DoxyCode}
+155   \{
+156     \textcolor{keywordtype}{string} str = \textcolor{stringliteral}{"TaskApproximateQuadraticFunctionSolver"};
+157     \textcolor{keywordflow}{return} str;
+158   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{demoEvolutionaryOptimizationTask_8cpp}{demo\+Evolutionary\+Optimization\+Task.\+cpp}\end{DoxyCompactItemize}

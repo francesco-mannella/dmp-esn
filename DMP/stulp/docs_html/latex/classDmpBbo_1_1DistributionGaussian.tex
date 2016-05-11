@@ -1,0 +1,310 @@
+\hypertarget{classDmpBbo_1_1DistributionGaussian}{\subsection{Distribution\+Gaussian Class Reference}
+\label{classDmpBbo_1_1DistributionGaussian}\index{Distribution\+Gaussian@{Distribution\+Gaussian}}
+}
+
+
+A class for representing a Gaussian distribution.  
+
+
+
+
+{\ttfamily \#include $<$Distribution\+Gaussian.\+hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1DistributionGaussian_a429296bb71ed97282ef49232431b7b51}{Distribution\+Gaussian} (const Eigen\+::\+Vector\+Xd \&\hyperlink{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}{mean}, const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar})
+\begin{DoxyCompactList}\small\item\em Construct the Gaussian distribution with a mean and covariance matrix. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1DistributionGaussian_ae5cb5c89a2db5d549f7a2abec2cd58f8}{generate\+Samples} (int n\+\_\+samples, Eigen\+::\+Matrix\+Xd \&samples) const 
+\begin{DoxyCompactList}\small\item\em Generate samples from the distribution. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} $\ast$ \hyperlink{classDmpBbo_1_1DistributionGaussian_a507b8f2538f519dd625025b1768f7938}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Make a deep copy of the object. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}{mean} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor get function for the mean. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor get function for the covariance matrix. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1DistributionGaussian_ac9783c093d50c99c387c241b3bc8729d}{set\+\_\+mean} (const Eigen\+::\+Vector\+Xd \&\hyperlink{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}{mean})
+\begin{DoxyCompactList}\small\item\em Accessor set function for the mean. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1DistributionGaussian_aecae0b0d3ae1d8c47dc4b13d1b24d169}{set\+\_\+covar} (const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar})
+\begin{DoxyCompactList}\small\item\em Accessor set function for the covar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1DistributionGaussian_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{classDmpBbo_1_1DistributionGaussian_a117d84e639d830f86b54aa05ac129c2f}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution)
+\begin{DoxyCompactList}\small\item\em Print to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A class for representing a Gaussian distribution. 
+
+This is mainly a wrapper around boost functionality The reason to make the wrapper is to provide functionality for serialization/deserialization. 
+
+Definition at line 44 of file Distribution\+Gaussian.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1DistributionGaussian_a429296bb71ed97282ef49232431b7b51}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!Distribution\+Gaussian@{Distribution\+Gaussian}}
+\index{Distribution\+Gaussian@{Distribution\+Gaussian}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{Distribution\+Gaussian}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Distribution\+Gaussian} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{mean, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{covar}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1DistributionGaussian_a429296bb71ed97282ef49232431b7b51}
+
+
+Construct the Gaussian distribution with a mean and covariance matrix. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mean} & Mean of the distribution \\
+\hline
+\mbox{\tt in}  & {\em covar} & Covariance matrix of the distribution \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Distribution\+Gaussian.\+cpp.
+
+
+\begin{DoxyCode}
+55 \{
+56   mean\_ = \hyperlink{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}{mean};
+57   \hyperlink{classDmpBbo_1_1DistributionGaussian_aecae0b0d3ae1d8c47dc4b13d1b24d169}{set\_covar}(\hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar});
+58 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1DistributionGaussian_ae5cb5c89a2db5d549f7a2abec2cd58f8}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!generate\+Samples@{generate\+Samples}}
+\index{generate\+Samples@{generate\+Samples}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{generate\+Samples}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Samples (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+samples, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{samples}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1DistributionGaussian_ae5cb5c89a2db5d549f7a2abec2cd58f8}
+
+
+Generate samples from the distribution. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+samples} & Number of samples to sample \\
+\hline
+\mbox{\tt in}  & {\em samples} & the samples themselves (size n\+\_\+samples X dim(mean) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Distribution\+Gaussian.\+cpp.
+
+
+\begin{DoxyCode}
+79 \{
+80   \textcolor{keywordflow}{if} (covar\_decomposed\_.size()==0)
+81   \{
+82     \textcolor{comment}{// Now perform the Cholesky decomposition, which makes it easier to generate samples. }
+83     MatrixXd A(covar\_.llt().matrixL());
+84     covar\_decomposed\_ = A;
+85     \textcolor{comment}{// Remark: it would have been better to do this in the constructor and set\_covar, }
+86     \textcolor{comment}{// but I couldn't get it to work with boost::serialization (I tried hard)}
+87   \}
+88   
+89   
+90   \textcolor{keywordtype}{int} n\_dims = mean\_.size();
+91   samples.resize(n\_samples,n\_dims);
+92   
+93   \textcolor{comment}{// http://en.wikipedia.org/wiki/Multivariate\_normal\_distribution#Drawing\_values\_from\_the\_distribution}
+94   VectorXd z(n\_dims);
+95   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_sample=0; i\_sample<n\_samples; i\_sample++)
+96   \{
+97     \textcolor{comment}{// Generate vector with samples from standard normal distribution N(0,1) }
+98     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+99       z(i\_dim) = (*normal\_distribution\_unit)();
+100 
+101     \textcolor{comment}{// Compute x = mu + Az}
+102     samples.row(i\_sample) = mean\_ + covar\_decomposed\_*z;
+103   \}  
+104 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1DistributionGaussian_a507b8f2538f519dd625025b1768f7938}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Distribution\+Gaussian} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1DistributionGaussian_a507b8f2538f519dd625025b1768f7938}
+
+
+Make a deep copy of the object. 
+
+\begin{DoxyReturn}{Returns}
+A deep copy of the object. 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Distribution\+Gaussian.\+cpp.
+
+
+\begin{DoxyCode}
+61 \{
+62   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1DistributionGaussian_a429296bb71ed97282ef49232431b7b51}{DistributionGaussian}(\hyperlink{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}{mean}(),\hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar}()); 
+63 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!mean@{mean}}
+\index{mean@{mean}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{mean}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd\& mean (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}
+
+
+Accessor get function for the mean. 
+
+\begin{DoxyReturn}{Returns}
+The mean of the distribution 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file Distribution\+Gaussian.\+hpp.
+
+
+\begin{DoxyCode}
+68 \{ \textcolor{keywordflow}{return} mean\_;   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!covar@{covar}}
+\index{covar@{covar}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{covar}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix\+Xd\& covar (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}
+
+
+Accessor get function for the covariance matrix. 
+
+\begin{DoxyReturn}{Returns}
+The covariance matrix of the distribution 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file Distribution\+Gaussian.\+hpp.
+
+
+\begin{DoxyCode}
+74 \{ \textcolor{keywordflow}{return} covar\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1DistributionGaussian_ac9783c093d50c99c387c241b3bc8729d}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!set\+\_\+mean@{set\+\_\+mean}}
+\index{set\+\_\+mean@{set\+\_\+mean}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{set\+\_\+mean}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+mean (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{mean}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1DistributionGaussian_ac9783c093d50c99c387c241b3bc8729d}
+
+
+Accessor set function for the mean. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mean} & The new mean of the distribution \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file Distribution\+Gaussian.\+cpp.
+
+
+\begin{DoxyCode}
+65                                                         \{ 
+66   assert(\hyperlink{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}{mean}.size()==mean\_.size());  
+67   mean\_ = \hyperlink{classDmpBbo_1_1DistributionGaussian_a612f996501aac7e31237a21b47d03d72}{mean};
+68 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1DistributionGaussian_aecae0b0d3ae1d8c47dc4b13d1b24d169}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!set\+\_\+covar@{set\+\_\+covar}}
+\index{set\+\_\+covar@{set\+\_\+covar}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{set\+\_\+covar}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+covar (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{covar}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1DistributionGaussian_aecae0b0d3ae1d8c47dc4b13d1b24d169}
+
+
+Accessor set function for the covar. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em covar} & The new covariance matrix of the distribution \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 71 of file Distribution\+Gaussian.\+cpp.
+
+
+\begin{DoxyCode}
+71                                                           \{ 
+72   assert(\hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar}.cols()==\hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar}.rows());
+73   assert(\hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar}.rows()==mean\_.size());
+74   covar\_ = \hyperlink{classDmpBbo_1_1DistributionGaussian_a5d2adde253815df42d471a876173868c}{covar};
+75   covar\_decomposed\_ = MatrixXd::Zero(0,0);
+76 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1DistributionGaussian_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1DistributionGaussian_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 111 of file Distribution\+Gaussian.\+hpp.
+
+\hypertarget{classDmpBbo_1_1DistributionGaussian_a117d84e639d830f86b54aa05ac129c2f}{\index{Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dmp\+Bbo\+::\+Distribution\+Gaussian@{Dmp\+Bbo\+::\+Distribution\+Gaussian}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Distribution\+Gaussian} \&}]{distribution}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1DistributionGaussian_a117d84e639d830f86b54aa05ac129c2f}
+
+
+Print to output stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em output} & Output stream to which to write to \\
+\hline
+\mbox{\tt in}  & {\em distribution} & Distribution to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file Distribution\+Gaussian.\+cpp.
+
+
+\begin{DoxyCode}
+108 \{
+109   output << \textcolor{stringliteral}{"N(["} << toString(distribution.mean\_) << \textcolor{stringliteral}{"], ["}<< toString(distribution.covar\_) << \textcolor{stringliteral}{"])"};
+110   \textcolor{keywordflow}{return} output;
+111 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{DistributionGaussian_8hpp}{Distribution\+Gaussian.\+hpp}\item 
+\hyperlink{DistributionGaussian_8cpp}{Distribution\+Gaussian.\+cpp}\end{DoxyCompactItemize}

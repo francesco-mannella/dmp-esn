@@ -1,0 +1,6 @@
+<map id="predict" name="predict">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1FunctionApproximator.html#a178135f623d9b9058870851a53299c6e" title="Determine whether the function approximator has already been trained with data or not..." alt="" coords="123,5,341,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="123,71,341,112"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1ModelParametersGMR.html#a2dadd5878cbb2d453e311d8d1adb314c" title="The expected dimensionality of the input data. " alt="" coords="119,136,345,177"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1ModelParametersGMR.html#ab1a7cb7c0bf6fe5afd5561fa6f27ba7b" title="The expected dimensionality of the output data. " alt="" coords="119,201,345,243"/>
+</map>

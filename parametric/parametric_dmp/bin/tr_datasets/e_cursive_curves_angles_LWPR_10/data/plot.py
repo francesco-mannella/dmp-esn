@@ -2,11 +2,13 @@
 
 import glob 
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 
 import os
 import sys
 
+matplotlib.use("cairo")
 
 pathname = os.path.dirname(sys.argv[0])
 if pathname:
@@ -45,26 +47,26 @@ idcs = np.arange(len(trains))
 
 
 theo_train = {    
-        'color': [1,.6,.6],
+        'color': [.6,.6,1],
         'lw': 5,
         'zorder': 2,
         'label': "Training"
         }
 repr_train = {    
-        'color': [.3,0,0],
+        'color': [0,0,.3],
         'lw': 1.5,
         'zorder': 3,
         'label': "Training repr."
         }
 
 theo_test = {    
-        'color': [.6,.6,1],
+        'color': [1,.6,.6],
         'lw': 5,
         'zorder': 2, 
         'label': "Test"
         }
 repr_test = {    
-        'color': [0,0,.3],
+        'color': [.3,0,0],
         'lw': 1.5, 
         'zorder': 3,
         'label': "Test repr"
@@ -106,6 +108,9 @@ if coords == None:
 else:
     ax.set_xlim([coords[0], coords[1]])
     ax.set_ylim([coords[2], coords[3]])
+
+ax.set_xticks([])
+ax.set_yticks([])
 
 ax.legend(handles=lall)
 

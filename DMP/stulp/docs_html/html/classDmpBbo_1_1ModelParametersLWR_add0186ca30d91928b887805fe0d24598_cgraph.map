@@ -1,0 +1,4 @@
+<map id="setParameterVectorModifierPrivate" name="setParameterVectorModifierPrivate">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1ModelParametersLWR.html#aea1a05d703891f1bab48039a23cb78b4" title="Set whether the offsets should be adapted so that the line segments pivot around the mode of the basi..." alt="" coords="265,5,401,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1ModelParametersLWR.html#a812ed8332b71789b6d8fd9355ff94fa7" title="Whether to return slopes as angles or slopes in ModelParametersLWR::getParameterVectorAll() ..." alt="" coords="252,71,415,98"/>
+</map>

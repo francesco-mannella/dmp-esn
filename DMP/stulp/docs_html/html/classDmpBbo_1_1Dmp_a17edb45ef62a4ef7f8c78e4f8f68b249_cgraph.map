@@ -1,0 +1,4 @@
+<map id="set_tau" name="set_tau">
+<area shape="rect" id="node2" href="$group__DynamicalSystems.html#ga91155da280310b176cbd5fc1627820c7" title="Mutator function for the time constant. " alt="" coords="121,5,313,47"/>
+<area shape="rect" id="node3" href="$group__DynamicalSystems.html#ga50eec7ad4c9664b5809ace45b22200d5" title="Accessor function for the time constant. " alt="" coords="361,13,579,39"/>
+</map>

@@ -1,0 +1,136 @@
+\hypertarget{classDmpBbo_1_1UpdateSummary}{\subsection{Update\+Summary Class Reference}
+\label{classDmpBbo_1_1UpdateSummary}\index{Update\+Summary@{Update\+Summary}}
+}
+
+
+P\+O\+D class for storing the information relevant to a distribution update.  
+
+
+
+
+{\ttfamily \#include $<$Update\+Summary.\+hpp$>$}
+
+
+
+Collaboration diagram for Update\+Summary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classDmpBbo_1_1UpdateSummary__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} $\ast$ \hyperlink{classDmpBbo_1_1UpdateSummary_a54b1ed1562d24d76c441110de5a0183f}{distribution}
+\begin{DoxyCompactList}\small\item\em Distribution before update. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classDmpBbo_1_1UpdateSummary_ab0da48c0dfcd090ea3086c283e267415}{samples}
+\begin{DoxyCompactList}\small\item\em Samples in the epoch. \end{DoxyCompactList}\item 
+\hypertarget{classDmpBbo_1_1UpdateSummary_a1940a4e27a23d270fa5457eb65aada0f}{double \hyperlink{classDmpBbo_1_1UpdateSummary_a1940a4e27a23d270fa5457eb65aada0f}{cost\+\_\+eval}}\label{classDmpBbo_1_1UpdateSummary_a1940a4e27a23d270fa5457eb65aada0f}
+
+\begin{DoxyCompactList}\small\item\em Cost of the evaluation sample. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classDmpBbo_1_1UpdateSummary_ac3b47ca8e32f8b5cdaa23bdd375ccfd3}{costs}
+\begin{DoxyCompactList}\small\item\em Costs of the samples in the epoch. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classDmpBbo_1_1UpdateSummary_a16d226260adc0af72c89783c656d25d5}{weights}
+\begin{DoxyCompactList}\small\item\em Weights of the samples in the epoch, computed from their costs. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} $\ast$ \hyperlink{classDmpBbo_1_1UpdateSummary_a85f1c35f510f89864f15029ea16e168c}{distribution\+\_\+new}
+\begin{DoxyCompactList}\small\item\em Distribution after the update. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classDmpBbo_1_1UpdateSummary_ab6057150915c96b1d20ed485a1f5ce18}{cost\+\_\+vars}
+\begin{DoxyCompactList}\small\item\em The cost-\/relevant variables. \end{DoxyCompactList}\item 
+Eigen\+::\+Matrix\+Xd \hyperlink{classDmpBbo_1_1UpdateSummary_a309e381520075afa088c97bf1e7e6cd0}{cost\+\_\+vars\+\_\+eval}
+\begin{DoxyCompactList}\small\item\em The cost-\/relevant variables for the evaluation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+P\+O\+D class for storing the information relevant to a distribution update. 
+
+Used for logging purposes. This is a \char`\"{}plain old data\char`\"{} class, i.\+e. all member variables are public 
+
+Definition at line 43 of file Update\+Summary.\+hpp.
+
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classDmpBbo_1_1UpdateSummary_a54b1ed1562d24d76c441110de5a0183f}{\index{Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}!distribution@{distribution}}
+\index{distribution@{distribution}!Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}}
+\paragraph[{distribution}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Distribution\+Gaussian}$\ast$ distribution}}\label{classDmpBbo_1_1UpdateSummary_a54b1ed1562d24d76c441110de5a0183f}
+
+
+Distribution before update. 
+
+
+
+Definition at line 46 of file Update\+Summary.\+hpp.
+
+\hypertarget{classDmpBbo_1_1UpdateSummary_ab0da48c0dfcd090ea3086c283e267415}{\index{Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}!samples@{samples}}
+\index{samples@{samples}!Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}}
+\paragraph[{samples}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd samples}}\label{classDmpBbo_1_1UpdateSummary_ab0da48c0dfcd090ea3086c283e267415}
+
+
+Samples in the epoch. 
+
+
+
+Definition at line 48 of file Update\+Summary.\+hpp.
+
+\hypertarget{classDmpBbo_1_1UpdateSummary_ac3b47ca8e32f8b5cdaa23bdd375ccfd3}{\index{Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}!costs@{costs}}
+\index{costs@{costs}!Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}}
+\paragraph[{costs}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd costs}}\label{classDmpBbo_1_1UpdateSummary_ac3b47ca8e32f8b5cdaa23bdd375ccfd3}
+
+
+Costs of the samples in the epoch. 
+
+
+
+Definition at line 52 of file Update\+Summary.\+hpp.
+
+\hypertarget{classDmpBbo_1_1UpdateSummary_a16d226260adc0af72c89783c656d25d5}{\index{Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}!weights@{weights}}
+\index{weights@{weights}!Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}}
+\paragraph[{weights}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd weights}}\label{classDmpBbo_1_1UpdateSummary_a16d226260adc0af72c89783c656d25d5}
+
+
+Weights of the samples in the epoch, computed from their costs. 
+
+
+
+Definition at line 54 of file Update\+Summary.\+hpp.
+
+\hypertarget{classDmpBbo_1_1UpdateSummary_a85f1c35f510f89864f15029ea16e168c}{\index{Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}!distribution\+\_\+new@{distribution\+\_\+new}}
+\index{distribution\+\_\+new@{distribution\+\_\+new}!Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}}
+\paragraph[{distribution\+\_\+new}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Distribution\+Gaussian}$\ast$ distribution\+\_\+new}}\label{classDmpBbo_1_1UpdateSummary_a85f1c35f510f89864f15029ea16e168c}
+
+
+Distribution after the update. 
+
+
+
+Definition at line 56 of file Update\+Summary.\+hpp.
+
+\hypertarget{classDmpBbo_1_1UpdateSummary_ab6057150915c96b1d20ed485a1f5ce18}{\index{Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}!cost\+\_\+vars@{cost\+\_\+vars}}
+\index{cost\+\_\+vars@{cost\+\_\+vars}!Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}}
+\paragraph[{cost\+\_\+vars}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd cost\+\_\+vars}}\label{classDmpBbo_1_1UpdateSummary_ab6057150915c96b1d20ed485a1f5ce18}
+
+
+The cost-\/relevant variables. 
+
+Only used when Task/\+Task\+Solver approach is used. 
+
+Definition at line 59 of file Update\+Summary.\+hpp.
+
+\hypertarget{classDmpBbo_1_1UpdateSummary_a309e381520075afa088c97bf1e7e6cd0}{\index{Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}!cost\+\_\+vars\+\_\+eval@{cost\+\_\+vars\+\_\+eval}}
+\index{cost\+\_\+vars\+\_\+eval@{cost\+\_\+vars\+\_\+eval}!Dmp\+Bbo\+::\+Update\+Summary@{Dmp\+Bbo\+::\+Update\+Summary}}
+\paragraph[{cost\+\_\+vars\+\_\+eval}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Matrix\+Xd cost\+\_\+vars\+\_\+eval}}\label{classDmpBbo_1_1UpdateSummary_a309e381520075afa088c97bf1e7e6cd0}
+
+
+The cost-\/relevant variables for the evaluation. 
+
+Only used when Task/\+Task\+Solver approach is used. 
+
+Definition at line 62 of file Update\+Summary.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{UpdateSummary_8hpp}{Update\+Summary.\+hpp}\end{DoxyCompactItemize}

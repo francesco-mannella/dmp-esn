@@ -1,0 +1,25 @@
+<map id="demoImitationAndOptimization.cpp" name="demoImitationAndOptimization.cpp">
+<area shape="rect" id="node6" href="$TaskViapoint_8hpp.html" title="TaskViapoint class header file. " alt="" coords="1261,177,1491,203"/>
+<area shape="rect" id="node13" href="$DistributionGaussian_8hpp.html" title="DistributionGaussian class header file. " alt="" coords="397,355,600,382"/>
+<area shape="rect" id="node25" href="$Trajectory_8hpp.html" title="Trajectory class header file. " alt="" coords="776,355,920,382"/>
+<area shape="rect" id="node28" href="$TaskSolverDmp_8hpp.html" title="TaskSolverDmp class header file. " alt="" coords="1671,177,1881,203"/>
+<area shape="rect" id="node33" href="$FunctionApproximatorLWR_8hpp.html" title="FunctionApproximatorLWR class header file. " alt="" coords="3796,169,4017,211"/>
+<area shape="rect" id="node36" href="$MetaParametersLWR_8hpp.html" title="MetaParametersLWR class header file. " alt="" coords="2949,259,3139,300"/>
+<area shape="rect" id="node38" href="$Dmp_8hpp.html" title="Dmp class header file. " alt="" coords="2181,266,2291,293"/>
+<area shape="rect" id="node42" href="$Updater_8hpp.html" title="Updater class header file. " alt="" coords="1702,266,1829,293"/>
+<area shape="rect" id="node44" href="$UpdaterCovarDecay_8hpp.html" title="UpdaterCovarDecay class header file. " alt="" coords="4930,80,5126,121"/>
+<area shape="rect" id="node46" href="$UpdaterCovarAdaptation_8hpp.html" title="UpdaterCovarAdaptation class header file. " alt="" coords="4669,80,4865,121"/>
+<area shape="rect" id="node47" href="$runEvolutionaryOptimizationParallel_8hpp.html" title="Header file for function to run multiple evolutionary optimization processes in parallel. " alt="" coords="4229,348,4488,389"/>
+<area shape="rect" id="node7" href="$TaskWithTrajectoryDemonstrator_8hpp.html" title="TaskWithTrajectoryDemonstrator class header file. " alt="" coords="1267,259,1474,300"/>
+<area shape="rect" id="node8" href="$Task_8hpp.html" title="Task class header file. " alt="" coords="1317,355,1424,382"/>
+<area shape="rect" id="node14" href="$EigenBoostSerialization_8hpp.html" title="Header file for serialization of Eigen matrices. " alt="" coords="695,445,966,471"/>
+<area shape="rect" id="node16" href="$EigenBoostSerialization_8tpp_source.html" title="EigenBoostSerialization.tpp" alt="" coords="551,534,745,561"/>
+<area shape="rect" id="node29" href="$TaskSolverParallel_8hpp.html" title="TaskSolverParallel class header file. " alt="" coords="1893,266,2059,293"/>
+<area shape="rect" id="node30" href="$TaskSolver_8hpp.html" title="TaskSolver class header file. " alt="" coords="1147,355,1293,382"/>
+<area shape="rect" id="node34" href="$FunctionApproximator_8hpp.html" title="FunctionApproximator class header file. " alt="" coords="3811,259,4002,300"/>
+<area shape="rect" id="node35" href="$Parameterizable_8hpp.html" title="Parameterizable class header file. " alt="" coords="3193,355,3343,382"/>
+<area shape="rect" id="node37" href="$MetaParameters_8hpp.html" title="MetaParameters class header file. " alt="" coords="2905,348,3066,389"/>
+<area shape="rect" id="node39" href="$DynamicalSystem_8hpp.html" title="DynamicalSystem class header file. " alt="" coords="2624,348,2829,389"/>
+<area shape="rect" id="node43" href="$UpdateSummary_8hpp.html" title="UpdateSummary class header file. " alt="" coords="3419,355,3597,382"/>
+<area shape="rect" id="node45" href="$UpdaterMean_8hpp.html" title="UpdaterMean class header file. " alt="" coords="4719,177,4940,203"/>
+</map>

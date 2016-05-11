@@ -1,0 +1,19 @@
+This library contains several modules for training dynamical movement primitives (D\+M\+Ps), and optimizing their parameters through black-\/box optimization. Each module has its own dedicated page.
+
+\begin{DoxyItemize}
+\item \hyperlink{page_dyn_sys}{Dynamical Systems Module} This module provides implementations of several basic dynamical systems. D\+M\+Ps are combinations of such systems. This module is completely independent of all other modules.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \hyperlink{page_func_approx}{Function Approximation Module} This module provides implementations (but mostly wrappers around external libraries) of several function approximators. D\+M\+Ps use function approximators to learn and reproduce arbitrary smooth movements. This module is completely independent of all other modules.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \hyperlink{page_dmp}{Dynamical Movement Primitives Module} This module provides an implementation of several types of D\+M\+Ps. It depends on both the Dynamical\+Systems and Function\+Approximators modules, but no other.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \hyperlink{page_bbo}{Black Box Optimization} This module provides implementations of several stochastic optimization algorithms for the optimization of black-\/box cost functions. This module is completely independent of all other modules.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \hyperlink{page_dmp_bbo}{Black Box Optimization of Dynamical Movement Primitives} This module applies black-\/box optimization to the parameters of a D\+M\+P. It depends on all the other modules.\end{DoxyItemize}
+Each of the pages linked to above contains two sections\+:
+
+\begin{DoxyItemize}
+\item A tutorial that treats the concepts that are implemented \item A description of how these concepts have been implemented, and why it has been done so in this fashion.\end{DoxyItemize}
+If you want a deeper understanding of the entire library, I recommend you to go through the pages in the order above. If you want to start coding immediately, I suggest to look at the \hyperlink{group__Demos}{Demos} to see how the functionality of the library may be used. The demos for each module are found in cpp/\+M\+O\+D\+U\+L\+E\+N\+A\+M\+E/demos.
+
+Some general considerations on the design of the library are here \hyperlink{page_design}{Design Rationale} 

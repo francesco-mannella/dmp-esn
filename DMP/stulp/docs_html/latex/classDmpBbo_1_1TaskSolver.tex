@@ -1,0 +1,183 @@
+\hypertarget{classDmpBbo_1_1TaskSolver}{\subsection{Task\+Solver Class Reference}
+\label{classDmpBbo_1_1TaskSolver}\index{Task\+Solver@{Task\+Solver}}
+}
+
+
+Interface for classes that can perform rollouts.  
+
+
+
+
+{\ttfamily \#include $<$Task\+Solver.\+hpp$>$}
+
+
+
+Inheritance diagram for Task\+Solver\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1TaskSolver__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1TaskSolver_aea5c8e55f828886dae52bacf466dc707}{perform\+Rollouts} (const Eigen\+::\+Matrix\+Xd \&samples, Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars) const 
+\begin{DoxyCompactList}\small\item\em Perform rollouts, i.\+e. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1TaskSolver_a36d1f440face2e087122666173020bb1}{perform\+Rollouts} (const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Matrix\+Xd \&task\+\_\+parameters, Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars) const =0
+\begin{DoxyCompactList}\small\item\em Perform rollouts, i.\+e. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classDmpBbo_1_1TaskSolver_af084bff2ddd6233e9a898faa23f6195c}{to\+String} (void) const =0
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1TaskSolver_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{classDmpBbo_1_1TaskSolver_ad6beb451d2c9c8db4c7b035c43140ade}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{classDmpBbo_1_1TaskSolver}{Task\+Solver} \&task\+\_\+solver)
+\begin{DoxyCompactList}\small\item\em Print a \hyperlink{classDmpBbo_1_1TaskSolver}{Task\+Solver} to an output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Interface for classes that can perform rollouts. 
+
+For further information see the section on \hyperlink{page_bbo_sec_bbo_task_and_task_solver}{Cost\+Function vs Task/\+Task\+Solver} 
+
+Definition at line 36 of file Task\+Solver.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskSolver_aea5c8e55f828886dae52bacf466dc707}{\index{Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}!perform\+Rollouts@{perform\+Rollouts}}
+\index{perform\+Rollouts@{perform\+Rollouts}!Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}}
+\paragraph[{perform\+Rollouts}]{\setlength{\rightskip}{0pt plus 5cm}void perform\+Rollouts (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1TaskSolver_aea5c8e55f828886dae52bacf466dc707}
+
+
+Perform rollouts, i.\+e. 
+
+given a set of samples, determine all the variables that are relevant to evaluating the cost function. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples} & The samples \\
+\hline
+\mbox{\tt out}  & {\em cost\+\_\+vars} & The variables relevant to computing the cost. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]Compare to other functions \end{DoxyRefDesc}
+
+
+Definition at line 44 of file Task\+Solver.\+hpp.
+
+
+\begin{DoxyCode}
+45   \{
+46     Eigen::MatrixXd task\_parameters(0,0);
+47     \hyperlink{classDmpBbo_1_1TaskSolver_aea5c8e55f828886dae52bacf466dc707}{performRollouts}(samples,task\_parameters,cost\_vars);
+48   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1TaskSolver_a36d1f440face2e087122666173020bb1}{\index{Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}!perform\+Rollouts@{perform\+Rollouts}}
+\index{perform\+Rollouts@{perform\+Rollouts}!Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}}
+\paragraph[{perform\+Rollouts}]{\setlength{\rightskip}{0pt plus 5cm}virtual void perform\+Rollouts (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1TaskSolver_a36d1f440face2e087122666173020bb1}
+
+
+Perform rollouts, i.\+e. 
+
+given a set of samples, determine all the variables that are relevant to evaluating the cost function. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples} & The samples \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & The parameters of the task \\
+\hline
+\mbox{\tt out}  & {\em cost\+\_\+vars} & The variables relevant to computing the cost. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]Compare to other functions \end{DoxyRefDesc}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1TaskSolverDmp_a1bfa5f861b08d1073a5c4461aefd7e57}{Task\+Solver\+Dmp}.
+
+\hypertarget{classDmpBbo_1_1TaskSolver_af084bff2ddd6233e9a898faa23f6195c}{\index{Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1TaskSolver_af084bff2ddd6233e9a898faa23f6195c}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDemoTaskSolverApproximateQuadraticFunction_a1aca816b42cf0d36118be0ab91120d77}{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}, and \hyperlink{classDmpBbo_1_1TaskSolverDmp_a1aca816b42cf0d36118be0ab91120d77}{Task\+Solver\+Dmp}.
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskSolver_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1TaskSolver_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 79 of file Task\+Solver.\+hpp.
+
+\hypertarget{classDmpBbo_1_1TaskSolver_ad6beb451d2c9c8db4c7b035c43140ade}{\index{Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dmp\+Bbo\+::\+Task\+Solver@{Dmp\+Bbo\+::\+Task\+Solver}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Task\+Solver} \&}]{task\+\_\+solver}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1TaskSolver_ad6beb451d2c9c8db4c7b035c43140ade}
+
+
+Print a \hyperlink{classDmpBbo_1_1TaskSolver}{Task\+Solver} to an output stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em output} & Output stream to which to write to \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+solver} & \hyperlink{classDmpBbo_1_1TaskSolver}{Task\+Solver} to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Calls virtual function \hyperlink{classDmpBbo_1_1TaskSolver_af084bff2ddd6233e9a898faa23f6195c}{Task\+Solver\+::to\+String}, which must be implemented by subclasses\+: \href{http://stackoverflow.com/questions/4571611/virtual-operator}{\tt http\+://stackoverflow.\+com/questions/4571611/virtual-\/operator} 
+\end{DoxyRemark}
+
+
+Definition at line 72 of file Task\+Solver.\+hpp.
+
+
+\begin{DoxyCode}
+72                                                                                    \{
+73     output << task\_solver.toString();
+74     \textcolor{keywordflow}{return} output;
+75   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TaskSolver_8hpp}{Task\+Solver.\+hpp}\end{DoxyCompactItemize}

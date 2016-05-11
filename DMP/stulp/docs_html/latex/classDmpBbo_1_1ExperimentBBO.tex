@@ -1,0 +1,274 @@
+\hypertarget{classDmpBbo_1_1ExperimentBBO}{\subsection{Experiment\+B\+B\+O Class Reference}
+\label{classDmpBbo_1_1ExperimentBBO}\index{Experiment\+B\+B\+O@{Experiment\+B\+B\+O}}
+}
+
+
+P\+O\+D class to store all objects relevant to running and evolutionary optimization.  
+
+
+
+
+{\ttfamily \#include $<$Experiment\+B\+B\+O.\+hpp$>$}
+
+
+
+Collaboration diagram for Experiment\+B\+B\+O\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1ExperimentBBO__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1ExperimentBBO_a006c24e9940256c4cde3acfdafd16823}{Experiment\+B\+B\+O} (\hyperlink{classDmpBbo_1_1CostFunction}{Cost\+Function} $\ast$cost\+\_\+function\+\_\+arg, \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} $\ast$initial\+\_\+distribution\+\_\+arg, \hyperlink{classDmpBbo_1_1Updater}{Updater} $\ast$updater\+\_\+arg, int n\+\_\+updates\+\_\+arg, int n\+\_\+samples\+\_\+per\+\_\+update\+\_\+arg)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1ExperimentBBO_a43f05ceb258b4b6bc8cdf82b8eabfb15}{Experiment\+B\+B\+O} (\hyperlink{classDmpBbo_1_1Task}{Task} $\ast$task\+\_\+arg, \hyperlink{classDmpBbo_1_1TaskSolver}{Task\+Solver} $\ast$task\+\_\+solver\+\_\+arg, \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} $\ast$initial\+\_\+distribution\+\_\+arg, \hyperlink{classDmpBbo_1_1Updater}{Updater} $\ast$updater\+\_\+arg, int n\+\_\+updates\+\_\+arg, int n\+\_\+samples\+\_\+per\+\_\+update\+\_\+arg)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classDmpBbo_1_1ExperimentBBO_a68e832cb064e3b7ca978d8e5911cf700}{serialize} (Archive \&ar, const unsigned int version)
+\begin{DoxyCompactList}\small\item\em Serialize class data members to boost archive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{classDmpBbo_1_1CostFunction}{Cost\+Function} $\ast$ \hyperlink{classDmpBbo_1_1ExperimentBBO_aee83479842305376e5232158fd6b1383}{cost\+\_\+function}
+\begin{DoxyCompactList}\small\item\em Cost function to be used during evaluation. \end{DoxyCompactList}\item 
+const \hyperlink{classDmpBbo_1_1Task}{Task} $\ast$ \hyperlink{classDmpBbo_1_1ExperimentBBO_a2a8fc5ed3ca237057b7b9a4d572739a3}{task}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDmpBbo_1_1Task}{Task} to be used during evaluation. \end{DoxyCompactList}\item 
+const \hyperlink{classDmpBbo_1_1TaskSolver}{Task\+Solver} $\ast$ \hyperlink{classDmpBbo_1_1ExperimentBBO_a28912fe456a83b6f10f63c64ba4bfc66}{task\+\_\+solver}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDmpBbo_1_1Task}{Task} solver to be used for a rollout. \end{DoxyCompactList}\item 
+const \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} $\ast$const \hyperlink{classDmpBbo_1_1ExperimentBBO_afae4d001a436497a4c8b74a066ac054a}{initial\+\_\+distribution}
+\begin{DoxyCompactList}\small\item\em The initial parameter distribution for the search. \end{DoxyCompactList}\item 
+const \hyperlink{classDmpBbo_1_1Updater}{Updater} $\ast$ \hyperlink{classDmpBbo_1_1ExperimentBBO_aaab03971ba0e4eaf9466cc4e33290c96}{updater}
+\begin{DoxyCompactList}\small\item\em The updater used to update the parameters of the distribution. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1ExperimentBBO_a96b1f7903bf380880b1482b32cb9efd3}{n\+\_\+updates}
+\begin{DoxyCompactList}\small\item\em The number of updates to perform. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1ExperimentBBO_a4fb03395f917e6fa1917a01cc3c07e2a}{n\+\_\+samples\+\_\+per\+\_\+update}
+\begin{DoxyCompactList}\small\item\em The number of samples per update. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+P\+O\+D class to store all objects relevant to running and evolutionary optimization. 
+
+
+
+Definition at line 42 of file Experiment\+B\+B\+O.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1ExperimentBBO_a006c24e9940256c4cde3acfdafd16823}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!Experiment\+B\+B\+O@{Experiment\+B\+B\+O}}
+\index{Experiment\+B\+B\+O@{Experiment\+B\+B\+O}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{Experiment\+B\+B\+O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+B\+B\+O} (
+\begin{DoxyParamCaption}
+\item[{{\bf Cost\+Function} $\ast$}]{cost\+\_\+function\+\_\+arg, }
+\item[{{\bf Distribution\+Gaussian} $\ast$}]{initial\+\_\+distribution\+\_\+arg, }
+\item[{{\bf Updater} $\ast$}]{updater\+\_\+arg, }
+\item[{int}]{n\+\_\+updates\+\_\+arg, }
+\item[{int}]{n\+\_\+samples\+\_\+per\+\_\+update\+\_\+arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ExperimentBBO_a006c24e9940256c4cde3acfdafd16823}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cost\+\_\+function\+\_\+arg} & The cost function to optimize \\
+\hline
+\mbox{\tt in}  & {\em initial\+\_\+distribution\+\_\+arg} & The initial parameter distribution \\
+\hline
+\mbox{\tt in}  & {\em updater\+\_\+arg} & The \hyperlink{classDmpBbo_1_1Updater}{Updater} used to update the parameters \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+updates\+\_\+arg} & The number of updates to perform \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+samples\+\_\+per\+\_\+update\+\_\+arg} & The number of samples per update \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 53 of file Experiment\+B\+B\+O.\+hpp.
+
+
+\begin{DoxyCode}
+60   :
+61     \hyperlink{classDmpBbo_1_1ExperimentBBO_aee83479842305376e5232158fd6b1383}{cost\_function}(cost\_function\_arg),
+62     \hyperlink{classDmpBbo_1_1ExperimentBBO_a2a8fc5ed3ca237057b7b9a4d572739a3}{task}(NULL),
+63     \hyperlink{classDmpBbo_1_1ExperimentBBO_a28912fe456a83b6f10f63c64ba4bfc66}{task\_solver}(NULL),
+64     \hyperlink{classDmpBbo_1_1ExperimentBBO_afae4d001a436497a4c8b74a066ac054a}{initial\_distribution}(initial\_distribution\_arg),
+65     \hyperlink{classDmpBbo_1_1ExperimentBBO_aaab03971ba0e4eaf9466cc4e33290c96}{updater}(updater\_arg),
+66     \hyperlink{classDmpBbo_1_1ExperimentBBO_a96b1f7903bf380880b1482b32cb9efd3}{n\_updates}(n\_updates\_arg),
+67     \hyperlink{classDmpBbo_1_1ExperimentBBO_a4fb03395f917e6fa1917a01cc3c07e2a}{n\_samples\_per\_update}(n\_samples\_per\_update\_arg)
+68   \{\}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ExperimentBBO_a43f05ceb258b4b6bc8cdf82b8eabfb15}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!Experiment\+B\+B\+O@{Experiment\+B\+B\+O}}
+\index{Experiment\+B\+B\+O@{Experiment\+B\+B\+O}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{Experiment\+B\+B\+O}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Experiment\+B\+B\+O} (
+\begin{DoxyParamCaption}
+\item[{{\bf Task} $\ast$}]{task\+\_\+arg, }
+\item[{{\bf Task\+Solver} $\ast$}]{task\+\_\+solver\+\_\+arg, }
+\item[{{\bf Distribution\+Gaussian} $\ast$}]{initial\+\_\+distribution\+\_\+arg, }
+\item[{{\bf Updater} $\ast$}]{updater\+\_\+arg, }
+\item[{int}]{n\+\_\+updates\+\_\+arg, }
+\item[{int}]{n\+\_\+samples\+\_\+per\+\_\+update\+\_\+arg}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ExperimentBBO_a43f05ceb258b4b6bc8cdf82b8eabfb15}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em task\+\_\+arg} & The \hyperlink{classDmpBbo_1_1Task}{Task} to optimize \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+solver\+\_\+arg} & The \hyperlink{classDmpBbo_1_1TaskSolver}{Task\+Solver} that will solve the task \\
+\hline
+\mbox{\tt in}  & {\em initial\+\_\+distribution\+\_\+arg} & The initial parameter distribution \\
+\hline
+\mbox{\tt in}  & {\em updater\+\_\+arg} & The \hyperlink{classDmpBbo_1_1Updater}{Updater} used to update the parameters \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+updates\+\_\+arg} & The number of updates to perform \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+samples\+\_\+per\+\_\+update\+\_\+arg} & The number of samples per update \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Experiment\+B\+B\+O.\+hpp.
+
+
+\begin{DoxyCode}
+86   :
+87     \hyperlink{classDmpBbo_1_1ExperimentBBO_aee83479842305376e5232158fd6b1383}{cost\_function}(NULL),
+88     \hyperlink{classDmpBbo_1_1ExperimentBBO_a2a8fc5ed3ca237057b7b9a4d572739a3}{task}(task\_arg),
+89     \hyperlink{classDmpBbo_1_1ExperimentBBO_a28912fe456a83b6f10f63c64ba4bfc66}{task\_solver}(task\_solver\_arg),
+90     \hyperlink{classDmpBbo_1_1ExperimentBBO_afae4d001a436497a4c8b74a066ac054a}{initial\_distribution}(initial\_distribution\_arg),
+91     \hyperlink{classDmpBbo_1_1ExperimentBBO_aaab03971ba0e4eaf9466cc4e33290c96}{updater}(updater\_arg),
+92     \hyperlink{classDmpBbo_1_1ExperimentBBO_a96b1f7903bf380880b1482b32cb9efd3}{n\_updates}(n\_updates\_arg),
+93     \hyperlink{classDmpBbo_1_1ExperimentBBO_a4fb03395f917e6fa1917a01cc3c07e2a}{n\_samples\_per\_update}(n\_samples\_per\_update\_arg)
+94   \{\}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1ExperimentBBO_a68e832cb064e3b7ca978d8e5911cf700}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!serialize@{serialize}}
+\index{serialize@{serialize}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{serialize}]{\setlength{\rightskip}{0pt plus 5cm}void serialize (
+\begin{DoxyParamCaption}
+\item[{Archive \&}]{ar, }
+\item[{const unsigned int}]{version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ExperimentBBO_a68e832cb064e3b7ca978d8e5911cf700}
+
+
+Serialize class data members to boost archive. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ar} & Boost archive \\
+\hline
+\mbox{\tt in}  & {\em version} & Version of the class See \href{http://www.boost.org/doc/libs/1_55_0/libs/serialization/doc/tutorial.html#simplecase}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+55\+\_\+0/libs/serialization/doc/tutorial.\+html\#simplecase} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 129 of file Experiment\+B\+B\+O.\+hpp.
+
+
+\begin{DoxyCode}
+130   \{
+131     ar & BOOST\_SERIALIZATION\_NVP(\hyperlink{classDmpBbo_1_1ExperimentBBO_aee83479842305376e5232158fd6b1383}{cost\_function});
+132     ar & BOOST\_SERIALIZATION\_NVP(\hyperlink{classDmpBbo_1_1ExperimentBBO_a2a8fc5ed3ca237057b7b9a4d572739a3}{task});
+133     ar & BOOST\_SERIALIZATION\_NVP(\hyperlink{classDmpBbo_1_1ExperimentBBO_a28912fe456a83b6f10f63c64ba4bfc66}{task\_solver});
+134     ar & BOOST\_SERIALIZATION\_NVP(\hyperlink{classDmpBbo_1_1ExperimentBBO_afae4d001a436497a4c8b74a066ac054a}{initial\_distribution});
+135     ar & BOOST\_SERIALIZATION\_NVP(\hyperlink{classDmpBbo_1_1ExperimentBBO_aaab03971ba0e4eaf9466cc4e33290c96}{updater});
+136     ar & BOOST\_SERIALIZATION\_NVP(\hyperlink{classDmpBbo_1_1ExperimentBBO_a96b1f7903bf380880b1482b32cb9efd3}{n\_updates});
+137     ar & BOOST\_SERIALIZATION\_NVP(\hyperlink{classDmpBbo_1_1ExperimentBBO_a4fb03395f917e6fa1917a01cc3c07e2a}{n\_samples\_per\_update});
+138   \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Data Documentation}
+\hypertarget{classDmpBbo_1_1ExperimentBBO_aee83479842305376e5232158fd6b1383}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!cost\+\_\+function@{cost\+\_\+function}}
+\index{cost\+\_\+function@{cost\+\_\+function}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{cost\+\_\+function}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Cost\+Function}$\ast$ cost\+\_\+function}}\label{classDmpBbo_1_1ExperimentBBO_aee83479842305376e5232158fd6b1383}
+
+
+Cost function to be used during evaluation. 
+
+If it is N\+U\+L\+L, \hyperlink{classDmpBbo_1_1ExperimentBBO_a2a8fc5ed3ca237057b7b9a4d572739a3}{Experiment\+B\+B\+O\+::task} and \hyperlink{classDmpBbo_1_1ExperimentBBO_a28912fe456a83b6f10f63c64ba4bfc66}{Experiment\+B\+B\+O\+::task\+\_\+solver} must be set. 
+
+Definition at line 99 of file Experiment\+B\+B\+O.\+hpp.
+
+\hypertarget{classDmpBbo_1_1ExperimentBBO_a2a8fc5ed3ca237057b7b9a4d572739a3}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!task@{task}}
+\index{task@{task}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{task}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Task}$\ast$ task}}\label{classDmpBbo_1_1ExperimentBBO_a2a8fc5ed3ca237057b7b9a4d572739a3}
+
+
+\hyperlink{classDmpBbo_1_1Task}{Task} to be used during evaluation. 
+
+If it is N\+U\+L\+L, \hyperlink{classDmpBbo_1_1ExperimentBBO_aee83479842305376e5232158fd6b1383}{Experiment\+B\+B\+O\+::cost\+\_\+function} must be set. 
+
+Definition at line 104 of file Experiment\+B\+B\+O.\+hpp.
+
+\hypertarget{classDmpBbo_1_1ExperimentBBO_a28912fe456a83b6f10f63c64ba4bfc66}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!task\+\_\+solver@{task\+\_\+solver}}
+\index{task\+\_\+solver@{task\+\_\+solver}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{task\+\_\+solver}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Task\+Solver}$\ast$ task\+\_\+solver}}\label{classDmpBbo_1_1ExperimentBBO_a28912fe456a83b6f10f63c64ba4bfc66}
+
+
+\hyperlink{classDmpBbo_1_1Task}{Task} solver to be used for a rollout. 
+
+If it is N\+U\+L\+L, \hyperlink{classDmpBbo_1_1ExperimentBBO_aee83479842305376e5232158fd6b1383}{Experiment\+B\+B\+O\+::cost\+\_\+function} must be set. 
+
+Definition at line 109 of file Experiment\+B\+B\+O.\+hpp.
+
+\hypertarget{classDmpBbo_1_1ExperimentBBO_afae4d001a436497a4c8b74a066ac054a}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!initial\+\_\+distribution@{initial\+\_\+distribution}}
+\index{initial\+\_\+distribution@{initial\+\_\+distribution}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{initial\+\_\+distribution}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Distribution\+Gaussian}$\ast$ const initial\+\_\+distribution}}\label{classDmpBbo_1_1ExperimentBBO_afae4d001a436497a4c8b74a066ac054a}
+
+
+The initial parameter distribution for the search. 
+
+
+
+Definition at line 112 of file Experiment\+B\+B\+O.\+hpp.
+
+\hypertarget{classDmpBbo_1_1ExperimentBBO_aaab03971ba0e4eaf9466cc4e33290c96}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!updater@{updater}}
+\index{updater@{updater}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{updater}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Updater}$\ast$ updater}}\label{classDmpBbo_1_1ExperimentBBO_aaab03971ba0e4eaf9466cc4e33290c96}
+
+
+The updater used to update the parameters of the distribution. 
+
+
+
+Definition at line 115 of file Experiment\+B\+B\+O.\+hpp.
+
+\hypertarget{classDmpBbo_1_1ExperimentBBO_a96b1f7903bf380880b1482b32cb9efd3}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!n\+\_\+updates@{n\+\_\+updates}}
+\index{n\+\_\+updates@{n\+\_\+updates}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{n\+\_\+updates}]{\setlength{\rightskip}{0pt plus 5cm}int n\+\_\+updates}}\label{classDmpBbo_1_1ExperimentBBO_a96b1f7903bf380880b1482b32cb9efd3}
+
+
+The number of updates to perform. 
+
+
+
+Definition at line 118 of file Experiment\+B\+B\+O.\+hpp.
+
+\hypertarget{classDmpBbo_1_1ExperimentBBO_a4fb03395f917e6fa1917a01cc3c07e2a}{\index{Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}!n\+\_\+samples\+\_\+per\+\_\+update@{n\+\_\+samples\+\_\+per\+\_\+update}}
+\index{n\+\_\+samples\+\_\+per\+\_\+update@{n\+\_\+samples\+\_\+per\+\_\+update}!Dmp\+Bbo\+::\+Experiment\+B\+B\+O@{Dmp\+Bbo\+::\+Experiment\+B\+B\+O}}
+\paragraph[{n\+\_\+samples\+\_\+per\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}int n\+\_\+samples\+\_\+per\+\_\+update}}\label{classDmpBbo_1_1ExperimentBBO_a4fb03395f917e6fa1917a01cc3c07e2a}
+
+
+The number of samples per update. 
+
+
+
+Definition at line 121 of file Experiment\+B\+B\+O.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ExperimentBBO_8hpp}{Experiment\+B\+B\+O.\+hpp}\end{DoxyCompactItemize}

@@ -1,0 +1,374 @@
+\hypertarget{demoDmpContextual_8cpp}{\subsection{demo\+Dmp\+Contextual.\+cpp File Reference}
+\label{demoDmpContextual_8cpp}\index{demo\+Dmp\+Contextual.\+cpp@{demo\+Dmp\+Contextual.\+cpp}}
+}
+
+
+Demonstrates how to initialize, train and integrate a Contextual Dmp.  
+
+
+{\ttfamily \#include \char`\"{}dmp/\+Dmp\+Contextual.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Dmp\+Contextual\+One\+Step.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Dmp\+Contextual\+Two\+Step.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Trajectory.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Dynamical\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Exponential\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Sigmoid\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Time\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Spring\+Damper\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Model\+Parameters\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Eigen\+File\+I\+O.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$boost/filesystem.\+hpp$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+Include dependency graph for demo\+Dmp\+Contextual.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDmpContextual_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{demoDmpContextual_8cpp_aef690502da6114ccd6dab4538f21bee5}{get\+Demo\+Trajectories} (Vector\+Xd \&task\+\_\+parameters\+\_\+demos, vector$<$ \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} $>$ \&trajectories, string directory\+\_\+trajectories=\char`\"{}\char`\"{}, bool test=false)
+\begin{DoxyCompactList}\small\item\em Get a vector of demonstration trajectories. \end{DoxyCompactList}\item 
+int \hyperlink{demoDmpContextual_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{main} (int n\+\_\+args, char $\ast$$\ast$args)
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Demonstrates how to initialize, train and integrate a Contextual Dmp. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{demoDmpContextual_8cpp_source}{demo\+Dmp\+Contextual.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{demoDmpContextual_8cpp_aef690502da6114ccd6dab4538f21bee5}{\index{demo\+Dmp\+Contextual.\+cpp@{demo\+Dmp\+Contextual.\+cpp}!get\+Demo\+Trajectories@{get\+Demo\+Trajectories}}
+\index{get\+Demo\+Trajectories@{get\+Demo\+Trajectories}!demo\+Dmp\+Contextual.\+cpp@{demo\+Dmp\+Contextual.\+cpp}}
+\paragraph[{get\+Demo\+Trajectories}]{\setlength{\rightskip}{0pt plus 5cm}bool get\+Demo\+Trajectories (
+\begin{DoxyParamCaption}
+\item[{Vector\+Xd \&}]{task\+\_\+parameters\+\_\+demos, }
+\item[{vector$<$ {\bf Trajectory} $>$ \&}]{trajectories, }
+\item[{string}]{directory\+\_\+trajectories = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{test = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{demoDmpContextual_8cpp_aef690502da6114ccd6dab4538f21bee5}
+
+
+Get a vector of demonstration trajectories. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em task\+\_\+parameters\+\_\+demos} & Task parameters of the demonstrations \\
+\hline
+\mbox{\tt in}  & {\em trajectories} & A set of demonstration trajectories \\
+\hline
+\mbox{\tt in}  & {\em directory\+\_\+trajectories} & Directory from which to read trajectories (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if reading files was successful, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 209 of file demo\+Dmp\+Contextual.\+cpp.
+
+
+\begin{DoxyCode}
+211 \{
+212 
+213   \textcolor{keywordtype}{int} n\_dims;
+214   \textcolor{keywordtype}{int} n\_demos;
+215   \textcolor{keywordflow}{if} (directory\_trajectories.empty())
+216   \{
+217     \textcolor{keywordtype}{int} n\_time\_steps = 51;
+218     \textcolor{keywordtype}{int} n\_time\_steps\_repro = 71;
+219     n\_dims = 1;
+220     \textcolor{keywordflow}{if}(not test)
+221         n\_demos = 5;
+222     \textcolor{keywordflow}{else}
+223         n\_demos = 4;
+224     
+225     \textcolor{comment}{// Make some trajectories}
+226     VectorXd ts = VectorXd::LinSpaced(n\_time\_steps,0.0,0.5);
+227     VectorXd ts\_repro = VectorXd::LinSpaced(n\_time\_steps\_repro,0.0,0.7);
+228     
+229   
+230     VectorXd y\_first = VectorXd::Zero(n\_dims);
+231     VectorXd y\_last  = VectorXd::Ones(n\_dims);
+232     \textcolor{keywordtype}{double} viapoint\_time = 0.25;
+233   
+234     \textcolor{keywordflow}{if}(not test)
+235         task\_parameters\_demos = VectorXd::LinSpaced(n\_demos,0.2,0.8);
+236     \textcolor{keywordflow}{else}
+237         task\_parameters\_demos = VectorXd::LinSpaced(n\_demos,0.275,0.725);
+238         
+239     
+240     trajectories.resize(n\_demos);
+241     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_demo=0; i\_demo<n\_demos; i\_demo++)
+242     \{
+243       VectorXd task\_parameters = task\_parameters\_demos[i\_demo]*MatrixXd::Ones(1,n\_dims);
+244       
+245       VectorXd y\_yd\_ydd\_viapoint = VectorXd::Zero(3*n\_dims);
+246       y\_yd\_ydd\_viapoint.segment(0*n\_dims,n\_dims) = task\_parameters.row(0); \textcolor{comment}{// y        
+       y\_yd\_ydd\_viapoint.segment(1*n\_dims,n\_dims) = VectorXd::Constant(n\_dims,1.0); // yd   
+       y\_yd\_ydd\_viapoint.segment(2*n\_dims,n\_dims) = VectorXd::Constant(n\_dims,0.0); // ydd}
+247   
+248       trajectories[i\_demo] = Trajectory::generatePolynomialTrajectoryThroughViapoint(ts,y\_first,
+      y\_yd\_ydd\_viapoint,viapoint\_time,y\_last); 
+249       
+250       trajectories[i\_demo].set\_misc(task\_parameters\_demos.segment(i\_demo,1));
+251     \}
+252     
+253   \}
+254   \textcolor{keywordflow}{else}
+255   \{
+256     \textcolor{comment}{// Read some trajectories from a directory}
+257     \textcolor{keywordtype}{int} n\_dims\_misc = 1;
+258     n\_demos = 0;
+259     \textcolor{keywordtype}{bool} go\_on = \textcolor{keyword}{true};
+260     \textcolor{keywordflow}{while} (go\_on)
+261     \{
+262       stringstream stream;
+263       stream << directory\_trajectories << \textcolor{stringliteral}{"/"} << \textcolor{stringliteral}{"traj\_and\_task\_params\_"} << setfill(\textcolor{charliteral}{'0'}) << setw(3) << (
+      n\_demos+1) << \textcolor{stringliteral}{".txt"};
+264       \textcolor{keywordtype}{string} filename = stream.str();    
+265       
+266       \textcolor{keywordflow}{if} (boost::filesystem::exists(filename))
+267       \{
+268         \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} cur\_traj = Trajectory::readFromFile(stream.str(), n\_dims\_misc);
+269         \textcolor{comment}{//cout << cur\_traj << endl;}
+270         n\_dims = cur\_traj.\hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}();
+271         trajectories.push\_back(cur\_traj);
+272         n\_demos++;
+273       \}
+274       \textcolor{keywordflow}{else} 
+275       \{
+276         go\_on = \textcolor{keyword}{false};
+277       \}
+278     \}
+279     
+280     
+281     \textcolor{comment}{// Gather the task parameters}
+282     task\_parameters\_demos = VectorXd(n\_demos);
+283     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_demo=0; i\_demo<n\_demos; i\_demo++)
+284     \{
+285       task\_parameters\_demos[i\_demo] = trajectories[i\_demo].misc()(0,0);
+286     \}
+287 
+288   \}
+289   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+290 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDmpContextual_8cpp_aef690502da6114ccd6dab4538f21bee5_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{demoDmpContextual_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{\index{demo\+Dmp\+Contextual.\+cpp@{demo\+Dmp\+Contextual.\+cpp}!main@{main}}
+\index{main@{main}!demo\+Dmp\+Contextual.\+cpp@{demo\+Dmp\+Contextual.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+args, }
+\item[{char $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{demoDmpContextual_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}
+
+
+Main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+args} & Number of arguments \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments themselves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success of exection. 0 if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 70 of file demo\+Dmp\+Contextual.\+cpp.
+
+
+\begin{DoxyCode}
+71 \{
+72   \textcolor{keywordtype}{string} directory, directory\_trajectories;
+73   \textcolor{keywordtype}{bool} use\_two\_step = \textcolor{keyword}{false};
+74   \textcolor{keywordflow}{if} (n\_args>1)
+75     directory = string(args[1]);
+76   \textcolor{keywordflow}{if} (n\_args>2)
+77     \textcolor{comment}{// If second argument is "2", then use 2-step ContextualDmp instead of 1-step.}
+78     use\_two\_step = (string(args[2]).compare(\textcolor{stringliteral}{"2"})==0);
+79   \textcolor{keywordflow}{if} (n\_args>3)
+80     directory\_trajectories = string(args[3]);
+81   
+82   cout << \textcolor{stringliteral}{"Arguments:"} << directory << endl;
+83   cout << \textcolor{stringliteral}{"  directory="} << directory << endl;
+84   cout << \textcolor{stringliteral}{"  use\_two\_step="} << use\_two\_step << endl;
+85   \textcolor{keywordflow}{if} (!directory\_trajectories.empty())
+86     cout << \textcolor{stringliteral}{"  directory\_trajectories="} << directory\_trajectories << endl;
+87   
+88   
+89   vector<Trajectory> trajectories;
+90   vector<Trajectory> test\_trajectories;
+91   VectorXd task\_parameters\_demos;
+92   VectorXd task\_parameters\_test\_demos;
+93   
+94   \textcolor{comment}{// getDemoTrajectories(...) is implemented below main(...)}
+95   \hyperlink{demoDmpContextual_8cpp_aef690502da6114ccd6dab4538f21bee5}{getDemoTrajectories}(task\_parameters\_demos, trajectories, directory\_trajectories);
+96   \hyperlink{demoDmpContextual_8cpp_aef690502da6114ccd6dab4538f21bee5}{getDemoTrajectories}(task\_parameters\_test\_demos, test\_trajectories, 
+      directory\_trajectories, \textcolor{keyword}{true});
+97   
+98   \textcolor{keywordtype}{int} n\_demos = trajectories.size();
+99   \textcolor{keywordtype}{int} n\_tests = test\_trajectories.size();
+100   \textcolor{keywordtype}{int} n\_dims = trajectories[0].dim();
+101   \textcolor{comment}{// Get the number of task parameters}
+102   \textcolor{keywordtype}{int} n\_task\_parameters = trajectories[0].dim\_misc();
+103   \textcolor{comment}{// Determine time steps for reproduced movement    }
+104   \textcolor{comment}{// VectorXd ts = VectorXd::LinSpaced(n\_time\_steps,0.0,0.5);}
+105   \textcolor{comment}{// ts\_repro = VectorXd::LinSpaced(n\_time\_steps\_repro,0.0,0.7);}
+106   VectorXd ts\_repro = trajectories[0].ts();
+107 
+108   \textcolor{comment}{// Make some LWR function approximators}
+109   \textcolor{keywordtype}{int} n\_input\_dim = 1;
+110   \textcolor{keywordflow}{if} (!use\_two\_step)
+111     \textcolor{comment}{// The input dimensionality for a 2-step contextual Dmp is 1, i.e. only phase}
+112     \textcolor{comment}{// For a 1-step contextual dmp it is 1+n\_task\_parameters.}
+113     n\_input\_dim += n\_task\_parameters;
+114     
+115   VectorXi n\_bfs\_per\_dim = VectorXi::Constant(n\_input\_dim,3);
+116   n\_bfs\_per\_dim[0] = 50; \textcolor{comment}{// Need some more along time dimension;}
+117   
+118   \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}* meta\_parameters = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}(n\_input\_dim,
+      n\_bfs\_per\_dim);
+119   cout << \textcolor{stringliteral}{"MetaParameters of the function approximator:"} << endl;
+120   cout << \textcolor{stringliteral}{"   "} << *meta\_parameters << endl;
+121   vector<FunctionApproximator*> function\_approximators(n\_dims);    
+122   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<n\_dims; dd++)
+123     function\_approximators[dd] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}(meta\_parameters);
+124 
+125   
+126   \textcolor{comment}{// MAKE A CONTEXTUAL DMP}
+127   \hyperlink{classDmpBbo_1_1DmpContextual}{DmpContextual}* dmp;
+128   \textcolor{keywordflow}{if} (use\_two\_step)
+129   \{
+130     \textcolor{keywordtype}{int} n\_bfs\_per\_dim = 4;
+131     \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}* meta\_parameters\_ppf = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}(n\_task\_parameters,n\_bfs\_per\_dim);
+132     \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}* ppf = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}(meta\_parameters\_ppf);
+133     dmp = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1DmpContextualTwoStep}{DmpContextualTwoStep}(n\_dims, function\_approximators, ppf);
+134   \}
+135   \textcolor{keywordflow}{else}
+136   \{
+137     dmp = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1DmpContextualOneStep}{DmpContextualOneStep}(n\_dims, function\_approximators);
+138   \}
+139   
+140   \textcolor{comment}{// TRAIN A CONTEXTUAL DMP}
+141   cout << \textcolor{stringliteral}{"Train the Contextual Dmp"} << endl;
+142   \textcolor{keywordtype}{bool} overwrite = \textcolor{keyword}{true};
+143   dmp->\hyperlink{classDmpBbo_1_1DmpContextual_a08b158b7245e7fad5f187b4f2e3917d2}{train}(trajectories, directory, overwrite);
+144   
+145   \textcolor{comment}{// INTEGRATE THE CONTEXTUAL DMP FOR DIFFERENT TASK PARAMETERS}
+146   \textcolor{keywordtype}{int} n\_repros = 2*n\_demos-1;
+147   VectorXd task\_parameters\_repros = VectorXd::LinSpaced(n\_repros,task\_parameters\_demos.minCoeff(),
+      task\_parameters\_demos.maxCoeff()); 
+148   vector<Trajectory> trajs\_reproduced(n\_repros);
+149   
+150   \textcolor{comment}{// Integrate the DMP analytically }
+151   vector<MatrixXd> forcing\_terms(n\_repros);
+152   cout << \textcolor{stringliteral}{"Integrate the Contextual Dmp: "};
+153   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_repro=0; i\_repro<n\_repros; i\_repro++)
+154   \{
+155     cout << (i\_repro+1) << \textcolor{stringliteral}{"/"} << n\_repros << \textcolor{stringliteral}{"  "};
+156     VectorXd cur\_task\_parameters = task\_parameters\_repros[i\_repro]*MatrixXd::Ones(1,n\_task\_parameters);
+157     dmp->\hyperlink{classDmpBbo_1_1DmpContextual_a8b284cae90015038c405e257ffaed70e}{set\_task\_parameters}(cur\_task\_parameters);
+158     dmp->\hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(ts\_repro,trajs\_reproduced[i\_repro],forcing\_terms[i\_repro]);
+159   \}
+160   cout << endl;
+161   
+162   \textcolor{keyword}{delete} dmp;
+163 
+164   
+165   \textcolor{keywordflow}{if} (!directory.empty())
+166   \{
+167     \textcolor{keywordtype}{bool} overwrite = \textcolor{keyword}{true};
+168     
+169     saveMatrix(directory,\textcolor{stringliteral}{"task\_parameters\_demos.txt"},task\_parameters\_demos, overwrite);
+170     saveMatrix(directory,\textcolor{stringliteral}{"task\_parameters\_repros.txt"},task\_parameters\_repros, overwrite);
+171 
+172     cout << \textcolor{stringliteral}{"Saving demonstrated trajectories to "} << directory << endl;
+173     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_demo=0; i\_demo<n\_demos; i\_demo++)
+174     \{
+175       stringstream stream;
+176       stream << \textcolor{stringliteral}{"demonstration"} << setw(2) << setfill(\textcolor{charliteral}{'0'}) << i\_demo << \textcolor{stringliteral}{".txt"};
+177       trajectories[i\_demo].saveToFile(directory,stream.str(),overwrite);
+178     \}
+179     
+180     cout << \textcolor{stringliteral}{"Saving reproduced trajectories to "} << directory << endl;
+181     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_repro=0; i\_repro<n\_repros; i\_repro++)
+182     \{
+183       stringstream stream;
+184       stream << \textcolor{stringliteral}{"reproduced"} << setw(2) << setfill(\textcolor{charliteral}{'0'}) << i\_repro << \textcolor{stringliteral}{".txt"};
+185       trajs\_reproduced[i\_repro].saveToFile(directory,stream.str(),overwrite);
+186     \}
+187     
+188     cout << \textcolor{stringliteral}{"Saving test trajectories to "} << directory << endl;
+189     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_test=0; i\_test<n\_tests; i\_test++)
+190     \{
+191       stringstream stream;
+192       stream << \textcolor{stringliteral}{"test"} << setw(2) << setfill(\textcolor{charliteral}{'0'}) << i\_test << \textcolor{stringliteral}{".txt"};
+193       test\_trajectories[i\_test].saveToFile(directory,stream.str(),overwrite);
+194     \}
+195 
+196     cout << \textcolor{stringliteral}{"Saving forcing terms of reproduced trajectories to "} << directory << endl;
+197     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_repro=0; i\_repro<n\_repros; i\_repro++)
+198     \{
+199       stringstream stream;
+200       stream << \textcolor{stringliteral}{"reproduced\_forcingterm"} << setw(2) << setfill(\textcolor{charliteral}{'0'}) << i\_repro << \textcolor{stringliteral}{".txt"};
+201       saveMatrix(directory,stream.str(),forcing\_terms[i\_repro],overwrite);
+202     \}
+203   \}
+204 
+205   \textcolor{keywordflow}{return} 0;
+206 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDmpContextual_8cpp_a22577c6525b3f2fefecc0c741ba46a9a_cgraph}
+\end{center}
+\end{figure}
+
+

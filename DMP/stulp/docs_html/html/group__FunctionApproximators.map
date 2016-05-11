@@ -1,0 +1,9 @@
+<map id="Function Approximators" name="Function Approximators">
+<area shape="rect" id="node1" href="$group__Demos.html" title="Demos" alt="" coords="535,31,602,57"/>
+<area shape="rect" id="node2" href="$group__GMR.html" title="Gaussian Mixture Regression\l (GMR)" alt="" coords="465,107,672,149"/>
+<area shape="rect" id="node3" href="$group__GPR.html" title="Gaussian Process Regression\l (GPR)" alt="" coords="463,207,675,249"/>
+<area shape="rect" id="node5" href="$group__IRFRLS.html" title="Incremental Random\l Features Regularized\l Least Squares (iRFRLS)" alt="" coords="479,316,658,372"/>
+<area shape="rect" id="node6" href="$group__LWR.html" title="Locally Weighted Regression\l (LWR)" alt="" coords="465,438,672,479"/>
+<area shape="rect" id="node7" href="$group__RBFN.html" title="Radial Basis Function\l Network (RBFN)" alt="" coords="490,557,647,598"/>
+<area shape="rect" id="node8" href="$group__LWPR.html" title="Locally Weighted Projection\l Regression (LWPR)" alt="" coords="470,643,667,685"/>
+</map>

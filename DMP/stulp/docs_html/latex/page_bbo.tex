@@ -1,0 +1,115 @@
+This module implements several \href{http://en.wikipedia.org/wiki/Evolution_strategy}{\tt evolution strategies} for the \href{http://en.wikipedia.org/wiki/Optimization_%28mathematics%29}{\tt optimization} of black-\/box \href{http://en.wikipedia.org/wiki/Loss_function}{\tt cost functions}.
+
+Black-\/box in this context means that no assumptions about the cost function can be made, for example, we do not have access to its derivative, and we do not even know if it is continuous or not.
+
+The evolution strategies that are implemented are all based on reward-\/weighted averaging (aka probablity-\/weighted averaging), as explained in this paper/presentation\+: \href{http://icml.cc/discuss/2012/171.html}{\tt http\+://icml.\+cc/discuss/2012/171.\+html}
+
+The basic algorithm is as follows\+: 
+\begin{DoxyCode}
+x\_mu = ??; x\_Sigma = ?? \textcolor{comment}{// Initialize multi-variate Gaussian distribution}
+\textcolor{keywordflow}{while} (!halt\_condition) \{
+
+    \textcolor{comment}{// Explore}
+    \textcolor{keywordflow}{for} k=1:K \{
+        x[k]     ~ N(x\_mu,x\_Sigma)    \textcolor{comment}{// Sample from Gaussian}
+        costs[k] = costfunction(x[k]) \textcolor{comment}{// Evaluate sample}
+    \}
+        
+    \textcolor{comment}{// Update distribution}
+    weights = costs2weights(costs) \textcolor{comment}{// Should assign higher weights to lower costs}
+    x\_mu\_new = weights^T * x; \textcolor{comment}{// Compute weighted mean of samples}
+    x\_covar\_new = (weights .* x)^T * weights \textcolor{comment}{// Compute weighted covariance matrix of samples}
+    
+    x\_mu = x\_mu\_new
+    x\_covar = x\_covar\_new
+\}
+\end{DoxyCode}
+\hypertarget{page_bbo_sec_bbo_implementation}{}\subsection{Implementation}\label{page_bbo_sec_bbo_implementation}
+The algorithm above has been implemented as follows (see run\+Evolutionary\+Optimization() and \hyperlink{demoEvolutionaryOptimization_8cpp}{demo\+Evolutionary\+Optimization.\+cpp})\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} n\_dim = 2; \textcolor{comment}{// Optimize 2D problem}
+
+\textcolor{comment}{// This is the cost function to be optimized}
+CostFunction* cost\_function = \textcolor{keyword}{new} CostFunctionQuadratic(VectorXd::Zero(n\_dim));
+
+\textcolor{comment}{// This is the initial distribution}
+DistributionGaussian* distribution = \textcolor{keyword}{new} DistributionGaussian(VectorXd::Random(n\_dim),MatrixXd::Identity(
+      n\_dim)) 
+
+\textcolor{comment}{// This is the updater which will update the distribution}
+double eliteness = 10.0;
+Updater* updater = new UpdaterMean(eliteness);
+
+\textcolor{comment}{// Some variables}
+MatrixXd samples;
+VectorXd costs;
+
+for (\textcolor{keywordtype}{int} i\_update=1; i\_update<=n\_updates; i\_update++)
+\{
+  
+    \textcolor{comment}{// 1. Sample from distribution}
+    \textcolor{keywordtype}{int} n\_samples\_per\_update = 10;
+    distribution->generateSamples(n\_samples\_per\_update, samples);
+  
+    \textcolor{comment}{// 2. Evaluate the samples}
+    cost\_function->evaluate(samples,costs);
+  
+    \textcolor{comment}{// 3. Update parameters}
+    updater->updateDistribution(*distribution, samples, costs, *distribution);
+    
+\}
+\end{DoxyCode}
+\hypertarget{page_bbo_sec_bbo_task_and_task_solver}{}\subsubsection{Cost\+Function vs Task/\+Task\+Solver}\label{page_bbo_sec_bbo_task_and_task_solver}
+When the cost function has a simple structure, e.\+g. cost = $ x^2 $ it is convenient to implement the function $ x^2 $ in Cost\+Function\+::evaluate(). In robotics however, it is more suitable to make the distinction between a task (e.\+g. lift an object), and an entity that solves this task (e.\+g. your robot, my robot, a simulated robot, etc.). For these cases, the Cost\+Function is split into a Task and a Task\+Solver, as follows\+:
+
+
+\begin{DoxyCode}
+CostFunction::evaluate(samples,costs) \{
+  TaskSolver::performRollouts(samples,cost\_vars)
+  Task::evaluate(cost\_vars,costs)
+\}
+\end{DoxyCode}
+
+
+The idea here is that the Task\+Solver uses the samples to perform a rollout (e.\+g. the samples represent the parameters of a policy which is executed) and computes all the variables that are relevant to determining the cost (e.\+g. it records the forces at the robot's end-\/effector, if this is something that needs to be minimized)
+
+Some further advantages of this approach\+: \begin{DoxyItemize}
+\item Different robots can solve the exact same Task implementation of the same task. \item Robots do not need to know about the cost function to perform rollouts (and they shouldn't) \item The intermediate cost-\/relevant variables can be stored to file for visualization etc. \item The procedures for performing the roll-\/outs (on-\/line on a robot) and doing the evaluation/updating/sampling (off-\/line on a computer) can be seperated, because there is a separate Task\+Solver\+::perform\+Rollouts function.\end{DoxyItemize}
+When using the Task/\+Task\+Solver approach, the run\+Evolutionary\+Optimization process is as follows (only minor changes to the above)\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} n\_dim = 2; \textcolor{comment}{// Optimize 2D problem}
+
+\textcolor{comment}{// This is the cost function to be optimized}
+CostFunction* cost\_function = \textcolor{keyword}{new} CostFunctionQuadratic(VectorXd::Zero(n\_dim));
+
+\textcolor{comment}{// This is the initial distribution}
+DistributionGaussian* distribution = \textcolor{keyword}{new} DistributionGaussian(VectorXd::Random(n\_dim),MatrixXd::Identity(
+      n\_dim)) 
+
+\textcolor{comment}{// This is the updater which will update the distribution}
+double eliteness = 10.0;
+Updater* updater = new UpdaterMean(eliteness);
+
+\textcolor{comment}{// Some variables}
+MatrixXd samples;
+VectorXd costs;
+
+for (\textcolor{keywordtype}{int} i\_update=1; i\_update<=n\_updates; i\_update++)
+\{
+  
+    \textcolor{comment}{// 1. Sample from distribution}
+    \textcolor{keywordtype}{int} n\_samples\_per\_update = 10;
+    distribution->generateSamples(n\_samples\_per\_update, samples);
+  
+    \textcolor{comment}{// 2A. Perform the roll-outs}
+    task\_solver->performRollouts(samples,cost\_vars);
+  
+    \textcolor{comment}{// 2B. Evaluate the samples}
+    task->evaluate(cost\_vars,costs);
+  
+    \textcolor{comment}{// 3. Update parameters}
+    updater->updateDistribution(*distribution, samples, costs, *distribution);
+    
+\}
+\end{DoxyCode}
+ 

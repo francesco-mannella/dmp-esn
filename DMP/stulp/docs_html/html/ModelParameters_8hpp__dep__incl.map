@@ -1,0 +1,28 @@
+<map id="ModelParameters.hpp" name="ModelParameters.hpp">
+<area shape="rect" id="node2" href="$FunctionApproximator_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="98,80,283,107"/>
+<area shape="rect" id="node3" href="$ModelParameters_8cpp.html" title="ModelParameters class source file. " alt="" coords="308,80,468,107"/>
+<area shape="rect" id="node4" href="$ModelParametersGMR_8hpp.html" title="ModelParametersGMR class header file. " alt="" coords="492,80,687,107"/>
+<area shape="rect" id="node7" href="$ModelParametersGPR_8hpp.html" title="ModelParametersGPR class header file. " alt="" coords="711,80,902,107"/>
+<area shape="rect" id="node10" href="$ModelParametersIRFRLS_8hpp.html" title="ModelParametersIRFRLS class header file. " alt="" coords="932,80,1143,107"/>
+<area shape="rect" id="node13" href="$ModelParametersLWPR_8hpp.html" title="ModelParametersLWPR class header file. " alt="" coords="1425,80,1626,107"/>
+<area shape="rect" id="node16" href="$ModelParametersLWR_8hpp.html" title="ModelParametersLWR class header file. " alt="" coords="2469,80,2661,107"/>
+<area shape="rect" id="node25" href="$ModelParametersRBFN_8hpp.html" title="ModelParametersRBFN class header file. " alt="" coords="3538,80,3737,107"/>
+<area shape="rect" id="node5" href="$FunctionApproximatorGMR_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="5,162,224,189"/>
+<area shape="rect" id="node6" href="$ModelParametersGMR_8cpp.html" title="ModelParametersGMR class source file. " alt="" coords="249,162,442,189"/>
+<area shape="rect" id="node8" href="$FunctionApproximatorGPR_8cpp.html" title="FunctionApproximatorGPR class source file. " alt="" coords="466,162,681,189"/>
+<area shape="rect" id="node9" href="$ModelParametersGPR_8cpp.html" title="ModelParametersGPR class source file. " alt="" coords="705,162,895,189"/>
+<area shape="rect" id="node11" href="$FunctionApproximatorIRFRLS_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="920,162,1155,189"/>
+<area shape="rect" id="node12" href="$ModelParametersIRFRLS_8cpp.html" title="ModelParametersIRFRLS class source file. " alt="" coords="1179,162,1389,189"/>
+<area shape="rect" id="node14" href="$FunctionApproximatorLWPR_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="1413,162,1638,189"/>
+<area shape="rect" id="node15" href="$ModelParametersLWPR_8cpp.html" title="ModelParametersLWPR class source file. " alt="" coords="1661,162,1861,189"/>
+<area shape="rect" id="node17" href="$demoDmp_8cpp.html" title="Demonstrates how to initialize, train and integrate a Dmp. " alt="" coords="1885,162,1997,189"/>
+<area shape="rect" id="node18" href="$demoDmpContextual_8cpp.html" title="Demonstrates how to initialize, train and integrate a Contextual Dmp. " alt="" coords="2021,162,2200,189"/>
+<area shape="rect" id="node19" href="$demoDmpContextualGoal_8cpp_source.html" title="demoDmpContextualGoal.cpp" alt="" coords="2225,162,2434,189"/>
+<area shape="rect" id="node20" href="$demoDmpTrainFromTrajectoryFile_8cpp.html" title="demoDmpTrainFromTrajectory\lFile.cpp" alt="" coords="2458,155,2673,196"/>
+<area shape="rect" id="node21" href="$demoDmpBbo_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a Dmp. " alt="" coords="2697,162,2833,189"/>
+<area shape="rect" id="node22" href="$demoDmpBboMultiDim_8cpp.html" title="Demonstrates how to run multiple evolution strategies in parallel to optimize a Dmp. " alt="" coords="2857,162,3047,189"/>
+<area shape="rect" id="node23" href="$FunctionApproximatorLWR_8cpp.html" title="FunctionApproximatorLWR class source file. " alt="" coords="3071,162,3287,189"/>
+<area shape="rect" id="node24" href="$ModelParametersLWR_8cpp.html" title="ModelParametersLWR class source file. " alt="" coords="3311,162,3502,189"/>
+<area shape="rect" id="node26" href="$FunctionApproximatorRBFN_8cpp.html" title="FunctionApproximatorRBFN class source file. " alt="" coords="3526,162,3749,189"/>
+<area shape="rect" id="node27" href="$ModelParametersRBFN_8cpp.html" title="ModelParametersRBFN class source file. " alt="" coords="3773,162,3971,189"/>
+</map>

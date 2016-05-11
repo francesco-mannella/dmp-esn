@@ -1,0 +1,457 @@
+\hypertarget{classDmpBbo_1_1MetaParametersLWR}{\subsection{Meta\+Parameters\+L\+W\+R Class Reference}
+\label{classDmpBbo_1_1MetaParametersLWR}\index{Meta\+Parameters\+L\+W\+R@{Meta\+Parameters\+L\+W\+R}}
+}
+
+
+Meta-\/parameters for the Locally Weighted Regression (L\+W\+R) function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Meta\+Parameters\+L\+W\+R.\+hpp$>$}
+
+
+
+Inheritance diagram for Meta\+Parameters\+L\+W\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classDmpBbo_1_1MetaParametersLWR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Meta\+Parameters\+L\+W\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classDmpBbo_1_1MetaParametersLWR__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1MetaParametersLWR_ab75a1ee01157d2cc69a2a2335e344a2e}{Meta\+Parameters\+L\+W\+R} (int expected\+\_\+input\+\_\+dim, const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&centers\+\_\+per\+\_\+dim, double intersection\+\_\+height=0.\+5, bool \hyperlink{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}{asymmetric\+\_\+kernels}=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the algorithmic meta-\/parameters of the L\+W\+R function approximator. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1MetaParametersLWR_ac7dc1faef2a1b02d28b1a89c4aa2f50a}{Meta\+Parameters\+L\+W\+R} (int expected\+\_\+input\+\_\+dim, const Eigen\+::\+Vector\+Xi \&n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+dim, double intersection\+\_\+height=0.\+5, bool \hyperlink{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}{asymmetric\+\_\+kernels}=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the algorithmic meta-\/parameters of the L\+W\+R function approximator. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1MetaParametersLWR_ae1c43c06d41d4d4633c3da9ed7b7895f}{Meta\+Parameters\+L\+W\+R} (int expected\+\_\+input\+\_\+dim, int n\+\_\+basis\+\_\+functions=10, double intersection\+\_\+height=0.\+5, bool \hyperlink{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}{asymmetric\+\_\+kernels}=false)
+\begin{DoxyCompactList}\small\item\em Constructor for the algorithmic meta-\/parameters of the L\+W\+R function approximator. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1MetaParametersLWR_ab4dfc7a149e6637cb3e610ad827e3477}{get\+Centers\+And\+Widths} (const Eigen\+::\+Vector\+Xd \&min, const Eigen\+::\+Vector\+Xd \&max, Eigen\+::\+Matrix\+Xd \&centers, Eigen\+::\+Matrix\+Xd \&widths) const 
+\begin{DoxyCompactList}\small\item\em Get the centers and widths of the basis functions. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}{asymmetric\+\_\+kernels} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for asymmetric\+\_\+kernels. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1MetaParametersLWR}{Meta\+Parameters\+L\+W\+R} $\ast$ \hyperlink{classDmpBbo_1_1MetaParametersLWR_a4bdcb8bc45561f96baec20aa5fe4df13}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1MetaParameters}{Meta\+Parameters} object. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1MetaParametersLWR_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1MetaParametersLWR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Meta-\/parameters for the Locally Weighted Regression (L\+W\+R) function approximator. 
+
+Definition at line 39 of file Meta\+Parameters\+L\+W\+R.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersLWR_ab75a1ee01157d2cc69a2a2335e344a2e}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}!Meta\+Parameters\+L\+W\+R@{Meta\+Parameters\+L\+W\+R}}
+\index{Meta\+Parameters\+L\+W\+R@{Meta\+Parameters\+L\+W\+R}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}}
+\paragraph[{Meta\+Parameters\+L\+W\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Parameters\+L\+W\+R} (
+\begin{DoxyParamCaption}
+\item[{int}]{expected\+\_\+input\+\_\+dim, }
+\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{centers\+\_\+per\+\_\+dim, }
+\item[{double}]{intersection\+\_\+height = {\ttfamily 0.5}, }
+\item[{bool}]{asymmetric\+\_\+kernels = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1MetaParametersLWR_ab75a1ee01157d2cc69a2a2335e344a2e}
+
+
+Constructor for the algorithmic meta-\/parameters of the L\+W\+R function approximator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em expected\+\_\+input\+\_\+dim} & The dimensionality of the data this function approximator expects. Although this information is already contained in the 'centers\+\_\+per\+\_\+dim' argument, we ask the user to pass it explicitly so that various checks on the arguments may be conducted. \\
+\hline
+\mbox{\tt in}  & {\em centers\+\_\+per\+\_\+dim} & Centers of the basis functions, one Vector\+Xd for each dimension. \\
+\hline
+\mbox{\tt in}  & {\em intersection\+\_\+height} & The value at which two neighbouring basis functions will intersect. \\
+\hline
+\mbox{\tt in}  & {\em asymmetric\+\_\+kernels} & Whether to use asymmetric kernels or not (to be documented, default is false) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file Meta\+Parameters\+L\+W\+R.\+cpp.
+
+
+\begin{DoxyCode}
+53 :
+54   \hyperlink{classDmpBbo_1_1MetaParameters_ae73979b117d45e439547c42eb1b4fc7b}{MetaParameters}(expected\_input\_dim),
+55   n\_bfs\_per\_dim\_(VectorXi::Zero(0)),
+56   centers\_per\_dim\_(centers\_per\_dim),
+57   intersection\_height\_(intersection\_height),
+58   asymmetric\_kernels\_(\hyperlink{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}{asymmetric\_kernels})
+59 \{
+60   assert(expected\_input\_dim==(\textcolor{keywordtype}{int})centers\_per\_dim\_.size());
+61   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dd=0; dd<centers\_per\_dim\_.size(); dd++)
+62     assert(centers\_per\_dim\_[dd].size()>0);
+63   assert(intersection\_height\_>0 && intersection\_height\_<1);
+64 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1MetaParametersLWR_ac7dc1faef2a1b02d28b1a89c4aa2f50a}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}!Meta\+Parameters\+L\+W\+R@{Meta\+Parameters\+L\+W\+R}}
+\index{Meta\+Parameters\+L\+W\+R@{Meta\+Parameters\+L\+W\+R}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}}
+\paragraph[{Meta\+Parameters\+L\+W\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Parameters\+L\+W\+R} (
+\begin{DoxyParamCaption}
+\item[{int}]{expected\+\_\+input\+\_\+dim, }
+\item[{const Eigen\+::\+Vector\+Xi \&}]{n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+dim, }
+\item[{double}]{intersection\+\_\+height = {\ttfamily 0.5}, }
+\item[{bool}]{asymmetric\+\_\+kernels = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1MetaParametersLWR_ac7dc1faef2a1b02d28b1a89c4aa2f50a}
+
+
+Constructor for the algorithmic meta-\/parameters of the L\+W\+R function approximator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em expected\+\_\+input\+\_\+dim} & The dimensionality of the data this function approximator expects. Although this information is already contained in the 'centers' argument, we ask the user to pass it explicitly so that various checks on the arguments may be conducted. \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+basis\+\_\+functions\+\_\+per\+\_\+dim} & Number of basis functions \\
+\hline
+\mbox{\tt in}  & {\em intersection\+\_\+height} & The value at which two neighbouring basis functions will intersect. \\
+\hline
+\mbox{\tt in}  & {\em asymmetric\+\_\+kernels} & Whether to use asymmetric kernels or not (to be documented, default is false)\\
+\hline
+\end{DoxyParams}
+The centers and widths of the basis functions are determined from these parameters once the range of the input data is known, see also set\+Input\+Min\+Max() 
+
+Definition at line 66 of file Meta\+Parameters\+L\+W\+R.\+cpp.
+
+
+\begin{DoxyCode}
+67 :
+68   \hyperlink{classDmpBbo_1_1MetaParameters_ae73979b117d45e439547c42eb1b4fc7b}{MetaParameters}(expected\_input\_dim),
+69   n\_bfs\_per\_dim\_(n\_bfs\_per\_dim),
+70   centers\_per\_dim\_(std::vector<Eigen::VectorXd>(0)),
+71   intersection\_height\_(intersection\_height),
+72   asymmetric\_kernels\_(\hyperlink{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}{asymmetric\_kernels})
+73 \{
+74   assert(expected\_input\_dim==n\_bfs\_per\_dim\_.size());
+75   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<n\_bfs\_per\_dim\_.size(); dd++)
+76     assert(n\_bfs\_per\_dim\_[dd]>0);
+77   assert(intersection\_height\_>0 && intersection\_height\_<1);
+78 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1MetaParametersLWR_ae1c43c06d41d4d4633c3da9ed7b7895f}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}!Meta\+Parameters\+L\+W\+R@{Meta\+Parameters\+L\+W\+R}}
+\index{Meta\+Parameters\+L\+W\+R@{Meta\+Parameters\+L\+W\+R}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}}
+\paragraph[{Meta\+Parameters\+L\+W\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Parameters\+L\+W\+R} (
+\begin{DoxyParamCaption}
+\item[{int}]{expected\+\_\+input\+\_\+dim, }
+\item[{int}]{n\+\_\+basis\+\_\+functions = {\ttfamily 10}, }
+\item[{double}]{intersection\+\_\+height = {\ttfamily 0.5}, }
+\item[{bool}]{asymmetric\+\_\+kernels = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1MetaParametersLWR_ae1c43c06d41d4d4633c3da9ed7b7895f}
+
+
+Constructor for the algorithmic meta-\/parameters of the L\+W\+R function approximator. 
+
+This is for the special case when the dimensionality of the input data is 1. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em expected\+\_\+input\+\_\+dim} & The dimensionality of the data this function approximator expects. Since this constructor is for 1-\/\+D input data only, we simply check if this argument is equal to 1. \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+basis\+\_\+functions} & Number of basis functions for the one dimension \\
+\hline
+\mbox{\tt in}  & {\em intersection\+\_\+height} & The value at which two neighbouring basis functions will intersect. \\
+\hline
+\mbox{\tt in}  & {\em asymmetric\+\_\+kernels} & Whether to use asymmetric kernels or not (to be documented, default is false)\\
+\hline
+\end{DoxyParams}
+The centers and widths of the basis functions are determined from these parameters once the range of the input data is known, see also set\+Input\+Min\+Max() 
+
+Definition at line 80 of file Meta\+Parameters\+L\+W\+R.\+cpp.
+
+
+\begin{DoxyCode}
+81 :
+82   \hyperlink{classDmpBbo_1_1MetaParameters_ae73979b117d45e439547c42eb1b4fc7b}{MetaParameters}(expected\_input\_dim),
+83   n\_bfs\_per\_dim\_(VectorXi::Constant(1,n\_bfs)),
+84   centers\_per\_dim\_(std::vector<Eigen::VectorXd>(0)),
+85   intersection\_height\_(intersection\_height),
+86   asymmetric\_kernels\_(\hyperlink{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}{asymmetric\_kernels})
+87 \{
+88   assert(expected\_input\_dim==n\_bfs\_per\_dim\_.size());
+89   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<n\_bfs\_per\_dim\_.size(); dd++)
+90     assert(n\_bfs\_per\_dim\_[dd]>0);
+91   assert(intersection\_height\_>0 && intersection\_height\_<1);
+92 \};
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersLWR_ab4dfc7a149e6637cb3e610ad827e3477}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}!get\+Centers\+And\+Widths@{get\+Centers\+And\+Widths}}
+\index{get\+Centers\+And\+Widths@{get\+Centers\+And\+Widths}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}}
+\paragraph[{get\+Centers\+And\+Widths}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Centers\+And\+Widths (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{max, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{centers, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{widths}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1MetaParametersLWR_ab4dfc7a149e6637cb3e610ad827e3477}
+
+
+Get the centers and widths of the basis functions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em min} & Minimum values of input data (one value for each dimension). \\
+\hline
+\mbox{\tt in}  & {\em max} & Maximum values of input data (one value for each dimension). \\
+\hline
+\mbox{\tt out}  & {\em centers} & Centers of the basis functions (matrix of size n\+\_\+basis\+\_\+functions X n\+\_\+input\+\_\+dims \\
+\hline
+\mbox{\tt out}  & {\em widths} & Widths of the basis functions (matrix of size n\+\_\+basis\+\_\+functions X n\+\_\+input\+\_\+dims\\
+\hline
+\end{DoxyParams}
+The reason why there are not two functions get\+Centers and get\+Widths is that it is much easier to compute both at the same time, and usually you will need both at the same time anyway.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000011}{Todo}]Document this rather complex function \end{DoxyRefDesc}
+
+
+Definition at line 106 of file Meta\+Parameters\+L\+W\+R.\+cpp.
+
+
+\begin{DoxyCode}
+107 \{
+108   \textcolor{keywordtype}{int} n\_dims = \hyperlink{classDmpBbo_1_1MetaParameters_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}();
+109   assert(min.size()==n\_dims);
+110   assert(max.size()==n\_dims);
+111     
+112   vector<VectorXd> centers\_per\_dim\_local(n\_dims); 
+113   \textcolor{keywordflow}{if} (!centers\_per\_dim\_.empty())
+114   \{
+115     centers\_per\_dim\_local = centers\_per\_dim\_;
+116   \}
+117   \textcolor{keywordflow}{else}
+118   \{
+119     \textcolor{comment}{// Centers are not know yet, compute them based on min and max}
+120     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+121       centers\_per\_dim\_local[i\_dim] = VectorXd::LinSpaced(n\_bfs\_per\_dim\_[i\_dim],min[i\_dim],max[i\_dim]);
+122   \}
+123   
+124   \textcolor{comment}{// Determine the widths from the centers (separately for each dimension)}
+125   vector<VectorXd> widths\_per\_dim\_local(n\_dims); 
+126   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+127   \{
+128     VectorXd cur\_centers = centers\_per\_dim\_local[i\_dim]; \textcolor{comment}{// Abbreviation for convenience}
+129     \textcolor{keywordtype}{int} n\_centers = cur\_centers.size();
+130     VectorXd cur\_widths(n\_centers);
+131 
+132     \textcolor{keywordflow}{if} (n\_centers==1)
+133     \{
+134       cur\_widths[0] = 1.0;
+135     \}
+136     \textcolor{keywordflow}{else}
+137     \{
+138       \textcolor{comment}{// Consider two neighbouring basis functions, exp(-0.5(x-c0)^2/w^2) and exp(-0.5(x-c1)^2/w^2)}
+139       \textcolor{comment}{// Assuming the widths are the same for both, they are certain to intersect at x = 0.5(c0+c1)}
+140       \textcolor{comment}{// And we want the activation at x to be 'intersection'. So}
+141       \textcolor{comment}{//            y = exp(-0.5(x-c0)^2/w^2)}
+142       \textcolor{comment}{// intersection = exp(-0.5((0.5(c0+c1))-c0)^2/w^2)}
+143       \textcolor{comment}{// intersection = exp(-0.5((0.5*c1-0.5*c0)^2/w^2))}
+144       \textcolor{comment}{// intersection = exp(-0.5((0.5*(c1-c0))^2/w^2))}
+145       \textcolor{comment}{// intersection = exp(-0.5(0.25*(c1-c0)^2/w^2))}
+146       \textcolor{comment}{// intersection = exp(-0.125((c1-c0)^2/w^2))}
+147       \textcolor{comment}{//            w = sqrt((c1-c0)^2/-8*ln(intersection))}
+148       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} cc=0; cc<n\_centers-1; cc++)
+149       \{
+150         \textcolor{keywordtype}{double} w = sqrt(pow(cur\_centers[cc+1]-cur\_centers[cc],2)/(-8*log(intersection\_height\_)));
+151         cur\_widths[cc] = w;
+152       \}
+153       cur\_widths[n\_centers-1] = cur\_widths[n\_centers-2];
+154     \}
+155     widths\_per\_dim\_local[i\_dim] = cur\_widths;
+156   \}
+157 
+158   VectorXd digit\_max(n\_dims);
+159   \textcolor{keywordtype}{int} n\_centers = 1;
+160   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+161   \{
+162     n\_centers = n\_centers*centers\_per\_dim\_local[i\_dim].size();
+163     digit\_max[i\_dim] = centers\_per\_dim\_local[i\_dim].size();
+164   \}
+165   VectorXi digit = VectorXi::Zero(n\_dims);
+166   
+167   centers.resize(n\_centers,n\_dims);
+168   widths.resize(n\_centers,n\_dims);
+169   \textcolor{keywordtype}{int} i\_center=0;
+170 
+171   \textcolor{keywordflow}{while} (digit[0]<digit\_max(0))
+172   \{
+173     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+174     \{
+175       centers(i\_center,i\_dim) = centers\_per\_dim\_local[i\_dim][digit[i\_dim]];
+176       widths(i\_center,i\_dim) = widths\_per\_dim\_local[i\_dim][digit[i\_dim]];
+177     \}
+178     i\_center++;
+179   
+180     \textcolor{comment}{// Increment last digit by one}
+181     digit[n\_dims-1]++;
+182     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=n\_dims-1; i\_dim>0; i\_dim--)
+183     \{
+184       \textcolor{keywordflow}{if} (digit[i\_dim]>=digit\_max[i\_dim])
+185       \{
+186         digit[i\_dim] = 0;
+187         digit[i\_dim-1]++;
+188       \}
+189     \}
+190   \}
+191   
+192 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1MetaParametersLWR_ab4dfc7a149e6637cb3e610ad827e3477_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}!asymmetric\+\_\+kernels@{asymmetric\+\_\+kernels}}
+\index{asymmetric\+\_\+kernels@{asymmetric\+\_\+kernels}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}}
+\paragraph[{asymmetric\+\_\+kernels}]{\setlength{\rightskip}{0pt plus 5cm}bool asymmetric\+\_\+kernels (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1MetaParametersLWR_ac56e9aa7df627ac838cb4f9d6af5a525}
+
+
+Accessor function for asymmetric\+\_\+kernels. 
+
+\begin{DoxyReturn}{Returns}
+true if asymmetric kernels are used, false if symmetric kernels are used. 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000012}{Todo}]Document this. In the literature, only symmetric kernels are used. \end{DoxyRefDesc}
+
+
+Definition at line 91 of file Meta\+Parameters\+L\+W\+R.\+hpp.
+
+
+\begin{DoxyCode}
+92   \{
+93     \textcolor{keywordflow}{return} asymmetric\_kernels\_;
+94   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1MetaParametersLWR_a4bdcb8bc45561f96baec20aa5fe4df13}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Parameters\+L\+W\+R} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1MetaParametersLWR_a4bdcb8bc45561f96baec20aa5fe4df13}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1MetaParameters}{Meta\+Parameters} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1MetaParameters_a93ea31a71a0956a7031f060b2d439641}{Meta\+Parameters}.
+
+
+
+Definition at line 94 of file Meta\+Parameters\+L\+W\+R.\+cpp.
+
+
+\begin{DoxyCode}
+95 \{
+96   \hyperlink{classDmpBbo_1_1MetaParametersLWR_ab75a1ee01157d2cc69a2a2335e344a2e}{MetaParametersLWR}* cloned;
+97   \textcolor{keywordflow}{if} (centers\_per\_dim\_.size()>0)
+98     cloned =  \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1MetaParametersLWR_ab75a1ee01157d2cc69a2a2335e344a2e}{MetaParametersLWR}(\hyperlink{classDmpBbo_1_1MetaParameters_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}(),
+      centers\_per\_dim\_,intersection\_height\_,asymmetric\_kernels\_);
+99   \textcolor{keywordflow}{else}
+100     cloned =  \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1MetaParametersLWR_ab75a1ee01157d2cc69a2a2335e344a2e}{MetaParametersLWR}(\hyperlink{classDmpBbo_1_1MetaParameters_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}(),
+      n\_bfs\_per\_dim\_,intersection\_height\_,asymmetric\_kernels\_);
+101   
+102   \textcolor{keywordflow}{return} cloned;
+103 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classDmpBbo_1_1MetaParametersLWR_a4bdcb8bc45561f96baec20aa5fe4df13_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1MetaParametersLWR_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1MetaParametersLWR_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1MetaParameters_af084bff2ddd6233e9a898faa23f6195c}{Meta\+Parameters}.
+
+
+
+Definition at line 206 of file Meta\+Parameters\+L\+W\+R.\+cpp.
+
+
+\begin{DoxyCode}
+207 \{
+208   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"MetaParametersLWR"})
+      ;
+209 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersLWR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+R}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1MetaParametersLWR_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 112 of file Meta\+Parameters\+L\+W\+R.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MetaParametersLWR_8hpp}{Meta\+Parameters\+L\+W\+R.\+hpp}\item 
+\hyperlink{MetaParametersLWR_8cpp}{Meta\+Parameters\+L\+W\+R.\+cpp}\end{DoxyCompactItemize}

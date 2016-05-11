@@ -211,30 +211,22 @@ EQUALS	../build/src/Makefile	/^EQUALS = =$/;"	m
 HEX	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	363;"	d	file:
 HEX	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	356;"	d	file:
 ID_VOID_MAIN	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	9;"	d	file:
-NBF	../src/fixed_se_dmp.cpp	/^    VectorXi NBF = VectorXi::Constant(N_INPUT_DIM, 5);$/;"	l
-NBF	../src/fixed_se_dmp_lwpr.cpp	/^    VectorXd NBF = VectorXd::Constant(N_INPUT_DIM, 5);$/;"	l
-NBF	../src/parametric_se_dmp.cpp	/^    VectorXi NBF = VectorXi::Constant(N_INPUT_DIM, 5);$/;"	l
+NBF	../src/fixed_se_dmp.cpp	/^    VectorXi NBF = VectorXi::Constant(N_INPUT_DIM, 3);$/;"	l
+NBF	../src/fixed_se_dmp_lwpr.cpp	/^    VectorXd NBF = VectorXd::Constant(N_INPUT_DIM, 1000);$/;"	l
 N_DIMS	../src/fixed_se_dmp.cpp	/^        istr >> N_DIMS;$/;"	l
 N_DIMS	../src/fixed_se_dmp.cpp	/^    int N_DIMS = 1; \/\/ number of dimensions of the trajectory $/;"	l
 N_DIMS	../src/fixed_se_dmp_lwpr.cpp	/^        istr >> N_DIMS;$/;"	l
 N_DIMS	../src/fixed_se_dmp_lwpr.cpp	/^    int N_DIMS = 1; \/\/ number of dimensions of the trajectory $/;"	l
-N_DIMS	../src/parametric_se_dmp.cpp	/^        istr >> N_DIMS;$/;"	l
-N_DIMS	../src/parametric_se_dmp.cpp	/^    int N_DIMS = 1; \/\/ number of dimensions of the trajectory $/;"	l
 N_INPUT_DIM	../src/fixed_se_dmp.cpp	/^    int N_INPUT_DIM = 1; \/\/ number of expected dimensions of each $/;"	l
 N_INPUT_DIM	../src/fixed_se_dmp_lwpr.cpp	/^    int N_INPUT_DIM = 1; \/\/ number of expected dimensions of each $/;"	l
-N_INPUT_DIM	../src/parametric_se_dmp.cpp	/^    int N_INPUT_DIM = 1; \/\/ number of expected dimensions of each $/;"	l
 N_TASK_PARAMETERS	../src/fixed_se_dmp.cpp	/^        istr >> N_TASK_PARAMETERS;$/;"	l
 N_TASK_PARAMETERS	../src/fixed_se_dmp.cpp	/^    int N_TASK_PARAMETERS = 1; \/\/ number of task parameters$/;"	l
 N_TASK_PARAMETERS	../src/fixed_se_dmp_lwpr.cpp	/^        istr >> N_TASK_PARAMETERS;$/;"	l
 N_TASK_PARAMETERS	../src/fixed_se_dmp_lwpr.cpp	/^    int N_TASK_PARAMETERS = 1; \/\/ number of task parameters$/;"	l
-N_TASK_PARAMETERS	../src/parametric_se_dmp.cpp	/^        istr >> N_TASK_PARAMETERS;$/;"	l
-N_TASK_PARAMETERS	../src/parametric_se_dmp.cpp	/^    int N_TASK_PARAMETERS = 1; \/\/ number of task parameters$/;"	l
 N_TESTSET	../src/fixed_se_dmp.cpp	/^    int N_TESTSET = 0; \/\/ number of trajectories in the test set (to be read)$/;"	l
 N_TESTSET	../src/fixed_se_dmp_lwpr.cpp	/^    int N_TESTSET = 0; \/\/ number of trajectories in the test set (to be read)$/;"	l
-N_TESTSET	../src/parametric_se_dmp.cpp	/^    int N_TESTSET = 0; \/\/ number of trajectories in the test set (to be read)$/;"	l
 N_TRAINSET	../src/fixed_se_dmp.cpp	/^    int N_TRAINSET = 0; \/\/ number of trajectories in the training set (to be read)$/;"	l
 N_TRAINSET	../src/fixed_se_dmp_lwpr.cpp	/^    int N_TRAINSET = 0; \/\/ number of trajectories in the training set (to be read)$/;"	l
-N_TRAINSET	../src/parametric_se_dmp.cpp	/^    int N_TRAINSET = 0; \/\/ number of trajectories in the training set (to be read)$/;"	l
 PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	240;"	d	file:
 PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	243;"	d	file:
 PLATFORM_ID	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	246;"	d	file:
@@ -309,108 +301,143 @@ analyticalSolution	../src/fixed_se_dmp.cpp	/^        dmp->analyticalSolution($/;
 analyticalSolution	../src/fixed_se_dmp.cpp	/^        dmp->analyticalSolution($/;"	p	file:	signature:( trainset_trajectories[i_train].ts(), reproduced_trains[i_train], forcing_train_terms[i_train])
 analyticalSolution	../src/fixed_se_dmp_lwpr.cpp	/^        dmp->analyticalSolution($/;"	p	file:	signature:( testset_trajectories[i_test].ts(), reproduced_trajectories[i_test], forcing_terms[i_test])
 analyticalSolution	../src/fixed_se_dmp_lwpr.cpp	/^        dmp->analyticalSolution($/;"	p	file:	signature:( trainset_trajectories[i_train].ts(), reproduced_trains[i_train], forcing_train_terms[i_train])
-analyticalSolution	../src/parametric_se_dmp.cpp	/^         dmp->analyticalSolution($/;"	p	file:	signature:( testset_trajectories[0].ts(), reproduced_trajectories[N_TESTSET + i_test], forcing_terms[N_TESTSET + i_test])
-analyticalSolution	../src/parametric_se_dmp.cpp	/^         dmp->analyticalSolution($/;"	p	file:	signature:( testset_trajectories[i_test].ts(), reproduced_trajectories[i_test], forcing_terms[i_test])
-attractor	../src/parametric_se_dmp.cpp	/^         VectorXd attractor(N_DIMS);$/;"	p	file:	signature:(N_DIMS)
-ax	../bin/data/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
-ax	../bin/data/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
-ax	../bin/data/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/orig_data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^ax = fig.add_subplot(211, aspect="equal")$/;"	v
 ax	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^ax = fig.add_subplot(212, aspect="equal")$/;"	v
 ax	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
-ax	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
-ax	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
-ax	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
+ax	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^ax = fig.add_subplot(111, aspect="equal")$/;"	v
 ax	../bin/tr_datasets/stulp/data/plot.py	/^ax = fig.add_subplot(111, aspect='auto' )$/;"	v
 ax	../bin/tr_datasets/stulp/data/results/plot.py	/^ax = fig.add_subplot(111)$/;"	v
 ax	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^ax = fig.add_subplot(111)$/;"	v
 boost::filesystem::remove	../src/fixed_se_dmp.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
 boost::filesystem::remove	../src/fixed_se_dmp_lwpr.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
-boost::filesystem::remove	../src/parametric_se_dmp.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
-common_plot	../bin/data/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
 common_plot	../bin/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/orig_data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
 common_plot	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
-common_plot	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
 common_plot	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
+common_plot	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
 common_plot	../bin/tr_datasets/stulp/data/plot.py	/^def common_plot(ax, d, label, color, lw, zorder):$/;"	f	access:public
-coords	../bin/data/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
-coords	../bin/data/data/plot.py	/^coords = None$/;"	v
 coords	../bin/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
 coords	../bin/data/plot.py	/^coords = None$/;"	v
-coords	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
-coords	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^coords = None$/;"	v
+coords	../bin/orig_data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/orig_data/plot.py	/^coords = None$/;"	v
 coords	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
 coords	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^coords = None$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^coords = None$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^coords = None$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^coords = None$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^coords = None$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^coords = None$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^        coords = [ float(sys.argv[x]) for x in range(1,5) ]$/;"	v
+coords	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^coords = None$/;"	v
 dmp	../src/fixed_se_dmp.cpp	/^    DmpContextual* dmp = new DmpContextualOneStep($/;"	l
 dmp	../src/fixed_se_dmp_lwpr.cpp	/^    DmpContextual* dmp = new DmpContextualOneStep($/;"	l
-dmp	../src/parametric_se_dmp.cpp	/^    DmpContextual* dmp = new DmpContextualOneStep($/;"	l
 dr	../bin/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
 dr	../bin/scripts/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
 dr	../bin/tr_datasets/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
 dr	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
 dr	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
+dr	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
+dr	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
+dr	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
 dr	../bin/tr_datasets/stulp/calculate_error.py	/^    dr = np.loadtxt(r)$/;"	v
 dt	../bin/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
 dt	../bin/scripts/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
 dt	../bin/tr_datasets/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
 dt	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
 dt	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
+dt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
+dt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
+dt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
 dt	../bin/tr_datasets/stulp/calculate_error.py	/^    dt = np.loadtxt(t)$/;"	v
 e	../bin/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
 e	../bin/scripts/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
 e	../bin/tr_datasets/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
 e	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
 e	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
+e	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
+e	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
+e	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
 e	../bin/tr_datasets/stulp/calculate_error.py	/^e = (tle + tte)\/2.0$/;"	v
 end_itr	../src/fixed_se_dmp.cpp	/^    boost::filesystem::directory_iterator end_itr; $/;"	l
 end_itr	../src/fixed_se_dmp_lwpr.cpp	/^    boost::filesystem::directory_iterator end_itr; $/;"	l
-end_itr	../src/parametric_se_dmp.cpp	/^    boost::filesystem::directory_iterator end_itr; $/;"	l
 endl	../src/fixed_se_dmp.cpp	/^        cout << "Saving reproduced trajectories to " << results << endl;$/;"	l
 endl	../src/fixed_se_dmp.cpp	/^        cout << "Wrong number of parameters." << endl;$/;"	l
 endl	../src/fixed_se_dmp.cpp	/^        cout << endl;$/;"	l
 endl	../src/fixed_se_dmp_lwpr.cpp	/^        cout << "Saving reproduced trajectories to " << results << endl;$/;"	l
 endl	../src/fixed_se_dmp_lwpr.cpp	/^        cout << "Wrong number of parameters." << endl;$/;"	l
 endl	../src/fixed_se_dmp_lwpr.cpp	/^        cout << endl;$/;"	l
-endl	../src/parametric_se_dmp.cpp	/^            cout << i_test << endl;$/;"	l
-endl	../src/parametric_se_dmp.cpp	/^         cout << endl;$/;"	l
-endl	../src/parametric_se_dmp.cpp	/^        cout << "Saving reproduced trajectories to " << results << endl;$/;"	l
-endl	../src/parametric_se_dmp.cpp	/^        cout << "Wrong number of parameters." << endl;$/;"	l
-endl	../src/parametric_se_dmp.cpp	/^    cout << "    task parameters :=" << endl;$/;"	l
-endl	../src/parametric_se_dmp.cpp	/^    cout << "Integrate the Contextual Dmp: " << endl;$/;"	l
 exists	../src/fixed_se_dmp.cpp	/^    assert(boost::filesystem::exists(trajectories) && "there's no directory called 'data\/trajectories'");$/;"	p	file:	signature:(trajectories)
 exists	../src/fixed_se_dmp_lwpr.cpp	/^    assert(boost::filesystem::exists(trajectories) && "there's no directory called 'data\/trajectories'");$/;"	p	file:	signature:(trajectories)
-exists	../src/parametric_se_dmp.cpp	/^    assert(boost::filesystem::exists(trajectories) && "there's no directory called 'data\/trajectories'");$/;"	p	file:	signature:(trajectories)
-fig	../bin/data/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
-fig	../bin/data/data/results/plot.py	/^fig = plt.figure()$/;"	v
-fig	../bin/data/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
 fig	../bin/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
 fig	../bin/data/results/plot.py	/^fig = plt.figure()$/;"	v
 fig	../bin/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/orig_data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
 fig	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(14,5))$/;"	v
 fig	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^fig = plt.figure()$/;"	v
 fig	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
-fig	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
-fig	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^fig = plt.figure()$/;"	v
-fig	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
 fig	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
 fig	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^fig = plt.figure()$/;"	v
 fig	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(8,8))$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^fig = plt.figure()$/;"	v
+fig	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^fig = plt.figure()$/;"	v
 fig	../bin/tr_datasets/stulp/data/plot.py	/^fig = plt.figure("DMP Stulp", figsize=(10,4))$/;"	v
 fig	../bin/tr_datasets/stulp/data/results/plot.py	/^fig = plt.figure()$/;"	v
 fig	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^fig = plt.figure()$/;"	v
 filename	../src/fixed_se_dmp.cpp	/^        auto filename = i->path().filename().string();$/;"	l
 filename	../src/fixed_se_dmp_lwpr.cpp	/^        auto filename = i->path().filename().string();$/;"	l
-filename	../src/parametric_se_dmp.cpp	/^        auto filename = i->path().filename().string();$/;"	l
 filepath	../src/fixed_se_dmp.cpp	/^        auto filepath = i->path().string();$/;"	l
 filepath	../src/fixed_se_dmp_lwpr.cpp	/^        auto filepath = i->path().string();$/;"	l
-filepath	../src/parametric_se_dmp.cpp	/^        auto filepath = i->path().string();$/;"	l
 forcing_terms	../src/fixed_se_dmp.cpp	/^    vector<MatrixXd> forcing_terms(N_TESTSET);$/;"	p	file:	signature:(N_TESTSET)
 forcing_terms	../src/fixed_se_dmp_lwpr.cpp	/^    vector<MatrixXd> forcing_terms(N_TESTSET);$/;"	p	file:	signature:(N_TESTSET)
 forcing_train_terms	../src/fixed_se_dmp.cpp	/^    vector<MatrixXd> forcing_train_terms(N_TRAINSET);$/;"	p	file:	signature:(N_TRAINSET)
@@ -420,39 +447,60 @@ frtl	../bin/scripts/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    #
 frtl	../bin/tr_datasets/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
 frtl	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
 frtl	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
+frtl	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
+frtl	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
+frtl	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
 frtl	../bin/tr_datasets/stulp/calculate_error.py	/^frtl = glob.glob(results+"\/rtl*")    # training reproduced$/;"	v
 frtt	../bin/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
 frtt	../bin/scripts/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
 frtt	../bin/tr_datasets/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
 frtt	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
 frtt	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
+frtt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
+frtt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
+frtt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
 frtt	../bin/tr_datasets/stulp/calculate_error.py	/^frtt = glob.glob(results+"\/rtt*")    # test reproduced$/;"	v
 ftl	../bin/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
 ftl	../bin/scripts/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
 ftl	../bin/tr_datasets/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
 ftl	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
 ftl	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
+ftl	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
+ftl	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
+ftl	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
 ftl	../bin/tr_datasets/stulp/calculate_error.py	/^ftl = glob.glob(theoric+"\/tl*")    # training desired$/;"	v
 ftt	../bin/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
 ftt	../bin/scripts/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
 ftt	../bin/tr_datasets/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
 ftt	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
 ftt	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
+ftt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
+ftt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
+ftt	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
 ftt	../bin/tr_datasets/stulp/calculate_error.py	/^ftt = glob.glob(theoric+"\/tt*")    # test desired$/;"	v
 function_approximators	../src/fixed_se_dmp.cpp	/^    vector<FunctionApproximator*> function_approximators(N_DIMS);    $/;"	p	file:	signature:(N_DIMS)
 function_approximators	../src/fixed_se_dmp_lwpr.cpp	/^    vector<FunctionApproximator*> function_approximators(N_DIMS);    $/;"	p	file:	signature:(N_DIMS)
-function_approximators	../src/parametric_se_dmp.cpp	/^    vector<FunctionApproximator*> function_approximators(N_DIMS);    $/;"	p	file:	signature:(N_DIMS)
-get_trajectories	../bin/data/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
 get_trajectories	../bin/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/orig_data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
 get_trajectories	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
-get_trajectories	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
 get_trajectories	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
+get_trajectories	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
 get_trajectories	../bin/tr_datasets/stulp/data/plot.py	/^def get_trajectories(pattern):$/;"	f	access:public
-idcs	../bin/data/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
 idcs	../bin/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/orig_data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
 idcs	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
-idcs	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
 idcs	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^idcs = np.arange(len(trains))$/;"	v
+idcs	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^idcs = np.arange(len(trains))$/;"	v
 idcs	../bin/tr_datasets/stulp/data/plot.py	/^idcs = np.arange(len(trains))$/;"	v
 info_arch	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
 info_arch	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* info_arch = "INFO" ":" "arch[" ARCHITECTURE_ID "]";$/;"	v
@@ -468,45 +516,54 @@ info_version	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char con
 info_version	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const info_version[] = {$/;"	v
 istr	../src/fixed_se_dmp.cpp	/^        istringstream istr( argv[1] );$/;"	p	file:	signature:( argv[1] )
 istr	../src/fixed_se_dmp_lwpr.cpp	/^        istringstream istr( argv[1] );$/;"	p	file:	signature:( argv[1] )
-istr	../src/parametric_se_dmp.cpp	/^        istringstream istr( argv[1] );$/;"	p	file:	signature:( argv[1] )
-lall	../bin/data/data/plot.py	/^lall = []$/;"	v
 lall	../bin/data/plot.py	/^lall = []$/;"	v
-lall	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^lall = []$/;"	v
+lall	../bin/orig_data/plot.py	/^lall = []$/;"	v
 lall	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^lall = []$/;"	v
+lall	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^lall = []$/;"	v
+lall	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^lall = []$/;"	v
+lall	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^lall = []$/;"	v
+lall	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^lall = []$/;"	v
+lall	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^lall = []$/;"	v
+lall	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^lall = []$/;"	v
 lall	../bin/tr_datasets/stulp/data/plot.py	/^lall = []$/;"	v
 lalltest	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^lalltest = []$/;"	v
 lalltrain	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^lalltrain = []$/;"	v
 log	../src/fixed_se_dmp.cpp	/^    string log = "\/tmp";$/;"	l
 log	../src/fixed_se_dmp_lwpr.cpp	/^    string log = "\/tmp";$/;"	l
-log	../src/parametric_se_dmp.cpp	/^    string log = "\/tmp";$/;"	l
-ltest	../bin/data/data/plot.py	/^ltest = None$/;"	v
 ltest	../bin/data/plot.py	/^ltest = None$/;"	v
+ltest	../bin/orig_data/plot.py	/^ltest = None$/;"	v
 ltest	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^ltest = None$/;"	v
-ltest	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^ltest = None$/;"	v
 ltest	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^ltest = None$/;"	v
+ltest	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^ltest = None$/;"	v
 ltest	../bin/tr_datasets/stulp/data/plot.py	/^ltest = None$/;"	v
-ltrain	../bin/data/data/plot.py	/^ltrain = None$/;"	v
 ltrain	../bin/data/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/orig_data/plot.py	/^ltrain = None$/;"	v
 ltrain	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^ltrain = None$/;"	v
-ltrain	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^ltrain = None$/;"	v
 ltrain	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^ltrain = None$/;"	v
+ltrain	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^ltrain = None$/;"	v
 ltrain	../bin/tr_datasets/stulp/data/plot.py	/^ltrain = None$/;"	v
 main	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
 main	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^void main() {}$/;"	f
 main	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^int main(int argc, char* argv[])$/;"	f	signature:(int argc, char* argv[])
 main	../src/fixed_se_dmp.cpp	/^int main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
 main	../src/fixed_se_dmp_lwpr.cpp	/^int main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
-main	../src/parametric_se_dmp.cpp	/^int main(int argc, char **argv)$/;"	f	signature:(int argc, char **argv)
 meta_parameters	../src/fixed_se_dmp.cpp	/^    MetaParametersLWR meta_parameters(N_INPUT_DIM, NBF);$/;"	p	file:	signature:(N_INPUT_DIM, NBF)
 meta_parameters	../src/fixed_se_dmp_lwpr.cpp	/^    MetaParametersLWPR meta_parameters(N_INPUT_DIM, NBF);$/;"	p	file:	signature:(N_INPUT_DIM, NBF)
-meta_parameters	../src/parametric_se_dmp.cpp	/^    MetaParametersLWR meta_parameters(N_INPUT_DIM, NBF);$/;"	p	file:	signature:(N_INPUT_DIM, NBF)
 n_dim	../bin/calculate_error.py	/^n_dim = 2$/;"	v
-n_dim	../bin/data/data/plot.py	/^n_dim = None$/;"	v
-n_dim	../bin/data/data/results/plot.py	/^n_dim = None$/;"	v
-n_dim	../bin/data/data/trajectories/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/data/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/data/results/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/orig_data/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/scripts/calculate_error.py	/^n_dim = 2$/;"	v
 n_dim	../bin/tr_datasets/calculate_error.py	/^n_dim = 2$/;"	v
 n_dim	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^n_dim = 2$/;"	v
@@ -514,12 +571,30 @@ n_dim	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^n_dim = 2$/;"	v
-n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^n_dim = None$/;"	v
-n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^n_dim = None$/;"	v
-n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^n_dim = 2$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^n_dim = 2$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^n_dim = 2$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^n_dim = None$/;"	v
+n_dim	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^n_dim = None$/;"	v
 n_dim	../bin/tr_datasets/stulp/calculate_error.py	/^n_dim = 1$/;"	v
 n_dim	../bin/tr_datasets/stulp/data/plot.py	/^n_dim = None$/;"	v
 nrmse	../bin/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
@@ -527,20 +602,19 @@ nrmse	../bin/scripts/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
 nrmse	../bin/tr_datasets/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
 nrmse	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
 nrmse	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
+nrmse	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
+nrmse	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
+nrmse	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
 nrmse	../bin/tr_datasets/stulp/calculate_error.py	/^def nrmse(y, d):$/;"	f	access:public
 overwrite	../src/fixed_se_dmp.cpp	/^        bool overwrite = true;$/;"	l
 overwrite	../src/fixed_se_dmp.cpp	/^    bool overwrite = true; \/\/ if we can overvrite files in the results $/;"	l
 overwrite	../src/fixed_se_dmp_lwpr.cpp	/^        bool overwrite = true;$/;"	l
 overwrite	../src/fixed_se_dmp_lwpr.cpp	/^    bool overwrite = true; \/\/ if we can overvrite files in the results $/;"	l
-overwrite	../src/parametric_se_dmp.cpp	/^        bool overwrite = true;$/;"	l
-overwrite	../src/parametric_se_dmp.cpp	/^    bool overwrite = true; \/\/ if we can overvrite files in the results $/;"	l
 pathname	../bin/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
-pathname	../bin/data/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
-pathname	../bin/data/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
-pathname	../bin/data/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/orig_data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/scripts/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
@@ -548,21 +622,44 @@ pathname	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^pathname = os.path.d
 pathname	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
-pathname	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
-pathname	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
-pathname	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
+pathname	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/stulp/calculate_error.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/stulp/data/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/stulp/data/results/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
 pathname	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^pathname = os.path.dirname(sys.argv[0])$/;"	v
-plot_trajectories	../bin/data/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
 plot_trajectories	../bin/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/orig_data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
 plot_trajectories	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
-plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
 plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
+plot_trajectories	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^def plot_trajectories(ax, ttype, lall, **kargs):$/;"	f	access:public
 plot_trajectories	../bin/tr_datasets/stulp/data/plot.py	/^def plot_trajectories(ax, ttype, **kargs):$/;"	f	access:public
 push_back	../src/fixed_se_dmp.cpp	/^            test_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
 push_back	../src/fixed_se_dmp.cpp	/^            train_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
@@ -572,26 +669,31 @@ push_back	../src/fixed_se_dmp_lwpr.cpp	/^            test_files.push_back(filepa
 push_back	../src/fixed_se_dmp_lwpr.cpp	/^            train_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
 push_back	../src/fixed_se_dmp_lwpr.cpp	/^        testset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
 push_back	../src/fixed_se_dmp_lwpr.cpp	/^        trainset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
-push_back	../src/parametric_se_dmp.cpp	/^            test_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
-push_back	../src/parametric_se_dmp.cpp	/^            train_files.push_back(filepath);$/;"	p	file:	signature:(filepath)
-push_back	../src/parametric_se_dmp.cpp	/^        testset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
-push_back	../src/parametric_se_dmp.cpp	/^        trainset_trajectories.push_back(trj);$/;"	p	file:	signature:(trj)
 qnxnto	../build/CMakeFiles/3.0.2/CompilerIdC/CMakeCCompilerId.c	/^char const* qnxnto = "INFO" ":" "qnxnto";$/;"	v
 qnxnto	../build/CMakeFiles/3.0.2/CompilerIdCXX/CMakeCXXCompilerId.cpp	/^char const* qnxnto = "INFO" ":" "qnxnto";$/;"	v
 remove	../src/fixed_se_dmp.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
 remove	../src/fixed_se_dmp_lwpr.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
-remove	../src/parametric_se_dmp.cpp	/^            boost::filesystem::remove(filepath);$/;"	p	class:boost::filesystem	file:	signature:(filepath)
-repr_test	../bin/data/data/plot.py	/^repr_test = {    $/;"	v
 repr_test	../bin/data/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/orig_data/plot.py	/^repr_test = {    $/;"	v
 repr_test	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^repr_test = {    $/;"	v
-repr_test	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^repr_test = {    $/;"	v
 repr_test	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^repr_test = {    $/;"	v
+repr_test	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^repr_test = {    $/;"	v
 repr_test	../bin/tr_datasets/stulp/data/plot.py	/^repr_test = {    $/;"	v
-repr_train	../bin/data/data/plot.py	/^repr_train = {    $/;"	v
 repr_train	../bin/data/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/orig_data/plot.py	/^repr_train = {    $/;"	v
 repr_train	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^repr_train = {    $/;"	v
-repr_train	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^repr_train = {    $/;"	v
 repr_train	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^repr_train = {    $/;"	v
+repr_train	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^repr_train = {    $/;"	v
 repr_train	../bin/tr_datasets/stulp/data/plot.py	/^repr_train = {    $/;"	v
 reproduced_trains	../src/fixed_se_dmp.cpp	/^    vector<Trajectory> reproduced_trains(N_TRAINSET);$/;"	p	file:	signature:(N_TRAINSET)
 reproduced_trains	../src/fixed_se_dmp_lwpr.cpp	/^    vector<Trajectory> reproduced_trains(N_TRAINSET);$/;"	p	file:	signature:(N_TRAINSET)
@@ -604,10 +706,12 @@ results	../bin/scripts/calculate_error.py	/^results = 'data\/results' $/;"	v
 results	../bin/tr_datasets/calculate_error.py	/^results = 'data\/results' $/;"	v
 results	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^results = 'data\/results' $/;"	v
 results	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^results = 'data\/results' $/;"	v
+results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^results = 'data\/results' $/;"	v
+results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^results = 'data\/results' $/;"	v
+results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^results = 'data\/results' $/;"	v
 results	../bin/tr_datasets/stulp/calculate_error.py	/^results = 'data\/results' $/;"	v
 results	../src/fixed_se_dmp.cpp	/^    string results = "data\/results";$/;"	l
 results	../src/fixed_se_dmp_lwpr.cpp	/^    string results = "data\/results";$/;"	l
-results	../src/parametric_se_dmp.cpp	/^    string results = "data\/results";$/;"	l
 rtldata	../bin/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
 rtldata	../bin/calculate_error.py	/^rtldata =[]$/;"	v
 rtldata	../bin/scripts/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
@@ -618,6 +722,12 @@ rtldata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^rtldata = np.vs
 rtldata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^rtldata =[]$/;"	v
 rtldata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
 rtldata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^rtldata =[]$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^rtldata =[]$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^rtldata =[]$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
+rtldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^rtldata =[]$/;"	v
 rtldata	../bin/tr_datasets/stulp/calculate_error.py	/^rtldata = np.vstack(rtldata)$/;"	v
 rtldata	../bin/tr_datasets/stulp/calculate_error.py	/^rtldata =[]$/;"	v
 rttdata	../bin/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
@@ -630,14 +740,20 @@ rttdata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^rttdata = np.vs
 rttdata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^rttdata =[]$/;"	v
 rttdata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
 rttdata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^rttdata =[]$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^rttdata =[]$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^rttdata =[]$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
+rttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^rttdata =[]$/;"	v
 rttdata	../bin/tr_datasets/stulp/calculate_error.py	/^rttdata = np.vstack(rttdata)$/;"	v
 rttdata	../bin/tr_datasets/stulp/calculate_error.py	/^rttdata =[]$/;"	v
 saveToFile	../src/fixed_se_dmp.cpp	/^            reproduced_trains[i_train].saveToFile(results,stream.str(),overwrite);$/;"	p	file:	signature:(results,stream.str(),overwrite)
 saveToFile	../src/fixed_se_dmp.cpp	/^            reproduced_trajectories[i_test].saveToFile(results,stream.str(),overwrite);$/;"	p	file:	signature:(results,stream.str(),overwrite)
 saveToFile	../src/fixed_se_dmp_lwpr.cpp	/^            reproduced_trains[i_train].saveToFile(results,stream.str(),overwrite);$/;"	p	file:	signature:(results,stream.str(),overwrite)
 saveToFile	../src/fixed_se_dmp_lwpr.cpp	/^            reproduced_trajectories[i_test].saveToFile(results,stream.str(),overwrite);$/;"	p	file:	signature:(results,stream.str(),overwrite)
-saveToFile	../src/parametric_se_dmp.cpp	/^            reproduced_trajectories[i_test].saveToFile(results, stream.str(),overwrite);$/;"	p	file:	signature:(results, stream.str(),overwrite)
-set_attractor_state	../src/parametric_se_dmp.cpp	/^         dmp->set_attractor_state(attractor);$/;"	p	file:	signature:(attractor)
+set_attractor_state	../src/fixed_se_dmp.cpp	/^        dmp->set_attractor_state(testset_trajectories[i_test].final_y());$/;"	p	file:	signature:(testset_trajectories[i_test].final_y())
+set_attractor_state	../src/fixed_se_dmp.cpp	/^        dmp->set_attractor_state(trainset_trajectories[i_train].final_y());$/;"	p	file:	signature:(trainset_trajectories[i_train].final_y())
 set_initial_state	../src/fixed_se_dmp.cpp	/^        dmp->set_initial_state(testset_trajectories[i_test].initial_y());$/;"	p	file:	signature:(testset_trajectories[i_test].initial_y())
 set_initial_state	../src/fixed_se_dmp.cpp	/^        dmp->set_initial_state(trainset_trajectories[i_train].initial_y());$/;"	p	file:	signature:(trainset_trajectories[i_train].initial_y())
 set_initial_state	../src/fixed_se_dmp_lwpr.cpp	/^        dmp->set_initial_state(testset_trajectories[i_test].initial_y());$/;"	p	file:	signature:(testset_trajectories[i_test].initial_y())
@@ -650,70 +766,97 @@ set_task_parameters	../src/fixed_se_dmp.cpp	/^        dmp->set_task_parameters(t
 set_task_parameters	../src/fixed_se_dmp.cpp	/^        dmp->set_task_parameters(train_task_parameters.row(i_train));$/;"	p	file:	signature:(train_task_parameters.row(i_train))
 set_task_parameters	../src/fixed_se_dmp_lwpr.cpp	/^        dmp->set_task_parameters(testset_task_parameters.row(i_test));$/;"	p	file:	signature:(testset_task_parameters.row(i_test))
 set_task_parameters	../src/fixed_se_dmp_lwpr.cpp	/^        dmp->set_task_parameters(train_task_parameters.row(i_train));$/;"	p	file:	signature:(train_task_parameters.row(i_train))
-set_task_parameters	../src/parametric_se_dmp.cpp	/^         dmp->set_task_parameters(testset_task_parameters.row(i_test));$/;"	p	file:	signature:(testset_task_parameters.row(i_test))
 sort	../src/fixed_se_dmp.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
 sort	../src/fixed_se_dmp.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
 sort	../src/fixed_se_dmp_lwpr.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
 sort	../src/fixed_se_dmp_lwpr.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
-sort	../src/parametric_se_dmp.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
-sort	../src/parametric_se_dmp.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
 std::sort	../src/fixed_se_dmp.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
 std::sort	../src/fixed_se_dmp.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
 std::sort	../src/fixed_se_dmp_lwpr.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
 std::sort	../src/fixed_se_dmp_lwpr.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
-std::sort	../src/parametric_se_dmp.cpp	/^    std::sort(test_files.begin(), test_files.end());$/;"	p	class:std	file:	signature:(test_files.begin(), test_files.end())
-std::sort	../src/parametric_se_dmp.cpp	/^    std::sort(train_files.begin(), train_files.end());$/;"	p	class:std	file:	signature:(train_files.begin(), train_files.end())
 stream	../src/fixed_se_dmp.cpp	/^            stringstream stream;$/;"	l
 stream	../src/fixed_se_dmp_lwpr.cpp	/^            stringstream stream;$/;"	l
-stream	../src/parametric_se_dmp.cpp	/^            stringstream stream;$/;"	l
-t	../bin/data/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
-t	../bin/data/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 t	../bin/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 t	../bin/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 t	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 t	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
-t	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
-t	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 t	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 t	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
+t	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 t	../bin/tr_datasets/stulp/data/results/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 t	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^    t = np.loadtxt(fname)$/;"	v
 test_files	../src/fixed_se_dmp.cpp	/^    std::vector< std::string > test_files;$/;"	l
 test_files	../src/fixed_se_dmp_lwpr.cpp	/^    std::vector< std::string > test_files;$/;"	l
-test_files	../src/parametric_se_dmp.cpp	/^    std::vector< std::string > test_files;$/;"	l
-test_results	../bin/data/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
-test_results	../bin/data/data/results/plot.py	/^test_results= []$/;"	v
-test_results	../bin/data/data/trajectories/plot.py	/^test_results= []$/;"	v
 test_results	../bin/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
 test_results	../bin/data/results/plot.py	/^test_results= []$/;"	v
 test_results	../bin/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/orig_data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
 test_results	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
 test_results	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^test_results= []$/;"	v
 test_results	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^test_results= []$/;"	v
-test_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
-test_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^test_results= []$/;"	v
-test_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^test_results= []$/;"	v
 test_results	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
 test_results	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^test_results= []$/;"	v
 test_results	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^test_results= []$/;"	v
+test_results	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^test_results= []$/;"	v
 test_results	../bin/tr_datasets/stulp/data/plot.py	/^test_results = get_trajectories("results\/rtt*")$/;"	v
 test_results	../bin/tr_datasets/stulp/data/results/plot.py	/^test_results= []$/;"	v
 test_results	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^test_results= []$/;"	v
-tests	../bin/data/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
-tests	../bin/data/data/results/plot.py	/^tests = []$/;"	v
-tests	../bin/data/data/trajectories/plot.py	/^tests = []$/;"	v
 tests	../bin/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
 tests	../bin/data/results/plot.py	/^tests = []$/;"	v
 tests	../bin/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/orig_data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
 tests	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
 tests	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^tests = []$/;"	v
 tests	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^tests = []$/;"	v
-tests	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
-tests	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^tests = []$/;"	v
-tests	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^tests = []$/;"	v
 tests	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
 tests	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^tests = []$/;"	v
 tests	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^tests = []$/;"	v
+tests	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^tests = []$/;"	v
 tests	../bin/tr_datasets/stulp/data/plot.py	/^tests = get_trajectories("trajectories\/tt*")$/;"	v
 tests	../bin/tr_datasets/stulp/data/results/plot.py	/^tests = []$/;"	v
 tests	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^tests = []$/;"	v
@@ -721,28 +864,38 @@ testset_task_parameters	../src/fixed_se_dmp.cpp	/^            cout << testset_ta
 testset_task_parameters	../src/fixed_se_dmp.cpp	/^    MatrixXd testset_task_parameters(N_TESTSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TESTSET, N_TASK_PARAMETERS)
 testset_task_parameters	../src/fixed_se_dmp_lwpr.cpp	/^            cout << testset_task_parameters(i_test, p) << " ";$/;"	p	file:	signature:(i_test, p)
 testset_task_parameters	../src/fixed_se_dmp_lwpr.cpp	/^    MatrixXd testset_task_parameters(N_TESTSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TESTSET, N_TASK_PARAMETERS)
-testset_task_parameters	../src/parametric_se_dmp.cpp	/^            cout << testset_task_parameters(i_test, p) << " ";$/;"	p	file:	signature:(i_test, p)
-testset_task_parameters	../src/parametric_se_dmp.cpp	/^    MatrixXd testset_task_parameters(N_TESTSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TESTSET, N_TASK_PARAMETERS)
 testset_trajectories	../src/fixed_se_dmp.cpp	/^    vector<Trajectory> testset_trajectories;  $/;"	l
 testset_trajectories	../src/fixed_se_dmp_lwpr.cpp	/^    vector<Trajectory> testset_trajectories;  $/;"	l
-testset_trajectories	../src/parametric_se_dmp.cpp	/^    vector<Trajectory> testset_trajectories;  $/;"	l
-theo_test	../bin/data/data/plot.py	/^theo_test = {    $/;"	v
 theo_test	../bin/data/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/orig_data/plot.py	/^theo_test = {    $/;"	v
 theo_test	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^theo_test = {    $/;"	v
-theo_test	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^theo_test = {    $/;"	v
 theo_test	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^theo_test = {    $/;"	v
+theo_test	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^theo_test = {    $/;"	v
 theo_test	../bin/tr_datasets/stulp/data/plot.py	/^theo_test = {    $/;"	v
-theo_train	../bin/data/data/plot.py	/^theo_train = {    $/;"	v
 theo_train	../bin/data/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/orig_data/plot.py	/^theo_train = {    $/;"	v
 theo_train	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^theo_train = {    $/;"	v
-theo_train	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^theo_train = {    $/;"	v
 theo_train	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^theo_train = {    $/;"	v
+theo_train	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^theo_train = {    $/;"	v
 theo_train	../bin/tr_datasets/stulp/data/plot.py	/^theo_train = {    $/;"	v
 theoric	../bin/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
 theoric	../bin/scripts/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
 theoric	../bin/tr_datasets/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
 theoric	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
 theoric	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
+theoric	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
+theoric	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
+theoric	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
 theoric	../bin/tr_datasets/stulp/calculate_error.py	/^theoric = "data\/trajectories"$/;"	v
 tldata	../bin/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
 tldata	../bin/calculate_error.py	/^tldata =[]$/;"	v
@@ -754,6 +907,12 @@ tldata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^tldata = np.vsta
 tldata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^tldata =[]$/;"	v
 tldata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
 tldata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^tldata =[]$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^tldata =[]$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^tldata =[]$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
+tldata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^tldata =[]$/;"	v
 tldata	../bin/tr_datasets/stulp/calculate_error.py	/^tldata = np.vstack(tldata)$/;"	v
 tldata	../bin/tr_datasets/stulp/calculate_error.py	/^tldata =[]$/;"	v
 tle	../bin/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
@@ -761,68 +920,94 @@ tle	../bin/scripts/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
 tle	../bin/tr_datasets/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
 tle	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
 tle	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
+tle	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
+tle	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
+tle	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
 tle	../bin/tr_datasets/stulp/calculate_error.py	/^tle = nrmse(tldata, rtldata)$/;"	v
 train	../src/fixed_se_dmp.cpp	/^    dmp->train(trainset_trajectories, log, overwrite);$/;"	p	file:	signature:(trainset_trajectories, log, overwrite)
 train	../src/fixed_se_dmp_lwpr.cpp	/^    dmp->train(trainset_trajectories, log, overwrite);$/;"	p	file:	signature:(trainset_trajectories, log, overwrite)
-train	../src/parametric_se_dmp.cpp	/^    dmp->train(trainset_trajectories, log, overwrite);$/;"	p	file:	signature:(trainset_trajectories, log, overwrite)
 train_files	../src/fixed_se_dmp.cpp	/^    std::vector< std::string > train_files;$/;"	l
 train_files	../src/fixed_se_dmp_lwpr.cpp	/^    std::vector< std::string > train_files;$/;"	l
-train_files	../src/parametric_se_dmp.cpp	/^    std::vector< std::string > train_files;$/;"	l
-train_results	../bin/data/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
 train_results	../bin/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/orig_data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
 train_results	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
-train_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
 train_results	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
+train_results	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
 train_results	../bin/tr_datasets/stulp/data/plot.py	/^train_results = get_trajectories("results\/rtl*")$/;"	v
 train_task_parameters	../src/fixed_se_dmp.cpp	/^            cout << train_task_parameters(i_train, p) << " ";$/;"	p	file:	signature:(i_train, p)
 train_task_parameters	../src/fixed_se_dmp.cpp	/^    MatrixXd train_task_parameters(N_TRAINSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TRAINSET, N_TASK_PARAMETERS)
 train_task_parameters	../src/fixed_se_dmp_lwpr.cpp	/^            cout << train_task_parameters(i_train, p) << " ";$/;"	p	file:	signature:(i_train, p)
 train_task_parameters	../src/fixed_se_dmp_lwpr.cpp	/^    MatrixXd train_task_parameters(N_TRAINSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TRAINSET, N_TASK_PARAMETERS)
-train_task_parameters	../src/parametric_se_dmp.cpp	/^    MatrixXd train_task_parameters(N_TRAINSET, N_TASK_PARAMETERS);$/;"	p	file:	signature:(N_TRAINSET, N_TASK_PARAMETERS)
-trains	../bin/data/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
-trains	../bin/data/data/results/plot.py	/^trains = []$/;"	v
-trains	../bin/data/data/trajectories/plot.py	/^trains = []$/;"	v
 trains	../bin/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
 trains	../bin/data/results/plot.py	/^trains = []$/;"	v
 trains	../bin/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/orig_data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
 trains	../bin/tr_datasets/e_cursive_curves/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
 trains	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^trains = []$/;"	v
 trains	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^trains = []$/;"	v
-trains	../bin/tr_datasets/e_cursive_curves_angles/data/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
-trains	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^trains = []$/;"	v
-trains	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^trains = []$/;"	v
 trains	../bin/tr_datasets/e_cursive_curves_angles/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
 trains	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^trains = []$/;"	v
 trains	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_none_none/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_start_end/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_start_none/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^trains = []$/;"	v
+trains	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^trains = []$/;"	v
 trains	../bin/tr_datasets/stulp/data/plot.py	/^trains = get_trajectories("trajectories\/tl*")$/;"	v
 trains	../bin/tr_datasets/stulp/data/results/plot.py	/^trains = []$/;"	v
 trains	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^trains = []$/;"	v
 trainset_trajectories	../src/fixed_se_dmp.cpp	/^    vector<Trajectory> trainset_trajectories;  $/;"	l
 trainset_trajectories	../src/fixed_se_dmp_lwpr.cpp	/^    vector<Trajectory> trainset_trajectories;  $/;"	l
-trainset_trajectories	../src/parametric_se_dmp.cpp	/^    vector<Trajectory> trainset_trajectories;  $/;"	l
 trajectories	../src/fixed_se_dmp.cpp	/^    string trajectories = "data\/trajectories";$/;"	l
 trajectories	../src/fixed_se_dmp_lwpr.cpp	/^    string trajectories = "data\/trajectories";$/;"	l
-trajectories	../src/parametric_se_dmp.cpp	/^    string trajectories = "data\/trajectories";$/;"	l
-trial_results	../bin/data/data/results/plot.py	/^trial_results= []$/;"	v
-trial_results	../bin/data/data/trajectories/plot.py	/^trial_results= []$/;"	v
 trial_results	../bin/data/results/plot.py	/^trial_results= []$/;"	v
 trial_results	../bin/data/trajectories/plot.py	/^trial_results= []$/;"	v
 trial_results	../bin/tr_datasets/e_cursive_curves/data/results/plot.py	/^trial_results= []$/;"	v
 trial_results	../bin/tr_datasets/e_cursive_curves/data/trajectories/plot.py	/^trial_results= []$/;"	v
-trial_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/results/plot.py	/^trial_results= []$/;"	v
-trial_results	../bin/tr_datasets/e_cursive_curves_angles/data/data/trajectories/plot.py	/^trial_results= []$/;"	v
 trial_results	../bin/tr_datasets/e_cursive_curves_angles/data/results/plot.py	/^trial_results= []$/;"	v
 trial_results	../bin/tr_datasets/e_cursive_curves_angles/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/data/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_none_none/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_none_none/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_start_end/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_start_end/trajectories/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_start_none/results/plot.py	/^trial_results= []$/;"	v
+trial_results	../bin/tr_datasets/e_cursive_curves_angles_start_none/trajectories/plot.py	/^trial_results= []$/;"	v
 trial_results	../bin/tr_datasets/stulp/data/results/plot.py	/^trial_results= []$/;"	v
 trial_results	../bin/tr_datasets/stulp/data/trajectories/plot.py	/^trial_results= []$/;"	v
 trj	../src/fixed_se_dmp.cpp	/^        Trajectory trj = Trajectory::readFromFile(path, N_TASK_PARAMETERS);$/;"	l
 trj	../src/fixed_se_dmp_lwpr.cpp	/^        Trajectory trj = Trajectory::readFromFile(path, N_TASK_PARAMETERS);$/;"	l
-trj	../src/parametric_se_dmp.cpp	/^        Trajectory trj = Trajectory::readFromFile(path, N_TASK_PARAMETERS);$/;"	l
 ts	../bin/calculate_error.py	/^ts = None$/;"	v
 ts	../bin/scripts/calculate_error.py	/^ts = None$/;"	v
 ts	../bin/tr_datasets/calculate_error.py	/^ts = None$/;"	v
 ts	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ts = None$/;"	v
 ts	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ts = None$/;"	v
+ts	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^ts = None$/;"	v
+ts	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^ts = None$/;"	v
+ts	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^ts = None$/;"	v
 ts	../bin/tr_datasets/stulp/calculate_error.py	/^ts = None$/;"	v
 ttdata	../bin/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
 ttdata	../bin/calculate_error.py	/^ttdata =[]$/;"	v
@@ -834,6 +1019,12 @@ ttdata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ttdata = np.vsta
 ttdata	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^ttdata =[]$/;"	v
 ttdata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
 ttdata	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^ttdata =[]$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^ttdata =[]$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^ttdata =[]$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
+ttdata	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^ttdata =[]$/;"	v
 ttdata	../bin/tr_datasets/stulp/calculate_error.py	/^ttdata = np.vstack(ttdata)$/;"	v
 ttdata	../bin/tr_datasets/stulp/calculate_error.py	/^ttdata =[]$/;"	v
 tte	../bin/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
@@ -841,7 +1032,9 @@ tte	../bin/scripts/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
 tte	../bin/tr_datasets/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
 tte	../bin/tr_datasets/e_cursive_curves/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
 tte	../bin/tr_datasets/e_cursive_curves_angles/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
+tte	../bin/tr_datasets/e_cursive_curves_angles_LWPR_10/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
+tte	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
+tte	../bin/tr_datasets/e_cursive_curves_angles_LWPR_100000/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
 tte	../bin/tr_datasets/stulp/calculate_error.py	/^tte = nrmse(ttdata, rttdata)$/;"	v
 what	../src/fixed_se_dmp.cpp	/^        boost::smatch what;$/;"	l
 what	../src/fixed_se_dmp_lwpr.cpp	/^        boost::smatch what;$/;"	l
-what	../src/parametric_se_dmp.cpp	/^        boost::smatch what;$/;"	l

@@ -1,0 +1,53 @@
+\hypertarget{runEvolutionaryOptimization_8hpp}{\subsection{run\+Evolutionary\+Optimization.\+hpp File Reference}
+\label{runEvolutionaryOptimization_8hpp}\index{run\+Evolutionary\+Optimization.\+hpp@{run\+Evolutionary\+Optimization.\+hpp}}
+}
+
+
+Header file for function to run an evolutionary optimization process.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+Include dependency graph for run\+Evolutionary\+Optimization.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{runEvolutionaryOptimization_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{runEvolutionaryOptimization_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries run\+Evolutionary\+Optimization} (const Cost\+Function $\ast$const cost\+\_\+function, const Distribution\+Gaussian $\ast$const initial\+\_\+distribution, const Updater $\ast$const updater, int n\+\_\+updates, int n\+\_\+samples\+\_\+per\+\_\+update, std\+::string save\+\_\+directory=std\+::string(\char`\"{}\char`\"{}), bool overwrite=false, bool only\+\_\+learning\+\_\+curve=false)
+\begin{DoxyCompactList}\small\item\em Run an evolutionary optimization process, see \hyperlink{page_bbo}{Black Box Optimization}. \end{DoxyCompactList}\item 
+void {\bfseries run\+Evolutionary\+Optimization} (const Task $\ast$const task, const Task\+Solver $\ast$const task\+\_\+solver, const Distribution\+Gaussian $\ast$const initial\+\_\+distribution, const Updater $\ast$const updater, int n\+\_\+updates, int n\+\_\+samples\+\_\+per\+\_\+update, std\+::string save\+\_\+directory=std\+::string(\char`\"{}\char`\"{}), bool overwrite=false, bool only\+\_\+learning\+\_\+curve=false)
+\begin{DoxyCompactList}\small\item\em Run an evolutionary optimization process, see \hyperlink{page_bbo}{Black Box Optimization}. \end{DoxyCompactList}\item 
+void {\bfseries run\+Evolutionary\+Optimization} (Experiment\+B\+B\+O $\ast$experiment, std\+::string save\+\_\+directory=std\+::string(\char`\"{}\char`\"{}), bool overwrite=false, bool only\+\_\+learning\+\_\+curve=false)
+\begin{DoxyCompactList}\small\item\em Run an evolutionary optimization process, see \hyperlink{page_bbo}{Black Box Optimization}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Header file for function to run an evolutionary optimization process. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{runEvolutionaryOptimization_8hpp_source}{run\+Evolutionary\+Optimization.\+hpp}.
+

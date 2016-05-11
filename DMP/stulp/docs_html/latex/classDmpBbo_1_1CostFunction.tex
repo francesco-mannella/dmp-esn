@@ -1,0 +1,127 @@
+\hypertarget{classDmpBbo_1_1CostFunction}{\subsection{Cost\+Function Class Reference}
+\label{classDmpBbo_1_1CostFunction}\index{Cost\+Function@{Cost\+Function}}
+}
+
+
+Interface for cost functions, which define a cost\+\_\+function.  
+
+
+
+
+{\ttfamily \#include $<$Cost\+Function.\+hpp$>$}
+
+
+
+Inheritance diagram for Cost\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{classDmpBbo_1_1CostFunction__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classDmpBbo_1_1CostFunction_a4468247a33250384422560fce57bf2ed}{evaluate} (const Eigen\+::\+Matrix\+Xd \&samples, Eigen\+::\+Vector\+Xd \&costs) const =0
+\begin{DoxyCompactList}\small\item\em The cost function which defines the cost\+\_\+function. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classDmpBbo_1_1CostFunction_af084bff2ddd6233e9a898faa23f6195c}{to\+String} (void) const =0
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classDmpBbo_1_1CostFunction_a664776318997dd7921e272845e0e1ecc}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{classDmpBbo_1_1CostFunction}{Cost\+Function} \&cost\+\_\+function)
+\begin{DoxyCompactList}\small\item\em Write to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Interface for cost functions, which define a cost\+\_\+function. 
+
+For further information see the section on \hyperlink{page_bbo_sec_bbo_task_and_task_solver}{Cost\+Function vs Task/\+Task\+Solver} 
+
+Definition at line 35 of file Cost\+Function.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1CostFunction_a4468247a33250384422560fce57bf2ed}{\index{Dmp\+Bbo\+::\+Cost\+Function@{Dmp\+Bbo\+::\+Cost\+Function}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Dmp\+Bbo\+::\+Cost\+Function@{Dmp\+Bbo\+::\+Cost\+Function}}
+\paragraph[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void evaluate (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{costs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1CostFunction_a4468247a33250384422560fce57bf2ed}
+
+
+The cost function which defines the cost\+\_\+function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples} & The samples \\
+\hline
+\mbox{\tt out}  & {\em costs} & The scalar cost for each sample. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classDmpBbo_1_1CostFunction_af084bff2ddd6233e9a898faa23f6195c}{\index{Dmp\+Bbo\+::\+Cost\+Function@{Dmp\+Bbo\+::\+Cost\+Function}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Cost\+Function@{Dmp\+Bbo\+::\+Cost\+Function}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1CostFunction_af084bff2ddd6233e9a898faa23f6195c}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1DemoCostFunctionDistanceToPoint_a1aca816b42cf0d36118be0ab91120d77}{Demo\+Cost\+Function\+Distance\+To\+Point}.
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1CostFunction_a664776318997dd7921e272845e0e1ecc}{\index{Dmp\+Bbo\+::\+Cost\+Function@{Dmp\+Bbo\+::\+Cost\+Function}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dmp\+Bbo\+::\+Cost\+Function@{Dmp\+Bbo\+::\+Cost\+Function}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Cost\+Function} \&}]{cost\+\_\+function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1CostFunction_a664776318997dd7921e272845e0e1ecc}
+
+
+Write to output stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em output} & Output stream to which to write to \\
+\hline
+\mbox{\tt in}  & {\em cost\+\_\+function} & \hyperlink{classDmpBbo_1_1CostFunction}{Cost\+Function} object to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output to which the object was written
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Calls virtual function \hyperlink{classDmpBbo_1_1CostFunction_af084bff2ddd6233e9a898faa23f6195c}{Cost\+Function\+::to\+String}, which must be implemented by subclasses\+: \href{http://stackoverflow.com/questions/4571611/virtual-operator}{\tt http\+://stackoverflow.\+com/questions/4571611/virtual-\/operator} 
+\end{DoxyRemark}
+
+
+Definition at line 58 of file Cost\+Function.\+hpp.
+
+
+\begin{DoxyCode}
+58                                                                                        \{
+59     output << cost\_function.toString();
+60     \textcolor{keywordflow}{return} output;
+61   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{CostFunction_8hpp}{Cost\+Function.\+hpp}\end{DoxyCompactItemize}

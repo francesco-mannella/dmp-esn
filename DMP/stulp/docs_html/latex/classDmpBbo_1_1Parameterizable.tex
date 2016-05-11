@@ -1,0 +1,906 @@
+\hypertarget{classDmpBbo_1_1Parameterizable}{\subsection{Parameterizable Class Reference}
+\label{classDmpBbo_1_1Parameterizable}\index{Parameterizable@{Parameterizable}}
+}
+
+
+Class for providing access to a model's parameters as a vector.  
+
+
+
+
+{\ttfamily \#include $<$Parameterizable.\+hpp$>$}
+
+
+
+Inheritance diagram for Parameterizable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Parameterizable__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1Parameterizable_a96e10bcc1ff83dbdf8ad313145f5bf8c}{virtual \hyperlink{classDmpBbo_1_1Parameterizable_a96e10bcc1ff83dbdf8ad313145f5bf8c}{$\sim$\+Parameterizable} (void)}\label{classDmpBbo_1_1Parameterizable_a96e10bcc1ff83dbdf8ad313145f5bf8c}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{get\+Parameter\+Vector\+Selected\+Size} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the size of the vector of selected parameters, as returned by get\+Parameter\+Vector\+Selected(. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{get\+Parameter\+Vector\+Selected} (Eigen\+::\+Vector\+Xd \&values, bool normalized=false) const 
+\begin{DoxyCompactList}\small\item\em Get the values of the selected parameters in one vector. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_acd774ea7a9d4d2539ec194fe4e67ff29}{get\+Parameter\+Vector\+Selected\+Normalized} (Eigen\+::\+Vector\+Xd \&values) const 
+\begin{DoxyCompactList}\small\item\em Get the normalized values of the selected parameters in one vector. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{get\+Parameter\+Vector\+Selected\+Min\+Max} (Eigen\+::\+Vector\+Xd \&min, Eigen\+::\+Vector\+Xd \&max) const 
+\begin{DoxyCompactList}\small\item\em Get the minimum and maximum of the selected parameters in one vector. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Parameterizable_a98f0b11a115da5b5bb7c0fcc6394dc71}{get\+Parameter\+Vector\+All\+Min\+Max} (Eigen\+::\+Vector\+Xd \&min, Eigen\+::\+Vector\+Xd \&max) const 
+\begin{DoxyCompactList}\small\item\em Get the minimum and maximum values of the current parameter vector. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Parameterizable_a0d6c46b1c9d1a9c467bd458cd0c9c91d}{get\+Parameter\+Vector\+Selected\+Ranges} (Eigen\+::\+Vector\+Xd \&ranges) const 
+\begin{DoxyCompactList}\small\item\em Get the ranges of the selected parameters, i.\+e. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{set\+Parameter\+Vector\+Selected} (const Eigen\+::\+Vector\+Xd \&values, bool normalized=false)
+\begin{DoxyCompactList}\small\item\em Set all the values of the selected parameters with one vector. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_a308782474c315c3e40a00daf4cb3cc37}{set\+Parameter\+Vector\+Selected\+Normalized} (const Eigen\+::\+Vector\+Xd \&values)
+\begin{DoxyCompactList}\small\item\em Set all the values of the selected parameters with one vector of normalized values. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{set\+Selected\+Parameters} (const std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels)
+\begin{DoxyCompactList}\small\item\em Determine which subset of parameters is represented in the vector returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Parameterizable_a509c1ff41b1531ff93cf4a9da4278d40}{set\+Selected\+Parameters\+One} (std\+::string selected)
+\begin{DoxyCompactList}\small\item\em Set the parameters that are currently selected. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{get\+Selectable\+Parameters} (std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels) const =0
+\begin{DoxyCompactList}\small\item\em Return all the names of the parameter types that can be selected. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{get\+Parameter\+Vector\+Mask} (const std\+::set$<$ std\+::string $>$ selected\+\_\+values\+\_\+labels, Eigen\+::\+Vector\+Xi \&selected\+\_\+mask) const =0
+\begin{DoxyCompactList}\small\item\em Get a mask for selecting parameters. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{get\+Parameter\+Vector\+All\+Size} (void) const =0
+\begin{DoxyCompactList}\small\item\em Get the size of the parameter values vector when it contains all available parameter values. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{get\+Parameter\+Vector\+All} (Eigen\+::\+Vector\+Xd \&values) const =0
+\begin{DoxyCompactList}\small\item\em Return a vector that returns all available parameter values. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{set\+Parameter\+Vector\+All} (const Eigen\+::\+Vector\+Xd \&values)=0
+\begin{DoxyCompactList}\small\item\em Set all available parameter values with one vector. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{set\+Parameter\+Vector\+Modifier} (std\+::string modifier, bool new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Turn certain modifiers on or off. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Parameterizable_a77089aa6cc3b95dd0a1c17de7bc033b9}{set\+Vector\+Lengths\+Per\+Dimension} (const Eigen\+::\+Vector\+Xi \&lengths\+\_\+per\+\_\+dimension)
+\item 
+Eigen\+::\+Vector\+Xi \hyperlink{classDmpBbo_1_1Parameterizable_a410ef532c4861b8d50c35508fa114484}{get\+Vector\+Lengths\+Per\+Dimension} (void) const 
+\item 
+void \hyperlink{classDmpBbo_1_1Parameterizable_a235305eba6732091193aa95869d78514}{get\+Parameter\+Vector\+Selected} (std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&values, bool normalized=false) const 
+\begin{DoxyCompactList}\small\item\em Get the values of the selected parameters in one vector. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Parameterizable_a9b7c8caab0ded09410636d136e7da9f8}{set\+Parameter\+Vector\+Selected} (const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&values, bool normalized=false)
+\begin{DoxyCompactList}\small\item\em Set all the values of the selected parameters with a vector of vectors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1Parameterizable_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Class for providing access to a model's parameters as a vector. 
+
+Different function approximators have different types of model parameters. For instance, L\+W\+R has the centers and widths of basis functions, along with the slopes of each line segment. Parameterizable\+::get\+Values provides a means to access these parameter as one vector.
+
+This may be useful for instance when optimizing the model parameters with black-\/box optimization, which is agnostic about the semantics of the model parameters. 
+
+Definition at line 67 of file Parameterizable.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+Selected\+Size@{get\+Parameter\+Vector\+Selected\+Size}}
+\index{get\+Parameter\+Vector\+Selected\+Size@{get\+Parameter\+Vector\+Selected\+Size}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+Selected\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Vector\+Selected\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}
+
+
+Get the size of the vector of selected parameters, as returned by get\+Parameter\+Vector\+Selected(. 
+
+\begin{DoxyReturn}{Returns}
+The size of the vector representation of the selected parameters. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1FunctionApproximator_ae83cb950bcf5219841e6ca8511ac2907}{Function\+Approximator}.
+
+
+
+Definition at line 40 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+41 \{  
+42   \textcolor{keywordtype}{int} all\_size = 0;
+43   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} all\_ii=0; all\_ii<selected\_mask\_.size(); all\_ii++)
+44     \textcolor{keywordflow}{if} (selected\_mask\_[all\_ii]>0)
+45       all\_size++;
+46     
+47   \textcolor{keywordflow}{return} all\_size;
+48 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+Selected@{get\+Parameter\+Vector\+Selected}}
+\index{get\+Parameter\+Vector\+Selected@{get\+Parameter\+Vector\+Selected}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Selected (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values, }
+\item[{bool}]{normalized = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}
+
+
+Get the values of the selected parameters in one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & The selected parameters concatenated in one vector \\
+\hline
+\mbox{\tt in}  & {\em normalized} & Whether to normalize the data or not \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1FunctionApproximator_aab955bec57f074a991b8be31d6ce54ca}{Function\+Approximator}.
+
+
+
+Definition at line 50 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+51 \{
+52   Eigen::VectorXd all\_values;
+53   \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{getParameterVectorAll}(all\_values);
+54   
+55   values.resize(\hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{getParameterVectorSelectedSize}());
+56   \textcolor{comment}{// We cannot do this with Block, because regions might not be contiguous}
+57   \textcolor{keywordtype}{int} ii = 0;
+58   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} all\_ii=0; all\_ii<selected\_mask\_.size(); all\_ii++)
+59     \textcolor{keywordflow}{if} (selected\_mask\_[all\_ii]>0)
+60       values[ii++] = all\_values[all\_ii];
+61     
+62   \textcolor{keywordflow}{if} (normalized)
+63   \{
+64     VectorXd min\_vec, max\_vec;
+65     \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{getParameterVectorSelectedMinMax}(min\_vec, max\_vec);
+66     
+67     VectorXd range =  (max\_vec.array()-min\_vec.array());
+68     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<values.size(); ii++)
+69     \{
+70       \textcolor{keywordflow}{if} (range[ii]>0)
+71       \{
+72         values[ii] = (values[ii]-min\_vec[ii])/range[ii];
+73       \}
+74       \textcolor{keywordflow}{else}
+75       \{
+76         \textcolor{keywordflow}{if} (abs(max\_vec[ii])>0)
+77           values[ii] = values[ii]/abs(2*max\_vec[ii]);
+78       \}
+79     \}
+80     
+81   \}
+82     
+83 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_acd774ea7a9d4d2539ec194fe4e67ff29}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+Selected\+Normalized@{get\+Parameter\+Vector\+Selected\+Normalized}}
+\index{get\+Parameter\+Vector\+Selected\+Normalized@{get\+Parameter\+Vector\+Selected\+Normalized}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+Selected\+Normalized}]{\setlength{\rightskip}{0pt plus 5cm}virtual void get\+Parameter\+Vector\+Selected\+Normalized (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1Parameterizable_acd774ea7a9d4d2539ec194fe4e67ff29}
+
+
+Get the normalized values of the selected parameters in one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & The selected parameters concatenated in one vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 90 of file Parameterizable.\+hpp.
+
+
+\begin{DoxyCode}
+90                                                                                  \{
+91     \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{getParameterVectorSelected}(values, \textcolor{keyword}{true});
+92   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Parameterizable_acd774ea7a9d4d2539ec194fe4e67ff29_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+Selected\+Min\+Max@{get\+Parameter\+Vector\+Selected\+Min\+Max}}
+\index{get\+Parameter\+Vector\+Selected\+Min\+Max@{get\+Parameter\+Vector\+Selected\+Min\+Max}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+Selected\+Min\+Max}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Selected\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{max}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}
+
+
+Get the minimum and maximum of the selected parameters in one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em min} & The minimum of the selected parameters concatenated in one vector \\
+\hline
+\mbox{\tt out}  & {\em max} & The minimum of the selected parameters concatenated in one vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 125 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+126 \{
+127   VectorXd all\_min\_vec, all\_max\_vec;
+128   \hyperlink{classDmpBbo_1_1Parameterizable_a98f0b11a115da5b5bb7c0fcc6394dc71}{getParameterVectorAllMinMax}(all\_min\_vec, all\_max\_vec);
+129   
+130   min\_vec.resize(\hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{getParameterVectorSelectedSize}());
+131   max\_vec.resize(\hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{getParameterVectorSelectedSize}());
+132   
+133   \textcolor{comment}{// We cannot do this with Eigen::Block, because regions might not be contiguous}
+134   \textcolor{keywordtype}{int} ii = 0;
+135   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} all\_ii=0; all\_ii<selected\_mask\_.size(); all\_ii++)
+136   \{
+137     \textcolor{keywordflow}{if} (selected\_mask\_[all\_ii]>0)
+138     \{
+139       min\_vec[ii] = all\_min\_vec[all\_ii];
+140       max\_vec[ii] = all\_max\_vec[all\_ii];
+141       ii++;
+142     \}
+143   \}
+144   
+145 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_a98f0b11a115da5b5bb7c0fcc6394dc71}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+All\+Min\+Max@{get\+Parameter\+Vector\+All\+Min\+Max}}
+\index{get\+Parameter\+Vector\+All\+Min\+Max@{get\+Parameter\+Vector\+All\+Min\+Max}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+All\+Min\+Max}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+All\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{max}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1Parameterizable_a98f0b11a115da5b5bb7c0fcc6394dc71}
+
+
+Get the minimum and maximum values of the current parameter vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em min} & Minimum values of the parameters vector \\
+\hline
+\mbox{\tt out}  & {\em max} & Maximum values of the parameters vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+148 \{
+149   set<string> all\_selected\_values\_labels;
+150   \hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{getSelectableParameters}(all\_selected\_values\_labels);
+151   
+152   VectorXi selected\_mask;
+153   \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{getParameterVectorMask}(all\_selected\_values\_labels, selected\_mask);
+154   
+155   \textcolor{comment}{// If the initial parameter vector is still empty, get it now.}
+156   \textcolor{keywordflow}{if} (parameter\_vector\_all\_initial\_.size()==0)
+157     \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{getParameterVectorAll}(parameter\_vector\_all\_initial\_);
+158   
+159   Eigen::VectorXd all\_values = parameter\_vector\_all\_initial\_;
+160   
+161   \textcolor{comment}{// Example: }
+162   \textcolor{comment}{// selected\_mask = [  1   1   1     2   2   2     3   3   3     1   1    1   ] }
+163   \textcolor{comment}{// all\_values    = [ 1.0 2.0 3.0   4.0 5.0 6.0   7.0 8.0 9.0  20.0 21.0 22.0 ] }
+164   \textcolor{comment}{//}
+165   \textcolor{comment}{// For all blocks in selected\_mask, compute the min/max in all\_values for that block.}
+166   \textcolor{comment}{// In the example above}
+167   \textcolor{comment}{//   block 1 : min = 1.0; max = 22.0;}
+168   \textcolor{comment}{//   block 2 : min = 4.0; max =  6.0;}
+169   \textcolor{comment}{//   block 3 : min = 7.0; max =  9.0;}
+170   \textcolor{comment}{//}
+171   \textcolor{comment}{// Then min\_vec and max\_vec will be as follows:}
+172   \textcolor{comment}{//   min\_vec = [ 1.0 1.0 1.0   4.0 4.0 4.0   7.0 7.0 7.0     1.0 1.0 1.0 ]}
+173   \textcolor{comment}{//   max\_vec = [ 3.0 3.0 3.0   6.0 6.0 6.0   9.0 9.0 9.0  20.0 21.0 22.0 ]}
+174   
+175   min\_vec.resize(\hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{getParameterVectorAllSize}());
+176   max\_vec.resize(\hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{getParameterVectorAllSize}());
+177 
+178   \textcolor{comment}{// We cannot do this with Eigen::Block, because regions might not be contiguous}
+179   \textcolor{keywordtype}{int} n\_blocks = selected\_mask.maxCoeff();
+180   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_block=1; i\_block<=n\_blocks; i\_block++)
+181   \{
+182     \textcolor{keywordflow}{if} ((selected\_mask.array() == i\_block).any())
+183     \{
+184       \textcolor{comment}{// Initialize values to extrema }
+185       \textcolor{keywordtype}{double} min\_this\_block = std::numeric\_limits<double>::max();
+186       \textcolor{keywordtype}{double} max\_this\_block = std::numeric\_limits<double>::lowest();
+187       
+188       \textcolor{comment}{// Determine the min/max values in this block}
+189       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} all\_ii=0; all\_ii<selected\_mask.size(); all\_ii++)
+190       \{
+191         \textcolor{keywordflow}{if} (selected\_mask[all\_ii]==i\_block)
+192         \{
+193           min\_this\_block =(all\_values[all\_ii]<min\_this\_block ? all\_values[all\_ii] : min\_this\_block);
+194           max\_this\_block =(all\_values[all\_ii]>max\_this\_block ? all\_values[all\_ii] : max\_this\_block);
+195         \}
+196       \}
+197       
+198       \textcolor{comment}{// Set the min/max for this block}
+199       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} all\_ii=0; all\_ii<selected\_mask.size(); all\_ii++)
+200       \{
+201         \textcolor{keywordflow}{if} (selected\_mask[all\_ii]==i\_block)
+202         \{
+203           min\_vec[all\_ii] = min\_this\_block;
+204           max\_vec[all\_ii] = max\_this\_block;
+205         \}
+206       \}
+207       
+208       \textcolor{comment}{//cout << "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" << endl;}
+209       \textcolor{comment}{//cout << "  i\_block=" << i\_block << endl;}
+210       \textcolor{comment}{//cout << "  min\_this\_block=" << min\_this\_block << endl;}
+211       \textcolor{comment}{//cout << "  max\_this\_block=" << max\_this\_block << endl;}
+212       \textcolor{comment}{//cout << min\_vec.transpose() << endl;}
+213       \textcolor{comment}{//cout << max\_vec.transpose() << endl;}
+214     \}
+215     
+216   \}
+217     
+218 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_a0d6c46b1c9d1a9c467bd458cd0c9c91d}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+Selected\+Ranges@{get\+Parameter\+Vector\+Selected\+Ranges}}
+\index{get\+Parameter\+Vector\+Selected\+Ranges@{get\+Parameter\+Vector\+Selected\+Ranges}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+Selected\+Ranges}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Selected\+Ranges (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{ranges}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Parameterizable_a0d6c46b1c9d1a9c467bd458cd0c9c91d}
+
+
+Get the ranges of the selected parameters, i.\+e. 
+
+max-\/min, in one vector. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em ranges} & The ranges of the selected parameters concatenated in one vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file Parameterizable.\+hpp.
+
+
+\begin{DoxyCode}
+112                                                                              \{
+113      Eigen::VectorXd min, max;
+114      \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{getParameterVectorSelectedMinMax}(min, max);
+115      ranges = (max.array()-min.array());
+116    \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Parameterizable_a0d6c46b1c9d1a9c467bd458cd0c9c91d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!set\+Parameter\+Vector\+Selected@{set\+Parameter\+Vector\+Selected}}
+\index{set\+Parameter\+Vector\+Selected@{set\+Parameter\+Vector\+Selected}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{set\+Parameter\+Vector\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+Selected (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values, }
+\item[{bool}]{normalized = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}
+
+
+Set all the values of the selected parameters with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & The new values of the selected parameters in one vector \\
+\hline
+\mbox{\tt in}  & {\em normalized} & Whether the data is normalized or not \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1FunctionApproximator_aee501e63a46d63eb58a6f271bf093b9d}{Function\+Approximator}.
+
+
+
+Definition at line 86 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+87 \{
+88   \textcolor{comment}{// If the initial parameter vector is still empty, get it now, before changing its value.}
+89   \textcolor{keywordflow}{if} (parameter\_vector\_all\_initial\_.size()==0)
+90     \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{getParameterVectorAll}(parameter\_vector\_all\_initial\_);
+91 
+92   VectorXd all\_values;
+93   \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{getParameterVectorAll}(all\_values);
+94   
+95   VectorXd values = values\_arg;
+96   \textcolor{keywordflow}{if} (normalized)
+97   \{
+98     VectorXd min\_vec, max\_vec, range;
+99     \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{getParameterVectorSelectedMinMax}(min\_vec, max\_vec);
+100     range =  (max\_vec.array()-min\_vec.array());
+101     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<values.size(); ii++)
+102     \{
+103       \textcolor{keywordflow}{if} (range[ii]>0)
+104       \{
+105         values[ii] = values[ii]*range[ii] + min\_vec[ii];
+106       \}
+107       \textcolor{keywordflow}{else}
+108       \{
+109         \textcolor{keywordflow}{if} (abs(max\_vec[ii])>0)
+110           values[ii] = values[ii]*abs(2*max\_vec[ii]);
+111       \}
+112     \}
+113   \}
+114   
+115   \textcolor{comment}{// We cannot do this with Eigen::Block, because regions might not be contiguous}
+116   \textcolor{keywordtype}{int} ii = 0;
+117   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} all\_ii=0; all\_ii<selected\_mask\_.size(); all\_ii++)
+118     \textcolor{keywordflow}{if} (selected\_mask\_[all\_ii]>0)
+119       all\_values[all\_ii] = values[ii++];
+120     
+121   \hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{setParameterVectorAll}(all\_values);
+122   
+123 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_a308782474c315c3e40a00daf4cb3cc37}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!set\+Parameter\+Vector\+Selected\+Normalized@{set\+Parameter\+Vector\+Selected\+Normalized}}
+\index{set\+Parameter\+Vector\+Selected\+Normalized@{set\+Parameter\+Vector\+Selected\+Normalized}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{set\+Parameter\+Vector\+Selected\+Normalized}]{\setlength{\rightskip}{0pt plus 5cm}virtual void set\+Parameter\+Vector\+Selected\+Normalized (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1Parameterizable_a308782474c315c3e40a00daf4cb3cc37}
+
+
+Set all the values of the selected parameters with one vector of normalized values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & The new values of the selected parameters in one vector of normalized values. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 129 of file Parameterizable.\+hpp.
+
+
+\begin{DoxyCode}
+129                                                                                  \{
+130     \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{setParameterVectorSelected}(values, \textcolor{keyword}{true});
+131   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Parameterizable_a308782474c315c3e40a00daf4cb3cc37_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!set\+Selected\+Parameters@{set\+Selected\+Parameters}}
+\index{set\+Selected\+Parameters@{set\+Selected\+Parameters}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{set\+Selected\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Selected\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}
+
+
+Determine which subset of parameters is represented in the vector returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}. 
+
+Different function approximators have different types of model parameters. For instance, L\+W\+R has the centers and widths of basis functions, along with the slopes of each line segment. \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} provides a means to determine which parameters should be returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, i.\+e. by calling\+: std\+::set$<$std\+::string$>$ selected; selected.\+insert(\char`\"{}slopes\char`\"{}); model\+\_\+parameters.\+set\+Selected\+Parameters(selected) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & The names of the parameters that are selected \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1Dmp_a8a976b5db2d1809ece10e431816f0f27}{Dmp}, and \hyperlink{classDmpBbo_1_1FunctionApproximator_a8a976b5db2d1809ece10e431816f0f27}{Function\+Approximator}.
+
+
+
+Definition at line 35 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+36 \{
+37   \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{getParameterVectorMask}(selected\_values\_labels,selected\_mask\_);
+38 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_a509c1ff41b1531ff93cf4a9da4278d40}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!set\+Selected\+Parameters\+One@{set\+Selected\+Parameters\+One}}
+\index{set\+Selected\+Parameters\+One@{set\+Selected\+Parameters\+One}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{set\+Selected\+Parameters\+One}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Selected\+Parameters\+One (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{selected}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Parameterizable_a509c1ff41b1531ff93cf4a9da4278d40}
+
+
+Set the parameters that are currently selected. 
+
+Convenience function that allow only a string to be passed, rather than a set of strings. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected} & The name of the parameters that are selected \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 151 of file Parameterizable.\+hpp.
+
+
+\begin{DoxyCode}
+152   \{
+153     std::set<std::string> selected\_set;
+154     selected\_set.insert(selected);
+155     \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{setSelectedParameters}(selected\_set);    
+156   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Parameterizable_a509c1ff41b1531ff93cf4a9da4278d40_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Selectable\+Parameters@{get\+Selectable\+Parameters}}
+\index{get\+Selectable\+Parameters@{get\+Selectable\+Parameters}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Selectable\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}virtual void get\+Selectable\+Parameters (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}
+
+
+Return all the names of the parameter types that can be selected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em selected\+\_\+values\+\_\+labels} & Names of the parameter types that can be selected \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_adaae949509cd3b2e6ce58deb841c80a0}{Dmp}, \hyperlink{classDmpBbo_1_1FunctionApproximator_a887f4747734bd8b7cc4f799092ff31b4}{Function\+Approximator}, \hyperlink{classDmpBbo_1_1UnifiedModel_a887f4747734bd8b7cc4f799092ff31b4}{Unified\+Model}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_a887f4747734bd8b7cc4f799092ff31b4}{Model\+Parameters\+L\+W\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGMR_a887f4747734bd8b7cc4f799092ff31b4}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a887f4747734bd8b7cc4f799092ff31b4}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersGPR_a887f4747734bd8b7cc4f799092ff31b4}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_a887f4747734bd8b7cc4f799092ff31b4}{Model\+Parameters\+L\+W\+P\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_a887f4747734bd8b7cc4f799092ff31b4}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}}
+\index{get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}virtual void get\+Parameter\+Vector\+Mask (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$}]{selected\+\_\+values\+\_\+labels, }
+\item[{Eigen\+::\+Vector\+Xi \&}]{selected\+\_\+mask}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}
+
+
+Get a mask for selecting parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & Labels of the selected parameter values \\
+\hline
+\mbox{\tt out}  & {\em selected\+\_\+mask} & A mask indicating indices of selected parameters. 0 indicates not selected, $>$0 indicates selected.\\
+\hline
+\end{DoxyParams}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ In this case, if selected\+\_\+values\+\_\+labels contains \char`\"{}centers\char`\"{} and \char`\"{}slopes\char`\"{}, the mask will be\+: \begin{DoxyVerb}    centers     widths    slopes
+[   1   1   1  0  0  0   3   3   3 ]
+\end{DoxyVerb}
+ The '0' indicates that these parameters are not selected. The other ones have different numbers so that they may be discerned from one another (as required in \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{Parameterizable\+::get\+Parameter\+Vector\+Selected\+Min\+Max} for instance. 
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_a9dba1f93e426e7511630ec1ece4ace17}{Dmp}, \hyperlink{classDmpBbo_1_1FunctionApproximator_a9dba1f93e426e7511630ec1ece4ace17}{Function\+Approximator}, \hyperlink{classDmpBbo_1_1UnifiedModel_a9dba1f93e426e7511630ec1ece4ace17}{Unified\+Model}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_a9dba1f93e426e7511630ec1ece4ace17}{Model\+Parameters\+L\+W\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGMR_a9dba1f93e426e7511630ec1ece4ace17}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a9dba1f93e426e7511630ec1ece4ace17}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersGPR_a9dba1f93e426e7511630ec1ece4ace17}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_a9dba1f93e426e7511630ec1ece4ace17}{Model\+Parameters\+L\+W\+P\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_a9dba1f93e426e7511630ec1ece4ace17}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}}
+\index{get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+All\+Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual int get\+Parameter\+Vector\+All\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}
+
+
+Get the size of the parameter values vector when it contains all available parameter values. 
+
+\begin{DoxyReturn}{Returns}
+The size of the parameter vector
+\end{DoxyReturn}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ then \hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{get\+Parameter\+Vector\+All\+Size()} will return 9 
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{Dmp}, \hyperlink{classDmpBbo_1_1FunctionApproximator_ab24d2485b3b795b516f4844f225100eb}{Function\+Approximator}, \hyperlink{classDmpBbo_1_1UnifiedModel_ab24d2485b3b795b516f4844f225100eb}{Unified\+Model}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_ab24d2485b3b795b516f4844f225100eb}{Model\+Parameters\+L\+W\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGMR_ab24d2485b3b795b516f4844f225100eb}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersGPR_ab24d2485b3b795b516f4844f225100eb}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_ab24d2485b3b795b516f4844f225100eb}{Model\+Parameters\+L\+W\+P\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_ab24d2485b3b795b516f4844f225100eb}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}}
+\index{get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}virtual void get\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}
+
+
+Return a vector that returns all available parameter values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, which return only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_ac44b51e5335f973eed54f100618e5496}{Dmp}, \hyperlink{classDmpBbo_1_1FunctionApproximator_ac44b51e5335f973eed54f100618e5496}{Function\+Approximator}, \hyperlink{classDmpBbo_1_1UnifiedModel_a29429ff2771d1e56cfba7250d38da4b1}{Unified\+Model}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_a29429ff2771d1e56cfba7250d38da4b1}{Model\+Parameters\+L\+W\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGMR_a29429ff2771d1e56cfba7250d38da4b1}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a29429ff2771d1e56cfba7250d38da4b1}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersGPR_a29429ff2771d1e56cfba7250d38da4b1}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_a29429ff2771d1e56cfba7250d38da4b1}{Model\+Parameters\+L\+W\+P\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_a29429ff2771d1e56cfba7250d38da4b1}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}}
+\index{set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{set\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}virtual void set\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}
+
+
+Set all available parameter values with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{Parameterizable\+::set\+Parameter\+Vector\+Selected}, which sets only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_a9d3c8f22e8237a805af4935a647e5a50}{Dmp}, \hyperlink{classDmpBbo_1_1FunctionApproximator_a9d3c8f22e8237a805af4935a647e5a50}{Function\+Approximator}, \hyperlink{classDmpBbo_1_1UnifiedModel_a9d3c8f22e8237a805af4935a647e5a50}{Unified\+Model}, \hyperlink{classDmpBbo_1_1ModelParametersGMR_a9d3c8f22e8237a805af4935a647e5a50}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGPR_a9d3c8f22e8237a805af4935a647e5a50}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_a9d3c8f22e8237a805af4935a647e5a50}{Model\+Parameters\+L\+W\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a9d3c8f22e8237a805af4935a647e5a50}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_a9d3c8f22e8237a805af4935a647e5a50}{Model\+Parameters\+L\+W\+P\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_a9d3c8f22e8237a805af4935a647e5a50}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!set\+Parameter\+Vector\+Modifier@{set\+Parameter\+Vector\+Modifier}}
+\index{set\+Parameter\+Vector\+Modifier@{set\+Parameter\+Vector\+Modifier}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{set\+Parameter\+Vector\+Modifier}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+Modifier (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{modifier, }
+\item[{bool}]{new\+\_\+value}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}
+
+
+Turn certain modifiers on or off. 
+
+This can be used to modify exactly what is returned by \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{Parameterizable\+::get\+Parameter\+Vector\+All()}. For an example, see \hyperlink{classDmpBbo_1_1ModelParametersLWR_add0186ca30d91928b887805fe0d24598}{Model\+Parameters\+L\+W\+R\+::set\+Parameter\+Vector\+Modifier\+Private()}
+
+This function calls the virtual private function Parameterizable\+::set\+Parameter\+Vector\+Modifier\+Private(), which may (but must not be) overridden by subclasses of \hyperlink{classDmpBbo_1_1Parameterizable}{Parameterizable}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em modifier} & The name of the modifier \\
+\hline
+\mbox{\tt in}  & {\em new\+\_\+value} & Whether to turn the modifier on (true) or off (false) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 292 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+293 \{
+294   \textcolor{keywordflow}{if} (parameter\_vector\_all\_initial\_.size()>0)
+295   \{
+296     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+297     cerr << \textcolor{stringliteral}{"Warning: you can only set a ParameterVectorModifier if the intial state has not yet been
+       determined."} << endl;
+298     \textcolor{keywordflow}{return};
+299   \}
+300   setParameterVectorModifierPrivate(modifier, new\_value);
+301 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_a77089aa6cc3b95dd0a1c17de7bc033b9}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!set\+Vector\+Lengths\+Per\+Dimension@{set\+Vector\+Lengths\+Per\+Dimension}}
+\index{set\+Vector\+Lengths\+Per\+Dimension@{set\+Vector\+Lengths\+Per\+Dimension}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{set\+Vector\+Lengths\+Per\+Dimension}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Vector\+Lengths\+Per\+Dimension (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xi \&}]{lengths\+\_\+per\+\_\+dimension}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Parameterizable_a77089aa6cc3b95dd0a1c17de7bc033b9}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000017}{Todo}]Document this \end{DoxyRefDesc}
+
+
+Definition at line 234 of file Parameterizable.\+hpp.
+
+
+\begin{DoxyCode}
+235   \{
+236     assert(lengths\_per\_dimension.sum()==\hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{getParameterVectorSelectedSize}());
+237     lengths\_per\_dimension\_ = lengths\_per\_dimension;
+238   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Parameterizable_a77089aa6cc3b95dd0a1c17de7bc033b9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Parameterizable_a410ef532c4861b8d50c35508fa114484}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Vector\+Lengths\+Per\+Dimension@{get\+Vector\+Lengths\+Per\+Dimension}}
+\index{get\+Vector\+Lengths\+Per\+Dimension@{get\+Vector\+Lengths\+Per\+Dimension}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Vector\+Lengths\+Per\+Dimension}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xi get\+Vector\+Lengths\+Per\+Dimension (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Parameterizable_a410ef532c4861b8d50c35508fa114484}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000018}{Todo}]Document this \end{DoxyRefDesc}
+
+
+Definition at line 243 of file Parameterizable.\+hpp.
+
+
+\begin{DoxyCode}
+244   \{
+245     \textcolor{keywordflow}{return} lengths\_per\_dimension\_;
+246   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_a235305eba6732091193aa95869d78514}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!get\+Parameter\+Vector\+Selected@{get\+Parameter\+Vector\+Selected}}
+\index{get\+Parameter\+Vector\+Selected@{get\+Parameter\+Vector\+Selected}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{get\+Parameter\+Vector\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Selected (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{values, }
+\item[{bool}]{normalized = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1Parameterizable_a235305eba6732091193aa95869d78514}
+
+
+Get the values of the selected parameters in one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & The selected parameters concatenated in one vector \\
+\hline
+\mbox{\tt in}  & {\em normalized} & Whether to normalize the data or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The lenghts of each Eigen\+::\+Vector\+Xd in the std\+::vector is set with \hyperlink{classDmpBbo_1_1Parameterizable_a77089aa6cc3b95dd0a1c17de7bc033b9}{Parameterizable\+::set\+Vector\+Lengths\+Per\+Dimension()} 
+\end{DoxyRemark}
+
+
+Definition at line 245 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+246 \{
+247   VectorXd values;
+248   \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{getParameterVectorSelected}(values,normalized);
+249   
+250   \textcolor{keywordflow}{if} (lengths\_per\_dimension\_.size()==0)
+251   \{
+252     vector\_values.resize(1);
+253     vector\_values[0] = values;
+254     \textcolor{keywordflow}{return};
+255   \}
+256 
+257   assert(values.size()==lengths\_per\_dimension\_.sum());
+258   
+259   vector\_values.resize(lengths\_per\_dimension\_.size());
+260   \textcolor{keywordtype}{int} offset = 0;
+261   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<lengths\_per\_dimension\_.size(); i\_dim++)
+262   \{
+263     vector\_values[i\_dim] = values.segment(offset,lengths\_per\_dimension\_[i\_dim]);
+264     offset += lengths\_per\_dimension\_[i\_dim];
+265   \}
+266 
+267 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Parameterizable_a9b7c8caab0ded09410636d136e7da9f8}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!set\+Parameter\+Vector\+Selected@{set\+Parameter\+Vector\+Selected}}
+\index{set\+Parameter\+Vector\+Selected@{set\+Parameter\+Vector\+Selected}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{set\+Parameter\+Vector\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+Selected (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{values, }
+\item[{bool}]{normalized = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Parameterizable_a9b7c8caab0ded09410636d136e7da9f8}
+
+
+Set all the values of the selected parameters with a vector of vectors. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & The new values of the selected parameters in one vector \\
+\hline
+\mbox{\tt in}  & {\em normalized} & Whether the data is normalized or not \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The lenghts of each Eigen\+::\+Vector\+Xd in the std\+::vector is set with \hyperlink{classDmpBbo_1_1Parameterizable_a77089aa6cc3b95dd0a1c17de7bc033b9}{Parameterizable\+::set\+Vector\+Lengths\+Per\+Dimension()} 
+\end{DoxyRemark}
+
+
+Definition at line 269 of file Parameterizable.\+cpp.
+
+
+\begin{DoxyCode}
+270 \{
+271   \textcolor{keywordflow}{if} (lengths\_per\_dimension\_.size()==0)
+272   \{
+273     assert(vector\_values.size()==1);
+274     assert(vector\_values[0].size()==\hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{getParameterVectorSelectedSize}());
+275     \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{setParameterVectorSelected}(vector\_values[0],normalized);
+276     \textcolor{keywordflow}{return};
+277   \}
+278   
+279   VectorXd values(lengths\_per\_dimension\_.sum());
+280   \textcolor{keywordtype}{int} offset = 0;
+281   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<lengths\_per\_dimension\_.size(); i\_dim++)
+282   \{
+283     assert(vector\_values[i\_dim].size() == lengths\_per\_dimension\_[i\_dim]);
+284     values.segment(offset,lengths\_per\_dimension\_[i\_dim]) = vector\_values[i\_dim];
+285     offset += lengths\_per\_dimension\_[i\_dim];
+286   \}
+287   
+288   \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{setParameterVectorSelected}(values,normalized);
+289 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1Parameterizable_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Parameterizable@{Dmp\+Bbo\+::\+Parameterizable}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1Parameterizable_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 288 of file Parameterizable.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Parameterizable_8hpp}{Parameterizable.\+hpp}\item 
+\hyperlink{Parameterizable_8cpp}{Parameterizable.\+cpp}\end{DoxyCompactItemize}

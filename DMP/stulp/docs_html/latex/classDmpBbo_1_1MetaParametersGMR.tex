@@ -1,0 +1,184 @@
+\hypertarget{classDmpBbo_1_1MetaParametersGMR}{\subsection{Meta\+Parameters\+G\+M\+R Class Reference}
+\label{classDmpBbo_1_1MetaParametersGMR}\index{Meta\+Parameters\+G\+M\+R@{Meta\+Parameters\+G\+M\+R}}
+}
+
+
+Meta-\/parameters for the G\+M\+R function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Meta\+Parameters\+G\+M\+R.\+hpp$>$}
+
+
+
+Inheritance diagram for Meta\+Parameters\+G\+M\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classDmpBbo_1_1MetaParametersGMR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Meta\+Parameters\+G\+M\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{classDmpBbo_1_1MetaParametersGMR__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1MetaParametersGMR_a63110f4ac8f8e509e5af3ca0fb762793}{Meta\+Parameters\+G\+M\+R} (int expected\+\_\+input\+\_\+dim, int number\+\_\+of\+\_\+gaussians)
+\begin{DoxyCompactList}\small\item\em Constructor for the algorithmic meta-\/parameters of the G\+M\+R function approximator. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1MetaParametersGMR}{Meta\+Parameters\+G\+M\+R} $\ast$ \hyperlink{classDmpBbo_1_1MetaParametersGMR_a6a8080c6a71576a4f79c3c030e2c1ea1}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1MetaParameters}{Meta\+Parameters} object. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1MetaParametersGMR_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1MetaParametersGMR_a6f9f278fd7746f1df449e4a6af500b0f}{class {\bfseries Function\+Approximator\+G\+M\+R}}\label{classDmpBbo_1_1MetaParametersGMR_a6f9f278fd7746f1df449e4a6af500b0f}
+
+\item 
+class \hyperlink{classDmpBbo_1_1MetaParametersGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Meta-\/parameters for the G\+M\+R function approximator. 
+
+Definition at line 35 of file Meta\+Parameters\+G\+M\+R.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersGMR_a63110f4ac8f8e509e5af3ca0fb762793}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R}!Meta\+Parameters\+G\+M\+R@{Meta\+Parameters\+G\+M\+R}}
+\index{Meta\+Parameters\+G\+M\+R@{Meta\+Parameters\+G\+M\+R}!Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R}}
+\paragraph[{Meta\+Parameters\+G\+M\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Parameters\+G\+M\+R} (
+\begin{DoxyParamCaption}
+\item[{int}]{expected\+\_\+input\+\_\+dim, }
+\item[{int}]{number\+\_\+of\+\_\+gaussians}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1MetaParametersGMR_a63110f4ac8f8e509e5af3ca0fb762793}
+
+
+Constructor for the algorithmic meta-\/parameters of the G\+M\+R function approximator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em expected\+\_\+input\+\_\+dim} & Expected dimensionality of the input data \\
+\hline
+\mbox{\tt in}  & {\em number\+\_\+of\+\_\+gaussians} & Number of gaussians \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file Meta\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+44         :
+45     \hyperlink{classDmpBbo_1_1MetaParameters_ae73979b117d45e439547c42eb1b4fc7b}{MetaParameters}(expected\_input\_dim),
+46     number\_of\_gaussians\_(number\_of\_gaussians)
+47 \{
+48 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersGMR_a6a8080c6a71576a4f79c3c030e2c1ea1}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Parameters\+G\+M\+R} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1MetaParametersGMR_a6a8080c6a71576a4f79c3c030e2c1ea1}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1MetaParameters}{Meta\+Parameters} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1MetaParameters_a93ea31a71a0956a7031f060b2d439641}{Meta\+Parameters}.
+
+
+
+Definition at line 50 of file Meta\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+51 \{
+52   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1MetaParametersGMR_a63110f4ac8f8e509e5af3ca0fb762793}{MetaParametersGMR}(\hyperlink{classDmpBbo_1_1MetaParameters_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}(),
+      number\_of\_gaussians\_);
+53 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classDmpBbo_1_1MetaParametersGMR_a6a8080c6a71576a4f79c3c030e2c1ea1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1MetaParametersGMR_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1MetaParametersGMR_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1MetaParameters_af084bff2ddd6233e9a898faa23f6195c}{Meta\+Parameters}.
+
+
+
+Definition at line 64 of file Meta\+Parameters\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+65 \{
+66   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"MetaParametersGMR"})
+      ;
+67 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+G\+M\+R}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1MetaParametersGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 61 of file Meta\+Parameters\+G\+M\+R.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MetaParametersGMR_8hpp}{Meta\+Parameters\+G\+M\+R.\+hpp}\item 
+\hyperlink{MetaParametersGMR_8cpp}{Meta\+Parameters\+G\+M\+R.\+cpp}\end{DoxyCompactItemize}

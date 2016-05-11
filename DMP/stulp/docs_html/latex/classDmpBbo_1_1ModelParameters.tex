@@ -1,0 +1,249 @@
+\hypertarget{classDmpBbo_1_1ModelParameters}{\subsection{Model\+Parameters Class Reference}
+\label{classDmpBbo_1_1ModelParameters}\index{Model\+Parameters@{Model\+Parameters}}
+}
+
+
+Base class for all model parameters of function approximators.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Parameters.\+hpp$>$}
+
+
+
+Inheritance diagram for Model\+Parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1ModelParameters__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+Parameters\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classDmpBbo_1_1ModelParameters__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} $\ast$ \hyperlink{classDmpBbo_1_1ModelParameters_a491a5c84b21c8577748ca7e83a9b4751}{clone} (void) const =0
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} object. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classDmpBbo_1_1ModelParameters_af084bff2ddd6233e9a898faa23f6195c}{to\+String} (void) const =0
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classDmpBbo_1_1ModelParameters_af4d8412e83487a72b7f8929c716d6d8f}{get\+Expected\+Input\+Dim} (void) const =0
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the input data. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classDmpBbo_1_1ModelParameters_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}{get\+Expected\+Output\+Dim} (void) const 
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the output data. \end{DoxyCompactList}\item 
+virtual \hyperlink{classDmpBbo_1_1UnifiedModel}{Unified\+Model} $\ast$ \hyperlink{classDmpBbo_1_1ModelParameters_a9d1c72e871e8fa37857f9ce7eabe5a04}{to\+Unified\+Model} (void) const =0
+\begin{DoxyCompactList}\small\item\em Convert these model parameters to unified model parameters. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class Archive $>$ }\\void \hyperlink{classDmpBbo_1_1ModelParameters_a68e832cb064e3b7ca978d8e5911cf700}{serialize} (Archive \&ar, const unsigned int version)
+\begin{DoxyCompactList}\small\item\em Serialize class data members to boost archive. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1ModelParameters_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{classDmpBbo_1_1ModelParameters_a602717d7330837683653868574bcf44d}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} \&model\+\_\+parameters)
+\begin{DoxyCompactList}\small\item\em Print to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Base class for all model parameters of function approximators. 
+
+Definition at line 42 of file Model\+Parameters.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1ModelParameters_a491a5c84b21c8577748ca7e83a9b4751}{\index{Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Model\+Parameters}$\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1ModelParameters_a491a5c84b21c8577748ca7e83a9b4751}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1ModelParametersGMR_a0a71d403a2e0560e058c03394648d773}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGPR_a0a71d403a2e0560e058c03394648d773}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_a0a71d403a2e0560e058c03394648d773}{Model\+Parameters\+L\+W\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a0a71d403a2e0560e058c03394648d773}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_a0a71d403a2e0560e058c03394648d773}{Model\+Parameters\+L\+W\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_a0a71d403a2e0560e058c03394648d773}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1ModelParameters_af084bff2ddd6233e9a898faa23f6195c}{\index{Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1ModelParameters_af084bff2ddd6233e9a898faa23f6195c}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1ModelParametersGMR_a1aca816b42cf0d36118be0ab91120d77}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGPR_a1aca816b42cf0d36118be0ab91120d77}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_a1aca816b42cf0d36118be0ab91120d77}{Model\+Parameters\+L\+W\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a1aca816b42cf0d36118be0ab91120d77}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_a1aca816b42cf0d36118be0ab91120d77}{Model\+Parameters\+L\+W\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_a1aca816b42cf0d36118be0ab91120d77}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1ModelParameters_af4d8412e83487a72b7f8929c716d6d8f}{\index{Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}!get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}}
+\index{get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}!Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}}
+\paragraph[{get\+Expected\+Input\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}virtual int get\+Expected\+Input\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1ModelParameters_af4d8412e83487a72b7f8929c716d6d8f}
+
+
+The expected dimensionality of the input data. 
+
+\begin{DoxyReturn}{Returns}
+Expected dimensionality of the input data 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1ModelParametersGPR_af5a550bcf65d5a29a153a594cc4e3fa1}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGMR_a2dadd5878cbb2d453e311d8d1adb314c}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_af5a550bcf65d5a29a153a594cc4e3fa1}{Model\+Parameters\+L\+W\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_af5a550bcf65d5a29a153a594cc4e3fa1}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_af5a550bcf65d5a29a153a594cc4e3fa1}{Model\+Parameters\+L\+W\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_af5a550bcf65d5a29a153a594cc4e3fa1}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1ModelParameters_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}{\index{Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}!get\+Expected\+Output\+Dim@{get\+Expected\+Output\+Dim}}
+\index{get\+Expected\+Output\+Dim@{get\+Expected\+Output\+Dim}!Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}}
+\paragraph[{get\+Expected\+Output\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}virtual int get\+Expected\+Output\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParameters_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}
+
+
+The expected dimensionality of the output data. 
+
+For now, we only consider 1-\/dimensional output by default. \begin{DoxyReturn}{Returns}
+Expected dimensionality of the output data 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1ModelParametersGMR_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}{Model\+Parameters\+G\+M\+R}.
+
+
+
+Definition at line 81 of file Model\+Parameters.\+hpp.
+
+
+\begin{DoxyCode}
+82   \{
+83     \textcolor{keywordflow}{return} 1;
+84   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParameters_a9d1c72e871e8fa37857f9ce7eabe5a04}{\index{Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}!to\+Unified\+Model@{to\+Unified\+Model}}
+\index{to\+Unified\+Model@{to\+Unified\+Model}!Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}}
+\paragraph[{to\+Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Unified\+Model}$\ast$ to\+Unified\+Model (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1ModelParameters_a9d1c72e871e8fa37857f9ce7eabe5a04}
+
+
+Convert these model parameters to unified model parameters. 
+
+\begin{DoxyReturn}{Returns}
+Unified model parameter representation (N\+U\+L\+L if not implemented for a particular subclass) 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1ModelParametersGMR_a6e3534f93333334c2f0126f8fc4d29d1}{Model\+Parameters\+G\+M\+R}, \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a6e3534f93333334c2f0126f8fc4d29d1}{Model\+Parameters\+R\+B\+F\+N}, \hyperlink{classDmpBbo_1_1ModelParametersLWR_a6e3534f93333334c2f0126f8fc4d29d1}{Model\+Parameters\+L\+W\+R}, \hyperlink{classDmpBbo_1_1ModelParametersGPR_a6e3534f93333334c2f0126f8fc4d29d1}{Model\+Parameters\+G\+P\+R}, \hyperlink{classDmpBbo_1_1ModelParametersLWPR_a6e3534f93333334c2f0126f8fc4d29d1}{Model\+Parameters\+L\+W\+P\+R}, and \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS_a6e3534f93333334c2f0126f8fc4d29d1}{Model\+Parameters\+I\+R\+F\+R\+L\+S}.
+
+\hypertarget{classDmpBbo_1_1ModelParameters_a68e832cb064e3b7ca978d8e5911cf700}{\index{Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}!serialize@{serialize}}
+\index{serialize@{serialize}!Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}}
+\paragraph[{serialize}]{\setlength{\rightskip}{0pt plus 5cm}void serialize (
+\begin{DoxyParamCaption}
+\item[{Archive \&}]{ar, }
+\item[{const unsigned int}]{version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ModelParameters_a68e832cb064e3b7ca978d8e5911cf700}
+
+
+Serialize class data members to boost archive. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ar} & Boost archive \\
+\hline
+\mbox{\tt in}  & {\em version} & Version of the class See \href{http://www.boost.org/doc/libs/1_55_0/libs/serialization/doc/tutorial.html#simplecase}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+55\+\_\+0/libs/serialization/doc/tutorial.\+html\#simplecase} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 103 of file Model\+Parameters.\+hpp.
+
+
+\begin{DoxyCode}
+104   \{
+105     \textcolor{comment}{// serialize base class information}
+106     ar & BOOST\_SERIALIZATION\_BASE\_OBJECT\_NVP(Parameterizable);
+107   \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1ModelParameters_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1ModelParameters_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 95 of file Model\+Parameters.\+hpp.
+
+\hypertarget{classDmpBbo_1_1ModelParameters_a602717d7330837683653868574bcf44d}{\index{Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dmp\+Bbo\+::\+Model\+Parameters@{Dmp\+Bbo\+::\+Model\+Parameters}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Model\+Parameters} \&}]{model\+\_\+parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1ModelParameters_a602717d7330837683653868574bcf44d}
+
+
+Print to output stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em output} & Output stream to which to write to \\
+\hline
+\mbox{\tt in}  & {\em model\+\_\+parameters} & Model-\/parameters to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Calls virtual function \hyperlink{classDmpBbo_1_1ModelParameters_af084bff2ddd6233e9a898faa23f6195c}{Model\+Parameters\+::to\+String}, which must be implemented by subclasses\+: \href{http://stackoverflow.com/questions/4571611/virtual-operator}{\tt http\+://stackoverflow.\+com/questions/4571611/virtual-\/operator} 
+\end{DoxyRemark}
+
+
+Definition at line 62 of file Model\+Parameters.\+hpp.
+
+
+\begin{DoxyCode}
+62                                                                                               \{
+63     output << model\_parameters.toString();
+64     \textcolor{keywordflow}{return} output;
+65   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ModelParameters_8hpp}{Model\+Parameters.\+hpp}\end{DoxyCompactItemize}

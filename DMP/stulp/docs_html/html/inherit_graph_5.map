@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classDmpBbo_1_1Task.html" title="Interface for cost functions, which define a task. " alt="" coords="5,42,59,69"/>
+<area shape="rect" id="node2" href="$classDemoTaskApproximateQuadraticFunction.html" title="The task is to choose the parameters a and c such that the function &#160;best matches a set of target val..." alt="" coords="107,5,337,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1TaskWithTrajectoryDemonstrator.html" title="Interface for tasks that are able to provide demonstrations that solve the task (optimally). " alt="" coords="107,71,337,98"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1TaskViapoint.html" title="Task for passing through a viapoint with minimal acceleration. " alt="" coords="385,71,489,98"/>
+</map>

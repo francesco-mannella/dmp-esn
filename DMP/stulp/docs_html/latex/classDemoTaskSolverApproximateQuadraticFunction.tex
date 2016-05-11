@@ -1,0 +1,161 @@
+\hypertarget{classDemoTaskSolverApproximateQuadraticFunction}{\subsection{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function Class Reference}
+\label{classDemoTaskSolverApproximateQuadraticFunction}\index{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}}
+}
+
+
+The task solver tunes the parameters a and c such that the function $ y = a*x^2 + c $ best matches a set of target values y\+\_\+target for a set of input values x.  
+
+
+
+
+Inheritance diagram for Demo\+Task\+Solver\+Approximate\+Quadratic\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classDemoTaskSolverApproximateQuadraticFunction__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Demo\+Task\+Solver\+Approximate\+Quadratic\+Function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=237pt]{classDemoTaskSolverApproximateQuadraticFunction__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDemoTaskSolverApproximateQuadraticFunction_ae4813da940a633221713aba3a12615c3}{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function} (const Vector\+Xd \&inputs)
+\item 
+void \hyperlink{classDemoTaskSolverApproximateQuadraticFunction_a51858a828b9e28eb72c39cc0bd212217}{perform\+Rollouts} (const Matrix\+Xd \&samples, const Matrix\+Xd \&task\+\_\+parameters, Matrix\+Xd \&cost\+\_\+vars) const 
+\begin{DoxyCompactList}\small\item\em Cost function. \end{DoxyCompactList}\item 
+string \hyperlink{classDemoTaskSolverApproximateQuadraticFunction_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+The task solver tunes the parameters a and c such that the function $ y = a*x^2 + c $ best matches a set of target values y\+\_\+target for a set of input values x. 
+
+Definition at line 168 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDemoTaskSolverApproximateQuadraticFunction_ae4813da940a633221713aba3a12615c3}{\index{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}!Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}}
+\index{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}!Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}}
+\paragraph[{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demo\+Task\+Solver\+Approximate\+Quadratic\+Function} (
+\begin{DoxyParamCaption}
+\item[{const Vector\+Xd \&}]{inputs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDemoTaskSolverApproximateQuadraticFunction_ae4813da940a633221713aba3a12615c3}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & x in $ y = a*x^2 + c $ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 174 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+\begin{DoxyCode}
+175   \{
+176     inputs\_ = inputs;
+177   \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDemoTaskSolverApproximateQuadraticFunction_a51858a828b9e28eb72c39cc0bd212217}{\index{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}!perform\+Rollouts@{perform\+Rollouts}}
+\index{perform\+Rollouts@{perform\+Rollouts}!Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}}
+\paragraph[{perform\+Rollouts}]{\setlength{\rightskip}{0pt plus 5cm}void perform\+Rollouts (
+\begin{DoxyParamCaption}
+\item[{const Matrix\+Xd \&}]{samples, }
+\item[{const Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{Matrix\+Xd \&}]{cost\+\_\+vars}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDemoTaskSolverApproximateQuadraticFunction_a51858a828b9e28eb72c39cc0bd212217}
+
+
+Cost function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples} & Samples containing variations of a and c (in $ y = a*x^2 + c $) \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & Ignored \\
+\hline
+\mbox{\tt in}  & {\em cost\+\_\+vars} & Cost-\/relevant variables, containing the predictions \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 184 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+\begin{DoxyCode}
+185   \{
+186     \textcolor{keywordtype}{int} n\_samples = samples.rows();
+187     cost\_vars.resize(n\_samples,inputs\_.size());
+188     
+189     VectorXd predictions, diff\_square;
+190     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k=0; k<n\_samples; k++)
+191     \{
+192       \textcolor{keywordtype}{double} a = samples(k,0);
+193       \textcolor{keywordtype}{double} c = samples(k,1);
+194       \hyperlink{demoEvolutionaryOptimizationTask_8cpp_a8dd69e1c4b8036ab6c2b6f386fe5b6bc}{targetFunction}(a,c,inputs\_,predictions);
+195       
+196       cost\_vars.row(k) = predictions;
+197     \}
+198   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{classDemoTaskSolverApproximateQuadraticFunction_a51858a828b9e28eb72c39cc0bd212217_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDemoTaskSolverApproximateQuadraticFunction_a1aca816b42cf0d36118be0ab91120d77}{\index{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Demo\+Task\+Solver\+Approximate\+Quadratic\+Function@{Demo\+Task\+Solver\+Approximate\+Quadratic\+Function}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDemoTaskSolverApproximateQuadraticFunction_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1TaskSolver_af084bff2ddd6233e9a898faa23f6195c}{Task\+Solver}.
+
+
+
+Definition at line 203 of file demo\+Evolutionary\+Optimization\+Task.\+cpp.
+
+
+\begin{DoxyCode}
+204   \{
+205     \textcolor{keywordtype}{string} str = \textcolor{stringliteral}{"TaskApproximateQuadraticFunctionSolver"};
+206     \textcolor{keywordflow}{return} str;
+207   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{demoEvolutionaryOptimizationTask_8cpp}{demo\+Evolutionary\+Optimization\+Task.\+cpp}\end{DoxyCompactItemize}

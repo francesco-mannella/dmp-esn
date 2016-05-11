@@ -1,0 +1,461 @@
+\hypertarget{group__DynamicalSystems}{\subsection{Dynamical Systems}
+\label{group__DynamicalSystems}\index{Dynamical Systems@{Dynamical Systems}}
+}
+Collaboration diagram for Dynamical Systems\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__DynamicalSystems}
+\end{center}
+\end{figure}
+\subsubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \hyperlink{demoDynamicalSystems_8cpp}{demo\+Dynamical\+Systems.\+cpp}
+\begin{DoxyCompactList}\small\item\em Demonstrates how to initialize, integrate, perturb all implemented exponential systems. \end{DoxyCompactList}\item 
+file \hyperlink{demoExponentialSystem_8cpp}{demo\+Exponential\+System.\+cpp}
+\begin{DoxyCompactList}\small\item\em Demonstrates how to initialize and integrate an exponential dynamical system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System}
+\begin{DoxyCompactList}\small\item\em Interface for implementing dynamical systems. \end{DoxyCompactList}\item 
+class \hyperlink{classDmpBbo_1_1ExponentialSystem}{Exponential\+System}
+\begin{DoxyCompactList}\small\item\em Dynamical System modelling the evolution of an exponential system\+: $\dot{x} = -\alpha (x-x^g)$. \end{DoxyCompactList}\item 
+class \hyperlink{classDmpBbo_1_1SigmoidSystem}{Sigmoid\+System}
+\begin{DoxyCompactList}\small\item\em Dynamical System modelling the evolution of a sigmoidal system $\dot{x} = -\alpha x(1-x/K)$. \end{DoxyCompactList}\item 
+class \hyperlink{classDmpBbo_1_1SpringDamperSystem}{Spring\+Damper\+System}
+\begin{DoxyCompactList}\small\item\em Dynamical System modelling the evolution of a spring-\/damper system\+: $ m\ddot{x} = -k(x-x^g) -c\dot{x}$. \end{DoxyCompactList}\item 
+class \hyperlink{classDmpBbo_1_1TimeSystem}{Time\+System}
+\begin{DoxyCompactList}\small\item\em Dynamical System modelling the evolution of a time\+: $\dot{x} = 1/\tau$. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Accessor functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__DynamicalSystems_ga9eca50997f7f604b063d2cb1874f5fef}{Integration\+Method} \{ {\bfseries E\+U\+L\+E\+R}, 
+{\bfseries R\+U\+N\+G\+E\+\_\+\+K\+U\+T\+T\+A}
+ \}
+\begin{DoxyCompactList}\small\item\em The possible integration methods that can be used. \end{DoxyCompactList}\item 
+void \hyperlink{group__DynamicalSystems_ga07a2df4cc46a521ab81c614d79b33669}{set\+\_\+integration\+\_\+method} (Integration\+Method integration\+\_\+method)
+\begin{DoxyCompactList}\small\item\em Choose the integration method. \end{DoxyCompactList}\item 
+int \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the dimensionality of the dynamical system, i.\+e. \end{DoxyCompactList}\item 
+int \hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\+\_\+orig} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the dimensionality of the dynamical system, i.\+e. \end{DoxyCompactList}\item 
+double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the time constant. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{set\+\_\+tau} (double tau)
+\begin{DoxyCompactList}\small\item\em Mutator function for the time constant. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\+\_\+state} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the initial state of the dynamical system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{set\+\_\+initial\+\_\+state} (const Eigen\+::\+Vector\+Xd \&initial\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Mutator function for the initial state of the dynamical system. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\+\_\+state} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the attractor state of the dynamical system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{set\+\_\+attractor\+\_\+state} (const Eigen\+::\+Vector\+Xd \&attractor\+\_\+state)
+\begin{DoxyCompactList}\small\item\em Mutator function for the attractor state of the dynamical system. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the name of the dynamical system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group__DynamicalSystems_ga5175bca5f98f36690a79e323119a1529}{set\+\_\+name} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Mutator function for the name of the dynamical system. \end{DoxyCompactList}\item 
+void \hyperlink{group__DynamicalSystems_ga9000562e645149d75717458a97db6ff5}{set\+\_\+dim} (int dim)
+\begin{DoxyCompactList}\small\item\em Set the dimensionality of the dynamical system, i.\+e. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+
+
+\subsubsection{Enumeration Type Documentation}
+\hypertarget{group__DynamicalSystems_ga9eca50997f7f604b063d2cb1874f5fef}{\index{Dynamical Systems@{Dynamical Systems}!Integration\+Method@{Integration\+Method}}
+\index{Integration\+Method@{Integration\+Method}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{Integration\+Method}]{\setlength{\rightskip}{0pt plus 5cm}enum Integration\+Method}}\label{group__DynamicalSystems_ga9eca50997f7f604b063d2cb1874f5fef}
+
+
+The possible integration methods that can be used. 
+
+\begin{DoxyItemize}
+\item E\+U\+L\+E\+R\+: simple Euler method (\href{http://en.wikipedia.org/wiki/Euler_integration}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Euler\+\_\+integration}) \item R\+U\+N\+G\+E\+\_\+\+K\+U\+T\+T\+A\+: 4th-\/order Runge-\/\+Kutta (\href{http://en.wikipedia.org/wiki/List_of_Runge%E2%80%93Kutta_methods#Classic_fourth-order_method}{\tt http\+://en.\+wikipedia.\+org/wiki/\+List\+\_\+of\+\_\+\+Runge\%\+E2\%80\%93\+Kutta\+\_\+methods\#\+Classic\+\_\+fourth-\/order\+\_\+method}) \end{DoxyItemize}
+
+
+Definition at line 185 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+185 \{ EULER, RUNGE\_KUTTA \};
+\end{DoxyCode}
+
+
+\subsubsection{Function Documentation}
+\hypertarget{group__DynamicalSystems_ga07a2df4cc46a521ab81c614d79b33669}{\index{Dynamical Systems@{Dynamical Systems}!set\+\_\+integration\+\_\+method@{set\+\_\+integration\+\_\+method}}
+\index{set\+\_\+integration\+\_\+method@{set\+\_\+integration\+\_\+method}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{set\+\_\+integration\+\_\+method}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+integration\+\_\+method (
+\begin{DoxyParamCaption}
+\item[{{\bf Integration\+Method}}]{integration\+\_\+method}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{group__DynamicalSystems_ga07a2df4cc46a521ab81c614d79b33669}
+
+
+Choose the integration method. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em integration\+\_\+method} & The integration method, see \hyperlink{group__DynamicalSystems_ga9eca50997f7f604b063d2cb1874f5fef}{Dynamical\+System\+::\+Integration\+Method}. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 190 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+190                                                                            \{
+191     integration\_method\_ = integration\_method;
+192   \}
+\end{DoxyCode}
+\hypertarget{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{\index{Dynamical Systems@{Dynamical Systems}!dim@{dim}}
+\index{dim@{dim}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{dim}]{\setlength{\rightskip}{0pt plus 5cm}int dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}
+
+
+Get the dimensionality of the dynamical system, i.\+e. 
+
+the length of its state vector. \begin{DoxyReturn}{Returns}
+Dimensionality of the dynamical system 
+\end{DoxyReturn}
+
+
+Definition at line 198 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+198                              \{
+199     \textcolor{keywordflow}{return} dim\_;
+200   \}
+\end{DoxyCode}
+\hypertarget{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{\index{Dynamical Systems@{Dynamical Systems}!dim\+\_\+orig@{dim\+\_\+orig}}
+\index{dim\+\_\+orig@{dim\+\_\+orig}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{dim\+\_\+orig}]{\setlength{\rightskip}{0pt plus 5cm}int dim\+\_\+orig (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}
+
+
+Get the dimensionality of the dynamical system, i.\+e. 
+
+the length of its output.
+
+2nd order systems are represented as 1st order systems with an expanded state. The \hyperlink{classDmpBbo_1_1SpringDamperSystem}{Spring\+Damper\+System} for instance is represented as x = \mbox{[}y z\mbox{]}, xd = \mbox{[}yd zd\mbox{]}. Dynamical\+System\+::get\+Dim returns dim(x) = dim(\mbox{[}y z\mbox{]}) = 2$\ast$dim(y) \hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{Dynamical\+System\+::dim\+\_\+orig} returns dim(y) = \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}/2
+
+For Dynamical Movement Primitives, \hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\+\_\+orig()} may be for instance 3, if the output of the D\+M\+P represents x,y,z coordinates. However, \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} will have a much larger dimensionality, because it also contains the variables of all the subsystems (phase system, gating system, etc.)
+
+\begin{DoxyReturn}{Returns}
+Original dimensionality of the dynamical system 
+\end{DoxyReturn}
+
+
+Definition at line 216 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+216                                    \{
+217     \textcolor{keywordflow}{return} dim\_orig\_;
+218    \}
+\end{DoxyCode}
+\hypertarget{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{\index{Dynamical Systems@{Dynamical Systems}!tau@{tau}}
+\index{tau@{tau}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{tau}]{\setlength{\rightskip}{0pt plus 5cm}double tau (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}
+
+
+Accessor function for the time constant. 
+
+\begin{DoxyReturn}{Returns}
+Time constant 
+\end{DoxyReturn}
+
+
+Definition at line 224 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+224 \{ \textcolor{keywordflow}{return} tau\_; \}
+\end{DoxyCode}
+\hypertarget{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{\index{Dynamical Systems@{Dynamical Systems}!set\+\_\+tau@{set\+\_\+tau}}
+\index{set\+\_\+tau@{set\+\_\+tau}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{set\+\_\+tau}]{\setlength{\rightskip}{0pt plus 5cm}virtual void set\+\_\+tau (
+\begin{DoxyParamCaption}
+\item[{double}]{tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}
+
+
+Mutator function for the time constant. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tau} & Time constant \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1Dmp_a17edb45ef62a4ef7f8c78e4f8f68b249}{Dmp}, and \hyperlink{classDmpBbo_1_1SigmoidSystem_a17edb45ef62a4ef7f8c78e4f8f68b249}{Sigmoid\+System}.
+
+
+
+Definition at line 230 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+230                                           \{
+231     assert(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}>0.0);
+232     tau\_ = \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau};
+233   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{\index{Dynamical Systems@{Dynamical Systems}!initial\+\_\+state@{initial\+\_\+state}}
+\index{initial\+\_\+state@{initial\+\_\+state}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{initial\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd initial\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}
+
+
+Accessor function for the initial state of the dynamical system. 
+
+\begin{DoxyReturn}{Returns}
+Initial state of the dynamical system. 
+\end{DoxyReturn}
+
+
+Definition at line 239 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+239 \{ \textcolor{keywordflow}{return} initial\_state\_; \}
+\end{DoxyCode}
+\hypertarget{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{\index{Dynamical Systems@{Dynamical Systems}!set\+\_\+initial\+\_\+state@{set\+\_\+initial\+\_\+state}}
+\index{set\+\_\+initial\+\_\+state@{set\+\_\+initial\+\_\+state}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{set\+\_\+initial\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}virtual void set\+\_\+initial\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{initial\+\_\+state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}
+
+
+Mutator function for the initial state of the dynamical system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em initial\+\_\+state} & Initial state of the dynamical system. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1Dmp_ad4e11c676c2add8a992db1caf542f0a0}{Dmp}, and \hyperlink{classDmpBbo_1_1SigmoidSystem_ad4e11c676c2add8a992db1caf542f0a0}{Sigmoid\+System}.
+
+
+
+Definition at line 244 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+244                                                                             \{
+245     assert(\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}.size()==dim\_orig\_);
+246     initial\_state\_ = \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state};
+247   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{\index{Dynamical Systems@{Dynamical Systems}!attractor\+\_\+state@{attractor\+\_\+state}}
+\index{attractor\+\_\+state@{attractor\+\_\+state}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{attractor\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd attractor\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}
+
+
+Accessor function for the attractor state of the dynamical system. 
+
+\begin{DoxyReturn}{Returns}
+Attractor state of the dynamical system. 
+\end{DoxyReturn}
+
+
+Definition at line 253 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+253 \{ \textcolor{keywordflow}{return} attractor\_state\_; \}
+\end{DoxyCode}
+\hypertarget{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{\index{Dynamical Systems@{Dynamical Systems}!set\+\_\+attractor\+\_\+state@{set\+\_\+attractor\+\_\+state}}
+\index{set\+\_\+attractor\+\_\+state@{set\+\_\+attractor\+\_\+state}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{set\+\_\+attractor\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}virtual void set\+\_\+attractor\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{attractor\+\_\+state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}
+
+
+Mutator function for the attractor state of the dynamical system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em attractor\+\_\+state} & Attractor state of the dynamical system. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1Dmp_a6dccbd077acfd148f528a48a72a4003f}{Dmp}.
+
+
+
+Definition at line 258 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+258                                                                                 \{
+259     assert(\hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}.size()==dim\_orig\_);
+260     attractor\_state\_ = \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state};
+261   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{\index{Dynamical Systems@{Dynamical Systems}!name@{name}}
+\index{name@{name}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}
+
+
+Accessor function for the name of the dynamical system. 
+
+\begin{DoxyReturn}{Returns}
+Name of the dynamical system. 
+\end{DoxyReturn}
+
+
+Definition at line 267 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+267 \{ \textcolor{keywordflow}{return} name\_; \}
+\end{DoxyCode}
+\hypertarget{group__DynamicalSystems_ga5175bca5f98f36690a79e323119a1529}{\index{Dynamical Systems@{Dynamical Systems}!set\+\_\+name@{set\+\_\+name}}
+\index{set\+\_\+name@{set\+\_\+name}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{set\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}virtual void set\+\_\+name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{group__DynamicalSystems_ga5175bca5f98f36690a79e323119a1529}
+
+
+Mutator function for the name of the dynamical system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & Name of the dynamical system. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 272 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+272                                                \{
+273     name\_ = \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name};
+274   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{group__DynamicalSystems_ga5175bca5f98f36690a79e323119a1529_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{group__DynamicalSystems_ga9000562e645149d75717458a97db6ff5}{\index{Dynamical Systems@{Dynamical Systems}!set\+\_\+dim@{set\+\_\+dim}}
+\index{set\+\_\+dim@{set\+\_\+dim}!Dynamical Systems@{Dynamical Systems}}
+\paragraph[{set\+\_\+dim}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+dim (
+\begin{DoxyParamCaption}
+\item[{int}]{dim}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{group__DynamicalSystems_ga9000562e645149d75717458a97db6ff5}
+
+
+Set the dimensionality of the dynamical system, i.\+e. 
+
+the length of its state vector. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dim} & Dimensionality of the dynamical system \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 281 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+281                                \{
+282     dim\_ = \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim};
+283   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{group__DynamicalSystems_ga9000562e645149d75717458a97db6ff5_cgraph}
+\end{center}
+\end{figure}
+
+

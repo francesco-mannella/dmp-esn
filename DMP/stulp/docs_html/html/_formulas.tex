@@ -1,0 +1,270 @@
+\batchmode
+\documentclass{article}
+\usepackage{epsfig}
+\pagestyle{empty}
+\begin{document}
+$ y = a*x^2 + c $
+\pagebreak
+
+$ x^2 $
+\pagebreak
+
+$ [\mathbf{y \dot{y} \ddot{y}} ]$
+\pagebreak
+
+\begin{eqnarray*} m\ddot{y} =& -ky -c\dot{y} & \mbox{spring-damper system, ``traditional notation''} \\ m\ddot{y} =& c(-\frac{k}{c}y - \dot{y})\\ \tau\ddot{y} =& \alpha(-\beta y - \dot{y}) & \mbox{with } \alpha=c,~~\beta = \frac{k}{c},~~m=\tau\\ \tau\ddot{y} =& \alpha(-\beta (y-y^g) - \dot{y})& \mbox{with attractor } y^g\\ \tau\ddot{y} =& \alpha(\beta (y^g-y) - \dot{y})& \mbox{typical DMP notation for spring-damper system}\\ \end{eqnarray*}
+\pagebreak
+
+$y^g$
+\pagebreak
+
+$c = 2\sqrt{mk}$
+\pagebreak
+
+$\alpha = 2\sqrt{\alpha\beta}$
+\pagebreak
+
+$\beta = \alpha/4$
+\pagebreak
+
+$\beta$
+\pagebreak
+
+$\alpha$
+\pagebreak
+
+$ [z~y]$
+\pagebreak
+
+\begin{eqnarray*} \left[ \begin{array}{l} {\dot{z}} \\ {\dot{y}} \end{array} \right] = \left[ \begin{array}{l} (\alpha (\beta({y}^{g}-{y})-{z}))/\tau \\ {z}/\tau \end{array} \right] \mbox{~~~~with init. state~} \left[ \begin{array}{l} 0 \\ y_0 \end{array} \right] \mbox{~and attr. state~} \left[ \begin{array}{l} {0} \\ {y}^g \end{array} \right] \end{eqnarray*}
+\pagebreak
+
+$ [y~z]$
+\pagebreak
+
+$[z~y]$
+\pagebreak
+
+\begin{eqnarray*} \left[ \begin{array}{l} {\dot{z}} \\ {\dot{y}} \end{array} \right] = \left[ \begin{array}{l} (\alpha (\beta({y}^{g}-{y})-{z}) + f(t))/\tau \\ {z}/\tau \end{array} \right] \mbox{~~~~with init. state~} \left[ \begin{array}{l} 0 \\ y_0 \end{array} \right] \mbox{~and attr. state~} \left[ \begin{array}{l} {?} \\ {y}^g \end{array} \right] \end{eqnarray*}
+\pagebreak
+
+$ f(t)$
+\pagebreak
+
+$ x^g $
+\pagebreak
+
+\begin{eqnarray*} \dot{x} = \left[ \begin{array}{l} {\dot{z}} \\ {\dot{y}} \\ {\dot{x}} \end{array} \right] = \left[ \begin{array}{l} (\alpha_y (\beta_y({y}^{g}-{y})-{z}) + x\cdot f(t))/\tau \\ {z}/\tau \\ -\alpha_x x/\tau \end{array} \right] \mbox{~~~~with init. state~} \left[ \begin{array}{l} 0 \\ y_0 \\ 1 \end{array} \right] \mbox{~and attr. state~} \left[ \begin{array}{l} {0} \\ {y}^g \\ 0 \end{array} \right] \end{eqnarray*}
+\pagebreak
+
+$ t $
+\pagebreak
+
+$ f $
+\pagebreak
+
+$ f(x)$
+\pagebreak
+
+\begin{eqnarray*} \left[ \begin{array}{l} {\dot{z}} \\ {\dot{y}} \\ {\dot{x}} \end{array} \right] = \left[ \begin{array}{l} (\alpha_y (\beta_y({y}^{g}-{y})-{z}) + x\cdot f(x))/\tau \\ {z}/\tau \\ -\alpha_x x/\tau \end{array} \right] \mbox{~~~~with init. state~} \left[ \begin{array}{l} 0 \\ y_0 \\ 1 \end{array} \right] \mbox{~and attr. state~} \left[ \begin{array}{l} {0} \\ {y}^g \\ 0 \end{array} \right] \end{eqnarray*}
+\pagebreak
+
+$ f(t)s(x^g-x_0) $
+\pagebreak
+
+$ {\mathbf{y}}_{d=1\dots D}$
+\pagebreak
+
+$ D $
+\pagebreak
+
+\begin{eqnarray*} \left[ \begin{array}{l} {\dot{\mathbf{z}}} \\ {\dot{\mathbf{y}}} \\ {\dot{x}} \end{array} \right] = \left[ \begin{array}{l} (\alpha_y (\beta_y({\mathbf{y}}^{g}-\mathbf{y})-\mathbf{z}) + x\cdot f(x))/\tau \\ \mathbf{z}/\tau \\ -\alpha_x x/\tau \end{array} \right] \mbox{~~~~with init. state~} \left[ \begin{array}{l} \mathbf{0} \\ \mathbf{z}_0 \\ 1 \end{array} \right] \mbox{~and attr. state~} \left[ \begin{array}{l} \mathbf{0} \\ \mathbf{y}^g \\ 0 \end{array} \right] \end{eqnarray*}
+\pagebreak
+
+$[y~z]$
+\pagebreak
+
+$ f(x) $
+\pagebreak
+
+$ v $
+\pagebreak
+
+\begin{eqnarray*} \left[ \begin{array}{l} {\dot{\mathbf{z}}} \\ {\dot{\mathbf{y}}} \\ {\dot{x}} \\ {\dot{v}} \end{array} \right] = \left[ \begin{array}{l} (\alpha_y (\beta_y({\mathbf{y}}^{g}-\mathbf{y})-\mathbf{z}) + v\cdot f(x))/\tau \\ \mathbf{z}/\tau \\ -\alpha_x x/\tau \\ -\alpha_v v (1-v/v_{\mbox{\scriptsize max}}) \end{array} \right] \mbox{~~~~with init. state~} \left[ \begin{array}{l} \mathbf{0} \\ \mathbf{y}_0 \\ 1 \\ 1 \end{array} \right] \mbox{~and attr. state~} \left[ \begin{array}{l} \mathbf{0} \\ \mathbf{y}^g \\ 0 \\ 0 \end{array} \right] \end{eqnarray*}
+\pagebreak
+
+$ v_{\mbox{\scriptsize max}}$
+\pagebreak
+
+$\tau $
+\pagebreak
+
+$1/\tau$
+\pagebreak
+
+$t=\tau$
+\pagebreak
+
+\begin{eqnarray*} \dot{x} =& 1/\tau \mbox{~if~} x < 1 & \\ & 0 \mbox{~if~} x>1 \\ \end{eqnarray*}
+\pagebreak
+
+\begin{eqnarray*} \left[ \begin{array}{l} {\dot{\mathbf{z}}} \\ {\dot{\mathbf{y}}} \\ {\dot{x}} \\ {\dot{v}} \end{array} \right] = \left[ \begin{array}{l} (\alpha_y (\beta_y({\mathbf{y}}^{g}-\mathbf{y})-\mathbf{z}) + v\cdot f(x))/\tau \\ \mathbf{z}/\tau \\ 1/\tau \\ -\alpha_v v (1-v/v_{\mbox{\scriptsize max}}) \end{array} \right] \mbox{~~~~with init. state~} \left[ \begin{array}{l} \mathbf{0} \\ \mathbf{y}_0 \\ 0 \\ 1 \end{array} \right] \mbox{~and attr. state~} \left[ \begin{array}{l} \mathbf{0} \\ \mathbf{y}^g \\ 1 \\ 0 \end{array} \right] \end{eqnarray*}
+\pagebreak
+
+$ y_0 $
+\pagebreak
+
+$ y^g $
+\pagebreak
+
+$ y^{g_d} $
+\pagebreak
+
+\begin{eqnarray*} \left[ \begin{array}{l} {\dot{\mathbf{z}}} \\ {\dot{\mathbf{y}}} \\ {\dot{\mathbf{y}}^{g_d}} \\ {\dot{x}} \\ {\dot{v}} \end{array} \right] = \left[ \begin{array}{l} (\alpha_y (\beta_y({\mathbf{y}}^{g_d}-\mathbf{y})-\mathbf{z}) + v\cdot f(x))/\tau \\ \mathbf{z}/\tau \\ -\alpha_g({\mathbf{y}^g-\mathbf{y}^{g_d}}) \\ 1/\tau \\ -\alpha_v v (1-v/v_{\mbox{\scriptsize max}}) \end{array} \right] \mbox{~~~~with init. state~} \left[ \begin{array}{l} \mathbf{0} \\ \mathbf{y}_0 \\ \mathbf{y}_0 \\ 0 \\ 1 \end{array} \right] \mbox{~and attr. state~} \left[ \begin{array}{l} \mathbf{0} \\ \mathbf{y}^g \\ \mathbf{y}^g \\ 1 \\ 0 \end{array} \right] \end{eqnarray*}
+\pagebreak
+
+$x$
+\pagebreak
+
+$\frac{dx}{dt}$
+\pagebreak
+
+$ \frac{dx}{dt} = -\alpha x$
+\pagebreak
+
+$\dot{x}$
+\pagebreak
+
+$ x(t) $
+\pagebreak
+
+$x(t+dt)$
+\pagebreak
+
+$x_0\equiv x(0)=4$
+\pagebreak
+
+$ x_0$
+\pagebreak
+
+$dt$
+\pagebreak
+
+$dt=0.01s$
+\pagebreak
+
+$\alpha=6$
+\pagebreak
+
+$\alpha=3$
+\pagebreak
+
+$N(t) = x_0e^{-\alpha t}$
+\pagebreak
+
+$\dot{x} = -\alpha x$
+\pagebreak
+
+$x(t) = x_0e^{-\alpha t}$
+\pagebreak
+
+$\frac{dx}{dt} = -\alpha x$
+\pagebreak
+
+$\frac{d}{dt}(x_0e^{-\alpha t}) = -\alpha (x_0e^{-\alpha t})$
+\pagebreak
+
+$-\alpha(x_0e^{-\alpha t}) = -\alpha (x_0e^{-\alpha t})$
+\pagebreak
+
+$x_0$
+\pagebreak
+
+$x(\infty) = x_0e^{-\alpha\infty} = 0$
+\pagebreak
+
+$x^g$
+\pagebreak
+
+$g$
+\pagebreak
+
+\begin{eqnarray*} \dot{x} =& -\alpha(x-x^g) & \mbox{~with attractor } x^g \end{eqnarray*}
+\pagebreak
+
+\begin{eqnarray*} \tau\dot{x} =& -\alpha(x-x^g)\\ \dot{x} =& (-\alpha(x-x^g))/\tau \end{eqnarray*}
+\pagebreak
+
+$\tau$
+\pagebreak
+
+$\tau\dot{\mathbf{x}} = -\alpha(\mathbf{x}-\mathbf{x}^g)$
+\pagebreak
+
+$dim(\mathbf{x})\equiv dim(\dot{\mathbf{x}})$
+\pagebreak
+
+$ \dot{x} = -\alpha x$
+\pagebreak
+
+\begin{eqnarray*} \dot{x} =& -\alpha (x-x^g) & \mbox{exponential decay/growth} \label{equ_}\\ \dot{x} =& \alpha x (\beta-x) & \mbox{sigmoid} \label{equ_}\\ \dot{x} =& 1/\tau & \mbox{constant velocity (mimics the passage of time)} \label{equ_}\\ \end{eqnarray*}
+\pagebreak
+
+$ \dot{x} $
+\pagebreak
+
+$ \ddot{x} $
+\pagebreak
+
+$k$
+\pagebreak
+
+$c$
+\pagebreak
+
+$m$
+\pagebreak
+
+\begin{eqnarray*} m\ddot{x}=& -kx -c\dot{x} & \mbox{spring-damper (2nd order system)} \label{equ_}\\ \ddot{x}=& (-kx -c\dot{x})/m & \end{eqnarray*}
+\pagebreak
+
+$ x $
+\pagebreak
+
+$ x = [y~z]^T$
+\pagebreak
+
+$ z = \dot{y}$
+\pagebreak
+
+$ \left[ \begin{array}{l} \dot{y} \\ \dot{z} \end{array} \right] = \left[ \begin{array}{l} z \\ (-ky -cz)/m \end{array} \right] $
+\pagebreak
+
+$ x = [y~z]$
+\pagebreak
+
+$ y $
+\pagebreak
+
+$\dot{x} = -\alpha (x-x^g)$
+\pagebreak
+
+$\dot{x} = -\alpha x(1-x/K)$
+\pagebreak
+
+$ m\ddot{x} = -k(x-x^g) -c\dot{x}$
+\pagebreak
+
+$\dot{x} = 1/\tau$
+\pagebreak
+
+$ \mbox{train}: \mbox{MetaParameters} \times \mbox{Inputs} \times \mbox{Targets} \mapsto \mbox{ModelParameters} $
+\pagebreak
+
+$ \mbox{predict}: \mbox{ModelParameters} \times \mbox{Input} \mapsto \mbox{Output}$
+\pagebreak
+
+$ \mathbf{G}^-1\mathfb{y} $
+\pagebreak
+
+\end{document}

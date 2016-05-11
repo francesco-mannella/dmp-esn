@@ -1,0 +1,8 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Trajectory.html#a0ac526fb2e2e77134906a4b657d795d2" title="Accessor function for the times at which measurements were made. " alt="" coords="133,5,296,32"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Trajectory.html#a6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the trajectory. " alt="" coords="128,56,301,83"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1FunctionApproximatorLWR.html#ad792a46ac006916c5c1ffed2fa42dd24" title="Return a pointer to a deep copy of the FunctionApproximator object. " alt="" coords="105,107,324,149"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1Dmp.html#a5d14dedc6736ec5675b4026437b8a597" title="Train a DMP with a trajectory. " alt="" coords="143,173,287,200"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1FunctionApproximator.html#a6f1a44062eac61d88b647c358bcda155" title="Accessor for FunctionApproximator::meta_parameters_. " alt="" coords="372,74,591,115"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="372,139,591,181"/>
+</map>

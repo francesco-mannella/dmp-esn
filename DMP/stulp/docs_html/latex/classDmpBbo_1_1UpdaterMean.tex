@@ -1,0 +1,358 @@
+\hypertarget{classDmpBbo_1_1UpdaterMean}{\subsection{Updater\+Mean Class Reference}
+\label{classDmpBbo_1_1UpdaterMean}\index{Updater\+Mean@{Updater\+Mean}}
+}
+
+
+\hyperlink{classDmpBbo_1_1Updater}{Updater} that updates the mean (but not the covariance matrix) of the parameter distribution.  
+
+
+
+
+{\ttfamily \#include $<$Updater\+Mean.\+hpp$>$}
+
+
+
+Inheritance diagram for Updater\+Mean\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classDmpBbo_1_1UpdaterMean__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Updater\+Mean\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{classDmpBbo_1_1UpdaterMean__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1UpdaterMean_a8164afea816503cb4179eb65145947da}{Updater\+Mean} (double eliteness, std\+::string weighting\+\_\+method=\char`\"{}P\+I-\/B\+B\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1UpdaterMean_aabb65aaf08049416ed18b294d5fca415}{update\+Distribution} (const \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution, const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Vector\+Xd \&costs, Eigen\+::\+Vector\+Xd \&weights, \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution\+\_\+new) const 
+\begin{DoxyCompactList}\small\item\em Update a distribution given the samples and costs of an epoch. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UpdaterMean_a97c2ddfabeee67dba0044f405f4ce8c0}{update\+Distribution\+Mean} (const Eigen\+::\+Vector\+Xd \&mean, const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Vector\+Xd \&costs, Eigen\+::\+Vector\+Xd \&weights, Eigen\+::\+Vector\+Xd \&mean\+\_\+new) const 
+\begin{DoxyCompactList}\small\item\em Update the distribution mean. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UpdaterMean_a67bb3ad0e7d34b11aa5453adc462f9cc}{costs\+To\+Weights} (const Eigen\+::\+Vector\+Xd \&costs, std\+::string weighting\+\_\+method, double eliteness, Eigen\+::\+Vector\+Xd \&weights) const 
+\begin{DoxyCompactList}\small\item\em Convert costs to weights, given the weighting method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1UpdaterMean_a005e77ab55b2412bb2172b52bf263570}{Updater\+Mean} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1UpdaterMean_a9a4488d8ff4010bb33694ad3fafcad3f}{double \hyperlink{classDmpBbo_1_1UpdaterMean_a9a4488d8ff4010bb33694ad3fafcad3f}{eliteness\+\_\+}}\label{classDmpBbo_1_1UpdaterMean_a9a4488d8ff4010bb33694ad3fafcad3f}
+
+\begin{DoxyCompactList}\small\item\em Eliteness parameters ('mu' in C\+M\+A-\/\+E\+S, 'h' in P\+I$^\wedge$2) \end{DoxyCompactList}\item 
+\hypertarget{classDmpBbo_1_1UpdaterMean_abc5093717ab1b4a09921a2d6f98b58ba}{std\+::string \hyperlink{classDmpBbo_1_1UpdaterMean_abc5093717ab1b4a09921a2d6f98b58ba}{weighting\+\_\+method\+\_\+}}\label{classDmpBbo_1_1UpdaterMean_abc5093717ab1b4a09921a2d6f98b58ba}
+
+\begin{DoxyCompactList}\small\item\em Weighting method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1UpdaterMean_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\hyperlink{classDmpBbo_1_1Updater}{Updater} that updates the mean (but not the covariance matrix) of the parameter distribution. 
+
+Definition at line 36 of file Updater\+Mean.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1UpdaterMean_a8164afea816503cb4179eb65145947da}{\index{Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}!Updater\+Mean@{Updater\+Mean}}
+\index{Updater\+Mean@{Updater\+Mean}!Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}}
+\paragraph[{Updater\+Mean}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Updater\+Mean} (
+\begin{DoxyParamCaption}
+\item[{double}]{eliteness, }
+\item[{std\+::string}]{weighting\+\_\+method = {\ttfamily \char`\"{}PI-\/BB\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1UpdaterMean_a8164afea816503cb4179eb65145947da}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em eliteness} & The eliteness parameter ('mu' in C\+M\+A-\/\+E\+S, 'h' in P\+I$^\wedge$2) \\
+\hline
+\mbox{\tt in}  & {\em weighting\+\_\+method} & ('P\+I-\/\+B\+B' = P\+I$^\wedge$2 style weighting) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file Updater\+Mean.\+cpp.
+
+
+\begin{DoxyCode}
+42 : \hyperlink{classDmpBbo_1_1UpdaterMean_a9a4488d8ff4010bb33694ad3fafcad3f}{eliteness\_}(eliteness), \hyperlink{classDmpBbo_1_1UpdaterMean_abc5093717ab1b4a09921a2d6f98b58ba}{weighting\_method\_}(weighting\_method)
+43 \{
+44 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1UpdaterMean_a005e77ab55b2412bb2172b52bf263570}{\index{Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}!Updater\+Mean@{Updater\+Mean}}
+\index{Updater\+Mean@{Updater\+Mean}!Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}}
+\paragraph[{Updater\+Mean}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Updater\+Mean} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classDmpBbo_1_1UpdaterMean_a005e77ab55b2412bb2172b52bf263570}
+
+
+Default constructor. 
+
+\begin{DoxyRemark}{Remarks}
+This default constuctor is required for boost\+::serialization to work. See \hyperlink{page_serialization_sec_boost_serialization_ugliness}{Boost serialization issues} 
+\end{DoxyRemark}
+
+
+Definition at line 77 of file Updater\+Mean.\+hpp.
+
+
+\begin{DoxyCode}
+77 \{\};
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1UpdaterMean_aabb65aaf08049416ed18b294d5fca415}{\index{Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}!update\+Distribution@{update\+Distribution}}
+\index{update\+Distribution@{update\+Distribution}!Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}}
+\paragraph[{update\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Distribution (
+\begin{DoxyParamCaption}
+\item[{const {\bf Distribution\+Gaussian} \&}]{distribution, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{costs, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{weights, }
+\item[{{\bf Distribution\+Gaussian} \&}]{distribution\+\_\+new}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1UpdaterMean_aabb65aaf08049416ed18b294d5fca415}
+
+
+Update a distribution given the samples and costs of an epoch. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em distribution} & Current distribution \\
+\hline
+\mbox{\tt in}  & {\em samples} & The samples in the epoch (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em costs} & Costs of the samples (size\+: n\+\_\+samples x 1) \\
+\hline
+\mbox{\tt out}  & {\em weights} & The weights computed from the costs \\
+\hline
+\mbox{\tt out}  & {\em distribution\+\_\+new} & Updated distribution \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1Updater_ac7a91b073fbe6e73a10c14fb73bd9689}{Updater}.
+
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1UpdaterCovarAdaptation_aabb65aaf08049416ed18b294d5fca415}{Updater\+Covar\+Adaptation}, and \hyperlink{classDmpBbo_1_1UpdaterCovarDecay_aabb65aaf08049416ed18b294d5fca415}{Updater\+Covar\+Decay}.
+
+
+
+Definition at line 46 of file Updater\+Mean.\+cpp.
+
+
+\begin{DoxyCode}
+47 \{
+48   VectorXd mean\_new;
+49   \hyperlink{classDmpBbo_1_1UpdaterMean_a97c2ddfabeee67dba0044f405f4ce8c0}{updateDistributionMean}(distribution.mean(), samples, costs, weights, mean\_new);
+50 
+51   distribution\_new.set\_mean(mean\_new);
+52   distribution\_new.set\_covar(distribution.covar());
+53 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1UpdaterMean_aabb65aaf08049416ed18b294d5fca415_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1UpdaterMean_a97c2ddfabeee67dba0044f405f4ce8c0}{\index{Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}!update\+Distribution\+Mean@{update\+Distribution\+Mean}}
+\index{update\+Distribution\+Mean@{update\+Distribution\+Mean}!Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}}
+\paragraph[{update\+Distribution\+Mean}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Distribution\+Mean (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{mean, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{costs, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{weights, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{mean\+\_\+new}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1UpdaterMean_a97c2ddfabeee67dba0044f405f4ce8c0}
+
+
+Update the distribution mean. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mean} & Current mean \\
+\hline
+\mbox{\tt in}  & {\em samples} & The samples in the epoch (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em costs} & Costs of the samples (size\+: n\+\_\+samples x 1) \\
+\hline
+\mbox{\tt out}  & {\em weights} & The weights computed from the costs \\
+\hline
+\mbox{\tt out}  & {\em mean\+\_\+new} & Updated mean \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Updater\+Mean.\+cpp.
+
+
+\begin{DoxyCode}
+56 \{
+57   \hyperlink{classDmpBbo_1_1UpdaterMean_a67bb3ad0e7d34b11aa5453adc462f9cc}{costsToWeights}(costs,\hyperlink{classDmpBbo_1_1UpdaterMean_abc5093717ab1b4a09921a2d6f98b58ba}{weighting\_method\_},
+      \hyperlink{classDmpBbo_1_1UpdaterMean_a9a4488d8ff4010bb33694ad3fafcad3f}{eliteness\_},weights);
+58 
+59   \textcolor{comment}{// Compute new mean with reward-weighed averaging}
+60   \textcolor{comment}{// mean    = 1 x n\_dims}
+61   \textcolor{comment}{// weights = 1 x n\_samples}
+62   \textcolor{comment}{// samples = n\_samples x n\_dims}
+63   mean\_new = weights.transpose()*samples;
+64   \textcolor{comment}{/*}
+65 \textcolor{comment}{  cout << "  mean=" << mean << endl;}
+66 \textcolor{comment}{  cout << "  weights=" << weights << endl;}
+67 \textcolor{comment}{  cout << "  samples=" << samples << endl;}
+68 \textcolor{comment}{  cout << "  mean\_new=" << mean\_new << endl;}
+69 \textcolor{comment}{  */}
+70 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{classDmpBbo_1_1UpdaterMean_a97c2ddfabeee67dba0044f405f4ce8c0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1UpdaterMean_a67bb3ad0e7d34b11aa5453adc462f9cc}{\index{Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}!costs\+To\+Weights@{costs\+To\+Weights}}
+\index{costs\+To\+Weights@{costs\+To\+Weights}!Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}}
+\paragraph[{costs\+To\+Weights}]{\setlength{\rightskip}{0pt plus 5cm}void costs\+To\+Weights (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{costs, }
+\item[{std\+::string}]{weighting\+\_\+method, }
+\item[{double}]{eliteness, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{weights}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1UpdaterMean_a67bb3ad0e7d34b11aa5453adc462f9cc}
+
+
+Convert costs to weights, given the weighting method. 
+
+The weights should sum to 1, and higher costs should lead to lower weights. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em costs} & Costs of the samples (size\+: n\+\_\+samples x 1) \\
+\hline
+\mbox{\tt in}  & {\em weighting\+\_\+method} & ('P\+I-\/\+B\+B' = P\+I$^\wedge$2 style weighting) \\
+\hline
+\mbox{\tt in}  & {\em eliteness} & The eliteness parameter ('mu' in C\+M\+A-\/\+E\+S, 'h' in P\+I$^\wedge$2) \\
+\hline
+\mbox{\tt out}  & {\em weights} & The weights computed from the costs\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000005}{Todo}]Implement other weighting schemes \end{DoxyRefDesc}
+
+
+Definition at line 73 of file Updater\+Mean.\+cpp.
+
+
+\begin{DoxyCode}
+74 \{
+75   weights.resize(costs.size());
+76   \textcolor{keywordflow}{if} (weighting\_method.compare(\textcolor{stringliteral}{"PI-BB"})==0)
+77   \{
+78     \textcolor{comment}{// PI^2 style weighting: continuous, cost exponention}
+79     \textcolor{keywordtype}{double} h = eliteness; \textcolor{comment}{// In PI^2, eliteness parameter is known as "h"}
+80     \textcolor{keywordtype}{double} range = costs.maxCoeff()-costs.minCoeff();
+81     \textcolor{keywordflow}{if} (range==0)
+82       weights.fill(1);
+83     \textcolor{keywordflow}{else}
+84       weights = (-h*(costs.array()-costs.minCoeff())/range).exp();
+85   \} 
+86   \textcolor{comment}{//else if (weighting\_method.compare("CMA-ES")==0)}
+87   \textcolor{comment}{//\{}
+88   \textcolor{comment}{//http://stackoverflow.com/questions/2686548/sorting-eigenvectors-by-their-eigenvalues-associated-sorting}
+89     \textcolor{comment}{//std::sort(v.data(), v.data()+v.size()); }
+90   \textcolor{comment}{/*}
+91 \textcolor{comment}{    elseif (strcmp(weighting\_method,'CEM') || strcmp(weighting\_method,'CMA-ES'))}
+92 \textcolor{comment}{      % CEM/CMA-ES style weights: rank-based, uses defaults}
+93 \textcolor{comment}{      mu = eliteness; % In CMA-ES, eliteness parameter is known as "mu"}
+94 \textcolor{comment}{      [Ssorted indices] = sort(costs,'ascend');}
+95 \textcolor{comment}{      weights = zeros(size(costs));}
+96 \textcolor{comment}{      if (strcmp(weighting\_method,'CEM'))}
+97 \textcolor{comment}{        weights(indices(1:mu)) = 1/mu;}
+98 \textcolor{comment}{      else}
+99 \textcolor{comment}{        for ii=1:mu}
+100 \textcolor{comment}{          weights(indices(ii)) = log(mu+1/2)-log(ii);}
+101 \textcolor{comment}{        end}
+102 \textcolor{comment}{      end}
+103 \textcolor{comment}{  */}
+104   \textcolor{keywordflow}{else}
+105   \{
+106     cout << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":WARNING: Unknown weighting method '"} << weighting\_method << \textcolor{stringliteral}{"
+      '. Calling with PI-BB weighting."} << endl; 
+107     \hyperlink{classDmpBbo_1_1UpdaterMean_a67bb3ad0e7d34b11aa5453adc462f9cc}{costsToWeights}(costs, \textcolor{stringliteral}{"PI-BB"}, eliteness, weights);
+108     \textcolor{keywordflow}{return};
+109   \}
+110   
+111   \textcolor{comment}{// Relative standard deviation of total costs}
+112   \textcolor{keywordtype}{double} mean = weights.mean();
+113   \textcolor{keywordtype}{double} \hyperlink{namespacestd}{std} = sqrt((weights.array()-mean).pow(2).mean());
+114   \textcolor{keywordtype}{double} rel\_std = std/mean;
+115   \textcolor{keywordflow}{if} (rel\_std<1e-10)
+116   \{
+117       \textcolor{comment}{// Special case: all costs are the same}
+118       \textcolor{comment}{// Set same weights for all.}
+119       weights.fill(1);
+120   \}
+121 
+122   \textcolor{comment}{// Normalize weights}
+123   weights = weights/weights.sum();
+124 
+125 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1UpdaterMean_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Updater\+Mean@{Dmp\+Bbo\+::\+Updater\+Mean}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1UpdaterMean_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 77 of file Updater\+Mean.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{UpdaterMean_8hpp}{Updater\+Mean.\+hpp}\item 
+\hyperlink{UpdaterMean_8cpp}{Updater\+Mean.\+cpp}\end{DoxyCompactItemize}

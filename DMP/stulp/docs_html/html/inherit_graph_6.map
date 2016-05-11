@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classDmpBbo_1_1TaskSolver.html" title="Interface for classes that can perform rollouts. " alt="" coords="5,42,99,69"/>
+<area shape="rect" id="node2" href="$classDemoTaskSolverApproximateQuadraticFunction.html" title="The task solver tunes the parameters a and c such that the function &#160;best matches a set of target val..." alt="" coords="147,5,356,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1TaskSolverParallel.html" title="Interface for classes that can perform rollouts. " alt="" coords="181,71,321,98"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1TaskSolverDmp.html" title="Task solver for the viapoint task, that generates trajectories with a DMP. " alt="" coords="404,71,527,98"/>
+</map>

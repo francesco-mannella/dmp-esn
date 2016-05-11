@@ -1,0 +1,454 @@
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS}{\subsection{Function\+Approximator\+I\+R\+F\+R\+L\+S Class Reference}
+\label{classDmpBbo_1_1FunctionApproximatorIRFRLS}\index{Function\+Approximator\+I\+R\+F\+R\+L\+S@{Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+}
+
+
+i\+R\+F\+R\+L\+S (Incremental Random Features Regularized Least Squares) function approximator  
+
+
+
+
+{\ttfamily \#include $<$Function\+Approximator\+I\+R\+F\+R\+L\+S.\+hpp$>$}
+
+
+
+Inheritance diagram for Function\+Approximator\+I\+R\+F\+R\+L\+S\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classDmpBbo_1_1FunctionApproximatorIRFRLS__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Function\+Approximator\+I\+R\+F\+R\+L\+S\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classDmpBbo_1_1FunctionApproximatorIRFRLS__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac41e9652816c7a26cb5bd3591c87f027}{Function\+Approximator\+I\+R\+F\+R\+L\+S} (const \hyperlink{classDmpBbo_1_1MetaParametersIRFRLS}{Meta\+Parameters\+I\+R\+F\+R\+L\+S} $\ast$const meta\+\_\+parameters, const \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS}{Model\+Parameters\+I\+R\+F\+R\+L\+S} $\ast$const model\+\_\+parameters=N\+U\+L\+L)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with meta-\/ and model-\/parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_a73cc6ae1afcc97d85774b142ea0755a1}{Function\+Approximator\+I\+R\+F\+R\+L\+S} (const \hyperlink{classDmpBbo_1_1ModelParametersIRFRLS}{Model\+Parameters\+I\+R\+F\+R\+L\+S} $\ast$const model\+\_\+parameters)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with model parameters. \end{DoxyCompactList}\item 
+virtual \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad792a46ac006916c5c1ffed2fa42dd24}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac453415cf4894aba45e8db6ebc4cd4dc}{train} (const Eigen\+::\+Matrix\+Xd \&input, const Eigen\+::\+Matrix\+Xd \&target)
+\begin{DoxyCompactList}\small\item\em Train the function approximator with corresponding input and target examples. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{predict} (const Eigen\+::\+Matrix\+Xd \&input, Eigen\+::\+Matrix\+Xd \&output)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad4c95407e44ba3e16b9651f9b81cd0e6}{get\+Name} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the name of this function approximator. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_a53d95f63de3b49491b1204f45a24ae25}{save\+Grid\+Data} (const Eigen\+::\+Vector\+Xd \&min, const Eigen\+::\+Vector\+Xd \&max, const Eigen\+::\+Vector\+Xi \&n\+\_\+samples\+\_\+per\+\_\+dim, std\+::string directory, bool overwrite=false) const 
+\begin{DoxyCompactList}\small\item\em Generate a grid of inputs, and output the response of the basis functions and line segments for these inputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+i\+R\+F\+R\+L\+S (Incremental Random Features Regularized Least Squares) function approximator 
+
+Definition at line 44 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac41e9652816c7a26cb5bd3591c87f027}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}!Function\+Approximator\+I\+R\+F\+R\+L\+S@{Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\index{Function\+Approximator\+I\+R\+F\+R\+L\+S@{Function\+Approximator\+I\+R\+F\+R\+L\+S}!Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\paragraph[{Function\+Approximator\+I\+R\+F\+R\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator\+I\+R\+F\+R\+L\+S} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Meta\+Parameters\+I\+R\+F\+R\+L\+S} $\ast$const}]{meta\+\_\+parameters, }
+\item[{const {\bf Model\+Parameters\+I\+R\+F\+R\+L\+S} $\ast$const}]{model\+\_\+parameters = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac41e9652816c7a26cb5bd3591c87f027}
+
+
+Initialize a function approximator with meta-\/ and model-\/parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em meta\+\_\+parameters} & The training algorithm meta-\/parameters \\
+\hline
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the trained model. If this parameter is not passed, the function approximator is initialized as untrained. In this case, you must call \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator\+::train()} before being able to call \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator\+::predict()}. Either meta\+\_\+parameters X\+O\+R model-\/parameters can passed as N\+U\+L\+L, but not both. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+cpp.
+
+
+\begin{DoxyCode}
+57 :
+58   \hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{FunctionApproximator}(meta\_parameters,model\_parameters)
+59 \{
+60 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS_a73cc6ae1afcc97d85774b142ea0755a1}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}!Function\+Approximator\+I\+R\+F\+R\+L\+S@{Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\index{Function\+Approximator\+I\+R\+F\+R\+L\+S@{Function\+Approximator\+I\+R\+F\+R\+L\+S}!Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\paragraph[{Function\+Approximator\+I\+R\+F\+R\+L\+S}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator\+I\+R\+F\+R\+L\+S} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model\+Parameters\+I\+R\+F\+R\+L\+S} $\ast$const}]{model\+\_\+parameters}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorIRFRLS_a73cc6ae1afcc97d85774b142ea0755a1}
+
+
+Initialize a function approximator with model parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the (previously) trained model. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+cpp.
+
+
+\begin{DoxyCode}
+63 :
+64   \hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{FunctionApproximator}(model\_parameters)
+65 \{
+66 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad792a46ac006916c5c1ffed2fa42dd24}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad792a46ac006916c5c1ffed2fa42dd24}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a9b6a690060f1d845da16d6d739ded2d9}{Function\+Approximator}.
+
+
+
+Definition at line 69 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+cpp.
+
+
+\begin{DoxyCode}
+69                                                                   \{
+70   \textcolor{comment}{// All error checking and cloning is left to the FunctionApproximator constructor.}
+71   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac41e9652816c7a26cb5bd3591c87f027}{FunctionApproximatorIRFRLS}(
+72     dynamic\_cast<const MetaParametersIRFRLS*>(\hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{getMetaParameters}()),
+73     dynamic\_cast<const ModelParametersIRFRLS*>(\hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}())
+74     );
+75 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad792a46ac006916c5c1ffed2fa42dd24_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac453415cf4894aba45e8db6ebc4cd4dc}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}void train (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{targets}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac453415cf4894aba45e8db6ebc4cd4dc}
+
+
+Train the function approximator with corresponding input and target examples. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em targets} & Target values of the training examples \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator}.
+
+
+
+Definition at line 78 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+cpp.
+
+
+\begin{DoxyCode}
+79 \{
+80   \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+81   \{
+82     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorIRFRLS::train more than once. Doing nothing."} <<
+       endl;
+83     cerr << \textcolor{stringliteral}{"   (if you really want to retrain, call reTrain function instead)"} << endl;
+84     \textcolor{keywordflow}{return};
+85   \}
+86   
+87   assert(inputs.rows() == targets.rows()); \textcolor{comment}{// Must have same number of examples}
+88   assert(inputs.cols()==\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}());
+89   
+90   \textcolor{keyword}{const} MetaParametersIRFRLS* meta\_parameters\_irfrls = 
+91     \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }MetaParametersIRFRLS*\textcolor{keyword}{>}(\hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{getMetaParameters}());
+92 
+93   \textcolor{keywordtype}{int} nb\_cos = meta\_parameters\_irfrls->number\_of\_basis\_functions\_;
+94 
+95   \textcolor{comment}{// Init random generator.}
+96   boost::mt19937 rng(getpid() + time(0));
+97 
+98   \textcolor{comment}{// Draw periodes}
+99   boost::normal\_distribution<> twoGamma(0, sqrt(2 * meta\_parameters\_irfrls->gamma\_));
+100   boost::variate\_generator<boost::mt19937&, boost::normal\_distribution<> > genPeriods(rng, twoGamma);
+101   MatrixXd cosines\_periodes(nb\_cos, inputs.cols());
+102   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} r = 0; r < nb\_cos; r++)
+103     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} c = 0; c < inputs.cols(); c++)
+104       cosines\_periodes(r, c) = genPeriods();
+105 
+106   \textcolor{comment}{// Draw phase}
+107   boost::uniform\_real<> twoPi(0, 2 * boost::math::constants::pi<double>());
+108   boost::variate\_generator<boost::mt19937&, boost::uniform\_real<> > genPhases(rng, twoPi);
+109   VectorXd cosines\_phase(nb\_cos);
+110   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} r = 0; r < nb\_cos; r++)
+111       cosines\_phase(r) = genPhases();
+112 
+113   MatrixXd proj\_inputs;
+114   BasisFunction::Cosine::activations(cosines\_periodes,cosines\_phase,inputs,proj\_inputs);
+115   
+116   \textcolor{comment}{// Compute linear model analatically}
+117   \textcolor{keywordtype}{double} lambda = meta\_parameters\_irfrls->lambda\_;
+118   MatrixXd toInverse = lambda * MatrixXd::Identity(nb\_cos, nb\_cos) + proj\_inputs.transpose() * proj\_inputs;
+119   VectorXd linear\_model = toInverse.inverse() *
+120     (proj\_inputs.transpose() * targets);
+121 
+122   \hyperlink{classDmpBbo_1_1FunctionApproximator_afd6f9d480456b90c4740c7aaca084ba4}{setModelParameters}(\textcolor{keyword}{new} ModelParametersIRFRLS(linear\_model, cosines\_periodes, 
+      cosines\_phase));
+123 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac453415cf4894aba45e8db6ebc4cd4dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}!predict@{predict}}
+\index{predict@{predict}!Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\paragraph[{predict}]{\setlength{\rightskip}{0pt plus 5cm}void predict (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorIRFRLS_afe8dcfb9cd065dfde38dce1f6e6cd3e6}
+
+
+Query the function approximator to make a prediction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator}.
+
+
+
+Definition at line 125 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+cpp.
+
+
+\begin{DoxyCode}
+126 \{
+127   \textcolor{keywordflow}{if} (!\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+128   \{
+129     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorIRFRLS::predict if you have not trained yet.
+       Doing nothing."} << endl;
+130     \textcolor{keywordflow}{return};
+131   \}
+132   
+133   \textcolor{keyword}{const} ModelParametersIRFRLS* model = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }ModelParametersIRFRLS*\textcolor{keyword}{>}(
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}());
+134 
+135   MatrixXd proj\_inputs;
+136   model->cosineActivations(input,proj\_inputs);
+137   
+138   output = proj\_inputs * model->weights\_;
+139 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classDmpBbo_1_1FunctionApproximatorIRFRLS_afe8dcfb9cd065dfde38dce1f6e6cd3e6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad4c95407e44ba3e16b9651f9b81cd0e6}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\paragraph[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string get\+Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad4c95407e44ba3e16b9651f9b81cd0e6}
+
+
+Get the name of this function approximator. 
+
+\begin{DoxyReturn}{Returns}
+Name of this function approximator 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{Function\+Approximator}.
+
+
+
+Definition at line 68 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+hpp.
+
+
+\begin{DoxyCode}
+68                                       \{
+69     \textcolor{keywordflow}{return} std::string(\textcolor{stringliteral}{"IRFRLS"});  
+70   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS_a53d95f63de3b49491b1204f45a24ae25}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}!save\+Grid\+Data@{save\+Grid\+Data}}
+\index{save\+Grid\+Data@{save\+Grid\+Data}!Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\paragraph[{save\+Grid\+Data}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+Grid\+Data (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{max, }
+\item[{const Eigen\+::\+Vector\+Xi \&}]{n\+\_\+samples\+\_\+per\+\_\+dim, }
+\item[{std\+::string}]{directory, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorIRFRLS_a53d95f63de3b49491b1204f45a24ae25}
+
+
+Generate a grid of inputs, and output the response of the basis functions and line segments for these inputs. 
+
+This function is not pure virtual, because this might not make sense for every model parameters class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em min} & Minimum values for the grid (one for each dimension) \\
+\hline
+\mbox{\tt in}  & {\em max} & Maximum values for the grid (one for each dimension) \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+samples\+\_\+per\+\_\+dim} & Number of samples in the grid along each dimension \\
+\hline
+\mbox{\tt in}  & {\em directory} & Directory to which to save the results to. \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Whether to overwrite existing files. true=do overwrite, false=don't overwrite and give a warning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether saving the data was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1FunctionApproximator_a53d95f63de3b49491b1204f45a24ae25}{Function\+Approximator}.
+
+
+
+Definition at line 141 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+cpp.
+
+
+\begin{DoxyCode}
+142 \{
+143   \textcolor{keywordflow}{if} (save\_directory.empty())
+144     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+145   
+146   MatrixXd inputs\_grid;
+147   \hyperlink{classDmpBbo_1_1FunctionApproximator_a61da4383ffab7d919c98d628c1d217d1}{FunctionApproximator::generateInputsGrid}(min, max, 
+      n\_samples\_per\_dim, inputs\_grid);
+148       
+149   \textcolor{keyword}{const} ModelParametersIRFRLS* model\_parameters\_irfrls = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }ModelParametersIRFRLS*\textcolor{keyword}{>}(
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}());
+150   
+151   MatrixXd activations\_grid;
+152   model\_parameters\_irfrls->cosineActivations(inputs\_grid, activations\_grid);
+153   
+154   saveMatrix(save\_directory,\textcolor{stringliteral}{"n\_samples\_per\_dim.txt"},n\_samples\_per\_dim,overwrite);
+155   saveMatrix(save\_directory,\textcolor{stringliteral}{"inputs\_grid.txt"},inputs\_grid,overwrite);
+156   saveMatrix(save\_directory,\textcolor{stringliteral}{"activations\_grid.txt"},activations\_grid,overwrite);
+157 
+158   \textcolor{comment}{// Weight the basis function activations  }
+159   VectorXd weights = model\_parameters\_irfrls->weights();
+160   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} b=0; b<activations\_grid.cols(); b++)
+161     activations\_grid.col(b).array() *= weights(b);
+162   saveMatrix(save\_directory,\textcolor{stringliteral}{"activations\_weighted\_grid.txt"},activations\_grid,overwrite);
+163   
+164   \textcolor{comment}{// Sum over weighed basis functions}
+165   MatrixXd predictions\_grid = activations\_grid.rowwise().sum();
+166   saveMatrix(save\_directory,\textcolor{stringliteral}{"predictions\_grid.txt"},predictions\_grid,overwrite);
+167   
+168   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+169   
+170 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorIRFRLS_a53d95f63de3b49491b1204f45a24ae25_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S@{Dmp\+Bbo\+::\+Function\+Approximator\+I\+R\+F\+R\+L\+S}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 82 of file Function\+Approximator\+I\+R\+F\+R\+L\+S.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{FunctionApproximatorIRFRLS_8hpp}{Function\+Approximator\+I\+R\+F\+R\+L\+S.\+hpp}\item 
+\hyperlink{FunctionApproximatorIRFRLS_8cpp}{Function\+Approximator\+I\+R\+F\+R\+L\+S.\+cpp}\end{DoxyCompactItemize}

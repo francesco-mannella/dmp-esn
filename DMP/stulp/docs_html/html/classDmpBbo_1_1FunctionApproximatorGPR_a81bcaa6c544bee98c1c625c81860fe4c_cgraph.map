@@ -1,0 +1,9 @@
+<map id="predictVariance" name="predictVariance">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1FunctionApproximator.html#a178135f623d9b9058870851a53299c6e" title="Determine whether the function approximator has already been trained with data or not..." alt="" coords="177,5,395,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="177,71,395,112"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1FunctionApproximator.html#af5a550bcf65d5a29a153a594cc4e3fa1" title="The expected dimensionality of the input data. " alt="" coords="177,136,395,177"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1ModelParametersGPR.html#a125cc60559b55f7348beb15f25834b6f" title="Get the normalized kernel activations for given inputs. " alt="" coords="175,201,397,243"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1ModelParametersGPR.html#a298a9f1cca5f13135bb2b4334a56c734" title="Get the maximum covariance value of the covariance function. " alt="" coords="175,267,397,308"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1ModelParametersGPR.html#a7f75d2b936b5f42a2cee13100b9a0386" title="Return the inverse of the Gram matrix. " alt="" coords="175,332,397,373"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1UnifiedModel.html#af5a550bcf65d5a29a153a594cc4e3fa1" title="The expected dimensionality of the input data. " alt="" coords="445,136,609,177"/>
+</map>

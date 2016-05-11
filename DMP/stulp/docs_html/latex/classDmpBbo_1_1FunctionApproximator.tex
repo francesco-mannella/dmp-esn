@@ -1,0 +1,1466 @@
+\hypertarget{classDmpBbo_1_1FunctionApproximator}{\subsection{Function\+Approximator Class Reference}
+\label{classDmpBbo_1_1FunctionApproximator}\index{Function\+Approximator@{Function\+Approximator}}
+}
+
+
+Base class for all function approximators.  
+
+
+
+
+{\ttfamily \#include $<$Function\+Approximator.\+hpp$>$}
+
+
+
+Inheritance diagram for Function\+Approximator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Function\+Approximator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classDmpBbo_1_1FunctionApproximator__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximator_ac004d40032d032dd823d8b41a2b09e4f}{Function\+Approximator} (const \hyperlink{classDmpBbo_1_1MetaParameters}{Meta\+Parameters} $\ast$const meta\+\_\+parameters, const \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} $\ast$const model\+\_\+parameters=N\+U\+L\+L)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with meta-\/ and optionally model-\/parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximator_a7c402c9ebf0e21c94686f516f29a3a94}{Function\+Approximator} (const \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} $\ast$const model\+\_\+parameters)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with model-\/parameters. \end{DoxyCompactList}\item 
+virtual \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ \hyperlink{classDmpBbo_1_1FunctionApproximator_a9b6a690060f1d845da16d6d739ded2d9}{clone} (void) const =0
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train} (const Eigen\+::\+Matrix\+Xd \&inputs, const Eigen\+::\+Matrix\+Xd \&targets)=0
+\begin{DoxyCompactList}\small\item\em Train the function approximator with corresponding input and target examples. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_a50db3d6c1ccf602d390aa5a4b297704d}{train} (const Eigen\+::\+Matrix\+Xd \&inputs, const Eigen\+::\+Matrix\+Xd \&targets, std\+::string save\+\_\+directory, bool overwrite=false)
+\begin{DoxyCompactList}\small\item\em Train the function approximator with corresponding input and target examples (and write results to file). \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_a9cd60cd8e54e32893050894ed2190610}{re\+Train} (const Eigen\+::\+Matrix\+Xd \&inputs, const Eigen\+::\+Matrix\+Xd \&targets)
+\begin{DoxyCompactList}\small\item\em Re-\/train the function approximator with corresponding input and target examples. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_a2e826de92492a7b3b6bdba74e50d13a9}{re\+Train} (const Eigen\+::\+Matrix\+Xd \&inputs, const Eigen\+::\+Matrix\+Xd \&targets, std\+::string save\+\_\+directory, bool overwrite=false)
+\begin{DoxyCompactList}\small\item\em Re-\/train the function approximator with corresponding input and target examples (and write results to file). \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&outputs)=0
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1FunctionApproximator_a98f578f3032ed35e87e036bd81a48d3f}{predict} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&outputs, Eigen\+::\+Matrix\+Xd \&variances)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction, and also to predict its variance. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}{predict} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&outputs, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&variances)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction, and also to predict its variance. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1FunctionApproximator_ae7931f49eb4d095e1c007edcbad58684}{predict\+Variance} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&variances)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to get the variance of a prediction This function is not implemented by all function approximators. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{is\+Trained} (void) const 
+\begin{DoxyCompactList}\small\item\em Determine whether the function approximator has already been trained with data or not. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{get\+Expected\+Input\+Dim} (void) const 
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the input data. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1FunctionApproximator_a6ad3f18b3d0ebb913a6a914be60b77e1}{get\+Expected\+Output\+Dim} (void) const 
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the output data. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{get\+Name} (void) const =0
+\begin{DoxyCompactList}\small\item\em Get the name of this function approximator. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_a887f4747734bd8b7cc4f799092ff31b4}{get\+Selectable\+Parameters} (std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels) const 
+\begin{DoxyCompactList}\small\item\em Return all the names of the parameter types that can be selected. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_a8a976b5db2d1809ece10e431816f0f27}{set\+Selected\+Parameters} (const std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels)
+\begin{DoxyCompactList}\small\item\em Determine which subset of parameters is represented in the vector returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_a83d42bcdb0962117720b028baecbfbcf}{get\+Parameter\+Vector\+Selected\+Min\+Max} (Eigen\+::\+Vector\+Xd \&min, Eigen\+::\+Vector\+Xd \&max) const 
+\begin{DoxyCompactList}\small\item\em Get the minimum and maximum of the selected parameters in one vector. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1FunctionApproximator_ae83cb950bcf5219841e6ca8511ac2907}{get\+Parameter\+Vector\+Selected\+Size} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the size of the vector of selected parameters, as returned by get\+Parameter\+Vector\+Selected(. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_aee501e63a46d63eb58a6f271bf093b9d}{set\+Parameter\+Vector\+Selected} (const Eigen\+::\+Vector\+Xd \&values, bool normalized=false)
+\begin{DoxyCompactList}\small\item\em Set all the values of the selected parameters with one vector. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_aab955bec57f074a991b8be31d6ce54ca}{get\+Parameter\+Vector\+Selected} (Eigen\+::\+Vector\+Xd \&values, bool normalized=false) const 
+\begin{DoxyCompactList}\small\item\em Get the values of the selected parameters in one vector. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_a9dba1f93e426e7511630ec1ece4ace17}{get\+Parameter\+Vector\+Mask} (const std\+::set$<$ std\+::string $>$ selected\+\_\+values\+\_\+labels, Eigen\+::\+Vector\+Xi \&selected\+\_\+mask) const 
+\begin{DoxyCompactList}\small\item\em Get a mask for selecting parameters. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1FunctionApproximator_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the size of the parameter values vector when it contains all available parameter values. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_ac44b51e5335f973eed54f100618e5496}{get\+Parameter\+Vector\+All} (Eigen\+::\+Vector\+Xd \&values) const 
+\begin{DoxyCompactList}\small\item\em Return a vector that returns all available parameter values. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_a9d3c8f22e8237a805af4935a647e5a50}{set\+Parameter\+Vector\+All} (const Eigen\+::\+Vector\+Xd \&values)
+\begin{DoxyCompactList}\small\item\em Set all available parameter values with one vector. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel}{Unified\+Model} $\ast$ \hyperlink{classDmpBbo_1_1FunctionApproximator_a7513442a02e6a989f8a79112a482eaf8}{get\+Unified\+Model} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a representation of this function approximator's model as a unified model. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1FunctionApproximator_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+const \hyperlink{classDmpBbo_1_1MetaParameters}{Meta\+Parameters} $\ast$ \hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{get\+Meta\+Parameters} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor for Function\+Approximator\+::meta\+\_\+parameters\+\_\+. \end{DoxyCompactList}\item 
+const \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} $\ast$ \hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{get\+Model\+Parameters} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor for Function\+Approximator\+::model\+\_\+parameters\+\_\+. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_add0186ca30d91928b887805fe0d24598}{set\+Parameter\+Vector\+Modifier\+Private} (std\+::string modifier, bool new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Turn certain modifiers on or off, see \hyperlink{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{Parameterizable\+::set\+Parameter\+Vector\+Modifier()}. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classDmpBbo_1_1FunctionApproximator_a53d95f63de3b49491b1204f45a24ae25}{save\+Grid\+Data} (const Eigen\+::\+Vector\+Xd \&min, const Eigen\+::\+Vector\+Xd \&max, const Eigen\+::\+Vector\+Xi \&n\+\_\+samples\+\_\+per\+\_\+dim, std\+::string directory, bool overwrite=false) const 
+\begin{DoxyCompactList}\small\item\em Generate a grid of inputs, and output the response of the basis functions and line segments for these inputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classDmpBbo_1_1FunctionApproximator_a61da4383ffab7d919c98d628c1d217d1}{generate\+Inputs\+Grid} (const Eigen\+::\+Vector\+Xd \&min, const Eigen\+::\+Vector\+Xd \&max, const Eigen\+::\+Vector\+Xi \&n\+\_\+samples\+\_\+per\+\_\+dim, Eigen\+::\+Matrix\+Xd \&inputs\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em Generate a input samples that lie on a grid (much like Matlab's meshgrid) For instance, if min = \mbox{[}2 6\mbox{]}, and max = \mbox{[}3 8\mbox{]}, and n\+\_\+samples\+\_\+per\+\_\+dim = \mbox{[}3 5\mbox{]} then this function first makes linearly spaces samples along each dimension, e.\+g. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximator_afd6f9d480456b90c4740c7aaca084ba4}{set\+Model\+Parameters} (\hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} $\ast$model\+\_\+parameters)
+\begin{DoxyCompactList}\small\item\em Accessor for Function\+Approximator\+::model\+\_\+parameters\+\_\+. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{Function\+Approximator} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1FunctionApproximator_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{classDmpBbo_1_1FunctionApproximator_a07e49b4e5e386d6923f0fd558c77b8b4}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} \&function\+\_\+approximator)
+\begin{DoxyCompactList}\small\item\em Print to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Base class for all function approximators. 
+
+Definition at line 48 of file Function\+Approximator.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_ac004d40032d032dd823d8b41a2b09e4f}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!Function\+Approximator@{Function\+Approximator}}
+\index{Function\+Approximator@{Function\+Approximator}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{Function\+Approximator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Meta\+Parameters} $\ast$const}]{meta\+\_\+parameters, }
+\item[{const {\bf Model\+Parameters} $\ast$const}]{model\+\_\+parameters = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximator_ac004d40032d032dd823d8b41a2b09e4f}
+
+
+Initialize a function approximator with meta-\/ and optionally model-\/parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em meta\+\_\+parameters} & The training algorithm meta-\/parameters \\
+\hline
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the trained model. If this parameter is not passed, the function approximator is initialized as untrained. In this case, you must call \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator\+::train()} before being able to call \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator\+::predict()}. Either meta\+\_\+parameters X\+O\+R model-\/parameters can passed as N\+U\+L\+L, but not both. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+50 \{
+51   \textcolor{comment}{// At least one of them should not be NULL}
+52   assert(meta\_parameters!=NULL || model\_parameters!=NULL); 
+53   
+54   \textcolor{keywordflow}{if} (meta\_parameters==NULL)
+55     meta\_parameters\_ = NULL;
+56   \textcolor{keywordflow}{else}
+57     meta\_parameters\_ = meta\_parameters->\hyperlink{classDmpBbo_1_1MetaParameters_a93ea31a71a0956a7031f060b2d439641}{clone}();
+58   
+59   \textcolor{keywordflow}{if} (model\_parameters==NULL)
+60     model\_parameters\_ = NULL;
+61   \textcolor{keywordflow}{else}
+62     model\_parameters\_ = model\_parameters->\hyperlink{classDmpBbo_1_1ModelParameters_a491a5c84b21c8577748ca7e83a9b4751}{clone}();
+63 
+64   \textcolor{comment}{// If both meta- and model-parameters were set, check if they have the same expected input dim.}
+65   \textcolor{keywordflow}{if} (meta\_parameters\_!=NULL && model\_parameters\_!=NULL)
+66     assert(model\_parameters\_->\hyperlink{classDmpBbo_1_1ModelParameters_af4d8412e83487a72b7f8929c716d6d8f}{getExpectedInputDim}()==meta\_parameters\_->
+      \hyperlink{classDmpBbo_1_1MetaParameters_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}());
+67   
+68 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximator_ac004d40032d032dd823d8b41a2b09e4f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a7c402c9ebf0e21c94686f516f29a3a94}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!Function\+Approximator@{Function\+Approximator}}
+\index{Function\+Approximator@{Function\+Approximator}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{Function\+Approximator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model\+Parameters} $\ast$const}]{model\+\_\+parameters}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximator_a7c402c9ebf0e21c94686f516f29a3a94}
+
+
+Initialize a function approximator with model-\/parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the trained model. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+71 \{
+72   assert(model\_parameters!=NULL);
+73   meta\_parameters\_  = NULL;
+74   model\_parameters\_ = model\_parameters->\hyperlink{classDmpBbo_1_1ModelParameters_a491a5c84b21c8577748ca7e83a9b4751}{clone}();
+75 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximator_a7c402c9ebf0e21c94686f516f29a3a94_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!Function\+Approximator@{Function\+Approximator}}
+\index{Function\+Approximator@{Function\+Approximator}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{Function\+Approximator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}
+
+
+Default constructor. 
+
+\begin{DoxyRemark}{Remarks}
+This default constuctor is required for boost\+::serialization to work. Since this constructor should not be called by other classes, it is private (boost\+::serialization is a friend) 
+\end{DoxyRemark}
+
+
+Definition at line 285 of file Function\+Approximator.\+hpp.
+
+
+\begin{DoxyCode}
+285 \{\};
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a9b6a690060f1d845da16d6d739ded2d9}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Function\+Approximator}$\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a9b6a690060f1d845da16d6d739ded2d9}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad792a46ac006916c5c1ffed2fa42dd24}{Function\+Approximator\+I\+R\+F\+R\+L\+S}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ad792a46ac006916c5c1ffed2fa42dd24}{Function\+Approximator\+L\+W\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ad792a46ac006916c5c1ffed2fa42dd24}{Function\+Approximator\+G\+M\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_ad792a46ac006916c5c1ffed2fa42dd24}{Function\+Approximator\+G\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR_ad792a46ac006916c5c1ffed2fa42dd24}{Function\+Approximator\+L\+W\+R}, and \hyperlink{classDmpBbo_1_1FunctionApproximatorRBFN_ad792a46ac006916c5c1ffed2fa42dd24}{Function\+Approximator\+R\+B\+F\+N}.
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}virtual void train (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{targets}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}
+
+
+Train the function approximator with corresponding input and target examples. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em targets} & Target values of the training examples \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ac453415cf4894aba45e8db6ebc4cd4dc}{Function\+Approximator\+I\+R\+F\+R\+L\+S}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ac453415cf4894aba45e8db6ebc4cd4dc}{Function\+Approximator\+L\+W\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ac453415cf4894aba45e8db6ebc4cd4dc}{Function\+Approximator\+G\+M\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_ac453415cf4894aba45e8db6ebc4cd4dc}{Function\+Approximator\+G\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR_ac453415cf4894aba45e8db6ebc4cd4dc}{Function\+Approximator\+L\+W\+R}, and \hyperlink{classDmpBbo_1_1FunctionApproximatorRBFN_ac453415cf4894aba45e8db6ebc4cd4dc}{Function\+Approximator\+R\+B\+F\+N}.
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a50db3d6c1ccf602d390aa5a4b297704d}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}void train (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{targets, }
+\item[{std\+::string}]{save\+\_\+directory, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximator_a50db3d6c1ccf602d390aa5a4b297704d}
+
+
+Train the function approximator with corresponding input and target examples (and write results to file). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em targets} & Target values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em save\+\_\+directory} & Directory to which to write results. \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Whether to overwrite existing files. true=do overwrite, false=don't overwrite and give a warning. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 288 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+289 \{
+290   \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets);
+291   
+292   \textcolor{keywordflow}{if} (save\_directory.empty())
+293     \textcolor{keywordflow}{return};
+294   
+295   \textcolor{keywordflow}{if} (!\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())
+296     \textcolor{keywordflow}{return};
+297   
+298   \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}()<3)
+299   \{
+300     
+301     VectorXd min = inputs.colwise().minCoeff();
+302     VectorXd max = inputs.colwise().maxCoeff();
+303     
+304     \textcolor{keywordtype}{int} n\_samples\_per\_dim = 100;
+305     \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}()==2) n\_samples\_per\_dim = 40;
+306     VectorXi n\_samples\_per\_dim\_vec = VectorXi::Constant(\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}(),
+      n\_samples\_per\_dim);
+307 
+308     MatrixXd inputs\_grid;
+309     \hyperlink{classDmpBbo_1_1FunctionApproximator_a61da4383ffab7d919c98d628c1d217d1}{FunctionApproximator::generateInputsGrid}(min, max, 
+      n\_samples\_per\_dim\_vec, inputs\_grid);
+310     
+311     MatrixXd outputs\_grid(inputs\_grid.rows(),\hyperlink{classDmpBbo_1_1FunctionApproximator_a6ad3f18b3d0ebb913a6a914be60b77e1}{getExpectedOutputDim}());
+312     \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs\_grid,outputs\_grid);
+313     
+314     saveMatrix(save\_directory,\textcolor{stringliteral}{"n\_samples\_per\_dim.txt"},n\_samples\_per\_dim\_vec,overwrite);
+315     saveMatrix(save\_directory,\textcolor{stringliteral}{"inputs\_grid.txt"},inputs\_grid,overwrite);
+316     saveMatrix(save\_directory,\textcolor{stringliteral}{"outputs\_grid.txt"},outputs\_grid,overwrite);
+317 
+318 
+319     MatrixXd variances\_grid(inputs\_grid.rows(),\hyperlink{classDmpBbo_1_1FunctionApproximator_a6ad3f18b3d0ebb913a6a914be60b77e1}{getExpectedOutputDim}());
+320     \hyperlink{classDmpBbo_1_1FunctionApproximator_ae7931f49eb4d095e1c007edcbad58684}{predictVariance}(inputs\_grid,variances\_grid);
+321     \textcolor{keywordflow}{if} (!variances\_grid.size()==0)
+322     \{
+323       variances\_grid = variances\_grid.array().sqrt();
+324       saveMatrix(save\_directory,\textcolor{stringliteral}{"variances\_grid.txt"},variances\_grid,overwrite);
+325     \}
+326     
+327     \hyperlink{classDmpBbo_1_1FunctionApproximator_a53d95f63de3b49491b1204f45a24ae25}{saveGridData}(min, max, n\_samples\_per\_dim\_vec, save\_directory, overwrite);
+328     
+329   \}
+330 
+331   MatrixXd outputs(inputs.rows(),\hyperlink{classDmpBbo_1_1FunctionApproximator_a6ad3f18b3d0ebb913a6a914be60b77e1}{getExpectedOutputDim}());
+332   \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs,outputs);
+333 
+334     
+335 
+336   saveMatrix(save\_directory,\textcolor{stringliteral}{"inputs.txt"},inputs,overwrite);
+337   saveMatrix(save\_directory,\textcolor{stringliteral}{"targets.txt"},targets,overwrite);
+338   saveMatrix(save\_directory,\textcolor{stringliteral}{"outputs.txt"},outputs,overwrite);
+339   
+340   
+341   
+342   \textcolor{keywordtype}{string} filename = save\_directory+\textcolor{stringliteral}{"/plotdata.py"};
+343   ofstream outfile;
+344   outfile.open(filename.c\_str()); 
+345   \textcolor{keywordflow}{if} (!outfile.is\_open())
+346   \{
+347     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+348     cerr << \textcolor{stringliteral}{"Could not open file "} << filename << \textcolor{stringliteral}{" for writing."} << endl;
+349   \} 
+350   \textcolor{keywordflow}{else}
+351   \{
+352     \textcolor{comment}{// Python code generation in C++. Rock 'n' roll! ;-)}
+353     \textcolor{keywordflow}{if} (inputs.cols()==2) \{                                                                                
+                 
+354       outfile << \textcolor{stringliteral}{"from mpl\_toolkits.mplot3d import Axes3D                                       \(\backslash\)n"};
+355     \}
+356     outfile   << \textcolor{stringliteral}{"import numpy                                                                  \(\backslash\)n"};
+357     outfile   << \textcolor{stringliteral}{"import matplotlib.pyplot as plt                                               \(\backslash\)n"};
+358     outfile   << \textcolor{stringliteral}{"directory = '"} << save\_directory << \textcolor{stringliteral}{"'                                        \(\backslash\)n"};
+359     outfile   << \textcolor{stringliteral}{"inputs   = numpy.loadtxt(directory+'/inputs.txt')                             \(\backslash\)n"};
+360     outfile   << \textcolor{stringliteral}{"targets  = numpy.loadtxt(directory+'/targets.txt')                            \(\backslash\)n"};
+361     outfile   << \textcolor{stringliteral}{"outputs  = numpy.loadtxt(directory+'/outputs.txt')                            \(\backslash\)n"};
+362     outfile   << \textcolor{stringliteral}{"fig = plt.figure()                                                            \(\backslash\)n"};
+363     \textcolor{keywordflow}{if} (inputs.cols()==2) \{                                                                                
+                 
+364       outfile << \textcolor{stringliteral}{"ax = Axes3D(fig)                                                              \(\backslash\)n"};
+365       outfile << \textcolor{stringliteral}{"ax.plot(inputs[:,0],inputs[:,1],targets, '.', label='targets',color='black')  \(\backslash\)n"};
+366       outfile << \textcolor{stringliteral}{"ax.plot(inputs[:,0],inputs[:,1],outputs, '.', label='predictions',color='red')\(\backslash\)n"};
+367       outfile << \textcolor{stringliteral}{"ax.set\_xlabel('input\_1'); ax.set\_ylabel('input\_2'); ax.set\_zlabel('output')   \(\backslash\)n"};
+368       outfile << \textcolor{stringliteral}{"ax.legend(loc='lower right')                                                  \(\backslash\)n"};
+369     \} \textcolor{keywordflow}{else} \{                                                                                           
+370       outfile << \textcolor{stringliteral}{"plt.plot(inputs,targets, '.', label='targets',color='black')                  \(\backslash\)n"};
+371       outfile << \textcolor{stringliteral}{"plt.plot(inputs,outputs, '.', label='predictions',color='red')                \(\backslash\)n"};
+372       outfile << \textcolor{stringliteral}{"plt.xlabel('input'); plt.ylabel('output');                                    \(\backslash\)n"};
+373       outfile << \textcolor{stringliteral}{"plt.legend(loc='lower right')                                                 \(\backslash\)n"};
+374     \}                                                                                           
+375     outfile   << \textcolor{stringliteral}{"plt.show()                                                                    \(\backslash\)n"};
+376     outfile << endl;
+377 
+378     outfile.close();
+379     \textcolor{comment}{//cout << "        \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" << endl;}
+380     \textcolor{comment}{//cout << "        | Plot saved data with:" << " 'python " << filename << "'." << endl;}
+381     \textcolor{comment}{//cout << "        |\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" << endl;}
+382   \}
+383   
+384 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a9cd60cd8e54e32893050894ed2190610}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!re\+Train@{re\+Train}}
+\index{re\+Train@{re\+Train}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{re\+Train}]{\setlength{\rightskip}{0pt plus 5cm}void re\+Train (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{targets}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximator_a9cd60cd8e54e32893050894ed2190610}
+
+
+Re-\/train the function approximator with corresponding input and target examples. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em targets} & Target values of the training examples Re-\/training could in principle have been enabled through \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator\+::train}, but we wanted to keep a clear disctinction between training (which must be done at least once before \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator\+::predict}) can be called and re-\/training. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+131 \{
+132   \textcolor{keyword}{delete} model\_parameters\_;
+133   model\_parameters\_ = NULL;
+134   \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets);
+135 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a2e826de92492a7b3b6bdba74e50d13a9}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!re\+Train@{re\+Train}}
+\index{re\+Train@{re\+Train}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{re\+Train}]{\setlength{\rightskip}{0pt plus 5cm}void re\+Train (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{targets, }
+\item[{std\+::string}]{save\+\_\+directory, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximator_a2e826de92492a7b3b6bdba74e50d13a9}
+
+
+Re-\/train the function approximator with corresponding input and target examples (and write results to file). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em targets} & Target values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em save\+\_\+directory} & Directory to which to write results. \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Overwrite existing files in the directory above (default\+: false) Re-\/training could in principle have been enabled through \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator\+::train}, but we wanted to keep a clear disctinction between training (which must be done at least once before \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator\+::predict}) can be called and re-\/training. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 137 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+138 \{
+139   \textcolor{keyword}{delete} model\_parameters\_;
+140   model\_parameters\_ = NULL;
+141   \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{train}(inputs,targets,save\_directory,overwrite);
+142 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!predict@{predict}}
+\index{predict@{predict}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{predict}]{\setlength{\rightskip}{0pt plus 5cm}virtual void predict (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}
+
+
+Query the function approximator to make a prediction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{Function\+Approximator\+G\+M\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{Function\+Approximator\+G\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{Function\+Approximator\+I\+R\+F\+R\+L\+S}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{Function\+Approximator\+L\+W\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{Function\+Approximator\+L\+W\+R}, and \hyperlink{classDmpBbo_1_1FunctionApproximatorRBFN_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{Function\+Approximator\+R\+B\+F\+N}.
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a98f578f3032ed35e87e036bd81a48d3f}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!predict@{predict}}
+\index{predict@{predict}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{predict}]{\setlength{\rightskip}{0pt plus 5cm}virtual void predict (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{variances}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a98f578f3032ed35e87e036bd81a48d3f}
+
+
+Query the function approximator to make a prediction, and also to predict its variance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query (n\+\_\+samples X n\+\_\+dims\+\_\+in) \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values (n\+\_\+samples X n\+\_\+dims\+\_\+out) \\
+\hline
+\mbox{\tt out}  & {\em variances} & Predicted variances for the output values (n\+\_\+samples X n\+\_\+dims\+\_\+out). Note that if the output has a dimensionality$>$1, these variances should actuall be covariance matrices (use function \hyperlink{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}{predict(const Eigen\+::\+Matrix\+Xd\& inputs, Eigen\+::\+Matrix\+Xd\& outputs, std\+::vector$<$\+Eigen\+::\+Matrix\+Xd$>$\& variances)} to get the full covariance matrices). So for an output dimensionality of 1 this function works fine. For dimensionality$>$1 we return only the diagional of the covariance matrix, which may not always be what you want.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ab74ea106ee37e27900826c1fa1a4331c}{Function\+Approximator\+G\+M\+R}.
+
+
+
+Definition at line 128 of file Function\+Approximator.\+hpp.
+
+
+\begin{DoxyCode}
+129   \{
+130     \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs, outputs);
+131     variances.fill(0);
+132   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classDmpBbo_1_1FunctionApproximator_a98f578f3032ed35e87e036bd81a48d3f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!predict@{predict}}
+\index{predict@{predict}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{predict}]{\setlength{\rightskip}{0pt plus 5cm}virtual void predict (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs, }
+\item[{std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{variances}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}
+
+
+Query the function approximator to make a prediction, and also to predict its variance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query (n\+\_\+samples X n\+\_\+dims\+\_\+in) \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values (n\+\_\+samples X n\+\_\+dims\+\_\+out) \\
+\hline
+\mbox{\tt out}  & {\em variances} & Predicted covariance matrices for the output values. It is is of size (n\+\_\+samples X n\+\_\+dims\+\_\+out X n\+\_\+dims\+\_\+out), which has been implemented as a std\+::vector of Eigen\+::\+Matrix\+Xd.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Definition at line 143 of file Function\+Approximator.\+hpp.
+
+
+\begin{DoxyCode}
+144   \{
+145     \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(inputs, outputs);
+146     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i=0; i<variances.size(); i++)
+147       variances[i].fill(0);
+148   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_ae7931f49eb4d095e1c007edcbad58684}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!predict\+Variance@{predict\+Variance}}
+\index{predict\+Variance@{predict\+Variance}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{predict\+Variance}]{\setlength{\rightskip}{0pt plus 5cm}virtual void predict\+Variance (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{variances}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_ae7931f49eb4d095e1c007edcbad58684}
+
+
+Query the function approximator to get the variance of a prediction This function is not implemented by all function approximators. 
+
+Therefore, the default implementation fills outputs with 0s. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query (n\+\_\+samples X n\+\_\+dims\+\_\+in) \\
+\hline
+\mbox{\tt out}  & {\em variances} & Predicted variances for the output values (n\+\_\+samples X n\+\_\+dims\+\_\+out). Note that if the output has a dimensionality$>$1, these variances should actuall be covariance matrices (use function \hyperlink{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}{predict(const Eigen\+::\+Matrix\+Xd\& inputs, Eigen\+::\+Matrix\+Xd\& outputs, std\+::vector$<$\+Eigen\+::\+Matrix\+Xd$>$\& variances)} to get the full covariance matrices). So for an output dimensionality of 1 this function works fine. For dimensionality$>$1 we return only the diagional of the covariance matrix, which may not always be what you want.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a81bcaa6c544bee98c1c625c81860fe4c}{Function\+Approximator\+G\+M\+R}, and \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_a81bcaa6c544bee98c1c625c81860fe4c}{Function\+Approximator\+G\+P\+R}.
+
+
+
+Definition at line 161 of file Function\+Approximator.\+hpp.
+
+
+\begin{DoxyCode}
+162   \{
+163     variances.fill(0);
+164   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!is\+Trained@{is\+Trained}}
+\index{is\+Trained@{is\+Trained}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{is\+Trained}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+Trained (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}
+
+
+Determine whether the function approximator has already been trained with data or not. 
+
+\begin{DoxyReturn}{Returns}
+true if the function approximator has already been trained, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 169 of file Function\+Approximator.\+hpp.
+
+
+\begin{DoxyCode}
+170   \{
+171     \textcolor{keywordflow}{return} (model\_parameters\_!=NULL);
+172   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}}
+\index{get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Expected\+Input\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Expected\+Input\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}
+
+
+The expected dimensionality of the input data. 
+
+\begin{DoxyReturn}{Returns}
+Expected dimensionality of the input data 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+115 \{
+116   \textcolor{keywordflow}{if} (model\_parameters\_!=NULL)
+117     \textcolor{keywordflow}{return} model\_parameters\_->\hyperlink{classDmpBbo_1_1ModelParameters_af4d8412e83487a72b7f8929c716d6d8f}{getExpectedInputDim}();
+118   \textcolor{keywordflow}{else}
+119     \textcolor{keywordflow}{return} meta\_parameters\_->\hyperlink{classDmpBbo_1_1MetaParameters_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}();
+120 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a6ad3f18b3d0ebb913a6a914be60b77e1}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Expected\+Output\+Dim@{get\+Expected\+Output\+Dim}}
+\index{get\+Expected\+Output\+Dim@{get\+Expected\+Output\+Dim}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Expected\+Output\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Expected\+Output\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1FunctionApproximator_a6ad3f18b3d0ebb913a6a914be60b77e1}
+
+
+The expected dimensionality of the output data. 
+
+\begin{DoxyReturn}{Returns}
+Expected dimensionality of the output data 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+123 \{
+124   \textcolor{keywordflow}{if} (model\_parameters\_!=NULL)
+125     \textcolor{keywordflow}{return} model\_parameters\_->\hyperlink{classDmpBbo_1_1ModelParameters_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}{getExpectedOutputDim}();
+126   \textcolor{keywordflow}{else}
+127     \textcolor{keywordflow}{return} meta\_parameters\_->\hyperlink{classDmpBbo_1_1MetaParameters_ab1a7cb7c0bf6fe5afd5561fa6f27ba7b}{getExpectedOutputDim}();
+128 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string get\+Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}
+
+
+Get the name of this function approximator. 
+
+\begin{DoxyReturn}{Returns}
+Name of this function approximator 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ad4c95407e44ba3e16b9651f9b81cd0e6}{Function\+Approximator\+G\+M\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_ad4c95407e44ba3e16b9651f9b81cd0e6}{Function\+Approximator\+G\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_ad4c95407e44ba3e16b9651f9b81cd0e6}{Function\+Approximator\+I\+R\+F\+R\+L\+S}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ad4c95407e44ba3e16b9651f9b81cd0e6}{Function\+Approximator\+L\+W\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR_ad4c95407e44ba3e16b9651f9b81cd0e6}{Function\+Approximator\+L\+W\+R}, and \hyperlink{classDmpBbo_1_1FunctionApproximatorRBFN_ad4c95407e44ba3e16b9651f9b81cd0e6}{Function\+Approximator\+R\+B\+F\+N}.
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a887f4747734bd8b7cc4f799092ff31b4}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Selectable\+Parameters@{get\+Selectable\+Parameters}}
+\index{get\+Selectable\+Parameters@{get\+Selectable\+Parameters}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Selectable\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Selectable\+Parameters (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a887f4747734bd8b7cc4f799092ff31b4}
+
+
+Return all the names of the parameter types that can be selected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em selected\+\_\+values\+\_\+labels} & Names of the parameter types that can be selected \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{Parameterizable}.
+
+
+
+Definition at line 200 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+201 \{
+202   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+203     model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{getSelectableParameters}(labels);
+204   \textcolor{keywordflow}{else}
+205     labels.clear();
+206 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a8a976b5db2d1809ece10e431816f0f27}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!set\+Selected\+Parameters@{set\+Selected\+Parameters}}
+\index{set\+Selected\+Parameters@{set\+Selected\+Parameters}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{set\+Selected\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Selected\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a8a976b5db2d1809ece10e431816f0f27}
+
+
+Determine which subset of parameters is represented in the vector returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}. 
+
+Different function approximators have different types of model parameters. For instance, L\+W\+R has the centers and widths of basis functions, along with the slopes of each line segment. \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} provides a means to determine which parameters should be returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, i.\+e. by calling\+: std\+::set$<$std\+::string$>$ selected; selected.\+insert(\char`\"{}slopes\char`\"{}); model\+\_\+parameters.\+set\+Selected\+Parameters(selected) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & The names of the parameters that are selected \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable}.
+
+
+
+Definition at line 194 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+195 \{
+196   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+197     model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{setSelectedParameters}(selected\_values\_labels);
+198 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a83d42bcdb0962117720b028baecbfbcf}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Parameter\+Vector\+Selected\+Min\+Max@{get\+Parameter\+Vector\+Selected\+Min\+Max}}
+\index{get\+Parameter\+Vector\+Selected\+Min\+Max@{get\+Parameter\+Vector\+Selected\+Min\+Max}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Parameter\+Vector\+Selected\+Min\+Max}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Selected\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{max}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1FunctionApproximator_a83d42bcdb0962117720b028baecbfbcf}
+
+
+Get the minimum and maximum of the selected parameters in one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em min} & The minimum of the selected parameters concatenated in one vector \\
+\hline
+\mbox{\tt out}  & {\em max} & The minimum of the selected parameters concatenated in one vector \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 145 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+146 \{
+147   \textcolor{keywordflow}{if} (model\_parameters\_==NULL)
+148   \{
+149     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{": Warning: Trying to access model parameters of the function
+       approximator, but it has not been trained yet. Returning empty parameter vector."} << endl;
+150     min.resize(0);
+151     max.resize(0);
+152     \textcolor{keywordflow}{return};
+153   \}
+154 
+155   model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{getParameterVectorSelectedMinMax}(min,max);
+156 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_ae83cb950bcf5219841e6ca8511ac2907}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Parameter\+Vector\+Selected\+Size@{get\+Parameter\+Vector\+Selected\+Size}}
+\index{get\+Parameter\+Vector\+Selected\+Size@{get\+Parameter\+Vector\+Selected\+Size}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Parameter\+Vector\+Selected\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Vector\+Selected\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_ae83cb950bcf5219841e6ca8511ac2907}
+
+
+Get the size of the vector of selected parameters, as returned by get\+Parameter\+Vector\+Selected(. 
+
+\begin{DoxyReturn}{Returns}
+The size of the vector representation of the selected parameters. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{Parameterizable}.
+
+
+
+Definition at line 180 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+181 \{
+182   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+183     \textcolor{keywordflow}{return} model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{getParameterVectorSelectedSize}();
+184   \textcolor{keywordflow}{else} 
+185     \textcolor{keywordflow}{return} 0; 
+186 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_aee501e63a46d63eb58a6f271bf093b9d}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!set\+Parameter\+Vector\+Selected@{set\+Parameter\+Vector\+Selected}}
+\index{set\+Parameter\+Vector\+Selected@{set\+Parameter\+Vector\+Selected}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{set\+Parameter\+Vector\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+Selected (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values, }
+\item[{bool}]{normalized = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_aee501e63a46d63eb58a6f271bf093b9d}
+
+
+Set all the values of the selected parameters with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & The new values of the selected parameters in one vector \\
+\hline
+\mbox{\tt in}  & {\em normalized} & Whether the data is normalized or not \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{Parameterizable}.
+
+
+
+Definition at line 188 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+189 \{
+190   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+191     model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{setParameterVectorSelected}(values, normalized);
+192 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_aab955bec57f074a991b8be31d6ce54ca}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Parameter\+Vector\+Selected@{get\+Parameter\+Vector\+Selected}}
+\index{get\+Parameter\+Vector\+Selected@{get\+Parameter\+Vector\+Selected}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Parameter\+Vector\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Selected (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values, }
+\item[{bool}]{normalized = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_aab955bec57f074a991b8be31d6ce54ca}
+
+
+Get the values of the selected parameters in one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & The selected parameters concatenated in one vector \\
+\hline
+\mbox{\tt in}  & {\em normalized} & Whether to normalize the data or not \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable}.
+
+
+
+Definition at line 171 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+172 \{
+173   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+174     model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{getParameterVectorSelected}(values, normalized);
+175   \textcolor{keywordflow}{else}
+176     values.resize(0);
+177 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a9dba1f93e426e7511630ec1ece4ace17}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}}
+\index{get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Parameter\+Vector\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Mask (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$}]{selected\+\_\+values\+\_\+labels, }
+\item[{Eigen\+::\+Vector\+Xi \&}]{selected\+\_\+mask}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a9dba1f93e426e7511630ec1ece4ace17}
+
+
+Get a mask for selecting parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & Labels of the selected parameter values \\
+\hline
+\mbox{\tt out}  & {\em selected\+\_\+mask} & A mask indicating indices of selected parameters. 0 indicates not selected, $>$0 indicates selected.\\
+\hline
+\end{DoxyParams}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ In this case, if selected\+\_\+values\+\_\+labels contains \char`\"{}centers\char`\"{} and \char`\"{}slopes\char`\"{}, the mask will be\+: \begin{DoxyVerb}    centers     widths    slopes
+[   1   1   1  0  0  0   3   3   3 ]
+\end{DoxyVerb}
+ The '0' indicates that these parameters are not selected. The other ones have different numbers so that they may be discerned from one another (as required in \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{Parameterizable\+::get\+Parameter\+Vector\+Selected\+Min\+Max} for instance. 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{Parameterizable}.
+
+
+
+Definition at line 208 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+208                                                                                                            
+                               \{
+209   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+210     model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{getParameterVectorMask}(selected\_values\_labels,selected\_mask);
+211   \textcolor{keywordflow}{else}
+212     selected\_mask.resize(0);
+213   
+214 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_ab24d2485b3b795b516f4844f225100eb}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}}
+\index{get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Parameter\+Vector\+All\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Vector\+All\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_ab24d2485b3b795b516f4844f225100eb}
+
+
+Get the size of the parameter values vector when it contains all available parameter values. 
+
+\begin{DoxyReturn}{Returns}
+The size of the parameter vector
+\end{DoxyReturn}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ then \hyperlink{classDmpBbo_1_1FunctionApproximator_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size()} will return 9 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{Parameterizable}.
+
+
+
+Definition at line 215 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+215                                                               \{
+216   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+217     \textcolor{keywordflow}{return} model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{getParameterVectorAllSize}();
+218   \textcolor{keywordflow}{else}
+219     \textcolor{keywordflow}{return} 0;
+220 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_ac44b51e5335f973eed54f100618e5496}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}}
+\index{get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_ac44b51e5335f973eed54f100618e5496}
+
+
+Return a vector that returns all available parameter values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, which return only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{Parameterizable}.
+
+
+
+Definition at line 221 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+221                                                                             \{
+222   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+223     model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{getParameterVectorAll}(values);    
+224   \textcolor{keywordflow}{else}
+225     values.resize(0);
+226 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a9d3c8f22e8237a805af4935a647e5a50}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}}
+\index{set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{set\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a9d3c8f22e8237a805af4935a647e5a50}
+
+
+Set all available parameter values with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{Parameterizable\+::set\+Parameter\+Vector\+Selected}, which sets only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{Parameterizable}.
+
+
+
+Definition at line 227 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+227                                                                             \{
+228   \textcolor{keywordflow}{if} (checkModelParametersInitialized())
+229     model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{setParameterVectorAll}(values);
+230 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a7513442a02e6a989f8a79112a482eaf8}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Unified\+Model@{get\+Unified\+Model}}
+\index{get\+Unified\+Model@{get\+Unified\+Model}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} $\ast$ get\+Unified\+Model (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1FunctionApproximator_a7513442a02e6a989f8a79112a482eaf8}
+
+
+Return a representation of this function approximator's model as a unified model. 
+
+See also the page on \hyperlink{page_unified_model}{Unified Model} \begin{DoxyReturn}{Returns}
+Unified model representation of this function approximator's model. 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+109 \{
+110   \textcolor{keywordflow}{return} model\_parameters\_->\hyperlink{classDmpBbo_1_1ModelParameters_a9d1c72e871e8fa37857f9ce7eabe5a04}{toUnifiedModel}();
+111 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1FunctionApproximator_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+233 \{
+234   \textcolor{keywordtype}{string} name = \textcolor{stringliteral}{"FunctionApproximator"}+\hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{getName}();
+235   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(name.c\_str());
+236 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Meta\+Parameters@{get\+Meta\+Parameters}}
+\index{get\+Meta\+Parameters@{get\+Meta\+Parameters}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Meta\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Meta\+Parameters} $\ast$ get\+Meta\+Parameters (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}
+
+
+Accessor for Function\+Approximator\+::meta\+\_\+parameters\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+The meta-\/parameters of the algorithm 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+86 \{ 
+87   \textcolor{keywordflow}{return} meta\_parameters\_; 
+88 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!get\+Model\+Parameters@{get\+Model\+Parameters}}
+\index{get\+Model\+Parameters@{get\+Model\+Parameters}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{get\+Model\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Model\+Parameters} $\ast$ get\+Model\+Parameters (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}
+
+
+Accessor for Function\+Approximator\+::model\+\_\+parameters\+\_\+. 
+
+\begin{DoxyReturn}{Returns}
+The model parameters of the trained model 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+92 \{ 
+93   \textcolor{keywordflow}{return} model\_parameters\_; 
+94 \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_add0186ca30d91928b887805fe0d24598}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!set\+Parameter\+Vector\+Modifier\+Private@{set\+Parameter\+Vector\+Modifier\+Private}}
+\index{set\+Parameter\+Vector\+Modifier\+Private@{set\+Parameter\+Vector\+Modifier\+Private}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{set\+Parameter\+Vector\+Modifier\+Private}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+Modifier\+Private (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{modifier, }
+\item[{bool}]{new\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_add0186ca30d91928b887805fe0d24598}
+
+
+Turn certain modifiers on or off, see \hyperlink{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{Parameterizable\+::set\+Parameter\+Vector\+Modifier()}. 
+
+Parameterizable\+::set\+Parameter\+Vector\+Modifier\+Private(), This function may (but must not be) overridden by subclasses of \hyperlink{classDmpBbo_1_1Parameterizable}{Parameterizable}, depending on whether the subclass has modifiers (or not)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em modifier} & The name of the modifier \\
+\hline
+\mbox{\tt in}  & {\em new\+\_\+value} & Whether to turn the modifier on (true) or off (false) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Parameterizable}{Parameterizable}.
+
+
+
+Definition at line 386 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+387 \{
+388   model\_parameters\_->\hyperlink{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{setParameterVectorModifier}(modifier,new\_value);
+389 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a61da4383ffab7d919c98d628c1d217d1}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!generate\+Inputs\+Grid@{generate\+Inputs\+Grid}}
+\index{generate\+Inputs\+Grid@{generate\+Inputs\+Grid}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{generate\+Inputs\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Inputs\+Grid (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{max, }
+\item[{const Eigen\+::\+Vector\+Xi \&}]{n\+\_\+samples\+\_\+per\+\_\+dim, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{inputs\+\_\+grid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classDmpBbo_1_1FunctionApproximator_a61da4383ffab7d919c98d628c1d217d1}
+
+
+Generate a input samples that lie on a grid (much like Matlab's meshgrid) For instance, if min = \mbox{[}2 6\mbox{]}, and max = \mbox{[}3 8\mbox{]}, and n\+\_\+samples\+\_\+per\+\_\+dim = \mbox{[}3 5\mbox{]} then this function first makes linearly spaces samples along each dimension, e.\+g. 
+
+samples\+\_\+dim1 = \mbox{[}2 2.\+5 3\mbox{]} and samples\+\_\+dim2 = \mbox{[}6 6.\+5 7 7.\+5 8\mbox{]} and then combine the combination of samples along all dimensions\+: inputs\+\_\+grid = \mbox{[}2 6; 2 6.\+5; 2 7; 2 7.\+5 2 8; 2.\+5 6; 2.\+5 6.\+5; 2.\+5 7; 2.\+5 7.\+5 2.\+5 8; 3 6; 3 6.\+5; 3 7; 3 7.\+5 3 8; 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em min} & Minimum values in the grid along each dimension \\
+\hline
+\mbox{\tt in}  & {\em max} & Maximum values in the grid along each dimension \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+samples\+\_\+per\+\_\+dim} & Number of samples along each dimension in the grid \\
+\hline
+\mbox{\tt out}  & {\em inputs\+\_\+grid} & A grid of samples \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 238 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+239 \{
+240   \textcolor{keywordtype}{int} n\_dims = min.size();
+241   assert(n\_dims==max.size());
+242   assert(n\_dims==n\_samples\_per\_dim.size());
+243   
+244   \textcolor{keywordflow}{if} (n\_dims==1)
+245   \{
+246     inputs\_grid = VectorXd::LinSpaced(n\_samples\_per\_dim[0], min[0], max[0]);
+247   \}
+248   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (n\_dims==2)
+249   \{
+250     \textcolor{keywordtype}{int} n\_samples = n\_samples\_per\_dim[0]*n\_samples\_per\_dim[1];
+251     inputs\_grid = MatrixXd::Zero(n\_samples, n\_dims);
+252     VectorXd x1 = VectorXd::LinSpaced(n\_samples\_per\_dim[0], min[0], max[0]);
+253     VectorXd x2 = VectorXd::LinSpaced(n\_samples\_per\_dim[1], min[1], max[1]);
+254     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<x1.size(); ii++)
+255     \{
+256       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} jj=0; jj<x2.size(); jj++)
+257       \{
+258         inputs\_grid(ii*x2.size()+jj,0) = x1[ii];
+259         inputs\_grid(ii*x2.size()+jj,1) = x2[jj];
+260       \}
+261     \}
+262   \}  
+263   \textcolor{keywordflow}{else}
+264   \{
+265     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+266     cerr << \textcolor{stringliteral}{"Can only generate input grids for n\_dims<3, but found "} << n\_dims << endl;
+267   \}
+268 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a53d95f63de3b49491b1204f45a24ae25}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!save\+Grid\+Data@{save\+Grid\+Data}}
+\index{save\+Grid\+Data@{save\+Grid\+Data}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{save\+Grid\+Data}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+Grid\+Data (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{min, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{max, }
+\item[{const Eigen\+::\+Vector\+Xi \&}]{n\+\_\+samples\+\_\+per\+\_\+dim, }
+\item[{std\+::string}]{directory, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximator_a53d95f63de3b49491b1204f45a24ae25}
+
+
+Generate a grid of inputs, and output the response of the basis functions and line segments for these inputs. 
+
+This function is not pure virtual, because this might not make sense for every model parameters class.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em min} & Minimum values for the grid (one for each dimension) \\
+\hline
+\mbox{\tt in}  & {\em max} & Maximum values for the grid (one for each dimension) \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+samples\+\_\+per\+\_\+dim} & Number of samples in the grid along each dimension \\
+\hline
+\mbox{\tt in}  & {\em directory} & Directory to which to save the results to. \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Whether to overwrite existing files. true=do overwrite, false=don't overwrite and give a warning. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Whether saving the data was successful. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1FunctionApproximatorGPR_a53d95f63de3b49491b1204f45a24ae25}{Function\+Approximator\+G\+P\+R}, \hyperlink{classDmpBbo_1_1FunctionApproximatorIRFRLS_a53d95f63de3b49491b1204f45a24ae25}{Function\+Approximator\+I\+R\+F\+R\+L\+S}, \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR_a53d95f63de3b49491b1204f45a24ae25}{Function\+Approximator\+L\+W\+R}, and \hyperlink{classDmpBbo_1_1FunctionApproximatorRBFN_a53d95f63de3b49491b1204f45a24ae25}{Function\+Approximator\+R\+B\+F\+N}.
+
+
+
+Definition at line 270 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+271 \{
+272   \textcolor{keywordflow}{if} (save\_directory.empty())
+273     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+274   
+275   \textcolor{comment}{//MatrixXd inputs;}
+276   \textcolor{comment}{//FunctionApproximator::generateInputsGrid(min, max, n\_samples\_per\_dim, inputs);}
+277 
+278   \textcolor{keywordflow}{if} (model\_parameters\_==NULL)
+279     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+280   UnifiedModel* mp\_unified = model\_parameters\_->\hyperlink{classDmpBbo_1_1ModelParameters_a9d1c72e871e8fa37857f9ce7eabe5a04}{toUnifiedModel}();
+281   \textcolor{keywordflow}{if} (mp\_unified==NULL)
+282     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+283 
+284   \textcolor{keywordflow}{return} mp\_unified->\hyperlink{classDmpBbo_1_1UnifiedModel_a53d95f63de3b49491b1204f45a24ae25}{saveGridData}(min,max,n\_samples\_per\_dim,save\_directory,overwrite);
+285   
+286 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximator_a53d95f63de3b49491b1204f45a24ae25_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_afd6f9d480456b90c4740c7aaca084ba4}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!set\+Model\+Parameters@{set\+Model\+Parameters}}
+\index{set\+Model\+Parameters@{set\+Model\+Parameters}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{set\+Model\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Model\+Parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf Model\+Parameters} $\ast$}]{model\+\_\+parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDmpBbo_1_1FunctionApproximator_afd6f9d480456b90c4740c7aaca084ba4}
+
+
+Accessor for Function\+Approximator\+::model\+\_\+parameters\+\_\+. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The model parameters of a trained model \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file Function\+Approximator.\+cpp.
+
+
+\begin{DoxyCode}
+98 \{
+99   \textcolor{keywordflow}{if} (model\_parameters\_!=NULL)
+100   \{
+101     \textcolor{keyword}{delete} model\_parameters\_;
+102     model\_parameters\_ = NULL;
+103   \}
+104 
+105   model\_parameters\_ = model\_parameters;
+106 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximator_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1FunctionApproximator_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 308 of file Function\+Approximator.\+hpp.
+
+\hypertarget{classDmpBbo_1_1FunctionApproximator_a07e49b4e5e386d6923f0fd558c77b8b4}{\index{Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dmp\+Bbo\+::\+Function\+Approximator@{Dmp\+Bbo\+::\+Function\+Approximator}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Function\+Approximator} \&}]{function\+\_\+approximator}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1FunctionApproximator_a07e49b4e5e386d6923f0fd558c77b8b4}
+
+
+Print to output stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em output} & Output stream to which to write to \\
+\hline
+\mbox{\tt in}  & {\em function\+\_\+approximator} & Function approximator to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Calls virtual function \hyperlink{classDmpBbo_1_1FunctionApproximator_a1aca816b42cf0d36118be0ab91120d77}{Function\+Approximator\+::to\+String}, which must be implemented by subclasses\+: \href{http://stackoverflow.com/questions/4571611/virtual-operator}{\tt http\+://stackoverflow.\+com/questions/4571611/virtual-\/operator} 
+\end{DoxyRemark}
+
+
+Definition at line 221 of file Function\+Approximator.\+hpp.
+
+
+\begin{DoxyCode}
+221                                                                                                        \{
+222     output << function\_approximator.toString();
+223     \textcolor{keywordflow}{return} output;
+224   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{FunctionApproximator_8hpp}{Function\+Approximator.\+hpp}\item 
+\hyperlink{FunctionApproximator_8cpp}{Function\+Approximator.\+cpp}\end{DoxyCompactItemize}

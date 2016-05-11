@@ -1,0 +1,5 @@
+<map id="saveToFile" name="saveToFile">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Trajectory.html#a7811beb090dc6ad38f0876f6b0fdc832" title="Get the length of the trajectory, i.e. " alt="" coords="153,5,215,32"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Trajectory.html#a6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the trajectory. " alt="" coords="162,56,206,83"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1Trajectory.html#a54e86a99496037df2355a51d712f5d54" title="Get the dimensionality of the misc variables. " alt="" coords="144,107,224,133"/>
+</map>

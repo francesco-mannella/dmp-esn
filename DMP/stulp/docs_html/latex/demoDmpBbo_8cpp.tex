@@ -1,0 +1,171 @@
+\hypertarget{demoDmpBbo_8cpp}{\subsection{demo\+Dmp\+Bbo.\+cpp File Reference}
+\label{demoDmpBbo_8cpp}\index{demo\+Dmp\+Bbo.\+cpp@{demo\+Dmp\+Bbo.\+cpp}}
+}
+
+
+Demonstrates how to run an evolution strategy to optimize a Dmp.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+{\ttfamily \#include \char`\"{}dmp\+\_\+bbo/tasks/\+Task\+Viapoint.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp\+\_\+bbo/\+Task\+Solver\+Dmp.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Dmp.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Model\+Parameters\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Distribution\+Gaussian.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Updater.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/updaters/\+Updater\+Covar\+Decay.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/run\+Evolutionary\+Optimization.\+hpp\char`\"{}}\\*
+Include dependency graph for demo\+Dmp\+Bbo.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDmpBbo_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{demoDmpBbo_8cpp_a4c740be97d066078bad8e3997193c673}{main} (int n\+\_\+args, char $\ast$args\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Demonstrates how to run an evolution strategy to optimize a Dmp. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{demoDmpBbo_8cpp_source}{demo\+Dmp\+Bbo.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{demoDmpBbo_8cpp_a4c740be97d066078bad8e3997193c673}{\index{demo\+Dmp\+Bbo.\+cpp@{demo\+Dmp\+Bbo.\+cpp}!main@{main}}
+\index{main@{main}!demo\+Dmp\+Bbo.\+cpp@{demo\+Dmp\+Bbo.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+args, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{demoDmpBbo_8cpp_a4c740be97d066078bad8e3997193c673}
+
+
+Main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+args} & Number of arguments \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments themselves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success of exection. 0 if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file demo\+Dmp\+Bbo.\+cpp.
+
+
+\begin{DoxyCode}
+52 \{
+53   \textcolor{comment}{// If program has an argument, it is a directory to which to save files too (or --help)}
+54   \textcolor{keywordtype}{string} directory;
+55   \textcolor{keywordflow}{if} (n\_args>1)
+56   \{
+57     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string}(args[1]).compare(\textcolor{stringliteral}{"--help"})==0)
+58     \{
+59       cout << \textcolor{stringliteral}{"Usage: "} << args[0] << \textcolor{stringliteral}{" [directory]         (directory: optional directory to save data to)
+      "} << endl;
+60       \textcolor{keywordflow}{return} 0;
+61     \}
+62     \textcolor{keywordflow}{else}
+63     \{
+64       directory = string(args[1]);
+65     \}
+66   \}
+67 
+68   \textcolor{comment}{// Make the task}
+69   \textcolor{keywordtype}{int} n\_dims = 2;
+70   VectorXd viapoint = VectorXd::Constant(n\_dims,2.0);
+71   \textcolor{keywordtype}{double} viapoint\_time = 0.3;
+72   \hyperlink{classDmpBbo_1_1TaskViapoint}{TaskViapoint}* task = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1TaskViapoint}{TaskViapoint}(viapoint,viapoint\_time);
+73   
+74   \textcolor{comment}{// Some DMP parameters}
+75   \textcolor{keywordtype}{double} tau = 1;
+76   VectorXd y\_init = VectorXd::Constant(n\_dims,1.0);
+77   VectorXd y\_attr = VectorXd::Constant(n\_dims,3.0);
+78   
+79   \textcolor{comment}{// Make the initial function approximators (LWR with zero slopes)}
+80   \textcolor{keywordtype}{int} n\_basis\_functions = 4;
+81   VectorXd centers = VectorXd::LinSpaced(n\_basis\_functions,0,1);
+82   VectorXd widths  = VectorXd::Constant(n\_basis\_functions,0.2);
+83   VectorXd slopes  = VectorXd::Zero(n\_basis\_functions);
+84   VectorXd offsets = VectorXd::Zero(n\_basis\_functions);
+85   \hyperlink{classDmpBbo_1_1ModelParametersLWR}{ModelParametersLWR}* model\_parameters = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1ModelParametersLWR}{ModelParametersLWR}(centers,widths,slopes,offsets);
+86   vector<FunctionApproximator*> function\_approximators(n\_dims);
+87   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+88     function\_approximators[i\_dim] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}(model\_parameters);
+89   
+90   \hyperlink{classDmpBbo_1_1Dmp}{Dmp}* dmp = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1Dmp}{Dmp}(tau, y\_init, y\_attr, function\_approximators, Dmp::KULVICIUS\_2012\_JOINING);
+91 
+92   \textcolor{comment}{// Make the task solver}
+93   set<string> parameters\_to\_optimize;
+94   parameters\_to\_optimize.insert(\textcolor{stringliteral}{"offsets"});
+95   parameters\_to\_optimize.insert(\textcolor{stringliteral}{"slopes"});
+96   \textcolor{keywordtype}{double} dt=0.01;
+97   \textcolor{keywordtype}{double} integrate\_dmp\_beyond\_tau\_factor=1.2;
+98   \textcolor{keywordtype}{bool} use\_normalized\_parameter=\textcolor{keyword}{true};  
+99   \hyperlink{classDmpBbo_1_1TaskSolverDmp}{TaskSolverDmp}* task\_solver = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1TaskSolverDmp}{TaskSolverDmp}(dmp,parameters\_to\_optimize,
+100                                        dt,integrate\_dmp\_beyond\_tau\_factor,use\_normalized\_parameter);
+101   \textcolor{comment}{// task\_solver->set\_perturbation(1.0); // Add perturbations}
+102   
+103   \textcolor{comment}{// Make the initial distribution}
+104   VectorXd mean\_init;
+105   dmp->\hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{getParameterVectorSelected}(mean\_init);
+106   
+107   MatrixXd covar\_init = 1000.0*MatrixXd::Identity(mean\_init.size(),mean\_init.size());
+108 
+109   \hyperlink{classDmpBbo_1_1DistributionGaussian}{DistributionGaussian}* distribution = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1DistributionGaussian}{DistributionGaussian}(mean\_init,covar\_init);
+110 
+111   \textcolor{comment}{// Make the parameter updater}
+112   \textcolor{keywordtype}{double} eliteness = 10;
+113   \textcolor{keywordtype}{double} covar\_decay\_factor = 0.8;
+114   \textcolor{keywordtype}{string} weighting\_method(\textcolor{stringliteral}{"PI-BB"});
+115   \hyperlink{classDmpBbo_1_1Updater}{Updater}* updater = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1UpdaterCovarDecay}{UpdaterCovarDecay}(eliteness, covar\_decay\_factor, 
+      weighting\_method);
+116   
+117   \textcolor{comment}{// Run the optimization}
+118   \textcolor{keywordtype}{int} n\_updates = 40;
+119   \textcolor{keywordtype}{int} n\_samples\_per\_update = 15;
+120   \textcolor{keywordtype}{bool} overwrite = \textcolor{keyword}{true};
+121   runEvolutionaryOptimization(task, task\_solver, distribution, updater, n\_updates, n\_samples\_per\_update,
+      directory,overwrite);
+122   
+123 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{demoDmpBbo_8cpp_a4c740be97d066078bad8e3997193c673_cgraph}
+\end{center}
+\end{figure}
+
+

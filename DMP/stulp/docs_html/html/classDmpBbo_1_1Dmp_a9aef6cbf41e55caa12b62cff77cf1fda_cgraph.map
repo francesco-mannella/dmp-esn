@@ -1,0 +1,23 @@
+<map id="computeFunctionApproximatorInputsAndTargets" name="computeFunctionApproximatorInputsAndTargets">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Trajectory.html#a7811beb090dc6ad38f0876f6b0fdc832" title="Get the length of the trajectory, i.e. " alt="" coords="302,5,447,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Trajectory.html#a6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the trajectory. " alt="" coords="288,71,461,98"/>
+<area shape="rect" id="node4" href="$group__DynamicalSystems.html#ga93d7cbbf2e471b00f124e41706405a05" title="Get the dimensionality of the dynamical system, i.e. " alt="" coords="813,173,1005,215"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1Dmp.html#ad62585b1e0bab2b9743782e15e01d694" title="Return analytical solution of the system at certain times (and return forcing terms) ..." alt="" coords="309,513,440,539"/>
+<area shape="rect" id="node11" href="$classDmpBbo_1_1SpringDamperSystem.html#a1e0acb1d6298104e74f81f53768f5bf1" title="Accessor function for damping coefficient. " alt="" coords="532,772,751,813"/>
+<area shape="rect" id="node12" href="$group__DynamicalSystems.html#ga50eec7ad4c9664b5809ace45b22200d5" title="Accessor function for the time constant. " alt="" coords="800,721,1017,747"/>
+<area shape="rect" id="node17" href="$classDmpBbo_1_1Trajectory.html#a0ac526fb2e2e77134906a4b657d795d2" title="Accessor function for the times at which measurements were made. " alt="" coords="293,881,456,907"/>
+<area shape="rect" id="node18" href="$classDmpBbo_1_1SpringDamperSystem.html#a4afd1caf44ce68f2747d8fa8a1388b0a" title="Accessor function for spring constant. " alt="" coords="265,932,484,973"/>
+<area shape="rect" id="node19" href="$classDmpBbo_1_1SpringDamperSystem.html#a387fcfdb067c6de3be9bfd61b868b839" title="Accessor function for mass. " alt="" coords="265,997,484,1039"/>
+<area shape="rect" id="node20" href="$classDmpBbo_1_1Trajectory.html#ac2ce234816063eeeead69a146651fef7" title="Accessor function for the accelerations at different times. " alt="" coords="302,1063,447,1104"/>
+<area shape="rect" id="node21" href="$classDmpBbo_1_1Trajectory.html#a7e10cffc4d5b8099986c835f9337eab4" title="Accessor function for the positions at different times. " alt="" coords="292,1129,457,1155"/>
+<area shape="rect" id="node22" href="$classDmpBbo_1_1Trajectory.html#ad5772d5db1c6af36cf1de2eed2447702" title="Accessor function for the velocities at different times. " alt="" coords="288,1179,461,1206"/>
+<area shape="rect" id="node6" href="$group__DynamicalSystems.html#ga6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the dynamical system, i.e. " alt="" coords="799,487,1019,514"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1DynamicalSystem.html#ab6092038efc51ebd122e7c0878f6557d" title="Return analytical solution of the system at certain times. " alt="" coords="545,239,737,280"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1Dmp.html#a89078b732a4579130e24e3bc59c1713c" title="Compute the outputs of the function approximators. " alt="" coords="535,173,747,215"/>
+<area shape="rect" id="node9" href="$group__DynamicalSystems.html#gaebe3c462bc4a725cb17bcc3d13285f13" title="Accessor function for the attractor state of the dynamical system. " alt="" coords="813,589,1005,631"/>
+<area shape="rect" id="node10" href="$group__DynamicalSystems.html#ga4c7f24e7deec1629548a075015bdc693" title="Accessor function for the initial state of the dynamical system. " alt="" coords="545,304,737,345"/>
+<area shape="rect" id="node13" href="$group__DynamicalSystems.html#ga32a975e60b5f001308368c7f06b90e18" title="Mutator function for the attractor state of the dynamical system. " alt="" coords="545,655,737,696"/>
+<area shape="rect" id="node14" href="$classDmpBbo_1_1DynamicalSystem.html#a44dd496535fde494d8465e7603c93db3" title="Start integrating the system. " alt="" coords="545,421,737,463"/>
+<area shape="rect" id="node16" href="$classDmpBbo_1_1SpringDamperSystem.html#ab564468764e7e4dc7c11e2a786e22c19" title="The differential equation which defines the system. " alt="" coords="532,589,751,631"/>
+<area shape="rect" id="node15" href="$classDmpBbo_1_1DynamicalSystem.html#a70acc98a8e024f9b6e0e6de1b519e260" title="The differential equation which defines the system. " alt="" coords="813,421,1005,463"/>
+</map>

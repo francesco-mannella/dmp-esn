@@ -1,0 +1,8 @@
+<map id="UpdaterCovarDecay.hpp" name="UpdaterCovarDecay.hpp">
+<area shape="rect" id="node2" href="$demoEvolutionaryOptimization_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a distance function, implemented as a CostF..." alt="" coords="5,87,244,114"/>
+<area shape="rect" id="node3" href="$demoEvolutionaryOptimizationTask_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize the parameters of a quadratic function..." alt="" coords="268,80,480,121"/>
+<area shape="rect" id="node4" href="$UpdaterCovarDecay_8cpp.html" title="UpdaterCovarDecay class source file. " alt="" coords="504,87,681,114"/>
+<area shape="rect" id="node5" href="$demoDmpBbo_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a Dmp. " alt="" coords="706,87,842,114"/>
+<area shape="rect" id="node6" href="$demoDmpBboMultiDim_8cpp.html" title="Demonstrates how to run multiple evolution strategies in parallel to optimize a Dmp. " alt="" coords="866,87,1055,114"/>
+<area shape="rect" id="node7" href="$demoImitationAndOptimization_8cpp.html" title="Demonstrates how to initialize a DMP, and then optimize it with an evolution strategy. " alt="" coords="1080,87,1319,114"/>
+</map>

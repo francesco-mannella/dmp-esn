@@ -1,0 +1,84 @@
+\hypertarget{TaskSolver_8hpp}{\subsection{Task\+Solver.\+hpp File Reference}
+\label{TaskSolver_8hpp}\index{Task\+Solver.\+hpp@{Task\+Solver.\+hpp}}
+}
+
+
+Task\+Solver class header file.  
+
+
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+{\ttfamily \#include $<$boost/serialization/access.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/serialization/assume\+\_\+abstract.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/serialization/level.\+hpp$>$}\\*
+Include dependency graph for Task\+Solver.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TaskSolver_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TaskSolver_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1TaskSolver}{Task\+Solver}
+\begin{DoxyCompactList}\small\item\em Interface for classes that can perform rollouts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TaskSolver_8hpp_a155359b0dcc4f77af8ab0fdfba6f2deb}{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T} (\hyperlink{classDmpBbo_1_1TaskSolver}{Dmp\+Bbo\+::\+Task\+Solver})
+\begin{DoxyCompactList}\small\item\em Don't add version information to archives. \end{DoxyCompactList}\item 
+\hyperlink{TaskSolver_8hpp_a21bbadb9777ccef797ef786836e6a68a}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N} (\hyperlink{classDmpBbo_1_1TaskSolver}{Dmp\+Bbo\+::\+Task\+Solver}, boost\+::serialization\+::object\+\_\+serializable)
+\begin{DoxyCompactList}\small\item\em Don't add version information to archives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Task\+Solver class header file. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{TaskSolver_8hpp_source}{Task\+Solver.\+hpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{TaskSolver_8hpp_a155359b0dcc4f77af8ab0fdfba6f2deb}{\index{Task\+Solver.\+hpp@{Task\+Solver.\+hpp}!B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}}
+\index{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}!Task\+Solver.\+hpp@{Task\+Solver.\+hpp}}
+\paragraph[{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T (
+\begin{DoxyParamCaption}
+\item[{{\bf Dmp\+Bbo\+::\+Task\+Solver}}]{}
+\end{DoxyParamCaption}
+)}}\label{TaskSolver_8hpp_a155359b0dcc4f77af8ab0fdfba6f2deb}
+
+
+Don't add version information to archives. 
+
+\hypertarget{TaskSolver_8hpp_a21bbadb9777ccef797ef786836e6a68a}{\index{Task\+Solver.\+hpp@{Task\+Solver.\+hpp}!B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N@{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N}}
+\index{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N@{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N}!Task\+Solver.\+hpp@{Task\+Solver.\+hpp}}
+\paragraph[{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N (
+\begin{DoxyParamCaption}
+\item[{{\bf Dmp\+Bbo\+::\+Task\+Solver}}]{, }
+\item[{boost\+::serialization\+::object\+\_\+serializable}]{}
+\end{DoxyParamCaption}
+)}}\label{TaskSolver_8hpp_a21bbadb9777ccef797ef786836e6a68a}
+
+
+Don't add version information to archives. 
+

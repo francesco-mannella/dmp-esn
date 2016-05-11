@@ -1,0 +1,1114 @@
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR}{\subsection{Function\+Approximator\+G\+M\+R Class Reference}
+\label{classDmpBbo_1_1FunctionApproximatorGMR}\index{Function\+Approximator\+G\+M\+R@{Function\+Approximator\+G\+M\+R}}
+}
+
+
+G\+M\+R (Gaussian Mixture Regression) function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Function\+Approximator\+G\+M\+R.\+hpp$>$}
+
+
+
+Inheritance diagram for Function\+Approximator\+G\+M\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classDmpBbo_1_1FunctionApproximatorGMR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Function\+Approximator\+G\+M\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classDmpBbo_1_1FunctionApproximatorGMR__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a9434853efd2326bd0cb7412c13fe55d3}{Function\+Approximator\+G\+M\+R} (const \hyperlink{classDmpBbo_1_1MetaParametersGMR}{Meta\+Parameters\+G\+M\+R} $\ast$const meta\+\_\+parameters, const \hyperlink{classDmpBbo_1_1ModelParametersGMR}{Model\+Parameters\+G\+M\+R} $\ast$const model\+\_\+parameters=N\+U\+L\+L)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with meta-\/ and model-\/parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a7f7f6196ae263db36362c5aa2a8c6069}{Function\+Approximator\+G\+M\+R} (const \hyperlink{classDmpBbo_1_1ModelParametersGMR}{Model\+Parameters\+G\+M\+R} $\ast$const model\+\_\+parameters)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with model parameters. \end{DoxyCompactList}\item 
+virtual \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ad792a46ac006916c5c1ffed2fa42dd24}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ac453415cf4894aba45e8db6ebc4cd4dc}{train} (const Eigen\+::\+Matrix\+Xd \&input, const Eigen\+::\+Matrix\+Xd \&target)
+\begin{DoxyCompactList}\small\item\em Train the function approximator with corresponding input and target examples. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{predict} (const Eigen\+::\+Matrix\+Xd \&input, Eigen\+::\+Matrix\+Xd \&output)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a81bcaa6c544bee98c1c625c81860fe4c}{predict\+Variance} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&variances)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to get the variance of a prediction This function is not implemented by all function approximators. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ab74ea106ee37e27900826c1fa1a4331c}{predict} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&outputs, Eigen\+::\+Matrix\+Xd \&variances)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction, and also to predict its variance. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ad4c95407e44ba3e16b9651f9b81cd0e6}{get\+Name} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the name of this function approximator. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a9f885377585c39b1cccf4c4f3a0f496b}{predict\+Dot} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&outputs, Eigen\+::\+Matrix\+Xd \&outputs\+\_\+dot)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction and to compute the derivate of that prediction. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a52655b0b7e5a0c1e0e74a175956658d4}{predict\+Dot} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&outputs, Eigen\+::\+Matrix\+Xd \&outputs\+\_\+dot, Eigen\+::\+Matrix\+Xd \&variances)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction and to compute the derivate of that prediction, and also to predict its variance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_af9a5e39e32c14b1daa7aa5ecfe1a5bfb}{k\+Means\+Init} (const Eigen\+::\+Matrix\+Xd \&data, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&means, std\+::vector$<$ double $>$ \&priors, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&covars, int n\+\_\+max\+\_\+iter=1000)
+\begin{DoxyCompactList}\small\item\em Initialize Gaussian for E\+M algorithm using k-\/means. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ab99de8c0d7c1870958e63f1bfc198303}{first\+Dim\+Slicing\+Init} (const Eigen\+::\+Matrix\+Xd \&data, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&means, std\+::vector$<$ double $>$ \&priors, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&covars)
+\begin{DoxyCompactList}\small\item\em Initialize Gaussian for E\+M algorithm using a same-\/size slicing on the first dimension (method used in Calinon G\+M\+R implementation). \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a78aab3aea2aa82ceadde61d4ca168a64}{expectation\+Maximization} (const Eigen\+::\+Matrix\+Xd \&data, std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&means, std\+::vector$<$ double $>$ \&priors, std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&covars, int n\+\_\+max\+\_\+iter=50)
+\begin{DoxyCompactList}\small\item\em E\+M algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static double \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a68ed18ca86526a591014123290dc855a}{normal\+P\+D\+F} (const Eigen\+::\+Vector\+Xd \&mu, const Eigen\+::\+Matrix\+Xd \&covar, const Eigen\+::\+Vector\+Xd \&input)
+\begin{DoxyCompactList}\small\item\em The probability density function (P\+D\+F) of the multi-\/variate normal distribution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+G\+M\+R (Gaussian Mixture Regression) function approximator. 
+
+Definition at line 44 of file Function\+Approximator\+G\+M\+R.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_a9434853efd2326bd0cb7412c13fe55d3}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!Function\+Approximator\+G\+M\+R@{Function\+Approximator\+G\+M\+R}}
+\index{Function\+Approximator\+G\+M\+R@{Function\+Approximator\+G\+M\+R}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{Function\+Approximator\+G\+M\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator\+G\+M\+R} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Meta\+Parameters\+G\+M\+R} $\ast$const}]{meta\+\_\+parameters, }
+\item[{const {\bf Model\+Parameters\+G\+M\+R} $\ast$const}]{model\+\_\+parameters = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorGMR_a9434853efd2326bd0cb7412c13fe55d3}
+
+
+Initialize a function approximator with meta-\/ and model-\/parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em meta\+\_\+parameters} & The training algorithm meta-\/parameters \\
+\hline
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the trained model. If this parameter is not passed, the function approximator is initialized as untrained. In this case, you must call \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator\+::train()} before being able to call \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator\+::predict()}. Either meta\+\_\+parameters X\+O\+R model-\/parameters can passed as N\+U\+L\+L, but not both. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+52 :
+53   \hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{FunctionApproximator}(meta\_parameters,model\_parameters)
+54 \{
+55   \textcolor{comment}{// TODO : find a more appropriate place for rand initialization}
+56   \textcolor{comment}{//srand(unsigned(time(0)));}
+57   \textcolor{keywordflow}{if} (model\_parameters!=NULL)
+58     preallocateMatrices(
+59       model\_parameters->getNumberOfGaussians(),
+60       model\_parameters->getExpectedInputDim(),
+61       model\_parameters->getExpectedOutputDim()
+62     );
+63 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorGMR_a9434853efd2326bd0cb7412c13fe55d3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_a7f7f6196ae263db36362c5aa2a8c6069}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!Function\+Approximator\+G\+M\+R@{Function\+Approximator\+G\+M\+R}}
+\index{Function\+Approximator\+G\+M\+R@{Function\+Approximator\+G\+M\+R}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{Function\+Approximator\+G\+M\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator\+G\+M\+R} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model\+Parameters\+G\+M\+R} $\ast$const}]{model\+\_\+parameters}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorGMR_a7f7f6196ae263db36362c5aa2a8c6069}
+
+
+Initialize a function approximator with model parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the (previously) trained model. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 65 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+66 :
+67   \hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{FunctionApproximator}(model\_parameters)
+68 \{
+69     preallocateMatrices(
+70       model\_parameters->getNumberOfGaussians(),
+71       model\_parameters->getExpectedInputDim(),
+72       model\_parameters->getExpectedOutputDim()
+73     );
+74 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorGMR_a7f7f6196ae263db36362c5aa2a8c6069_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_ad792a46ac006916c5c1ffed2fa42dd24}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_ad792a46ac006916c5c1ffed2fa42dd24}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a9b6a690060f1d845da16d6d739ded2d9}{Function\+Approximator}.
+
+
+
+Definition at line 93 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+93                                                                \{
+94   \textcolor{comment}{// All error checking and cloning is left to the FunctionApproximator constructor.}
+95   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a9434853efd2326bd0cb7412c13fe55d3}{FunctionApproximatorGMR}(
+96     dynamic\_cast<const MetaParametersGMR*>(\hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{getMetaParameters}()),
+97     dynamic\_cast<const ModelParametersGMR*>(\hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}())
+98     );
+99 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classDmpBbo_1_1FunctionApproximatorGMR_ad792a46ac006916c5c1ffed2fa42dd24_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_ac453415cf4894aba45e8db6ebc4cd4dc}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}void train (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{targets}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_ac453415cf4894aba45e8db6ebc4cd4dc}
+
+
+Train the function approximator with corresponding input and target examples. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em targets} & Target values of the training examples \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator}.
+
+
+
+Definition at line 102 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+103 \{
+104   \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+105   \{
+106     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorGMR::train more than once. Doing nothing."} << 
+      endl;
+107     cerr << \textcolor{stringliteral}{"   (if you really want to retrain, call reTrain function instead)"} << endl;
+108     \textcolor{keywordflow}{return};
+109   \}
+110   
+111   assert(inputs.rows() == targets.rows()); \textcolor{comment}{// Must have same number of examples}
+112   assert(inputs.cols()==\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}());
+113 
+114   \textcolor{keyword}{const} MetaParametersGMR* meta\_parameters\_GMR = 
+115     \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }MetaParametersGMR*\textcolor{keyword}{>}(\hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{getMetaParameters}());
+116 
+117   \textcolor{keywordtype}{int} n\_gaussians = meta\_parameters\_GMR->number\_of\_gaussians\_;
+118   \textcolor{keywordtype}{int} n\_dims\_in = inputs.cols();
+119   \textcolor{keywordtype}{int} n\_dims\_out = targets.cols();
+120   \textcolor{keywordtype}{int} n\_dims\_gmm = n\_dims\_in + n\_dims\_out;
+121   
+122   \textcolor{comment}{// Initialize the means, priors and covars}
+123   std::vector<VectorXd> means(n\_gaussians);
+124   std::vector<MatrixXd> covars(n\_gaussians);
+125   std::vector<double> priors(n\_gaussians);
+126   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n\_gaussians; i++)
+127   \{
+128     means[i] = VectorXd(n\_dims\_gmm);
+129     priors[i] = 0.0;
+130     covars[i] = MatrixXd(n\_dims\_gmm, n\_dims\_gmm);
+131   \}
+132   
+133   \textcolor{comment}{// Put the input/output data in one big matrix}
+134   MatrixXd data = MatrixXd(inputs.rows(), n\_dims\_gmm);
+135   data << inputs, targets;
+136 
+137   \textcolor{comment}{// Initialization}
+138   \textcolor{keywordflow}{if} (inputs.cols() == 1)
+139     \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_ab99de8c0d7c1870958e63f1bfc198303}{firstDimSlicingInit}(data, means, priors, covars);
+140   \textcolor{keywordflow}{else}
+141     \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_af9a5e39e32c14b1daa7aa5ecfe1a5bfb}{kMeansInit}(data, means, priors, covars);
+142   
+143   \textcolor{comment}{// Expectation-Maximization}
+144   \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a78aab3aea2aa82ceadde61d4ca168a64}{expectationMaximization}(data, means, priors, covars);
+145 
+146   \textcolor{comment}{// Extract the different input/output components from the means/covars which contain both}
+147   std::vector<Eigen::VectorXd> means\_x(n\_gaussians);
+148   std::vector<Eigen::VectorXd> means\_y(n\_gaussians);
+149   std::vector<Eigen::MatrixXd> covars\_x(n\_gaussians);
+150   std::vector<Eigen::MatrixXd> covars\_y(n\_gaussians);
+151   std::vector<Eigen::MatrixXd> covars\_y\_x(n\_gaussians);
+152   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_gau = 0; i\_gau < n\_gaussians; i\_gau++)
+153   \{
+154     means\_x[i\_gau]    = means[i\_gau].segment(0, n\_dims\_in);
+155     means\_y[i\_gau]    = means[i\_gau].segment(n\_dims\_in, n\_dims\_out);
+156 
+157     covars\_x[i\_gau]   = covars[i\_gau].block(0, 0, n\_dims\_in, n\_dims\_in);
+158     covars\_y[i\_gau]   = covars[i\_gau].block(n\_dims\_in, n\_dims\_in, n\_dims\_out, n\_dims\_out);
+159     covars\_y\_x[i\_gau] = covars[i\_gau].block(n\_dims\_in, 0, n\_dims\_out, n\_dims\_in);
+160   \}
+161 
+162   \hyperlink{classDmpBbo_1_1FunctionApproximator_afd6f9d480456b90c4740c7aaca084ba4}{setModelParameters}(\textcolor{keyword}{new} ModelParametersGMR(priors, means\_x, means\_y, covars\_x, covars\_y,
+       covars\_y\_x));
+163 
+164   \textcolor{comment}{// After training, we know the sizes of the matrices that should be cached}
+165   preallocateMatrices(n\_gaussians,n\_dims\_in,n\_dims\_out);
+166   
+167   \textcolor{comment}{// std::vector<VectorXd> centers;}
+168   \textcolor{comment}{// std::vector<MatrixXd> slopes;}
+169   \textcolor{comment}{// std::vector<VectorXd> biases;}
+170   \textcolor{comment}{// std::vector<MatrixXd> inverseCovarsL;}
+171 
+172   \textcolor{comment}{// // int n\_dims\_in = inputs.cols();}
+173   \textcolor{comment}{// // int n\_dims\_out = targets.cols();}
+174 
+175   \textcolor{comment}{// for (int i\_gau = 0; i\_gau < n\_gaussians; i\_gau++)}
+176   \textcolor{comment}{// \{}
+177   \textcolor{comment}{//   centers.push\_back(VectorXd(means[i\_gau].segment(0, n\_dims\_in)));}
+178 
+179   \textcolor{comment}{//   slopes.push\_back(MatrixXd(covars[i\_gau].block(n\_dims\_in, 0, n\_dims\_out, n\_dims\_in) *
+       covars[i\_gau].block(0, 0, n\_dims\_in, n\_dims\_in).inverse()));}
+180     
+181   \textcolor{comment}{//   biases.push\_back(VectorXd(means[i\_gau].segment(n\_dims\_in, n\_dims\_out) -}
+182   \textcolor{comment}{//     slopes[i\_gau]*means[i\_gau].segment(0, n\_dims\_in)));}
+183 
+184   \textcolor{comment}{//   MatrixXd L = covars[i\_gau].block(0, 0, n\_dims\_in, n\_dims\_in).inverse().llt().matrixL();}
+185   \textcolor{comment}{//   inverseCovarsL.push\_back(MatrixXd(L));}
+186   \textcolor{comment}{// \}}
+187 
+188   \textcolor{comment}{// setModelParameters(new ModelParametersGMR(centers, priors, slopes, biases, inverseCovarsL));}
+189 
+190   \textcolor{comment}{//for (size\_t i = 0; i < means.size(); i++)}
+191   \textcolor{comment}{//  delete means[i];}
+192   \textcolor{comment}{//for (size\_t i = 0; i < covars.size(); i++)}
+193   \textcolor{comment}{//delete covars[i];}
+194 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorGMR_ac453415cf4894aba45e8db6ebc4cd4dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!predict@{predict}}
+\index{predict@{predict}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{predict}]{\setlength{\rightskip}{0pt plus 5cm}void predict (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}
+
+
+Query the function approximator to make a prediction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator}.
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_a81bcaa6c544bee98c1c625c81860fe4c}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!predict\+Variance@{predict\+Variance}}
+\index{predict\+Variance@{predict\+Variance}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{predict\+Variance}]{\setlength{\rightskip}{0pt plus 5cm}void predict\+Variance (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{variances}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_a81bcaa6c544bee98c1c625c81860fe4c}
+
+
+Query the function approximator to get the variance of a prediction This function is not implemented by all function approximators. 
+
+Therefore, the default implementation fills outputs with 0s. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query (n\+\_\+samples X n\+\_\+dims\+\_\+in) \\
+\hline
+\mbox{\tt out}  & {\em variances} & Predicted variances for the output values (n\+\_\+samples X n\+\_\+dims\+\_\+out). Note that if the output has a dimensionality$>$1, these variances should actuall be covariance matrices (use function \hyperlink{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}{predict(const Eigen\+::\+Matrix\+Xd\& inputs, Eigen\+::\+Matrix\+Xd\& outputs, std\+::vector$<$\+Eigen\+::\+Matrix\+Xd$>$\& variances)} to get the full covariance matrices). So for an output dimensionality of 1 this function works fine. For dimensionality$>$1 we return only the diagional of the covariance matrix, which may not always be what you want.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1FunctionApproximator_ae7931f49eb4d095e1c007edcbad58684}{Function\+Approximator}.
+
+
+
+Definition at line 217 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+218 \{
+219   ENTERING\_REAL\_TIME\_CRITICAL\_CODE
+220   variances.resize(inputs.rows(),\hyperlink{classDmpBbo_1_1FunctionApproximator_a6ad3f18b3d0ebb913a6a914be60b77e1}{getExpectedOutputDim}());
+221   \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{predict}(inputs,empty\_prealloc\_,variances);
+222   EXITING\_REAL\_TIME\_CRITICAL\_CODE
+223 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorGMR_a81bcaa6c544bee98c1c625c81860fe4c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_ab74ea106ee37e27900826c1fa1a4331c}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!predict@{predict}}
+\index{predict@{predict}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{predict}]{\setlength{\rightskip}{0pt plus 5cm}void predict (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{variances}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_ab74ea106ee37e27900826c1fa1a4331c}
+
+
+Query the function approximator to make a prediction, and also to predict its variance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query (n\+\_\+samples X n\+\_\+dims\+\_\+in) \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values (n\+\_\+samples X n\+\_\+dims\+\_\+out) \\
+\hline
+\mbox{\tt out}  & {\em variances} & Predicted variances for the output values (n\+\_\+samples X n\+\_\+dims\+\_\+out). Note that if the output has a dimensionality$>$1, these variances should actuall be covariance matrices (use function \hyperlink{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}{predict(const Eigen\+::\+Matrix\+Xd\& inputs, Eigen\+::\+Matrix\+Xd\& outputs, std\+::vector$<$\+Eigen\+::\+Matrix\+Xd$>$\& variances)} to get the full covariance matrices). So for an output dimensionality of 1 this function works fine. For dimensionality$>$1 we return only the diagional of the covariance matrix, which may not always be what you want.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1FunctionApproximator_a98f578f3032ed35e87e036bd81a48d3f}{Function\+Approximator}.
+
+
+
+Definition at line 225 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+226 \{
+227   ENTERING\_REAL\_TIME\_CRITICAL\_CODE
+228   
+229   \textcolor{comment}{// The reason this function is not pretty and so long (which I usually try to avoid) is to  }
+230   \textcolor{comment}{// avoid Eigen making dynamic memory allocations. This would cause trouble in real-time critical}
+231   \textcolor{comment}{// code. Therefore, I}
+232   \textcolor{comment}{//   * use preallocated matrices (member variables) for intermediate results}
+233   \textcolor{comment}{//   * use noalias() whenever needed (http://eigen.tuxfamily.org/dox/TopicLazyEvaluation.html)}
+234   \textcolor{comment}{//   * try to avoid calling other functions (a bit tricky when using Eigen matrices as parameters)}
+235   \textcolor{comment}{// I hope the documentation makes up for the ugliness...}
+236   
+237   \textcolor{keywordflow}{if} (!\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+238   \{
+239     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorGMR::predict if you have not trained yet. Doing
+       nothing."} << endl;
+240     \textcolor{keywordflow}{return};
+241   \}
+242   
+243   \textcolor{keyword}{const} ModelParametersGMR* gmm = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }ModelParametersGMR*\textcolor{keyword}{>}(
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}());
+244 
+245   \textcolor{comment}{// Number of Gaussians must be at least one}
+246   assert(gmm->getNumberOfGaussians()>0);
+247   \textcolor{comment}{// Dimensionality of input must be same as of the gmm inputs  }
+248   assert(gmm->getExpectedInputDim()==inputs.cols());
+249 
+250   \textcolor{comment}{// Only compute the means if the outputs matrix is not empty}
+251   \textcolor{keywordtype}{bool} compute\_means = \textcolor{keyword}{false};
+252   \textcolor{keywordflow}{if} (outputs.rows()>0)
+253   \{
+254     outputs.resize(inputs.rows(),gmm->getExpectedOutputDim());
+255     outputs.fill(0);
+256     compute\_means = \textcolor{keyword}{true};
+257   \}
+258   
+259   \textcolor{comment}{// Only compute the variances if the variances matrix is not empty}
+260   \textcolor{keywordtype}{bool} compute\_variance = \textcolor{keyword}{false};
+261   \textcolor{keywordflow}{if} (variances.rows()>0)
+262   \{
+263     compute\_variance = \textcolor{keyword}{true};
+264     variances.resize(inputs.rows(),gmm->getExpectedOutputDim());
+265     variances.fill(0);
+266   \}
+267 
+268   \textcolor{comment}{// For each input, compute the output  }
+269   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_input=0; i\_input<inputs.rows(); i\_input++)
+270   \{
+271     
+272     \textcolor{comment}{// Three main steps}
+273     \textcolor{comment}{// A: compute probability: prior * pdf of the multivariate Gaussian}
+274     \textcolor{comment}{// B: compute estimated mean of y: (mu\_y + ( C\_y\_x * inv(C\_x) * (input-mu\_x) ) )}
+275     \textcolor{comment}{// C: weight the estimated mean with the probability}
+276     
+277     
+278     \textcolor{comment}{// A: compute probability: prior * pdf of the multivariate Gaussian}
+279     \textcolor{comment}{// Compute probalities that each Gaussian would generate this input in 4 steps}
+280     \textcolor{comment}{// A1. Compute the unnormalized pdf of the multi-variate Gaussian distribution}
+281     \textcolor{comment}{// A2. Normalize the unnormalized pdf (scale factor has been precomputed in the GMM)}
+282     \textcolor{comment}{// A3. Multiply the normalized pdf with the priors}
+283     \textcolor{comment}{// A4. Normalize the probabilities by dividing by their sum}
+284   
+285     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_gau=0; i\_gau<gmm->getNumberOfGaussians(); i\_gau++)
+286     \{
+287       \textcolor{comment}{// A1. Compute the unnormalized pdf of the multi-variate Gaussian distribution}
+288       \textcolor{comment}{// formula: exp( -2 * (x-mu)^T * Sigma^-1 * (x-mu) )}
+289       \textcolor{comment}{// (we use cached variables and noalias to avoid dynamic allocation)}
+290       \textcolor{comment}{// (x-mu)}
+291       diff\_prealloc\_ = inputs.row(i\_input).transpose() - gmm->means\_x\_[i\_gau];
+292       \textcolor{comment}{// Sigma^-1 * (x-mu)}
+293       covar\_times\_diff\_prealloc\_.noalias() = gmm->covars\_x\_inv\_[i\_gau]*diff\_prealloc\_;
+294       \textcolor{comment}{// exp( -2 * (x-mu)^T * Sigma^-1 * (x-mu) )}
+295       probabilities\_prealloc\_[i\_gau] = exp(-0.5*diff\_prealloc\_.dot(covar\_times\_diff\_prealloc\_));
+296       
+297       \textcolor{comment}{// A2. Normalize the unnormalized pdf (scale factor has been precomputed in the GMM)}
+298       \textcolor{comment}{// formula for scale factor: 1/sqrt( (2\(\backslash\)pi)^N*|\(\backslash\)Sigma| )}
+299       probabilities\_prealloc\_[i\_gau] *= gmm->mvgd\_scale\_[i\_gau];
+300       
+301       \textcolor{comment}{// A3. Multiply the normalized pdf with the priors}
+302       probabilities\_prealloc\_[i\_gau] *= gmm->priors\_[i\_gau];
+303       
+304     \}
+305     
+306     \textcolor{comment}{// A4. Normalize the probabilities by dividing by their sum}
+307     probabilities\_prealloc\_ /= probabilities\_prealloc\_.sum();
+308     
+309 
+310     \textcolor{keywordflow}{if} (compute\_means)
+311     \{
+312       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_gau=0; i\_gau<gmm->getNumberOfGaussians(); i\_gau++)
+313       \{
+314         
+315         \textcolor{comment}{// B: compute estimated mean of y: (mu\_y + ( C\_y\_x * inv(C\_x) * (input-mu\_x) ) )}
+316         \textcolor{comment}{// We will compute it bit by bit (with preallocated matrices) to avoid dynamic allocations.}
+317         
+318         \textcolor{comment}{// (input-mu\_x)}
+319         diff\_prealloc\_ = inputs.row(i\_input).transpose() - gmm->means\_x\_[i\_gau];
+320         \textcolor{comment}{// inv(C\_x) * (input-mu\_x)}
+321         covar\_times\_diff\_prealloc\_.noalias() = gmm->covars\_x\_inv\_[i\_gau]*diff\_prealloc\_;
+322         \textcolor{comment}{// ( C\_y\_x * inv(C\_x) * (input-mu\_x) )}
+323         mean\_output\_prealloc\_.noalias() = gmm->covars\_y\_x\_[i\_gau]*covar\_times\_diff\_prealloc\_;
+324         \textcolor{comment}{// (mu\_y + ( C\_y\_x * inv(C\_x) * (input-mu\_x) ) )}
+325         mean\_output\_prealloc\_ += gmm->means\_y\_[i\_gau];
+326         
+327         \textcolor{comment}{// C: weight the estimated mean with the probability}
+328         \textcolor{comment}{// probability * (mu\_y + ( C\_y\_x * inv(C\_x) * (input-mu\_x) ) )}
+329         outputs.row(i\_input) += probabilities\_prealloc\_[i\_gau] * mean\_output\_prealloc\_; 
+330       \}
+331     \}
+332    
+333     \textcolor{keywordflow}{if} (compute\_variance)
+334     \{
+335       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_gau=0; i\_gau<gmm->getNumberOfGaussians(); i\_gau++)
+336       \{
+337         \textcolor{comment}{// Here comes the formula: h^2 * (C\_y - C\_y\_x * inv(C\_x) * C\_y\_x^T) }
+338         
+339         \textcolor{comment}{// inv(C\_x) * C\_y\_x^T}
+340         covar\_input\_times\_output\_.noalias() = gmm->covars\_x\_inv\_[i\_gau]*gmm->covars\_y\_x\_[i\_gau].transpose()
+      ;
+341         \textcolor{comment}{// - C\_y\_x * inv(C\_x) * C\_y\_x^T}
+342         covar\_output\_prealloc\_.noalias() = - gmm->covars\_y\_x\_[i\_gau] * covar\_input\_times\_output\_;
+343         \textcolor{comment}{// (C\_y - C\_y\_x * inv(C\_x) * C\_y\_x^T) }
+344         covar\_output\_prealloc\_ += gmm->covars\_y\_[i\_gau];
+345         \textcolor{comment}{// h^2 * (C\_y - C\_y\_x * inv(C\_x) * C\_y\_x^T) }
+346         variances.row(i\_input) += probabilities\_prealloc\_[i\_gau]*probabilities\_prealloc\_[i\_gau] * ( 
+      covar\_output\_prealloc\_ ).diagonal();
+347         
+348         \textcolor{comment}{// There are cases where we may get slightly negative variances due to numerical issues}
+349         \textcolor{comment}{// Avoid them here by setting negative variances to 0.}
+350         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_output\_dim=0; i\_output\_dim<gmm->getExpectedOutputDim(); i\_output\_dim++)
+351           \textcolor{keywordflow}{if} (variances(i\_input,i\_output\_dim)<0.0)
+352             variances(i\_input,i\_output\_dim) = 0.0;
+353 
+354 
+355       \}
+356     \}
+357   \}
+358   
+359   EXITING\_REAL\_TIME\_CRITICAL\_CODE
+360 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classDmpBbo_1_1FunctionApproximatorGMR_ab74ea106ee37e27900826c1fa1a4331c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_ad4c95407e44ba3e16b9651f9b81cd0e6}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string get\+Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_ad4c95407e44ba3e16b9651f9b81cd0e6}
+
+
+Get the name of this function approximator. 
+
+\begin{DoxyReturn}{Returns}
+Name of this function approximator 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{Function\+Approximator}.
+
+
+
+Definition at line 72 of file Function\+Approximator\+G\+M\+R.\+hpp.
+
+
+\begin{DoxyCode}
+72                                       \{
+73     \textcolor{keywordflow}{return} std::string(\textcolor{stringliteral}{"GMR"});  
+74   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_af9a5e39e32c14b1daa7aa5ecfe1a5bfb}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!k\+Means\+Init@{k\+Means\+Init}}
+\index{k\+Means\+Init@{k\+Means\+Init}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{k\+Means\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void k\+Means\+Init (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{data, }
+\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{means, }
+\item[{std\+::vector$<$ double $>$ \&}]{priors, }
+\item[{std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{covars, }
+\item[{int}]{n\+\_\+max\+\_\+iter = {\ttfamily 1000}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_af9a5e39e32c14b1daa7aa5ecfe1a5bfb}
+
+
+Initialize Gaussian for E\+M algorithm using k-\/means. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & A data matrix (n\+\_\+exemples x (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim)) \\
+\hline
+\mbox{\tt out}  & {\em means} & A list (std\+::vector) of n\+\_\+gaussian non initiallized means (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim) \\
+\hline
+\mbox{\tt out}  & {\em priors} & A list (std\+::vector) of n\+\_\+gaussian non initiallized priors \\
+\hline
+\mbox{\tt out}  & {\em covars} & A list (std\+::vector) of n\+\_\+gaussian non initiallized covariance matrices ((n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim) x (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim)) \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+max\+\_\+iter} & The maximum number of iterations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Thibaut Munzer 
+\end{DoxyAuthor}
+
+
+Definition at line 576 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+578 \{
+579 
+580   MatrixXd dataCentered = data.rowwise() - data.colwise().mean();
+581   MatrixXd dataCov = dataCentered.transpose() * dataCentered / data.rows();
+582   MatrixXd dataCovInverse = dataCov.inverse();
+583 
+584   std::vector<int> dataIndex;
+585   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < data.rows(); i++)
+586     dataIndex.push\_back(i); 
+587   std::random\_shuffle (dataIndex.begin(), dataIndex.end());
+588 
+589   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+590     centers[i\_gau] = data.row(dataIndex[i\_gau]);
+591 
+592   VectorXi assign(data.rows());
+593   assign.setZero();
+594 
+595   \textcolor{keywordtype}{bool} converged = \textcolor{keyword}{false};
+596   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iIter = 0; iIter < n\_max\_iter && !converged; iIter++)
+597   \{
+598     \textcolor{comment}{//cout << "  iIter=" << iIter << endl;}
+599     
+600     \textcolor{comment}{// E step}
+601     converged = \textcolor{keyword}{true};
+602     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+603     \{
+604       VectorXd v = (centers[assign[iData]] - data.row(iData).transpose());
+605 
+606       \textcolor{keywordtype}{double} minDist = v.transpose() * dataCovInverse * v;
+607 
+608       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_gau = 0; i\_gau < (int)centers.size(); i\_gau++)
+609       \{
+610         \textcolor{keywordflow}{if} (i\_gau == assign[iData])
+611           \textcolor{keywordflow}{continue};
+612 
+613         v = (centers[i\_gau] - data.row(iData).transpose());
+614         \textcolor{keywordtype}{double} dist = v.transpose() * dataCovInverse * v;
+615         \textcolor{keywordflow}{if} (dist < minDist)
+616         \{
+617           converged = \textcolor{keyword}{false};
+618           minDist = dist;
+619           assign[iData] = i\_gau;
+620         \}
+621       \}
+622     \}
+623 
+624     \textcolor{comment}{// M step}
+625     VectorXi nbPoints = VectorXi::Zero(centers.size());
+626     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+627       centers[i\_gau].setZero();
+628     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+629     \{
+630       centers[assign[iData]] += data.row(iData).transpose();
+631       nbPoints[assign[iData]]++;
+632     \}
+633     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+634       centers[i\_gau] /= nbPoints[i\_gau];
+635   \}
+636 
+637   \textcolor{comment}{// Init covars}
+638   VectorXi nbPoints = VectorXi::Zero(centers.size());
+639   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+640     covars[i\_gau].setZero();
+641   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+642   \{
+643     covars[assign[iData]] += (data.row(iData).transpose() - centers[assign[iData]]) * (data.row(iData).
+      transpose() - centers[assign[iData]]).transpose();
+644     nbPoints[assign[iData]]++;
+645   \}
+646   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+647     covars[i\_gau] /= nbPoints[i\_gau];
+648 
+649   \textcolor{comment}{// Be sure that covar is invertible}
+650   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+651     covars[i\_gau] += MatrixXd::Identity(covars[i\_gau].rows(), covars[i\_gau].cols()) * 1e-5f;
+652 
+653   \textcolor{comment}{// Init priors}
+654   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+655     priors[i\_gau] = 1. / centers.size();
+656 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_ab99de8c0d7c1870958e63f1bfc198303}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!first\+Dim\+Slicing\+Init@{first\+Dim\+Slicing\+Init}}
+\index{first\+Dim\+Slicing\+Init@{first\+Dim\+Slicing\+Init}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{first\+Dim\+Slicing\+Init}]{\setlength{\rightskip}{0pt plus 5cm}void first\+Dim\+Slicing\+Init (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{data, }
+\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{means, }
+\item[{std\+::vector$<$ double $>$ \&}]{priors, }
+\item[{std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{covars}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_ab99de8c0d7c1870958e63f1bfc198303}
+
+
+Initialize Gaussian for E\+M algorithm using a same-\/size slicing on the first dimension (method used in Calinon G\+M\+R implementation). 
+
+Particulary suited when input is 1-\/\+D and data distribution is uniform over input dimension 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & A data matrix (n\+\_\+exemples x (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim)) \\
+\hline
+\mbox{\tt out}  & {\em means} & A list (std\+::vector) of n\+\_\+gaussian non initiallized means (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim) \\
+\hline
+\mbox{\tt out}  & {\em priors} & A list (std\+::vector) of n\+\_\+gaussian non initiallized priors \\
+\hline
+\mbox{\tt out}  & {\em covars} & A list (std\+::vector) of n\+\_\+gaussian non initiallized covariance matrices ((n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim) x (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim)) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Thibaut Munzer 
+\end{DoxyAuthor}
+
+
+Definition at line 527 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+529 \{
+530 
+531   VectorXd first\_dim = data.col(0);
+532 
+533   VectorXi assign(data.rows());
+534   assign.setZero();
+535 
+536   \textcolor{keywordtype}{double} min\_val = first\_dim.minCoeff();
+537   \textcolor{keywordtype}{double} max\_val = first\_dim.maxCoeff();
+538 
+539   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_first\_dim = 0; i\_first\_dim < first\_dim.size(); i\_first\_dim++)
+540   \{
+541     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} center = int((first\_dim[i\_first\_dim]-min\_val)/(max\_val-min\_val)*centers.size());
+542     \textcolor{keywordflow}{if} (center==centers.size())
+543       center--;
+544     assign[i\_first\_dim] = center;
+545   \}
+546   
+547   \textcolor{comment}{// Init means}
+548   VectorXi nbPoints = VectorXi::Zero(centers.size());
+549   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+550     centers[i\_gau].setZero();
+551   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+552   \{
+553     centers[assign[iData]] += data.row(iData).transpose();
+554     nbPoints[assign[iData]]++;
+555   \}
+556   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+557     centers[i\_gau] /= nbPoints[i\_gau];
+558 
+559   \textcolor{comment}{// Init covars}
+560   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+561     covars[i\_gau].setZero();
+562   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+563     covars[assign[iData]] += (data.row(iData).transpose() - centers[assign[iData]]) * (data.row(iData).
+      transpose() - centers[assign[iData]]).transpose();
+564   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+565     covars[i\_gau] /= nbPoints[i\_gau];
+566 
+567   \textcolor{comment}{// Be sure that covar is invertible}
+568   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+569       covars[i\_gau] += MatrixXd::Identity(covars[i\_gau].rows(), covars[i\_gau].cols()) * 1e-5;
+570 
+571   \textcolor{comment}{// Init priors}
+572   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+573     priors[i\_gau] = 1. / centers.size();
+574 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_a78aab3aea2aa82ceadde61d4ca168a64}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!expectation\+Maximization@{expectation\+Maximization}}
+\index{expectation\+Maximization@{expectation\+Maximization}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{expectation\+Maximization}]{\setlength{\rightskip}{0pt plus 5cm}void expectation\+Maximization (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{data, }
+\item[{std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{means, }
+\item[{std\+::vector$<$ double $>$ \&}]{priors, }
+\item[{std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{covars, }
+\item[{int}]{n\+\_\+max\+\_\+iter = {\ttfamily 50}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_a78aab3aea2aa82ceadde61d4ca168a64}
+
+
+E\+M algorithm. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em data} & A (n\+\_\+exemples x (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim)) data matrix \\
+\hline
+\mbox{\tt in,out}  & {\em means} & A list (std\+::vector) of n\+\_\+gaussian means (vector of size (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim)) \\
+\hline
+\mbox{\tt in,out}  & {\em priors} & A list (std\+::vector) of n\+\_\+gaussian priors \\
+\hline
+\mbox{\tt in,out}  & {\em covars} & A list (std\+::vector) of n\+\_\+gaussian covariance matrices ((n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim) x (n\+\_\+in\+\_\+dim + n\+\_\+out\+\_\+dim)) \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+max\+\_\+iter} & The maximum number of iterations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAuthor}{Author}
+Thibaut Munzer 
+\end{DoxyAuthor}
+
+
+Definition at line 658 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+660 \{
+661   MatrixXd assign(centers.size(), data.rows());
+662   assign.setZero();
+663 
+664   \textcolor{keywordtype}{double} oldLoglik = -1e10f;
+665   \textcolor{keywordtype}{double} loglik = 0;
+666 
+667   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iIter = 0; iIter < n\_max\_iter; iIter++)
+668   \{
+669     \textcolor{comment}{//cout << "  iIter=" << iIter << endl;}
+670     \textcolor{comment}{// For debugging only}
+671     \textcolor{comment}{//ModelParametersGMR::saveGMM("/tmp/demoTrainFunctionApproximators/GMR",centers,covars,iIter);}
+672     
+673     \textcolor{comment}{// E step}
+674     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+675       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+676         assign(i\_gau, iData) = priors[i\_gau] * 
+      \hyperlink{classDmpBbo_1_1FunctionApproximatorGMR_a68ed18ca86526a591014123290dc855a}{FunctionApproximatorGMR::normalPDF}(centers[i\_gau], covars[i\_gau],data.row
+      (iData).transpose());
+677 
+678     oldLoglik = loglik;
+679     loglik = 0;
+680     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+681       loglik += log(assign.col(iData).sum());
+682     loglik /= data.rows();
+683 
+684     \textcolor{keywordflow}{if} (fabs(loglik / oldLoglik - 1) < 1e-8f)
+685       \textcolor{keywordflow}{break};
+686 
+687     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+688       assign.col(iData) /= assign.col(iData).sum();
+689 
+690     \textcolor{comment}{// M step}
+691     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+692     \{
+693       centers[i\_gau].setZero();
+694       covars[i\_gau].setZero();
+695       priors[i\_gau] = 0;
+696     \}
+697 
+698     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+699     \{
+700       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+701       \{
+702         centers[i\_gau] += assign(i\_gau, iData) * data.row(iData).transpose();
+703         priors[i\_gau] += assign(i\_gau, iData);
+704       \}
+705     \}
+706 
+707     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+708     \{
+709       centers[i\_gau] /= assign.row(i\_gau).sum();
+710       priors[i\_gau] /= assign.cols();
+711     \}
+712 
+713     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iData = 0; iData < data.rows(); iData++)
+714       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+715         covars[i\_gau] += assign(i\_gau, iData) * (data.row(iData).transpose() - centers[i\_gau]) * (data.row(
+      iData).transpose() - centers[i\_gau]).transpose();
+716 
+717     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+718       covars[i\_gau] /= assign.row(i\_gau).sum();
+719 
+720     \textcolor{comment}{// Be sure that covar is invertible}
+721     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i\_gau = 0; i\_gau < centers.size(); i\_gau++)
+722       covars[i\_gau] += MatrixXd::Identity(covars[i\_gau].rows(), covars[i\_gau].cols()) * 1e-5f;
+723   \}
+724   
+725   \textcolor{comment}{/*}
+726 \textcolor{comment}{  Here's a hacky Matlab script for plotting the EM procedure above (if you cann saveGMM)}
+727 \textcolor{comment}{  directory = '/tmp/demoTrainFunctionApproximators/GMR/';}
+728 \textcolor{comment}{  inputs = load([directory '/inputs.txt']);}
+729 \textcolor{comment}{  targets = load([directory '/targets.txt']);}
+730 \textcolor{comment}{  outputs = load([directory '/outputs.txt']);}
+731 \textcolor{comment}{   }
+732 \textcolor{comment}{  }
+733 \textcolor{comment}{  plot(inputs,targets,'.k')}
+734 \textcolor{comment}{  hold on}
+735 \textcolor{comment}{  plot(inputs,outputs,'.r')}
+736 \textcolor{comment}{  }
+737 \textcolor{comment}{  max\_iter = 5;}
+738 \textcolor{comment}{  for iter=0:max\_iter}
+739 \textcolor{comment}{    color = 0.2+(0.8-iter/max\_iter)*[1 1 1];}
+740 \textcolor{comment}{    for bfs=0:2}
+741 \textcolor{comment}{      center = load(sprintf('%s/gmm\_iter%02d\_mu%03d.txt',directory,iter,bfs));}
+742 \textcolor{comment}{      %plot(center(1),center(2))}
+743 \textcolor{comment}{      covar = load(sprintf('%s/gmm\_iter%02d\_covar%03d.txt',directory,iter,bfs));}
+744 \textcolor{comment}{      h = error\_ellipse(covar,center,'conf',0.95);}
+745 \textcolor{comment}{      set(h,'Color',color,'LineWidth',1+iter/max\_iter)}
+746 \textcolor{comment}{    end}
+747 \textcolor{comment}{  end}
+748 \textcolor{comment}{  hold off}
+749 \textcolor{comment}{  */}
+750   
+751 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classDmpBbo_1_1FunctionApproximatorGMR_a78aab3aea2aa82ceadde61d4ca168a64_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_a68ed18ca86526a591014123290dc855a}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!normal\+P\+D\+F@{normal\+P\+D\+F}}
+\index{normal\+P\+D\+F@{normal\+P\+D\+F}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{normal\+P\+D\+F}]{\setlength{\rightskip}{0pt plus 5cm}double normal\+P\+D\+F (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{mu, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{covar, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{input}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_a68ed18ca86526a591014123290dc855a}
+
+
+The probability density function (P\+D\+F) of the multi-\/variate normal distribution. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mu} & The mean of the normal distribution \\
+\hline
+\mbox{\tt in}  & {\em covar} & The covariance matrix of the normal distribution \\
+\hline
+\mbox{\tt in}  & {\em input} & The input data vector for which the P\+D\+F will be computed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The P\+D\+F value for the input 
+\end{DoxyReturn}
+
+
+Definition at line 197 of file Function\+Approximator\+G\+M\+R.\+cpp.
+
+
+\begin{DoxyCode}
+198 \{
+199   MatrixXd covar\_inverse = covar.inverse();
+200   \textcolor{keywordtype}{double} output = exp(-0.5*(input-mu).transpose()*covar\_inverse*(input-mu));
+201   \textcolor{comment}{// For invertible matrices (which covar apparently was), det(A^-1) = 1/det(A)}
+202   \textcolor{comment}{// Hence the 1.0/covar\_inverse.determinant() below}
+203   \textcolor{comment}{//  ( (2*pi)^N*|\(\backslash\)Sigma| )^(-1/2)}
+204   output *= pow(pow(2*M\_PI,mu.size())/covar\_inverse.determinant(),-0.5);   
+205   \textcolor{keywordflow}{return} output;
+206 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_a9f885377585c39b1cccf4c4f3a0f496b}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!predict\+Dot@{predict\+Dot}}
+\index{predict\+Dot@{predict\+Dot}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{predict\+Dot}]{\setlength{\rightskip}{0pt plus 5cm}void predict\+Dot (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs\+\_\+dot}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorGMR_a9f885377585c39b1cccf4c4f3a0f496b}
+
+
+Query the function approximator to make a prediction and to compute the derivate of that prediction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values \\
+\hline
+\mbox{\tt out}  & {\em outputs\+\_\+dot} & Predicted derivate values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_a52655b0b7e5a0c1e0e74a175956658d4}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!predict\+Dot@{predict\+Dot}}
+\index{predict\+Dot@{predict\+Dot}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{predict\+Dot}]{\setlength{\rightskip}{0pt plus 5cm}void predict\+Dot (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs\+\_\+dot, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{variances}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorGMR_a52655b0b7e5a0c1e0e74a175956658d4}
+
+
+Query the function approximator to make a prediction and to compute the derivate of that prediction, and also to predict its variance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query (n\+\_\+samples X n\+\_\+dims\+\_\+in) \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values (n\+\_\+samples X n\+\_\+dims\+\_\+out) \\
+\hline
+\mbox{\tt out}  & {\em outputs\+\_\+dot} & Predicted derivate values \\
+\hline
+\mbox{\tt out}  & {\em variances} & Predicted variances for the output values (n\+\_\+samples X n\+\_\+dims\+\_\+out). Note that if the output has a dimensionality$>$1, these variances should actuall be covariance matrices (use function \hyperlink{classDmpBbo_1_1FunctionApproximator_aab1e8947dae8a700a623dc49e6440083}{predict(const Eigen\+::\+Matrix\+Xd\& inputs, Eigen\+::\+Matrix\+Xd\& outputs, std\+::vector$<$\+Eigen\+::\+Matrix\+Xd$>$\& variances)} to get the full covariance matrices). So for an output dimensionality of 1 this function works fine. For dimensionality$>$1 we return only the diagional of the covariance matrix, which may not always be what you want.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+G\+M\+R}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1FunctionApproximatorGMR_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 149 of file Function\+Approximator\+G\+M\+R.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{FunctionApproximatorGMR_8hpp}{Function\+Approximator\+G\+M\+R.\+hpp}\item 
+\hyperlink{FunctionApproximatorGMR_8cpp}{Function\+Approximator\+G\+M\+R.\+cpp}\end{DoxyCompactItemize}

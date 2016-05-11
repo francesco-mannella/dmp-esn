@@ -1,0 +1,284 @@
+\hypertarget{classDmpBbo_1_1UpdaterCovarAdaptation}{\subsection{Updater\+Covar\+Adaptation Class Reference}
+\label{classDmpBbo_1_1UpdaterCovarAdaptation}\index{Updater\+Covar\+Adaptation@{Updater\+Covar\+Adaptation}}
+}
+
+
+\hyperlink{classDmpBbo_1_1Updater}{Updater} that updates the mean and also implements Covariance Matrix Adaptation.  
+
+
+
+
+{\ttfamily \#include $<$Updater\+Covar\+Adaptation.\+hpp$>$}
+
+
+
+Inheritance diagram for Updater\+Covar\+Adaptation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classDmpBbo_1_1UpdaterCovarAdaptation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Updater\+Covar\+Adaptation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classDmpBbo_1_1UpdaterCovarAdaptation__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1UpdaterCovarAdaptation_a33570a5da7912bcc2709355a7fa5d2e6}{Updater\+Covar\+Adaptation} (double eliteness, std\+::string weighting\+\_\+method=\char`\"{}P\+I-\/B\+B\char`\"{}, const Eigen\+::\+Vector\+Xd \&base\+\_\+level=Eigen\+::\+Vector\+Xd\+::\+Zero(0), bool diag\+\_\+only=true, double learning\+\_\+rate=1.\+0, double relative\+\_\+lower\+\_\+bound=0.\+0)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1UpdaterCovarAdaptation_aabb65aaf08049416ed18b294d5fca415}{update\+Distribution} (const \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution, const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Vector\+Xd \&costs, Eigen\+::\+Vector\+Xd \&weights, \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution\+\_\+new) const 
+\begin{DoxyCompactList}\small\item\em Update a distribution given the samples and costs of an epoch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1UpdaterCovarAdaptation_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+\hyperlink{classDmpBbo_1_1Updater}{Updater} that updates the mean and also implements Covariance Matrix Adaptation. 
+
+The update rule is as in \href{http://en.wikipedia.org/wiki/CMA-ES}{\tt C\+M\+A-\/\+E\+S}, except that this version does not use the evolution paths. 
+
+Definition at line 38 of file Updater\+Covar\+Adaptation.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1UpdaterCovarAdaptation_a33570a5da7912bcc2709355a7fa5d2e6}{\index{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation@{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation}!Updater\+Covar\+Adaptation@{Updater\+Covar\+Adaptation}}
+\index{Updater\+Covar\+Adaptation@{Updater\+Covar\+Adaptation}!Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation@{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation}}
+\paragraph[{Updater\+Covar\+Adaptation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Updater\+Covar\+Adaptation} (
+\begin{DoxyParamCaption}
+\item[{double}]{eliteness, }
+\item[{std\+::string}]{weighting\+\_\+method = {\ttfamily \char`\"{}PI-\/BB\char`\"{}}, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{base\+\_\+level = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Zero(0)}, }
+\item[{bool}]{diag\+\_\+only = {\ttfamily true}, }
+\item[{double}]{learning\+\_\+rate = {\ttfamily 1.0}, }
+\item[{double}]{relative\+\_\+lower\+\_\+bound = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1UpdaterCovarAdaptation_a33570a5da7912bcc2709355a7fa5d2e6}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em eliteness} & The eliteness parameter ('mu' in C\+M\+A-\/\+E\+S, 'h' in P\+I$^\wedge$2) \\
+\hline
+\mbox{\tt in}  & {\em weighting\+\_\+method} & ('P\+I-\/\+B\+B' = P\+I$^\wedge$2 style weighting) \\
+\hline
+\mbox{\tt in}  & {\em base\+\_\+level} & Small covariance matrix that is added after each update to avoid premature convergence \\
+\hline
+\mbox{\tt in}  & {\em diag\+\_\+only} & Update only the diagonal of the covariance matrix (true) or the full matrix (false) \\
+\hline
+\mbox{\tt in}  & {\em learning\+\_\+rate} & Low pass filter on the covariance updates. In range \mbox{[}0.\+0-\/1.\+0\mbox{]} with 0.\+0 = no updating, 1.\+0 = complete update by ignoring previous covar matrix. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file Updater\+Covar\+Adaptation.\+cpp.
+
+
+\begin{DoxyCode}
+44 : \hyperlink{classDmpBbo_1_1UpdaterMean_a005e77ab55b2412bb2172b52bf263570}{UpdaterMean}(eliteness, weighting\_method), 
+45   diag\_only\_(diag\_only),
+46   learning\_rate\_(learning\_rate),
+47   base\_level\_diagonal\_(base\_level),
+48   relative\_lower\_bound\_(relative\_lower\_bound)
+49 \{
+50   assert(learning\_rate\_>=0.0 && learning\_rate\_<=1.0);
+51   assert(relative\_lower\_bound\_>=0.0 && relative\_lower\_bound\_<=1.0);
+52 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1UpdaterCovarAdaptation_aabb65aaf08049416ed18b294d5fca415}{\index{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation@{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation}!update\+Distribution@{update\+Distribution}}
+\index{update\+Distribution@{update\+Distribution}!Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation@{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation}}
+\paragraph[{update\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Distribution (
+\begin{DoxyParamCaption}
+\item[{const {\bf Distribution\+Gaussian} \&}]{distribution, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{costs, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{weights, }
+\item[{{\bf Distribution\+Gaussian} \&}]{distribution\+\_\+new}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1UpdaterCovarAdaptation_aabb65aaf08049416ed18b294d5fca415}
+
+
+Update a distribution given the samples and costs of an epoch. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em distribution} & Current distribution \\
+\hline
+\mbox{\tt in}  & {\em samples} & The samples in the epoch (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em costs} & Costs of the samples (size\+: n\+\_\+samples x 1) \\
+\hline
+\mbox{\tt out}  & {\em weights} & The weights computed from the costs \\
+\hline
+\mbox{\tt out}  & {\em distribution\+\_\+new} & Updated distribution \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1UpdaterMean_aabb65aaf08049416ed18b294d5fca415}{Updater\+Mean}.
+
+
+
+Definition at line 54 of file Updater\+Covar\+Adaptation.\+cpp.
+
+
+\begin{DoxyCode}
+55 \{
+56   \textcolor{keywordtype}{int} n\_samples = samples.rows();
+57   \textcolor{keywordtype}{int} n\_dims = samples.cols();
+58   
+59   VectorXd mean\_cur = distribution.mean();
+60   assert(mean\_cur.size()==n\_dims);
+61   assert(costs.size()==n\_samples);
+62   
+63   \textcolor{comment}{// Update the mean}
+64   VectorXd mean\_new;
+65   \hyperlink{classDmpBbo_1_1UpdaterMean_a97c2ddfabeee67dba0044f405f4ce8c0}{updateDistributionMean}(mean\_cur, samples, costs, weights, mean\_new); 
+66   distribution\_new.set\_mean(mean\_new);
+67 
+68   
+69   
+70   \textcolor{comment}{// Update the covariance matrix with reward-weighted averaging}
+71   MatrixXd eps = samples - mean\_cur.transpose().replicate(n\_samples,1);
+72   \textcolor{comment}{// In Matlab: covar\_new = (repmat(weights,1,n\_dims).*eps)'*eps;}
+73   MatrixXd weighted\_eps = weights.replicate(1,n\_dims).array()*eps.array();
+74   MatrixXd covar\_new = weighted\_eps.transpose()*eps;
+75 
+76   \textcolor{comment}{//MatrixXd summary(n\_samples,2*n\_dims+2);}
+77   \textcolor{comment}{//summary << samples, eps, costs, weights;}
+78   \textcolor{comment}{//cout << fixed << setprecision(2);}
+79   \textcolor{comment}{//cout << summary << endl;}
+80 
+81   \textcolor{comment}{// Remove non-diagonal values}
+82   \textcolor{keywordflow}{if} (diag\_only\_) \{
+83     MatrixXd diagonalized = covar\_new.diagonal().asDiagonal();
+84     covar\_new = diagonalized;    
+85   \}
+86   
+87   \textcolor{comment}{// Low-pass filter for covariance matrix, i.e. weight between current and new covariance matrix.}
+88   \textcolor{keywordflow}{if} (learning\_rate\_<1.0) \{
+89     MatrixXd covar\_cur = distribution.covar();
+90     covar\_new = (1-learning\_rate\_)*covar\_cur + learning\_rate\_*covar\_new;
+91   \}
+92   
+93   \textcolor{comment}{// Add a base\_level to avoid pre-mature convergence}
+94   \textcolor{keywordflow}{if} (base\_level\_diagonal\_.size()>0) \textcolor{comment}{// If base\_level is empty, do nothing}
+95   \{
+96     assert(base\_level\_diagonal\_.size()==n\_dims);
+97     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<covar\_new.rows(); ii++)
+98       \textcolor{keywordflow}{if} (covar\_new(ii,ii)<base\_level\_diagonal\_(ii))
+99         covar\_new(ii,ii) = base\_level\_diagonal\_(ii);
+100   \}
+101   
+102   \textcolor{keywordflow}{if} (relative\_lower\_bound\_>0.0)
+103   \{
+104     \textcolor{comment}{// We now enforce a lower bound on the eigenvalues, that depends on the maximum eigenvalue. For}
+105     \textcolor{comment}{// instance, if max(eigenvalues) is 2 and relative\_lower\_bound is 0.2, none of the eigenvalues}
+106     \textcolor{comment}{// may be below 0.4.}
+107     SelfAdjointEigenSolver<MatrixXd> eigensolver(covar\_new);
+108     \textcolor{keywordflow}{if} (eigensolver.info() == Success)
+109     \{
+110       \textcolor{comment}{// Get the eigenvalues}
+111       VectorXd eigen\_values  = eigensolver.eigenvalues();
+112       
+113       \textcolor{comment}{// Enforce the lower bound}
+114       \textcolor{keywordtype}{double} abs\_lower\_bound = eigen\_values.maxCoeff()*relative\_lower\_bound\_;
+115       \textcolor{keywordtype}{bool} reconstruct\_covar = \textcolor{keyword}{false};
+116       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<eigen\_values.size(); ii++)
+117       \{
+118         \textcolor{keywordflow}{if} (eigen\_values[ii] < abs\_lower\_bound)
+119         \{
+120           eigen\_values[ii] = abs\_lower\_bound;
+121           reconstruct\_covar = \textcolor{keyword}{true};
+122         \}
+123       \}
+124       
+125       \textcolor{comment}{// Reconstruct the covariance matrix with the bounded eigenvalues }
+126       \textcolor{comment}{// (but only if the eigenvalues have changed due to the lower bound)}
+127       \textcolor{keywordflow}{if} (reconstruct\_covar)
+128       \{
+129         MatrixXd eigen\_vectors  = eigensolver.eigenvectors();
+130         covar\_new = eigen\_vectors*eigen\_values.asDiagonal()*eigen\_vectors.inverse();
+131       \}
+132     \}
+133   \}
+134   
+135   
+136 \textcolor{comment}{/*}
+137 \textcolor{comment}{% Compute absolute lower bound from relative bound and maximum eigenvalue}
+138 \textcolor{comment}{if (lower\_bound\_relative~=NO\_BOUND)  }
+139 \textcolor{comment}{  if (lower\_bound\_relative<0 || lower\_bound\_relative>1)}
+140 \textcolor{comment}{    warning('When using a relative lower bound, 0<=bound<=1 must hold, but it is %f. Not setting any lower
+       bounds.',relative\_lower\_bound); %#ok<WNTAG>}
+141 \textcolor{comment}{    lower\_bound\_absolute = NO\_BOUND;}
+142 \textcolor{comment}{  else}
+143 \textcolor{comment}{    lower\_bound\_absolute = max([lower\_bound\_absolute lower\_bound\_relative*max(eigval)]);}
+144 \textcolor{comment}{  end}
+145 \textcolor{comment}{end}
+146 \textcolor{comment}{}
+147 \textcolor{comment}{% Check for lower bound}
+148 \textcolor{comment}{if (lower\_bound\_absolute~=NO\_BOUND)}
+149 \textcolor{comment}{  too\_small = eigval<lower\_bound\_absolute;}
+150 \textcolor{comment}{  eigval(too\_small) = lower\_bound\_absolute;}
+151 \textcolor{comment}{end}
+152 \textcolor{comment}{}
+153 \textcolor{comment}{% Reconstruct covariance matrix from bounded eigenvalues}
+154 \textcolor{comment}{eigval = diag(eigval);}
+155 \textcolor{comment}{covar\_scaled\_bounded = (eigvec*eigval)/eigvec;}
+156 \textcolor{comment}{  */}
+157   
+158   distribution\_new.set\_covar(covar\_new);
+159 
+160   
+161 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1UpdaterCovarAdaptation_aabb65aaf08049416ed18b294d5fca415_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1UpdaterCovarAdaptation_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation@{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation@{Dmp\+Bbo\+::\+Updater\+Covar\+Adaptation}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1UpdaterCovarAdaptation_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 63 of file Updater\+Covar\+Adaptation.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{UpdaterCovarAdaptation_8hpp}{Updater\+Covar\+Adaptation.\+hpp}\item 
+\hyperlink{UpdaterCovarAdaptation_8cpp}{Updater\+Covar\+Adaptation.\+cpp}\end{DoxyCompactItemize}

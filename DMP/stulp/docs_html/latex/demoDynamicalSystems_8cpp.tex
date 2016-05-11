@@ -1,0 +1,312 @@
+\hypertarget{demoDynamicalSystems_8cpp}{\subsection{demo\+Dynamical\+Systems.\+cpp File Reference}
+\label{demoDynamicalSystems_8cpp}\index{demo\+Dynamical\+Systems.\+cpp@{demo\+Dynamical\+Systems.\+cpp}}
+}
+
+
+Demonstrates how to initialize, integrate, perturb all implemented exponential systems.  
+
+
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Exponential\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Sigmoid\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Time\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Spring\+Damper\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Eigen\+File\+I\+O.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+Include dependency graph for demo\+Dynamical\+Systems.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDynamicalSystems_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{demoDynamicalSystems_8cpp_a4dc8651039912e36c71e412f78e6dad7}{run\+Dynamical\+System\+Test} (const \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$dyn\+\_\+system\+\_\+input, string test\+\_\+label, Vector\+Xd \&ts, Matrix\+Xd \&xs, Matrix\+Xd \&xds)
+\begin{DoxyCompactList}\small\item\em Run some tests for one dynamical system. \end{DoxyCompactList}\item 
+int \hyperlink{demoDynamicalSystems_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{main} (int n\+\_\+args, char $\ast$$\ast$args)
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Demonstrates how to initialize, integrate, perturb all implemented exponential systems. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{demoDynamicalSystems_8cpp_source}{demo\+Dynamical\+Systems.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{demoDynamicalSystems_8cpp_a4dc8651039912e36c71e412f78e6dad7}{\index{demo\+Dynamical\+Systems.\+cpp@{demo\+Dynamical\+Systems.\+cpp}!run\+Dynamical\+System\+Test@{run\+Dynamical\+System\+Test}}
+\index{run\+Dynamical\+System\+Test@{run\+Dynamical\+System\+Test}!demo\+Dynamical\+Systems.\+cpp@{demo\+Dynamical\+Systems.\+cpp}}
+\paragraph[{run\+Dynamical\+System\+Test}]{\setlength{\rightskip}{0pt plus 5cm}void run\+Dynamical\+System\+Test (
+\begin{DoxyParamCaption}
+\item[{const {\bf Dynamical\+System} $\ast$}]{dyn\+\_\+system\+\_\+input, }
+\item[{string}]{test\+\_\+label, }
+\item[{Vector\+Xd \&}]{ts, }
+\item[{Matrix\+Xd \&}]{xs, }
+\item[{Matrix\+Xd \&}]{xds}
+\end{DoxyParamCaption}
+)}}\label{demoDynamicalSystems_8cpp_a4dc8651039912e36c71e412f78e6dad7}
+
+
+Run some tests for one dynamical system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dyn\+\_\+system\+\_\+input} & The Dynamical\+System for which to run the tests. \\
+\hline
+\mbox{\tt in}  & {\em test\+\_\+label} & The test to perform, i.\+e. \char`\"{}tau\char`\"{}, \char`\"{}euler\char`\"{}, \char`\"{}analytical\char`\"{}, \char`\"{}attractor\char`\"{}, \char`\"{}perturb\char`\"{}, see also dynsys\+\_\+implementation1\+\_\+demo \\
+\hline
+\mbox{\tt out}  & {\em ts} & Time steps at which the dynamical system was integrated \\
+\hline
+\mbox{\tt out}  & {\em xs} & States resulting from integration \\
+\hline
+\mbox{\tt out}  & {\em xds} & States resulting from integration (rates of change) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 49 of file demo\+Dynamical\+Systems.\+cpp.
+
+
+\begin{DoxyCode}
+50 \{
+51   \textcolor{comment}{// Make a clone that we can modify}
+52   \hyperlink{classDmpBbo_1_1DynamicalSystem}{DynamicalSystem}* dyn\_system = dyn\_system\_input->\hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{clone}();
+53   
+54   
+55   \textcolor{comment}{// Settings for the integration of the system}
+56   \textcolor{keywordtype}{double} dt = 0.004; \textcolor{comment}{// Integration step duration}
+57   \textcolor{keywordtype}{double} integration\_duration = 1.5*dyn\_system->\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}(); \textcolor{comment}{// Integrate for longer than the time constant}
+58   \textcolor{keywordtype}{int} n\_time\_steps = ceil(integration\_duration/dt)+1; \textcolor{comment}{// Number of time steps for the integration}
+59   \textcolor{comment}{// Generate a vector of times, i.e. 0.0, dt, 2*dt, 3*dt .... n\_time\_steps*dt=integration\_duration}
+60   ts = VectorXd::LinSpaced(n\_time\_steps,0.0,integration\_duration);
+61 
+62 
+63   \textcolor{keywordflow}{if} (test\_label.compare(\textcolor{stringliteral}{"tau"})==0)
+64     dyn\_system->\hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{set\_tau}(0.5*dyn\_system->\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}());
+65   
+66   \textcolor{keywordflow}{if} (test\_label.compare(\textcolor{stringliteral}{"euler"})==0)
+67     dyn\_system->\hyperlink{group__DynamicalSystems_ga07a2df4cc46a521ab81c614d79b33669}{set\_integration\_method}(DynamicalSystem::EULER);
+68 
+69   \textcolor{comment}{// Dimensionality of the current system}
+70   \textcolor{keywordtype}{int} n\_dims = dyn\_system->\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}();
+71       
+72   xs.resize(n\_dims,n\_time\_steps);               
+73   xds.resize(n\_dims,n\_time\_steps);
+74 
+75   \textcolor{keywordflow}{if} (test\_label.compare(\textcolor{stringliteral}{"analytical"})==0)
+76   \{
+77     \textcolor{comment}{// ANALYTICAL SOLUTION }
+78     dyn\_system->\hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{analyticalSolution}(ts,xs,xds);
+79     \textcolor{keywordflow}{return};
+80   \}
+81       
+82   \textcolor{comment}{// NUMERICAL INTEGRATION }
+83   dyn\_system->\hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrateStart}(xs.col(0),xds.col(0));
+84   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=1; ii<n\_time\_steps; ii++)
+85   \{
+86     \textcolor{keywordflow}{if} (test\_label.compare(\textcolor{stringliteral}{"attractor"})==0)
+87       \textcolor{keywordflow}{if} (ii==ceil(0.3*n\_time\_steps))
+88         dyn\_system->\hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{set\_attractor\_state}(-0.2+dyn\_system->
+      \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}().array());
+89       
+90     \textcolor{keywordflow}{if} (test\_label.compare(\textcolor{stringliteral}{"perturb"})==0)
+91       \textcolor{keywordflow}{if} (ii==ceil(0.3*n\_time\_steps))
+92         xs.col(ii-1) = xs.col(ii-1).array()-0.2;
+93   
+94     dyn\_system->\hyperlink{classDmpBbo_1_1DynamicalSystem_ac7ed7ce2faa8314cd9fa5ffcccb15349}{integrateStep}(dt,xs.col(ii-1),xs.col(ii),xds.col(ii)); 
+95   \}
+96 
+97   
+98 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDynamicalSystems_8cpp_a4dc8651039912e36c71e412f78e6dad7_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{demoDynamicalSystems_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{\index{demo\+Dynamical\+Systems.\+cpp@{demo\+Dynamical\+Systems.\+cpp}!main@{main}}
+\index{main@{main}!demo\+Dynamical\+Systems.\+cpp@{demo\+Dynamical\+Systems.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+args, }
+\item[{char $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{demoDynamicalSystems_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}
+
+
+Main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+args} & Number of arguments \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments themselves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success of exection. 0 if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file demo\+Dynamical\+Systems.\+cpp.
+
+
+\begin{DoxyCode}
+106 \{
+107 
+108   \textcolor{comment}{// PARSE INPUT ARGUMENTS AND SEE WHETHER TO WRITE TO A DIRECTORY}
+109   vector<string> available\_test\_labels;
+110   available\_test\_labels.push\_back(\textcolor{stringliteral}{"rungekutta"});
+111   available\_test\_labels.push\_back(\textcolor{stringliteral}{"euler"});
+112   available\_test\_labels.push\_back(\textcolor{stringliteral}{"analytical"});
+113   available\_test\_labels.push\_back(\textcolor{stringliteral}{"tau"});
+114   available\_test\_labels.push\_back(\textcolor{stringliteral}{"attractor"});
+115   available\_test\_labels.push\_back(\textcolor{stringliteral}{"perturb"});
+116   
+117   \textcolor{keywordflow}{if} (n\_args<2)
+118   \{
+119     cout << \textcolor{stringliteral}{"Usage:    "} << args[0] << \textcolor{stringliteral}{" <directory> [test label 1]  [test label 2]"} << endl;
+120     cout <<      \textcolor{stringliteral}{"                 available test labels = "};
+121     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_test=0; i\_test<available\_test\_labels.size(); i\_test++)
+122       cout << \textcolor{stringliteral}{"'"} << available\_test\_labels[i\_test] << \textcolor{stringliteral}{"', "};
+123     cout << endl;
+124     cout << \textcolor{stringliteral}{"Example: "} << args[0] << \textcolor{stringliteral}{" /tmp/runDynamicalSystemsDemo rungekutta"} << endl << endl;
+125     \textcolor{keywordflow}{return} -1;
+126   \}
+127   
+128   \textcolor{comment}{// Which directory to write data to}
+129   \textcolor{keywordtype}{string} directory = string(args[1]); \textcolor{comment}{// args[1] exists, already checked above}
+130   \textcolor{keywordtype}{bool} overwrite=\textcolor{keyword}{true}; \textcolor{comment}{// If there are already results in the directory, overwrite them.}
+131 
+132   \textcolor{comment}{// Which test to perform}
+133   vector<string> test\_labels;
+134   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} aa=2; aa<n\_args; aa++)
+135   \{
+136     test\_labels.push\_back(\textcolor{keywordtype}{string}(args[aa]));
+137   \}
+138   \textcolor{keywordflow}{if} (test\_labels.size()==0)
+139     test\_labels = available\_test\_labels;
+140   
+141   
+142   \textcolor{comment}{// FILL AN ARRAY WITH DYNAMICAL SYSTEMS}
+143   
+144   \textcolor{comment}{// Array with different dynamical system implementations}
+145   \textcolor{keywordtype}{int} n\_systems = 5;
+146   \hyperlink{classDmpBbo_1_1DynamicalSystem}{DynamicalSystem}* dyn\_systems[n\_systems];
+147   
+148   \textcolor{comment}{// ExponentialSystem}
+149   \textcolor{keywordtype}{double} tau = 0.6; \textcolor{comment}{// Time constant}
+150   VectorXd initial\_state(2);   initial\_state   << 0.5, 1.0; 
+151   VectorXd attractor\_state(2); attractor\_state << 0.8, 0.1; 
+152   \textcolor{keywordtype}{double} alpha = 6.0; \textcolor{comment}{// Decay factor}
+153   dyn\_systems[0] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1ExponentialSystem}{ExponentialSystem}(tau, initial\_state, attractor\_state, alpha);
+154   
+155   \textcolor{comment}{// TimeSystem}
+156   dyn\_systems[1] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1TimeSystem}{TimeSystem}(tau);
+157 
+158   \textcolor{comment}{// TimeSystem (but counting down instead of up)}
+159   \textcolor{keywordtype}{bool} count\_down = \textcolor{keyword}{true};
+160   dyn\_systems[2] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1TimeSystem}{TimeSystem}(tau,count\_down,\textcolor{stringliteral}{"TimeSystemCountDown"});
+161   
+162   \textcolor{comment}{// SigmoidSystem}
+163   \textcolor{keywordtype}{double} max\_rate = -20;
+164   \textcolor{keywordtype}{double} inflection\_point = tau*0.8;
+165   dyn\_systems[3] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1SigmoidSystem}{SigmoidSystem}(tau, initial\_state, max\_rate, inflection\_point);
+166   
+167   \textcolor{comment}{// SpringDamperSystem}
+168   alpha = 12.0;
+169   dyn\_systems[4] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1SpringDamperSystem}{SpringDamperSystem}(tau, initial\_state, attractor\_state, alpha);
+170 
+171   
+172   \textcolor{comment}{// INTEGRATE ALL DYNAMICAL SYSTEMS IN THE ARRAY AND OUTPUT RESULTS}
+173 
+174 
+175   \textcolor{comment}{// Variables that will be used in the loop}
+176   \textcolor{keywordtype}{string} filename, first\_filename, save\_directory;
+177   ofstream output\_file;
+178   VectorXd ts;
+179   MatrixXd xs, xds;
+180   
+181   \textcolor{comment}{// Loop through all systems, and do numerical integration and compute the analytical solution}
+182   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_system=0; i\_system<n\_systems; i\_system++)
+183   \{
+184     cout << dyn\_systems[i\_system]->\hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}() << \textcolor{stringliteral}{": \(\backslash\)t"};
+185     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_test=0; i\_test<test\_labels.size(); i\_test++)
+186     \{
+187       cout << test\_labels[i\_test] << \textcolor{stringliteral}{"  "};
+188       
+189       \textcolor{comment}{// RUN THE CURRENT TEST FOR THE CURRENT SYSTEM}
+190       \hyperlink{demoDynamicalSystems_8cpp_a4dc8651039912e36c71e412f78e6dad7}{runDynamicalSystemTest}(dyn\_systems[i\_system], test\_labels[i\_test], ts, xs, xds)
+      ;
+191       
+192       \textcolor{comment}{// WRITE RESULTS TO FILE}
+193       
+194       \textcolor{comment}{// Put the results in one matrix to facilitate the writing of the data}
+195       MatrixXd xs\_xds\_ts(ts.size(),1+2*dyn\_systems[i\_system]->\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+196       xs\_xds\_ts << xs.transpose(), xds.transpose(), ts;
+197     
+198       save\_directory = directory+\textcolor{stringliteral}{"/"}+dyn\_systems[i\_system]->\hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}();
+199       filename = \textcolor{stringliteral}{"results\_"}+test\_labels[i\_test]+\textcolor{stringliteral}{".txt"};
+200       saveMatrix(save\_directory,filename,xs\_xds\_ts,overwrite);
+201       \textcolor{comment}{//
+      saveMatrix(save\_directory,"dim\_orig.txt",VectorXd::Constant(1,dyn\_systems[i\_test]->dim\_orig()),overwrite);}
+202 
+203       \textcolor{comment}{/*}
+204 \textcolor{comment}{      cout << "Use 'cd ../plotting/ ; python plotDynamicalSystem.py " << save\_directory << "/" << filename
+       << "' to plot the results." << endl;}
+205 \textcolor{comment}{      if (i\_test==0)}
+206 \textcolor{comment}{        first\_filename = filename;}
+207 \textcolor{comment}{      else}
+208 \textcolor{comment}{        cout << "Use 'cd ../plotting/ ; python plotDynamicalSystemComparison.py " << save\_directory << "/"
+       << first\_filename << " " << save\_directory << "/" << filename << "' to plot a comparison of the results." <<
+       endl;}
+209 \textcolor{comment}{      cout << endl;}
+210 \textcolor{comment}{      */}
+211 
+212     \}
+213     cout << endl;
+214 
+215   \}
+216 
+217   
+218   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_system=0; i\_system<n\_systems; i\_system++)
+219     \textcolor{keyword}{delete} dyn\_systems[i\_system]; 
+220   
+221   \textcolor{keywordflow}{return} 0;
+222 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDynamicalSystems_8cpp_a22577c6525b3f2fefecc0c741ba46a9a_cgraph}
+\end{center}
+\end{figure}
+
+

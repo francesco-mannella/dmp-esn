@@ -1,0 +1,351 @@
+\hypertarget{classDmpBbo_1_1TaskSolverDmp}{\subsection{Task\+Solver\+Dmp Class Reference}
+\label{classDmpBbo_1_1TaskSolverDmp}\index{Task\+Solver\+Dmp@{Task\+Solver\+Dmp}}
+}
+
+
+\hyperlink{classDmpBbo_1_1Task}{Task} solver for the viapoint task, that generates trajectories with a D\+M\+P.  
+
+
+
+
+{\ttfamily \#include $<$Task\+Solver\+Dmp.\+hpp$>$}
+
+
+
+Inheritance diagram for Task\+Solver\+Dmp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classDmpBbo_1_1TaskSolverDmp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Task\+Solver\+Dmp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classDmpBbo_1_1TaskSolverDmp__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1TaskSolverDmp_a9038769df4b3b779070d4453dba1e2e8}{Task\+Solver\+Dmp} (\hyperlink{classDmpBbo_1_1Dmp}{Dmp} $\ast$dmp, std\+::set$<$ std\+::string $>$ optimize\+\_\+parameters, double dt=0.\+01, double integrate\+\_\+dmp\+\_\+beyond\+\_\+tau\+\_\+factor=1.\+0, bool use\+\_\+normalized\+\_\+parameter=false)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1TaskSolverDmp_a1bfa5f861b08d1073a5c4461aefd7e57}{perform\+Rollouts} (const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Matrix\+Xd \&task\+\_\+parameters, Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars) const 
+\begin{DoxyCompactList}\small\item\em Perform rollouts, i.\+e. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1TaskSolverDmp_aef8605bc2d34bea9994507202e0368c2}{perform\+Rollouts} (const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&samples\+\_\+vec, const Eigen\+::\+Matrix\+Xd \&task\+\_\+parameters, Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars) const 
+\begin{DoxyCompactList}\small\item\em Perform rollouts, i.\+e. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classDmpBbo_1_1TaskSolverDmp_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1TaskSolverDmp_a8abd9d1a1f4d871e203818298b37dc3c}{set\+\_\+perturbation} (double perturbation\+\_\+standard\+\_\+deviation)
+\begin{DoxyCompactList}\small\item\em Add a perturbation to the forcing term when computing the analytical solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1TaskSolverDmp_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+\hyperlink{classDmpBbo_1_1Task}{Task} solver for the viapoint task, that generates trajectories with a D\+M\+P. 
+
+Definition at line 42 of file Task\+Solver\+Dmp.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1TaskSolverDmp_a9038769df4b3b779070d4453dba1e2e8}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}!Task\+Solver\+Dmp@{Task\+Solver\+Dmp}}
+\index{Task\+Solver\+Dmp@{Task\+Solver\+Dmp}!Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}}
+\paragraph[{Task\+Solver\+Dmp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Task\+Solver\+Dmp} (
+\begin{DoxyParamCaption}
+\item[{{\bf Dmp} $\ast$}]{dmp, }
+\item[{std\+::set$<$ std\+::string $>$}]{optimize\+\_\+parameters, }
+\item[{double}]{dt = {\ttfamily 0.01}, }
+\item[{double}]{integrate\+\_\+dmp\+\_\+beyond\+\_\+tau\+\_\+factor = {\ttfamily 1.0}, }
+\item[{bool}]{use\+\_\+normalized\+\_\+parameter = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1TaskSolverDmp_a9038769df4b3b779070d4453dba1e2e8}
+
+
+Constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dmp} & The \hyperlink{classDmpBbo_1_1Dmp}{Dmp} to integrate for generating trajectories (that should go through viapoints) \\
+\hline
+\mbox{\tt in}  & {\em optimize\+\_\+parameters} & The model parameters to change in the \hyperlink{classDmpBbo_1_1Dmp}{Dmp}, cf. sec\+\_\+fa\+\_\+changing\+\_\+modelparameters. Depends on the function approximator used for the forcing term. \\
+\hline
+\mbox{\tt in}  & {\em dt} & Integration time steps \\
+\hline
+\mbox{\tt in}  & {\em integrate\+\_\+dmp\+\_\+beyond\+\_\+tau\+\_\+factor} & If you want to integrate the \hyperlink{classDmpBbo_1_1Dmp}{Dmp} for a longer duration than the tau with which it was trained, set this value larger than 1. I.\+e. integrate\+\_\+dmp\+\_\+beyond\+\_\+tau\+\_\+factor=1.\+5 will integrate for 3 seconds, if the original tau of the \hyperlink{classDmpBbo_1_1Dmp}{Dmp} was 2. \\
+\hline
+\mbox{\tt in}  & {\em use\+\_\+normalized\+\_\+parameter} & Use normalized parameters, cf. sec\+\_\+fa\+\_\+changing\+\_\+modelparameters \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file Task\+Solver\+Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+57 : dmp\_(dmp)
+58 \{
+59   dmp\_->\hyperlink{classDmpBbo_1_1Dmp_a8a976b5db2d1809ece10e431816f0f27}{setSelectedParameters}(optimize\_parameters);
+60   
+61   integrate\_time\_ = dmp\_->\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}() * integrate\_dmp\_beyond\_tau\_factor;
+62   n\_time\_steps\_ = (integrate\_time\_/dt)+1;
+63   use\_normalized\_parameter\_ = use\_normalized\_parameter;
+64 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1TaskSolverDmp_a9038769df4b3b779070d4453dba1e2e8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskSolverDmp_a1bfa5f861b08d1073a5c4461aefd7e57}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}!perform\+Rollouts@{perform\+Rollouts}}
+\index{perform\+Rollouts@{perform\+Rollouts}!Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}}
+\paragraph[{perform\+Rollouts}]{\setlength{\rightskip}{0pt plus 5cm}void perform\+Rollouts (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1TaskSolverDmp_a1bfa5f861b08d1073a5c4461aefd7e57}
+
+
+Perform rollouts, i.\+e. 
+
+given a set of samples, determine all the variables that are relevant to evaluating the cost function. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples} & The samples \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & The parameters of the task \\
+\hline
+\mbox{\tt out}  & {\em cost\+\_\+vars} & The variables relevant to computing the cost. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000003}{Todo}]Compare to other functions \end{DoxyRefDesc}
+
+
+Implements \hyperlink{classDmpBbo_1_1TaskSolver_a36d1f440face2e087122666173020bb1}{Task\+Solver}.
+
+
+
+Definition at line 71 of file Task\+Solver\+Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+72 \{
+73 
+74   \textcolor{comment}{// samples         = n\_samples x sum(nmodel\_parameters\_)}
+75   \textcolor{comment}{// task\_parameters = n\_samples x n\_task\_pars}
+76   \textcolor{comment}{// cost\_vars       = n\_samples x (n\_time\_steps*n\_cost\_vars)}
+77   
+78   \textcolor{keywordtype}{int} n\_dofs = dmp\_->\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}();
+79   \textcolor{keywordtype}{int} n\_samples = samples.rows();
+80 
+81   VectorXd ts = VectorXd::LinSpaced(n\_time\_steps\_,0.0,integrate\_time\_);
+82   
+83   \textcolor{keywordtype}{int} n\_cost\_vars = 4*n\_dofs+1;
+84   cost\_vars.resize(n\_samples,n\_time\_steps\_*n\_cost\_vars); 
+85     
+86   VectorXd model\_parameters;
+87   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} k=0; k<n\_samples; k++)
+88   \{
+89     model\_parameters = samples.row(k);
+90     dmp\_->\hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{setParameterVectorSelected}(model\_parameters, use\_normalized\_parameter\_)
+      ;
+91     
+92     \textcolor{keywordtype}{int} n\_dims = dmp\_->\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}(); \textcolor{comment}{// Dimensionality of the system}
+93     MatrixXd xs\_ana(n\_time\_steps\_,n\_dims);
+94     MatrixXd xds\_ana(n\_time\_steps\_,n\_dims);
+95     MatrixXd forcing\_terms(n\_time\_steps\_,n\_dofs);
+96     forcing\_terms.fill(0.0);
+97     dmp\_->\hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(ts,xs\_ana,xds\_ana,forcing\_terms);
+98 
+99     \textcolor{comment}{/*    }
+100 \textcolor{comment}{    // Here's the non-analytical version, which is slower.}
+101 \textcolor{comment}{    MatrixXd xs(n\_time\_steps\_,n\_dims);}
+102 \textcolor{comment}{    MatrixXd xds(n\_time\_steps\_,n\_dims);}
+103 \textcolor{comment}{    }
+104 \textcolor{comment}{    // Use integrateStart to get the initial x and xd}
+105 \textcolor{comment}{    VectorXd x(n\_dims);}
+106 \textcolor{comment}{    VectorXd xd(n\_dims);}
+107 \textcolor{comment}{    dmp\_->integrateStart(x,xd);}
+108 \textcolor{comment}{    xs.row(0)  = x.transpose();}
+109 \textcolor{comment}{    xds.row(0)  = xd.transpose();}
+110 \textcolor{comment}{    // Use DynamicalSystemSystem::integrateStep to integrate numerically step-by-step}
+111 \textcolor{comment}{    double dt = ts[1]-ts[0];}
+112 \textcolor{comment}{    for (int ii=1; ii<n\_time\_steps\_; ii++)}
+113 \textcolor{comment}{    \{}
+114 \textcolor{comment}{      dmp\_->integrateStep(dt,x,           x,          xd); }
+115 \textcolor{comment}{      //                     previous x   updated x   updated xd}
+116 \textcolor{comment}{      xs.row(ii)  = x.transpose();}
+117 \textcolor{comment}{      xds.row(ii)  = xd.transpose();}
+118 \textcolor{comment}{    \}}
+119 \textcolor{comment}{    MatrixXd ys;}
+120 \textcolor{comment}{    MatrixXd yds;}
+121 \textcolor{comment}{    MatrixXd ydds;}
+122 \textcolor{comment}{    dmp\_->statesAsTrajectory(xs,xds,ys,yds,ydds);}
+123 \textcolor{comment}{    */}
+124 
+125     
+126     MatrixXd ys\_ana;
+127     MatrixXd yds\_ana;
+128     MatrixXd ydds\_ana;
+129     dmp\_->\hyperlink{classDmpBbo_1_1Dmp_aa3ad2fc66e8ce09cfa68032a4a5004b9}{statesAsTrajectory}(xs\_ana,xds\_ana,ys\_ana,yds\_ana,ydds\_ana);
+130     
+131     \textcolor{keywordtype}{int} offset = 0;
+132     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} tt=0; tt<n\_time\_steps\_; tt++)
+133     \{
+134       cost\_vars.block(k,offset,1,n\_dofs) = ys\_ana.row(tt);   offset += n\_dofs; 
+135       cost\_vars.block(k,offset,1,n\_dofs) = yds\_ana.row(tt);  offset += n\_dofs; 
+136       cost\_vars.block(k,offset,1,n\_dofs) = ydds\_ana.row(tt); offset += n\_dofs; 
+137       cost\_vars.block(k,offset,1,1) = ts.row(tt);       offset += 1; 
+138       cost\_vars.block(k,offset,1,n\_dofs) = forcing\_terms.row(tt); offset += n\_dofs;       
+139     \}
+140   \}
+141 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1TaskSolverDmp_a1bfa5f861b08d1073a5c4461aefd7e57_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1TaskSolverDmp_aef8605bc2d34bea9994507202e0368c2}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}!perform\+Rollouts@{perform\+Rollouts}}
+\index{perform\+Rollouts@{perform\+Rollouts}!Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}}
+\paragraph[{perform\+Rollouts}]{\setlength{\rightskip}{0pt plus 5cm}virtual void perform\+Rollouts (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{samples\+\_\+vec, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1TaskSolverDmp_aef8605bc2d34bea9994507202e0368c2}
+
+
+Perform rollouts, i.\+e. 
+
+given a set of samples, determine all the variables that are relevant to evaluating the cost function. This version does so for parallel optimization, where multiple distributions are updated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples\+\_\+vec} & The samples, a vector with one element per distribution \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & The parameters of the task \\
+\hline
+\mbox{\tt out}  & {\em cost\+\_\+vars} & The variables relevant to computing the cost. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000010}{Todo}]Compare to other functions \end{DoxyRefDesc}
+
+
+Implements \hyperlink{classDmpBbo_1_1TaskSolverParallel_aa91bb4c2ddec55ee7c594cd639094d36}{Task\+Solver\+Parallel}.
+
+\hypertarget{classDmpBbo_1_1TaskSolverDmp_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1TaskSolverDmp_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1TaskSolver_af084bff2ddd6233e9a898faa23f6195c}{Task\+Solver}.
+
+
+
+Definition at line 224 of file Task\+Solver\+Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+225 \{
+226   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"TaskSolverDmp"});
+227 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1TaskSolverDmp_a8abd9d1a1f4d871e203818298b37dc3c}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}!set\+\_\+perturbation@{set\+\_\+perturbation}}
+\index{set\+\_\+perturbation@{set\+\_\+perturbation}!Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}}
+\paragraph[{set\+\_\+perturbation}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+perturbation (
+\begin{DoxyParamCaption}
+\item[{double}]{perturbation\+\_\+standard\+\_\+deviation}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1TaskSolverDmp_a8abd9d1a1f4d871e203818298b37dc3c}
+
+
+Add a perturbation to the forcing term when computing the analytical solution. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em perturbation\+\_\+standard\+\_\+deviation} & Standard deviation of the normal distribution from which perturbations will be sampled. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file Task\+Solver\+Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+67 \{
+68   dmp\_->\hyperlink{classDmpBbo_1_1Dmp_a6c44c534fd7bb0b6ad87648692e15269}{set\_perturbation\_analytical\_solution}(
+      perturbation\_standard\_deviation);
+69 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1TaskSolverDmp_a8abd9d1a1f4d871e203818298b37dc3c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskSolverDmp_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Task\+Solver\+Dmp@{Dmp\+Bbo\+::\+Task\+Solver\+Dmp}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1TaskSolverDmp_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 82 of file Task\+Solver\+Dmp.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TaskSolverDmp_8hpp}{Task\+Solver\+Dmp.\+hpp}\item 
+\hyperlink{TaskSolverDmp_8cpp}{Task\+Solver\+Dmp.\+cpp}\end{DoxyCompactItemize}

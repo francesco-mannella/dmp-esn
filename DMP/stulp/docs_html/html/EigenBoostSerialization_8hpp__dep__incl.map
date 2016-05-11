@@ -1,0 +1,51 @@
+<map id="EigenBoostSerialization.hpp" name="EigenBoostSerialization.hpp">
+<area shape="rect" id="node2" href="$demoEvolutionaryOptimization_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a distance function, implemented as a CostF..." alt="" coords="5,162,244,189"/>
+<area shape="rect" id="node3" href="$DistributionGaussian_8cpp.html" title="DistributionGaussian class source file. " alt="" coords="269,162,445,189"/>
+<area shape="rect" id="node4" href="$DistributionGaussian_8hpp.html" title="DistributionGaussian class header file. " alt="" coords="808,80,985,107"/>
+<area shape="rect" id="node15" href="$Dmp_8cpp.html" title="Dmp class source file. " alt="" coords="2279,251,2357,278"/>
+<area shape="rect" id="node16" href="$Dmp_8hpp.html" title="Dmp class header file. " alt="" coords="2063,162,2141,189"/>
+<area shape="rect" id="node23" href="$TaskSolverDmp_8cpp.html" title="TaskSolverDmp class source file. " alt="" coords="1431,251,1579,278"/>
+<area shape="rect" id="node24" href="$Trajectory_8hpp.html" title="Trajectory class header file. " alt="" coords="2261,162,2375,189"/>
+<area shape="rect" id="node25" href="$TaskViapoint_8cpp.html" title="TaskViapoint class source file. " alt="" coords="2451,80,2582,107"/>
+<area shape="rect" id="node26" href="$TaskSolverDmp_8hpp.html" title="TaskSolverDmp class header file. " alt="" coords="1430,162,1579,189"/>
+<area shape="rect" id="node27" href="$DynamicalSystem_8hpp.html" title="DynamicalSystem class header file. " alt="" coords="2267,80,2427,107"/>
+<area shape="rect" id="node28" href="$ExponentialSystem_8cpp.html" title="ExponentialSystem class source file. " alt="" coords="2606,80,2774,107"/>
+<area shape="rect" id="node29" href="$SigmoidSystem_8cpp.html" title="SigmoidSystem class source file. " alt="" coords="2798,80,2942,107"/>
+<area shape="rect" id="node30" href="$SpringDamperSystem_8cpp.html" title="SpringDamperSystem class source file. " alt="" coords="2967,80,3152,107"/>
+<area shape="rect" id="node31" href="$FunctionApproximator_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="3176,80,3361,107"/>
+<area shape="rect" id="node32" href="$FunctionApproximatorGMR_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="3386,80,3605,107"/>
+<area shape="rect" id="node33" href="$FunctionApproximatorGPR_8cpp.html" title="FunctionApproximatorGPR class source file. " alt="" coords="3629,80,3844,107"/>
+<area shape="rect" id="node34" href="$FunctionApproximatorIRFRLS_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="3869,80,4103,107"/>
+<area shape="rect" id="node35" href="$FunctionApproximatorLWPR_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="4127,80,4352,107"/>
+<area shape="rect" id="node36" href="$FunctionApproximatorLWR_8cpp.html" title="FunctionApproximatorLWR class source file. " alt="" coords="4377,80,4593,107"/>
+<area shape="rect" id="node37" href="$FunctionApproximatorRBFN_8cpp.html" title="FunctionApproximatorRBFN class source file. " alt="" coords="4617,80,4840,107"/>
+<area shape="rect" id="node38" href="$MetaParametersGMR_8cpp.html" title="MetaParametersGMR class source file. " alt="" coords="4865,80,5051,107"/>
+<area shape="rect" id="node39" href="$MetaParametersGPR_8cpp.html" title="MetaParametersGPR class source file. " alt="" coords="5076,80,5259,107"/>
+<area shape="rect" id="node40" href="$MetaParametersIRFRLS_8cpp.html" title="MetaParametersIRFRLS class source file. " alt="" coords="5283,80,5486,107"/>
+<area shape="rect" id="node41" href="$MetaParametersLWPR_8cpp.html" title="MetaParametersLWPR class source file. " alt="" coords="5511,80,5704,107"/>
+<area shape="rect" id="node42" href="$MetaParametersLWR_8cpp.html" title="MetaParametersLWR class source file. " alt="" coords="5729,80,5913,107"/>
+<area shape="rect" id="node43" href="$MetaParametersRBFN_8cpp.html" title="MetaParametersRBFN class source file. " alt="" coords="5937,80,6128,107"/>
+<area shape="rect" id="node44" href="$ModelParametersGMR_8cpp.html" title="ModelParametersGMR class source file. " alt="" coords="6152,80,6345,107"/>
+<area shape="rect" id="node45" href="$ModelParametersGPR_8cpp.html" title="ModelParametersGPR class source file. " alt="" coords="6369,80,6560,107"/>
+<area shape="rect" id="node46" href="$ModelParametersIRFRLS_8cpp.html" title="ModelParametersIRFRLS class source file. " alt="" coords="6584,80,6793,107"/>
+<area shape="rect" id="node47" href="$ModelParametersLWPR_8cpp.html" title="ModelParametersLWPR class source file. " alt="" coords="6818,80,7018,107"/>
+<area shape="rect" id="node48" href="$ModelParametersLWR_8cpp.html" title="ModelParametersLWR class source file. " alt="" coords="7043,80,7233,107"/>
+<area shape="rect" id="node49" href="$ModelParametersRBFN_8cpp.html" title="ModelParametersRBFN class source file. " alt="" coords="7258,80,7455,107"/>
+<area shape="rect" id="node50" href="$UnifiedModel_8cpp.html" title="UnifiedModel class source file. " alt="" coords="7479,80,7610,107"/>
+<area shape="rect" id="node5" href="$demoEvolutionaryOptimizationTask_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize the parameters of a quadratic function..." alt="" coords="1144,155,1356,196"/>
+<area shape="rect" id="node6" href="$runEvolutionaryOptimization_8cpp.html" title="Source file for function to run an evolutionary optimization process. " alt="" coords="325,251,548,278"/>
+<area shape="rect" id="node7" href="$Updater_8hpp.html" title="Updater class header file. " alt="" coords="1020,162,1120,189"/>
+<area shape="rect" id="node8" href="$demoDmpBbo_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a Dmp. " alt="" coords="1007,251,1143,278"/>
+<area shape="rect" id="node9" href="$demoDmpBboMultiDim_8cpp.html" title="Demonstrates how to run multiple evolution strategies in parallel to optimize a Dmp. " alt="" coords="794,251,983,278"/>
+<area shape="rect" id="node10" href="$demoImitationAndOptimization_8cpp.html" title="Demonstrates how to initialize a DMP, and then optimize it with an evolution strategy. " alt="" coords="1168,251,1407,278"/>
+<area shape="rect" id="node11" href="$runEvolutionaryOptimizationParallel_8cpp.html" title="Source file for function to run multiple evolutionary optimization processes in parallel. " alt="" coords="573,244,770,285"/>
+<area shape="rect" id="node12" href="$UpdateSummary_8cpp.html" title="UpdateSummary class source file. " alt="" coords="621,162,773,189"/>
+<area shape="rect" id="node13" href="$TaskWithTrajectoryDemonstrator_8hpp.html" title="TaskWithTrajectoryDemonstrator class header file. " alt="" coords="1773,251,2031,278"/>
+<area shape="rect" id="node14" href="$UpdateSummaryParallel_8cpp.html" title="UpdateSummaryParallel class source file. " alt="" coords="797,162,996,189"/>
+<area shape="rect" id="node17" href="$demoDmp_8cpp.html" title="Demonstrates how to initialize, train and integrate a Dmp. " alt="" coords="2381,251,2493,278"/>
+<area shape="rect" id="node18" href="$demoDmpTrainFromTrajectoryFile_8cpp.html" title="demoDmpTrainFromTrajectory\lFile.cpp" alt="" coords="2568,244,2783,285"/>
+<area shape="rect" id="node19" href="$DmpContextual_8hpp.html" title="Contextual Dmp class header file. " alt="" coords="1603,251,1748,278"/>
+<area shape="rect" id="node22" href="$DmpContextualTwoStep_8cpp.html" title="Contextual Dmp class source file. " alt="" coords="2055,251,2255,278"/>
+<area shape="rect" id="node20" href="$demoDmpContextual_8cpp.html" title="Demonstrates how to initialize, train and integrate a Contextual Dmp. " alt="" coords="2731,333,2910,360"/>
+<area shape="rect" id="node21" href="$demoDmpContextualGoal_8cpp_source.html" title="demoDmpContextualGoal.cpp" alt="" coords="2425,333,2635,360"/>
+</map>

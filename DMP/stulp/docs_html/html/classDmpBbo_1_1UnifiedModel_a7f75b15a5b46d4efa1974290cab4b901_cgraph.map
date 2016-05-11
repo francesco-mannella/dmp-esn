@@ -1,0 +1,4 @@
+<map id="evaluate" name="evaluate">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1UnifiedModel.html#ae8174f3d5e718d18c587c9bd50dc333f" title="Get the output of each linear model (unweighted) for the given inputs. " alt="" coords="155,5,231,32"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1UnifiedModel.html#a125cc60559b55f7348beb15f25834b6f" title="Get the kernel activations for given inputs. " alt="" coords="128,56,257,83"/>
+</map>

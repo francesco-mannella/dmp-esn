@@ -1,0 +1,8 @@
+<map id="updateDistribution" name="updateDistribution">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1DistributionGaussian.html#a612f996501aac7e31237a21b47d03d72" title="Accessor get function for the mean. " alt="" coords="188,5,397,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1UpdaterMean.html#a97c2ddfabeee67dba0044f405f4ce8c0" title="Update the distribution mean. " alt="" coords="205,71,381,112"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1DistributionGaussian.html#ac9783c093d50c99c387c241b3bc8729d" title="Accessor set function for the mean. " alt="" coords="188,136,397,177"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1DistributionGaussian.html#a5d2adde253815df42d471a876173868c" title="Accessor get function for the covariance matrix. " alt="" coords="188,201,397,243"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1DistributionGaussian.html#aecae0b0d3ae1d8c47dc4b13d1b24d169" title="Accessor set function for the covar. " alt="" coords="188,267,397,308"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1UpdaterMean.html#a67bb3ad0e7d34b11aa5453adc462f9cc" title="Convert costs to weights, given the weighting method. " alt="" coords="445,71,613,112"/>
+</map>

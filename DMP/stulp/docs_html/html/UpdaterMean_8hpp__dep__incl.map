@@ -1,0 +1,12 @@
+<map id="UpdaterMean.hpp" name="UpdaterMean.hpp">
+<area shape="rect" id="node2" href="$demoEvolutionaryOptimization_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a distance function, implemented as a CostF..." alt="" coords="472,162,711,189"/>
+<area shape="rect" id="node3" href="$demoEvolutionaryOptimizationTask_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize the parameters of a quadratic function..." alt="" coords="5,155,217,196"/>
+<area shape="rect" id="node4" href="$UpdaterCovarAdaptation_8hpp.html" title="UpdaterCovarAdaptation class header file. " alt="" coords="380,80,587,107"/>
+<area shape="rect" id="node7" href="$UpdaterCovarDecay_8hpp.html" title="UpdaterCovarDecay class header file. " alt="" coords="730,80,909,107"/>
+<area shape="rect" id="node11" href="$UpdaterMean_8cpp.html" title="UpdaterMean class source file. " alt="" coords="933,80,1068,107"/>
+<area shape="rect" id="node5" href="$UpdaterCovarAdaptation_8cpp.html" title="UpdaterCovarAdaptation class source file. " alt="" coords="242,162,447,189"/>
+<area shape="rect" id="node6" href="$demoImitationAndOptimization_8cpp.html" title="Demonstrates how to initialize a DMP, and then optimize it with an evolution strategy. " alt="" coords="735,162,973,189"/>
+<area shape="rect" id="node8" href="$UpdaterCovarDecay_8cpp.html" title="UpdaterCovarDecay class source file. " alt="" coords="997,162,1175,189"/>
+<area shape="rect" id="node9" href="$demoDmpBbo_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a Dmp. " alt="" coords="1199,162,1335,189"/>
+<area shape="rect" id="node10" href="$demoDmpBboMultiDim_8cpp.html" title="Demonstrates how to run multiple evolution strategies in parallel to optimize a Dmp. " alt="" coords="1359,162,1549,189"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="predict" name="predict">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1FunctionApproximator.html#a178135f623d9b9058870851a53299c6e" title="Determine whether the function approximator has already been trained with data or not..." alt="" coords="121,5,339,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="121,71,339,112"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1FunctionApproximator.html#af5a550bcf65d5a29a153a594cc4e3fa1" title="The expected dimensionality of the input data. " alt="" coords="121,136,339,177"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1ModelParametersGPR.html#a125cc60559b55f7348beb15f25834b6f" title="Get the normalized kernel activations for given inputs. " alt="" coords="119,201,341,243"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1ModelParametersGPR.html#ab0065893578a0770652450ebfe930481" title="Return the weights, which is equivalent to , where G is the Gram matrix, and y is the target data..." alt="" coords="119,267,341,308"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1UnifiedModel.html#af5a550bcf65d5a29a153a594cc4e3fa1" title="The expected dimensionality of the input data. " alt="" coords="389,136,553,177"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$demoEvolutionaryOptimizationTask_8cpp.html#a8dd69e1c4b8036ab6c2b6f386fe5b6bc" title="Target function . " alt="" coords="159,5,271,32"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#a8c8a804456f63ff9a3acc4dacf6163a5" title="Get the name of this function approximator. " alt="" coords="105,57,324,98"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1FunctionApproximator.html#a9781476c7d296da4aaf50e74cd273a75" title="Train the function approximator with corresponding input and target examples. " alt="" coords="105,122,324,163"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1FunctionApproximator.html#a0547681a81d4c43ce2601f16047baf7a" title="Query the function approximator to make a prediction. " alt="" coords="105,187,324,229"/>
+<area shape="rect" id="node6" href="$demoTrainFunctionApproximators_8cpp.html#a718388cd48f1ddd8003e3cb4815d8c16" title="Compute mean absolute error for each column of two matrices. " alt="" coords="112,253,317,294"/>
+</map>

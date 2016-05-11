@@ -1,0 +1,220 @@
+\hypertarget{demoDmp_8cpp}{\subsection{demo\+Dmp.\+cpp File Reference}
+\label{demoDmp_8cpp}\index{demo\+Dmp.\+cpp@{demo\+Dmp.\+cpp}}
+}
+
+
+Demonstrates how to initialize, train and integrate a Dmp.  
+
+
+{\ttfamily \#include \char`\"{}dmp/\+Dmp.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Trajectory.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Dynamical\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Exponential\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Sigmoid\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Time\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Spring\+Damper\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Model\+Parameters\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Eigen\+File\+I\+O.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+Include dependency graph for demo\+Dmp.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDmp_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \hyperlink{demoDmp_8cpp_a343aa3a742299a0967d4f70cfbe21723}{get\+Demo\+Trajectory} (const Vector\+Xd \&ts)
+\begin{DoxyCompactList}\small\item\em Get a demonstration trajectory. \end{DoxyCompactList}\item 
+int \hyperlink{demoDmp_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{main} (int n\+\_\+args, char $\ast$$\ast$args)
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Demonstrates how to initialize, train and integrate a Dmp. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{demoDmp_8cpp_source}{demo\+Dmp.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{demoDmp_8cpp_a343aa3a742299a0967d4f70cfbe21723}{\index{demo\+Dmp.\+cpp@{demo\+Dmp.\+cpp}!get\+Demo\+Trajectory@{get\+Demo\+Trajectory}}
+\index{get\+Demo\+Trajectory@{get\+Demo\+Trajectory}!demo\+Dmp.\+cpp@{demo\+Dmp.\+cpp}}
+\paragraph[{get\+Demo\+Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trajectory} get\+Demo\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{const Vector\+Xd \&}]{ts}
+\end{DoxyParamCaption}
+)}}\label{demoDmp_8cpp_a343aa3a742299a0967d4f70cfbe21723}
+
+
+Get a demonstration trajectory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & The time steps at which to sample \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a Demonstration trajectory 
+\end{DoxyReturn}
+
+
+Definition at line 133 of file demo\+Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+134 \{
+135   \textcolor{keywordtype}{bool} use\_viapoint\_traj= \textcolor{keyword}{true};
+136   \textcolor{keywordflow}{if} (use\_viapoint\_traj)
+137   \{
+138     \textcolor{keywordtype}{int} n\_dims = 1;
+139     VectorXd y\_first = VectorXd::Zero(n\_dims);
+140     VectorXd y\_last  = VectorXd::Ones(n\_dims);
+141     \textcolor{keywordtype}{double} viapoint\_time = 0.25;
+142     \textcolor{keywordtype}{double} viapoint\_location = 0.5;
+143   
+144     VectorXd y\_yd\_ydd\_viapoint = VectorXd::Zero(3*n\_dims);
+145     y\_yd\_ydd\_viapoint.segment(0*n\_dims,n\_dims).fill(viapoint\_location); \textcolor{comment}{// y         }
+146     \textcolor{keywordflow}{return}  Trajectory::generatePolynomialTrajectoryThroughViapoint(ts,y\_first,y\_yd\_ydd\_viapoint,
+      viapoint\_time,y\_last); 
+147   \}
+148   \textcolor{keywordflow}{else}
+149   \{
+150     \textcolor{keywordtype}{int} n\_dims = 2;
+151     VectorXd y\_first = VectorXd::LinSpaced(n\_dims,0.0,0.7); \textcolor{comment}{// Initial state}
+152     VectorXd y\_last  = VectorXd::LinSpaced(n\_dims,0.4,0.5); \textcolor{comment}{// Final state}
+153     \textcolor{keywordflow}{return} Trajectory::generateMinJerkTrajectory(ts, y\_first, y\_last);
+154   \}
+155 \}
+\end{DoxyCode}
+\hypertarget{demoDmp_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{\index{demo\+Dmp.\+cpp@{demo\+Dmp.\+cpp}!main@{main}}
+\index{main@{main}!demo\+Dmp.\+cpp@{demo\+Dmp.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+args, }
+\item[{char $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{demoDmp_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}
+
+
+Main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+args} & Number of arguments \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments themselves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success of exection. 0 if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file demo\+Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+62 \{
+63   \textcolor{keywordtype}{string} save\_directory;
+64   \textcolor{keywordflow}{if} (n\_args!=2) 
+65   \{
+66     cerr << \textcolor{stringliteral}{"Usage: "} << args[0] << \textcolor{stringliteral}{"<directory>"} << endl;
+67     \textcolor{keywordflow}{return} -1;
+68   \}
+69   save\_directory = string(args[1]);
+70 
+71   \textcolor{comment}{// GENERATE A TRAJECTORY }
+72   \textcolor{keywordtype}{double} tau = 0.5;
+73   \textcolor{keywordtype}{int} n\_time\_steps = 51;
+74   VectorXd ts = VectorXd::LinSpaced(n\_time\_steps,0,tau); \textcolor{comment}{// Time steps}
+75   \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} trajectory = \hyperlink{demoDmp_8cpp_a343aa3a742299a0967d4f70cfbe21723}{getDemoTrajectory}(ts); \textcolor{comment}{// getDemoTrajectory() is
+       implemented below main()}
+76   \textcolor{keywordtype}{int} n\_dims = trajectory.\hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}();
+77 
+78   
+79   \textcolor{comment}{// MAKE THE FUNCTION APPROXIMATORS}
+80   
+81   \textcolor{comment}{// Initialize some meta parameters for training LWR function approximator}
+82   \textcolor{keywordtype}{int} n\_basis\_functions = 25;
+83   \textcolor{keywordtype}{int} input\_dim = 1;
+84   \textcolor{keywordtype}{double} intersection = 0.5;
+85   \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}* meta\_parameters = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}(input\_dim,
+      n\_basis\_functions,intersection);      
+86   \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}* fa\_lwr = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}(meta\_parameters);  
+87   
+88   \textcolor{comment}{// Clone the function approximator for each dimension of the DMP}
+89   vector<FunctionApproximator*> function\_approximators(n\_dims);    
+90   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<n\_dims; dd++)
+91     function\_approximators[dd] = fa\_lwr->\hyperlink{classDmpBbo_1_1FunctionApproximatorLWR_ad792a46ac006916c5c1ffed2fa42dd24}{clone}();
+92   
+93   \textcolor{comment}{// CONSTRUCT AND TRAIN THE DMP}
+94   
+95   \textcolor{comment}{// Initialize the DMP}
+96   \hyperlink{classDmpBbo_1_1Dmp}{Dmp}* dmp = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1Dmp}{Dmp}(n\_dims, function\_approximators, Dmp::KULVICIUS\_2012\_JOINING);
+97 
+98   \textcolor{comment}{// And train it. Passing the save\_directory will make sure the results are saved to file.}
+99   \textcolor{keywordtype}{bool} overwrite = \textcolor{keyword}{true};
+100   dmp->\hyperlink{classDmpBbo_1_1Dmp_a5d14dedc6736ec5675b4026437b8a597}{train}(trajectory,save\_directory,overwrite);
+101 
+102   
+103   \textcolor{comment}{// INTEGRATE DMP TO GET REPRODUCED TRAJECTORY}
+104   
+105   \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} traj\_reproduced;
+106   tau = 0.9;
+107   n\_time\_steps = 91;
+108   ts = VectorXd::LinSpaced(n\_time\_steps,0,tau); \textcolor{comment}{// Time steps}
+109   dmp->\hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(ts,traj\_reproduced);
+110 
+111   \textcolor{comment}{// Integrate again, but this time get more information}
+112   MatrixXd xs\_ana, xds\_ana, forcing\_terms\_ana, fa\_output\_ana;
+113   dmp->\hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(ts,xs\_ana,xds\_ana,forcing\_terms\_ana,fa\_output\_ana);
+114 
+115   
+116   \textcolor{comment}{// WRITE THINGS TO FILE}
+117   trajectory.\hyperlink{classDmpBbo_1_1Trajectory_aad0f629a8d7be7400d0b5f6e990c9a1d}{saveToFile}(save\_directory,\textcolor{stringliteral}{"demonstration\_traj.txt"},overwrite);
+118   traj\_reproduced.\hyperlink{classDmpBbo_1_1Trajectory_aad0f629a8d7be7400d0b5f6e990c9a1d}{saveToFile}(save\_directory,\textcolor{stringliteral}{"reproduced\_traj.txt"},overwrite);
+119     
+120   MatrixXd output\_ana(ts.size(),1+xs\_ana.cols()+xds\_ana.cols());
+121   output\_ana << xs\_ana, xds\_ana, ts;
+122   saveMatrix(save\_directory,\textcolor{stringliteral}{"reproduced\_xs\_xds.txt"},output\_ana,overwrite);
+123   saveMatrix(save\_directory,\textcolor{stringliteral}{"reproduced\_forcing\_terms.txt"},forcing\_terms\_ana,overwrite);
+124   saveMatrix(save\_directory,\textcolor{stringliteral}{"reproduced\_fa\_output.txt"},fa\_output\_ana,overwrite);
+125 
+126   \textcolor{keyword}{delete} meta\_parameters;
+127   \textcolor{keyword}{delete} fa\_lwr;
+128   \textcolor{keyword}{delete} dmp;
+129 
+130   \textcolor{keywordflow}{return} 0;
+131 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoDmp_8cpp_a22577c6525b3f2fefecc0c741ba46a9a_cgraph}
+\end{center}
+\end{figure}
+
+

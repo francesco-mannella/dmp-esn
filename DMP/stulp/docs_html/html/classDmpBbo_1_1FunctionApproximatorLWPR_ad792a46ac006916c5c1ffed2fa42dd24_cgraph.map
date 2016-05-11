@@ -1,0 +1,5 @@
+<map id="clone" name="clone">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1FunctionApproximator.html#a6f1a44062eac61d88b647c358bcda155" title="Accessor for FunctionApproximator::meta_parameters_. " alt="" coords="109,5,328,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="109,71,328,112"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1FunctionApproximatorLWPR.html#a50124b32a40e1246d8d241be4f668563" title="Print some output to cout during training. " alt="" coords="153,136,285,177"/>
+</map>

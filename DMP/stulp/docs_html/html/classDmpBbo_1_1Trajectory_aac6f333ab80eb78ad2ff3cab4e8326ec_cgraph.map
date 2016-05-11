@@ -1,0 +1,10 @@
+<map id="append" name="append">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Trajectory.html#a6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the trajectory. " alt="" coords="142,5,186,32"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Trajectory.html#a7811beb090dc6ad38f0876f6b0fdc832" title="Get the length of the trajectory, i.e. " alt="" coords="133,56,195,83"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1Trajectory.html#a0ac526fb2e2e77134906a4b657d795d2" title="Accessor function for the times at which measurements were made. " alt="" coords="145,107,183,133"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1Trajectory.html#a7e10cffc4d5b8099986c835f9337eab4" title="Accessor function for the positions at different times. " alt="" coords="145,157,183,184"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1Trajectory.html#ad5772d5db1c6af36cf1de2eed2447702" title="Accessor function for the velocities at different times. " alt="" coords="142,208,186,235"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1Trajectory.html#ac2ce234816063eeeead69a146651fef7" title="Accessor function for the accelerations at different times. " alt="" coords="138,259,190,285"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1Trajectory.html#a54e86a99496037df2355a51d712f5d54" title="Get the dimensionality of the misc variables. " alt="" coords="124,309,204,336"/>
+<area shape="rect" id="node9" href="$classDmpBbo_1_1Trajectory.html#a4bd0eca2780012731ff1b64341be1cbc" title="Return miscellaneous variables included in the trajectory. " alt="" coords="139,360,189,387"/>
+</map>

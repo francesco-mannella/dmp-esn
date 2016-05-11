@@ -1,0 +1,14 @@
+<map id="generateDemonstration" name="generateDemonstration">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Trajectory.html#a8e4bc03c6f535f4c9983ffe77a2d971b" title="Generate a trajectory from an initial to a final state, through a viapoint. " alt="" coords="224,95,441,151"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Trajectory.html#aa635b61a4223224b821d156a27dbb2b8" title="Default constructor. " alt="" coords="769,5,914,47"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1Trajectory.html#ab6d25078b7d7df08ad3cd8772d969034" title="Generate a fifth order polynomial trajectory from an initial to a final state. " alt="" coords="489,103,707,144"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1Trajectory.html#aac6f333ab80eb78ad2ff3cab4e8326ec" title="Append another trajectory at the end. " alt="" coords="525,239,671,280"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1Trajectory.html#a7e10cffc4d5b8099986c835f9337eab4" title="Accessor function for the positions at different times. " alt="" coords="759,71,924,98"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1Trajectory.html#ad5772d5db1c6af36cf1de2eed2447702" title="Accessor function for the velocities at different times. " alt="" coords="755,122,928,149"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1Trajectory.html#ac2ce234816063eeeead69a146651fef7" title="Accessor function for the accelerations at different times. " alt="" coords="769,173,914,215"/>
+<area shape="rect" id="node9" href="$classDmpBbo_1_1Trajectory.html#a6f628f7f4ed9d77bf69f5b8560b98f18" title="Get the dimensionality of the trajectory. " alt="" coords="755,370,928,397"/>
+<area shape="rect" id="node10" href="$classDmpBbo_1_1Trajectory.html#a7811beb090dc6ad38f0876f6b0fdc832" title="Get the length of the trajectory, i.e. " alt="" coords="769,421,914,463"/>
+<area shape="rect" id="node11" href="$classDmpBbo_1_1Trajectory.html#a0ac526fb2e2e77134906a4b657d795d2" title="Accessor function for the times at which measurements were made. " alt="" coords="760,487,923,514"/>
+<area shape="rect" id="node12" href="$classDmpBbo_1_1Trajectory.html#a54e86a99496037df2355a51d712f5d54" title="Get the dimensionality of the misc variables. " alt="" coords="769,239,914,280"/>
+<area shape="rect" id="node13" href="$classDmpBbo_1_1Trajectory.html#a4bd0eca2780012731ff1b64341be1cbc" title="Return miscellaneous variables included in the trajectory. " alt="" coords="769,304,914,345"/>
+</map>

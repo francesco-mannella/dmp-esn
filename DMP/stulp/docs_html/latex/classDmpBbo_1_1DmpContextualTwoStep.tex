@@ -1,0 +1,477 @@
+\hypertarget{classDmpBbo_1_1DmpContextualTwoStep}{\subsection{Dmp\+Contextual\+Two\+Step Class Reference}
+\label{classDmpBbo_1_1DmpContextualTwoStep}\index{Dmp\+Contextual\+Two\+Step@{Dmp\+Contextual\+Two\+Step}}
+}
+
+
+Implementation of Contextual Dynamical Movement Primitives.  
+
+
+
+
+{\ttfamily \#include $<$Dmp\+Contextual\+Two\+Step.\+hpp$>$}
+
+
+
+Inheritance diagram for Dmp\+Contextual\+Two\+Step\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classDmpBbo_1_1DmpContextualTwoStep__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dmp\+Contextual\+Two\+Step\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classDmpBbo_1_1DmpContextualTwoStep__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1DmpContextualTwoStep_ae88d955cf82c0648ee8d304ab227be44}{Dmp\+Contextual\+Two\+Step} (int n\+\_\+dims\+\_\+dmp, std\+::vector$<$ \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ $>$ function\+\_\+approximators, \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$policy\+\_\+parameter\+\_\+function, \hyperlink{group__Dmps_gaccba8d09ec99ae66e469b3511bb232a4}{Dmp\+Type} dmp\+\_\+type=K\+U\+L\+V\+I\+C\+I\+U\+S\+\_\+2012\+\_\+\+J\+O\+I\+N\+I\+N\+G)
+\begin{DoxyCompactList}\small\item\em Initialization constructor for Contextual D\+M\+Ps of known dimensionality, but with unknown initial and attractor states. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1DmpContextualTwoStep_a89078b732a4579130e24e3bc59c1713c}{compute\+Function\+Approximator\+Output} (const Eigen\+::\+Matrix\+Xd \&phase\+\_\+state, Eigen\+::\+Matrix\+Xd \&fa\+\_\+output) const 
+\begin{DoxyCompactList}\small\item\em Compute the outputs of the function approximators. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1DmpContextualTwoStep_af8c0bd87ecb6390997b8839e3c5bb6c8}{train} (const std\+::vector$<$ \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} $>$ \&trajectories, const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&task\+\_\+parameters, std\+::string save\+\_\+directory=\char`\"{}\char`\"{}, bool overwrite=true)
+\begin{DoxyCompactList}\small\item\em Train a contextual \hyperlink{classDmpBbo_1_1Dmp}{Dmp} with a set of trajectories (and save results to file) This function is useful for debugging, i.\+e. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1DmpContextualTwoStep_a178135f623d9b9058870851a53299c6e}{is\+Trained} (void) const 
+\begin{DoxyCompactList}\small\item\em Return whether the D\+M\+P is trained or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1DmpContextualTwoStep_afd51892890cb0f9c67f020e736b6b1e3}{Dmp\+Contextual\+Two\+Step} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1DmpContextualTwoStep_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Implementation of Contextual Dynamical Movement Primitives. 
+
+Definition at line 43 of file Dmp\+Contextual\+Two\+Step.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1DmpContextualTwoStep_ae88d955cf82c0648ee8d304ab227be44}{\index{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}!Dmp\+Contextual\+Two\+Step@{Dmp\+Contextual\+Two\+Step}}
+\index{Dmp\+Contextual\+Two\+Step@{Dmp\+Contextual\+Two\+Step}!Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}}
+\paragraph[{Dmp\+Contextual\+Two\+Step}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dmp\+Contextual\+Two\+Step} (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+dims\+\_\+dmp, }
+\item[{std\+::vector$<$ {\bf Function\+Approximator} $\ast$ $>$}]{function\+\_\+approximators, }
+\item[{{\bf Function\+Approximator} $\ast$}]{policy\+\_\+parameter\+\_\+function, }
+\item[{{\bf Dmp\+Type}}]{dmp\+\_\+type = {\ttfamily KULVICIUS\+\_\+2012\+\_\+JOINING}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1DmpContextualTwoStep_ae88d955cf82c0648ee8d304ab227be44}
+
+
+Initialization constructor for Contextual D\+M\+Ps of known dimensionality, but with unknown initial and attractor states. 
+
+Initializes the D\+M\+P with default dynamical systems. 
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+dims\+\_\+dmp} & Dimensionality of the D\+M\+P \\
+\hline
+{\em function\+\_\+approximators} & Function approximators for the forcing term \\
+\hline
+{\em policy\+\_\+parameter\+\_\+function} & Function approximators for the policy parameter function \\
+\hline
+{\em dmp\+\_\+type} & The type of D\+M\+P, see \hyperlink{group__Dmps_gaccba8d09ec99ae66e469b3511bb232a4}{Dmp\+::\+Dmp\+Type} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file Dmp\+Contextual\+Two\+Step.\+cpp.
+
+
+\begin{DoxyCode}
+42 :  \hyperlink{classDmpBbo_1_1DmpContextual_a7ee70d54aba859cad05e07f0d2b1af88}{DmpContextual}(n\_dims\_dmp, function\_approximators, dmp\_type)
+43 \{
+44   policy\_parameter\_function\_ = vector<vector<FunctionApproximator*> >(\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+45   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+46   \{ 
+47     policy\_parameter\_function\_[dd] = vector<FunctionApproximator*>(1);
+48     policy\_parameter\_function\_[dd][0] = policy\_parameter\_function->clone();
+49   \}
+50 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1DmpContextualTwoStep_ae88d955cf82c0648ee8d304ab227be44_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1DmpContextualTwoStep_afd51892890cb0f9c67f020e736b6b1e3}{\index{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}!Dmp\+Contextual\+Two\+Step@{Dmp\+Contextual\+Two\+Step}}
+\index{Dmp\+Contextual\+Two\+Step@{Dmp\+Contextual\+Two\+Step}!Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}}
+\paragraph[{Dmp\+Contextual\+Two\+Step}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dmp\+Contextual\+Two\+Step} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classDmpBbo_1_1DmpContextualTwoStep_afd51892890cb0f9c67f020e736b6b1e3}
+
+
+Default constructor. 
+
+\begin{DoxyRemark}{Remarks}
+This default constuctor is required for boost\+::serialization to work. See \hyperlink{page_serialization_sec_boost_serialization_ugliness}{Boost serialization issues} 
+\end{DoxyRemark}
+
+
+Definition at line 77 of file Dmp\+Contextual\+Two\+Step.\+hpp.
+
+
+\begin{DoxyCode}
+77 \{\}; 
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1DmpContextualTwoStep_a89078b732a4579130e24e3bc59c1713c}{\index{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}!compute\+Function\+Approximator\+Output@{compute\+Function\+Approximator\+Output}}
+\index{compute\+Function\+Approximator\+Output@{compute\+Function\+Approximator\+Output}!Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}}
+\paragraph[{compute\+Function\+Approximator\+Output}]{\setlength{\rightskip}{0pt plus 5cm}void compute\+Function\+Approximator\+Output (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{phase\+\_\+state, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{fa\+\_\+output}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1DmpContextualTwoStep_a89078b732a4579130e24e3bc59c1713c}
+
+
+Compute the outputs of the function approximators. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em phase\+\_\+state} & The phase states for which the outputs are computed. \\
+\hline
+\mbox{\tt out}  & {\em fa\+\_\+output} & The outputs of the function approximators. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1DmpContextual_a768d6c4c35c804556afba0930cb25936}{Dmp\+Contextual}.
+
+
+
+Definition at line 53 of file Dmp\+Contextual\+Two\+Step.\+cpp.
+
+
+\begin{DoxyCode}
+54 \{
+55   \textcolor{keywordtype}{int} n\_time\_steps = phase\_state.rows(); 
+56   fa\_output.resize(n\_time\_steps,\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+57   fa\_output.fill(0.0);
+58   
+59   \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1DmpContextual_af0d2e6fef248e131b92fc244b55b50c6}{task\_parameters\_}.rows()==0)
+60   \{
+61     \textcolor{comment}{// When the task parameters are not set, we cannot compute the output of the function approximator.}
+62     \textcolor{keywordflow}{return};
+63   \}
+64   
+65   MatrixXd task\_parameters = \hyperlink{classDmpBbo_1_1DmpContextual_af0d2e6fef248e131b92fc244b55b50c6}{task\_parameters\_};
+66   \textcolor{keywordflow}{if} (task\_parameters.rows()==1)
+67   \{ 
+68     task\_parameters = task\_parameters.row(0).replicate(n\_time\_steps,1).eval();
+69   \}
+70   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (task\_parameters.cols()==1)
+71   \{
+72     task\_parameters = task\_parameters.col(0).transpose().replicate(n\_time\_steps,1).eval();
+73   \}
+74 
+75   assert(n\_time\_steps==task\_parameters.rows());
+76   
+77   \textcolor{comment}{//int n\_task\_parameters = task\_parameters.cols();}
+78   
+79   VectorXd model\_parameters;
+80   MatrixXd output(1,1);
+81   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+82   \{ 
+83     \textcolor{keywordtype}{int} n\_parameters = \hyperlink{classDmpBbo_1_1Dmp_ac428e2dd848c99ddaf517f2dbacdf3ad}{function\_approximator}(dd)->
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_ae83cb950bcf5219841e6ca8511ac2907}{getParameterVectorSelectedSize}();
+84     model\_parameters.resize(n\_parameters);
+85     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} pp=0; pp<n\_parameters; pp++)
+86     \{
+87       policy\_parameter\_function\_[dd][pp]->predict(task\_parameters,output);
+88       model\_parameters[pp] = output(0,0);
+89     \}
+90     \hyperlink{classDmpBbo_1_1Dmp_ac428e2dd848c99ddaf517f2dbacdf3ad}{function\_approximator}(dd)->\hyperlink{classDmpBbo_1_1FunctionApproximator_aee501e63a46d63eb58a6f271bf093b9d}{setParameterVectorSelected}(
+      model\_parameters);
+91   \}
+92 
+93   \textcolor{comment}{// The parameters of the function\_approximators have been set, get their outputs now.  }
+94   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+95   \{
+96     \hyperlink{classDmpBbo_1_1Dmp_ac428e2dd848c99ddaf517f2dbacdf3ad}{function\_approximator}(dd)->\hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{predict}(phase\_state,output);
+97     \textcolor{keywordflow}{if} (output.size()>0)
+98     \{
+99       fa\_output.col(dd) = output;
+100     \}
+101   \}
+102 
+103 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1DmpContextualTwoStep_a89078b732a4579130e24e3bc59c1713c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1DmpContextualTwoStep_af8c0bd87ecb6390997b8839e3c5bb6c8}{\index{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}void train (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Trajectory} $>$ \&}]{trajectories, }
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{task\+\_\+parameters, }
+\item[{std\+::string}]{save\+\_\+directory = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{overwrite = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1DmpContextualTwoStep_af8c0bd87ecb6390997b8839e3c5bb6c8}
+
+
+Train a contextual \hyperlink{classDmpBbo_1_1Dmp}{Dmp} with a set of trajectories (and save results to file) This function is useful for debugging, i.\+e. 
+
+if you want to save intermediate results to a directory 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em trajectories} & The set of trajectories \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & The task parameters for each of the trajectories. \\
+\hline
+\mbox{\tt in}  & {\em save\+\_\+directory} & Directory to which to save intermediate results. \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Overwrite existing files in the directory above Overloads \hyperlink{classDmpBbo_1_1Dmp_a5d14dedc6736ec5675b4026437b8a597}{Dmp\+::train} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1DmpContextual_a08b158b7245e7fad5f187b4f2e3917d2}{Dmp\+Contextual}.
+
+
+
+Definition at line 115 of file Dmp\+Contextual\+Two\+Step.\+cpp.
+
+
+\begin{DoxyCode}
+116 \{
+117   \textcolor{comment}{// Here's the basic structure of this function}
+118   \textcolor{comment}{// 1) Do some checks}
+119   \textcolor{comment}{// 2) Train a separate Dmp for each demonstration, and get the resulting model parameters}
+120   \textcolor{comment}{// 3) Gather all task parameter values for all demonstrations}
+121   \textcolor{comment}{// 4) Train the policy parameter function for each dimension and each model parameter}
+122   
+123   
+124   \textcolor{comment}{//-----------------------------------------------------}
+125   \textcolor{comment}{// 1) Do some checks}
+126   
+127   \textcolor{comment}{// Check if inputs are of the right size.}
+128   \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_demonstrations = trajectories.size();
+129   assert(n\_demonstrations==task\_parameters.size());  
+130   
+131   
+132   \textcolor{comment}{// Then check if the trajectories have the same duration and initial/final state}
+133   \textcolor{comment}{// Later on, if they are not the same, they should be learned also.}
+134   \hyperlink{classDmpBbo_1_1DmpContextual_aba2e356cdf0cfe688fdcf02ffe68c4d2}{checkTrainTrajectories}(trajectories);
+135 
+136   \textcolor{comment}{// Set tau, initial\_state and attractor\_state from the trajectories }
+137   \hyperlink{classDmpBbo_1_1Dmp_a17edb45ef62a4ef7f8c78e4f8f68b249}{set\_tau}(trajectories[0].duration());
+138   \hyperlink{classDmpBbo_1_1Dmp_ad4e11c676c2add8a992db1caf542f0a0}{set\_initial\_state}(trajectories[0].initial\_y());
+139   \hyperlink{classDmpBbo_1_1Dmp_a6dccbd077acfd148f528a48a72a4003f}{set\_attractor\_state}(trajectories[0].final\_y());
+140 
+141   \textcolor{comment}{//-----------------------------------------------------}
+142   \textcolor{comment}{// 2) Train a separate Dmp for each demonstration, and get the resulting model parameters}
+143   std::set<std::string> selected;
+144   selected.insert(\textcolor{stringliteral}{"offsets"});
+145   selected.insert(\textcolor{stringliteral}{"slopes"});
+146   
+147   MatrixXd cur\_task\_parameters;
+148   VectorXd cur\_model\_parameters;\textcolor{comment}{// todo Remove redundant tmp variable}
+149   vector<MatrixXd> all\_model\_parameters(n\_demonstrations); 
+150   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_demo=0; i\_demo<n\_demonstrations; i\_demo++)
+151   \{
+152     
+153     \textcolor{keywordtype}{string} save\_directory\_demo;
+154     \textcolor{keywordflow}{if} (!save\_directory.empty())
+155       save\_directory\_demo = save\_directory + \textcolor{stringliteral}{"/demo"} + to\_string(i\_demo);
+156     
+157     \hyperlink{classDmpBbo_1_1Dmp_a5d14dedc6736ec5675b4026437b8a597}{Dmp::train}(trajectories[i\_demo],save\_directory\_demo,overwrite);
+158     
+159     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); i\_dim++)
+160     \{
+161 
+162       \textcolor{comment}{// todo Should be argument of constructor}
+163       \hyperlink{classDmpBbo_1_1Dmp_ac428e2dd848c99ddaf517f2dbacdf3ad}{function\_approximator}(i\_dim)->\hyperlink{classDmpBbo_1_1FunctionApproximator_a8a976b5db2d1809ece10e431816f0f27}{setSelectedParameters}(
+      selected); 
+164   
+165       \hyperlink{classDmpBbo_1_1Dmp_ac428e2dd848c99ddaf517f2dbacdf3ad}{function\_approximator}(i\_dim)->
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_aab955bec57f074a991b8be31d6ce54ca}{getParameterVectorSelected}(cur\_model\_parameters);
+166       \textcolor{comment}{//cout << cur\_model\_parameters << endl;}
+167       \textcolor{keywordflow}{if} (i\_demo==0)
+168         all\_model\_parameters[i\_dim].resize(n\_demonstrations,cur\_model\_parameters.size());
+169       \textcolor{keywordflow}{else}
+170         assert(cur\_model\_parameters.size()==all\_model\_parameters[i\_dim].cols());
+171 
+172       all\_model\_parameters[i\_dim].row(i\_demo) = cur\_model\_parameters;
+173       
+174     \}
+175   \}
+176 
+177    
+178   \textcolor{comment}{//-----------------------------------------------------}
+179   \textcolor{comment}{// 3) Gather all task parameter values for all demonstrations}
+180   
+181   \textcolor{comment}{// Gather task parameters in a matrix}
+182   \textcolor{keywordtype}{int} n\_task\_parameters = task\_parameters[0].cols();
+183   \textcolor{comment}{// This is the first time task\_parameters\_ is set, because this is the first time we know }
+184   \textcolor{comment}{// n\_task\_parameters.}
+185   \textcolor{comment}{// We set it so that set\_task\_parameters can check if task\_parameters\_.cols()==n\_task\_parameters}
+186   \hyperlink{classDmpBbo_1_1DmpContextual_af0d2e6fef248e131b92fc244b55b50c6}{task\_parameters\_} = MatrixXd::Zero(1,n\_task\_parameters);
+187   VectorXd cur\_task\_parameters\_t0;
+188   
+189   MatrixXd inputs(n\_demonstrations,n\_task\_parameters);
+190   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_demo=0; i\_demo<n\_demonstrations; i\_demo++)
+191   \{
+192     \textcolor{comment}{// These are the task parameters for the current demonstration at t=0}
+193     cur\_task\_parameters\_t0 = task\_parameters[i\_demo].row(0);
+194     
+195     \textcolor{comment}{// Task parameter may not change over time for 2-Step contextual DMP}
+196     \textcolor{comment}{// Start comparison to i\_time=0 at i\_time=1}
+197     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_time=1; i\_time<task\_parameters[i\_demo].rows(); i\_time++)
+198     \{
+199       \textcolor{keywordflow}{if} ( (cur\_task\_parameters\_t0.array() != task\_parameters[i\_demo].row(i\_time).array()).any())
+200       \{
+201         cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+202         cerr << \textcolor{stringliteral}{"WARNING. For DmpContextualTwoStep, task parameters may not vary over time during training.
+       Using task parameters at t=0 only."} << endl;
+203       \}
+204     \}
+205 
+206     \textcolor{comment}{// Take the first row, i.e. at time\_i = 0. We checked above if they are constant over time.}
+207     inputs.row(i\_demo) = cur\_task\_parameters\_t0;
+208   \}
+209 
+210   \textcolor{comment}{//-----------------------------------------------------}
+211   \textcolor{comment}{// 4) Train the policy parameter function for each dimension and each model parameter}
+212   
+213   \textcolor{comment}{// Input to policy parameter functions: task\_parameters}
+214   \textcolor{comment}{// Target for each policy parameter function: all\_model\_parameters.col(param)}
+215   
+216   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); i\_dim++)
+217   \{
+218     \textcolor{keywordtype}{int} n\_pol\_pars = all\_model\_parameters[i\_dim].cols();
+219     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_pol\_par=1; i\_pol\_par<n\_pol\_pars; i\_pol\_par++)
+220     \{
+221       policy\_parameter\_function\_[i\_dim].push\_back(policy\_parameter\_function\_[i\_dim][0]->
+      \hyperlink{classDmpBbo_1_1Dmp_ace8e32350e4feb2c7ea6b5153c7dc606}{clone}());
+222       \textcolor{comment}{//cout << *(policy\_parameter\_function\_[i\_dim][i\_pol\_par]) << endl;}
+223     \}
+224 
+225     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_pol\_par=0; i\_pol\_par<n\_pol\_pars; i\_pol\_par++)
+226     \{
+227       MatrixXd targets = all\_model\_parameters[i\_dim].col(i\_pol\_par);
+228       \textcolor{comment}{//cout << "\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_" << endl;}
+229       \textcolor{comment}{//cout << inputs.transpose() << endl << endl;}
+230       \textcolor{comment}{//cout << targets.transpose() << endl;}
+231       
+232       \textcolor{keywordtype}{string} save\_directory\_cur;
+233       \textcolor{keywordflow}{if} (!save\_directory.empty())
+234           save\_directory\_cur = save\_directory + \textcolor{stringliteral}{"/dim"} + to\_string(i\_dim) + \textcolor{stringliteral}{"\_polpar"} + to\_string(i\_pol\_par
+      );
+235       
+236       policy\_parameter\_function\_[i\_dim][i\_pol\_par]->train(inputs,targets,save\_directory\_cur,overwrite);
+237     
+238     \}
+239   \}
+240   
+241   
+242 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1DmpContextualTwoStep_af8c0bd87ecb6390997b8839e3c5bb6c8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1DmpContextualTwoStep_a178135f623d9b9058870851a53299c6e}{\index{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}!is\+Trained@{is\+Trained}}
+\index{is\+Trained@{is\+Trained}!Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}}
+\paragraph[{is\+Trained}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+Trained (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1DmpContextualTwoStep_a178135f623d9b9058870851a53299c6e}
+
+
+Return whether the D\+M\+P is trained or not. 
+
+\begin{DoxyReturn}{Returns}
+true if the D\+M\+P is trained, false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line 105 of file Dmp\+Contextual\+Two\+Step.\+cpp.
+
+
+\begin{DoxyCode}
+106 \{
+107   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+108     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} pp=0; pp<policy\_parameter\_function\_[dd].size(); pp++)
+109       \textcolor{keywordflow}{if} (!policy\_parameter\_function\_[dd][pp]->\hyperlink{classDmpBbo_1_1DmpContextualTwoStep_a178135f623d9b9058870851a53299c6e}{isTrained}())
+110         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+111       
+112   \textcolor{keywordflow}{return} \textcolor{keyword}{true};   
+113 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classDmpBbo_1_1DmpContextualTwoStep_a178135f623d9b9058870851a53299c6e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1DmpContextualTwoStep_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step@{Dmp\+Bbo\+::\+Dmp\+Contextual\+Two\+Step}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1DmpContextualTwoStep_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 77 of file Dmp\+Contextual\+Two\+Step.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{DmpContextualTwoStep_8hpp}{Dmp\+Contextual\+Two\+Step.\+hpp}\item 
+\hyperlink{DmpContextualTwoStep_8cpp}{Dmp\+Contextual\+Two\+Step.\+cpp}\end{DoxyCompactItemize}

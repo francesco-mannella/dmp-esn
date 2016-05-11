@@ -1,0 +1,4 @@
+<map id="predictVariance" name="predictVariance">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1FunctionApproximator.html#a6ad3f18b3d0ebb913a6a914be60b77e1" title="The expected dimensionality of the output data. " alt="" coords="175,5,393,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximatorGMR.html#afe8dcfb9cd065dfde38dce1f6e6cd3e6" title="Query the function approximator to make a prediction. " alt="" coords="251,71,317,98"/>
+</map>

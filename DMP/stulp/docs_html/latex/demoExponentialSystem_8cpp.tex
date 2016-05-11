@@ -1,0 +1,165 @@
+\hypertarget{demoExponentialSystem_8cpp}{\subsection{demo\+Exponential\+System.\+cpp File Reference}
+\label{demoExponentialSystem_8cpp}\index{demo\+Exponential\+System.\+cpp@{demo\+Exponential\+System.\+cpp}}
+}
+
+
+Demonstrates how to initialize and integrate an exponential dynamical system.  
+
+
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Exponential\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Eigen\+File\+I\+O.\+hpp\char`\"{}}\\*
+Include dependency graph for demo\+Exponential\+System.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoExponentialSystem_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{demoExponentialSystem_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{main} (int n\+\_\+args, char $\ast$$\ast$args)
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Demonstrates how to initialize and integrate an exponential dynamical system. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{demoExponentialSystem_8cpp_source}{demo\+Exponential\+System.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{demoExponentialSystem_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}{\index{demo\+Exponential\+System.\+cpp@{demo\+Exponential\+System.\+cpp}!main@{main}}
+\index{main@{main}!demo\+Exponential\+System.\+cpp@{demo\+Exponential\+System.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+args, }
+\item[{char $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{demoExponentialSystem_8cpp_a22577c6525b3f2fefecc0c741ba46a9a}
+
+
+Main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+args} & Number of arguments \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments themselves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success of exection. 0 if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 44 of file demo\+Exponential\+System.\+cpp.
+
+
+\begin{DoxyCode}
+45 \{
+46   \textcolor{comment}{// Settings for the exponential system}
+47   \textcolor{keywordtype}{double} tau = 0.6;  \textcolor{comment}{// Time constant}
+48   VectorXd initial\_state(2);   initial\_state   << 0.5, 1.0; 
+49   VectorXd attractor\_state(2); attractor\_state << 0.8, 0.1; 
+50   \textcolor{keywordtype}{double} alpha = 6.0; \textcolor{comment}{// Decay rate}
+51 
+52   \textcolor{comment}{// Construct the system}
+53   \hyperlink{classDmpBbo_1_1DynamicalSystem}{DynamicalSystem}* system = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1ExponentialSystem}{ExponentialSystem}(tau, initial\_state, 
+      attractor\_state, alpha);
+54   
+55 
+56   \textcolor{comment}{// Settings for the integration of the system}
+57   \textcolor{keywordtype}{double} dt = 0.004; \textcolor{comment}{// Integration step duration}
+58   \textcolor{keywordtype}{double} integration\_duration = 1.5*tau; \textcolor{comment}{// Integrate for longer than the time constant}
+59   \textcolor{keywordtype}{int} n\_time\_steps = ceil(integration\_duration/dt)+1; \textcolor{comment}{// Number of time steps for the integration}
+60   \textcolor{comment}{// Generate a vector of times, i.e. 0.0, dt, 2*dt, 3*dt .... n\_time\_steps*dt=integration\_duration}
+61   VectorXd ts = VectorXd::LinSpaced(n\_time\_steps,0.0,integration\_duration);
+62 
+63   
+64   \textcolor{comment}{// NUMERICAL INTEGRATION }
+65   
+66   \textcolor{keywordtype}{int} n\_dims = system->\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}(); \textcolor{comment}{// Dimensionality of the system}
+67   MatrixXd xs\_num(n\_dims,n\_time\_steps);
+68   MatrixXd xds\_num(n\_dims,n\_time\_steps);
+69 
+70   \textcolor{comment}{// Use DynamicalSystemSystem::integrateStart to get the initial x and xd}
+71   system->\hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrateStart}(xs\_num.col(0),xds\_num.col(0));
+72   
+73   \textcolor{comment}{// Use DynamicalSystemSystem::integrateStep to integrate numerically step-by-step}
+74   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=1; ii<n\_time\_steps; ii++)
+75     system->\hyperlink{classDmpBbo_1_1DynamicalSystem_ac7ed7ce2faa8314cd9fa5ffcccb15349}{integrateStep}(dt,xs\_num.col(ii-1),xs\_num.col(ii),xds\_num.col(ii)); 
+76     \textcolor{comment}{//                               previous x       updated x      updated xd}
+77     
+78 
+79   \textcolor{comment}{// ANALYTICAL SOLUTION }
+80 
+81   MatrixXd xs\_ana(n\_dims,n\_time\_steps);
+82   MatrixXd xds\_ana(n\_dims,n\_time\_steps);
+83   system->\hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{analyticalSolution}(ts,xs\_ana,xds\_ana);
+84 
+85   \textcolor{comment}{// Write results to cout    }
+86   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<n\_time\_steps; ii+=(n\_time\_steps/20))
+87   \{
+88     cout << fixed << setw(10) << setprecision(3);
+89     cout << xs\_num.col(ii).transpose() << \textcolor{stringliteral}{" "} <<  xds\_num.col(ii).transpose()<< \textcolor{stringliteral}{" "} ;
+90     cout << xs\_ana.col(ii).transpose() << \textcolor{stringliteral}{" "} <<  xds\_ana.col(ii).transpose() << \textcolor{stringliteral}{" "} ;
+91     cout << ts(ii) << endl;
+92   \}
+93   
+94   cout << \textcolor{stringliteral}{"        x\_1         x\_2        xd\_1        xd\_2         x\_1         x\_2        xd\_1        xd\_2 
+                t"} << endl;
+95   cout << \textcolor{stringliteral}{"               NUMERICAL INTEGRATION            ||             ANALYTICAL SOLUTION              
+         ||  TIME "} << endl;
+96   \textcolor{comment}{//cout << *system << endl;}
+97     
+98   
+99   \textcolor{comment}{// First argument may be optional directory to write data to}
+100   \textcolor{keywordtype}{string} directory;
+101   \textcolor{keywordflow}{if} (n\_args>1) \{
+102     directory = string(args[1]);
+103     \textcolor{keywordtype}{bool} overwrite = \textcolor{keyword}{true};
+104     
+105     \textcolor{comment}{// Put the results in one matrix to facilitate the writing of the data}
+106     MatrixXd xs\_xds\_ts(ts.size(),1+2*system->\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+107     
+108     xs\_xds\_ts << xs\_ana.transpose(), xds\_ana.transpose(), ts;
+109     saveMatrix(directory,\textcolor{stringliteral}{"analytical.txt"},xs\_xds\_ts,overwrite);
+110     
+111     xs\_xds\_ts << xs\_num.transpose(), xds\_num.transpose(), ts;
+112     saveMatrix(directory,\textcolor{stringliteral}{"numerical.txt"},xs\_xds\_ts,overwrite);
+113   \}
+114       
+115   \textcolor{keyword}{delete} system; 
+116   
+117   \textcolor{keywordflow}{return} 0;
+118 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoExponentialSystem_8cpp_a22577c6525b3f2fefecc0c741ba46a9a_cgraph}
+\end{center}
+\end{figure}
+
+

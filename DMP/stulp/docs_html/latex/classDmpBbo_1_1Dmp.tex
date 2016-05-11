@@ -1,0 +1,2058 @@
+\hypertarget{classDmpBbo_1_1Dmp}{\subsection{Dmp Class Reference}
+\label{classDmpBbo_1_1Dmp}\index{Dmp@{Dmp}}
+}
+
+
+Implementation of Dynamical Movement Primitives.  
+
+
+
+
+{\ttfamily \#include $<$Dmp.\+hpp$>$}
+
+
+
+Inheritance diagram for Dmp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dmp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classDmpBbo_1_1Dmp__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__Dmps_gaccba8d09ec99ae66e469b3511bb232a4}{Dmp\+Type} \{ {\bfseries I\+J\+S\+P\+E\+E\+R\+T\+\_\+2002\+\_\+\+M\+O\+V\+E\+M\+E\+N\+T}, 
+{\bfseries K\+U\+L\+V\+I\+C\+I\+U\+S\+\_\+2012\+\_\+\+J\+O\+I\+N\+I\+N\+G}, 
+{\bfseries C\+O\+U\+N\+T\+D\+O\+W\+N\+\_\+2013}
+ \}
+\begin{DoxyCompactList}\small\item\em Different types of D\+M\+Ps that can be initialized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1Dmp_a4d4f5e7b4c2d8085355c228e2f8a9763}{Dmp} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, Eigen\+::\+Vector\+Xd y\+\_\+init, Eigen\+::\+Vector\+Xd y\+\_\+attr, std\+::vector$<$ \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ $>$ function\+\_\+approximators, double alpha\+\_\+spring\+\_\+damper, \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$goal\+\_\+system, \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$phase\+\_\+system, \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$gating\+\_\+system)
+\begin{DoxyCompactList}\small\item\em Initialization constructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1Dmp_a5861ed5fdc3e3472944c592414b4e8cb}{Dmp} (int n\+\_\+dims\+\_\+dmp, std\+::vector$<$ \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ $>$ function\+\_\+approximators, double alpha\+\_\+spring\+\_\+damper, \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$goal\+\_\+system, \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$phase\+\_\+system, \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$gating\+\_\+system)
+\begin{DoxyCompactList}\small\item\em Initialization constructor for Dmps of known dimensionality, but with unknown initial and attractor states. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1Dmp_a0a26f231a585e9f7f7f2d2dd571515b7}{Dmp} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, Eigen\+::\+Vector\+Xd y\+\_\+init, Eigen\+::\+Vector\+Xd y\+\_\+attr, std\+::vector$<$ \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ $>$ function\+\_\+approximators, \hyperlink{group__Dmps_gaccba8d09ec99ae66e469b3511bb232a4}{Dmp\+Type} dmp\+\_\+type=K\+U\+L\+V\+I\+C\+I\+U\+S\+\_\+2012\+\_\+\+J\+O\+I\+N\+I\+N\+G)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes the D\+M\+P with default dynamical systems. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1Dmp_a30a4c3b7f5568b4d3f57e837241c4774}{Dmp} (int n\+\_\+dims\+\_\+dmp, std\+::vector$<$ \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ $>$ function\+\_\+approximators, \hyperlink{group__Dmps_gaccba8d09ec99ae66e469b3511bb232a4}{Dmp\+Type} dmp\+\_\+type=K\+U\+L\+V\+I\+C\+I\+U\+S\+\_\+2012\+\_\+\+J\+O\+I\+N\+I\+N\+G)
+\begin{DoxyCompactList}\small\item\em Initialization constructor for Dmps of known dimensionality, but with unknown initial and attractor states. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1Dmp_a9e16b1345896b7f9cdf1158bb3708545}{Dmp} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, Eigen\+::\+Vector\+Xd y\+\_\+init, Eigen\+::\+Vector\+Xd y\+\_\+attr, double alpha\+\_\+spring\+\_\+damper, \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$goal\+\_\+system)
+\begin{DoxyCompactList}\small\item\em Initialization constructor for Dmps without a forcing term. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1Dmp_adcfceacdeee98011a89fa27cc4799daf}{$\sim$\+Dmp} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1Dmp}{Dmp} $\ast$ \hyperlink{classDmpBbo_1_1Dmp_ace8e32350e4feb2c7ea6b5153c7dc606}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a deep copy of this object. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Dmp_a44dd496535fde494d8465e7603c93db3}{integrate\+Start} (Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd) const 
+\begin{DoxyCompactList}\small\item\em Start integrating the system. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_ab564468764e7e4dc7c11e2a786e22c19}{differential\+Equation} (const Eigen\+::\+Vector\+Xd \&x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd) const 
+\begin{DoxyCompactList}\small\item\em The differential equation which defines the system. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, Eigen\+::\+Matrix\+Xd \&xs, Eigen\+::\+Matrix\+Xd \&xds, Eigen\+::\+Matrix\+Xd \&forcing\+\_\+terms, Eigen\+::\+Matrix\+Xd \&fa\+\_\+output) const 
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times (and return forcing terms) \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a636531b0dea01397d1338b19e0061360}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, Eigen\+::\+Matrix\+Xd \&xs, Eigen\+::\+Matrix\+Xd \&xds, Eigen\+::\+Matrix\+Xd \&forcing\+\_\+terms) const 
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times (and return forcing terms) \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_ab6600b58b35bc9e66673d16f68e2e919}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, Eigen\+::\+Matrix\+Xd \&xs, Eigen\+::\+Matrix\+Xd \&xds) const 
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a9b6bbda07ecd4fc7b6c9de57e185ab05}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory) const 
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_ae1e5218e7ebfedf7fb2501dc8af2675f}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory, Eigen\+::\+Matrix\+Xd \&forcing\+\_\+terms) const 
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Dmp_aa3ad2fc66e8ce09cfa68032a4a5004b9}{states\+As\+Trajectory} (const Eigen\+::\+Matrix\+Xd \&x\+\_\+in, const Eigen\+::\+Matrix\+Xd \&xd\+\_\+in, Eigen\+::\+Matrix\+Xd \&y\+\_\+out, Eigen\+::\+Matrix\+Xd \&yd\+\_\+out, Eigen\+::\+Matrix\+Xd \&ydd\+\_\+out) const 
+\begin{DoxyCompactList}\small\item\em Get the output of a D\+M\+P dynamical system as a trajectory. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Dmp_a0a477ccb2da97d3b6f5255a147a0e07c}{states\+As\+Trajectory} (const Eigen\+::\+Vector\+Xd \&ts, const Eigen\+::\+Matrix\+Xd \&x\+\_\+in, const Eigen\+::\+Matrix\+Xd \&xd\+\_\+in, \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory) const 
+\begin{DoxyCompactList}\small\item\em Get the output of a D\+M\+P dynamical system as a trajectory. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a5d14dedc6736ec5675b4026437b8a597}{train} (const \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory)
+\begin{DoxyCompactList}\small\item\em Train a D\+M\+P with a trajectory. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_abca46c9155c3cfbc71d10aabdcf3384c}{train} (const \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory, std\+::string save\+\_\+directory, bool overwrite=false)
+\begin{DoxyCompactList}\small\item\em Train a D\+M\+P with a trajectory, and write results to file. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Dmp_a17edb45ef62a4ef7f8c78e4f8f68b249}{set\+\_\+tau} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau})
+\begin{DoxyCompactList}\small\item\em Accessor function for the time constant. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Dmp_ad4e11c676c2add8a992db1caf542f0a0}{set\+\_\+initial\+\_\+state} (const Eigen\+::\+Vector\+Xd \&y\+\_\+init)
+\begin{DoxyCompactList}\small\item\em Accessor function for the initial state of the system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Dmp_a6dccbd077acfd148f528a48a72a4003f}{set\+\_\+attractor\+\_\+state} (const Eigen\+::\+Vector\+Xd \&y\+\_\+attr)
+\begin{DoxyCompactList}\small\item\em Accessor function for the attractor state of the system. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a0b6f58851f4a8fc8b433936cff4c3e7e}{set\+\_\+damping\+\_\+coefficient} (double damping\+\_\+coefficient)
+\begin{DoxyCompactList}\small\item\em Accessor function for damping coefficient of spring-\/damper system. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a8844968245473d1fedd2a2b632fb074a}{set\+\_\+spring\+\_\+constant} (double spring\+\_\+constant)
+\begin{DoxyCompactList}\small\item\em Accessor function for spring constant of spring-\/damper system. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1Dmp_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_adaae949509cd3b2e6ce58deb841c80a0}{get\+Selectable\+Parameters} (std\+::set$<$ std\+::string $>$ \&selectable\+\_\+values\+\_\+labels) const 
+\begin{DoxyCompactList}\small\item\em Return all the names of the parameter types that can be selected. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a8a976b5db2d1809ece10e431816f0f27}{set\+Selected\+Parameters} (const std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels)
+\begin{DoxyCompactList}\small\item\em Determine which subset of parameters is represented in the vector returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the size of the parameter values vector when it contains all available parameter values. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_ac44b51e5335f973eed54f100618e5496}{get\+Parameter\+Vector\+All} (Eigen\+::\+Vector\+Xd \&values) const 
+\begin{DoxyCompactList}\small\item\em Return a vector that returns all available parameter values. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a9d3c8f22e8237a805af4935a647e5a50}{set\+Parameter\+Vector\+All} (const Eigen\+::\+Vector\+Xd \&values)
+\begin{DoxyCompactList}\small\item\em Set all available parameter values with one vector. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a9dba1f93e426e7511630ec1ece4ace17}{get\+Parameter\+Vector\+Mask} (const std\+::set$<$ std\+::string $>$ selected\+\_\+values\+\_\+labels, Eigen\+::\+Vector\+Xi \&selected\+\_\+mask) const 
+\begin{DoxyCompactList}\small\item\em Get a mask for selecting parameters. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a9aef6cbf41e55caa12b62cff77cf1fda}{compute\+Function\+Approximator\+Inputs\+And\+Targets} (const \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory, Eigen\+::\+Vector\+Xd \&fa\+\_\+inputs\+\_\+phase, Eigen\+::\+Matrix\+Xd \&fa\+\_\+targets) const 
+\begin{DoxyCompactList}\small\item\em Given a trajectory, compute the inputs and targets for the function approximators. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Dmp_a89078b732a4579130e24e3bc59c1713c}{compute\+Function\+Approximator\+Output} (const Eigen\+::\+Matrix\+Xd \&phase\+\_\+state, Eigen\+::\+Matrix\+Xd \&fa\+\_\+output) const 
+\begin{DoxyCompactList}\small\item\em Compute the outputs of the function approximators. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Dmp_a6c44c534fd7bb0b6ad87648692e15269}{set\+\_\+perturbation\+\_\+analytical\+\_\+solution} (double perturbation\+\_\+standard\+\_\+deviation)
+\begin{DoxyCompactList}\small\item\em Add a perturbation to the forcing term when computing the analytical solution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ \hyperlink{classDmpBbo_1_1Dmp_ac428e2dd848c99ddaf517f2dbacdf3ad}{function\+\_\+approximator} (int i\+\_\+dim) const 
+\begin{DoxyCompactList}\small\item\em Get a pointer to the function approximator for a certain dimension. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1Dmp_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Implementation of Dynamical Movement Primitives. 
+
+Definition at line 53 of file Dmp.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1Dmp_a4d4f5e7b4c2d8085355c228e2f8a9763}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!Dmp@{Dmp}}
+\index{Dmp@{Dmp}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{Dmp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dmp} (
+\begin{DoxyParamCaption}
+\item[{double}]{tau, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+init, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+attr, }
+\item[{std\+::vector$<$ {\bf Function\+Approximator} $\ast$ $>$}]{function\+\_\+approximators, }
+\item[{double}]{alpha\+\_\+spring\+\_\+damper, }
+\item[{{\bf Dynamical\+System} $\ast$}]{goal\+\_\+system, }
+\item[{{\bf Dynamical\+System} $\ast$}]{phase\+\_\+system, }
+\item[{{\bf Dynamical\+System} $\ast$}]{gating\+\_\+system}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_a4d4f5e7b4c2d8085355c228e2f8a9763}
+
+
+Initialization constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & Time constant \\
+\hline
+{\em y\+\_\+init} & Initial state \\
+\hline
+{\em y\+\_\+attr} & Attractor state \\
+\hline
+{\em alpha\+\_\+spring\+\_\+damper} & $\alpha$ in the spring-\/damper system of the dmp \\
+\hline
+{\em goal\+\_\+system} & Dynamical system to compute delayed goal \\
+\hline
+{\em phase\+\_\+system} & Dynamical system to compute the phase \\
+\hline
+{\em gating\+\_\+system} & Dynamical system to compute the gating term \\
+\hline
+{\em function\+\_\+approximators} & Function approximators for the forcing term \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+91   : \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}(1, \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, y\_init, y\_attr, \textcolor{stringliteral}{"name"}),
+92   goal\_system\_(goal\_system),
+93   phase\_system\_(phase\_system), gating\_system\_(gating\_system) 
+94 \{
+95   initSubSystems(alpha\_spring\_damper, goal\_system, phase\_system, gating\_system);
+96   initFunctionApproximators(function\_approximators);
+97 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Dmp_a5861ed5fdc3e3472944c592414b4e8cb}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!Dmp@{Dmp}}
+\index{Dmp@{Dmp}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{Dmp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dmp} (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+dims\+\_\+dmp, }
+\item[{std\+::vector$<$ {\bf Function\+Approximator} $\ast$ $>$}]{function\+\_\+approximators, }
+\item[{double}]{alpha\+\_\+spring\+\_\+damper, }
+\item[{{\bf Dynamical\+System} $\ast$}]{goal\+\_\+system, }
+\item[{{\bf Dynamical\+System} $\ast$}]{phase\+\_\+system, }
+\item[{{\bf Dynamical\+System} $\ast$}]{gating\+\_\+system}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_a5861ed5fdc3e3472944c592414b4e8cb}
+
+
+Initialization constructor for Dmps of known dimensionality, but with unknown initial and attractor states. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+dims\+\_\+dmp} & Dimensionality of the D\+M\+P \\
+\hline
+{\em alpha\+\_\+spring\+\_\+damper} & $\alpha$ in the spring-\/damper system of the dmp \\
+\hline
+{\em goal\+\_\+system} & Dynamical system to compute delayed goal \\
+\hline
+{\em phase\+\_\+system} & Dynamical system to compute the phase \\
+\hline
+{\em gating\+\_\+system} & Dynamical system to compute the gating term \\
+\hline
+{\em function\+\_\+approximators} & Function approximators for the forcing term \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+103   : \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}(1, 1.0, VectorXd::Zero(n\_dims\_dmp), VectorXd::Ones(n\_dims\_dmp), \textcolor{stringliteral}{"name"}),
+104   goal\_system\_(goal\_system),
+105   phase\_system\_(phase\_system), gating\_system\_(gating\_system), function\_approximators\_(
+      function\_approximators)
+106 \{
+107   initSubSystems(alpha\_spring\_damper, goal\_system, phase\_system, gating\_system);
+108   initFunctionApproximators(function\_approximators);
+109 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Dmp_a0a26f231a585e9f7f7f2d2dd571515b7}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!Dmp@{Dmp}}
+\index{Dmp@{Dmp}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{Dmp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dmp} (
+\begin{DoxyParamCaption}
+\item[{double}]{tau, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+init, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+attr, }
+\item[{std\+::vector$<$ {\bf Function\+Approximator} $\ast$ $>$}]{function\+\_\+approximators, }
+\item[{{\bf Dmp\+Type}}]{dmp\+\_\+type = {\ttfamily KULVICIUS\+\_\+2012\+\_\+JOINING}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_a0a26f231a585e9f7f7f2d2dd571515b7}
+
+
+Constructor that initializes the D\+M\+P with default dynamical systems. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & Time constant \\
+\hline
+{\em y\+\_\+init} & Initial state \\
+\hline
+{\em y\+\_\+attr} & Attractor state \\
+\hline
+{\em function\+\_\+approximators} & Function approximators for the forcing term \\
+\hline
+{\em dmp\+\_\+type} & The type of D\+M\+P, see \hyperlink{group__Dmps_gaccba8d09ec99ae66e469b3511bb232a4}{Dmp\+::\+Dmp\+Type} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 111 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+114   : \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}(1, \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, y\_init, y\_attr, \textcolor{stringliteral}{"name"})
+115 \{  
+116   initSubSystems(dmp\_type);
+117   initFunctionApproximators(function\_approximators);
+118 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Dmp_a30a4c3b7f5568b4d3f57e837241c4774}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!Dmp@{Dmp}}
+\index{Dmp@{Dmp}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{Dmp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dmp} (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+dims\+\_\+dmp, }
+\item[{std\+::vector$<$ {\bf Function\+Approximator} $\ast$ $>$}]{function\+\_\+approximators, }
+\item[{{\bf Dmp\+Type}}]{dmp\+\_\+type = {\ttfamily KULVICIUS\+\_\+2012\+\_\+JOINING}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_a30a4c3b7f5568b4d3f57e837241c4774}
+
+
+Initialization constructor for Dmps of known dimensionality, but with unknown initial and attractor states. 
+
+Initializes the D\+M\+P with default dynamical systems. 
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+dims\+\_\+dmp} & Dimensionality of the D\+M\+P \\
+\hline
+{\em function\+\_\+approximators} & Function approximators for the forcing term \\
+\hline
+{\em dmp\+\_\+type} & The type of D\+M\+P, see \hyperlink{group__Dmps_gaccba8d09ec99ae66e469b3511bb232a4}{Dmp\+::\+Dmp\+Type} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 120 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+123   : \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}(1, 1.0, VectorXd::Zero(n\_dims\_dmp), VectorXd::Ones(n\_dims\_dmp), \textcolor{stringliteral}{"name"})
+124 \{
+125   initSubSystems(dmp\_type);
+126   initFunctionApproximators(function\_approximators);
+127 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Dmp_a9e16b1345896b7f9cdf1158bb3708545}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!Dmp@{Dmp}}
+\index{Dmp@{Dmp}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{Dmp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dmp} (
+\begin{DoxyParamCaption}
+\item[{double}]{tau, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+init, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+attr, }
+\item[{double}]{alpha\+\_\+spring\+\_\+damper, }
+\item[{{\bf Dynamical\+System} $\ast$}]{goal\+\_\+system}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_a9e16b1345896b7f9cdf1158bb3708545}
+
+
+Initialization constructor for Dmps without a forcing term. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & Time constant \\
+\hline
+{\em y\+\_\+init} & Initial state \\
+\hline
+{\em y\+\_\+attr} & Attractor state \\
+\hline
+{\em alpha\+\_\+spring\+\_\+damper} & $\alpha$ in the spring-\/damper system of the dmp \\
+\hline
+{\em goal\+\_\+system} & Dynamical system to compute delayed goal \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 129 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+130   : \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}(1, \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, y\_init, y\_attr, \textcolor{stringliteral}{"name"})
+131 \{
+132   
+133   VectorXd one\_1 = VectorXd::Ones(1);
+134   VectorXd one\_0 = VectorXd::Zero(1);
+135   \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}* phase\_system  = \textcolor{keyword}{new} ExponentialSystem(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau},one\_1,one\_0,4);
+136   \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}* gating\_system = \textcolor{keyword}{new} ExponentialSystem(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau},one\_1,one\_0,4); 
+137   initSubSystems(alpha\_spring\_damper, goal\_system, phase\_system, gating\_system);
+138 
+139   vector<FunctionApproximator*> function\_approximators(y\_init.size());    
+140   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<y\_init.size(); dd++)
+141     function\_approximators[dd] = NULL;
+142   initFunctionApproximators(function\_approximators);  
+143 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Dmp_adcfceacdeee98011a89fa27cc4799daf}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!````~Dmp@{$\sim$\+Dmp}}
+\index{````~Dmp@{$\sim$\+Dmp}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{$\sim$\+Dmp}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Dmp} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_adcfceacdeee98011a89fa27cc4799daf}
+
+
+Destructor. 
+
+
+
+Definition at line 227 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+228 \{
+229   \textcolor{keyword}{delete} goal\_system\_;   
+230   \textcolor{keyword}{delete} spring\_system\_;
+231   \textcolor{keyword}{delete} phase\_system\_;
+232   \textcolor{keyword}{delete} gating\_system\_;
+233   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ff=0; ff<function\_approximators\_.size(); ff++)
+234     \textcolor{keyword}{delete} (function\_approximators\_[ff]);
+235 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1Dmp_ace8e32350e4feb2c7ea6b5153c7dc606}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dmp} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_ace8e32350e4feb2c7ea6b5153c7dc606}
+
+
+Return a deep copy of this object. 
+
+\begin{DoxyReturn}{Returns}
+A deep copy of this object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{Dynamical\+System}.
+
+
+
+Definition at line 237 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+237                           \{
+238   vector<FunctionApproximator*> function\_approximators;
+239   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ff=0; ff<function\_approximators\_.size(); ff++)
+240     function\_approximators.push\_back(function\_approximators\_[ff]->clone());
+241   
+242   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1Dmp_a4d4f5e7b4c2d8085355c228e2f8a9763}{Dmp}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}(), \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}(), \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}(), 
+      function\_approximators,
+243    spring\_system\_->\hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{damping\_coefficient}(), goal\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{clone}(),
+244    phase\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{clone}(), gating\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{clone}());
+245 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classDmpBbo_1_1Dmp_ace8e32350e4feb2c7ea6b5153c7dc606_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a44dd496535fde494d8465e7603c93db3}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!integrate\+Start@{integrate\+Start}}
+\index{integrate\+Start@{integrate\+Start}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{integrate\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void integrate\+Start (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a44dd496535fde494d8465e7603c93db3}
+
+
+Start integrating the system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & -\/ The first vector of state variables \\
+\hline
+\mbox{\tt out}  & {\em xd} & -\/ The first vector of rates of change of the state variables\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+x and xd should be of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1. This forces you to pre-\/allocate memory, which speeds things up (and also makes Eigen's Ref functionality easier to deal with). 
+\end{DoxyRemark}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{Dynamical\+System}.
+
+
+
+Definition at line 248 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+249 \{
+250   assert(x.size()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+251   assert(xd.size()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+252   
+253   x.fill(0);  
+254   xd.fill(0);  
+255   
+256   \textcolor{comment}{// Start integrating goal system if it exists}
+257   \textcolor{keywordflow}{if} (goal\_system\_==NULL)
+258   \{
+259     \textcolor{comment}{// No goal system, simply set goal state to attractor state}
+260     x.GOAL = \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}();
+261     xd.GOAL.fill(0);
+262   \}
+263   \textcolor{keywordflow}{else}
+264   \{
+265     \textcolor{comment}{// Goal system exists. Start integrating it.}
+266     goal\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrateStart}(x.GOAL,xd.GOAL);
+267   \}
+268   
+269     
+270   \textcolor{comment}{// Set the attractor state of the spring system}
+271   spring\_system\_->\hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{set\_attractor\_state}(x.GOAL);
+272   
+273   \textcolor{comment}{// Start integrating all futher subsystems}
+274   spring\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrateStart}(x.SPRING, xd.SPRING);
+275   phase\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrateStart}(  x.PHASE,  xd.PHASE);
+276   gating\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrateStart}(x.GATING, xd.GATING);
+277 
+278   \textcolor{comment}{// Add rates of change}
+279   \hyperlink{classDmpBbo_1_1Dmp_ab564468764e7e4dc7c11e2a786e22c19}{differentialEquation}(x,xd);
+280   
+281 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a44dd496535fde494d8465e7603c93db3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_ab564468764e7e4dc7c11e2a786e22c19}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!differential\+Equation@{differential\+Equation}}
+\index{differential\+Equation@{differential\+Equation}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{differential\+Equation}]{\setlength{\rightskip}{0pt plus 5cm}void differential\+Equation (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_ab564468764e7e4dc7c11e2a786e22c19}
+
+
+The differential equation which defines the system. 
+
+It relates state values to rates of change of those state values
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & current state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1) \\
+\hline
+\mbox{\tt out}  & {\em xd} & rate of change in state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+x and xd should be of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1. This forces you to pre-\/allocate memory, which speeds things up (and also makes Eigen's Ref functionality easier to deal with). 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{Dynamical\+System}.
+
+
+
+Definition at line 318 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+319 \{
+320   
+321   \textcolor{keywordflow}{if} (goal\_system\_==NULL)
+322   \{
+323     \textcolor{comment}{// If there is no dynamical system for the delayed goal, the goal is}
+324     \textcolor{comment}{// simply the attractor state}
+325     spring\_system\_->\hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{set\_attractor\_state}(\hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}());
+326     \textcolor{comment}{// with zero change}
+327     xd.GOAL.fill(0);
+328   \} 
+329   \textcolor{keywordflow}{else}
+330   \{
+331     \textcolor{comment}{// Integrate goal system and get current goal state}
+332     goal\_system\_->\hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{set\_attractor\_state}(\hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}());
+333     goal\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{differentialEquation}(x.GOAL, xd.GOAL);
+334     \textcolor{comment}{// The goal state is the attractor state of the spring-damper system}
+335     spring\_system\_->\hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{set\_attractor\_state}(x.GOAL);
+336         
+337   \}
+338 
+339   \textcolor{comment}{// Integrate spring damper system}
+340   \textcolor{comment}{// Forcing term is added to spring\_state later}
+341   spring\_system\_->\hyperlink{classDmpBbo_1_1SpringDamperSystem_ab564468764e7e4dc7c11e2a786e22c19}{differentialEquation}(x.SPRING, xd.SPRING);
+342 
+343   
+344   \textcolor{comment}{// Non-linear forcing term}
+345   phase\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{differentialEquation}(x.PHASE, xd.PHASE);
+346   gating\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{differentialEquation}(x.GATING, xd.GATING);
+347 
+348   MatrixXd phase\_state(1,1);
+349   phase\_state = x.PHASE;
+350   MatrixXd fa\_output(1,\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+351   \hyperlink{classDmpBbo_1_1Dmp_a89078b732a4579130e24e3bc59c1713c}{computeFunctionApproximatorOutput}(phase\_state, fa\_output); 
+352   
+353   \textcolor{keywordtype}{int} t0 = 0;
+354   \textcolor{keywordtype}{double} gating = (x.GATING)[0];
+355   VectorXd g\_minus\_y0 = (\hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}()-\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}()).transpose();
+356   VectorXd forcing\_term = gating*fa\_output.row(t0); \textcolor{comment}{// todo .array()*g\_minus\_y0.array();}
+357 
+358   \textcolor{comment}{// Add forcing term to the ZD component of the spring state}
+359   xd.SPRING\_Z = xd.SPRING\_Z + forcing\_term/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+360 
+361 
+362 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_ab564468764e7e4dc7c11e2a786e22c19_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xds, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{forcing\+\_\+terms, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{fa\+\_\+output}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}
+
+
+Return analytical solution of the system at certain times (and return forcing terms) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em xs} & Sequence of state vectors. T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em xds} & Sequence of state vectors (rates of change). T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em forcing\+\_\+terms} & The forcing terms for each dimension, for debugging purposes only. \\
+\hline
+\mbox{\tt out}  & {\em fa\+\_\+output} & The output of the function approximators, for debugging purposes only.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The output xs and xds will be of size D x T {\itshape only} if the matrix x you pass as an argument of size D x T. In all other cases (i.\+e. including passing an empty matrix) the size of x will be T x D. This feature has been added so that you may pass matrices of either size. 
+\end{DoxyRemark}
+
+
+Definition at line 403 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+404 \{
+405   \textcolor{keywordtype}{int} n\_time\_steps = ts.size();
+406   assert(n\_time\_steps>0);
+407   
+408   \textcolor{comment}{// Usually, we expect xs and xds to be of size T X dim(), so we resize to that. However, if the}
+409   \textcolor{comment}{// input matrices were of size dim() X T, we return the matrices of that size by doing a }
+410   \textcolor{comment}{// transposeInPlace at the end. That way, the user can also request dim() X T sized matrices.}
+411   \textcolor{keywordtype}{bool} caller\_expects\_transposed = (xs.rows()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}() && xs.cols()==n\_time\_steps);
+412   
+413   \textcolor{comment}{// INTEGRATE SYSTEMS ANALYTICALLY AS MUCH AS POSSIBLE}
+414 
+415   \textcolor{comment}{// Integrate phase}
+416   MatrixXd xs\_phase;
+417   MatrixXd xds\_phase;
+418   phase\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{analyticalSolution}(ts,xs\_phase,xds\_phase);
+419   
+420   \textcolor{comment}{// Compute gating term}
+421   MatrixXd xs\_gating;
+422   MatrixXd xds\_gating;
+423   gating\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{analyticalSolution}(ts,xs\_gating,xds\_gating);
+424 
+425   \textcolor{comment}{// Compute the output of the function approximator}
+426   fa\_outputs.resize(ts.size(),\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+427   fa\_outputs.fill(0.0);
+428   \textcolor{comment}{//if (isTrained())}
+429   \hyperlink{classDmpBbo_1_1Dmp_a89078b732a4579130e24e3bc59c1713c}{computeFunctionApproximatorOutput}(xs\_phase, fa\_outputs);
+430 
+431   MatrixXd xs\_gating\_rep = xs\_gating.replicate(1,fa\_outputs.cols());
+432   MatrixXd g\_minus\_y0\_rep = (\hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}()-\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}()).transpose().
+      replicate(n\_time\_steps,1);
+433   forcing\_terms = fa\_outputs.array()*xs\_gating\_rep.array(); \textcolor{comment}{// todo *g\_minus\_y0\_rep.array();}
+434   
+435   MatrixXd xs\_goal, xds\_goal;
+436   \textcolor{comment}{// Get current delayed goal}
+437   \textcolor{keywordflow}{if} (goal\_system\_==NULL)
+438   \{
+439     \textcolor{comment}{// If there is no dynamical system for the delayed goal, the goal is}
+440     \textcolor{comment}{// simply the attractor state               }
+441     xs\_goal  = \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}().transpose().replicate(n\_time\_steps,1);
+442     \textcolor{comment}{// with zero change}
+443     xds\_goal = MatrixXd::Zero(n\_time\_steps,\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+444   \} 
+445   \textcolor{keywordflow}{else}
+446   \{
+447     \textcolor{comment}{// Integrate goal system and get current goal state}
+448     goal\_system\_->\hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{analyticalSolution}(ts,xs\_goal,xds\_goal);
+449   \}
+450 
+451   xs.resize(n\_time\_steps,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+452   xds.resize(n\_time\_steps,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+453 
+454   \textcolor{keywordtype}{int} T = n\_time\_steps;
+455     
+456   xs.GOALM(T) = xs\_goal;     xds.GOALM(T) = xds\_goal;
+457   xs.PHASEM(T) = xs\_phase;   xds.PHASEM(T) = xds\_phase;
+458   xs.GATINGM(T) = xs\_gating; xds.GATINGM(T) = xds\_gating;
+459 
+460   
+461   \textcolor{comment}{// THE REST CANNOT BE DONE ANALYTICALLY}
+462   
+463   \textcolor{comment}{// Reset the dynamical system, and get the first state}
+464   \textcolor{keywordtype}{double} damping = spring\_system\_->\hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{damping\_coefficient}();
+465   SpringDamperSystem localspring\_system\_(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}(),\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}(),
+      \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}(),damping);
+466   
+467   \textcolor{comment}{// Set first attractor state}
+468   localspring\_system\_.set\_attractor\_state(xs\_goal.row(0));
+469   
+470   \textcolor{comment}{// Start integrating spring damper system}
+471   \textcolor{keywordtype}{int} dim\_spring = localspring\_system\_.dim();
+472   VectorXd x\_spring(dim\_spring), xd\_spring(dim\_spring); \textcolor{comment}{// todo Why are these needed?}
+473   \textcolor{keywordtype}{int} t0 = 0;
+474   localspring\_system\_.integrateStart(x\_spring, xd\_spring);
+475   xs.row(t0).SPRING  = x\_spring;
+476   xds.row(t0).SPRING = xd\_spring;
+477 
+478   \textcolor{comment}{// Add forcing term to the acceleration of the spring state  }
+479   xds.SPRINGM\_Z(1) = xds.SPRINGM\_Z(1) + forcing\_terms.row(t0)/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+480   
+481   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} tt=1; tt<n\_time\_steps; tt++)
+482   \{
+483     \textcolor{keywordtype}{double} dt = ts[tt]-ts[tt-1];
+484     
+485     \textcolor{comment}{// Euler integration}
+486     xs.row(tt).SPRING  = xs.row(tt-1).SPRING + dt*xds.row(tt-1).SPRING;
+487   
+488     \textcolor{comment}{// Set the attractor state of the spring system}
+489     localspring\_system\_.set\_attractor\_state(xs.row(tt).GOAL);
+490 
+491     \textcolor{comment}{// Integrate spring damper system}
+492     localspring\_system\_.differentialEquation(xs.row(tt).SPRING, xd\_spring);
+493     xds.row(tt).SPRING = xd\_spring;
+494     
+495     \textcolor{comment}{// If necessary add a perturbation. May be useful for some off-line tests.}
+496     RowVectorXd perturbation = RowVectorXd::Constant(\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(),0.0);
+497     \textcolor{keywordflow}{if} (analytical\_solution\_perturber\_!=NULL)
+498       \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); i\_dim++)
+499         \textcolor{comment}{// Sample perturbation from a normal Gaussian distribution}
+500         perturbation(i\_dim) = (*analytical\_solution\_perturber\_)();
+501       
+502     \textcolor{comment}{// Add forcing term to the acceleration of the spring state}
+503     xds.row(tt).SPRING\_Z = xds.row(tt).SPRING\_Z + forcing\_terms.row(tt)/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}() + perturbation;
+504     \textcolor{comment}{// Compute y component from z}
+505     xds.row(tt).SPRING\_Y = xs.row(tt).SPRING\_Z/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+506     
+507   \} 
+508   
+509   \textcolor{keywordflow}{if} (caller\_expects\_transposed)
+510   \{
+511     xs.transposeInPlace();
+512     xds.transposeInPlace();
+513   \}
+514 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a636531b0dea01397d1338b19e0061360}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xds, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{forcing\+\_\+terms}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Dmp_a636531b0dea01397d1338b19e0061360}
+
+
+Return analytical solution of the system at certain times (and return forcing terms) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em xs} & Sequence of state vectors. T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em xds} & Sequence of state vectors (rates of change). T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em forcing\+\_\+terms} & The forcing terms for each dimension, for debugging purposes only.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The output xs and xds will be of size D x T {\itshape only} if the matrix x you pass as an argument of size D x T. In all other cases (i.\+e. including passing an empty matrix) the size of x will be T x D. This feature has been added so that you may pass matrices of either size. 
+\end{DoxyRemark}
+
+
+Definition at line 157 of file Dmp.\+hpp.
+
+
+\begin{DoxyCode}
+158   \{
+159     Eigen::MatrixXd fa\_output;
+160     \hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(ts, xs, xds, forcing\_terms, fa\_output);
+161   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a636531b0dea01397d1338b19e0061360_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_ab6600b58b35bc9e66673d16f68e2e919}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xds}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_ab6600b58b35bc9e66673d16f68e2e919}
+
+
+Return analytical solution of the system at certain times. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em xs} & Sequence of state vectors. T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em xds} & Sequence of state vectors (rates of change). T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The output xs and xds will be of size D x T {\itshape only} if the matrix x you pass as an argument of size D x T. In all other cases (i.\+e. including passing an empty matrix) the size of x will be T x D. This feature has been added so that you may pass matrices of either size. 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{Dynamical\+System}.
+
+
+
+Definition at line 163 of file Dmp.\+hpp.
+
+
+\begin{DoxyCode}
+164   \{
+165     Eigen::MatrixXd forcing\_terms, fa\_output;
+166     \hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(ts, xs, xds, forcing\_terms, fa\_output);
+167   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_ab6600b58b35bc9e66673d16f68e2e919_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a9b6bbda07ecd4fc7b6c9de57e185ab05}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{{\bf Trajectory} \&}]{trajectory}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Dmp_a9b6bbda07ecd4fc7b6c9de57e185ab05}
+
+
+Return analytical solution of the system at certain times. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em trajectory} & The computed states as a trajectory. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 175 of file Dmp.\+hpp.
+
+
+\begin{DoxyCode}
+176   \{
+177     Eigen::MatrixXd xs,  xds;
+178     \hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(ts, xs, xds);
+179     \hyperlink{classDmpBbo_1_1Dmp_aa3ad2fc66e8ce09cfa68032a4a5004b9}{statesAsTrajectory}(ts, xs, xds, trajectory);
+180   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a9b6bbda07ecd4fc7b6c9de57e185ab05_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_ae1e5218e7ebfedf7fb2501dc8af2675f}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{{\bf Trajectory} \&}]{trajectory, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{forcing\+\_\+terms}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Dmp_ae1e5218e7ebfedf7fb2501dc8af2675f}
+
+
+Return analytical solution of the system at certain times. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em trajectory} & The computed states as a trajectory. \\
+\hline
+\mbox{\tt out}  & {\em forcing\+\_\+terms} & The forcing terms \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 189 of file Dmp.\+hpp.
+
+
+\begin{DoxyCode}
+190   \{
+191     Eigen::MatrixXd xs,  xds;
+192     \hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(ts, xs, xds, forcing\_terms);
+193     \hyperlink{classDmpBbo_1_1Dmp_aa3ad2fc66e8ce09cfa68032a4a5004b9}{statesAsTrajectory}(ts, xs, xds, trajectory);
+194   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_ae1e5218e7ebfedf7fb2501dc8af2675f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_aa3ad2fc66e8ce09cfa68032a4a5004b9}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!states\+As\+Trajectory@{states\+As\+Trajectory}}
+\index{states\+As\+Trajectory@{states\+As\+Trajectory}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{states\+As\+Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}void states\+As\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{x\+\_\+in, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{xd\+\_\+in, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{y\+\_\+out, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{yd\+\_\+out, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{ydd\+\_\+out}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_aa3ad2fc66e8ce09cfa68032a4a5004b9}
+
+
+Get the output of a D\+M\+P dynamical system as a trajectory. 
+
+As a dynamical system, the state vector of a D\+M\+P contains the output of the goal, spring, phase and gating system. What we are most interested in is the output of the spring system. This function extracts that information, and also computes the accelerations of the spring system, which are only stored implicitely in xd\+\_\+in because second order systems are converted to first order systems with expanded state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x\+\_\+in} & State vector over time (size n\+\_\+time\+\_\+steps X \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt in}  & {\em xd\+\_\+in} & State vector over time (rates of change) \\
+\hline
+\mbox{\tt out}  & {\em y\+\_\+out} & State vector over time (size n\+\_\+time\+\_\+steps X \hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\+\_\+orig()}) \\
+\hline
+\mbox{\tt out}  & {\em yd\+\_\+out} & State vector over time (rates of change) \\
+\hline
+\mbox{\tt out}  & {\em ydd\+\_\+out} & State vector over time (rates of change of rates of change) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 364 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+365 \{
+366   \textcolor{keywordtype}{int} n\_time\_steps = x\_in.rows(); 
+367   y\_out  = x\_in.SPRINGM\_Y(n\_time\_steps);
+368   yd\_out = xd\_in.SPRINGM\_Y(n\_time\_steps);
+369   ydd\_out = xd\_in.SPRINGM\_Z(n\_time\_steps)/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+370   \textcolor{comment}{// MatrixXd z\_out, zd\_out;}
+371   \textcolor{comment}{// z\_out  = x\_in.SPRINGM\_Z(n\_time\_steps);}
+372   \textcolor{comment}{// zd\_out = xd\_in.SPRINGM\_Z(n\_time\_steps);}
+373   \textcolor{comment}{// Divide by tau to go from z to y space}
+374   \textcolor{comment}{// yd = z\_out/obj.tau;}
+375   \textcolor{comment}{// ydd\_out = zd\_out/tau();}
+376 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_aa3ad2fc66e8ce09cfa68032a4a5004b9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a0a477ccb2da97d3b6f5255a147a0e07c}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!states\+As\+Trajectory@{states\+As\+Trajectory}}
+\index{states\+As\+Trajectory@{states\+As\+Trajectory}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{states\+As\+Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}void states\+As\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{x\+\_\+in, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{xd\+\_\+in, }
+\item[{{\bf Trajectory} \&}]{trajectory}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a0a477ccb2da97d3b6f5255a147a0e07c}
+
+
+Get the output of a D\+M\+P dynamical system as a trajectory. 
+
+As a dynamical system, the state vector of a D\+M\+P contains the output of the goal, spring, phase and gating system. What we are most interested in is the output of the spring system. This function extracts that information, and also computes the accelerations of the spring system, which are only stored implicitely in xd\+\_\+in because second order systems are converted to first order systems with expanded state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times \\
+\hline
+\mbox{\tt in}  & {\em x\+\_\+in} & State vector over time \\
+\hline
+\mbox{\tt in}  & {\em xd\+\_\+in} & State vector over time (rates of change) \\
+\hline
+\mbox{\tt out}  & {\em trajectory} & \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} representation of the D\+M\+P state vector output. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 379 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+379                                                                                                            
+                                    \{
+380   \textcolor{keywordtype}{int} n\_time\_steps = ts.rows();
+381 \textcolor{preprocessor}{#ifndef NDEBUG // Variables below are only required for asserts; check for NDEBUG to avoid warnings.}
+382   \textcolor{keywordtype}{int} n\_dims       = x\_in.cols();
+383 \textcolor{preprocessor}{#endif}
+384   assert(n\_time\_steps==x\_in.rows());
+385   assert(n\_time\_steps==xd\_in.rows());
+386   assert(n\_dims==xd\_in.cols());
+387 
+388   \textcolor{comment}{// Left column is time}
+389   Trajectory new\_trajectory(
+390     ts,
+391     \textcolor{comment}{// y\_out (see function above)}
+392     x\_in.SPRINGM\_Y(n\_time\_steps),
+393     \textcolor{comment}{// yd\_out (see function above)}
+394     xd\_in.SPRINGM\_Y(n\_time\_steps),
+395     \textcolor{comment}{// ydd\_out (see function above)}
+396     xd\_in.SPRINGM\_Z(n\_time\_steps)/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}()
+397   );
+398   
+399   trajectory = new\_trajectory;
+400   
+401 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a0a477ccb2da97d3b6f5255a147a0e07c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a5d14dedc6736ec5675b4026437b8a597}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}void train (
+\begin{DoxyParamCaption}
+\item[{const {\bf Trajectory} \&}]{trajectory}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_a5d14dedc6736ec5675b4026437b8a597}
+
+
+Train a D\+M\+P with a trajectory. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em trajectory} & The trajectory with which to train the D\+M\+P. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 564 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+565 \{
+566   \hyperlink{classDmpBbo_1_1Dmp_a5d14dedc6736ec5675b4026437b8a597}{train}(trajectory,\textcolor{stringliteral}{""});
+567 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Dmp_abca46c9155c3cfbc71d10aabdcf3384c}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}void train (
+\begin{DoxyParamCaption}
+\item[{const {\bf Trajectory} \&}]{trajectory, }
+\item[{std\+::string}]{save\+\_\+directory, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_abca46c9155c3cfbc71d10aabdcf3384c}
+
+
+Train a D\+M\+P with a trajectory, and write results to file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em trajectory} & The trajectory with which to train the D\+M\+P. \\
+\hline
+\mbox{\tt in}  & {\em save\+\_\+directory} & The directory to which to save the results. \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Overwrite existing files in the directory above (default\+: false) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 569 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+570 \{
+571   
+572   \textcolor{comment}{// Set tau, initial\_state and attractor\_state from the trajectory }
+573   \hyperlink{classDmpBbo_1_1Dmp_a17edb45ef62a4ef7f8c78e4f8f68b249}{set\_tau}(trajectory.duration());
+574   \hyperlink{classDmpBbo_1_1Dmp_ad4e11c676c2add8a992db1caf542f0a0}{set\_initial\_state}(trajectory.initial\_y());
+575   \hyperlink{classDmpBbo_1_1Dmp_a6dccbd077acfd148f528a48a72a4003f}{set\_attractor\_state}(trajectory.final\_y());
+576   
+577   VectorXd fa\_input\_phase;
+578   MatrixXd f\_target;
+579   \hyperlink{classDmpBbo_1_1Dmp_a9aef6cbf41e55caa12b62cff77cf1fda}{computeFunctionApproximatorInputsAndTargets}(trajectory, 
+      fa\_input\_phase, f\_target);
+580   
+581   \textcolor{comment}{// Some checks before training function approximators}
+582   assert(!function\_approximators\_.empty());
+583   
+584   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dd=0; dd<function\_approximators\_.size(); dd++)
+585   \{
+586     \textcolor{comment}{// This is just boring stuff to figure out if and where to store the results of training}
+587     \textcolor{keywordtype}{string} save\_directory\_dim;
+588     \textcolor{keywordflow}{if} (!save\_directory.empty())
+589     \{
+590       \textcolor{keywordflow}{if} (function\_approximators\_.size()==1)
+591         save\_directory\_dim = save\_directory;
+592       \textcolor{keywordflow}{else}
+593         save\_directory\_dim = save\_directory + \textcolor{stringliteral}{"/dim"} + to\_string(dd);
+594     \}
+595     
+596     \textcolor{comment}{// Actual training is happening here.}
+597     VectorXd fa\_target = f\_target.col(dd);
+598     \textcolor{keywordflow}{if} (function\_approximators\_[dd]==NULL)
+599     \{
+600       cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+601       cerr << \textcolor{stringliteral}{"WARNING: function approximator cannot be trained because it is NULL."} << endl;
+602     \}
+603     \textcolor{keywordflow}{else}
+604     \{
+605       \textcolor{keywordflow}{if} (function\_approximators\_[dd]->isTrained())
+606         function\_approximators\_[dd]->reTrain(fa\_input\_phase,fa\_target,save\_directory\_dim,overwrite);
+607       \textcolor{keywordflow}{else}
+608         function\_approximators\_[dd]->train(fa\_input\_phase,fa\_target,save\_directory\_dim,overwrite);
+609     \}
+610   \}
+611 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_abca46c9155c3cfbc71d10aabdcf3384c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a17edb45ef62a4ef7f8c78e4f8f68b249}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!set\+\_\+tau@{set\+\_\+tau}}
+\index{set\+\_\+tau@{set\+\_\+tau}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{set\+\_\+tau}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+tau (
+\begin{DoxyParamCaption}
+\item[{double}]{tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a17edb45ef62a4ef7f8c78e4f8f68b249}
+
+
+Accessor function for the time constant. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tau} & Time constant We need to override \hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{Dynamical\+System\+::set\+\_\+tau}, because the D\+M\+P must also change the time constant of all of its subsystems. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{Dynamical\+System}.
+
+
+
+Definition at line 758 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+758                             \{
+759   \hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{DynamicalSystem::set\_tau}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau});
+760 
+761   \textcolor{comment}{// Set value in all relevant subsystems also  }
+762   spring\_system\_->\hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{set\_tau}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau});
+763   \textcolor{keywordflow}{if} (goal\_system\_!=NULL)
+764     goal\_system\_->\hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{set\_tau}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau});
+765   phase\_system\_ ->\hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{set\_tau}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau});
+766   gating\_system\_->\hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{set\_tau}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau});
+767 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a17edb45ef62a4ef7f8c78e4f8f68b249_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_ad4e11c676c2add8a992db1caf542f0a0}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!set\+\_\+initial\+\_\+state@{set\+\_\+initial\+\_\+state}}
+\index{set\+\_\+initial\+\_\+state@{set\+\_\+initial\+\_\+state}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{set\+\_\+initial\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+initial\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y\+\_\+init}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_ad4e11c676c2add8a992db1caf542f0a0}
+
+
+Accessor function for the initial state of the system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em y\+\_\+init} & Initial state of the system. We need to override \hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{Dynamical\+System\+::set\+\_\+initial\+\_\+state}, because the D\+M\+P must also change the initial state of the goal system as well. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{Dynamical\+System}.
+
+
+
+Definition at line 769 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+769                                                   \{
+770   \hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{DynamicalSystem::set\_initial\_state}(y\_init);
+771   
+772   \textcolor{comment}{// Set value in all relevant subsystems also  }
+773   spring\_system\_->\hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{set\_initial\_state}(y\_init);
+774   \textcolor{keywordflow}{if} (goal\_system\_!=NULL)
+775     goal\_system\_->\hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{set\_initial\_state}(y\_init);
+776 \}    
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_ad4e11c676c2add8a992db1caf542f0a0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a6dccbd077acfd148f528a48a72a4003f}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!set\+\_\+attractor\+\_\+state@{set\+\_\+attractor\+\_\+state}}
+\index{set\+\_\+attractor\+\_\+state@{set\+\_\+attractor\+\_\+state}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{set\+\_\+attractor\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+attractor\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y\+\_\+attr}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a6dccbd077acfd148f528a48a72a4003f}
+
+
+Accessor function for the attractor state of the system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em y\+\_\+attr} & Attractor state of the system. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{Dynamical\+System}.
+
+
+
+Definition at line 778 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+778                                                     \{
+779   \hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{DynamicalSystem::set\_attractor\_state}(y\_attr);
+780   
+781   \textcolor{comment}{// Set value in all relevant subsystems also  }
+782   \textcolor{keywordflow}{if} (goal\_system\_!=NULL)
+783     goal\_system\_->\hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{set\_attractor\_state}(y\_attr);
+784 
+785   \textcolor{comment}{// Do NOT do the following. The attractor state of the spring system is determined by the goal }
+786   \textcolor{comment}{// system}
+787   \textcolor{comment}{// spring\_system\_->set\_attractor\_state(y\_attr);}
+788 
+789 \}    
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a6dccbd077acfd148f528a48a72a4003f_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a0b6f58851f4a8fc8b433936cff4c3e7e}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!set\+\_\+damping\+\_\+coefficient@{set\+\_\+damping\+\_\+coefficient}}
+\index{set\+\_\+damping\+\_\+coefficient@{set\+\_\+damping\+\_\+coefficient}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{set\+\_\+damping\+\_\+coefficient}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+damping\+\_\+coefficient (
+\begin{DoxyParamCaption}
+\item[{double}]{damping\+\_\+coefficient}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_a0b6f58851f4a8fc8b433936cff4c3e7e}
+
+
+Accessor function for damping coefficient of spring-\/damper system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em damping\+\_\+coefficient} & Damping coefficient \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 200 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+201 \{
+202   spring\_system\_->\hyperlink{classDmpBbo_1_1SpringDamperSystem_a0b6f58851f4a8fc8b433936cff4c3e7e}{set\_damping\_coefficient}(damping\_coefficient); 
+203 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a0b6f58851f4a8fc8b433936cff4c3e7e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a8844968245473d1fedd2a2b632fb074a}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!set\+\_\+spring\+\_\+constant@{set\+\_\+spring\+\_\+constant}}
+\index{set\+\_\+spring\+\_\+constant@{set\+\_\+spring\+\_\+constant}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{set\+\_\+spring\+\_\+constant}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+spring\+\_\+constant (
+\begin{DoxyParamCaption}
+\item[{double}]{spring\+\_\+constant}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Dmp_a8844968245473d1fedd2a2b632fb074a}
+
+
+Accessor function for spring constant of spring-\/damper system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em spring\+\_\+constant} & Spring constant \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 204 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+204                                                     \{
+205   spring\_system\_->\hyperlink{classDmpBbo_1_1SpringDamperSystem_a8844968245473d1fedd2a2b632fb074a}{set\_spring\_constant}(spring\_constant); 
+206 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a8844968245473d1fedd2a2b632fb074a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_af084bff2ddd6233e9a898faa23f6195c}{Dynamical\+System}.
+
+
+
+Definition at line 792 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+793 \{
+794   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"Dmp"});
+795 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Dmp_adaae949509cd3b2e6ce58deb841c80a0}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!get\+Selectable\+Parameters@{get\+Selectable\+Parameters}}
+\index{get\+Selectable\+Parameters@{get\+Selectable\+Parameters}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{get\+Selectable\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Selectable\+Parameters (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_adaae949509cd3b2e6ce58deb841c80a0}
+
+
+Return all the names of the parameter types that can be selected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em selected\+\_\+values\+\_\+labels} & Names of the parameter types that can be selected \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{Parameterizable}.
+
+
+
+Definition at line 613 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+613                                                                              \{
+614   assert(function\_approximators\_.size()>0);
+615   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+616   \{
+617     \textcolor{keywordflow}{if} (function\_approximators\_[dd]!=NULL)
+618     \{
+619       \textcolor{keywordflow}{if} (function\_approximators\_[dd]->isTrained())
+620       \{
+621         set<string> cur\_labels;
+622         function\_approximators\_[dd]->getSelectableParameters(cur\_labels);
+623         selectable\_values\_labels.insert(cur\_labels.begin(), cur\_labels.end());
+624       \}
+625     \}
+626   \}
+627   selectable\_values\_labels.insert(\textcolor{stringliteral}{"goal"});
+628   
+629   \textcolor{comment}{//cout << "selected\_values\_labels=["; }
+630   \textcolor{comment}{//for (string label : selected\_values\_labels) }
+631   \textcolor{comment}{//  cout << label << " ";}
+632   \textcolor{comment}{//cout << "]" << endl;}
+633   
+634 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_adaae949509cd3b2e6ce58deb841c80a0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a8a976b5db2d1809ece10e431816f0f27}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!set\+Selected\+Parameters@{set\+Selected\+Parameters}}
+\index{set\+Selected\+Parameters@{set\+Selected\+Parameters}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{set\+Selected\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Selected\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a8a976b5db2d1809ece10e431816f0f27}
+
+
+Determine which subset of parameters is represented in the vector returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}. 
+
+Different function approximators have different types of model parameters. For instance, L\+W\+R has the centers and widths of basis functions, along with the slopes of each line segment. \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} provides a means to determine which parameters should be returned by \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, i.\+e. by calling\+: std\+::set$<$std\+::string$>$ selected; selected.\+insert(\char`\"{}slopes\char`\"{}); model\+\_\+parameters.\+set\+Selected\+Parameters(selected) 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & The names of the parameters that are selected \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable}.
+
+
+
+Definition at line 636 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+637 \{
+638   assert(function\_approximators\_.size()>0);
+639   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+640     \textcolor{keywordflow}{if} (function\_approximators\_[dd]!=NULL)
+641       \textcolor{keywordflow}{if} (function\_approximators\_[dd]->isTrained())
+642         function\_approximators\_[dd]->\hyperlink{classDmpBbo_1_1Dmp_a8a976b5db2d1809ece10e431816f0f27}{setSelectedParameters}(selected\_values\_labels);
+643 
+644   \textcolor{comment}{// Call superclass for initializations}
+645   \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable::setSelectedParameters}(selected\_values\_labels);
+646 
+647   VectorXi lengths\_per\_dimension = VectorXi::Zero(\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+648   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+649   \{
+650     \textcolor{keywordflow}{if} (function\_approximators\_[dd]!=NULL)
+651       \textcolor{keywordflow}{if} (function\_approximators\_[dd]->isTrained())
+652         lengths\_per\_dimension[dd] = function\_approximators\_[dd]->
+      \hyperlink{classDmpBbo_1_1Parameterizable_ae83cb950bcf5219841e6ca8511ac2907}{getParameterVectorSelectedSize}();
+653     
+654     \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"goal"})!=selected\_values\_labels.end())
+655       lengths\_per\_dimension[dd]++;
+656   \}
+657   
+658   \hyperlink{classDmpBbo_1_1Parameterizable_a77089aa6cc3b95dd0a1c17de7bc033b9}{setVectorLengthsPerDimension}(lengths\_per\_dimension);
+659       
+660 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a8a976b5db2d1809ece10e431816f0f27_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}}
+\index{get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{get\+Parameter\+Vector\+All\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Vector\+All\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}
+
+
+Get the size of the parameter values vector when it contains all available parameter values. 
+
+\begin{DoxyReturn}{Returns}
+The size of the parameter vector
+\end{DoxyReturn}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ then \hyperlink{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size()} will return 9 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{Parameterizable}.
+
+
+
+Definition at line 706 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+707 \{
+708   \textcolor{keywordtype}{int} total\_size = 0;
+709   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dd=0; dd<function\_approximators\_.size(); dd++)
+710     total\_size += function\_approximators\_[dd]->\hyperlink{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}();
+711   
+712   \textcolor{comment}{// For the goal}
+713   total\_size += \hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}();
+714   \textcolor{keywordflow}{return} total\_size;
+715 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_ac44b51e5335f973eed54f100618e5496}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}}
+\index{get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{get\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_ac44b51e5335f973eed54f100618e5496}
+
+
+Return a vector that returns all available parameter values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, which return only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{Parameterizable}.
+
+
+
+Definition at line 718 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+719 \{
+720   values.resize(\hyperlink{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+721   \textcolor{keywordtype}{int} offset = 0;
+722   VectorXd cur\_values;
+723   VectorXd attractor = \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}();
+724   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+725   \{
+726     function\_approximators\_[dd]->getParameterVectorAll(cur\_values);
+727     values.segment(offset,cur\_values.size()) = cur\_values;
+728     offset += cur\_values.size();
+729 
+730     values(offset) = attractor(dd);
+731     offset++;
+732   \}
+733 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_ac44b51e5335f973eed54f100618e5496_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a9d3c8f22e8237a805af4935a647e5a50}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}}
+\index{set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{set\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a9d3c8f22e8237a805af4935a647e5a50}
+
+
+Set all available parameter values with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{Parameterizable\+::set\+Parameter\+Vector\+Selected}, which sets only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{Parameterizable}.
+
+
+
+Definition at line 735 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+736 \{
+737   assert(values.size()==\hyperlink{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+738   \textcolor{keywordtype}{int} offset = 0;
+739   VectorXd cur\_values;
+740   VectorXd attractor(\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+741   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+742   \{
+743     \textcolor{keywordtype}{int} n\_parameters\_required = function\_approximators\_[dd]->getParameterVectorAllSize();
+744     cur\_values = values.segment(offset,n\_parameters\_required);
+745     function\_approximators\_[dd]->setParameterVectorAll(cur\_values);
+746     offset += n\_parameters\_required;
+747     
+748     attractor(dd) = values(offset);
+749     offset += 1;
+750   \}
+751   
+752   \textcolor{comment}{// Set the goal}
+753   \hyperlink{classDmpBbo_1_1Dmp_a6dccbd077acfd148f528a48a72a4003f}{set\_attractor\_state}(attractor); 
+754 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a9d3c8f22e8237a805af4935a647e5a50_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a9dba1f93e426e7511630ec1ece4ace17}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}}
+\index{get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{get\+Parameter\+Vector\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Mask (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$}]{selected\+\_\+values\+\_\+labels, }
+\item[{Eigen\+::\+Vector\+Xi \&}]{selected\+\_\+mask}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a9dba1f93e426e7511630ec1ece4ace17}
+
+
+Get a mask for selecting parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & Labels of the selected parameter values \\
+\hline
+\mbox{\tt out}  & {\em selected\+\_\+mask} & A mask indicating indices of selected parameters. 0 indicates not selected, $>$0 indicates selected.\\
+\hline
+\end{DoxyParams}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ In this case, if selected\+\_\+values\+\_\+labels contains \char`\"{}centers\char`\"{} and \char`\"{}slopes\char`\"{}, the mask will be\+: \begin{DoxyVerb}    centers     widths    slopes
+[   1   1   1  0  0  0   3   3   3 ]
+\end{DoxyVerb}
+ The '0' indicates that these parameters are not selected. The other ones have different numbers so that they may be discerned from one another (as required in \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{Parameterizable\+::get\+Parameter\+Vector\+Selected\+Min\+Max} for instance. 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{Parameterizable}.
+
+
+
+Definition at line 662 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+663 \{
+664   assert(function\_approximators\_.size()>0);
+665   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+666   \{
+667     assert(function\_approximators\_[dd]!=NULL);
+668     assert(function\_approximators\_[dd]->isTrained());
+669   \}
+670 
+671   selected\_mask.resize(\hyperlink{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+672   selected\_mask.fill(0);
+673   
+674   \textcolor{keyword}{const} \textcolor{keywordtype}{int} TMP\_GOAL\_NUMBER = -1;
+675   \textcolor{keywordtype}{int} offset = 0;
+676   VectorXi cur\_mask;
+677   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); dd++)
+678   \{
+679     function\_approximators\_[dd]->getParameterVectorMask(selected\_values\_labels,cur\_mask);
+680 
+681     \textcolor{comment}{// This makes sure that the indices for each function approximator are different    }
+682     \textcolor{keywordtype}{int} mask\_offset = selected\_mask.maxCoeff(); 
+683     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<cur\_mask.size(); ii++)
+684       \textcolor{keywordflow}{if} (cur\_mask[ii]!=0)
+685         cur\_mask[ii] += mask\_offset;
+686         
+687     selected\_mask.segment(offset,cur\_mask.size()) = cur\_mask;
+688     offset += cur\_mask.size();
+689     
+690     \textcolor{comment}{// Goal}
+691     \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"goal"})!=selected\_values\_labels.end())
+692       selected\_mask(offset) = TMP\_GOAL\_NUMBER;
+693     offset++;
+694     
+695   \}
+696   assert(offset == \hyperlink{classDmpBbo_1_1Dmp_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+697   
+698   \textcolor{comment}{// Replace TMP\_GOAL\_NUMBER with current max value}
+699   \textcolor{keywordtype}{int} goal\_number = selected\_mask.maxCoeff() + 1; 
+700   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<selected\_mask.size(); ii++)
+701     \textcolor{keywordflow}{if} (selected\_mask[ii]==TMP\_GOAL\_NUMBER)
+702       selected\_mask[ii] = goal\_number;
+703     
+704 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a9dba1f93e426e7511630ec1ece4ace17_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a9aef6cbf41e55caa12b62cff77cf1fda}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!compute\+Function\+Approximator\+Inputs\+And\+Targets@{compute\+Function\+Approximator\+Inputs\+And\+Targets}}
+\index{compute\+Function\+Approximator\+Inputs\+And\+Targets@{compute\+Function\+Approximator\+Inputs\+And\+Targets}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{compute\+Function\+Approximator\+Inputs\+And\+Targets}]{\setlength{\rightskip}{0pt plus 5cm}void compute\+Function\+Approximator\+Inputs\+And\+Targets (
+\begin{DoxyParamCaption}
+\item[{const {\bf Trajectory} \&}]{trajectory, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{fa\+\_\+inputs\+\_\+phase, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{fa\+\_\+targets}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1Dmp_a9aef6cbf41e55caa12b62cff77cf1fda}
+
+
+Given a trajectory, compute the inputs and targets for the function approximators. 
+
+For a standard \hyperlink{classDmpBbo_1_1Dmp}{Dmp} (such as the one in this class) the inputs will be the phase over time, and the targets will be the forcing term (with the gating function factored out). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em trajectory} & \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory}, e.\+g. a demonstration. \\
+\hline
+\mbox{\tt out}  & {\em fa\+\_\+inputs\+\_\+phase} & The inputs for the function approximators (phase signal) \\
+\hline
+\mbox{\tt out}  & {\em fa\+\_\+targets} & The targets for the function approximators (forcing term) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 516 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+517 \{
+518   \textcolor{keywordtype}{int} n\_time\_steps = trajectory.length();
+519   \textcolor{keywordtype}{double} dim\_data = trajectory.dim();
+520   
+521   \textcolor{keywordflow}{if} (\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}()!=dim\_data)
+522   \{
+523     cout << \textcolor{stringliteral}{"WARNING: Cannot train "} << \hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}() << \textcolor{stringliteral}{"-D DMP with "} << dim\_data << \textcolor{stringliteral}{"-D data. Doing
+       nothing."} << endl;
+524     \textcolor{keywordflow}{return};
+525   \}
+526   
+527   \textcolor{comment}{// Integrate analytically to get goal, gating and phase states}
+528   MatrixXd xs\_ana;
+529   MatrixXd xds\_ana;
+530   
+531   \textcolor{comment}{// Before, we would make clone of the dmp, and integrate it with the tau, and initial/attractor}
+532   \textcolor{comment}{// state of the trajectory. However, Thibaut needed to call this from outside the Dmp as well,}
+533   \textcolor{comment}{// with the tau/states of the this object. Therefore, we no longer clone. }
+534   \textcolor{comment}{// Dmp* dmp\_clone = static\_cast<Dmp*>(this->clone());}
+535   \textcolor{comment}{// dmp\_clone->set\_tau(trajectory.duration());}
+536   \textcolor{comment}{// dmp\_clone->set\_initial\_state(trajectory.initial\_y());}
+537   \textcolor{comment}{// dmp\_clone->set\_attractor\_state(trajectory.final\_y());}
+538   \textcolor{comment}{// dmp\_clone->analyticalSolution(trajectory.ts(),xs\_ana,xds\_ana);}
+539   \hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(trajectory.ts(),xs\_ana,xds\_ana);
+540   MatrixXd xs\_goal   = xs\_ana.GOALM(n\_time\_steps);
+541   MatrixXd xs\_gating = xs\_ana.GATINGM(n\_time\_steps);
+542   MatrixXd xs\_phase  = xs\_ana.PHASEM(n\_time\_steps);
+543   
+544   fa\_inputs\_phase = xs\_phase;
+545   
+546   \textcolor{comment}{// Get parameters from the spring-dampers system to compute inverse}
+547   \textcolor{keywordtype}{double} damping\_coefficient = spring\_system\_->\hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{damping\_coefficient}();
+548   \textcolor{keywordtype}{double} spring\_constant     = spring\_system\_->\hyperlink{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}{spring\_constant}();
+549   \textcolor{keywordtype}{double} mass                = spring\_system\_->\hyperlink{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}{mass}();
+550   \textcolor{keywordflow}{if} (mass!=1.0)
+551   \{
+552     cout << \textcolor{stringliteral}{"WARNING: Usually, spring-damper system of the DMP should have mass==1, but it is "} << mass << 
+      endl;
+553   \}
+554 
+555   \textcolor{comment}{// Compute inverse}
+556   f\_target = \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}()*\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}()*trajectory.ydds() + (spring\_constant*(trajectory.ys()-xs\_goal) + 
+      damping\_coefficient*\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}()*trajectory.yds())/mass;
+557   
+558   \textcolor{comment}{//Factor out gating term}
+559   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} dd=0; dd<function\_approximators\_.size(); dd++)
+560     f\_target.col(dd) = f\_target.col(dd).array()/xs\_gating.array();
+561  
+562 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a9aef6cbf41e55caa12b62cff77cf1fda_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a89078b732a4579130e24e3bc59c1713c}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!compute\+Function\+Approximator\+Output@{compute\+Function\+Approximator\+Output}}
+\index{compute\+Function\+Approximator\+Output@{compute\+Function\+Approximator\+Output}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{compute\+Function\+Approximator\+Output}]{\setlength{\rightskip}{0pt plus 5cm}void compute\+Function\+Approximator\+Output (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{phase\+\_\+state, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{fa\+\_\+output}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1Dmp_a89078b732a4579130e24e3bc59c1713c}
+
+
+Compute the outputs of the function approximators. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em phase\+\_\+state} & The phase states for which the outputs are computed. \\
+\hline
+\mbox{\tt out}  & {\em fa\+\_\+output} & The outputs of the function approximators. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1DmpContextual_a768d6c4c35c804556afba0930cb25936}{Dmp\+Contextual}, \hyperlink{classDmpBbo_1_1DmpContextualTwoStep_a89078b732a4579130e24e3bc59c1713c}{Dmp\+Contextual\+Two\+Step}, and \hyperlink{classDmpBbo_1_1DmpContextualOneStep_a89078b732a4579130e24e3bc59c1713c}{Dmp\+Contextual\+One\+Step}.
+
+
+
+Definition at line 298 of file Dmp.\+cpp.
+
+
+\begin{DoxyCode}
+299 \{
+300   \textcolor{keywordtype}{int} T = phase\_state.rows();
+301   fa\_output.resize(T,\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+302   fa\_output.fill(0.0);
+303   
+304   MatrixXd output(T,1);
+305   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}(); i\_dim++)
+306   \{
+307     \textcolor{keywordflow}{if} (function\_approximators\_[i\_dim]!=NULL)
+308     \{
+309       \textcolor{keywordflow}{if} (function\_approximators\_[i\_dim]->isTrained()) 
+310       \{
+311         function\_approximators\_[i\_dim]->predict(phase\_state,output);
+312         fa\_output.col(i\_dim) = output;
+313       \}
+314     \}
+315   \}
+316 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Dmp_a89078b732a4579130e24e3bc59c1713c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Dmp_a6c44c534fd7bb0b6ad87648692e15269}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!set\+\_\+perturbation\+\_\+analytical\+\_\+solution@{set\+\_\+perturbation\+\_\+analytical\+\_\+solution}}
+\index{set\+\_\+perturbation\+\_\+analytical\+\_\+solution@{set\+\_\+perturbation\+\_\+analytical\+\_\+solution}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{set\+\_\+perturbation\+\_\+analytical\+\_\+solution}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+perturbation\+\_\+analytical\+\_\+solution (
+\begin{DoxyParamCaption}
+\item[{double}]{perturbation\+\_\+standard\+\_\+deviation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Dmp_a6c44c534fd7bb0b6ad87648692e15269}
+
+
+Add a perturbation to the forcing term when computing the analytical solution. 
+
+This is only relevant for off-\/line experiments, i.\+e. not on a robot, for testing how the system responds to perturbations. Does not affect the output of \hyperlink{classDmpBbo_1_1Dmp_ab564468764e7e4dc7c11e2a786e22c19}{Dmp\+::differential\+Equation()}, only of \hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{Dmp\+::analytical\+Solution()}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em perturbation\+\_\+standard\+\_\+deviation} & Standard deviation of the normal distribution from which perturbations will be sampled. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 310 of file Dmp.\+hpp.
+
+
+\begin{DoxyCode}
+311   \{
+312     \textcolor{keywordflow}{if} (perturbation\_standard\_deviation>0.0)
+313     \{
+314       boost::normal\_distribution<> normal(0, perturbation\_standard\_deviation);
+315       analytical\_solution\_perturber\_ = \textcolor{keyword}{new} boost::variate\_generator<boost::mt19937&,
+       boost::normal\_distribution<> >(rng, normal);
+316     \}
+317     \textcolor{keywordflow}{else}
+318     \{
+319       analytical\_solution\_perturber\_ = NULL;
+320     \}
+321   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Dmp_ac428e2dd848c99ddaf517f2dbacdf3ad}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!function\+\_\+approximator@{function\+\_\+approximator}}
+\index{function\+\_\+approximator@{function\+\_\+approximator}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{function\+\_\+approximator}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator}$\ast$ function\+\_\+approximator (
+\begin{DoxyParamCaption}
+\item[{int}]{i\+\_\+dim}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classDmpBbo_1_1Dmp_ac428e2dd848c99ddaf517f2dbacdf3ad}
+
+
+Get a pointer to the function approximator for a certain dimension. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i\+\_\+dim} & Dimension for which to get the function approximator \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the function approximator. 
+\end{DoxyReturn}
+
+
+Definition at line 329 of file Dmp.\+hpp.
+
+
+\begin{DoxyCode}
+330   \{
+331     assert(i\_dim<(\textcolor{keywordtype}{int})function\_approximators\_.size());
+332     \textcolor{keywordflow}{return} function\_approximators\_[i\_dim];
+333   \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1Dmp_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Dmp@{Dmp\+Bbo\+::\+Dmp}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1Dmp_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 378 of file Dmp.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Dmp_8hpp}{Dmp.\+hpp}\item 
+\hyperlink{Dmp_8cpp}{Dmp.\+cpp}\end{DoxyCompactItemize}

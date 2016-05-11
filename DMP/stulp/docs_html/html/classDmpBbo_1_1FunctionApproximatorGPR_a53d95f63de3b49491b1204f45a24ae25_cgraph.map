@@ -1,0 +1,6 @@
+<map id="saveGridData" name="saveGridData">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1FunctionApproximator.html#a61da4383ffab7d919c98d628c1d217d1" title="Generate a input samples that lie on a grid (much like Matlab&#39;s meshgrid) For instance, if min = [2 6], and max = [3 8], and n_samples_per_dim = [3 5] then this function first makes linearly spaces samples along each dimension, e.g. " alt="" coords="165,5,383,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="165,71,383,112"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1ModelParametersGPR.html#a125cc60559b55f7348beb15f25834b6f" title="Get the normalized kernel activations for given inputs. " alt="" coords="163,136,385,177"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1ModelParametersGPR.html#ab0065893578a0770652450ebfe930481" title="Return the weights, which is equivalent to , where G is the Gram matrix, and y is the target data..." alt="" coords="163,201,385,243"/>
+</map>

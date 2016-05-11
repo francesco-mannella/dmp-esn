@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classDmpBbo_1_1Updater.html" title="Interface for the distribution update step in evolution strategies. " alt="" coords="5,31,79,57"/>
+<area shape="rect" id="node2" href="$classDmpBbo_1_1UpdaterMean.html" title="Updater that updates the mean (but not the covariance matrix) of the parameter distribution. " alt="" coords="127,31,236,57"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1UpdaterCovarAdaptation.html" title="Updater that updates the mean and also implements Covariance Matrix Adaptation. " alt="" coords="284,5,463,32"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1UpdaterCovarDecay.html" title="Updater that updates the mean and decreases the size of the covariance matrix over time..." alt="" coords="298,56,449,83"/>
+</map>

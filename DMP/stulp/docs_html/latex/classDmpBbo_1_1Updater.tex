@@ -1,0 +1,278 @@
+\hypertarget{classDmpBbo_1_1Updater}{\subsection{Updater Class Reference}
+\label{classDmpBbo_1_1Updater}\index{Updater@{Updater}}
+}
+
+
+Interface for the distribution update step in evolution strategies.  
+
+
+
+
+{\ttfamily \#include $<$Updater.\+hpp$>$}
+
+
+
+Inheritance diagram for Updater\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classDmpBbo_1_1Updater__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1Updater_ae57a9f8264e9a9689fd21ef99c623227}{update\+Distribution} (const \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution, const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Vector\+Xd \&costs, Eigen\+::\+Vector\+Xd \&weights, \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution\+\_\+new, \hyperlink{classDmpBbo_1_1UpdateSummary}{Update\+Summary} \&summary) const 
+\begin{DoxyCompactList}\small\item\em Update a distribution given the samples and costs of an epoch. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Updater_a9f3c0a24eb032b84b724a19deb77efd8}{update\+Distribution} (const \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution, const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Vector\+Xd \&costs, \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution\+\_\+new) const 
+\begin{DoxyCompactList}\small\item\em Update a distribution given the samples and costs of an epoch. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Updater_a4b660190fb18615402cbff5ececf9c2b}{update\+Distribution} (const \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution, const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Vector\+Xd \&costs, \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution\+\_\+new, \hyperlink{classDmpBbo_1_1UpdateSummary}{Update\+Summary} \&summary) const 
+\begin{DoxyCompactList}\small\item\em Update a distribution given the samples and costs of an epoch. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Updater_ac7a91b073fbe6e73a10c14fb73bd9689}{update\+Distribution} (const \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution, const Eigen\+::\+Matrix\+Xd \&samples, const Eigen\+::\+Vector\+Xd \&costs, Eigen\+::\+Vector\+Xd \&weights, \hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} \&distribution\+\_\+new) const =0
+\begin{DoxyCompactList}\small\item\em Update a distribution given the samples and costs of an epoch. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1Updater_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Interface for the distribution update step in evolution strategies. 
+
+Evolution strategies implement the following loop\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// distribution has been initialized above}
+\textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_update=1; i\_update<=n\_updates; i\_update++)
+  \textcolor{comment}{// Sample from distribution}
+  samples = distribution->generateSamples(n\_samples\_per\_update);
+  \textcolor{comment}{// Perform rollouts for the samples and compute costs}
+  costs = cost\_function\_solver->evaluate(samples);
+  \textcolor{comment}{// Update parameters}
+  distribution = updater->updateDistribution(distribution, samples, costs);
+\}
+\end{DoxyCode}
+
+
+The last step (updating the distribution) is implemented by classes inheriting from this \hyperlink{classDmpBbo_1_1Updater}{Updater} interface.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000004}{Todo}]Implement $<$$<$ and virtual to\+String with boost serialization \end{DoxyRefDesc}
+
+
+Definition at line 58 of file Updater.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1Updater_ae57a9f8264e9a9689fd21ef99c623227}{\index{Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}!update\+Distribution@{update\+Distribution}}
+\index{update\+Distribution@{update\+Distribution}!Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}}
+\paragraph[{update\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Distribution (
+\begin{DoxyParamCaption}
+\item[{const {\bf Distribution\+Gaussian} \&}]{distribution, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{costs, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{weights, }
+\item[{{\bf Distribution\+Gaussian} \&}]{distribution\+\_\+new, }
+\item[{{\bf Update\+Summary} \&}]{summary}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Updater_ae57a9f8264e9a9689fd21ef99c623227}
+
+
+Update a distribution given the samples and costs of an epoch. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em distribution} & Current distribution \\
+\hline
+\mbox{\tt in}  & {\em samples} & The samples in the epoch (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em costs} & Costs of the samples (size\+: n\+\_\+samples x 1) \\
+\hline
+\mbox{\tt out}  & {\em weights} & The weights computed from the costs \\
+\hline
+\mbox{\tt out}  & {\em distribution\+\_\+new} & Updated distribution \\
+\hline
+\mbox{\tt out}  & {\em summary} & An object containing all relevant update information, for logging and debugging purposes. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 70 of file Updater.\+hpp.
+
+
+\begin{DoxyCode}
+71   \{
+72     summary.distribution = distribution.clone();
+73     summary.samples = samples;
+74     summary.costs = costs;
+75     \hyperlink{classDmpBbo_1_1Updater_ae57a9f8264e9a9689fd21ef99c623227}{updateDistribution}(distribution, samples, costs, weights, distribution\_new);
+76     summary.weights = weights;
+77     summary.distribution\_new = distribution\_new.clone();
+78   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Updater_ae57a9f8264e9a9689fd21ef99c623227_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Updater_a9f3c0a24eb032b84b724a19deb77efd8}{\index{Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}!update\+Distribution@{update\+Distribution}}
+\index{update\+Distribution@{update\+Distribution}!Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}}
+\paragraph[{update\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Distribution (
+\begin{DoxyParamCaption}
+\item[{const {\bf Distribution\+Gaussian} \&}]{distribution, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{costs, }
+\item[{{\bf Distribution\+Gaussian} \&}]{distribution\+\_\+new}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Updater_a9f3c0a24eb032b84b724a19deb77efd8}
+
+
+Update a distribution given the samples and costs of an epoch. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em distribution} & Current distribution \\
+\hline
+\mbox{\tt in}  & {\em samples} & The samples in the epoch (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em costs} & Costs of the samples (size\+: n\+\_\+samples x 1) \\
+\hline
+\mbox{\tt out}  & {\em distribution\+\_\+new} & Updated distribution \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 86 of file Updater.\+hpp.
+
+
+\begin{DoxyCode}
+86                                                                                                            
+                                                                              \{
+87     Eigen::VectorXd weights;
+88     \hyperlink{classDmpBbo_1_1Updater_ae57a9f8264e9a9689fd21ef99c623227}{updateDistribution}(distribution, samples, costs, weights, distribution\_new);     
+89   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Updater_a9f3c0a24eb032b84b724a19deb77efd8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Updater_a4b660190fb18615402cbff5ececf9c2b}{\index{Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}!update\+Distribution@{update\+Distribution}}
+\index{update\+Distribution@{update\+Distribution}!Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}}
+\paragraph[{update\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Distribution (
+\begin{DoxyParamCaption}
+\item[{const {\bf Distribution\+Gaussian} \&}]{distribution, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{costs, }
+\item[{{\bf Distribution\+Gaussian} \&}]{distribution\+\_\+new, }
+\item[{{\bf Update\+Summary} \&}]{summary}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Updater_a4b660190fb18615402cbff5ececf9c2b}
+
+
+Update a distribution given the samples and costs of an epoch. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em distribution} & Current distribution \\
+\hline
+\mbox{\tt in}  & {\em samples} & The samples in the epoch (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em costs} & Costs of the samples (size\+: n\+\_\+samples x 1) \\
+\hline
+\mbox{\tt out}  & {\em distribution\+\_\+new} & Updated distribution \\
+\hline
+\mbox{\tt out}  & {\em summary} & An object containing all relevant update information, for logging and debugging purposes. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 98 of file Updater.\+hpp.
+
+
+\begin{DoxyCode}
+99   \{
+100     Eigen::VectorXd weights;
+101     \hyperlink{classDmpBbo_1_1Updater_ae57a9f8264e9a9689fd21ef99c623227}{updateDistribution}(distribution, samples, costs, weights, distribution\_new, summary);
+           
+102   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Updater_a4b660190fb18615402cbff5ececf9c2b_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Updater_ac7a91b073fbe6e73a10c14fb73bd9689}{\index{Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}!update\+Distribution@{update\+Distribution}}
+\index{update\+Distribution@{update\+Distribution}!Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}}
+\paragraph[{update\+Distribution}]{\setlength{\rightskip}{0pt plus 5cm}virtual void update\+Distribution (
+\begin{DoxyParamCaption}
+\item[{const {\bf Distribution\+Gaussian} \&}]{distribution, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{samples, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{costs, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{weights, }
+\item[{{\bf Distribution\+Gaussian} \&}]{distribution\+\_\+new}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1Updater_ac7a91b073fbe6e73a10c14fb73bd9689}
+
+
+Update a distribution given the samples and costs of an epoch. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em distribution} & Current distribution \\
+\hline
+\mbox{\tt in}  & {\em samples} & The samples in the epoch (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt in}  & {\em costs} & Costs of the samples (size\+: n\+\_\+samples x 1) \\
+\hline
+\mbox{\tt out}  & {\em weights} & The weights computed from the costs \\
+\hline
+\mbox{\tt out}  & {\em distribution\+\_\+new} & Updated distribution \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1UpdaterCovarAdaptation_aabb65aaf08049416ed18b294d5fca415}{Updater\+Covar\+Adaptation}, \hyperlink{classDmpBbo_1_1UpdaterCovarDecay_aabb65aaf08049416ed18b294d5fca415}{Updater\+Covar\+Decay}, and \hyperlink{classDmpBbo_1_1UpdaterMean_aabb65aaf08049416ed18b294d5fca415}{Updater\+Mean}.
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1Updater_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Updater@{Dmp\+Bbo\+::\+Updater}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1Updater_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 115 of file Updater.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Updater_8hpp}{Updater.\+hpp}\end{DoxyCompactItemize}

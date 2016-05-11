@@ -1,0 +1,7 @@
+<map id="saveGridData" name="saveGridData">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1UnifiedModel.html#a53d95f63de3b49491b1204f45a24ae25" title="Generate a grid of inputs, and output the response of the basis functions and line segments for these..." alt="" coords="163,49,327,90"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#a61da4383ffab7d919c98d628c1d217d1" title="Generate a input samples that lie on a grid (much like Matlab&#39;s meshgrid) For instance, if min = [2 6], and max = [3 8], and n_samples_per_dim = [3 5] then this function first makes linearly spaces samples along each dimension, e.g. " alt="" coords="385,5,529,32"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1UnifiedModel.html#ae8174f3d5e718d18c587c9bd50dc333f" title="Get the output of each linear model (unweighted) for the given inputs. " alt="" coords="587,49,751,90"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1UnifiedModel.html#a7f75b15a5b46d4efa1974290cab4b901" title="Compute the sum of the locally weighted lines. " alt="" coords="375,107,539,149"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1UnifiedModel.html#a125cc60559b55f7348beb15f25834b6f" title="Get the kernel activations for given inputs. " alt="" coords="587,114,751,155"/>
+</map>

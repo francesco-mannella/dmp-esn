@@ -1,0 +1,151 @@
+\hypertarget{demoEvolutionaryOptimization_8cpp}{\subsection{demo\+Evolutionary\+Optimization.\+cpp File Reference}
+\label{demoEvolutionaryOptimization_8cpp}\index{demo\+Evolutionary\+Optimization.\+cpp@{demo\+Evolutionary\+Optimization.\+cpp}}
+}
+
+
+Demonstrates how to run an evolution strategy to optimize a distance function, implemented as a Cost\+Function.  
+
+
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Eigen\+Boost\+Serialization.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Cost\+Function.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/run\+Evolutionary\+Optimization.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Distribution\+Gaussian.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/updaters/\+Updater\+Mean.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/updaters/\+Updater\+Covar\+Decay.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/updaters/\+Updater\+Covar\+Adaptation.\+hpp\char`\"{}}\\*
+Include dependency graph for demo\+Evolutionary\+Optimization.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoEvolutionaryOptimization_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1DemoCostFunctionDistanceToPoint}{Demo\+Cost\+Function\+Distance\+To\+Point}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classDmpBbo_1_1CostFunction}{Cost\+Function} in which the distance to a pre-\/defined point must be minimized. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{demoEvolutionaryOptimization_8cpp_a4c740be97d066078bad8e3997193c673}{main} (int n\+\_\+args, char $\ast$args\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Demonstrates how to run an evolution strategy to optimize a distance function, implemented as a Cost\+Function. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{demoEvolutionaryOptimization_8cpp_source}{demo\+Evolutionary\+Optimization.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{demoEvolutionaryOptimization_8cpp_a4c740be97d066078bad8e3997193c673}{\index{demo\+Evolutionary\+Optimization.\+cpp@{demo\+Evolutionary\+Optimization.\+cpp}!main@{main}}
+\index{main@{main}!demo\+Evolutionary\+Optimization.\+cpp@{demo\+Evolutionary\+Optimization.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+args, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{demoEvolutionaryOptimization_8cpp_a4c740be97d066078bad8e3997193c673}
+
+
+Main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+args} & Number of arguments \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments themselves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success of exection. 0 if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 107 of file demo\+Evolutionary\+Optimization.\+cpp.
+
+
+\begin{DoxyCode}
+108 \{
+109   \textcolor{comment}{// If program has an argument, it is a directory to which to save files too (or --help)}
+110   \textcolor{keywordtype}{string} directory;
+111   \textcolor{keywordtype}{string} covar\_update = \textcolor{stringliteral}{"decay"};
+112   \textcolor{keywordflow}{if} (n\_args>1)
+113   \{
+114     \textcolor{keywordflow}{if} (\textcolor{keywordtype}{string}(args[1]).compare(\textcolor{stringliteral}{"--help"})==0)
+115     \{
+116       cout << \textcolor{stringliteral}{"Usage: "} << args[0] << \textcolor{stringliteral}{" [directory] [covar\_update]"} << endl;
+117       cout << \textcolor{stringliteral}{"                    directory: optional directory to save data to"} << endl;
+118       cout << \textcolor{stringliteral}{"                    covar\_update: [none|decay|adaptation]"} << endl;
+119       \textcolor{keywordflow}{return} 0;
+120     \}
+121     \textcolor{keywordflow}{else}
+122     \{
+123       directory = string(args[1]);
+124     \}
+125     \textcolor{keywordflow}{if} (n\_args>2)
+126     \{
+127       covar\_update = string(args[2]);
+128     \}
+129   \}
+130   
+131   \textcolor{keywordtype}{int} n\_dims = 2;
+132   \textcolor{comment}{//VectorXd minimum = VectorXd::LinSpaced(n\_dims,1,n\_dims);}
+133   VectorXd minimum = VectorXd::Zero(n\_dims);
+134   
+135   \hyperlink{classDmpBbo_1_1CostFunction}{CostFunction}* cost\_function = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1DemoCostFunctionDistanceToPoint}{DemoCostFunctionDistanceToPoint}
+      (minimum);
+136   
+137   VectorXd mean\_init  =  5.0*VectorXd::Ones(n\_dims);
+138   MatrixXd covar\_init =  4.0*MatrixXd::Identity(n\_dims,n\_dims);
+139   \hyperlink{classDmpBbo_1_1DistributionGaussian}{DistributionGaussian}* distribution = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1DistributionGaussian}{DistributionGaussian}(mean\_init, covar\_init); 
+140   
+141   \hyperlink{classDmpBbo_1_1Updater}{Updater}* updater = NULL;
+142   \textcolor{keywordtype}{double} eliteness = 10;
+143   \textcolor{keywordtype}{string} weighting\_method = \textcolor{stringliteral}{"PI-BB"};
+144     
+145   \textcolor{keywordflow}{if} (covar\_update.compare(\textcolor{stringliteral}{"none"})==0)
+146   \{
+147     updater = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1UpdaterMean}{UpdaterMean}(eliteness,weighting\_method);
+148   \}
+149   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (covar\_update.compare(\textcolor{stringliteral}{"decay"})==0)
+150   \{
+151     \textcolor{keywordtype}{double} covar\_decay\_factor = 0.8;
+152     updater = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1UpdaterCovarDecay}{UpdaterCovarDecay}(eliteness,covar\_decay\_factor,weighting\_method);
+153   \}
+154   \textcolor{keywordflow}{else} 
+155   \{
+156     VectorXd base\_level = VectorXd::Constant(n\_dims,0.000001);
+157     eliteness = 10;
+158     \textcolor{keywordtype}{bool} diag\_only = \textcolor{keyword}{false};
+159     \textcolor{keywordtype}{double} learning\_rate = 0.75;
+160     updater = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1UpdaterCovarAdaptation}{UpdaterCovarAdaptation}(eliteness,weighting\_method,base\_level,
+      diag\_only,learning\_rate);  
+161   \}
+162     
+163   
+164   \textcolor{keywordtype}{int} n\_samples\_per\_update = 10;
+165   \textcolor{keywordtype}{int} n\_updates = 40;
+166   \textcolor{keywordtype}{bool} overwrite = \textcolor{keyword}{true};  
+167   runEvolutionaryOptimization(cost\_function, distribution, updater, n\_updates, n\_samples\_per\_update,
+      directory,overwrite);
+168   
+169 \}
+\end{DoxyCode}

@@ -1,0 +1,440 @@
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR}{\subsection{Function\+Approximator\+L\+W\+P\+R Class Reference}
+\label{classDmpBbo_1_1FunctionApproximatorLWPR}\index{Function\+Approximator\+L\+W\+P\+R@{Function\+Approximator\+L\+W\+P\+R}}
+}
+
+
+L\+W\+P\+R (Locally Weighted Projection Regression) function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Function\+Approximator\+L\+W\+P\+R.\+hpp$>$}
+
+
+
+Inheritance diagram for Function\+Approximator\+L\+W\+P\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classDmpBbo_1_1FunctionApproximatorLWPR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Function\+Approximator\+L\+W\+P\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classDmpBbo_1_1FunctionApproximatorLWPR__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ae20c704e818a6af0beb9189a4c37927b}{Function\+Approximator\+L\+W\+P\+R} (const \hyperlink{classDmpBbo_1_1MetaParametersLWPR}{Meta\+Parameters\+L\+W\+P\+R} $\ast$const meta\+\_\+parameters, const \hyperlink{classDmpBbo_1_1ModelParametersLWPR}{Model\+Parameters\+L\+W\+P\+R} $\ast$const model\+\_\+parameters=N\+U\+L\+L)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with meta-\/ and model-\/parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_a4886bc268182a27dd0bdc62e9022d700}{Function\+Approximator\+L\+W\+P\+R} (const \hyperlink{classDmpBbo_1_1ModelParametersLWPR}{Model\+Parameters\+L\+W\+P\+R} $\ast$const model\+\_\+parameters)
+\begin{DoxyCompactList}\small\item\em Initialize a function approximator with model parameters. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ad792a46ac006916c5c1ffed2fa42dd24}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ac453415cf4894aba45e8db6ebc4cd4dc}{train} (const Eigen\+::\+Matrix\+Xd \&input, const Eigen\+::\+Matrix\+Xd \&target)
+\begin{DoxyCompactList}\small\item\em Train the function approximator with corresponding input and target examples. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{predict} (const Eigen\+::\+Matrix\+Xd \&input, Eigen\+::\+Matrix\+Xd \&output)
+\begin{DoxyCompactList}\small\item\em Query the function approximator to make a prediction. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ad4c95407e44ba3e16b9651f9b81cd0e6}{get\+Name} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the name of this function approximator. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_a50124b32a40e1246d8d241be4f668563}{set\+\_\+print\+\_\+training\+\_\+progress} (bool print\+\_\+training\+\_\+progress)
+\begin{DoxyCompactList}\small\item\em Print some output to cout during training. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+L\+W\+P\+R (Locally Weighted Projection Regression) function approximator. 
+
+Definition at line 44 of file Function\+Approximator\+L\+W\+P\+R.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR_ae20c704e818a6af0beb9189a4c37927b}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}!Function\+Approximator\+L\+W\+P\+R@{Function\+Approximator\+L\+W\+P\+R}}
+\index{Function\+Approximator\+L\+W\+P\+R@{Function\+Approximator\+L\+W\+P\+R}!Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}}
+\paragraph[{Function\+Approximator\+L\+W\+P\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator\+L\+W\+P\+R} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Meta\+Parameters\+L\+W\+P\+R} $\ast$const}]{meta\+\_\+parameters, }
+\item[{const {\bf Model\+Parameters\+L\+W\+P\+R} $\ast$const}]{model\+\_\+parameters = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorLWPR_ae20c704e818a6af0beb9189a4c37927b}
+
+
+Initialize a function approximator with meta-\/ and model-\/parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em meta\+\_\+parameters} & The training algorithm meta-\/parameters \\
+\hline
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the trained model. If this parameter is not passed, the function approximator is initialized as untrained. In this case, you must call \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator\+::train()} before being able to call \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator\+::predict()}. Either meta\+\_\+parameters X\+O\+R model-\/parameters can passed as N\+U\+L\+L, but not both. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file Function\+Approximator\+L\+W\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+49 :
+50   \hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{FunctionApproximator}(meta\_parameters,model\_parameters),
+51   print\_training\_progress\_(\textcolor{keyword}{false})
+52 \{
+53 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR_a4886bc268182a27dd0bdc62e9022d700}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}!Function\+Approximator\+L\+W\+P\+R@{Function\+Approximator\+L\+W\+P\+R}}
+\index{Function\+Approximator\+L\+W\+P\+R@{Function\+Approximator\+L\+W\+P\+R}!Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}}
+\paragraph[{Function\+Approximator\+L\+W\+P\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator\+L\+W\+P\+R} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Model\+Parameters\+L\+W\+P\+R} $\ast$const}]{model\+\_\+parameters}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1FunctionApproximatorLWPR_a4886bc268182a27dd0bdc62e9022d700}
+
+
+Initialize a function approximator with model parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em model\+\_\+parameters} & The parameters of the (previously) trained model. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Function\+Approximator\+L\+W\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+56 :
+57   \hyperlink{classDmpBbo_1_1FunctionApproximator_a1d3363a4408af30b1251cbf7b4588f87}{FunctionApproximator}(model\_parameters),
+58   print\_training\_progress\_(\textcolor{keyword}{false})
+59 \{
+60 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR_ad792a46ac006916c5c1ffed2fa42dd24}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Function\+Approximator} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorLWPR_ad792a46ac006916c5c1ffed2fa42dd24}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a9b6a690060f1d845da16d6d739ded2d9}{Function\+Approximator}.
+
+
+
+Definition at line 62 of file Function\+Approximator\+L\+W\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+62                                                                 \{
+63   \textcolor{comment}{// All error checking and cloning is left to the FunctionApproximator constructor.}
+64   \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ae20c704e818a6af0beb9189a4c37927b}{FunctionApproximatorLWPR}* fa\_lwpr = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ae20c704e818a6af0beb9189a4c37927b}{FunctionApproximatorLWPR}(
+65     dynamic\_cast<const MetaParametersLWPR*>(\hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{getMetaParameters}()),
+66     dynamic\_cast<const ModelParametersLWPR*>(\hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}())
+67     );
+68   fa\_lwpr->set\_print\_training\_progress(print\_training\_progress\_);
+69   \textcolor{keywordflow}{return} fa\_lwpr;
+70 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classDmpBbo_1_1FunctionApproximatorLWPR_ad792a46ac006916c5c1ffed2fa42dd24_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR_ac453415cf4894aba45e8db6ebc4cd4dc}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}!train@{train}}
+\index{train@{train}!Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}}
+\paragraph[{train}]{\setlength{\rightskip}{0pt plus 5cm}void train (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{targets}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorLWPR_ac453415cf4894aba45e8db6ebc4cd4dc}
+
+
+Train the function approximator with corresponding input and target examples. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the training examples \\
+\hline
+\mbox{\tt in}  & {\em targets} & Target values of the training examples \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a9781476c7d296da4aaf50e74cd273a75}{Function\+Approximator}.
+
+
+
+Definition at line 72 of file Function\+Approximator\+L\+W\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+73 \{
+74   \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+75   \{
+76     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorLWPR::train more than once. Doing nothing."} << 
+      endl;
+77     cerr << \textcolor{stringliteral}{"   (if you really want to retrain, call reTrain function instead)"} << endl;
+78     \textcolor{keywordflow}{return};
+79   \}
+80   
+81   assert(inputs.rows() == targets.rows()); \textcolor{comment}{// Must have same number of examples}
+82   assert(inputs.cols()==\hyperlink{classDmpBbo_1_1FunctionApproximator_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}());
+83   
+84   \textcolor{keyword}{const} MetaParametersLWPR* meta\_parameters\_lwpr = \textcolor{keyword}{dynamic\_cast<}\textcolor{keyword}{const }MetaParametersLWPR*\textcolor{keyword}{>}(
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_a6f1a44062eac61d88b647c358bcda155}{getMetaParameters}());
+85   
+86   \textcolor{keywordtype}{int} n\_in =inputs.cols();
+87   \textcolor{keywordtype}{int} n\_out=targets.cols();
+88  
+89   LWPR\_Object* lwpr\_object = \textcolor{keyword}{new} LWPR\_Object(n\_in, n\_out);
+90         lwpr\_object->setInitD(    meta\_parameters\_lwpr->init\_D\_[0]); \textcolor{comment}{// todo Fix this}
+91         lwpr\_object->wGen(        meta\_parameters\_lwpr->w\_gen\_);
+92   lwpr\_object->wPrune(      meta\_parameters\_lwpr->w\_prune\_);
+93   lwpr\_object->updateD(     meta\_parameters\_lwpr->update\_D\_);
+94   lwpr\_object->setInitAlpha(meta\_parameters\_lwpr->init\_alpha\_);
+95   lwpr\_object->penalty(     meta\_parameters\_lwpr->penalty\_);
+96         lwpr\_object->diagOnly(    meta\_parameters\_lwpr->diag\_only\_);
+97   lwpr\_object->useMeta(     meta\_parameters\_lwpr->use\_meta\_);
+98   lwpr\_object->metaRate(    meta\_parameters\_lwpr->meta\_rate\_);
+99   lwpr\_object->kernel(      meta\_parameters\_lwpr->kernel\_name\_.c\_str());
+100    
+101   
+102   vector<double> input\_vector(n\_in);
+103   vector<double> target\_vector(n\_out);
+104   \textcolor{keywordtype}{int} n\_input\_samples = inputs.rows();
+105   
+106   \textcolor{comment}{//http://stackoverflow.com/questions/15858569/randomly-permute-rows-columns-of-a-matrix-with-eigen}
+107   PermutationMatrix<Dynamic,Dynamic> permute(n\_input\_samples);  
+108   permute.setIdentity();
+109   VectorXi shuffled\_indices = VectorXi::LinSpaced(n\_input\_samples,0,n\_input\_samples-1);
+110   MatrixXd outputs;
+111   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} iterations=0; iterations<50; iterations++)
+112   \{
+113     random\_shuffle(permute.indices().data(), permute.indices().data()+permute.indices().size());
+114     shuffled\_indices = (shuffled\_indices.transpose()*permute).transpose();
+115 
+116     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<n\_input\_samples; ii++)
+117     \{
+118       \textcolor{comment}{// Eigen::VectorXd -> std::vector}
+119       Map<VectorXd>(input\_vector.data(),n\_in) = inputs.row(shuffled\_indices[ii]);  
+120       Map<VectorXd>(target\_vector.data(),n\_out) = targets.row(shuffled\_indices[ii]);
+121       \textcolor{comment}{// update model}
+122       lwpr\_object->update(input\_vector, target\_vector);
+123     \}
+124 
+125     \textcolor{keywordflow}{if} (print\_training\_progress\_)
+126     \{
+127       \textcolor{keywordflow}{if} (iterations%5==0)
+128       \{
+129         \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ae20c704e818a6af0beb9189a4c37927b}{FunctionApproximatorLWPR}* fa\_tmp = \textcolor{keyword}{new} 
+      \hyperlink{classDmpBbo_1_1FunctionApproximatorLWPR_ae20c704e818a6af0beb9189a4c37927b}{FunctionApproximatorLWPR}(\textcolor{keyword}{new} ModelParametersLWPR(\textcolor{keyword}{new} LWPR\_Object(*lwpr\_object)));
+130         fa\_tmp->predict(inputs, outputs);
+131         \textcolor{keyword}{delete} fa\_tmp;
+132         MatrixXd abs\_error = (targets.array()-outputs.array()).abs();
+133         VectorXd mean\_abs\_error\_per\_output\_dim = abs\_error.colwise().mean();
+134         cout << \textcolor{stringliteral}{"Iteration "} << iterations << \textcolor{stringliteral}{" MEA="} << mean\_abs\_error\_per\_output\_dim << endl;
+135       \}
+136     \}
+137     
+138   \}
+139   \hyperlink{classDmpBbo_1_1FunctionApproximator_afd6f9d480456b90c4740c7aaca084ba4}{setModelParameters}(\textcolor{keyword}{new} ModelParametersLWPR(lwpr\_object));
+140   
+141 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1FunctionApproximatorLWPR_ac453415cf4894aba45e8db6ebc4cd4dc_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}!predict@{predict}}
+\index{predict@{predict}!Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}}
+\paragraph[{predict}]{\setlength{\rightskip}{0pt plus 5cm}void predict (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{outputs}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorLWPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6}
+
+
+Query the function approximator to make a prediction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & Input values of the query \\
+\hline
+\mbox{\tt out}  & {\em outputs} & Predicted output values\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This method should be const. But third party functions which is called in this function have not always been implemented as const (Examples\+: L\+W\+P\+R\+Object\+::predict or I\+R\+F\+R\+L\+S\+::predict ). Therefore, this function cannot be const. 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a0547681a81d4c43ce2601f16047baf7a}{Function\+Approximator}.
+
+
+
+Definition at line 144 of file Function\+Approximator\+L\+W\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+145 \{
+146   \textcolor{keywordflow}{if} (!\hyperlink{classDmpBbo_1_1FunctionApproximator_a178135f623d9b9058870851a53299c6e}{isTrained}())  
+147   \{
+148     cerr << \textcolor{stringliteral}{"WARNING: You may not call FunctionApproximatorLWPR::predict if you have not trained yet. Doing
+       nothing."} << endl;
+149     \textcolor{keywordflow}{return};
+150   \}
+151 
+152   \textcolor{keyword}{const} ModelParametersLWPR* model\_parameters\_lwpr = \textcolor{keyword}{static\_cast<}\textcolor{keyword}{const }ModelParametersLWPR*\textcolor{keyword}{>}(
+      \hyperlink{classDmpBbo_1_1FunctionApproximator_a0e7e116ed9b159d782fca544dacb4bac}{getModelParameters}());
+153 
+154   \textcolor{keywordtype}{int} n\_in  = model\_parameters\_lwpr->lwpr\_object\_->model.nIn;
+155   assert(inputs.cols()==n\_in);
+156   
+157   \textcolor{keywordtype}{int} n\_input\_samples = inputs.rows();
+158   \textcolor{keywordtype}{int} n\_out = model\_parameters\_lwpr->lwpr\_object\_->model.nOut;
+159 
+160   outputs.resize(n\_input\_samples,n\_out);
+161   
+162   \textcolor{comment}{// Allocate memory for the temporary vectors for LWPR\_Object::predict}
+163   vector<double> input\_vector(n\_in);
+164   vector<double> output\_vector(n\_out);
+165 
+166   \textcolor{comment}{// Do prediction for each sample  }
+167   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} ii=0; ii<n\_input\_samples; ii++)
+168   \{
+169     \textcolor{comment}{// LWPR\_Object::predict uses std::vector, so do some conversions here.}
+170     Map<VectorXd>(input\_vector.data(),n\_in) = inputs.row(ii);  \textcolor{comment}{// Eigen::VectorXd -> std::vector}
+171     output\_vector = model\_parameters\_lwpr->lwpr\_object\_->predict(input\_vector);
+172     outputs.row(ii) = Map<VectorXd>(&output\_vector[0], n\_out); \textcolor{comment}{// std::vector -> Eigen::VectorXd}
+173   \}
+174   
+175 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classDmpBbo_1_1FunctionApproximatorLWPR_afe8dcfb9cd065dfde38dce1f6e6cd3e6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR_ad4c95407e44ba3e16b9651f9b81cd0e6}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}}
+\paragraph[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string get\+Name (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1FunctionApproximatorLWPR_ad4c95407e44ba3e16b9651f9b81cd0e6}
+
+
+Get the name of this function approximator. 
+
+\begin{DoxyReturn}{Returns}
+Name of this function approximator 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1FunctionApproximator_a8c8a804456f63ff9a3acc4dacf6163a5}{Function\+Approximator}.
+
+
+
+Definition at line 68 of file Function\+Approximator\+L\+W\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+68                                       \{
+69     \textcolor{keywordflow}{return} std::string(\textcolor{stringliteral}{"LWPR"});  
+70   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR_a50124b32a40e1246d8d241be4f668563}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}!set\+\_\+print\+\_\+training\+\_\+progress@{set\+\_\+print\+\_\+training\+\_\+progress}}
+\index{set\+\_\+print\+\_\+training\+\_\+progress@{set\+\_\+print\+\_\+training\+\_\+progress}!Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}}
+\paragraph[{set\+\_\+print\+\_\+training\+\_\+progress}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+print\+\_\+training\+\_\+progress (
+\begin{DoxyParamCaption}
+\item[{bool}]{print\+\_\+training\+\_\+progress}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1FunctionApproximatorLWPR_a50124b32a40e1246d8d241be4f668563}
+
+
+Print some output to cout during training. 
+
+This can be useful to see if the error is decreasing consistently. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em print\+\_\+training\+\_\+progress} & true\+: print to cout, false\+: do nothing. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file Function\+Approximator\+L\+W\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+78   \{
+79     print\_training\_progress\_ = print\_training\_progress;
+80   \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1FunctionApproximatorLWPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Function\+Approximator\+L\+W\+P\+R}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1FunctionApproximatorLWPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 91 of file Function\+Approximator\+L\+W\+P\+R.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{FunctionApproximatorLWPR_8hpp}{Function\+Approximator\+L\+W\+P\+R.\+hpp}\item 
+\hyperlink{FunctionApproximatorLWPR_8cpp}{Function\+Approximator\+L\+W\+P\+R.\+cpp}\end{DoxyCompactItemize}

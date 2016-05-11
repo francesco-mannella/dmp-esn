@@ -1,0 +1,5 @@
+<map id="Task" name="Task">
+<area shape="rect" id="node2" href="$classDemoTaskApproximateQuadraticFunction.html" title="The task is to choose the parameters a and c such that the function &#160;best matches a set of target val..." alt="" coords="5,80,236,121"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1TaskWithTrajectoryDemonstrator.html" title="Interface for tasks that are able to provide demonstrations that solve the task (optimally). " alt="" coords="260,87,491,114"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1TaskViapoint.html" title="Task for passing through a viapoint with minimal acceleration. " alt="" coords="323,169,427,196"/>
+</map>

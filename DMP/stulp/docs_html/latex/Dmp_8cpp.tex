@@ -1,0 +1,260 @@
+\hypertarget{Dmp_8cpp}{\subsection{Dmp.\+cpp File Reference}
+\label{Dmp_8cpp}\index{Dmp.\+cpp@{Dmp.\+cpp}}
+}
+
+
+Dmp class source file.  
+
+
+{\ttfamily \#include $<$boost/serialization/export.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/serialization/vector.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/text\+\_\+iarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/text\+\_\+oarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/xml\+\_\+iarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/xml\+\_\+oarchive.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Dmp.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Trajectory.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Spring\+Damper\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Exponential\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Time\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dynamicalsystems/\+Sigmoid\+System.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Eigen\+Boost\+Serialization.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmpbbo\+\_\+io/\+Boost\+Serialization\+To\+String.\+hpp\char`\"{}}\\*
+Include dependency graph for Dmp.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Dmp_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Dmp_8cpp_afd6e003f3b783d5036fdc6670fb22e62}{S\+P\+R\+I\+N\+G}~segment(0$\ast$dim\+\_\+orig()+0,2$\ast$dim\+\_\+orig())
+\begin{DoxyCompactList}\small\item\em Extracts all variables of the spring-\/damper system from a state vector, e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_a23a0799f88d919e8def64de43a330133}{S\+P\+R\+I\+N\+G\+\_\+\+Y}~segment(0$\ast$dim\+\_\+orig()+0,dim\+\_\+orig())
+\begin{DoxyCompactList}\small\item\em Extracts first order variables of the spring-\/damper system from a state vector, e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_ae6764ae503050fc93ec36d0e9ec3eaf1}{S\+P\+R\+I\+N\+G\+\_\+\+Z}~segment(1$\ast$dim\+\_\+orig()+0,dim\+\_\+orig())
+\begin{DoxyCompactList}\small\item\em Extracts second order variables of the spring-\/damper system from a state vector, e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_a236f7135ab66c95a8da2d629f752665d}{G\+O\+A\+L}~segment(2$\ast$dim\+\_\+orig()+0,dim\+\_\+orig())
+\begin{DoxyCompactList}\small\item\em Extracts all variables of the goal from a state vector, e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_a8d6360b29483bf26b8fad7441892fb78}{P\+H\+A\+S\+E}~segment(3$\ast$dim\+\_\+orig()+0,       1)
+\begin{DoxyCompactList}\small\item\em Extracts the phase variable (1-\/\+D) from a state vector, e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_a012db53c0f293acd0ae0eccda2cdc729}{G\+A\+T\+I\+N\+G}~segment(3$\ast$dim\+\_\+orig()+1,       1)
+\begin{DoxyCompactList}\small\item\em Extracts all variables of the gating system from a state vector, e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_aed49d807a53678b09e8c609511b3fd07}{S\+P\+R\+I\+N\+G\+M}(T)~block(0,0$\ast$dim\+\_\+orig()+0,T,2$\ast$dim\+\_\+orig())
+\begin{DoxyCompactList}\small\item\em Extracts first T (time steps) state vectors of the spring-\/damper system , e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_a23fd2ee3d1ecea17f623892d2c33c397}{S\+P\+R\+I\+N\+G\+M\+\_\+\+Y}(T)~block(0,0$\ast$dim\+\_\+orig()+0,T,dim\+\_\+orig())
+\begin{DoxyCompactList}\small\item\em Extracts first T (time steps) state vectors of the spring-\/damper system , e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_aca31ea2584100be6b9077ac6aaaa2b03}{S\+P\+R\+I\+N\+G\+M\+\_\+\+Z}(T)~block(0,1$\ast$dim\+\_\+orig()+0,T,dim\+\_\+orig())
+\begin{DoxyCompactList}\small\item\em Extracts first T (time steps) state vectors of the spring-\/damper system , e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_aa8851783ee05ed508db33ac204cf1802}{G\+O\+A\+L\+M}(T)~block(0,2$\ast$dim\+\_\+orig()+0,T,dim\+\_\+orig())
+\begin{DoxyCompactList}\small\item\em Extracts first T (time steps) state vectors of the goal system, e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_a3bf7b4312a1f83d83f1b5b5d170a077c}{P\+H\+A\+S\+E\+M}(T)~block(0,3$\ast$dim\+\_\+orig()+0,T,       1)
+\begin{DoxyCompactList}\small\item\em Extracts first T (time steps) states of the phase system, e.\+g. \end{DoxyCompactList}\item 
+\#define \hyperlink{Dmp_8cpp_a8fc3c96e333070b3e556ccc7a0a9561e}{G\+A\+T\+I\+N\+G\+M}(T)~block(0,3$\ast$dim\+\_\+orig()+1,T,       1)
+\begin{DoxyCompactList}\small\item\em Extracts first T (time steps) state vectors of the gating system, e.\+g. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Dmp_8cpp_aac84aecfc9df9aeaf45fab048fa1f9e2}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T} (\hyperlink{classDmpBbo_1_1Dmp}{Dmp\+Bbo\+::\+Dmp})
+\begin{DoxyCompactList}\small\item\em For boost\+::serialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Dmp class source file. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{Dmp_8cpp_source}{Dmp.\+cpp}.
+
+
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{Dmp_8cpp_afd6e003f3b783d5036fdc6670fb22e62}{\index{Dmp.\+cpp@{Dmp.\+cpp}!S\+P\+R\+I\+N\+G@{S\+P\+R\+I\+N\+G}}
+\index{S\+P\+R\+I\+N\+G@{S\+P\+R\+I\+N\+G}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{S\+P\+R\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+R\+I\+N\+G~segment(0$\ast$dim\+\_\+orig()+0,2$\ast$dim\+\_\+orig())}}\label{Dmp_8cpp_afd6e003f3b783d5036fdc6670fb22e62}
+
+
+Extracts all variables of the spring-\/damper system from a state vector, e.\+g. 
+
+state.\+S\+P\+R\+I\+N\+G 
+
+Definition at line 58 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_a23a0799f88d919e8def64de43a330133}{\index{Dmp.\+cpp@{Dmp.\+cpp}!S\+P\+R\+I\+N\+G\+\_\+\+Y@{S\+P\+R\+I\+N\+G\+\_\+\+Y}}
+\index{S\+P\+R\+I\+N\+G\+\_\+\+Y@{S\+P\+R\+I\+N\+G\+\_\+\+Y}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{S\+P\+R\+I\+N\+G\+\_\+\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+R\+I\+N\+G\+\_\+\+Y~segment(0$\ast$dim\+\_\+orig()+0,dim\+\_\+orig())}}\label{Dmp_8cpp_a23a0799f88d919e8def64de43a330133}
+
+
+Extracts first order variables of the spring-\/damper system from a state vector, e.\+g. 
+
+state.\+S\+P\+R\+I\+N\+G\+M\+\_\+\+Y 
+
+Definition at line 60 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_ae6764ae503050fc93ec36d0e9ec3eaf1}{\index{Dmp.\+cpp@{Dmp.\+cpp}!S\+P\+R\+I\+N\+G\+\_\+\+Z@{S\+P\+R\+I\+N\+G\+\_\+\+Z}}
+\index{S\+P\+R\+I\+N\+G\+\_\+\+Z@{S\+P\+R\+I\+N\+G\+\_\+\+Z}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{S\+P\+R\+I\+N\+G\+\_\+\+Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+R\+I\+N\+G\+\_\+\+Z~segment(1$\ast$dim\+\_\+orig()+0,dim\+\_\+orig())}}\label{Dmp_8cpp_ae6764ae503050fc93ec36d0e9ec3eaf1}
+
+
+Extracts second order variables of the spring-\/damper system from a state vector, e.\+g. 
+
+state.\+S\+P\+R\+I\+N\+G\+\_\+\+Z 
+
+Definition at line 62 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_a236f7135ab66c95a8da2d629f752665d}{\index{Dmp.\+cpp@{Dmp.\+cpp}!G\+O\+A\+L@{G\+O\+A\+L}}
+\index{G\+O\+A\+L@{G\+O\+A\+L}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{G\+O\+A\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+O\+A\+L~segment(2$\ast$dim\+\_\+orig()+0,dim\+\_\+orig())}}\label{Dmp_8cpp_a236f7135ab66c95a8da2d629f752665d}
+
+
+Extracts all variables of the goal from a state vector, e.\+g. 
+
+state.\+G\+O\+A\+L 
+
+Definition at line 64 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_a8d6360b29483bf26b8fad7441892fb78}{\index{Dmp.\+cpp@{Dmp.\+cpp}!P\+H\+A\+S\+E@{P\+H\+A\+S\+E}}
+\index{P\+H\+A\+S\+E@{P\+H\+A\+S\+E}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{P\+H\+A\+S\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+A\+S\+E~segment(3$\ast$dim\+\_\+orig()+0,       1)}}\label{Dmp_8cpp_a8d6360b29483bf26b8fad7441892fb78}
+
+
+Extracts the phase variable (1-\/\+D) from a state vector, e.\+g. 
+
+state.\+P\+H\+A\+S\+E 
+
+Definition at line 66 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_a012db53c0f293acd0ae0eccda2cdc729}{\index{Dmp.\+cpp@{Dmp.\+cpp}!G\+A\+T\+I\+N\+G@{G\+A\+T\+I\+N\+G}}
+\index{G\+A\+T\+I\+N\+G@{G\+A\+T\+I\+N\+G}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{G\+A\+T\+I\+N\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+A\+T\+I\+N\+G~segment(3$\ast$dim\+\_\+orig()+1,       1)}}\label{Dmp_8cpp_a012db53c0f293acd0ae0eccda2cdc729}
+
+
+Extracts all variables of the gating system from a state vector, e.\+g. 
+
+state.\+G\+A\+T\+I\+N\+G 
+
+Definition at line 68 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_aed49d807a53678b09e8c609511b3fd07}{\index{Dmp.\+cpp@{Dmp.\+cpp}!S\+P\+R\+I\+N\+G\+M@{S\+P\+R\+I\+N\+G\+M}}
+\index{S\+P\+R\+I\+N\+G\+M@{S\+P\+R\+I\+N\+G\+M}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{S\+P\+R\+I\+N\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+R\+I\+N\+G\+M(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~block(0,0$\ast$dim\+\_\+orig()+0,T,2$\ast$dim\+\_\+orig())}}\label{Dmp_8cpp_aed49d807a53678b09e8c609511b3fd07}
+
+
+Extracts first T (time steps) state vectors of the spring-\/damper system , e.\+g. 
+
+states.\+S\+P\+R\+I\+N\+G(100) 
+
+Definition at line 71 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_a23fd2ee3d1ecea17f623892d2c33c397}{\index{Dmp.\+cpp@{Dmp.\+cpp}!S\+P\+R\+I\+N\+G\+M\+\_\+\+Y@{S\+P\+R\+I\+N\+G\+M\+\_\+\+Y}}
+\index{S\+P\+R\+I\+N\+G\+M\+\_\+\+Y@{S\+P\+R\+I\+N\+G\+M\+\_\+\+Y}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{S\+P\+R\+I\+N\+G\+M\+\_\+\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+R\+I\+N\+G\+M\+\_\+\+Y(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~block(0,0$\ast$dim\+\_\+orig()+0,T,dim\+\_\+orig())}}\label{Dmp_8cpp_a23fd2ee3d1ecea17f623892d2c33c397}
+
+
+Extracts first T (time steps) state vectors of the spring-\/damper system , e.\+g. 
+
+states.\+S\+P\+R\+I\+N\+G\+M\+\_\+\+Y(100) 
+
+Definition at line 73 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_aca31ea2584100be6b9077ac6aaaa2b03}{\index{Dmp.\+cpp@{Dmp.\+cpp}!S\+P\+R\+I\+N\+G\+M\+\_\+\+Z@{S\+P\+R\+I\+N\+G\+M\+\_\+\+Z}}
+\index{S\+P\+R\+I\+N\+G\+M\+\_\+\+Z@{S\+P\+R\+I\+N\+G\+M\+\_\+\+Z}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{S\+P\+R\+I\+N\+G\+M\+\_\+\+Z}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+P\+R\+I\+N\+G\+M\+\_\+\+Z(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~block(0,1$\ast$dim\+\_\+orig()+0,T,dim\+\_\+orig())}}\label{Dmp_8cpp_aca31ea2584100be6b9077ac6aaaa2b03}
+
+
+Extracts first T (time steps) state vectors of the spring-\/damper system , e.\+g. 
+
+states.\+S\+P\+R\+I\+N\+G\+M\+\_\+\+Z(100) 
+
+Definition at line 75 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_aa8851783ee05ed508db33ac204cf1802}{\index{Dmp.\+cpp@{Dmp.\+cpp}!G\+O\+A\+L\+M@{G\+O\+A\+L\+M}}
+\index{G\+O\+A\+L\+M@{G\+O\+A\+L\+M}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{G\+O\+A\+L\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+O\+A\+L\+M(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~block(0,2$\ast$dim\+\_\+orig()+0,T,dim\+\_\+orig())}}\label{Dmp_8cpp_aa8851783ee05ed508db33ac204cf1802}
+
+
+Extracts first T (time steps) state vectors of the goal system, e.\+g. 
+
+states.\+G\+O\+A\+L\+M(100) 
+
+Definition at line 77 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_a3bf7b4312a1f83d83f1b5b5d170a077c}{\index{Dmp.\+cpp@{Dmp.\+cpp}!P\+H\+A\+S\+E\+M@{P\+H\+A\+S\+E\+M}}
+\index{P\+H\+A\+S\+E\+M@{P\+H\+A\+S\+E\+M}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{P\+H\+A\+S\+E\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+A\+S\+E\+M(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~block(0,3$\ast$dim\+\_\+orig()+0,T,       1)}}\label{Dmp_8cpp_a3bf7b4312a1f83d83f1b5b5d170a077c}
+
+
+Extracts first T (time steps) states of the phase system, e.\+g. 
+
+states.\+P\+H\+A\+S\+E\+M(100) 
+
+Definition at line 79 of file Dmp.\+cpp.
+
+\hypertarget{Dmp_8cpp_a8fc3c96e333070b3e556ccc7a0a9561e}{\index{Dmp.\+cpp@{Dmp.\+cpp}!G\+A\+T\+I\+N\+G\+M@{G\+A\+T\+I\+N\+G\+M}}
+\index{G\+A\+T\+I\+N\+G\+M@{G\+A\+T\+I\+N\+G\+M}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{G\+A\+T\+I\+N\+G\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+A\+T\+I\+N\+G\+M(
+\begin{DoxyParamCaption}
+\item[{}]{T}
+\end{DoxyParamCaption}
+)~block(0,3$\ast$dim\+\_\+orig()+1,T,       1)}}\label{Dmp_8cpp_a8fc3c96e333070b3e556ccc7a0a9561e}
+
+
+Extracts first T (time steps) state vectors of the gating system, e.\+g. 
+
+states.\+G\+A\+T\+I\+N\+G\+M(100) 
+
+Definition at line 81 of file Dmp.\+cpp.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{Dmp_8cpp_aac84aecfc9df9aeaf45fab048fa1f9e2}{\index{Dmp.\+cpp@{Dmp.\+cpp}!B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T@{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T}}
+\index{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T@{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T}!Dmp.\+cpp@{Dmp.\+cpp}}
+\paragraph[{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T (
+\begin{DoxyParamCaption}
+\item[{{\bf Dmp\+Bbo\+::\+Dmp}}]{}
+\end{DoxyParamCaption}
+)}}\label{Dmp_8cpp_aac84aecfc9df9aeaf45fab048fa1f9e2}
+
+
+For boost\+::serialization. 
+
+See \href{http://www.boost.org/doc/libs/1_55_0/libs/serialization/doc/special.html#export}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+55\+\_\+0/libs/serialization/doc/special.\+html\#export} 

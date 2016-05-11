@@ -1,0 +1,33 @@
+<map id="FunctionApproximator.hpp" name="FunctionApproximator.hpp">
+<area shape="rect" id="node2" href="$demoDmpContextual_8cpp.html" title="Demonstrates how to initialize, train and integrate a Contextual Dmp. " alt="" coords="1961,162,2139,189"/>
+<area shape="rect" id="node3" href="$demoDmpContextualGoal_8cpp_source.html" title="demoDmpContextualGoal.cpp" alt="" coords="2164,162,2373,189"/>
+<area shape="rect" id="node4" href="$Dmp_8cpp.html" title="Dmp class source file. " alt="" coords="2417,80,2494,107"/>
+<area shape="rect" id="node5" href="$DmpContextual_8cpp.html" title="DmpContextual class source file. " alt="" coords="2518,80,2662,107"/>
+<area shape="rect" id="node6" href="$DmpContextualOneStep_8cpp.html" title="Contextual Dmp class header file. " alt="" coords="2686,80,2886,107"/>
+<area shape="rect" id="node7" href="$DmpContextualTwoStep_8cpp.html" title="Contextual Dmp class source file. " alt="" coords="2398,162,2598,189"/>
+<area shape="rect" id="node8" href="$FunctionApproximator_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="2911,80,3096,107"/>
+<area shape="rect" id="node9" href="$FunctionApproximatorGMR_8hpp.html" title="FunctionApproximatorGMR class header file. " alt="" coords="910,80,1129,107"/>
+<area shape="rect" id="node12" href="$getFunctionApproximatorByName_8cpp.html" title="getFunctionApproximatorByName class source file. " alt="" coords="961,155,1155,196"/>
+<area shape="rect" id="node13" href="$FunctionApproximatorGPR_8hpp.html" title="FunctionApproximatorGPR class header file. " alt="" coords="670,80,886,107"/>
+<area shape="rect" id="node16" href="$FunctionApproximatorIRFRLS_8hpp.html" title="FunctionApproximatorIRFRLS class header file. " alt="" coords="1203,80,1438,107"/>
+<area shape="rect" id="node18" href="$FunctionApproximatorLWPR_8hpp.html" title="FunctionApproximatorLWPR class header file. " alt="" coords="1462,80,1689,107"/>
+<area shape="rect" id="node20" href="$FunctionApproximatorLWR_8hpp.html" title="FunctionApproximatorLWR class header file. " alt="" coords="2175,80,2392,107"/>
+<area shape="rect" id="node27" href="$FunctionApproximatorRBFN_8hpp.html" title="FunctionApproximatorRBFN class header file. " alt="" coords="1713,80,1936,107"/>
+<area shape="rect" id="node29" href="$ModelParametersGMR_8cpp.html" title="ModelParametersGMR class source file. " alt="" coords="3120,80,3313,107"/>
+<area shape="rect" id="node30" href="$ModelParametersLWR_8cpp.html" title="ModelParametersLWR class source file. " alt="" coords="3337,80,3528,107"/>
+<area shape="rect" id="node31" href="$ModelParametersRBFN_8cpp.html" title="ModelParametersRBFN class source file. " alt="" coords="3553,80,3750,107"/>
+<area shape="rect" id="node32" href="$UnifiedModel_8cpp.html" title="UnifiedModel class source file. " alt="" coords="3774,80,3905,107"/>
+<area shape="rect" id="node10" href="$demoTrainFunctionApproximators_8cpp.html" title="Demonstrates how to initialize and train a function approximator.. " alt="" coords="1180,162,1440,189"/>
+<area shape="rect" id="node11" href="$FunctionApproximatorGMR_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="459,162,678,189"/>
+<area shape="rect" id="node14" href="$FunctionApproximatorGPR_8cpp.html" title="FunctionApproximatorGPR class source file. " alt="" coords="5,162,220,189"/>
+<area shape="rect" id="node15" href="$ModelParametersGPR_8cpp.html" title="ModelParametersGPR class source file. " alt="" coords="244,162,435,189"/>
+<area shape="rect" id="node17" href="$FunctionApproximatorIRFRLS_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="702,162,937,189"/>
+<area shape="rect" id="node19" href="$FunctionApproximatorLWPR_8cpp.html" title="FunctionApproximator class source file. " alt="" coords="1464,162,1689,189"/>
+<area shape="rect" id="node21" href="$demoDmp_8cpp.html" title="Demonstrates how to initialize, train and integrate a Dmp. " alt="" coords="3339,162,3451,189"/>
+<area shape="rect" id="node22" href="$demoDmpTrainFromTrajectoryFile_8cpp.html" title="demoDmpTrainFromTrajectory\lFile.cpp" alt="" coords="3476,155,3691,196"/>
+<area shape="rect" id="node23" href="$demoDmpBbo_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a Dmp. " alt="" coords="3715,162,3851,189"/>
+<area shape="rect" id="node24" href="$demoDmpBboMultiDim_8cpp.html" title="Demonstrates how to run multiple evolution strategies in parallel to optimize a Dmp. " alt="" coords="2622,162,2811,189"/>
+<area shape="rect" id="node25" href="$demoImitationAndOptimization_8cpp.html" title="Demonstrates how to initialize a DMP, and then optimize it with an evolution strategy. " alt="" coords="2836,162,3075,189"/>
+<area shape="rect" id="node26" href="$FunctionApproximatorLWR_8cpp.html" title="FunctionApproximatorLWR class source file. " alt="" coords="3099,162,3315,189"/>
+<area shape="rect" id="node28" href="$FunctionApproximatorRBFN_8cpp.html" title="FunctionApproximatorRBFN class source file. " alt="" coords="1713,162,1936,189"/>
+</map>

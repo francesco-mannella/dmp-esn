@@ -1,0 +1,211 @@
+\hypertarget{classDmpBbo_1_1TaskWithTrajectoryDemonstrator}{\subsection{Task\+With\+Trajectory\+Demonstrator Class Reference}
+\label{classDmpBbo_1_1TaskWithTrajectoryDemonstrator}\index{Task\+With\+Trajectory\+Demonstrator@{Task\+With\+Trajectory\+Demonstrator}}
+}
+
+
+Interface for tasks that are able to provide demonstrations that solve the task (optimally).  
+
+
+
+
+{\ttfamily \#include $<$Task\+With\+Trajectory\+Demonstrator.\+hpp$>$}
+
+
+
+Inheritance diagram for Task\+With\+Trajectory\+Demonstrator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classDmpBbo_1_1TaskWithTrajectoryDemonstrator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Task\+With\+Trajectory\+Demonstrator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classDmpBbo_1_1TaskWithTrajectoryDemonstrator__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a3f4561d78c6163ff208b776944f347eb}{generate\+Demonstration} (const Eigen\+::\+Matrix\+Xd \&task\+\_\+parameters, const Eigen\+::\+Vector\+Xd \&ts, \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&demonstration) const =0
+\begin{DoxyCompactList}\small\item\em Generate one (optimal) demonstration for this task. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a7378fd00b6255cfb3952edb606ef12b8}{generate\+Demonstrations} (const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&task\+\_\+parameters, const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&ts, std\+::vector$<$ \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} $>$ \&demonstrations) const 
+\begin{DoxyCompactList}\small\item\em Generate a set of demonstrations for this task. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a5c2d9a04a42b55b5b1249b7a643761e5}{generate\+Demonstrations} (\hyperlink{classDmpBbo_1_1DistributionGaussian}{Distribution\+Gaussian} $\ast$task\+\_\+parameter\+\_\+distribution, int n\+\_\+demos, const Eigen\+::\+Vector\+Xd \&ts, std\+::vector$<$ \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} $>$ \&demonstrations) const 
+\begin{DoxyCompactList}\small\item\em Generate a set of demonstrations for this task. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Interface for tasks that are able to provide demonstrations that solve the task (optimally). 
+
+Such tasks must implement the pure virtual function \hyperlink{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a3f4561d78c6163ff208b776944f347eb}{Task\+With\+Trajectory\+Demonstrator\+::generate\+Demonstration()}, which takes task\+\_\+parmetersm and returns a demonstration. 
+
+Definition at line 41 of file Task\+With\+Trajectory\+Demonstrator.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a3f4561d78c6163ff208b776944f347eb}{\index{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator@{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator}!generate\+Demonstration@{generate\+Demonstration}}
+\index{generate\+Demonstration@{generate\+Demonstration}!Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator@{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator}}
+\paragraph[{generate\+Demonstration}]{\setlength{\rightskip}{0pt plus 5cm}virtual void generate\+Demonstration (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{{\bf Trajectory} \&}]{demonstration}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a3f4561d78c6163ff208b776944f347eb}
+
+
+Generate one (optimal) demonstration for this task. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em task\+\_\+parameters} & The task parameters for which to generate a demonstration. A matrix of size T X D, where T is the number of time steps, and D is the number of task parameters. If T=1, the task parameters are assumed to be constant over time. \\
+\hline
+\mbox{\tt in}  & {\em ts} & The times at which to sample the trajectory \\
+\hline
+\mbox{\tt out}  & {\em demonstration} & The demonstration trajectory \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1TaskViapoint_a046ab7b96b5bd3f6df595dc141c1dad6}{Task\+Viapoint}.
+
+\hypertarget{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a7378fd00b6255cfb3952edb606ef12b8}{\index{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator@{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator}!generate\+Demonstrations@{generate\+Demonstrations}}
+\index{generate\+Demonstrations@{generate\+Demonstrations}!Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator@{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator}}
+\paragraph[{generate\+Demonstrations}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Demonstrations (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{task\+\_\+parameters, }
+\item[{const std\+::vector$<$ Eigen\+::\+Vector\+Xd $>$ \&}]{ts, }
+\item[{std\+::vector$<$ {\bf Trajectory} $>$ \&}]{demonstrations}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a7378fd00b6255cfb3952edb606ef12b8}
+
+
+Generate a set of demonstrations for this task. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em task\+\_\+parameters} & The task parameters for which to generate demonstrations \\
+\hline
+\mbox{\tt in}  & {\em ts} & The times at which to sample the trajectory \\
+\hline
+\mbox{\tt out}  & {\em demonstrations} & The demonstrations (a vector of trajectories) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 56 of file Task\+With\+Trajectory\+Demonstrator.\+hpp.
+
+
+\begin{DoxyCode}
+57   \{
+58     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} n\_demos = task\_parameters.size();
+59     assert(n\_demos==ts.size());
+60     
+61     demonstrations = std::vector<Trajectory>(n\_demos);
+62     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} i\_demo=0; i\_demo<n\_demos; i\_demo++)
+63     \{
+64       \hyperlink{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a3f4561d78c6163ff208b776944f347eb}{generateDemonstration}(task\_parameters[i\_demo], ts[i\_demo], demonstrations[i\_demo
+      ]); 
+65     \}
+66     
+67   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a7378fd00b6255cfb3952edb606ef12b8_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a5c2d9a04a42b55b5b1249b7a643761e5}{\index{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator@{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator}!generate\+Demonstrations@{generate\+Demonstrations}}
+\index{generate\+Demonstrations@{generate\+Demonstrations}!Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator@{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator}}
+\paragraph[{generate\+Demonstrations}]{\setlength{\rightskip}{0pt plus 5cm}void generate\+Demonstrations (
+\begin{DoxyParamCaption}
+\item[{{\bf Distribution\+Gaussian} $\ast$}]{task\+\_\+parameter\+\_\+distribution, }
+\item[{int}]{n\+\_\+demos, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{std\+::vector$<$ {\bf Trajectory} $>$ \&}]{demonstrations}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a5c2d9a04a42b55b5b1249b7a643761e5}
+
+
+Generate a set of demonstrations for this task. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em task\+\_\+parameter\+\_\+distribution} & The distribution from which to sample task parameters \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+demos} & The number of demos \\
+\hline
+\mbox{\tt in}  & {\em ts} & The times at which to sample the trajectory \\
+\hline
+\mbox{\tt out}  & {\em demonstrations} & The demonstrations (a vector of trajectories) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file Task\+With\+Trajectory\+Demonstrator.\+hpp.
+
+
+\begin{DoxyCode}
+76   \{
+77     Eigen::MatrixXd task\_parameters;
+78     
+79     demonstrations = std::vector<Trajectory>(n\_demos);
+80     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_demo=0; i\_demo<n\_demos; i\_demo++)
+81     \{
+82       task\_parameter\_distribution->generateSamples(n\_demos,task\_parameters);
+83       \hyperlink{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a3f4561d78c6163ff208b776944f347eb}{generateDemonstration}(task\_parameters, ts, demonstrations[i\_demo]); 
+84     \}
+85     
+86   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_a5c2d9a04a42b55b5b1249b7a643761e5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator@{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator@{Dmp\+Bbo\+::\+Task\+With\+Trajectory\+Demonstrator}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1TaskWithTrajectoryDemonstrator_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 126 of file Task\+With\+Trajectory\+Demonstrator.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TaskWithTrajectoryDemonstrator_8hpp}{Task\+With\+Trajectory\+Demonstrator.\+hpp}\end{DoxyCompactItemize}

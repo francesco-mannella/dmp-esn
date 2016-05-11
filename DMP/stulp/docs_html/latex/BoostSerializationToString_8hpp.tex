@@ -1,0 +1,103 @@
+\hypertarget{BoostSerializationToString_8hpp}{\subsection{Boost\+Serialization\+To\+String.\+hpp File Reference}
+\label{BoostSerializationToString_8hpp}\index{Boost\+Serialization\+To\+String.\+hpp@{Boost\+Serialization\+To\+String.\+hpp}}
+}
+
+
+Header file to generate strings from boost serialized files.  
+
+
+{\ttfamily \#include $<$boost/serialization/nvp.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/text\+\_\+oarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/text\+\_\+iarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/xml\+\_\+oarchive.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/archive/xml\+\_\+iarchive.\+hpp$>$}\\*
+Include dependency graph for Boost\+Serialization\+To\+String.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BoostSerializationToString_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{BoostSerializationToString_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+X\+M\+L}(name)
+\begin{DoxyCompactList}\small\item\em Macro to convert the boost X\+M\+L serialization of an object into a string. \end{DoxyCompactList}\item 
+\#define \hyperlink{BoostSerializationToString_8hpp_ab34cb16f6efb3bda787ff5ed6d40c034}{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+T\+X\+T}(name)
+\begin{DoxyCompactList}\small\item\em Macro to convert the boost text serialization of an object into a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Header file to generate strings from boost serialized files. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{BoostSerializationToString_8hpp_source}{Boost\+Serialization\+To\+String.\+hpp}.
+
+
+
+\subsubsection{Macro Definition Documentation}
+\hypertarget{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{\index{Boost\+Serialization\+To\+String.\+hpp@{Boost\+Serialization\+To\+String.\+hpp}!R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+X\+M\+L@{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+X\+M\+L}}
+\index{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+X\+M\+L@{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+X\+M\+L}!Boost\+Serialization\+To\+String.\+hpp@{Boost\+Serialization\+To\+String.\+hpp}}
+\paragraph[{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+X\+M\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+X\+M\+L(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}}\label{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+std::stringstream strstr; \(\backslash\)
+  unsigned \textcolor{keywordtype}{int} flags = boost::archive::no\_header; \(\backslash\)
+  boost::archive::xml\_oarchive oa(strstr,flags); \(\backslash\)
+  oa << boost::serialization::make\_nvp(name, *\textcolor{keyword}{this}); \(\backslash\)
+  return strstr.str();
+\end{DoxyCode}
+
+
+Macro to convert the boost X\+M\+L serialization of an object into a string. 
+
+For example, see Exponential\+System\+::to\+String() 
+
+Definition at line 36 of file Boost\+Serialization\+To\+String.\+hpp.
+
+\hypertarget{BoostSerializationToString_8hpp_ab34cb16f6efb3bda787ff5ed6d40c034}{\index{Boost\+Serialization\+To\+String.\+hpp@{Boost\+Serialization\+To\+String.\+hpp}!R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+T\+X\+T@{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+T\+X\+T}}
+\index{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+T\+X\+T@{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+T\+X\+T}!Boost\+Serialization\+To\+String.\+hpp@{Boost\+Serialization\+To\+String.\+hpp}}
+\paragraph[{R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+T\+X\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+T\+X\+T(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}}\label{BoostSerializationToString_8hpp_ab34cb16f6efb3bda787ff5ed6d40c034}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+std::stringstream strstr; \(\backslash\)
+  unsigned \textcolor{keywordtype}{int} flags = boost::archive::no\_header; \(\backslash\)
+  boost::archive::txt\_oarchive oa(strstr,flags); \(\backslash\)
+  oa << boost::serialization::make\_nvp(name, *\textcolor{keyword}{this}); \(\backslash\)
+  return strstr.str();
+\end{DoxyCode}
+
+
+Macro to convert the boost text serialization of an object into a string. 
+
+For example, see Exponential\+System\+::to\+String() 
+
+Definition at line 46 of file Boost\+Serialization\+To\+String.\+hpp.
+

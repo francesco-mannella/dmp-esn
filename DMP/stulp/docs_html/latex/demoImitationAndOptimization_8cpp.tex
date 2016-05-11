@@ -1,0 +1,251 @@
+\hypertarget{demoImitationAndOptimization_8cpp}{\subsection{demo\+Imitation\+And\+Optimization.\+cpp File Reference}
+\label{demoImitationAndOptimization_8cpp}\index{demo\+Imitation\+And\+Optimization.\+cpp@{demo\+Imitation\+And\+Optimization.\+cpp}}
+}
+
+
+Demonstrates how to initialize a D\+M\+P, and then optimize it with an evolution strategy.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+{\ttfamily \#include \char`\"{}dmp\+\_\+bbo/tasks/\+Task\+Viapoint.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp\+\_\+bbo/\+Task\+Solver\+Dmp.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Function\+Approximator\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}functionapproximators/\+Meta\+Parameters\+L\+W\+R.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Dmp.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp/\+Trajectory.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Distribution\+Gaussian.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Updater.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/updaters/\+Updater\+Covar\+Decay.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/updaters/\+Updater\+Covar\+Adaptation.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}dmp\+\_\+bbo/run\+Evolutionary\+Optimization\+Parallel.\+hpp\char`\"{}}\\*
+Include dependency graph for demo\+Imitation\+And\+Optimization.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoImitationAndOptimization_8cpp__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{demoImitationAndOptimization_8cpp_a10d394de14804df1643b55afa677bdc4}{run\+Imitation\+And\+Optimization} (vector$<$ \hyperlink{classDmpBbo_1_1FunctionApproximator}{Function\+Approximator} $\ast$ $>$ function\+\_\+approximators, const \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory, \hyperlink{classDmpBbo_1_1Task}{Task} $\ast$task, \hyperlink{classDmpBbo_1_1Updater}{Updater} $\ast$updater, string directory)
+\begin{DoxyCompactList}\small\item\em Run a learning session in which a Dmp is first trained with a trajectory, and then optimized with an evolution strategy w.\+r.\+t. \end{DoxyCompactList}\item 
+int \hyperlink{demoImitationAndOptimization_8cpp_a4c740be97d066078bad8e3997193c673}{main} (int n\+\_\+args, char $\ast$args\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Demonstrates how to initialize a D\+M\+P, and then optimize it with an evolution strategy. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{demoImitationAndOptimization_8cpp_source}{demo\+Imitation\+And\+Optimization.\+cpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{demoImitationAndOptimization_8cpp_a10d394de14804df1643b55afa677bdc4}{\index{demo\+Imitation\+And\+Optimization.\+cpp@{demo\+Imitation\+And\+Optimization.\+cpp}!run\+Imitation\+And\+Optimization@{run\+Imitation\+And\+Optimization}}
+\index{run\+Imitation\+And\+Optimization@{run\+Imitation\+And\+Optimization}!demo\+Imitation\+And\+Optimization.\+cpp@{demo\+Imitation\+And\+Optimization.\+cpp}}
+\paragraph[{run\+Imitation\+And\+Optimization}]{\setlength{\rightskip}{0pt plus 5cm}void run\+Imitation\+And\+Optimization (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Function\+Approximator} $\ast$ $>$}]{function\+\_\+approximators, }
+\item[{const {\bf Trajectory} \&}]{trajectory, }
+\item[{{\bf Task} $\ast$}]{task, }
+\item[{{\bf Updater} $\ast$}]{updater, }
+\item[{string}]{directory}
+\end{DoxyParamCaption}
+)}}\label{demoImitationAndOptimization_8cpp_a10d394de14804df1643b55afa677bdc4}
+
+
+Run a learning session in which a Dmp is first trained with a trajectory, and then optimized with an evolution strategy w.\+r.\+t. 
+
+a cost function. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em function\+\_\+approximators} & The function approximators for the Dmp (a vector; one element for each Dmp dimension) \\
+\hline
+\mbox{\tt in}  & {\em trajectory} & The trajectory with which to train the Dmp \\
+\hline
+\mbox{\tt in}  & {\em task} & The task to optimize (it contains the cost function) \\
+\hline
+\mbox{\tt in}  & {\em updater} & The parameter updater to use during optimization \\
+\hline
+\mbox{\tt in}  & {\em directory} & Directory to which to save results \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 57 of file demo\+Imitation\+And\+Optimization.\+cpp.
+
+
+\begin{DoxyCode}
+58 \{
+59 
+60   \textcolor{comment}{// Initialize and train DMP  }
+61   \textcolor{keywordtype}{int} n\_dims\_dmp = trajectory.\hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}();
+62   \hyperlink{classDmpBbo_1_1Dmp}{Dmp}* dmp = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1Dmp}{Dmp}(n\_dims\_dmp, function\_approximators, Dmp::KULVICIUS\_2012\_JOINING);
+63   dmp->\hyperlink{classDmpBbo_1_1Dmp_a5d14dedc6736ec5675b4026437b8a597}{train}(trajectory);
+64   
+65   \textcolor{comment}{// Integrate the trained DMP analytically   }
+66   \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} trajectory\_repro;
+67   dmp->\hyperlink{classDmpBbo_1_1Dmp_ad62585b1e0bab2b9743782e15e01d694}{analyticalSolution}(trajectory.\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}(),trajectory\_repro);
+68   
+69   \textcolor{comment}{// Make the task solver}
+70   set<string> parameters\_to\_optimize;
+71   parameters\_to\_optimize.insert(\textcolor{stringliteral}{"slopes"});
+72   \hyperlink{classDmpBbo_1_1TaskSolverDmp}{TaskSolverDmp}* task\_solver = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1TaskSolverDmp}{TaskSolverDmp}(dmp,parameters\_to\_optimize);
+73 
+74   \textcolor{comment}{// Make the initial distribution}
+75   vector<VectorXd> mean\_init\_vec;
+76   dmp->\hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{getParameterVectorSelected}(mean\_init\_vec);
+77   
+78   \textcolor{keywordtype}{int} n\_dims = dmp->\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}();
+79   vector<DistributionGaussian*> distributions(n\_dims);
+80   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+81   \{
+82     cout << mean\_init\_vec[i\_dim].transpose() << endl;
+83     VectorXd mean\_init = mean\_init\_vec[i\_dim];
+84   
+85     MatrixXd covar\_init = 1000.0*MatrixXd::Identity(mean\_init.size(),mean\_init.size());
+86     
+87     distributions[i\_dim] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1DistributionGaussian}{DistributionGaussian}(mean\_init,covar\_init);
+88   \}
+89   
+90   \textcolor{comment}{// Run the optimization}
+91   \textcolor{keywordtype}{int} n\_updates = 50;
+92   \textcolor{keywordtype}{int} n\_samples\_per\_update = 15;
+93   
+94   runEvolutionaryOptimizationParallel(task, task\_solver, distributions, updater, n\_updates, 
+      n\_samples\_per\_update,directory);
+95   
+96   \textcolor{comment}{// Save the initial data (doing this after runEvolutionaryOptimization so that it can take care of}
+97   \textcolor{comment}{// checking/making the directory)}
+98   \textcolor{keywordflow}{if} (!directory.empty())
+99   \{
+100     std::ofstream outfile;
+101     
+102     outfile.open((directory+\textcolor{stringliteral}{"traj\_demo.txt"}).c\_str()); 
+103     outfile << trajectory; 
+104     outfile.close();
+105     
+106     outfile.open((directory+\textcolor{stringliteral}{"traj\_repro.txt"}).c\_str()); 
+107     outfile << trajectory\_repro; 
+108     outfile.close();
+109   \}
+110   
+111 
+112 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoImitationAndOptimization_8cpp_a10d394de14804df1643b55afa677bdc4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{demoImitationAndOptimization_8cpp_a4c740be97d066078bad8e3997193c673}{\index{demo\+Imitation\+And\+Optimization.\+cpp@{demo\+Imitation\+And\+Optimization.\+cpp}!main@{main}}
+\index{main@{main}!demo\+Imitation\+And\+Optimization.\+cpp@{demo\+Imitation\+And\+Optimization.\+cpp}}
+\paragraph[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+\_\+args, }
+\item[{char $\ast$}]{args\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{demoImitationAndOptimization_8cpp_a4c740be97d066078bad8e3997193c673}
+
+
+Main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em n\+\_\+args} & Number of arguments \\
+\hline
+\mbox{\tt in}  & {\em args} & Arguments themselves \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Success of exection. 0 if successful. 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file demo\+Imitation\+And\+Optimization.\+cpp.
+
+
+\begin{DoxyCode}
+120 \{
+121   \textcolor{keywordtype}{string} directory;
+122   \textcolor{keywordflow}{if} (n\_args>1)
+123     directory = string(args[1]);
+124   
+125   \textcolor{comment}{// Generate a minimum-jerk trajectory for training}
+126   \textcolor{keywordtype}{int} n\_dims = 2;
+127   \textcolor{keywordtype}{int} n\_time\_steps = 51;
+128   VectorXd ts = VectorXd::LinSpaced(n\_time\_steps,0,0.5  );
+129   VectorXd y\_first(n\_dims); y\_first << 0.0,0.1;
+130   VectorXd y\_last(n\_dims);  y\_last  << 1.0,0.9;
+131   \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} traj\_demo = Trajectory::generateMinJerkTrajectory(ts, y\_first, y\_last);
+132   
+133   \textcolor{comment}{// Make some LWR function approximators}
+134   \textcolor{keywordtype}{int} n\_basis\_functions = 21;
+135   \textcolor{keywordtype}{double} intersection = 0.5;
+136   \textcolor{keywordtype}{int} n\_input\_dims = 1; \textcolor{comment}{// Each function approximator only takes phase as input}
+137   \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}* meta\_parameters = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1MetaParametersLWR}{MetaParametersLWR}(n\_input\_dims
+      ,n\_basis\_functions,intersection);      
+138   vector<FunctionApproximator*> function\_approximators(n\_dims);    
+139   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<n\_dims; dd++)
+140     function\_approximators[dd] = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1FunctionApproximatorLWR}{FunctionApproximatorLWR}(meta\_parameters);
+141   
+142   \textcolor{comment}{// Make the task to be solved}
+143   VectorXd viapoint = VectorXd::LinSpaced(n\_dims,0.3,0.7);
+144   \textcolor{keywordtype}{double} viapoint\_time = 0.5*traj\_demo.\hyperlink{classDmpBbo_1_1Trajectory_aa522350717a41ed129d693f0337b6247}{duration}();
+145   \hyperlink{classDmpBbo_1_1Task}{Task}* task = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1TaskViapoint}{TaskViapoint}(viapoint,viapoint\_time);
+146   
+147   \textcolor{comment}{// Make the parameter updater}
+148   \textcolor{keywordtype}{double} eliteness = 10;
+149   \textcolor{keywordtype}{double} covar\_decay\_factor = 0.9;
+150   \textcolor{keywordtype}{string} weighting\_method(\textcolor{stringliteral}{"PI-BB"});
+151   \hyperlink{classDmpBbo_1_1Updater}{Updater}* updater = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1UpdaterCovarDecay}{UpdaterCovarDecay}(eliteness, covar\_decay\_factor, 
+      weighting\_method);
+152 
+153   VectorXd base\_level = VectorXd::Constant(n\_basis\_functions,5.0);
+154   eliteness = 10;
+155   \textcolor{keywordtype}{bool} diag\_only = \textcolor{keyword}{false};
+156   \textcolor{keywordtype}{double} learning\_rate = 0.5;
+157   updater = \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1UpdaterCovarAdaptation}{UpdaterCovarAdaptation}(eliteness,weighting\_method,base\_level,
+      diag\_only,learning\_rate);  
+158   
+159 
+160   \textcolor{comment}{// Calls function at the top of this file}
+161   \hyperlink{demoImitationAndOptimization_8cpp_a10d394de14804df1643b55afa677bdc4}{runImitationAndOptimization}(function\_approximators, traj\_demo, task, updater, 
+      directory);
+162   
+163   
+164 \}\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{demoImitationAndOptimization_8cpp_a4c740be97d066078bad8e3997193c673_cgraph}
+\end{center}
+\end{figure}
+
+

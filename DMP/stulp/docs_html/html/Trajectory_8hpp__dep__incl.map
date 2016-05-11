@@ -1,0 +1,17 @@
+<map id="Trajectory.hpp" name="Trajectory.hpp">
+<area shape="rect" id="node2" href="$demoDmp_8cpp.html" title="Demonstrates how to initialize, train and integrate a Dmp. " alt="" coords="5,87,117,114"/>
+<area shape="rect" id="node3" href="$demoDmpContextual_8cpp.html" title="Demonstrates how to initialize, train and integrate a Contextual Dmp. " alt="" coords="141,87,320,114"/>
+<area shape="rect" id="node4" href="$demoDmpContextualGoal_8cpp_source.html" title="demoDmpContextualGoal.cpp" alt="" coords="345,87,554,114"/>
+<area shape="rect" id="node5" href="$demoDmpTrainFromTrajectoryFile_8cpp.html" title="demoDmpTrainFromTrajectory\lFile.cpp" alt="" coords="578,80,793,121"/>
+<area shape="rect" id="node6" href="$Dmp_8cpp.html" title="Dmp class source file. " alt="" coords="817,87,895,114"/>
+<area shape="rect" id="node7" href="$DmpContextual_8cpp.html" title="DmpContextual class source file. " alt="" coords="919,87,1063,114"/>
+<area shape="rect" id="node8" href="$DmpContextualOneStep_8cpp.html" title="Contextual Dmp class header file. " alt="" coords="1087,87,1287,114"/>
+<area shape="rect" id="node9" href="$DmpContextualTwoStep_8cpp.html" title="Contextual Dmp class source file. " alt="" coords="1311,87,1511,114"/>
+<area shape="rect" id="node10" href="$Trajectory_8cpp.html" title="Trajectory class source file. " alt="" coords="1535,87,1647,114"/>
+<area shape="rect" id="node11" href="$demoImitationAndOptimization_8cpp.html" title="Demonstrates how to initialize a DMP, and then optimize it with an evolution strategy. " alt="" coords="1554,244,1793,271"/>
+<area shape="rect" id="node12" href="$TaskWithTrajectoryDemonstrator_8hpp.html" title="TaskWithTrajectoryDemonstrator class header file. " alt="" coords="1744,87,2003,114"/>
+<area shape="rect" id="node13" href="$TaskViapoint_8hpp.html" title="TaskViapoint class header file. " alt="" coords="1820,169,1951,196"/>
+<area shape="rect" id="node14" href="$demoDmpBbo_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a Dmp. " alt="" coords="1817,244,1953,271"/>
+<area shape="rect" id="node15" href="$demoDmpBboMultiDim_8cpp.html" title="Demonstrates how to run multiple evolution strategies in parallel to optimize a Dmp. " alt="" coords="1977,244,2167,271"/>
+<area shape="rect" id="node16" href="$TaskViapoint_8cpp.html" title="TaskViapoint class source file. " alt="" coords="2191,244,2321,271"/>
+</map>

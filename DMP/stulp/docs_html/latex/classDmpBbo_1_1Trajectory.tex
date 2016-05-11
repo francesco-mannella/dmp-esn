@@ -1,0 +1,938 @@
+\hypertarget{classDmpBbo_1_1Trajectory}{\subsection{Trajectory Class Reference}
+\label{classDmpBbo_1_1Trajectory}\index{Trajectory@{Trajectory}}
+}
+
+
+A class for storing trajectories, i.\+e.  
+
+
+
+
+{\ttfamily \#include $<$Trajectory.\+hpp$>$}
+
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}{\hyperlink{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}{Trajectory} (void)}\label{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}
+
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1Trajectory_a24a5ff3377cbb89550d629c9b92b9fb0}{Trajectory} (const Eigen\+::\+Vector\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}, const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys}, const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds}, const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds}, const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc}=Eigen\+::\+Matrix\+Xd(0, 0))
+\begin{DoxyCompactList}\small\item\em Initializing constructor. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the times at which measurements were made. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the positions at different times. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the velocities at different times. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the accelerations at different times. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc} (void) const 
+\begin{DoxyCompactList}\small\item\em Return miscellaneous variables included in the trajectory. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Trajectory_a0656adfc27456c514beb22bd652f6f5d}{set\+\_\+misc} (const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc})
+\begin{DoxyCompactList}\small\item\em Set miscellaneous variables included in the trajectory. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the length of the trajectory, i.\+e. \end{DoxyCompactList}\item 
+double \hyperlink{classDmpBbo_1_1Trajectory_aa522350717a41ed129d693f0337b6247}{duration} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the duration of the trajectory in seconds. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the dimensionality of the trajectory. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1Trajectory_a54e86a99496037df2355a51d712f5d54}{dim\+\_\+misc} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the dimensionality of the misc variables. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classDmpBbo_1_1Trajectory_ab8f4e6185b63fbd140438b09cd130eb2}{initial\+\_\+y} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the first state, i.\+e. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{classDmpBbo_1_1Trajectory_aeb94e68102be7c8e5885e7f1ccf487e2}{final\+\_\+y} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the last state, i.\+e. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1Trajectory_aac6f333ab80eb78ad2ff3cab4e8326ec}{append} (const \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory)
+\begin{DoxyCompactList}\small\item\em Append another trajectory at the end. \end{DoxyCompactList}\item 
+bool \hyperlink{classDmpBbo_1_1Trajectory_aad0f629a8d7be7400d0b5f6e990c9a1d}{save\+To\+File} (std\+::string directory, std\+::string filename, bool overwrite=false) const 
+\begin{DoxyCompactList}\small\item\em Save a trajectory to a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \hyperlink{classDmpBbo_1_1Trajectory_aac7e666c7fa5ea89ec1ba884e0a118a0}{read\+From\+File} (std\+::string filename, int n\+\_\+dims\+\_\+misc=0)
+\begin{DoxyCompactList}\small\item\em Read a trajectory from a file. \end{DoxyCompactList}\item 
+static \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \hyperlink{classDmpBbo_1_1Trajectory_ae48669ea3eb155cd549c4bfbdc3f480a}{generate\+Min\+Jerk\+Trajectory} (const Eigen\+::\+Vector\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}, const Eigen\+::\+Vector\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_ab8f4e6185b63fbd140438b09cd130eb2}{initial\+\_\+y}, const Eigen\+::\+Vector\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_aeb94e68102be7c8e5885e7f1ccf487e2}{final\+\_\+y})
+\begin{DoxyCompactList}\small\item\em Generate a minimum-\/jerk trajectory from an initial to a final state. \end{DoxyCompactList}\item 
+static \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \hyperlink{classDmpBbo_1_1Trajectory_ab6d25078b7d7df08ad3cd8772d969034}{generate\+Polynomial\+Trajectory} (const Eigen\+::\+Vector\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}, const Eigen\+::\+Vector\+Xd \&y\+\_\+from, const Eigen\+::\+Vector\+Xd \&yd\+\_\+from, const Eigen\+::\+Vector\+Xd \&ydd\+\_\+from, const Eigen\+::\+Vector\+Xd \&y\+\_\+to, const Eigen\+::\+Vector\+Xd \&yd\+\_\+to, const Eigen\+::\+Vector\+Xd \&ydd\+\_\+to)
+\begin{DoxyCompactList}\small\item\em Generate a fifth order polynomial trajectory from an initial to a final state. \end{DoxyCompactList}\item 
+static \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \hyperlink{classDmpBbo_1_1Trajectory_a8e4bc03c6f535f4c9983ffe77a2d971b}{generate\+Polynomial\+Trajectory\+Through\+Viapoint} (const Eigen\+::\+Vector\+Xd \&\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}, const Eigen\+::\+Vector\+Xd \&y\+\_\+from, const Eigen\+::\+Vector\+Xd \&y\+\_\+yd\+\_\+ydd\+\_\+viapoint, double viapoint\+\_\+time, const Eigen\+::\+Vector\+Xd \&y\+\_\+to)
+\begin{DoxyCompactList}\small\item\em Generate a trajectory from an initial to a final state, through a viapoint. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1Trajectory_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{classDmpBbo_1_1Trajectory_ab915330172eba3b4cc03473c23598a8a}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} \&trajectory)
+\begin{DoxyCompactList}\small\item\em Write object to an output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+A class for storing trajectories, i.\+e. 
+
+positions, velocities and accelerations of variables over time.
+
+A trajectory is essentially a matrix of following form\+: \begin{DoxyVerb}t_0   x^0_0 x^1_0 .. x^D_0   xd^0_0 xd^1_0 .. xd^D_0   xdd^0_0 xdd^1_0 ... xdd^D_0
+t_1   x^0_1 x^1_1 .. x^D_1   xd^0_1 xd^1_1 .. xd^D_1   xdd^0_1 xdd^1_1 ... xdd^D_1
+ :       :     :       :         :      :       :         :       :           :
+t_T   x^0_T x^1_T .. x^D_T   xd^0_T xd^1_T .. xd^D_T   xdd^0_T xdd^1_T ... xdd^D_T
+\end{DoxyVerb}
+ For each time t\+\_\+0 to t\+\_\+\+T it contains the positions, velocities and accelerations of a D-\/dimensional state. 
+
+Definition at line 48 of file Trajectory.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1Trajectory_a24a5ff3377cbb89550d629c9b92b9fb0}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!Trajectory@{Trajectory}}
+\index{Trajectory@{Trajectory}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trajectory} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{ys, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{yds, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{ydds, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{misc = {\ttfamily Eigen\+:\+:MatrixXd(0,0)}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Trajectory_a24a5ff3377cbb89550d629c9b92b9fb0}
+
+
+Initializing constructor. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & Times \\
+\hline
+\mbox{\tt in}  & {\em ys} & Positions \\
+\hline
+\mbox{\tt in}  & {\em yds} & Velocities \\
+\hline
+\mbox{\tt in}  & {\em ydds} & Acceleration \\
+\hline
+\mbox{\tt in}  & {\em misc} & Miscellaneous other variables which you may add if necessary \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 43 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+44 : ts\_(\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}), ys\_(\hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys}), yds\_(\hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds}), ydds\_(\hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds}), misc\_(\hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc})
+45 \{
+46   \textcolor{keywordtype}{int} n\_time\_steps = ts\_.rows();
+47   assert(n\_time\_steps==ys\_.rows());
+48   assert(n\_time\_steps==yds\_.rows());
+49   assert(n\_time\_steps==ydds\_.rows());
+50   \textcolor{keywordflow}{if} (misc\_.cols()==0)
+51     misc\_ = MatrixXd(n\_time\_steps,0);
+52   assert(n\_time\_steps==misc\_.rows());
+53   
+54 \textcolor{preprocessor}{#ifndef NDEBUG // Variables below are only required for asserts; check for NDEBUG to avoid warnings.}
+55   \textcolor{keywordtype}{int} n\_dims = ys\_.cols();
+56   assert(n\_dims==yds\_.cols());
+57   assert(n\_dims==ydds\_.cols());
+58 \textcolor{preprocessor}{#endif  }
+59     
+60 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!ts@{ts}}
+\index{ts@{ts}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{ts}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd\& ts (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}
+
+
+Accessor function for the times at which measurements were made. 
+
+\begin{DoxyReturn}{Returns}
+Times at which measurements were made. 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+67 \{ \textcolor{keywordflow}{return} ts\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!ys@{ys}}
+\index{ys@{ys}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{ys}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix\+Xd\& ys (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}
+
+
+Accessor function for the positions at different times. 
+
+\begin{DoxyReturn}{Returns}
+Positions at different times 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+72 \{ \textcolor{keywordflow}{return} ys\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!yds@{yds}}
+\index{yds@{yds}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{yds}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix\+Xd\& yds (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}
+
+
+Accessor function for the velocities at different times. 
+
+\begin{DoxyReturn}{Returns}
+Velocities at different times 
+\end{DoxyReturn}
+
+
+Definition at line 77 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+77 \{ \textcolor{keywordflow}{return} yds\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!ydds@{ydds}}
+\index{ydds@{ydds}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{ydds}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix\+Xd\& ydds (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}
+
+
+Accessor function for the accelerations at different times. 
+
+\begin{DoxyReturn}{Returns}
+Accelerations at different times 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+82 \{ \textcolor{keywordflow}{return} ydds\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!misc@{misc}}
+\index{misc@{misc}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{misc}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix\+Xd\& misc (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}
+
+
+Return miscellaneous variables included in the trajectory. 
+
+This can be used for instance to store task paramaters for each time step alongside the values of the trajectory variables at each time step. \begin{DoxyReturn}{Returns}
+Matrix of miscellaneous variables, of size n\+\_\+time\+\_\+steps X n\+\_\+misc\+\_\+variables 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+89 \{ \textcolor{keywordflow}{return} misc\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_a0656adfc27456c514beb22bd652f6f5d}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!set\+\_\+misc@{set\+\_\+misc}}
+\index{set\+\_\+misc@{set\+\_\+misc}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{set\+\_\+misc}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+misc (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{misc}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Trajectory_a0656adfc27456c514beb22bd652f6f5d}
+
+
+Set miscellaneous variables included in the trajectory. 
+
+This can be used for instance to set task paramaters for each time step alongside the values of the trajectory variables at each time step. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em misc} & Matrix of miscellaneous variables, of size n\+\_\+time\+\_\+steps X n\+\_\+misc\+\_\+variables \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 62 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+63 \{
+64   \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc}.rows()==ts\_.size())
+65   \{
+66     \textcolor{comment}{// misc is of size n\_time\_steps X n\_dims\_misc}
+67     misc\_ = \hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc};
+68   \}
+69   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc}.rows()==1)
+70   \{
+71     \textcolor{comment}{// misc is of size 1 X n\_dim\_misc}
+72     \textcolor{comment}{// then replicate it so that it becomes of size n\_time\_steps X n\_dims\_misc}
+73     misc\_ = \hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc}.replicate(ts\_.size(),1);
+74   \}
+75   \textcolor{keywordflow}{else}
+76   \{
+77     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+78     cerr << \textcolor{stringliteral}{"misc must have 1 or "} << ts\_.size() << \textcolor{stringliteral}{" rows, but it has "} << \hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc}.rows() << endl;
+79   \}
+80     
+81 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{classDmpBbo_1_1Trajectory_a0656adfc27456c514beb22bd652f6f5d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!length@{length}}
+\index{length@{length}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{length}]{\setlength{\rightskip}{0pt plus 5cm}int length (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}
+
+
+Get the length of the trajectory, i.\+e. 
+
+the number of time steps. \begin{DoxyReturn}{Returns}
+The number of time steps 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+101 \{ \textcolor{keywordflow}{return} ts\_.size(); \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_aa522350717a41ed129d693f0337b6247}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!duration@{duration}}
+\index{duration@{duration}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{duration}]{\setlength{\rightskip}{0pt plus 5cm}double duration (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_aa522350717a41ed129d693f0337b6247}
+
+
+Get the duration of the trajectory in seconds. 
+
+\begin{DoxyReturn}{Returns}
+The duration of the trajecory in seconds. 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+106 \{  \textcolor{keywordflow}{return} (ts\_[ts\_.size()-1]-ts\_[0]); \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!dim@{dim}}
+\index{dim@{dim}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{dim}]{\setlength{\rightskip}{0pt plus 5cm}int dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}
+
+
+Get the dimensionality of the trajectory. 
+
+\begin{DoxyReturn}{Returns}
+The dimensionality of the trajectory. 
+\end{DoxyReturn}
+
+
+Definition at line 111 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+111 \{ \textcolor{keywordflow}{return} ys\_.cols(); \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_a54e86a99496037df2355a51d712f5d54}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!dim\+\_\+misc@{dim\+\_\+misc}}
+\index{dim\+\_\+misc@{dim\+\_\+misc}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{dim\+\_\+misc}]{\setlength{\rightskip}{0pt plus 5cm}int dim\+\_\+misc (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_a54e86a99496037df2355a51d712f5d54}
+
+
+Get the dimensionality of the misc variables. 
+
+\begin{DoxyReturn}{Returns}
+The dimensionality of the misc variables. 
+\end{DoxyReturn}
+
+
+Definition at line 116 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+116 \{ \textcolor{keywordflow}{return} misc\_.cols(); \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_ab8f4e6185b63fbd140438b09cd130eb2}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!initial\+\_\+y@{initial\+\_\+y}}
+\index{initial\+\_\+y@{initial\+\_\+y}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{initial\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd initial\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_ab8f4e6185b63fbd140438b09cd130eb2}
+
+
+Get the first state, i.\+e. 
+
+at t=0, in the trajectory (only positions). \begin{DoxyReturn}{Returns}
+First state in the trajectory. 
+\end{DoxyReturn}
+
+
+Definition at line 121 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+121 \{ \textcolor{keywordflow}{return} ys\_.row(0); \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_aeb94e68102be7c8e5885e7f1ccf487e2}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!final\+\_\+y@{final\+\_\+y}}
+\index{final\+\_\+y@{final\+\_\+y}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{final\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}Eigen\+::\+Vector\+Xd final\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1Trajectory_aeb94e68102be7c8e5885e7f1ccf487e2}
+
+
+Get the last state, i.\+e. 
+
+at t=T, in the trajectory (only positions). \begin{DoxyReturn}{Returns}
+Last state in the trajectory. 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file Trajectory.\+hpp.
+
+
+\begin{DoxyCode}
+126 \{ \textcolor{keywordflow}{return} ys\_.row(ys\_.rows()-1); \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Trajectory_aac6f333ab80eb78ad2ff3cab4e8326ec}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!append@{append}}
+\index{append@{append}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{append}]{\setlength{\rightskip}{0pt plus 5cm}void append (
+\begin{DoxyParamCaption}
+\item[{const {\bf Trajectory} \&}]{trajectory}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1Trajectory_aac6f333ab80eb78ad2ff3cab4e8326ec}
+
+
+Append another trajectory at the end. 
+
+The appended trajectory should begin as current trajectory ends, in terms of time, position, velocity an acceleration.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em trajectory} & \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} to append. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 83 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+84 \{
+85   assert(\hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}() == trajectory.dim());
+86 
+87   assert(ts\_[\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1] == trajectory.ts()[0]);
+88 
+89   \textcolor{keywordflow}{if} (ys\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isZero() || trajectory.ys().row(0).isZero())
+90     assert(ys\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isZero() && trajectory.ys().row(0).isZero());
+91   \textcolor{keywordflow}{else}
+92     assert(ys\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isApprox(trajectory.ys().row(0)));
+93 
+94   \textcolor{keywordflow}{if} (yds\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isZero() || trajectory.yds().row(0).isZero())
+95     assert(yds\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isZero() && trajectory.yds().row(0).isZero());
+96   \textcolor{keywordflow}{else}
+97     assert(yds\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isApprox(trajectory.yds().row(0)));
+98 
+99   \textcolor{keywordflow}{if} (ydds\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isZero() || trajectory.ydds().row(0).isZero())
+100     assert(ydds\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isZero() && trajectory.ydds().row(0).isZero());
+101   \textcolor{keywordflow}{else}
+102     assert(ydds\_.row(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() - 1).isApprox(trajectory.ydds().row(0)));
+103 
+104   \textcolor{keywordtype}{int} new\_size = \hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}() + trajectory.length() - 1;
+105 
+106   VectorXd new\_ts(new\_size);
+107   new\_ts << ts\_, trajectory.ts().segment(1, trajectory.length() - 1);
+108   ts\_ = new\_ts;
+109 
+110   MatrixXd new\_ys(new\_size, \hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+111   new\_ys << ys\_, trajectory.ys().block(1, 0, trajectory.length() - 1, \hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+112   ys\_ = new\_ys;
+113 
+114   MatrixXd new\_yds(new\_size, \hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+115   new\_yds << yds\_, trajectory.yds().block(1, 0, trajectory.length() - 1, \hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+116   yds\_ = new\_yds;
+117 
+118   MatrixXd new\_ydds(new\_size, \hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+119   new\_ydds << ydds\_, trajectory.ydds().block(1, 0, trajectory.length() - 1, \hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+120   ydds\_ = new\_ydds;
+121   
+122   assert(\hyperlink{classDmpBbo_1_1Trajectory_a54e86a99496037df2355a51d712f5d54}{dim\_misc}() == trajectory.dim\_misc());
+123   \textcolor{keywordflow}{if} (\hyperlink{classDmpBbo_1_1Trajectory_a54e86a99496037df2355a51d712f5d54}{dim\_misc}()==0)
+124   \{
+125     misc\_.resize(new\_size,0);
+126   \}
+127   \textcolor{keywordflow}{else}
+128   \{
+129     MatrixXd new\_misc(new\_size, \hyperlink{classDmpBbo_1_1Trajectory_a54e86a99496037df2355a51d712f5d54}{dim\_misc}());
+130     new\_misc << misc\_, trajectory.misc().block(1, 0, trajectory.length() - 1, 
+      \hyperlink{classDmpBbo_1_1Trajectory_a54e86a99496037df2355a51d712f5d54}{dim\_misc}());
+131     misc\_ = new\_misc;
+132   \}
+133 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classDmpBbo_1_1Trajectory_aac6f333ab80eb78ad2ff3cab4e8326ec_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Trajectory_aad0f629a8d7be7400d0b5f6e990c9a1d}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!save\+To\+File@{save\+To\+File}}
+\index{save\+To\+File@{save\+To\+File}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{save\+To\+File}]{\setlength{\rightskip}{0pt plus 5cm}bool save\+To\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{directory, }
+\item[{std\+::string}]{filename, }
+\item[{bool}]{overwrite = {\ttfamily false}}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1Trajectory_aad0f629a8d7be7400d0b5f6e990c9a1d}
+
+
+Save a trajectory to a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em directory} & Directory to which to save trajectory to \\
+\hline
+\mbox{\tt in}  & {\em filename} & Filename \\
+\hline
+\mbox{\tt in}  & {\em overwrite} & Whether to overwrite existing files (true=overwrite, false=give warning) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if writing was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line 239 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+240 \{
+241   MatrixXd traj\_matrix(\hyperlink{classDmpBbo_1_1Trajectory_a7811beb090dc6ad38f0876f6b0fdc832}{length}(),1+3*\hyperlink{classDmpBbo_1_1Trajectory_a6f628f7f4ed9d77bf69f5b8560b98f18}{dim}()+\hyperlink{classDmpBbo_1_1Trajectory_a54e86a99496037df2355a51d712f5d54}{dim\_misc}());
+242   traj\_matrix << ts\_, ys\_, yds\_, ydds\_, misc\_; 
+243   \textcolor{keywordflow}{return} saveMatrix(directory, filename, traj\_matrix, overwrite);  
+244 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{classDmpBbo_1_1Trajectory_aad0f629a8d7be7400d0b5f6e990c9a1d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Trajectory_aac7e666c7fa5ea89ec1ba884e0a118a0}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!read\+From\+File@{read\+From\+File}}
+\index{read\+From\+File@{read\+From\+File}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{read\+From\+File}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trajectory} read\+From\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{filename, }
+\item[{int}]{n\+\_\+dims\+\_\+misc = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classDmpBbo_1_1Trajectory_aac7e666c7fa5ea89ec1ba884e0a118a0}
+
+
+Read a trajectory from a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em filename} & The name of the file from which to read. \\
+\hline
+\mbox{\tt in}  & {\em n\+\_\+dims\+\_\+misc} & Number of miscellaneous variables. This is needed because the file contains a n\+\_\+time\+\_\+steps x N matrix, and we need to know which part of M represents the miscellaneous variables, and which part represents the trajectory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} that was read
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000008}{Todo}]Replace this with $>$$>$operator \end{DoxyRefDesc}
+
+
+Definition at line 246 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+247 \{
+248   MatrixXd traj\_matrix;
+249   \textcolor{keywordflow}{if} (!loadMatrix(filename,traj\_matrix))
+250   \{ 
+251     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+252     cerr << \textcolor{stringliteral}{"Cannot open filename '"}<< filename <<\textcolor{stringliteral}{"'."} << endl;
+253     \textcolor{keywordflow}{return} \hyperlink{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}{Trajectory}();
+254   \}
+255   
+256   \textcolor{keywordtype}{int} n\_dims       = (traj\_matrix.cols()-1-n\_dims\_misc)/3;
+257   \textcolor{keywordtype}{int} n\_time\_steps = traj\_matrix.rows();
+258   VectorXd \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}; 
+259   MatrixXd \hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys}, \hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds}, \hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds}, \hyperlink{classDmpBbo_1_1Trajectory_a4bd0eca2780012731ff1b64341be1cbc}{misc};
+260   ts   = traj\_matrix.block(0,0+0*n\_dims,n\_time\_steps,1);
+261   ys   = traj\_matrix.block(0,1+0*n\_dims,n\_time\_steps,n\_dims);
+262   yds  = traj\_matrix.block(0,1+1*n\_dims,n\_time\_steps,n\_dims);
+263   ydds = traj\_matrix.block(0,1+2*n\_dims,n\_time\_steps,n\_dims);
+264   misc = traj\_matrix.block(0,1+3*n\_dims,n\_time\_steps,n\_dims\_misc);
+265   
+266   \textcolor{keywordflow}{return} \hyperlink{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}{Trajectory}(ts,ys,yds,ydds,misc);
+267 
+268 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classDmpBbo_1_1Trajectory_aac7e666c7fa5ea89ec1ba884e0a118a0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Trajectory_ae48669ea3eb155cd549c4bfbdc3f480a}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!generate\+Min\+Jerk\+Trajectory@{generate\+Min\+Jerk\+Trajectory}}
+\index{generate\+Min\+Jerk\+Trajectory@{generate\+Min\+Jerk\+Trajectory}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{generate\+Min\+Jerk\+Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trajectory} generate\+Min\+Jerk\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{initial\+\_\+y, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{final\+\_\+y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classDmpBbo_1_1Trajectory_ae48669ea3eb155cd549c4bfbdc3f480a}
+
+
+Generate a minimum-\/jerk trajectory from an initial to a final state. 
+
+Velocities and accelerations are 0 at initial and final state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & Times at which the state should be computed. \\
+\hline
+\mbox{\tt in}  & {\em initial\+\_\+y} & Initial position of the trajectory. \\
+\hline
+\mbox{\tt in}  & {\em final\+\_\+y} & Final position of the trajectory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimum-\/jerk trajectory from initial\+\_\+y to final\+\_\+y
+\end{DoxyReturn}
+See \href{http://noisyaccumulation.blogspot.fr/2012/02/how-to-decompose-2d-trajectory-data.html}{\tt http\+://noisyaccumulation.\+blogspot.\+fr/2012/02/how-\/to-\/decompose-\/2d-\/trajectory-\/data.\+html} 
+
+Definition at line 135 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+136 \{
+137   \textcolor{keywordtype}{int} n\_time\_steps = \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}.size();
+138   \textcolor{keywordtype}{int} n\_dims = y\_from.size();
+139   
+140   MatrixXd \hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys}(n\_time\_steps,n\_dims), \hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds}(n\_time\_steps,n\_dims), \hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds}(n\_time\_steps,n\_dims);
+141   
+142   \textcolor{keywordtype}{double} D =  \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[n\_time\_steps-1];
+143   ArrayXd tss = (\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}/D).array(); 
+144     
+145 
+146   ArrayXd A = y\_to.array()-y\_from.array();
+147   
+148   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+149   \{
+150     
+151     \textcolor{comment}{// http://noisyaccumulation.blogspot.fr/2012/02/how-to-decompose-2d-trajectory-data.html}
+152     
+153     \hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys}.col(i\_dim)   = y\_from[i\_dim] + A[i\_dim]*(  6*tss.pow(5)  -15*tss.pow(4) +10*tss.pow(3));
+154     
+155     \hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds}.col(i\_dim)  =             (A[i\_dim]/D)*( 30*tss.pow(4)  -60*tss.pow(3) +30*tss.pow(2));
+156     
+157     \hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds}.col(i\_dim) =         (A[i\_dim]/(D*D))*(120*tss.pow(3) -180*tss.pow(2) +60*tss       );
+158   \}
+159   
+160   \textcolor{keywordflow}{return} \hyperlink{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}{Trajectory}(\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts},\hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys},\hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds},\hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds});
+161  
+162   
+163 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{classDmpBbo_1_1Trajectory_ae48669ea3eb155cd549c4bfbdc3f480a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Trajectory_ab6d25078b7d7df08ad3cd8772d969034}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!generate\+Polynomial\+Trajectory@{generate\+Polynomial\+Trajectory}}
+\index{generate\+Polynomial\+Trajectory@{generate\+Polynomial\+Trajectory}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{generate\+Polynomial\+Trajectory}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trajectory} generate\+Polynomial\+Trajectory (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y\+\_\+from, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{yd\+\_\+from, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ydd\+\_\+from, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y\+\_\+to, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{yd\+\_\+to, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ydd\+\_\+to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classDmpBbo_1_1Trajectory_ab6d25078b7d7df08ad3cd8772d969034}
+
+
+Generate a fifth order polynomial trajectory from an initial to a final state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & Times at which the state should be computed. \\
+\hline
+\mbox{\tt in}  & {\em y\+\_\+from} & Initial position of the trajectory. \\
+\hline
+\mbox{\tt in}  & {\em yd\+\_\+from} & Initial velocity of the trajectory. \\
+\hline
+\mbox{\tt in}  & {\em ydd\+\_\+from} & Initial acceleration of the trajectory. \\
+\hline
+\mbox{\tt in}  & {\em y\+\_\+to} & Final position of the trajectory. \\
+\hline
+\mbox{\tt in}  & {\em yd\+\_\+to} & Final velocity of the trajectory. \\
+\hline
+\mbox{\tt in}  & {\em ydd\+\_\+to} & Final acceleration of the trajectory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The trajectory 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+167 \{
+168   VectorXd a0 = y\_from;
+169   VectorXd a1 = yd\_from;
+170   VectorXd a2 = ydd\_from / 2;
+171 
+172   VectorXd a3 = -10 * y\_from - 6 * yd\_from - 2.5 * ydd\_from + 10 * y\_to - 4 * yd\_to + 0.5 * ydd\_to;
+173   VectorXd a4 = 15 * y\_from + 8 * yd\_from + 2 * ydd\_from - 15  * y\_to  + 7 * yd\_to - ydd\_to;
+174   VectorXd a5 = -6 * y\_from - 3 * yd\_from - 0.5 * ydd\_from  + 6 * y\_to  - 3 * yd\_to + 0.5 * ydd\_to;
+175 
+176   \textcolor{keywordtype}{int} n\_time\_steps = \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}.size();
+177   \textcolor{keywordtype}{int} n\_dims = y\_from.size();
+178   
+179   MatrixXd \hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys}(n\_time\_steps,n\_dims), \hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds}(n\_time\_steps,n\_dims), \hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds}(n\_time\_steps,n\_dims);
+180 
+181   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}.size(); i++)
+182   \{
+183     \textcolor{keywordtype}{double} t = (\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[i] - \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[0]) / (\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[n\_time\_steps - 1] - \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[0]);
+184     \hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys}.row(i) = a0 + a1 * t + a2 * pow(t, 2) + a3 * pow(t, 3) + a4 * pow(t, 4) + a5 * pow(t, 5);
+185     \hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds}.row(i) = a1 + 2 * a2 * t + 3 * a3 * pow(t, 2) + 4 * a4 * pow(t, 3) + 5 * a5 * pow(t, 4);
+186     \hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds}.row(i) = 2 * a2 + 6 * a3 * t + 12 * a4 * pow(t, 2) + 20 * a5 * pow(t, 3);
+187   \}
+188 
+189   \hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds} /= (\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[n\_time\_steps - 1] - \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[0]);
+190   \hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds} /= pow(\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[n\_time\_steps - 1] - \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[0], 2);
+191 
+192   \textcolor{keywordflow}{return} \hyperlink{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}{Trajectory}(\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}, \hyperlink{classDmpBbo_1_1Trajectory_a7e10cffc4d5b8099986c835f9337eab4}{ys}, \hyperlink{classDmpBbo_1_1Trajectory_ad5772d5db1c6af36cf1de2eed2447702}{yds}, \hyperlink{classDmpBbo_1_1Trajectory_ac2ce234816063eeeead69a146651fef7}{ydds});
+193 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classDmpBbo_1_1Trajectory_ab6d25078b7d7df08ad3cd8772d969034_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1Trajectory_a8e4bc03c6f535f4c9983ffe77a2d971b}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!generate\+Polynomial\+Trajectory\+Through\+Viapoint@{generate\+Polynomial\+Trajectory\+Through\+Viapoint}}
+\index{generate\+Polynomial\+Trajectory\+Through\+Viapoint@{generate\+Polynomial\+Trajectory\+Through\+Viapoint}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{generate\+Polynomial\+Trajectory\+Through\+Viapoint}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Trajectory} generate\+Polynomial\+Trajectory\+Through\+Viapoint (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y\+\_\+from, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y\+\_\+yd\+\_\+ydd\+\_\+viapoint, }
+\item[{double}]{viapoint\+\_\+time, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{y\+\_\+to}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classDmpBbo_1_1Trajectory_a8e4bc03c6f535f4c9983ffe77a2d971b}
+
+
+Generate a trajectory from an initial to a final state, through a viapoint. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & Times at which the state should be computed. \\
+\hline
+\mbox{\tt in}  & {\em y\+\_\+from} & Initial position of the trajectory. \\
+\hline
+\mbox{\tt in}  & {\em y\+\_\+yd\+\_\+ydd\+\_\+viapoint} & Viapoint, should contain, pos, vel and acc. \\
+\hline
+\mbox{\tt in}  & {\em viapoint\+\_\+time} & Time at which the trajectory should pass through the viapoint. \\
+\hline
+\mbox{\tt in}  & {\em y\+\_\+to} & Final position of the trajectory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The trajectory from y\+\_\+from to y\+\_\+to, through the viapoint 
+\end{DoxyReturn}
+
+
+Definition at line 195 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+196 \{
+197   
+198   \textcolor{keywordtype}{int} n\_dims = y\_from.size();
+199   assert(n\_dims==y\_to.size());
+200   assert(3*n\_dims==y\_yd\_ydd\_viapoint.size()); \textcolor{comment}{// Contains y, yd and ydd, so *3}
+201   
+202   \textcolor{keywordtype}{int} n\_time\_steps = \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}.size();
+203   
+204   \textcolor{keywordtype}{int} viapoint\_time\_step = 0;
+205   \textcolor{keywordflow}{while} (viapoint\_time\_step<n\_time\_steps && \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}[viapoint\_time\_step]<viapoint\_time)
+206     viapoint\_time\_step++;
+207   
+208   \textcolor{keywordflow}{if} (viapoint\_time\_step>=n\_time\_steps)
+209   \{
+210     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{":"};
+211     cerr << \textcolor{stringliteral}{"ERROR: the time vector does not contain any time smaller than "} << viapoint\_time << \textcolor{stringliteral}{".
+       Returning min-jerk trajectory WITHOUT viapoint."} <<  endl;
+212     \textcolor{keywordflow}{return} \hyperlink{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}{Trajectory}();
+213   \}
+214 
+215   VectorXd yd\_from        = VectorXd::Zero(n\_dims);
+216   VectorXd ydd\_from       = VectorXd::Zero(n\_dims);
+217 
+218   VectorXd y\_viapoint     = y\_yd\_ydd\_viapoint.segment(0*n\_dims,n\_dims);
+219   VectorXd yd\_viapoint    = y\_yd\_ydd\_viapoint.segment(1*n\_dims,n\_dims);
+220   VectorXd ydd\_viapoint   = y\_yd\_ydd\_viapoint.segment(2*n\_dims,n\_dims);
+221 
+222   VectorXd yd\_to          = VectorXd::Zero(n\_dims);
+223   VectorXd ydd\_to         = VectorXd::Zero(n\_dims);
+224 
+225   \hyperlink{classDmpBbo_1_1Trajectory_aa635b61a4223224b821d156a27dbb2b8}{Trajectory} traj = \hyperlink{classDmpBbo_1_1Trajectory_ab6d25078b7d7df08ad3cd8772d969034}{Trajectory::generatePolynomialTrajectory}
+      (\hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}.segment(0, viapoint\_time\_step + 1), y\_from, yd\_from, ydd\_from, y\_viapoint, yd\_viapoint, ydd\_viapoint);
+226   traj.\hyperlink{classDmpBbo_1_1Trajectory_aac6f333ab80eb78ad2ff3cab4e8326ec}{append}(\hyperlink{classDmpBbo_1_1Trajectory_ab6d25078b7d7df08ad3cd8772d969034}{Trajectory::generatePolynomialTrajectory}(
+      \hyperlink{classDmpBbo_1_1Trajectory_a0ac526fb2e2e77134906a4b657d795d2}{ts}.segment(viapoint\_time\_step, n\_time\_steps - viapoint\_time\_step), y\_viapoint, yd\_viapoint, ydd\_viapoint,
+       y\_to, yd\_to, ydd\_to));
+227 
+228   \textcolor{keywordflow}{return} traj;
+229 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Trajectory_a8e4bc03c6f535f4c9983ffe77a2d971b_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1Trajectory_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1Trajectory_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 209 of file Trajectory.\+hpp.
+
+\hypertarget{classDmpBbo_1_1Trajectory_ab915330172eba3b4cc03473c23598a8a}{\index{Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dmp\+Bbo\+::\+Trajectory@{Dmp\+Bbo\+::\+Trajectory}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Trajectory} \&}]{trajectory}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1Trajectory_ab915330172eba3b4cc03473c23598a8a}
+
+
+Write object to an output stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em output} & Output stream to which to write to \\
+\hline
+\mbox{\tt in}  & {\em trajectory} & \hyperlink{classDmpBbo_1_1Trajectory}{Trajectory} to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream 
+\end{DoxyReturn}
+
+
+Definition at line 232 of file Trajectory.\+cpp.
+
+
+\begin{DoxyCode}
+232                                                                       \{
+233   MatrixXd traj\_matrix(trajectory.length(),1+3*trajectory.dim()+trajectory.dim\_misc());
+234   traj\_matrix << trajectory.ts\_, trajectory.ys\_, trajectory.yds\_, trajectory.ydds\_, trajectory.misc\_; 
+235   output << traj\_matrix << endl;
+236   \textcolor{keywordflow}{return} output;
+237 \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Trajectory_8hpp}{Trajectory.\+hpp}\item 
+\hyperlink{Trajectory_8cpp}{Trajectory.\+cpp}\end{DoxyCompactItemize}

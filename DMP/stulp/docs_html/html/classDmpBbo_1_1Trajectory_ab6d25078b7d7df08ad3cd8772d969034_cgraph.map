@@ -1,0 +1,6 @@
+<map id="generatePolynomialTrajectory" name="generatePolynomialTrajectory">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Trajectory.html#a7e10cffc4d5b8099986c835f9337eab4" title="Accessor function for the positions at different times. " alt="" coords="288,5,327,32"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Trajectory.html#ad5772d5db1c6af36cf1de2eed2447702" title="Accessor function for the velocities at different times. " alt="" coords="285,56,329,83"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1Trajectory.html#ac2ce234816063eeeead69a146651fef7" title="Accessor function for the accelerations at different times. " alt="" coords="281,107,333,133"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1Trajectory.html#aa635b61a4223224b821d156a27dbb2b8" title="Default constructor. " alt="" coords="264,157,351,184"/>
+</map>

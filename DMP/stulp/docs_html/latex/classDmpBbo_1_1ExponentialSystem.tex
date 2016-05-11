@@ -1,0 +1,373 @@
+\hypertarget{classDmpBbo_1_1ExponentialSystem}{\subsection{Exponential\+System Class Reference}
+\label{classDmpBbo_1_1ExponentialSystem}\index{Exponential\+System@{Exponential\+System}}
+}
+
+
+Dynamical System modelling the evolution of an exponential system\+: $\dot{x} = -\alpha (x-x^g)$.  
+
+
+
+
+{\ttfamily \#include $<$Exponential\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Exponential\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classDmpBbo_1_1ExponentialSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Exponential\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classDmpBbo_1_1ExponentialSystem__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1ExponentialSystem_a8d0556627bb524b03accc5e60dfc7e1a}{Exponential\+System} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, Eigen\+::\+Vector\+Xd y\+\_\+init, Eigen\+::\+Vector\+Xd y\+\_\+attr, double \hyperlink{classDmpBbo_1_1ExponentialSystem_aee36d92680cc62cfd30ad121aa8bb47e}{alpha}, std\+::string \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}=\char`\"{}Exponential\+System\char`\"{})
+\begin{DoxyCompactList}\small\item\em Initialization constructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1ExponentialSystem_ae3aeffaf5234dfecbc5286a37bc82664}{$\sim$\+Exponential\+System} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$ \hyperlink{classDmpBbo_1_1ExponentialSystem_a16b3e8da712b58f8295cbb7951bebf68}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ExponentialSystem_ab564468764e7e4dc7c11e2a786e22c19}{differential\+Equation} (const Eigen\+::\+Vector\+Xd \&x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd) const 
+\begin{DoxyCompactList}\small\item\em The differential equation which defines the system. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ExponentialSystem_ab6600b58b35bc9e66673d16f68e2e919}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, Eigen\+::\+Matrix\+Xd \&xs, Eigen\+::\+Matrix\+Xd \&xds) const 
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times. \end{DoxyCompactList}\item 
+double \hyperlink{classDmpBbo_1_1ExponentialSystem_aee36d92680cc62cfd30ad121aa8bb47e}{alpha} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for decay constant. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1ExponentialSystem_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1ExponentialSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Dynamical System modelling the evolution of an exponential system\+: $\dot{x} = -\alpha (x-x^g)$. 
+
+\href{http://en.wikipedia.org/wiki/Exponential_decay}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Exponential\+\_\+decay}
+
+\href{http://en.wikipedia.org/wiki/Exponential_growth}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Exponential\+\_\+growth} 
+
+Definition at line 42 of file Exponential\+System.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1ExponentialSystem_a8d0556627bb524b03accc5e60dfc7e1a}{\index{Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}!Exponential\+System@{Exponential\+System}}
+\index{Exponential\+System@{Exponential\+System}!Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}}
+\paragraph[{Exponential\+System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Exponential\+System} (
+\begin{DoxyParamCaption}
+\item[{double}]{tau, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+init, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+attr, }
+\item[{double}]{alpha, }
+\item[{std\+::string}]{name = {\ttfamily \char`\"{}ExponentialSystem\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1ExponentialSystem_a8d0556627bb524b03accc5e60dfc7e1a}
+
+
+Initialization constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & Time constant, cf. \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{Dynamical\+System\+::tau()} \\
+\hline
+{\em y\+\_\+init} & Initial state, cf. \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{Dynamical\+System\+::initial\+\_\+state()} \\
+\hline
+{\em y\+\_\+attr} & Attractor state, cf. \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{Dynamical\+System\+::attractor\+\_\+state()} \\
+\hline
+{\em alpha} & Decay constant, cf. \hyperlink{classDmpBbo_1_1ExponentialSystem_aee36d92680cc62cfd30ad121aa8bb47e}{Exponential\+System\+::alpha()} \\
+\hline
+{\em name} & Name for the sytem, cf. \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{Dynamical\+System\+::name()} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Exponential\+System.\+cpp.
+
+
+\begin{DoxyCode}
+51   : \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}(1, \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, y\_init, y\_attr, \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}),
+52   alpha\_(\hyperlink{classDmpBbo_1_1ExponentialSystem_aee36d92680cc62cfd30ad121aa8bb47e}{alpha})
+53 \{
+54 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ExponentialSystem_ae3aeffaf5234dfecbc5286a37bc82664}{\index{Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}!````~Exponential\+System@{$\sim$\+Exponential\+System}}
+\index{````~Exponential\+System@{$\sim$\+Exponential\+System}!Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}}
+\paragraph[{$\sim$\+Exponential\+System}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Exponential\+System} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1ExponentialSystem_ae3aeffaf5234dfecbc5286a37bc82664}
+
+
+Destructor. 
+
+
+
+Definition at line 56 of file Exponential\+System.\+cpp.
+
+
+\begin{DoxyCode}
+57 \{
+58 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1ExponentialSystem_a16b3e8da712b58f8295cbb7951bebf68}{\index{Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dynamical\+System} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ExponentialSystem_a16b3e8da712b58f8295cbb7951bebf68}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{Dynamical\+System}.
+
+
+
+Definition at line 60 of file Exponential\+System.\+cpp.
+
+
+\begin{DoxyCode}
+61 \{
+62   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1ExponentialSystem_a8d0556627bb524b03accc5e60dfc7e1a}{ExponentialSystem}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}(),\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}(),
+      \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}(),alpha\_,\hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}());
+63 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classDmpBbo_1_1ExponentialSystem_a16b3e8da712b58f8295cbb7951bebf68_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ExponentialSystem_ab564468764e7e4dc7c11e2a786e22c19}{\index{Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}!differential\+Equation@{differential\+Equation}}
+\index{differential\+Equation@{differential\+Equation}!Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}}
+\paragraph[{differential\+Equation}]{\setlength{\rightskip}{0pt plus 5cm}void differential\+Equation (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ExponentialSystem_ab564468764e7e4dc7c11e2a786e22c19}
+
+
+The differential equation which defines the system. 
+
+It relates state values to rates of change of those state values
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & current state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1) \\
+\hline
+\mbox{\tt out}  & {\em xd} & rate of change in state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+x and xd should be of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1. This forces you to pre-\/allocate memory, which speeds things up (and also makes Eigen's Ref functionality easier to deal with). 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{Dynamical\+System}.
+
+
+
+Definition at line 66 of file Exponential\+System.\+cpp.
+
+
+\begin{DoxyCode}
+67 \{
+68   xd = alpha\_*(\hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}()-x)/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+69 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1ExponentialSystem_ab564468764e7e4dc7c11e2a786e22c19_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ExponentialSystem_ab6600b58b35bc9e66673d16f68e2e919}{\index{Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xds}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ExponentialSystem_ab6600b58b35bc9e66673d16f68e2e919}
+
+
+Return analytical solution of the system at certain times. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em xs} & Sequence of state vectors. T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em xds} & Sequence of state vectors (rates of change). T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The output xs and xds will be of size D x T {\itshape only} if the matrix x you pass as an argument of size D x T. In all other cases (i.\+e. including passing an empty matrix) the size of x will be T x D. This feature has been added so that you may pass matrices of either size. 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{Dynamical\+System}.
+
+
+
+Definition at line 71 of file Exponential\+System.\+cpp.
+
+
+\begin{DoxyCode}
+72 \{
+73   \textcolor{keywordtype}{int} T = ts.size();
+74   assert(T>0);
+75 
+76   \textcolor{comment}{// Usually, we expect xs and xds to be of size T X dim(), so we resize to that. However, if the}
+77   \textcolor{comment}{// input matrices were of size dim() X T, we return the matrices of that size by doing a }
+78   \textcolor{comment}{// transposeInPlace at the end. That way, the user can also request dim() X T sized matrices.}
+79   \textcolor{keywordtype}{bool} caller\_expects\_transposed = (xs.rows()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}() && xs.cols()==T);
+80 
+81   \textcolor{comment}{// Prepare output arguments to be of right size (Eigen does nothing if already the right size)}
+82   xs.resize(T,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+83   xds.resize(T,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+84   
+85   VectorXd val\_range = \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}() - \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}();
+86   
+87   VectorXd exp\_term  = -alpha\_*ts/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+88   exp\_term = exp\_term.array().exp().transpose();
+89   VectorXd pos\_scale =                   exp\_term;
+90   VectorXd vel\_scale = -(alpha\_/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}()) * exp\_term;
+91   
+92   xs = val\_range.transpose().replicate(T,1).array() * pos\_scale.replicate(1,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}()).array();
+93   xs += \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}().transpose().replicate(T,1);
+94   xds = val\_range.transpose().replicate(T,1).array() * vel\_scale.replicate(1,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}()).array();
+95   
+96   \textcolor{keywordflow}{if} (caller\_expects\_transposed)
+97   \{
+98     xs.transposeInPlace();
+99     xds.transposeInPlace();
+100   \}
+101 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1ExponentialSystem_ab6600b58b35bc9e66673d16f68e2e919_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ExponentialSystem_aee36d92680cc62cfd30ad121aa8bb47e}{\index{Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}!alpha@{alpha}}
+\index{alpha@{alpha}!Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}}
+\paragraph[{alpha}]{\setlength{\rightskip}{0pt plus 5cm}double alpha (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ExponentialSystem_aee36d92680cc62cfd30ad121aa8bb47e}
+
+
+Accessor function for decay constant. 
+
+\begin{DoxyReturn}{Returns}
+Decay constant 
+\end{DoxyReturn}
+
+
+Definition at line 68 of file Exponential\+System.\+hpp.
+
+
+\begin{DoxyCode}
+68                            \{
+69     \textcolor{keywordflow}{return} alpha\_;
+70   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ExponentialSystem_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ExponentialSystem_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_af084bff2ddd6233e9a898faa23f6195c}{Dynamical\+System}.
+
+
+
+Definition at line 112 of file Exponential\+System.\+cpp.
+
+
+\begin{DoxyCode}
+113 \{
+114   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"ExponentialSystem"})
+      ;
+115 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1ExponentialSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Exponential\+System@{Dmp\+Bbo\+::\+Exponential\+System}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1ExponentialSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 85 of file Exponential\+System.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ExponentialSystem_8hpp}{Exponential\+System.\+hpp}\item 
+\hyperlink{ExponentialSystem_8cpp}{Exponential\+System.\+cpp}\end{DoxyCompactItemize}

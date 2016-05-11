@@ -1,0 +1,8 @@
+<map id="readFromFile" name="readFromFile">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Trajectory.html#aa635b61a4223224b821d156a27dbb2b8" title="Default constructor. " alt="" coords="159,5,245,32"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Trajectory.html#a0ac526fb2e2e77134906a4b657d795d2" title="Accessor function for the times at which measurements were made. " alt="" coords="183,56,221,83"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1Trajectory.html#a7e10cffc4d5b8099986c835f9337eab4" title="Accessor function for the positions at different times. " alt="" coords="183,107,221,133"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1Trajectory.html#ad5772d5db1c6af36cf1de2eed2447702" title="Accessor function for the velocities at different times. " alt="" coords="180,157,224,184"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1Trajectory.html#ac2ce234816063eeeead69a146651fef7" title="Accessor function for the accelerations at different times. " alt="" coords="176,208,228,235"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1Trajectory.html#a4bd0eca2780012731ff1b64341be1cbc" title="Return miscellaneous variables included in the trajectory. " alt="" coords="177,259,227,285"/>
+</map>

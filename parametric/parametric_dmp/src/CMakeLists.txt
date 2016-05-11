@@ -1,33 +1,26 @@
-add_executable(fixed_se_dmp
-    fixed_se_dmp.cpp
+add_executable(parametric_dmp_lwr
+    parametric_dmp_lwr.cpp
     )
 
-set_target_properties(fixed_se_dmp 
+set_target_properties(parametric_dmp_lwr 
     PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/ )
 
-target_link_libraries ( fixed_se_dmp ${LIBS} )
+target_link_libraries ( parametric_dmp_lwr ${LIBS} )
 
 
-add_executable(fixed_se_dmp_lwpr
-    fixed_se_dmp_lwpr.cpp
+add_executable(parametric_dmp_lwpr
+    parametric_dmp_lwpr.cpp
     )
 
-set_target_properties(fixed_se_dmp_lwpr 
+set_target_properties(parametric_dmp_lwpr 
     PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/ )
 
-target_link_libraries ( fixed_se_dmp_lwpr ${LIBS} )
+target_link_libraries ( parametric_dmp_lwpr ${LIBS} )
 
 
-add_executable(parametric_se_dmp
-    parametric_se_dmp.cpp
-    )
 
-set_target_properties(parametric_se_dmp 
-    PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin/ )
 
-target_link_libraries ( parametric_se_dmp ${LIBS} )
 
 

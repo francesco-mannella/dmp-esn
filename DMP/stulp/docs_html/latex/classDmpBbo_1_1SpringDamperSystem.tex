@@ -1,0 +1,622 @@
+\hypertarget{classDmpBbo_1_1SpringDamperSystem}{\subsection{Spring\+Damper\+System Class Reference}
+\label{classDmpBbo_1_1SpringDamperSystem}\index{Spring\+Damper\+System@{Spring\+Damper\+System}}
+}
+
+
+Dynamical System modelling the evolution of a spring-\/damper system\+: $ m\ddot{x} = -k(x-x^g) -c\dot{x}$.  
+
+
+
+
+{\ttfamily \#include $<$Spring\+Damper\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Spring\+Damper\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classDmpBbo_1_1SpringDamperSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Spring\+Damper\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classDmpBbo_1_1SpringDamperSystem__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1SpringDamperSystem_ae89cb23307911c37c2c5bdedd0b9a1c6}{Spring\+Damper\+System} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, Eigen\+::\+Vector\+Xd y\+\_\+init, Eigen\+::\+Vector\+Xd y\+\_\+attr, double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{damping\+\_\+coefficient}, double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}{spring\+\_\+constant}=C\+R\+I\+T\+I\+C\+A\+L\+L\+Y\+\_\+\+D\+A\+M\+P\+E\+D, double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}{mass}=1.\+0, std\+::string \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}=\char`\"{}Spring\+Damper\+System\char`\"{})
+\begin{DoxyCompactList}\small\item\em Initialization constructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1SpringDamperSystem_a5b1ce37e793a6a361bf58f10b2fc22f0}{$\sim$\+Spring\+Damper\+System} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$ \hyperlink{classDmpBbo_1_1SpringDamperSystem_a16b3e8da712b58f8295cbb7951bebf68}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SpringDamperSystem_ab564468764e7e4dc7c11e2a786e22c19}{differential\+Equation} (const Eigen\+::\+Vector\+Xd \&x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd) const 
+\begin{DoxyCompactList}\small\item\em The differential equation which defines the system. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SpringDamperSystem_ab6600b58b35bc9e66673d16f68e2e919}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, Eigen\+::\+Matrix\+Xd \&xs, Eigen\+::\+Matrix\+Xd \&xds) const 
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1SpringDamperSystem_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{damping\+\_\+coefficient} (void)
+\begin{DoxyCompactList}\small\item\em Accessor function for damping coefficient. \end{DoxyCompactList}\item 
+double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}{spring\+\_\+constant} (void)
+\begin{DoxyCompactList}\small\item\em Accessor function for spring constant. \end{DoxyCompactList}\item 
+double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}{mass} (void)
+\begin{DoxyCompactList}\small\item\em Accessor function for mass. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SpringDamperSystem_a0b6f58851f4a8fc8b433936cff4c3e7e}{set\+\_\+damping\+\_\+coefficient} (double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{damping\+\_\+coefficient})
+\begin{DoxyCompactList}\small\item\em Accessor function for damping coefficient. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SpringDamperSystem_a8844968245473d1fedd2a2b632fb074a}{set\+\_\+spring\+\_\+constant} (double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}{spring\+\_\+constant})
+\begin{DoxyCompactList}\small\item\em Accessor function for spring constant. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SpringDamperSystem_afd917e12a5f9a7131886704606f2fa44}{set\+\_\+mass} (double \hyperlink{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}{mass})
+\begin{DoxyCompactList}\small\item\em Accessor function for mass. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1SpringDamperSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Dynamical System modelling the evolution of a spring-\/damper system\+: $ m\ddot{x} = -k(x-x^g) -c\dot{x}$. 
+
+\href{http://en.wikipedia.org/wiki/Damped_spring-mass_system}{\tt http\+://en.\+wikipedia.\+org/wiki/\+Damped\+\_\+spring-\/mass\+\_\+system} 
+
+Definition at line 42 of file Spring\+Damper\+System.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_ae89cb23307911c37c2c5bdedd0b9a1c6}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!Spring\+Damper\+System@{Spring\+Damper\+System}}
+\index{Spring\+Damper\+System@{Spring\+Damper\+System}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{Spring\+Damper\+System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Spring\+Damper\+System} (
+\begin{DoxyParamCaption}
+\item[{double}]{tau, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+init, }
+\item[{Eigen\+::\+Vector\+Xd}]{y\+\_\+attr, }
+\item[{double}]{damping\+\_\+coefficient, }
+\item[{double}]{spring\+\_\+constant = {\ttfamily CRITICALLY\+\_\+DAMPED}, }
+\item[{double}]{mass = {\ttfamily 1.0}, }
+\item[{std\+::string}]{name = {\ttfamily \char`\"{}SpringDamperSystem\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1SpringDamperSystem_ae89cb23307911c37c2c5bdedd0b9a1c6}
+
+
+Initialization constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & Time constant, cf. \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{Dynamical\+System\+::tau()} \\
+\hline
+{\em y\+\_\+init} & Initial state, cf. \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{Dynamical\+System\+::initial\+\_\+state()} \\
+\hline
+{\em y\+\_\+attr} & Attractor state, cf. \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{Dynamical\+System\+::attractor\+\_\+state()} \\
+\hline
+{\em spring\+\_\+constant} & Spring constant, cf. \hyperlink{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}{Spring\+Damper\+System\+::spring\+\_\+constant()} \\
+\hline
+{\em damping\+\_\+coefficient} & Damping coefficient, cf. \hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{Spring\+Damper\+System\+::damping\+\_\+coefficient()} \\
+\hline
+{\em mass} & Mass, cf. \hyperlink{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}{Spring\+Damper\+System\+::mass()} \\
+\hline
+{\em name} & Name for the sytem, cf. \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{Dynamical\+System\+::name()} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file Spring\+Damper\+System.\+cpp.
+
+
+\begin{DoxyCode}
+48   : \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}(2, \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, y\_init, y\_attr, \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}),
+49   damping\_coefficient\_(\hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{damping\_coefficient}),spring\_constant\_(
+      \hyperlink{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}{spring\_constant}),mass\_(\hyperlink{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}{mass})
+50 \{
+51   \textcolor{keywordflow}{if} (spring\_constant\_==CRITICALLY\_DAMPED)
+52     spring\_constant\_ = damping\_coefficient\_*damping\_coefficient\_/4; \textcolor{comment}{// Critically damped}
+53 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_a5b1ce37e793a6a361bf58f10b2fc22f0}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!````~Spring\+Damper\+System@{$\sim$\+Spring\+Damper\+System}}
+\index{````~Spring\+Damper\+System@{$\sim$\+Spring\+Damper\+System}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{$\sim$\+Spring\+Damper\+System}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Spring\+Damper\+System} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1SpringDamperSystem_a5b1ce37e793a6a361bf58f10b2fc22f0}
+
+
+Destructor. 
+
+
+
+Definition at line 55 of file Spring\+Damper\+System.\+cpp.
+
+
+\begin{DoxyCode}
+56 \{
+57 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_a16b3e8da712b58f8295cbb7951bebf68}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dynamical\+System} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SpringDamperSystem_a16b3e8da712b58f8295cbb7951bebf68}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{Dynamical\+System}.
+
+
+
+Definition at line 59 of file Spring\+Damper\+System.\+cpp.
+
+
+\begin{DoxyCode}
+60 \{
+61   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1SpringDamperSystem_ae89cb23307911c37c2c5bdedd0b9a1c6}{SpringDamperSystem}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}(),\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}(),
+      \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}(),
+62                         damping\_coefficient\_,spring\_constant\_,mass\_,\hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}());
+63 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classDmpBbo_1_1SpringDamperSystem_a16b3e8da712b58f8295cbb7951bebf68_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_ab564468764e7e4dc7c11e2a786e22c19}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!differential\+Equation@{differential\+Equation}}
+\index{differential\+Equation@{differential\+Equation}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{differential\+Equation}]{\setlength{\rightskip}{0pt plus 5cm}void differential\+Equation (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SpringDamperSystem_ab564468764e7e4dc7c11e2a786e22c19}
+
+
+The differential equation which defines the system. 
+
+It relates state values to rates of change of those state values
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & current state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1) \\
+\hline
+\mbox{\tt out}  & {\em xd} & rate of change in state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+x and xd should be of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1. This forces you to pre-\/allocate memory, which speeds things up (and also makes Eigen's Ref functionality easier to deal with). 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{Dynamical\+System}.
+
+
+
+Definition at line 65 of file Spring\+Damper\+System.\+cpp.
+
+
+\begin{DoxyCode}
+66 \{
+67   \textcolor{comment}{// Spring-damper system was originally 2nd order, i.e. with [x xd xdd]}
+68   \textcolor{comment}{// After rewriting it as a 1st order system it becomes [y z yd zd], with yd = z; }
+69       
+70   \textcolor{comment}{// Get 'y' and 'z' parts of the state in 'x'}
+71   \textcolor{keywordtype}{int} dim2 = \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}()/2;
+72   VectorXd y = x.segment(0,dim2);
+73   VectorXd z = x.segment(dim2,dim2);
+74   VectorXd y\_attr = \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}().segment(0,dim2);
+75   
+76   \textcolor{comment}{// Compute yd and zd}
+77   \textcolor{comment}{// See 
+       http://en.wikipedia.org/wiki/Damped\_spring-mass\_system#Example:mass\_.E2.80.93spring.E2.80.93damper}
+78   \textcolor{comment}{// and equation 2.1 of http://www-clmc.usc.edu/publications/I/ijspeert-NC2013.pdf}
+79 
+80   VectorXd yd = z/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+81   
+82   VectorXd zd = (-spring\_constant\_*(y-y\_attr) - damping\_coefficient\_*z)/(mass\_*
+      \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}());
+83   
+84   xd.segment(0,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}()/2) = yd;
+85   xd.segment(\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}()/2,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}()/2) = zd;
+86       
+87 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1SpringDamperSystem_ab564468764e7e4dc7c11e2a786e22c19_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_ab6600b58b35bc9e66673d16f68e2e919}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xds}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SpringDamperSystem_ab6600b58b35bc9e66673d16f68e2e919}
+
+
+Return analytical solution of the system at certain times. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em xs} & Sequence of state vectors. T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em xds} & Sequence of state vectors (rates of change). T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The output xs and xds will be of size D x T {\itshape only} if the matrix x you pass as an argument of size D x T. In all other cases (i.\+e. including passing an empty matrix) the size of x will be T x D. This feature has been added so that you may pass matrices of either size. 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{Dynamical\+System}.
+
+
+
+Definition at line 89 of file Spring\+Damper\+System.\+cpp.
+
+
+\begin{DoxyCode}
+90 \{
+91   \textcolor{keywordtype}{int} T = ts.size();
+92   assert(T>0);
+93 
+94   \textcolor{comment}{// Usually, we expect xs and xds to be of size T X dim(), so we resize to that. However, if the}
+95   \textcolor{comment}{// input matrices were of size dim() X T, we return the matrices of that size by doing a }
+96   \textcolor{comment}{// transposeInPlace at the end. That way, the user can also request dim() X T sized matrices.}
+97   \textcolor{keywordtype}{bool} caller\_expects\_transposed = (xs.rows()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}() && xs.cols()==T);
+98 
+99   \textcolor{comment}{// Prepare output arguments to be of right size (Eigen does nothing if already the right size)}
+100   xs.resize(T,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+101   xds.resize(T,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+102 
+103   VectorXd y\_init = \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}();
+104   VectorXd y\_attr = \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}();
+105   
+106   \textcolor{comment}{// Closed form solution to 2nd order canonical system}
+107   \textcolor{comment}{// This system behaves like a critically damped spring-damper system}
+108   \textcolor{comment}{// http://en.wikipedia.org/wiki/Damped\_spring-mass\_system}
+109   \textcolor{keywordtype}{double} omega\_0 = sqrt(spring\_constant\_/mass\_)/\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}(); \textcolor{comment}{// natural frequency}
+110   \textcolor{keywordtype}{double} zeta    = damping\_coefficient\_/(2*sqrt(mass\_*spring\_constant\_)); \textcolor{comment}{// damping ratio}
+111   \textcolor{keywordflow}{if} (zeta!=1.0)
+112     cout << \textcolor{stringliteral}{"WARNING: Spring-damper system is not critically damped, zeta="} << zeta << endl;
+113       
+114   \textcolor{comment}{// Example}
+115   \textcolor{comment}{//  \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_}
+116   \textcolor{comment}{//    dim = 4}
+117   \textcolor{comment}{//  \_\_\_\_\_\_\_}
+118   \textcolor{comment}{//  dim2= 2}
+119   \textcolor{comment}{// [y\_1 y\_2 z\_1 z\_2 yd\_1 yd\_2 zd\_1 zd\_2]}
+120   
+121   \textcolor{keywordtype}{int} dim2 = \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}()/2;
+122 
+123   \textcolor{comment}{// The loop is slower, but more legible than fudging around with Eigen::replicate().}
+124   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<dim2; i\_dim++)
+125   \{
+126     \textcolor{keywordtype}{double} y0 = y\_init[i\_dim] - y\_attr[i\_dim];
+127     \textcolor{keywordtype}{double} yd0;
+128     \textcolor{keywordflow}{if} (y\_init.size()>=\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}())
+129     \{
+130       \textcolor{comment}{// Initial velocities also given}
+131       yd0 = y\_init[dim2 + i\_dim];          
+132     \}
+133     \textcolor{keywordflow}{else}
+134     \{
+135       \textcolor{comment}{// Initial velocities not given: set to zero}
+136       yd0 = 0.0;
+137     \}
+138           
+139     \textcolor{keywordtype}{double} A = y0;
+140     \textcolor{keywordtype}{double} B = yd0 + omega\_0*y0;
+141     
+142     \textcolor{comment}{// Closed form solutions}
+143     \textcolor{comment}{// See http://en.wikipedia.org/wiki/Damped\_spring-mass\_system}
+144     VectorXd exp\_term  = -omega\_0*ts;
+145     exp\_term = exp\_term.array().exp();
+146   
+147     \textcolor{keywordtype}{int} Y  = 0*dim2 + i\_dim;
+148     \textcolor{keywordtype}{int} Z  = 1*dim2 + i\_dim;
+149    
+150     VectorXd ABts = A + B*ts.array();
+151     
+152     \textcolor{comment}{// Closed form solutions}
+153     \textcolor{comment}{// See http://en.wikipedia.org/wiki/Damped\_spring-mass\_system}
+154     \textcolor{comment}{// If you find this illegible, I recommend to look at the Matlab code instead...}
+155     xs.col(Y)  =  y\_attr(i\_dim) +      ((   ABts.array()))*exp\_term.array();
+156                                                     
+157     \textcolor{comment}{// Derivative of the above (use product rule: (f*g)' = f'*g + f*g'}
+158     xds.col(Y) =                    ((B - omega\_0*   ABts.array()))*exp\_term.array();
+159                                                     
+160     \textcolor{comment}{// Derivative of the above (again use product    rule: (f*g)' = f'*g + f*g'}
+161     VectorXd ydds   =    (-omega\_0*(2*B - omega\_0*   ABts.array()))*exp\_term.array();
+162       
+163     \textcolor{comment}{// This is how to compute the 'z' terms from the 'y' terms}
+164     xs.col(Z)  = xds.col(Y)*\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+165     xds.col(Z) = ydds*\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+166   \}
+167         
+168   \textcolor{keywordflow}{if} (caller\_expects\_transposed)
+169   \{
+170     xs.transposeInPlace();
+171     xds.transposeInPlace();
+172   \}
+173 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1SpringDamperSystem_ab6600b58b35bc9e66673d16f68e2e919_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SpringDamperSystem_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_af084bff2ddd6233e9a898faa23f6195c}{Dynamical\+System}.
+
+
+
+Definition at line 175 of file Spring\+Damper\+System.\+cpp.
+
+
+\begin{DoxyCode}
+176 \{
+177   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"SpringDamperSystem"}
+      );
+178 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!damping\+\_\+coefficient@{damping\+\_\+coefficient}}
+\index{damping\+\_\+coefficient@{damping\+\_\+coefficient}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{damping\+\_\+coefficient}]{\setlength{\rightskip}{0pt plus 5cm}double damping\+\_\+coefficient (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}
+
+
+Accessor function for damping coefficient. 
+
+\begin{DoxyReturn}{Returns}
+Damping coefficient 
+\end{DoxyReturn}
+
+
+Definition at line 74 of file Spring\+Damper\+System.\+hpp.
+
+
+\begin{DoxyCode}
+74 \{ \textcolor{keywordflow}{return} damping\_coefficient\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!spring\+\_\+constant@{spring\+\_\+constant}}
+\index{spring\+\_\+constant@{spring\+\_\+constant}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{spring\+\_\+constant}]{\setlength{\rightskip}{0pt plus 5cm}double spring\+\_\+constant (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}
+
+
+Accessor function for spring constant. 
+
+\begin{DoxyReturn}{Returns}
+Spring constant 
+\end{DoxyReturn}
+
+
+Definition at line 80 of file Spring\+Damper\+System.\+hpp.
+
+
+\begin{DoxyCode}
+80 \{ \textcolor{keywordflow}{return} spring\_constant\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!mass@{mass}}
+\index{mass@{mass}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{mass}]{\setlength{\rightskip}{0pt plus 5cm}double mass (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}
+
+
+Accessor function for mass. 
+
+\begin{DoxyReturn}{Returns}
+Mass 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Spring\+Damper\+System.\+hpp.
+
+
+\begin{DoxyCode}
+86 \{ \textcolor{keywordflow}{return} mass\_; \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_a0b6f58851f4a8fc8b433936cff4c3e7e}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!set\+\_\+damping\+\_\+coefficient@{set\+\_\+damping\+\_\+coefficient}}
+\index{set\+\_\+damping\+\_\+coefficient@{set\+\_\+damping\+\_\+coefficient}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{set\+\_\+damping\+\_\+coefficient}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+damping\+\_\+coefficient (
+\begin{DoxyParamCaption}
+\item[{double}]{damping\+\_\+coefficient}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1SpringDamperSystem_a0b6f58851f4a8fc8b433936cff4c3e7e}
+
+
+Accessor function for damping coefficient. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em damping\+\_\+coefficient} & Damping coefficient \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 92 of file Spring\+Damper\+System.\+hpp.
+
+
+\begin{DoxyCode}
+92                                                                   \{
+93     damping\_coefficient\_=\hyperlink{classDmpBbo_1_1SpringDamperSystem_a1e0acb1d6298104e74f81f53768f5bf1}{damping\_coefficient}; 
+94   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1SpringDamperSystem_a0b6f58851f4a8fc8b433936cff4c3e7e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_a8844968245473d1fedd2a2b632fb074a}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!set\+\_\+spring\+\_\+constant@{set\+\_\+spring\+\_\+constant}}
+\index{set\+\_\+spring\+\_\+constant@{set\+\_\+spring\+\_\+constant}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{set\+\_\+spring\+\_\+constant}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+spring\+\_\+constant (
+\begin{DoxyParamCaption}
+\item[{double}]{spring\+\_\+constant}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1SpringDamperSystem_a8844968245473d1fedd2a2b632fb074a}
+
+
+Accessor function for spring constant. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em spring\+\_\+constant} & Spring constant \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 100 of file Spring\+Damper\+System.\+hpp.
+
+
+\begin{DoxyCode}
+100                                                           \{
+101     spring\_constant\_ = \hyperlink{classDmpBbo_1_1SpringDamperSystem_a4afd1caf44ce68f2747d8fa8a1388b0a}{spring\_constant}; 
+102   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classDmpBbo_1_1SpringDamperSystem_a8844968245473d1fedd2a2b632fb074a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_afd917e12a5f9a7131886704606f2fa44}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!set\+\_\+mass@{set\+\_\+mass}}
+\index{set\+\_\+mass@{set\+\_\+mass}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{set\+\_\+mass}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+mass (
+\begin{DoxyParamCaption}
+\item[{double}]{mass}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1SpringDamperSystem_afd917e12a5f9a7131886704606f2fa44}
+
+
+Accessor function for mass. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mass} & Mass \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 108 of file Spring\+Damper\+System.\+hpp.
+
+
+\begin{DoxyCode}
+108                                     \{ 
+109     mass\_=\hyperlink{classDmpBbo_1_1SpringDamperSystem_a387fcfdb067c6de3be9bfd61b868b839}{mass}; 
+110   \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{classDmpBbo_1_1SpringDamperSystem_afd917e12a5f9a7131886704606f2fa44_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1SpringDamperSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Spring\+Damper\+System@{Dmp\+Bbo\+::\+Spring\+Damper\+System}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1SpringDamperSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 128 of file Spring\+Damper\+System.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SpringDamperSystem_8hpp}{Spring\+Damper\+System.\+hpp}\item 
+\hyperlink{SpringDamperSystem_8cpp}{Spring\+Damper\+System.\+cpp}\end{DoxyCompactItemize}

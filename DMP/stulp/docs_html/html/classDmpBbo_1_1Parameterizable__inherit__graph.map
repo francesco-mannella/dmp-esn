@@ -1,0 +1,21 @@
+<map id="Parameterizable" name="Parameterizable">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Dmp.html" title="Implementation of Dynamical Movement Primitives. " alt="" coords="231,107,282,133"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1FunctionApproximator.html" title="Base class for all function approximators. " alt="" coords="177,233,336,260"/>
+<area shape="rect" id="node13" href="$classDmpBbo_1_1ModelParameters.html" title="Base class for all model parameters of function approximators. " alt="" coords="189,461,324,488"/>
+<area shape="rect" id="node20" href="$classDmpBbo_1_1UnifiedModel.html" title="The unified model, which can be used to represent the model of all other function approximators..." alt="" coords="204,512,309,539"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1DmpContextual.html" title="Implementation of Contextual Dynamical Movement Primitives. " alt="" coords="429,31,547,57"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1DmpContextualOneStep.html" title="Implementation of Contextual Dynamical Movement Primitives. " alt="" coords="640,5,815,32"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1DmpContextualTwoStep.html" title="Implementation of Contextual Dynamical Movement Primitives. " alt="" coords="640,56,815,83"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1FunctionApproximatorGMR.html" title="GMR (Gaussian Mixture Regression) function approximator. " alt="" coords="392,81,584,108"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1FunctionApproximatorGPR.html" title="GPR (Gaussian Process Regression) function approximator. " alt="" coords="393,132,583,159"/>
+<area shape="rect" id="node9" href="$classDmpBbo_1_1FunctionApproximatorIRFRLS.html" title="iRFRLS (Incremental Random Features Regularized Least Squares) function approximator ..." alt="" coords="384,183,592,209"/>
+<area shape="rect" id="node10" href="$classDmpBbo_1_1FunctionApproximatorLWPR.html" title="LWPR (Locally Weighted Projection Regression) function approximator. " alt="" coords="389,233,587,260"/>
+<area shape="rect" id="node11" href="$classDmpBbo_1_1FunctionApproximatorLWR.html" title="LWR (Locally Weighted Regression) function approximator. " alt="" coords="393,284,583,311"/>
+<area shape="rect" id="node12" href="$classDmpBbo_1_1FunctionApproximatorRBFN.html" title="RBFN (Radial Basis Function Network) function approximator. " alt="" coords="390,335,586,361"/>
+<area shape="rect" id="node14" href="$classDmpBbo_1_1ModelParametersGMR.html" title="Model parameters for the GMR function approximator. " alt="" coords="405,385,571,412"/>
+<area shape="rect" id="node15" href="$classDmpBbo_1_1ModelParametersGPR.html" title="Model parameters for the Gaussian Process Regression (GPR) function approximator. ..." alt="" coords="406,436,570,463"/>
+<area shape="rect" id="node16" href="$classDmpBbo_1_1ModelParametersIRFRLS.html" title="Model parameters for the iRFRLS function approximator. " alt="" coords="397,487,579,513"/>
+<area shape="rect" id="node17" href="$classDmpBbo_1_1ModelParametersLWPR.html" title="Model parameters for the Locally Weighted Projection Regression (LWPR) function approximator. " alt="" coords="401,537,575,564"/>
+<area shape="rect" id="node18" href="$classDmpBbo_1_1ModelParametersLWR.html" title="Model parameters for the Locally Weighted Regression (LWR) function approximator. ..." alt="" coords="405,588,571,615"/>
+<area shape="rect" id="node19" href="$classDmpBbo_1_1ModelParametersRBFN.html" title="Model parameters for the Radial Basis Function Network (RBFN) function approximator. " alt="" coords="403,639,573,665"/>
+</map>

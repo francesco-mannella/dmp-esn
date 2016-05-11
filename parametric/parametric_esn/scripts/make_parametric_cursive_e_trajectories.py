@@ -8,8 +8,10 @@ import numpy as np
 #----------------------------------------------------------------------------
 
 TIMESTEPS = 200
-PLOT_ONLINE = False 
-#PLOT_ONLINE = True
+#PLOT_ONLINE = False 
+PLOT_ONLINE = True
+ORIGIN = False
+#ORIGIN = True
 
 def get_angle(v1,v2) :
     """
@@ -115,15 +117,38 @@ def trajectories(cursive_es, angles):
     
     return Y, L, A, S, E, ts
 
+def origin_trajectories(cursive_es, angles):
+    ts = None
+    Y = []
+    r1 = 0
+    r2 = .4
+    L = []
+    A = []
+    S = []
+    E = []
+    for a in  angles: 
+        for p in cursive_es:
+            start = np.array([r1*np.cos(a), r1*np.sin(a)]) + .5
+            end = np.array([r2*np.cos(a), r2*np.sin(a)]) +.5
+            A.append( a )
+            L.append( p )
+            S.append( start )
+            E.append( end )
+            x,y,t = gen_trajectory(start, end, bx=p, by=p)
+            if ts is None: ts = t
+            Y.append(np.vstack([x,y]))
+    
+    return Y, L, A, S, E, ts
+
 def plot_trajectories(Y, L, A, ax, color):
     
     for y,i in zip(Y,range(len(Y))):
-        y[0,:] = y[0,:] + A[i]*3.0 
-        y[1,:] = y[1,:] + L[i]*3.0
-        ax.plot(*y, color=color, lw=2)
+        y[0,:] = y[0,:] #+ A[i]*3.0 
+        y[1,:] = y[1,:] #+ L[i]*3.0
+        ax.plot(*y, color=color, lw=.5)
     ax.set_xlim([0,4]) 
     ax.set_ylim([0,4]) 
-    
+
 NY = 9
 NT = 9-1
 angle_gap = .5
@@ -135,10 +160,13 @@ P2 = np.linspace(0.0005 + dp2, 0.005 - dp2, NT)
 A2 = np.linspace(np.pi*.25 + da2, np.pi*(0.25 + angle_gap) - da2, NT)
 
 
-
-Y, LY, AY, SY, EY, tsY = trajectories(P1,A1)
-T, LT, AT, ST, ET, tsT = trajectories(P2,A2)
-
+if not ORIGIN :
+    Y, LY, AY, SY, EY, tsY = trajectories(P1,A1)
+    T, LT, AT, ST, ET, tsT = trajectories(P2,A2)
+else:
+    Y, LY, AY, SY, EY, tsY = origin_trajectories(P1,A1)
+    T, LT, AT, ST, ET, tsT = origin_trajectories(P2,A2)
+    
 mmax = np.hstack((AY,AT)).max() 
 mmin = np.hstack((AY,AT)).min() 
 AY = (AY-mmin)/(mmax-mmin) 
@@ -163,7 +191,7 @@ if PLOT_ONLINE == True:
 
 else:
     
-    def format_trajectories(Y, L, A, S, E, ts, label ):
+    def save_formatted_trajectories(Y, L, A, S, E, ts, label ):
         dt = ts[1] - ts[0]
         Y_formatted = []
         for y,i in zip(Y,range(len(Y))):
@@ -192,5 +220,5 @@ else:
     
 
 
-    format_trajectories(Y, LY, AY, SY, EY, tsY, "tl")
-    format_trajectories(T, LT, AT, ST, ET, tsT, "tt")
+    save_formatted_trajectories(Y, LY, AY, SY, EY, tsY, "tl")
+    save_formatted_trajectories(T, LT, AT, ST, ET, tsT, "tt")

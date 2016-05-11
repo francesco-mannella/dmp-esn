@@ -1,0 +1,5 @@
+<map id="TaskSolver" name="TaskSolver">
+<area shape="rect" id="node2" href="$classDemoTaskSolverApproximateQuadraticFunction.html" title="The task solver tunes the parameters a and c such that the function &#160;best matches a set of target val..." alt="" coords="5,80,215,121"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1TaskSolverParallel.html" title="Interface for classes that can perform rollouts. " alt="" coords="239,87,379,114"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1TaskSolverDmp.html" title="Task solver for the viapoint task, that generates trajectories with a DMP. " alt="" coords="247,169,370,196"/>
+</map>

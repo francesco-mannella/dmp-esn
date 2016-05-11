@@ -1,0 +1,446 @@
+\hypertarget{classDmpBbo_1_1SigmoidSystem}{\subsection{Sigmoid\+System Class Reference}
+\label{classDmpBbo_1_1SigmoidSystem}\index{Sigmoid\+System@{Sigmoid\+System}}
+}
+
+
+Dynamical System modelling the evolution of a sigmoidal system $\dot{x} = -\alpha x(1-x/K)$.  
+
+
+
+
+{\ttfamily \#include $<$Sigmoid\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Sigmoid\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classDmpBbo_1_1SigmoidSystem__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sigmoid\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=180pt]{classDmpBbo_1_1SigmoidSystem__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1SigmoidSystem_a78f4cd6586d9465ac7e76407dc0e4379}{Sigmoid\+System} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, const Eigen\+::\+Vector\+Xd \&x\+\_\+init, double max\+\_\+rate, double inflection\+\_\+point\+\_\+time, std\+::string \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}=\char`\"{}Sigmoid\+System\char`\"{})
+\begin{DoxyCompactList}\small\item\em Initialization constructor for a 1\+D system. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1SigmoidSystem_af744b2bd37d35e183f27708227339a93}{$\sim$\+Sigmoid\+System} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$ \hyperlink{classDmpBbo_1_1SigmoidSystem_a16b3e8da712b58f8295cbb7951bebf68}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} object. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SigmoidSystem_ab564468764e7e4dc7c11e2a786e22c19}{differential\+Equation} (const Eigen\+::\+Vector\+Xd \&x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd) const 
+\begin{DoxyCompactList}\small\item\em The differential equation which defines the system. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SigmoidSystem_ab6600b58b35bc9e66673d16f68e2e919}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, Eigen\+::\+Matrix\+Xd \&xs, Eigen\+::\+Matrix\+Xd \&xds) const 
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SigmoidSystem_a17edb45ef62a4ef7f8c78e4f8f68b249}{set\+\_\+tau} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau})
+\begin{DoxyCompactList}\small\item\em Mutator function for the time constant. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1SigmoidSystem_ad4e11c676c2add8a992db1caf542f0a0}{set\+\_\+initial\+\_\+state} (const Eigen\+::\+Vector\+Xd \&y\+\_\+init)
+\begin{DoxyCompactList}\small\item\em Mutator function for the initial state of the dynamical system. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1SigmoidSystem_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1SigmoidSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Dynamical System modelling the evolution of a sigmoidal system $\dot{x} = -\alpha x(1-x/K)$. 
+
+Definition at line 35 of file Sigmoid\+System.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1SigmoidSystem_a78f4cd6586d9465ac7e76407dc0e4379}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!Sigmoid\+System@{Sigmoid\+System}}
+\index{Sigmoid\+System@{Sigmoid\+System}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{Sigmoid\+System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sigmoid\+System} (
+\begin{DoxyParamCaption}
+\item[{double}]{tau, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{x\+\_\+init, }
+\item[{double}]{max\+\_\+rate, }
+\item[{double}]{inflection\+\_\+point\+\_\+time, }
+\item[{std\+::string}]{name = {\ttfamily \char`\"{}SigmoidSystem\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1SigmoidSystem_a78f4cd6586d9465ac7e76407dc0e4379}
+
+
+Initialization constructor for a 1\+D system. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tau} & Time constant, cf. \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{Dynamical\+System\+::tau()} \\
+\hline
+{\em x\+\_\+init} & Initial state, cf. \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{Dynamical\+System\+::initial\+\_\+state()} \\
+\hline
+{\em max\+\_\+rate} & Maximum rate of change, cf. Sigmoid\+System\+::max\+\_\+rate() \\
+\hline
+{\em inflection\+\_\+point\+\_\+time} & Time at which maximum rate of change is achieved, cf. Sigmoid\+System\+::inflection\+\_\+point\+\_\+time() \\
+\hline
+{\em name} & Name for the sytem, cf. \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{Dynamical\+System\+::name()} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 47 of file Sigmoid\+System.\+cpp.
+
+
+\begin{DoxyCode}
+48 : \hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{DynamicalSystem}(1, \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, x\_init, VectorXd::Zero(x\_init.size()), 
+      \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}),
+49   max\_rate\_(max\_rate),
+50   inflection\_point\_time\_(inflection\_point\_time)
+51 \{
+52   Ks\_ = SigmoidSystem::computeKs(\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}(), max\_rate\_, inflection\_point\_time\_);
+53 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classDmpBbo_1_1SigmoidSystem_a78f4cd6586d9465ac7e76407dc0e4379_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SigmoidSystem_af744b2bd37d35e183f27708227339a93}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!````~Sigmoid\+System@{$\sim$\+Sigmoid\+System}}
+\index{````~Sigmoid\+System@{$\sim$\+Sigmoid\+System}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{$\sim$\+Sigmoid\+System}]{\setlength{\rightskip}{0pt plus 5cm}$\sim${\bf Sigmoid\+System} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1SigmoidSystem_af744b2bd37d35e183f27708227339a93}
+
+
+Destructor. 
+
+
+
+Definition at line 55 of file Sigmoid\+System.\+cpp.
+
+
+\begin{DoxyCode}
+56 \{
+57 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1SigmoidSystem_a16b3e8da712b58f8295cbb7951bebf68}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dynamical\+System} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SigmoidSystem_a16b3e8da712b58f8295cbb7951bebf68}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{Dynamical\+System}.
+
+
+
+Definition at line 59 of file Sigmoid\+System.\+cpp.
+
+
+\begin{DoxyCode}
+60 \{
+61   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1SigmoidSystem_a78f4cd6586d9465ac7e76407dc0e4379}{SigmoidSystem}(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}(),\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}(),max\_rate\_,
+      inflection\_point\_time\_,\hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}());
+62 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classDmpBbo_1_1SigmoidSystem_a16b3e8da712b58f8295cbb7951bebf68_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SigmoidSystem_ab564468764e7e4dc7c11e2a786e22c19}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!differential\+Equation@{differential\+Equation}}
+\index{differential\+Equation@{differential\+Equation}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{differential\+Equation}]{\setlength{\rightskip}{0pt plus 5cm}void differential\+Equation (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SigmoidSystem_ab564468764e7e4dc7c11e2a786e22c19}
+
+
+The differential equation which defines the system. 
+
+It relates state values to rates of change of those state values
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & current state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1) \\
+\hline
+\mbox{\tt out}  & {\em xd} & rate of change in state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+x and xd should be of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1. This forces you to pre-\/allocate memory, which speeds things up (and also makes Eigen's Ref functionality easier to deal with). 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{Dynamical\+System}.
+
+
+
+Definition at line 132 of file Sigmoid\+System.\+cpp.
+
+
+\begin{DoxyCode}
+133 \{
+134   xd = max\_rate\_*x.array()*(1-(x.array()/Ks\_.array()));
+135 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1SigmoidSystem_ab6600b58b35bc9e66673d16f68e2e919}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xds}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SigmoidSystem_ab6600b58b35bc9e66673d16f68e2e919}
+
+
+Return analytical solution of the system at certain times. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em xs} & Sequence of state vectors. T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em xds} & Sequence of state vectors (rates of change). T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The output xs and xds will be of size D x T {\itshape only} if the matrix x you pass as an argument of size D x T. In all other cases (i.\+e. including passing an empty matrix) the size of x will be T x D. This feature has been added so that you may pass matrices of either size. 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{Dynamical\+System}.
+
+
+
+Definition at line 137 of file Sigmoid\+System.\+cpp.
+
+
+\begin{DoxyCode}
+138 \{
+139   \textcolor{keywordtype}{int} T = ts.size();
+140   assert(T>0);
+141 
+142   \textcolor{comment}{// Usually, we expect xs and xds to be of size T X dim(), so we resize to that. However, if the}
+143   \textcolor{comment}{// input matrices were of size dim() X T, we return the matrices of that size by doing a }
+144   \textcolor{comment}{// transposeInPlace at the end. That way, the user can also request dim() X T sized matrices.}
+145   \textcolor{keywordtype}{bool} caller\_expects\_transposed = (xs.rows()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}() && xs.cols()==T);
+146 
+147   \textcolor{comment}{// Prepare output arguments to be of right size (Eigen does nothing if already the right size)}
+148   xs.resize(T,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+149   xds.resize(T,\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+150 
+151   \textcolor{comment}{// Auxillary variables to improve legibility}
+152   \textcolor{keywordtype}{double} r = max\_rate\_;
+153   VectorXd exp\_rt = (-r*ts).array().exp();
+154   
+155   VectorXd y\_init = \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}();
+156       
+157   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} dd=0; dd<\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}(); dd++)
+158   \{
+159     \textcolor{comment}{// Auxillary variables to improve legibility}
+160     \textcolor{keywordtype}{double} K = Ks\_[dd];
+161     \textcolor{keywordtype}{double} b = (K/y\_init[dd])-1;
+162         
+163     xs.block(0,dd,T,1)  = K/(1+b*exp\_rt.array());
+164     xds.block(0,dd,T,1) = K*r*b*((1 + b*exp\_rt.array()).square().inverse().array()) * exp\_rt.array();
+165   \}
+166   
+167   \textcolor{keywordflow}{if} (caller\_expects\_transposed)
+168   \{
+169     xs.transposeInPlace();
+170     xds.transposeInPlace();
+171   \}
+172 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1SigmoidSystem_ab6600b58b35bc9e66673d16f68e2e919_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SigmoidSystem_a17edb45ef62a4ef7f8c78e4f8f68b249}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!set\+\_\+tau@{set\+\_\+tau}}
+\index{set\+\_\+tau@{set\+\_\+tau}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{set\+\_\+tau}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+tau (
+\begin{DoxyParamCaption}
+\item[{double}]{tau}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SigmoidSystem_a17edb45ef62a4ef7f8c78e4f8f68b249}
+
+
+Mutator function for the time constant. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tau} & Time constant \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{Dynamical\+System}.
+
+
+
+Definition at line 64 of file Sigmoid\+System.\+cpp.
+
+
+\begin{DoxyCode}
+64                                           \{
+65 
+66   \textcolor{comment}{// Get previous tau from superclass with tau() and set it with set\_tau()  }
+67   \textcolor{keywordtype}{double} prev\_tau = \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}();
+68   \hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{DynamicalSystem::set\_tau}(new\_tau);
+69   
+70   inflection\_point\_time\_ = new\_tau*inflection\_point\_time\_/prev\_tau; \textcolor{comment}{// todo document this}
+71   Ks\_ = SigmoidSystem::computeKs(\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}(), max\_rate\_, inflection\_point\_time\_);
+72 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1SigmoidSystem_a17edb45ef62a4ef7f8c78e4f8f68b249_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SigmoidSystem_ad4e11c676c2add8a992db1caf542f0a0}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!set\+\_\+initial\+\_\+state@{set\+\_\+initial\+\_\+state}}
+\index{set\+\_\+initial\+\_\+state@{set\+\_\+initial\+\_\+state}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{set\+\_\+initial\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+initial\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{initial\+\_\+state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SigmoidSystem_ad4e11c676c2add8a992db1caf542f0a0}
+
+
+Mutator function for the initial state of the dynamical system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em initial\+\_\+state} & Initial state of the dynamical system. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{Dynamical\+System}.
+
+
+
+Definition at line 74 of file Sigmoid\+System.\+cpp.
+
+
+\begin{DoxyCode}
+74                                                             \{
+75   assert(y\_init.size()==\hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\_orig}());
+76   \hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{DynamicalSystem::set\_initial\_state}(y\_init);
+77   Ks\_ = SigmoidSystem::computeKs(\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}(), max\_rate\_, inflection\_point\_time\_);
+78 \}    
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1SigmoidSystem_ad4e11c676c2add8a992db1caf542f0a0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1SigmoidSystem_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1SigmoidSystem_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1DynamicalSystem_af084bff2ddd6233e9a898faa23f6195c}{Dynamical\+System}.
+
+
+
+Definition at line 186 of file Sigmoid\+System.\+cpp.
+
+
+\begin{DoxyCode}
+187 \{
+188   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"SigmoidSystem"});
+189 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1SigmoidSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Sigmoid\+System@{Dmp\+Bbo\+::\+Sigmoid\+System}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1SigmoidSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 74 of file Sigmoid\+System.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{SigmoidSystem_8hpp}{Sigmoid\+System.\+hpp}\item 
+\hyperlink{SigmoidSystem_8cpp}{Sigmoid\+System.\+cpp}\end{DoxyCompactItemize}

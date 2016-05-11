@@ -1,0 +1,700 @@
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN}{\subsection{Model\+Parameters\+R\+B\+F\+N Class Reference}
+\label{classDmpBbo_1_1ModelParametersRBFN}\index{Model\+Parameters\+R\+B\+F\+N@{Model\+Parameters\+R\+B\+F\+N}}
+}
+
+
+Model parameters for the Radial Basis Function Network (R\+B\+F\+N) function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Parameters\+R\+B\+F\+N.\+hpp$>$}
+
+
+
+Inheritance diagram for Model\+Parameters\+R\+B\+F\+N\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classDmpBbo_1_1ModelParametersRBFN__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+Parameters\+R\+B\+F\+N\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classDmpBbo_1_1ModelParametersRBFN__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1ModelParametersRBFN_a42878dcce6da0b2f6d477fd0685b978b}{Model\+Parameters\+R\+B\+F\+N} (const Eigen\+::\+Matrix\+Xd \&centers, const Eigen\+::\+Matrix\+Xd \&widths, const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab0065893578a0770652450ebfe930481}{weights})
+\begin{DoxyCompactList}\small\item\em Constructor for the model parameters of the L\+W\+P\+R function approximator. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} $\ast$ \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a0a71d403a2e0560e058c03394648d773}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} object. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1ModelParametersRBFN_af5a550bcf65d5a29a153a594cc4e3fa1}{get\+Expected\+Input\+Dim} (void) const 
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the input data. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a125cc60559b55f7348beb15f25834b6f}{kernel\+Activations} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&kernel\+\_\+activations) const 
+\begin{DoxyCompactList}\small\item\em Get the kernel activations for given inputs. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersRBFN_add0186ca30d91928b887805fe0d24598}{set\+Parameter\+Vector\+Modifier\+Private} (std\+::string modifier, bool new\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Turn certain modifiers on or off, see \hyperlink{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{Parameterizable\+::set\+Parameter\+Vector\+Modifier()}. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a887f4747734bd8b7cc4f799092ff31b4}{get\+Selectable\+Parameters} (std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels) const 
+\begin{DoxyCompactList}\small\item\em Return all the names of the parameter types that can be selected. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a9dba1f93e426e7511630ec1ece4ace17}{get\+Parameter\+Vector\+Mask} (const std\+::set$<$ std\+::string $>$ selected\+\_\+values\+\_\+labels, Eigen\+::\+Vector\+Xi \&selected\+\_\+mask) const 
+\begin{DoxyCompactList}\small\item\em Get a mask for selecting parameters. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a29429ff2771d1e56cfba7250d38da4b1}{get\+Parameter\+Vector\+All} (Eigen\+::\+Vector\+Xd \&all\+\_\+values) const 
+\begin{DoxyCompactList}\small\item\em Return a vector that returns all available parameter values. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the size of the parameter values vector when it contains all available parameter values. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab0065893578a0770652450ebfe930481}{weights} (void) const 
+\begin{DoxyCompactList}\small\item\em Return the weights of the basis functions. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a9defb2d398362ff5663a1fde70903651}{set\+\_\+caching} (bool caching)
+\begin{DoxyCompactList}\small\item\em Turn caching for the function \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a125cc60559b55f7348beb15f25834b6f}{kernel\+Activations()} on or off. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel}{Unified\+Model} $\ast$ \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a6e3534f93333334c2f0126f8fc4d29d1}{to\+Unified\+Model} (void) const 
+\begin{DoxyCompactList}\small\item\em Convert these model parameters to unified model parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a9d3c8f22e8237a805af4935a647e5a50}{set\+Parameter\+Vector\+All} (const Eigen\+::\+Vector\+Xd \&values)
+\begin{DoxyCompactList}\small\item\em Set all available parameter values with one vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a4d78a827d8b424d4246a1f5763e79fdb}{class {\bfseries Function\+Approximator\+R\+B\+F\+N}}\label{classDmpBbo_1_1ModelParametersRBFN_a4d78a827d8b424d4246a1f5763e79fdb}
+
+\item 
+class \hyperlink{classDmpBbo_1_1ModelParametersRBFN_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Model parameters for the Radial Basis Function Network (R\+B\+F\+N) function approximator. 
+
+Definition at line 44 of file Model\+Parameters\+R\+B\+F\+N.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a42878dcce6da0b2f6d477fd0685b978b}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!Model\+Parameters\+R\+B\+F\+N@{Model\+Parameters\+R\+B\+F\+N}}
+\index{Model\+Parameters\+R\+B\+F\+N@{Model\+Parameters\+R\+B\+F\+N}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{Model\+Parameters\+R\+B\+F\+N}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\+Parameters\+R\+B\+F\+N} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{centers, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{widths, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{weights}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1ModelParametersRBFN_a42878dcce6da0b2f6d477fd0685b978b}
+
+
+Constructor for the model parameters of the L\+W\+P\+R function approximator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em centers} & Centers of the basis functions \\
+\hline
+\mbox{\tt in}  & {\em widths} & Widths of the basis functions. \\
+\hline
+\mbox{\tt in}  & {\em weights} & Weight of each basis function \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 51 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+52 :
+53   centers\_(centers),
+54   widths\_(widths),
+55   weights\_(\hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab0065893578a0770652450ebfe930481}{weights}),
+56   caching\_(\textcolor{keyword}{true})
+57 \{
+58 \textcolor{preprocessor}{#ifndef NDEBUG // Variables below are only required for asserts; check for NDEBUG to avoid warnings.}
+59   \textcolor{keywordtype}{int} n\_basis\_functions = centers.rows();
+60   \textcolor{keywordtype}{int} n\_dims = centers.cols();
+61 \textcolor{preprocessor}{#endif  }
+62   assert(n\_basis\_functions==widths\_.rows());
+63   assert(n\_dims           ==widths\_.cols());
+64   assert(n\_basis\_functions==weights\_.rows());
+65   assert(1                ==weights\_.cols());
+66   
+67   all\_values\_vector\_size\_ = 0;
+68   all\_values\_vector\_size\_ += centers\_.rows()*centers\_.cols();
+69   all\_values\_vector\_size\_ += widths\_.rows() *widths\_.cols();
+70   all\_values\_vector\_size\_ += weights\_.rows()*weights\_.cols();
+71 
+72 \};
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_af084bff2ddd6233e9a898faa23f6195c}{Model\+Parameters}.
+
+
+
+Definition at line 124 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+125 \{
+126   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"ModelParametersRBFN
+      "});
+127 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a0a71d403a2e0560e058c03394648d773}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\+Parameters} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_a0a71d403a2e0560e058c03394648d773}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_a491a5c84b21c8577748ca7e83a9b4751}{Model\+Parameters}.
+
+
+
+Definition at line 74 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+74                                                       \{
+75   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a42878dcce6da0b2f6d477fd0685b978b}{ModelParametersRBFN}(centers\_,widths\_,weights\_); 
+76 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_af5a550bcf65d5a29a153a594cc4e3fa1}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}}
+\index{get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{get\+Expected\+Input\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Expected\+Input\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_af5a550bcf65d5a29a153a594cc4e3fa1}
+
+
+The expected dimensionality of the input data. 
+
+\begin{DoxyReturn}{Returns}
+Expected dimensionality of the input data 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_af4d8412e83487a72b7f8929c716d6d8f}{Model\+Parameters}.
+
+
+
+Definition at line 60 of file Model\+Parameters\+R\+B\+F\+N.\+hpp.
+
+
+\begin{DoxyCode}
+60                                        \{
+61     \textcolor{keywordflow}{return} centers\_.cols();
+62   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a125cc60559b55f7348beb15f25834b6f}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!kernel\+Activations@{kernel\+Activations}}
+\index{kernel\+Activations@{kernel\+Activations}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{kernel\+Activations}]{\setlength{\rightskip}{0pt plus 5cm}void kernel\+Activations (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{kernel\+\_\+activations}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1ModelParametersRBFN_a125cc60559b55f7348beb15f25834b6f}
+
+
+Get the kernel activations for given inputs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & The input data (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt out}  & {\em kernel\+\_\+activations} & The kernel activations, computed for each of the samples in the input data (size\+: n\+\_\+samples X n\+\_\+basis\+\_\+functions) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+79 \{
+80   \textcolor{keywordflow}{if} (caching\_)
+81   \{
+82     \textcolor{comment}{// If the cached inputs matrix has the same size as the one now requested}
+83     \textcolor{comment}{//     (this also takes care of the case when inputs\_cached is empty and need to be initialized)}
+84     \textcolor{keywordflow}{if} ( inputs.rows()==inputs\_cached\_.rows() && inputs.cols()==inputs\_cached\_.cols() )
+85     \{
+86       \textcolor{comment}{// And they have the same values}
+87       \textcolor{keywordflow}{if} ( (inputs.array()==inputs\_cached\_.array()).all() )
+88       \{
+89         \textcolor{comment}{// Then you can return the cached values}
+90         kernel\_activations = kernel\_activations\_cached\_;
+91         \textcolor{keywordflow}{return};
+92       \}
+93     \}
+94   \}
+95 
+96   \textcolor{comment}{// Cache could not be used, actually do the work}
+97   \textcolor{keywordtype}{bool} normalized\_basis\_functions=\textcolor{keyword}{false};  
+98   \textcolor{keywordtype}{bool} asymmetric\_kernels=\textcolor{keyword}{false};
+99   BasisFunction::Gaussian::activations(centers\_,widths\_,inputs,kernel\_activations,
+100     normalized\_basis\_functions,asymmetric\_kernels);
+101 
+102   \textcolor{keywordflow}{if} (caching\_)
+103   \{
+104     \textcolor{comment}{// Cache the current results now.  }
+105     inputs\_cached\_ = inputs;
+106     kernel\_activations\_cached\_ = kernel\_activations;
+107   \}
+108   
+109 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_add0186ca30d91928b887805fe0d24598}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!set\+Parameter\+Vector\+Modifier\+Private@{set\+Parameter\+Vector\+Modifier\+Private}}
+\index{set\+Parameter\+Vector\+Modifier\+Private@{set\+Parameter\+Vector\+Modifier\+Private}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{set\+Parameter\+Vector\+Modifier\+Private}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+Modifier\+Private (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{modifier, }
+\item[{bool}]{new\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_add0186ca30d91928b887805fe0d24598}
+
+
+Turn certain modifiers on or off, see \hyperlink{classDmpBbo_1_1Parameterizable_a6eefba9dfdcfe8878c10150074c6a68e}{Parameterizable\+::set\+Parameter\+Vector\+Modifier()}. 
+
+Parameterizable\+::set\+Parameter\+Vector\+Modifier\+Private(), This function may (but must not be) overridden by subclasses of \hyperlink{classDmpBbo_1_1Parameterizable}{Parameterizable}, depending on whether the subclass has modifiers (or not)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em modifier} & The name of the modifier \\
+\hline
+\mbox{\tt in}  & {\em new\+\_\+value} & Whether to turn the modifier on (true) or off (false) \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{classDmpBbo_1_1Parameterizable}{Parameterizable}.
+
+
+
+Definition at line 232 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+233 \{
+234 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a887f4747734bd8b7cc4f799092ff31b4}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!get\+Selectable\+Parameters@{get\+Selectable\+Parameters}}
+\index{get\+Selectable\+Parameters@{get\+Selectable\+Parameters}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{get\+Selectable\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Selectable\+Parameters (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_a887f4747734bd8b7cc4f799092ff31b4}
+
+
+Return all the names of the parameter types that can be selected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em selected\+\_\+values\+\_\+labels} & Names of the parameter types that can be selected \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{Parameterizable}.
+
+
+
+Definition at line 129 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+130 \{
+131   selected\_values\_labels = set<string>();
+132   selected\_values\_labels.insert(\textcolor{stringliteral}{"centers"});
+133   selected\_values\_labels.insert(\textcolor{stringliteral}{"widths"});
+134   selected\_values\_labels.insert(\textcolor{stringliteral}{"weights"});
+135 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a9dba1f93e426e7511630ec1ece4ace17}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}}
+\index{get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{get\+Parameter\+Vector\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Mask (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$}]{selected\+\_\+values\+\_\+labels, }
+\item[{Eigen\+::\+Vector\+Xi \&}]{selected\+\_\+mask}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_a9dba1f93e426e7511630ec1ece4ace17}
+
+
+Get a mask for selecting parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & Labels of the selected parameter values \\
+\hline
+\mbox{\tt out}  & {\em selected\+\_\+mask} & A mask indicating indices of selected parameters. 0 indicates not selected, $>$0 indicates selected.\\
+\hline
+\end{DoxyParams}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ In this case, if selected\+\_\+values\+\_\+labels contains \char`\"{}centers\char`\"{} and \char`\"{}slopes\char`\"{}, the mask will be\+: \begin{DoxyVerb}    centers     widths    slopes
+[   1   1   1  0  0  0   3   3   3 ]
+\end{DoxyVerb}
+ The '0' indicates that these parameters are not selected. The other ones have different numbers so that they may be discerned from one another (as required in \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{Parameterizable\+::get\+Parameter\+Vector\+Selected\+Min\+Max} for instance. 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{Parameterizable}.
+
+
+
+Definition at line 138 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+139 \{
+140 
+141   selected\_mask.resize(\hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+142   selected\_mask.fill(0);
+143   
+144   \textcolor{keywordtype}{int} offset = 0;
+145   \textcolor{keywordtype}{int} size;
+146   
+147   \textcolor{comment}{// Centers}
+148   size = centers\_.rows()*centers\_.cols();
+149   \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"centers"})!=selected\_values\_labels.end())
+150     selected\_mask.segment(offset,size).fill(1);
+151   offset += size;
+152   
+153   \textcolor{comment}{// Widths}
+154   size = widths\_.rows()*widths\_.cols();
+155   \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"widths"})!=selected\_values\_labels.end())
+156     selected\_mask.segment(offset,size).fill(2);
+157   offset += size;
+158   
+159   \textcolor{comment}{// Offsets}
+160   size = weights\_.rows()*weights\_.cols();
+161   \textcolor{keywordflow}{if} (selected\_values\_labels.find(\textcolor{stringliteral}{"weights"})!=selected\_values\_labels.end())
+162     selected\_mask.segment(offset,size).fill(3);
+163   offset += size;
+164 
+165   offset += size;
+166 
+167   assert(offset == \hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());   
+168 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1ModelParametersRBFN_a9dba1f93e426e7511630ec1ece4ace17_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a29429ff2771d1e56cfba7250d38da4b1}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}}
+\index{get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{get\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_a29429ff2771d1e56cfba7250d38da4b1}
+
+
+Return a vector that returns all available parameter values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, which return only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{Parameterizable}.
+
+
+
+Definition at line 170 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+171 \{
+172   values.resize(\hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+173   \textcolor{keywordtype}{int} offset = 0;
+174   
+175   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<centers\_.cols(); i\_dim++)
+176   \{
+177     values.segment(offset,centers\_.rows()) = centers\_.col(i\_dim);
+178     offset += centers\_.rows();
+179   \}
+180   
+181   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<widths\_.cols(); i\_dim++)
+182   \{
+183     values.segment(offset,widths\_.rows()) = widths\_.col(i\_dim);
+184     offset += widths\_.rows();
+185   \}
+186   
+187   values.segment(offset,weights\_.rows()) = weights\_;
+188   offset += weights\_.rows();
+189   
+190   assert(offset == \hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());   
+191 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1ModelParametersRBFN_a29429ff2771d1e56cfba7250d38da4b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}}
+\index{get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{get\+Parameter\+Vector\+All\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Vector\+All\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}
+
+
+Get the size of the parameter values vector when it contains all available parameter values. 
+
+\begin{DoxyReturn}{Returns}
+The size of the parameter vector
+\end{DoxyReturn}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ then \hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size()} will return 9 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{Parameterizable}.
+
+
+
+Definition at line 76 of file Model\+Parameters\+R\+B\+F\+N.\+hpp.
+
+
+\begin{DoxyCode}
+77   \{
+78     \textcolor{keywordflow}{return} all\_values\_vector\_size\_;
+79   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_ab0065893578a0770652450ebfe930481}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!weights@{weights}}
+\index{weights@{weights}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{weights}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd\& weights (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ModelParametersRBFN_ab0065893578a0770652450ebfe930481}
+
+
+Return the weights of the basis functions. 
+
+\begin{DoxyReturn}{Returns}
+weights of the basis functions. 
+\end{DoxyReturn}
+
+
+Definition at line 84 of file Model\+Parameters\+R\+B\+F\+N.\+hpp.
+
+
+\begin{DoxyCode}
+84 \{ \textcolor{keywordflow}{return} weights\_; \}  
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a9d3c8f22e8237a805af4935a647e5a50}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}}
+\index{set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{set\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_a9d3c8f22e8237a805af4935a647e5a50}
+
+
+Set all available parameter values with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{Parameterizable\+::set\+Parameter\+Vector\+Selected}, which sets only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{Parameterizable}.
+
+
+
+Definition at line 193 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+193                                                                       \{
+194 
+195   \textcolor{keywordflow}{if} (all\_values\_vector\_size\_ != values.size())
+196   \{
+197     cerr << \_\_FILE\_\_ << \textcolor{stringliteral}{":"} << \_\_LINE\_\_ << \textcolor{stringliteral}{": values is of wrong size."} << endl;
+198     \textcolor{keywordflow}{return};
+199   \}
+200   
+201   \textcolor{keywordtype}{int} offset = 0;
+202   \textcolor{keywordtype}{int} size = centers\_.rows();
+203   \textcolor{keywordtype}{int} n\_dims = centers\_.cols();
+204   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+205   \{
+206     \textcolor{comment}{// If the centers change, the cache for kernelActivations() must be cleared,}
+207     \textcolor{comment}{// because this function will return different values for different centers}
+208     \textcolor{keywordflow}{if} ( !(centers\_.col(i\_dim).array() == values.segment(offset,size).array()).all() )
+209       clearCache();
+210     
+211     centers\_.col(i\_dim) = values.segment(offset,size);
+212     offset += size;
+213   \}
+214   \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i\_dim=0; i\_dim<n\_dims; i\_dim++)
+215   \{
+216     \textcolor{comment}{// If the centers change, the cache for kernelActivations() must be cleared,}
+217     \textcolor{comment}{// because this function will return different values for different centers}
+218     \textcolor{keywordflow}{if} ( !(widths\_.col(i\_dim).array() == values.segment(offset,size).array()).all() )
+219       clearCache();
+220     
+221     widths\_.col(i\_dim) = values.segment(offset,size);
+222     offset += size;
+223   \}
+224 
+225   weights\_ = values.segment(offset,size);
+226   offset += size;
+227   \textcolor{comment}{// Cache must not be cleared, because kernelActivations() returns the same values.}
+228 
+229   assert(offset == \hyperlink{classDmpBbo_1_1ModelParametersRBFN_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());   
+230 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1ModelParametersRBFN_a9d3c8f22e8237a805af4935a647e5a50_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a9defb2d398362ff5663a1fde70903651}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!set\+\_\+caching@{set\+\_\+caching}}
+\index{set\+\_\+caching@{set\+\_\+caching}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{set\+\_\+caching}]{\setlength{\rightskip}{0pt plus 5cm}void set\+\_\+caching (
+\begin{DoxyParamCaption}
+\item[{bool}]{caching}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ModelParametersRBFN_a9defb2d398362ff5663a1fde70903651}
+
+
+Turn caching for the function \hyperlink{classDmpBbo_1_1ModelParametersRBFN_a125cc60559b55f7348beb15f25834b6f}{kernel\+Activations()} on or off. 
+
+Turning this on should lead to substantial improvements in execution time if the centers and widths of the kernels do not change often A\+N\+D you call normalized\+Kernel\+Activations with the same inputs over and over again. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em caching} & Whether to turn caching on or off \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+In the constructor, caching is set to true, so by default it is on. 
+\end{DoxyRemark}
+
+
+Definition at line 104 of file Model\+Parameters\+R\+B\+F\+N.\+hpp.
+
+
+\begin{DoxyCode}
+105         \{
+106           caching\_ = caching;
+107           \textcolor{keywordflow}{if} (!caching\_) clearCache();
+108         \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_a6e3534f93333334c2f0126f8fc4d29d1}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!to\+Unified\+Model@{to\+Unified\+Model}}
+\index{to\+Unified\+Model@{to\+Unified\+Model}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{to\+Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} $\ast$ to\+Unified\+Model (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersRBFN_a6e3534f93333334c2f0126f8fc4d29d1}
+
+
+Convert these model parameters to unified model parameters. 
+
+\begin{DoxyReturn}{Returns}
+Unified model parameter representation (N\+U\+L\+L if not implemented for a particular subclass) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_a9d1c72e871e8fa37857f9ce7eabe5a04}{Model\+Parameters}.
+
+
+
+Definition at line 236 of file Model\+Parameters\+R\+B\+F\+N.\+cpp.
+
+
+\begin{DoxyCode}
+237 \{
+238   \textcolor{comment}{// RBFN does not use normalized basis functions}
+239   \textcolor{keywordtype}{bool} normalized\_basis\_functions = \textcolor{keyword}{false};
+240   \textcolor{keywordflow}{return} \textcolor{keyword}{new} UnifiedModel(centers\_, widths\_, weights\_,normalized\_basis\_functions); 
+241 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1ModelParametersRBFN_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N@{Dmp\+Bbo\+::\+Model\+Parameters\+R\+B\+F\+N}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1ModelParametersRBFN_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 129 of file Model\+Parameters\+R\+B\+F\+N.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ModelParametersRBFN_8hpp}{Model\+Parameters\+R\+B\+F\+N.\+hpp}\item 
+\hyperlink{ModelParametersRBFN_8cpp}{Model\+Parameters\+R\+B\+F\+N.\+cpp}\end{DoxyCompactItemize}

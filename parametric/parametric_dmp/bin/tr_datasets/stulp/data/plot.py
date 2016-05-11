@@ -8,7 +8,6 @@ import os
 import sys
 
 
-
 pathname = os.path.dirname(sys.argv[0])
 if pathname:
     os.chdir(pathname)

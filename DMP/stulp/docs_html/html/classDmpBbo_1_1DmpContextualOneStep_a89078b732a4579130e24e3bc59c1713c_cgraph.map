@@ -1,0 +1,6 @@
+<map id="computeFunctionApproximatorOutput" name="computeFunctionApproximatorOutput">
+<area shape="rect" id="node2" href="$group__DynamicalSystems.html#ga93d7cbbf2e471b00f124e41706405a05" title="Get the dimensionality of the dynamical system, i.e. " alt="" coords="279,5,471,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Dmp.html#ac428e2dd848c99ddaf517f2dbacdf3ad" title="Get a pointer to the function approximator for a certain dimension. " alt="" coords="292,71,457,112"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1FunctionApproximator.html#a178135f623d9b9058870851a53299c6e" title="Determine whether the function approximator has already been trained with data or not..." alt="" coords="265,136,484,177"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1FunctionApproximator.html#a0547681a81d4c43ce2601f16047baf7a" title="Query the function approximator to make a prediction. " alt="" coords="265,201,484,243"/>
+</map>

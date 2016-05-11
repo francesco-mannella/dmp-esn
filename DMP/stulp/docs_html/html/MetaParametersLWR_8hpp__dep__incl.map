@@ -1,0 +1,11 @@
+<map id="MetaParametersLWR.hpp" name="MetaParametersLWR.hpp">
+<area shape="rect" id="node2" href="$demoDmp_8cpp.html" title="Demonstrates how to initialize, train and integrate a Dmp. " alt="" coords="5,87,117,114"/>
+<area shape="rect" id="node3" href="$demoDmpContextual_8cpp.html" title="Demonstrates how to initialize, train and integrate a Contextual Dmp. " alt="" coords="141,87,320,114"/>
+<area shape="rect" id="node4" href="$demoDmpContextualGoal_8cpp_source.html" title="demoDmpContextualGoal.cpp" alt="" coords="345,87,554,114"/>
+<area shape="rect" id="node5" href="$demoDmpTrainFromTrajectoryFile_8cpp.html" title="demoDmpTrainFromTrajectory\lFile.cpp" alt="" coords="578,80,793,121"/>
+<area shape="rect" id="node6" href="$demoImitationAndOptimization_8cpp.html" title="Demonstrates how to initialize a DMP, and then optimize it with an evolution strategy. " alt="" coords="817,87,1055,114"/>
+<area shape="rect" id="node7" href="$demoTrainFunctionApproximators_8cpp.html" title="Demonstrates how to initialize and train a function approximator.. " alt="" coords="1079,87,1339,114"/>
+<area shape="rect" id="node8" href="$FunctionApproximatorLWR_8cpp.html" title="FunctionApproximatorLWR class source file. " alt="" coords="1364,87,1580,114"/>
+<area shape="rect" id="node9" href="$getFunctionApproximatorByName_8cpp.html" title="getFunctionApproximatorByName class source file. " alt="" coords="1604,80,1799,121"/>
+<area shape="rect" id="node10" href="$MetaParametersLWR_8cpp.html" title="MetaParametersLWR class source file. " alt="" coords="1823,87,2007,114"/>
+</map>

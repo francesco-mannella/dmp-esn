@@ -1,4 +1,3 @@
 
 ./src/fixed_se_dmp.cpp
 ./src/fixed_se_dmp_lwpr.cpp
-./src/parametric_se_dmp.cpp

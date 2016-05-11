@@ -1,0 +1,9 @@
+<map id="ModelParameters" name="ModelParameters">
+<area shape="rect" id="node3" href="$classDmpBbo_1_1ModelParametersGMR.html" title="Model parameters for the GMR function approximator. " alt="" coords="368,5,535,32"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1ModelParametersGPR.html" title="Model parameters for the Gaussian Process Regression (GPR) function approximator. ..." alt="" coords="369,56,533,83"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1ModelParametersIRFRLS.html" title="Model parameters for the iRFRLS function approximator. " alt="" coords="360,107,543,133"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1ModelParametersLWPR.html" title="Model parameters for the Locally Weighted Projection Regression (LWPR) function approximator. " alt="" coords="364,157,539,184"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1ModelParametersLWR.html" title="Model parameters for the Locally Weighted Regression (LWR) function approximator. ..." alt="" coords="369,208,534,235"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1ModelParametersRBFN.html" title="Model parameters for the Radial Basis Function Network (RBFN) function approximator. " alt="" coords="366,259,537,285"/>
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Parameterizable.html" title="Class for providing access to a model&#39;s parameters as a vector. " alt="" coords="5,132,129,159"/>
+</map>

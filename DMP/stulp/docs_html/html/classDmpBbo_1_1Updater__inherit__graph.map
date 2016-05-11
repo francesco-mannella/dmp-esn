@@ -1,0 +1,5 @@
+<map id="Updater" name="Updater">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1UpdaterMean.html" title="Updater that updates the mean (but not the covariance matrix) of the parameter distribution. " alt="" coords="135,80,244,107"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1UpdaterCovarAdaptation.html" title="Updater that updates the mean and also implements Covariance Matrix Adaptation. " alt="" coords="5,155,184,181"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1UpdaterCovarDecay.html" title="Updater that updates the mean and decreases the size of the covariance matrix over time..." alt="" coords="209,155,359,181"/>
+</map>

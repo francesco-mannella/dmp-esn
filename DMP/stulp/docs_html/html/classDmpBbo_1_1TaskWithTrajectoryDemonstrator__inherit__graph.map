@@ -1,0 +1,4 @@
+<map id="TaskWithTrajectoryDemonstrator" name="TaskWithTrajectoryDemonstrator">
+<area shape="rect" id="node3" href="$classDmpBbo_1_1TaskViapoint.html" title="Task for passing through a viapoint with minimal acceleration. " alt="" coords="69,155,173,181"/>
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Task.html" title="Interface for cost functions, which define a task. " alt="" coords="94,5,147,32"/>
+</map>

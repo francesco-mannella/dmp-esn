@@ -1,0 +1,6 @@
+<map id="Demos" name="Demos">
+<area shape="rect" id="node2" href="$group__DynamicalSystems.html" title="Dynamical Systems" alt="" coords="392,41,536,68"/>
+<area shape="rect" id="node3" href="$group__FunctionApproximators.html" title="Function Approximators" alt="" coords="379,92,549,119"/>
+<area shape="rect" id="node4" href="$group__Dmps.html" title="Dynamic Movement Primitives" alt="" coords="359,196,569,223"/>
+<area shape="rect" id="node5" href="$group__BBO.html" title="Black Box Optimization\l Module" alt="" coords="381,286,547,327"/>
+</map>

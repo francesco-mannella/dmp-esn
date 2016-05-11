@@ -1,0 +1,499 @@
+\hypertarget{classDmpBbo_1_1DynamicalSystem}{\subsection{Dynamical\+System Class Reference}
+\label{classDmpBbo_1_1DynamicalSystem}\index{Dynamical\+System@{Dynamical\+System}}
+}
+
+
+Interface for implementing dynamical systems.  
+
+
+
+
+{\ttfamily \#include $<$Dynamical\+System.\+hpp$>$}
+
+
+
+Inheritance diagram for Dynamical\+System\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1DynamicalSystem__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{Indent}{\bf Constructors/\+Destructor}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1DynamicalSystem_a462231c16d651ba070ec880d1f2fd0b1}{Dynamical\+System} (int order, double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}, Eigen\+::\+Vector\+Xd \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\+\_\+state}, Eigen\+::\+Vector\+Xd \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\+\_\+state}, std\+::string \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name})
+\begin{DoxyCompactList}\small\item\em Initialization constructor. \end{DoxyCompactList}\item 
+\hypertarget{classDmpBbo_1_1DynamicalSystem_aefaeac2137a3b1625028577409049674}{virtual \hyperlink{classDmpBbo_1_1DynamicalSystem_aefaeac2137a3b1625028577409049674}{$\sim$\+Dynamical\+System} (void)}\label{classDmpBbo_1_1DynamicalSystem_aefaeac2137a3b1625028577409049674}
+
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} $\ast$ \hyperlink{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{clone} (void) const =0
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Main Dynamical\+System functions}\par
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{differential\+Equation} (const Eigen\+::\+Vector\+Xd \&x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd) const =0
+\begin{DoxyCompactList}\small\item\em The differential equation which defines the system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{analytical\+Solution} (const Eigen\+::\+Vector\+Xd \&ts, Eigen\+::\+Matrix\+Xd \&xs, Eigen\+::\+Matrix\+Xd \&xds) const =0
+\begin{DoxyCompactList}\small\item\em Return analytical solution of the system at certain times. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrate\+Start} (Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd) const 
+\begin{DoxyCompactList}\small\item\em Start integrating the system. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1DynamicalSystem_a030a5ca35d85ecc7bd297ede70f81fb9}{integrate\+Start} (const Eigen\+::\+Vector\+Xd \&x\+\_\+init, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd)
+\begin{DoxyCompactList}\small\item\em Start integrating the system with a new initial state. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1DynamicalSystem_ac7ed7ce2faa8314cd9fa5ffcccb15349}{integrate\+Step} (double dt, const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$ x, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ x\+\_\+updated, Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$ xd\+\_\+updated) const 
+\begin{DoxyCompactList}\small\item\em Integrate the system one time step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{Dynamical\+System} (void)
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1DynamicalSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Input/\+Output}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \hyperlink{classDmpBbo_1_1DynamicalSystem_ad76e679d6bbbe29fc09345e54c4262ab}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} \&dyn\+\_\+sys)
+\begin{DoxyCompactList}\small\item\em Write a \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} to an output stream. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classDmpBbo_1_1DynamicalSystem_af084bff2ddd6233e9a898faa23f6195c}{to\+String} (void) const =0
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Accessor functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__DynamicalSystems_ga9eca50997f7f604b063d2cb1874f5fef}{Integration\+Method} \{ {\bfseries E\+U\+L\+E\+R}, 
+{\bfseries R\+U\+N\+G\+E\+\_\+\+K\+U\+T\+T\+A}
+ \}
+\begin{DoxyCompactList}\small\item\em The possible integration methods that can be used. \end{DoxyCompactList}\item 
+void \hyperlink{group__DynamicalSystems_ga07a2df4cc46a521ab81c614d79b33669}{set\+\_\+integration\+\_\+method} (\hyperlink{group__DynamicalSystems_ga9eca50997f7f604b063d2cb1874f5fef}{Integration\+Method} integration\+\_\+method)
+\begin{DoxyCompactList}\small\item\em Choose the integration method. \end{DoxyCompactList}\item 
+int \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the dimensionality of the dynamical system, i.\+e. \end{DoxyCompactList}\item 
+int \hyperlink{group__DynamicalSystems_ga93d7cbbf2e471b00f124e41706405a05}{dim\+\_\+orig} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the dimensionality of the dynamical system, i.\+e. \end{DoxyCompactList}\item 
+double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the time constant. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group__DynamicalSystems_ga91155da280310b176cbd5fc1627820c7}{set\+\_\+tau} (double \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau})
+\begin{DoxyCompactList}\small\item\em Mutator function for the time constant. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\+\_\+state} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the initial state of the dynamical system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{set\+\_\+initial\+\_\+state} (const Eigen\+::\+Vector\+Xd \&\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\+\_\+state})
+\begin{DoxyCompactList}\small\item\em Mutator function for the initial state of the dynamical system. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\+\_\+state} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the attractor state of the dynamical system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group__DynamicalSystems_ga32a975e60b5f001308368c7f06b90e18}{set\+\_\+attractor\+\_\+state} (const Eigen\+::\+Vector\+Xd \&\hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\+\_\+state})
+\begin{DoxyCompactList}\small\item\em Mutator function for the attractor state of the dynamical system. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name} (void) const 
+\begin{DoxyCompactList}\small\item\em Accessor function for the name of the dynamical system. \end{DoxyCompactList}\item 
+virtual void \hyperlink{group__DynamicalSystems_ga5175bca5f98f36690a79e323119a1529}{set\+\_\+name} (std\+::string \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name})
+\begin{DoxyCompactList}\small\item\em Mutator function for the name of the dynamical system. \end{DoxyCompactList}\item 
+void \hyperlink{group__DynamicalSystems_ga9000562e645149d75717458a97db6ff5}{set\+\_\+dim} (int \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim})
+\begin{DoxyCompactList}\small\item\em Set the dimensionality of the dynamical system, i.\+e. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Interface for implementing dynamical systems. 
+
+Other dynamical systems should inherit from this class.
+
+Two pure virtual functions that each \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} subclass should implement are \begin{DoxyItemize}
+\item \hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{differential\+Equation()} \+: The differential equation that defines the system \item \hyperlink{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{analytical\+Solution()} \+: The analytical solution to the system at given times\end{DoxyItemize}
+This class provides accesor/mutator methods for some variables typically found in dynamical systems\+: \begin{DoxyItemize}
+\item \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} The dimensionality of the system, i.\+e. the number of variables in the state vector. \item \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau()} The time constant of the system \item \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\+\_\+state()} The initial state of the system \item \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\+\_\+state()} The attractor state, i.\+e. the state to which the system will converge\end{DoxyItemize}
+This class also provides functionality for integrating a dynamical system by repeatidly calling it's differential\+Equation, and doing simple Euler or 4th-\/order Runge-\/\+Kutta integration. The related functions are\+: \begin{DoxyItemize}
+\item \hyperlink{group__DynamicalSystems_ga07a2df4cc46a521ab81c614d79b33669}{set\+\_\+integration\+\_\+method(\+Integration\+Method)}, i.\+e. E\+U\+L\+E\+R or R\+U\+N\+G\+E\+\_\+\+K\+U\+T\+T\+A \item \hyperlink{classDmpBbo_1_1DynamicalSystem_ac7ed7ce2faa8314cd9fa5ffcccb15349}{integrate\+Step()} Integrate the system one time step, using the current integration method \item \hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrate\+Start()} Start integrating the system (does not require the current state to be passed) \end{DoxyItemize}
+
+
+Definition at line 60 of file Dynamical\+System.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1DynamicalSystem_a462231c16d651ba070ec880d1f2fd0b1}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!Dynamical\+System@{Dynamical\+System}}
+\index{Dynamical\+System@{Dynamical\+System}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{Dynamical\+System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dynamical\+System} (
+\begin{DoxyParamCaption}
+\item[{int}]{order, }
+\item[{double}]{tau, }
+\item[{Eigen\+::\+Vector\+Xd}]{initial\+\_\+state, }
+\item[{Eigen\+::\+Vector\+Xd}]{attractor\+\_\+state, }
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1DynamicalSystem_a462231c16d651ba070ec880d1f2fd0b1}
+
+
+Initialization constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Order of the system \\
+\hline
+{\em tau} & Time constant, see \hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau()} \\
+\hline
+{\em initial\+\_\+state} & Initial state, see \hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\+\_\+state()} \\
+\hline
+{\em attractor\+\_\+state} & Attractor state, see \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\+\_\+state()} \\
+\hline
+{\em name} & A name you give, see \hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name()} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 35 of file Dynamical\+System.\+cpp.
+
+
+\begin{DoxyCode}
+36   : 
+37   \textcolor{comment}{// For 1st order systems, the dimensionality of the state vector 'x' is 'dim'}
+38   \textcolor{comment}{// For 2nd order systems, the system is expanded to x = [y z], where 'y' and}
+39   \textcolor{comment}{// 'z' are both of dimensionality 'dim'. Therefore dim(x) is 2*dim}
+40   dim\_(\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}.size()*order),
+41   \textcolor{comment}{// The dimensionality of the system before a potential rewrite}
+42   dim\_orig\_(\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}.size()),
+43   tau\_(\hyperlink{group__DynamicalSystems_ga50eec7ad4c9664b5809ace45b22200d5}{tau}),initial\_state\_(\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}),attractor\_state\_(
+      \hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}),
+44   name\_(\hyperlink{group__DynamicalSystems_gacd23346c798f78014a4f82c853e83c88}{name}),integration\_method\_(RUNGE\_KUTTA)
+45 \{
+46   assert(order==1 || order==2);
+47   assert(\hyperlink{group__DynamicalSystems_ga4c7f24e7deec1629548a075015bdc693}{initial\_state}.size()==\hyperlink{group__DynamicalSystems_gaebe3c462bc4a725cb17bcc3d13285f13}{attractor\_state}.size());
+48 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!Dynamical\+System@{Dynamical\+System}}
+\index{Dynamical\+System@{Dynamical\+System}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{Dynamical\+System}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dynamical\+System} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}}\label{classDmpBbo_1_1DynamicalSystem_a2619319384507480c48e61850037a461}
+
+
+Default constructor. 
+
+\begin{DoxyRemark}{Remarks}
+This default constuctor is required for boost\+::serialization to work. See \hyperlink{page_serialization_sec_boost_serialization_ugliness}{Boost serialization issues} 
+\end{DoxyRemark}
+
+
+Definition at line 352 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+352 \{\};
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Dynamical\+System}$\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1DynamicalSystem_a8f7224307c260c899631afd44e4717a0}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_ace8e32350e4feb2c7ea6b5153c7dc606}{Dmp}, \hyperlink{classDmpBbo_1_1SpringDamperSystem_a16b3e8da712b58f8295cbb7951bebf68}{Spring\+Damper\+System}, \hyperlink{classDmpBbo_1_1ExponentialSystem_a16b3e8da712b58f8295cbb7951bebf68}{Exponential\+System}, \hyperlink{classDmpBbo_1_1TimeSystem_a16b3e8da712b58f8295cbb7951bebf68}{Time\+System}, and \hyperlink{classDmpBbo_1_1SigmoidSystem_a16b3e8da712b58f8295cbb7951bebf68}{Sigmoid\+System}.
+
+\hypertarget{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!differential\+Equation@{differential\+Equation}}
+\index{differential\+Equation@{differential\+Equation}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{differential\+Equation}]{\setlength{\rightskip}{0pt plus 5cm}virtual void differential\+Equation (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}
+
+
+The differential equation which defines the system. 
+
+It relates state values to rates of change of those state values
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & current state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1) \\
+\hline
+\mbox{\tt out}  & {\em xd} & rate of change in state (column vector of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+x and xd should be of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1. This forces you to pre-\/allocate memory, which speeds things up (and also makes Eigen's Ref functionality easier to deal with). 
+\end{DoxyRemark}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_ab564468764e7e4dc7c11e2a786e22c19}{Dmp}, \hyperlink{classDmpBbo_1_1SpringDamperSystem_ab564468764e7e4dc7c11e2a786e22c19}{Spring\+Damper\+System}, \hyperlink{classDmpBbo_1_1ExponentialSystem_ab564468764e7e4dc7c11e2a786e22c19}{Exponential\+System}, \hyperlink{classDmpBbo_1_1TimeSystem_ab564468764e7e4dc7c11e2a786e22c19}{Time\+System}, and \hyperlink{classDmpBbo_1_1SigmoidSystem_ab564468764e7e4dc7c11e2a786e22c19}{Sigmoid\+System}.
+
+\hypertarget{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!analytical\+Solution@{analytical\+Solution}}
+\index{analytical\+Solution@{analytical\+Solution}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{analytical\+Solution}]{\setlength{\rightskip}{0pt plus 5cm}virtual void analytical\+Solution (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{ts, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{xds}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1DynamicalSystem_ab6092038efc51ebd122e7c0878f6557d}
+
+
+Return analytical solution of the system at certain times. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ts} & A vector of times for which to compute the analytical solutions \\
+\hline
+\mbox{\tt out}  & {\em xs} & Sequence of state vectors. T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()}) \\
+\hline
+\mbox{\tt out}  & {\em xds} & Sequence of state vectors (rates of change). T x D or D x T matrix, where T is the number of times (the length of 'ts'), and D the size of the state (i.\+e. \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The output xs and xds will be of size D x T {\itshape only} if the matrix x you pass as an argument of size D x T. In all other cases (i.\+e. including passing an empty matrix) the size of x will be T x D. This feature has been added so that you may pass matrices of either size. 
+\end{DoxyRemark}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_ab6600b58b35bc9e66673d16f68e2e919}{Dmp}, \hyperlink{classDmpBbo_1_1SpringDamperSystem_ab6600b58b35bc9e66673d16f68e2e919}{Spring\+Damper\+System}, \hyperlink{classDmpBbo_1_1ExponentialSystem_ab6600b58b35bc9e66673d16f68e2e919}{Exponential\+System}, \hyperlink{classDmpBbo_1_1TimeSystem_ab6600b58b35bc9e66673d16f68e2e919}{Time\+System}, and \hyperlink{classDmpBbo_1_1SigmoidSystem_ab6600b58b35bc9e66673d16f68e2e919}{Sigmoid\+System}.
+
+\hypertarget{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!integrate\+Start@{integrate\+Start}}
+\index{integrate\+Start@{integrate\+Start}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{integrate\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void integrate\+Start (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}
+
+
+Start integrating the system. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & -\/ The first vector of state variables \\
+\hline
+\mbox{\tt out}  & {\em xd} & -\/ The first vector of rates of change of the state variables\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+x and xd should be of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1. This forces you to pre-\/allocate memory, which speeds things up (and also makes Eigen's Ref functionality easier to deal with). 
+\end{DoxyRemark}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1Dmp_a44dd496535fde494d8465e7603c93db3}{Dmp}.
+
+
+
+Definition at line 60 of file Dynamical\+System.\+cpp.
+
+
+\begin{DoxyCode}
+60                                                                                                 \{
+61   \textcolor{comment}{// Check size. Leads to faster numerical integration and makes Eigen::Ref easier to deal with   }
+62   assert(x.size()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+63   assert(xd.size()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+64   
+65   \textcolor{comment}{// Return value for state variables}
+66   \textcolor{comment}{// Pad the end with zeros: Why? In the spring-damper system, the state consists of x = [y z]. }
+67   \textcolor{comment}{// The initial state only applies to y. Therefore, we set x = [y 0]; }
+68   x.fill(0);
+69   x.segment(0,initial\_state\_.size()) = initial\_state\_;
+70   
+71   \textcolor{comment}{// Return value (rates of change)}
+72   \hyperlink{classDmpBbo_1_1DynamicalSystem_a70acc98a8e024f9b6e0e6de1b519e260}{differentialEquation}(x,xd);
+73 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1DynamicalSystem_a030a5ca35d85ecc7bd297ede70f81fb9}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!integrate\+Start@{integrate\+Start}}
+\index{integrate\+Start@{integrate\+Start}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{integrate\+Start}]{\setlength{\rightskip}{0pt plus 5cm}void integrate\+Start (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{x\+\_\+init, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1DynamicalSystem_a030a5ca35d85ecc7bd297ede70f81fb9}
+
+
+Start integrating the system with a new initial state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x\+\_\+init} & -\/ The initial state vector \\
+\hline
+\mbox{\tt out}  & {\em x} & -\/ The first vector of state variable \\
+\hline
+\mbox{\tt out}  & {\em xd} & -\/ The first vector of rates of change of the state variables \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 54 of file Dynamical\+System.\+cpp.
+
+
+\begin{DoxyCode}
+55 \{
+56   \hyperlink{group__DynamicalSystems_ga23f05bcccb6a5deda6d2a5364d8ebb16}{set\_initial\_state}(x\_init);
+57   \hyperlink{classDmpBbo_1_1DynamicalSystem_a44dd496535fde494d8465e7603c93db3}{integrateStart}(x,xd);
+58 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1DynamicalSystem_a030a5ca35d85ecc7bd297ede70f81fb9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1DynamicalSystem_ac7ed7ce2faa8314cd9fa5ffcccb15349}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!integrate\+Step@{integrate\+Step}}
+\index{integrate\+Step@{integrate\+Step}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{integrate\+Step}]{\setlength{\rightskip}{0pt plus 5cm}void integrate\+Step (
+\begin{DoxyParamCaption}
+\item[{double}]{dt, }
+\item[{const Eigen\+::\+Ref$<$ const Eigen\+::\+Vector\+Xd $>$}]{x, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{x\+\_\+updated, }
+\item[{Eigen\+::\+Ref$<$ Eigen\+::\+Vector\+Xd $>$}]{xd\+\_\+updated}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1DynamicalSystem_ac7ed7ce2faa8314cd9fa5ffcccb15349}
+
+
+Integrate the system one time step. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em dt} & Duration of the time step \\
+\hline
+\mbox{\tt in}  & {\em x} & Current state \\
+\hline
+\mbox{\tt out}  & {\em x\+\_\+updated} & Updated state, dt time later. \\
+\hline
+\mbox{\tt out}  & {\em xd\+\_\+updated} & Updated rates of change of state, dt time later.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+x should be of size \hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim()} X 1. This forces you to pre-\/allocate memory, which speeds things up (and also makes Eigen's Ref functionality easier to deal with). 
+\end{DoxyRemark}
+
+
+Definition at line 75 of file Dynamical\+System.\+cpp.
+
+
+\begin{DoxyCode}
+76 \{
+77   assert(dt>0.0);
+78   \textcolor{comment}{// Check size. Leads to faster numerical integration and makes Eigen::Ref easier to deal with   }
+79   assert(x.size()==\hyperlink{group__DynamicalSystems_ga6f628f7f4ed9d77bf69f5b8560b98f18}{dim}());
+80   \textcolor{keywordflow}{if} (integration\_method\_ == RUNGE\_KUTTA)
+81     integrateStepRungeKutta(dt, x, x\_updated, xd\_updated);
+82   \textcolor{keywordflow}{else}
+83     integrateStepEuler(dt, x, x\_updated, xd\_updated);
+84 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classDmpBbo_1_1DynamicalSystem_ac7ed7ce2faa8314cd9fa5ffcccb15349_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1DynamicalSystem_af084bff2ddd6233e9a898faa23f6195c}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1DynamicalSystem_af084bff2ddd6233e9a898faa23f6195c}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1Dmp_a1aca816b42cf0d36118be0ab91120d77}{Dmp}, \hyperlink{classDmpBbo_1_1ExponentialSystem_a1aca816b42cf0d36118be0ab91120d77}{Exponential\+System}, \hyperlink{classDmpBbo_1_1SpringDamperSystem_a1aca816b42cf0d36118be0ab91120d77}{Spring\+Damper\+System}, \hyperlink{classDmpBbo_1_1SigmoidSystem_a1aca816b42cf0d36118be0ab91120d77}{Sigmoid\+System}, and \hyperlink{classDmpBbo_1_1TimeSystem_a1aca816b42cf0d36118be0ab91120d77}{Time\+System}.
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1DynamicalSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1DynamicalSystem_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 352 of file Dynamical\+System.\+hpp.
+
+\hypertarget{classDmpBbo_1_1DynamicalSystem_ad76e679d6bbbe29fc09345e54c4262ab}{\index{Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dmp\+Bbo\+::\+Dynamical\+System@{Dmp\+Bbo\+::\+Dynamical\+System}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Dynamical\+System} \&}]{dyn\+\_\+sys}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1DynamicalSystem_ad76e679d6bbbe29fc09345e54c4262ab}
+
+
+Write a \hyperlink{classDmpBbo_1_1DynamicalSystem}{Dynamical\+System} to an output stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em output} & Output stream to which to write to \\
+\hline
+\mbox{\tt in}  & {\em dyn\+\_\+sys} & Dynamical system to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output stream
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Calls pure virtual function \hyperlink{classDmpBbo_1_1DynamicalSystem_af084bff2ddd6233e9a898faa23f6195c}{to\+String()}, which must be implemented by all subclasses\+: \href{http://stackoverflow.com/questions/4571611/virtual-operator}{\tt http\+://stackoverflow.\+com/questions/4571611/virtual-\/operator} 
+\end{DoxyRemark}
+
+
+Definition at line 164 of file Dynamical\+System.\+hpp.
+
+
+\begin{DoxyCode}
+164                                                                                     \{
+165     output << dyn\_sys.toString();
+166     \textcolor{keywordflow}{return} output;
+167   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{DynamicalSystem_8hpp}{Dynamical\+System.\+hpp}\item 
+\hyperlink{DynamicalSystem_8cpp}{Dynamical\+System.\+cpp}\end{DoxyCompactItemize}

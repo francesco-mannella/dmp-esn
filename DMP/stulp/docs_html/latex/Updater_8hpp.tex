@@ -1,0 +1,87 @@
+\hypertarget{Updater_8hpp}{\subsection{Updater.\+hpp File Reference}
+\label{Updater_8hpp}\index{Updater.\+hpp@{Updater.\+hpp}}
+}
+
+
+Updater class header file.  
+
+
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$eigen3/\+Eigen/\+Core$>$}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Update\+Summary.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}bbo/\+Distribution\+Gaussian.\+hpp\char`\"{}}\\*
+{\ttfamily \#include $<$boost/serialization/access.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/serialization/assume\+\_\+abstract.\+hpp$>$}\\*
+{\ttfamily \#include $<$boost/serialization/level.\+hpp$>$}\\*
+Include dependency graph for Updater.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Updater_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Updater_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1Updater}{Updater}
+\begin{DoxyCompactList}\small\item\em Interface for the distribution update step in evolution strategies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Updater_8hpp_ad10220d84d93c7a121e7060699461f14}{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T} (\hyperlink{classDmpBbo_1_1Updater}{Dmp\+Bbo\+::\+Updater})
+\begin{DoxyCompactList}\small\item\em Don't add version information to archives. \end{DoxyCompactList}\item 
+\hyperlink{Updater_8hpp_a237435c8d6db38f4536c2f0043689b3e}{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N} (\hyperlink{classDmpBbo_1_1Updater}{Dmp\+Bbo\+::\+Updater}, boost\+::serialization\+::object\+\_\+serializable)
+\begin{DoxyCompactList}\small\item\em Don't add version information to archives. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Updater class header file. 
+
+\begin{DoxyAuthor}{Author}
+Freek Stulp
+\end{DoxyAuthor}
+This file is part of Dmp\+Bbo, a set of libraries and programs for the black-\/box optimization of dynamical movement primitives. Copyright (C) 2014 Freek Stulp, E\+N\+S\+T\+A-\/\+Paris\+Tech
+
+Dmp\+Bbo is free software\+: you can redistribute it and/or modify it under the terms of the G\+N\+U Lesser General Public License as published by the Free Software Foundation, either version 2 of the License, or (at your option) any later version.
+
+Dmp\+Bbo is distributed in the hope that it will be useful, but W\+I\+T\+H\+O\+U\+T A\+N\+Y W\+A\+R\+R\+A\+N\+T\+Y; without even the implied warranty of M\+E\+R\+C\+H\+A\+N\+T\+A\+B\+I\+L\+I\+T\+Y or F\+I\+T\+N\+E\+S\+S F\+O\+R A P\+A\+R\+T\+I\+C\+U\+L\+A\+R P\+U\+R\+P\+O\+S\+E. See the G\+N\+U Lesser General Public License for more details.
+
+You should have received a copy of the G\+N\+U Lesser General Public License along with Dmp\+Bbo. If not, see \href{http://www.gnu.org/licenses/}{\tt http\+://www.\+gnu.\+org/licenses/}. 
+
+Definition in file \hyperlink{Updater_8hpp_source}{Updater.\+hpp}.
+
+
+
+\subsubsection{Function Documentation}
+\hypertarget{Updater_8hpp_ad10220d84d93c7a121e7060699461f14}{\index{Updater.\+hpp@{Updater.\+hpp}!B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}}
+\index{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T@{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}!Updater.\+hpp@{Updater.\+hpp}}
+\paragraph[{B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+A\+S\+S\+U\+M\+E\+\_\+\+A\+B\+S\+T\+R\+A\+C\+T (
+\begin{DoxyParamCaption}
+\item[{{\bf Dmp\+Bbo\+::\+Updater}}]{}
+\end{DoxyParamCaption}
+)}}\label{Updater_8hpp_ad10220d84d93c7a121e7060699461f14}
+
+
+Don't add version information to archives. 
+
+\hypertarget{Updater_8hpp_a237435c8d6db38f4536c2f0043689b3e}{\index{Updater.\+hpp@{Updater.\+hpp}!B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N@{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N}}
+\index{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N@{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N}!Updater.\+hpp@{Updater.\+hpp}}
+\paragraph[{B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N}]{\setlength{\rightskip}{0pt plus 5cm}B\+O\+O\+S\+T\+\_\+\+C\+L\+A\+S\+S\+\_\+\+I\+M\+P\+L\+E\+M\+E\+N\+T\+A\+T\+I\+O\+N (
+\begin{DoxyParamCaption}
+\item[{{\bf Dmp\+Bbo\+::\+Updater}}]{, }
+\item[{boost\+::serialization\+::object\+\_\+serializable}]{}
+\end{DoxyParamCaption}
+)}}\label{Updater_8hpp_a237435c8d6db38f4536c2f0043689b3e}
+
+
+Don't add version information to archives. 
+

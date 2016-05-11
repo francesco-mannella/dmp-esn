@@ -1,0 +1,4 @@
+<map id="updateDistribution" name="updateDistribution">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Updater.html#ae57a9f8264e9a9689fd21ef99c623227" title="Update a distribution given the samples and costs of an epoch. " alt="" coords="188,13,323,39"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1DistributionGaussian.html#a507b8f2538f519dd625025b1768f7938" title="Make a deep copy of the object. " alt="" coords="371,5,580,47"/>
+</map>

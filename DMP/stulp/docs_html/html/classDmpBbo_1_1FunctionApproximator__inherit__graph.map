@@ -1,0 +1,9 @@
+<map id="FunctionApproximator" name="FunctionApproximator">
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximatorGMR.html" title="GMR (Gaussian Mixture Regression) function approximator. " alt="" coords="392,5,584,32"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1FunctionApproximatorGPR.html" title="GPR (Gaussian Process Regression) function approximator. " alt="" coords="393,56,583,83"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1FunctionApproximatorIRFRLS.html" title="iRFRLS (Incremental Random Features Regularized Least Squares) function approximator ..." alt="" coords="384,107,592,133"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1FunctionApproximatorLWPR.html" title="LWPR (Locally Weighted Projection Regression) function approximator. " alt="" coords="389,157,587,184"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1FunctionApproximatorLWR.html" title="LWR (Locally Weighted Regression) function approximator. " alt="" coords="393,208,583,235"/>
+<area shape="rect" id="node8" href="$classDmpBbo_1_1FunctionApproximatorRBFN.html" title="RBFN (Radial Basis Function Network) function approximator. " alt="" coords="390,259,586,285"/>
+<area shape="rect" id="node2" href="$classDmpBbo_1_1Parameterizable.html" title="Class for providing access to a model&#39;s parameters as a vector. " alt="" coords="5,132,129,159"/>
+</map>

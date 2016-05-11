@@ -1,0 +1,18 @@
+<map id="demoTrainFunctionApproximators.cpp" name="demoTrainFunctionApproximators.cpp">
+<area shape="rect" id="node8" href="$FunctionApproximatorGMR_8hpp.html" title="FunctionApproximatorGMR class header file. " alt="" coords="600,80,823,121"/>
+<area shape="rect" id="node17" href="$FunctionApproximatorIRFRLS_8hpp.html" title="FunctionApproximatorIRFRLS class header file. " alt="" coords="847,80,1085,121"/>
+<area shape="rect" id="node18" href="$FunctionApproximatorLWPR_8hpp.html" title="FunctionApproximatorLWPR class header file. " alt="" coords="345,80,576,121"/>
+<area shape="rect" id="node19" href="$FunctionApproximatorLWR_8hpp.html" title="FunctionApproximatorLWR class header file. " alt="" coords="1110,80,1331,121"/>
+<area shape="rect" id="node20" href="$FunctionApproximatorRBFN_8hpp.html" title="FunctionApproximatorRBFN class header file. " alt="" coords="1355,80,1582,121"/>
+<area shape="rect" id="node21" href="$FunctionApproximatorGPR_8hpp.html" title="FunctionApproximatorGPR class header file. " alt="" coords="1607,80,1827,121"/>
+<area shape="rect" id="node22" href="$MetaParametersGMR_8hpp.html" title="MetaParametersGMR class header file. " alt="" coords="1211,169,1401,211"/>
+<area shape="rect" id="node25" href="$MetaParametersIRFRLS_8hpp.html" title="MetaParametersIRFRLS class header file. " alt="" coords="1648,169,1855,211"/>
+<area shape="rect" id="node26" href="$MetaParametersLWPR_8hpp.html" title="MetaParametersLWPR class header file. " alt="" coords="1425,169,1624,211"/>
+<area shape="rect" id="node27" href="$MetaParametersLWR_8hpp.html" title="MetaParametersLWR class header file. " alt="" coords="2091,169,2281,211"/>
+<area shape="rect" id="node28" href="$MetaParametersRBFN_8hpp.html" title="MetaParametersRBFN class header file. " alt="" coords="2305,169,2499,211"/>
+<area shape="rect" id="node29" href="$MetaParametersGPR_8hpp.html" title="MetaParametersGPR class header file. " alt="" coords="1879,169,2067,211"/>
+<area shape="rect" id="node30" href="$targetFunction_8hpp.html" title="Header file implementation of 1D and 2D target functions. " alt="" coords="2434,266,2573,293"/>
+<area shape="rect" id="node9" href="$FunctionApproximator_8hpp.html" title="FunctionApproximator class header file. " alt="" coords="792,169,983,211"/>
+<area shape="rect" id="node10" href="$Parameterizable_8hpp.html" title="Parameterizable class header file. " alt="" coords="629,266,780,293"/>
+<area shape="rect" id="node23" href="$MetaParameters_8hpp.html" title="MetaParameters class header file. " alt="" coords="1520,259,1681,300"/>
+</map>

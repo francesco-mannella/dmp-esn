@@ -1,0 +1,13 @@
+<map id="FunctionApproximatorLWR.hpp" name="FunctionApproximatorLWR.hpp">
+<area shape="rect" id="node2" href="$demoDmp_8cpp.html" title="Demonstrates how to initialize, train and integrate a Dmp. " alt="" coords="5,87,117,114"/>
+<area shape="rect" id="node3" href="$demoDmpContextual_8cpp.html" title="Demonstrates how to initialize, train and integrate a Contextual Dmp. " alt="" coords="141,87,320,114"/>
+<area shape="rect" id="node4" href="$demoDmpContextualGoal_8cpp_source.html" title="demoDmpContextualGoal.cpp" alt="" coords="345,87,554,114"/>
+<area shape="rect" id="node5" href="$demoDmpTrainFromTrajectoryFile_8cpp.html" title="demoDmpTrainFromTrajectory\lFile.cpp" alt="" coords="578,80,793,121"/>
+<area shape="rect" id="node6" href="$DmpContextualTwoStep_8cpp.html" title="Contextual Dmp class source file. " alt="" coords="817,87,1017,114"/>
+<area shape="rect" id="node7" href="$demoDmpBbo_8cpp.html" title="Demonstrates how to run an evolution strategy to optimize a Dmp. " alt="" coords="1041,87,1177,114"/>
+<area shape="rect" id="node8" href="$demoDmpBboMultiDim_8cpp.html" title="Demonstrates how to run multiple evolution strategies in parallel to optimize a Dmp. " alt="" coords="1201,87,1391,114"/>
+<area shape="rect" id="node9" href="$demoImitationAndOptimization_8cpp.html" title="Demonstrates how to initialize a DMP, and then optimize it with an evolution strategy. " alt="" coords="1415,87,1654,114"/>
+<area shape="rect" id="node10" href="$demoTrainFunctionApproximators_8cpp.html" title="Demonstrates how to initialize and train a function approximator.. " alt="" coords="1678,87,1938,114"/>
+<area shape="rect" id="node11" href="$FunctionApproximatorLWR_8cpp.html" title="FunctionApproximatorLWR class source file. " alt="" coords="1963,87,2179,114"/>
+<area shape="rect" id="node12" href="$getFunctionApproximatorByName_8cpp.html" title="getFunctionApproximatorByName class source file. " alt="" coords="2203,80,2397,121"/>
+</map>

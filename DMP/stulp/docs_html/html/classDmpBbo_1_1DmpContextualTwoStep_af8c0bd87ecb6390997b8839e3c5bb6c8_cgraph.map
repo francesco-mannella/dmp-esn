@@ -1,0 +1,20 @@
+<map id="train" name="train">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1DmpContextual.html#aba2e356cdf0cfe688fdcf02ffe68c4d2" title="Check if several trajectories have the same duration and initial/final states. " alt="" coords="125,5,302,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Dmp.html#a17edb45ef62a4ef7f8c78e4f8f68b249" title="Accessor function for the time constant. " alt="" coords="132,71,295,98"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1Dmp.html#ad4e11c676c2add8a992db1caf542f0a0" title="Accessor function for the initial state of the system. " alt="" coords="126,123,301,164"/>
+<area shape="rect" id="node9" href="$classDmpBbo_1_1Dmp.html#a6dccbd077acfd148f528a48a72a4003f" title="Accessor function for the attractor state of the system. " alt="" coords="115,240,311,281"/>
+<area shape="rect" id="node12" href="$classDmpBbo_1_1Dmp.html#a5d14dedc6736ec5675b4026437b8a597" title="Train a DMP with a trajectory. " alt="" coords="141,306,285,333"/>
+<area shape="rect" id="node13" href="$group__DynamicalSystems.html#ga93d7cbbf2e471b00f124e41706405a05" title="Get the dimensionality of the dynamical system, i.e. " alt="" coords="117,357,309,399"/>
+<area shape="rect" id="node14" href="$classDmpBbo_1_1Dmp.html#ac428e2dd848c99ddaf517f2dbacdf3ad" title="Get a pointer to the function approximator for a certain dimension. " alt="" coords="131,423,296,464"/>
+<area shape="rect" id="node15" href="$classDmpBbo_1_1FunctionApproximator.html#a8a976b5db2d1809ece10e431816f0f27" title="Determine which subset of parameters is represented in the vector returned by Parameterizable::getPar..." alt="" coords="104,488,323,529"/>
+<area shape="rect" id="node16" href="$classDmpBbo_1_1FunctionApproximator.html#aab955bec57f074a991b8be31d6ce54ca" title="Get the values of the selected parameters in one vector. " alt="" coords="104,553,323,595"/>
+<area shape="rect" id="node17" href="$classDmpBbo_1_1Dmp.html#ace8e32350e4feb2c7ea6b5153c7dc606" title="Return a deep copy of this object. " alt="" coords="391,189,542,215"/>
+<area shape="rect" id="node4" href="$group__DynamicalSystems.html#ga91155da280310b176cbd5fc1627820c7" title="Mutator function for the time constant. " alt="" coords="371,57,563,99"/>
+<area shape="rect" id="node5" href="$group__DynamicalSystems.html#ga50eec7ad4c9664b5809ace45b22200d5" title="Accessor function for the time constant. " alt="" coords="611,65,829,91"/>
+<area shape="rect" id="node7" href="$group__DynamicalSystems.html#ga23f05bcccb6a5deda6d2a5364d8ebb16" title="Mutator function for the initial state of the dynamical system. " alt="" coords="371,123,563,164"/>
+<area shape="rect" id="node8" href="$group__DynamicalSystems.html#ga4c7f24e7deec1629548a075015bdc693" title="Accessor function for the initial state of the dynamical system. " alt="" coords="624,116,816,157"/>
+<area shape="rect" id="node10" href="$group__DynamicalSystems.html#ga32a975e60b5f001308368c7f06b90e18" title="Mutator function for the attractor state of the dynamical system. " alt="" coords="371,276,563,317"/>
+<area shape="rect" id="node11" href="$group__DynamicalSystems.html#gaebe3c462bc4a725cb17bcc3d13285f13" title="Accessor function for the attractor state of the dynamical system. " alt="" coords="624,312,816,353"/>
+<area shape="rect" id="node18" href="$classDmpBbo_1_1SpringDamperSystem.html#a1e0acb1d6298104e74f81f53768f5bf1" title="Accessor function for damping coefficient. " alt="" coords="611,247,829,288"/>
+<area shape="rect" id="node19" href="$classDmpBbo_1_1DynamicalSystem.html#a8f7224307c260c899631afd44e4717a0" title="Return a pointer to a deep copy of the DynamicalSystem object. " alt="" coords="624,181,816,223"/>
+</map>

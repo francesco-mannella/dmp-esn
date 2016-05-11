@@ -1,0 +1,4 @@
+<map id="TaskSolverParallel" name="TaskSolverParallel">
+<area shape="rect" id="node3" href="$classDmpBbo_1_1TaskSolverDmp.html" title="Task solver for the viapoint task, that generates trajectories with a DMP. " alt="" coords="14,155,137,181"/>
+<area shape="rect" id="node2" href="$classDmpBbo_1_1TaskSolver.html" title="Interface for classes that can perform rollouts. " alt="" coords="29,5,122,32"/>
+</map>

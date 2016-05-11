@@ -1,0 +1,4 @@
+<map id="TaskViapoint" name="TaskViapoint">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1TaskWithTrajectoryDemonstrator.html" title="Interface for tasks that are able to provide demonstrations that solve the task (optimally). " alt="" coords="5,80,236,107"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Task.html" title="Interface for cost functions, which define a task. " alt="" coords="94,5,147,32"/>
+</map>

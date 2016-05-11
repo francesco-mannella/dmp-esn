@@ -1,0 +1,6 @@
+<map id="predict" name="predict">
+<area shape="rect" id="node2" href="$classDmpBbo_1_1FunctionApproximator.html#a178135f623d9b9058870851a53299c6e" title="Determine whether the function approximator has already been trained with data or not..." alt="" coords="125,5,343,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1FunctionApproximator.html#a0e7e116ed9b159d782fca544dacb4bac" title="Accessor for FunctionApproximator::model_parameters_. " alt="" coords="125,71,343,112"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1ModelParametersRBFN.html#a125cc60559b55f7348beb15f25834b6f" title="Get the kernel activations for given inputs. " alt="" coords="119,136,349,177"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1ModelParametersRBFN.html#ab0065893578a0770652450ebfe930481" title="Return the weights of the basis functions. " alt="" coords="119,201,349,243"/>
+</map>

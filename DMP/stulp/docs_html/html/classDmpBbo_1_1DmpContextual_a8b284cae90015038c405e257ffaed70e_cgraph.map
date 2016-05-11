@@ -1,0 +1,10 @@
+<map id="set_task_parameters" name="set_task_parameters">
+<area shape="rect" id="node2" href="$group__DynamicalSystems.html#ga93d7cbbf2e471b00f124e41706405a05" title="Get the dimensionality of the dynamical system, i.e. " alt="" coords="221,5,413,47"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1Dmp.html#a6dccbd077acfd148f528a48a72a4003f" title="Accessor function for the attractor state of the system. " alt="" coords="219,71,415,112"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1FunctionApproximator.html#a0547681a81d4c43ce2601f16047baf7a" title="Query the function approximator to make a prediction. " alt="" coords="208,136,427,177"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1Dmp.html#a17edb45ef62a4ef7f8c78e4f8f68b249" title="Accessor function for the time constant. " alt="" coords="236,202,399,229"/>
+<area shape="rect" id="node4" href="$group__DynamicalSystems.html#ga32a975e60b5f001308368c7f06b90e18" title="Mutator function for the attractor state of the dynamical system. " alt="" coords="475,71,667,112"/>
+<area shape="rect" id="node5" href="$group__DynamicalSystems.html#gaebe3c462bc4a725cb17bcc3d13285f13" title="Accessor function for the attractor state of the dynamical system. " alt="" coords="727,71,919,112"/>
+<area shape="rect" id="node8" href="$group__DynamicalSystems.html#ga91155da280310b176cbd5fc1627820c7" title="Mutator function for the time constant. " alt="" coords="475,195,667,236"/>
+<area shape="rect" id="node9" href="$group__DynamicalSystems.html#ga50eec7ad4c9664b5809ace45b22200d5" title="Accessor function for the time constant. " alt="" coords="715,202,932,229"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classDmpBbo_1_1MetaParameters.html" title="Base class for all meta&#45;parameters of function approximators. " alt="" coords="5,132,132,159"/>
+<area shape="rect" id="node2" href="$classDmpBbo_1_1MetaParametersGMR.html" title="Meta&#45;parameters for the GMR function approximator. " alt="" coords="188,5,348,32"/>
+<area shape="rect" id="node3" href="$classDmpBbo_1_1MetaParametersGPR.html" title="Meta&#45;parameters for the Gaussian Process Regression (GPR) function approximator. " alt="" coords="189,56,347,83"/>
+<area shape="rect" id="node4" href="$classDmpBbo_1_1MetaParametersIRFRLS.html" title="Meta&#45;parameters for the iRFRLS function approximator. " alt="" coords="180,107,356,133"/>
+<area shape="rect" id="node5" href="$classDmpBbo_1_1MetaParametersLWPR.html" title="Meta&#45;parameters for the Locally Weighted Projection Regression (LWPR) function approximator. " alt="" coords="185,157,351,184"/>
+<area shape="rect" id="node6" href="$classDmpBbo_1_1MetaParametersLWR.html" title="Meta&#45;parameters for the Locally Weighted Regression (LWR) function approximator. " alt="" coords="189,208,347,235"/>
+<area shape="rect" id="node7" href="$classDmpBbo_1_1MetaParametersRBFN.html" title="Meta&#45;parameters for the Radial Basis Function Network (RBFN) function approximator. " alt="" coords="186,259,350,285"/>
+</map>

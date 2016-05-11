@@ -1,0 +1,135 @@
+\hypertarget{classDmpBbo_1_1TaskSolverParallel}{\subsection{Task\+Solver\+Parallel Class Reference}
+\label{classDmpBbo_1_1TaskSolverParallel}\index{Task\+Solver\+Parallel@{Task\+Solver\+Parallel}}
+}
+
+
+Interface for classes that can perform rollouts.  
+
+
+
+
+{\ttfamily \#include $<$Task\+Solver\+Parallel.\+hpp$>$}
+
+
+
+Inheritance diagram for Task\+Solver\+Parallel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classDmpBbo_1_1TaskSolverParallel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Task\+Solver\+Parallel\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{classDmpBbo_1_1TaskSolverParallel__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1TaskSolverParallel_ab6bf8d682d404ed901d8947b7ff86f3e}{perform\+Rollouts} (const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&samples\+\_\+vec, Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars) const 
+\begin{DoxyCompactList}\small\item\em Perform rollouts, i.\+e. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1TaskSolverParallel_aa91bb4c2ddec55ee7c594cd639094d36}{perform\+Rollouts} (const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&samples\+\_\+vec, const Eigen\+::\+Matrix\+Xd \&task\+\_\+parameters, Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars) const =0
+\begin{DoxyCompactList}\small\item\em Perform rollouts, i.\+e. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1TaskSolverParallel_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Interface for classes that can perform rollouts. 
+
+For further information see the section on \hyperlink{page_bbo_sec_bbo_task_and_task_solver}{Cost\+Function vs Task/\+Task\+Solver} 
+
+Definition at line 41 of file Task\+Solver\+Parallel.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskSolverParallel_ab6bf8d682d404ed901d8947b7ff86f3e}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Parallel@{Dmp\+Bbo\+::\+Task\+Solver\+Parallel}!perform\+Rollouts@{perform\+Rollouts}}
+\index{perform\+Rollouts@{perform\+Rollouts}!Dmp\+Bbo\+::\+Task\+Solver\+Parallel@{Dmp\+Bbo\+::\+Task\+Solver\+Parallel}}
+\paragraph[{perform\+Rollouts}]{\setlength{\rightskip}{0pt plus 5cm}void perform\+Rollouts (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{samples\+\_\+vec, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1TaskSolverParallel_ab6bf8d682d404ed901d8947b7ff86f3e}
+
+
+Perform rollouts, i.\+e. 
+
+given a set of samples, determine all the variables that are relevant to evaluating the cost function. This version does so for parallel optimization, where multiple distributions are updated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples\+\_\+vec} & The samples, a vector with one element per distribution \\
+\hline
+\mbox{\tt out}  & {\em cost\+\_\+vars} & The variables relevant to computing the cost. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000009}{Todo}]Compare to other functions \end{DoxyRefDesc}
+
+
+Definition at line 52 of file Task\+Solver\+Parallel.\+hpp.
+
+
+\begin{DoxyCode}
+53   \{
+54     Eigen::MatrixXd task\_parameters(0,0);
+55     \hyperlink{classDmpBbo_1_1TaskSolverParallel_ab6bf8d682d404ed901d8947b7ff86f3e}{performRollouts}(samples\_vec,task\_parameters,cost\_vars);
+56   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1TaskSolverParallel_aa91bb4c2ddec55ee7c594cd639094d36}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Parallel@{Dmp\+Bbo\+::\+Task\+Solver\+Parallel}!perform\+Rollouts@{perform\+Rollouts}}
+\index{perform\+Rollouts@{perform\+Rollouts}!Dmp\+Bbo\+::\+Task\+Solver\+Parallel@{Dmp\+Bbo\+::\+Task\+Solver\+Parallel}}
+\paragraph[{perform\+Rollouts}]{\setlength{\rightskip}{0pt plus 5cm}virtual void perform\+Rollouts (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ Eigen\+::\+Matrix\+Xd $>$ \&}]{samples\+\_\+vec, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1TaskSolverParallel_aa91bb4c2ddec55ee7c594cd639094d36}
+
+
+Perform rollouts, i.\+e. 
+
+given a set of samples, determine all the variables that are relevant to evaluating the cost function. This version does so for parallel optimization, where multiple distributions are updated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em samples\+\_\+vec} & The samples, a vector with one element per distribution \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & The parameters of the task \\
+\hline
+\mbox{\tt out}  & {\em cost\+\_\+vars} & The variables relevant to computing the cost. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000010}{Todo}]Compare to other functions \end{DoxyRefDesc}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1TaskSolverDmp_aef8605bc2d34bea9994507202e0368c2}{Task\+Solver\+Dmp}.
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1TaskSolverParallel_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Task\+Solver\+Parallel@{Dmp\+Bbo\+::\+Task\+Solver\+Parallel}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Task\+Solver\+Parallel@{Dmp\+Bbo\+::\+Task\+Solver\+Parallel}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1TaskSolverParallel_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 70 of file Task\+Solver\+Parallel.\+hpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{TaskSolverParallel_8hpp}{Task\+Solver\+Parallel.\+hpp}\end{DoxyCompactItemize}

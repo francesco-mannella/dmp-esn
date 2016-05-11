@@ -1,0 +1,225 @@
+\hypertarget{classDmpBbo_1_1MetaParametersLWPR}{\subsection{Meta\+Parameters\+L\+W\+P\+R Class Reference}
+\label{classDmpBbo_1_1MetaParametersLWPR}\index{Meta\+Parameters\+L\+W\+P\+R@{Meta\+Parameters\+L\+W\+P\+R}}
+}
+
+
+Meta-\/parameters for the Locally Weighted Projection Regression (L\+W\+P\+R) function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Meta\+Parameters\+L\+W\+P\+R.\+hpp$>$}
+
+
+
+Inheritance diagram for Meta\+Parameters\+L\+W\+P\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classDmpBbo_1_1MetaParametersLWPR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Meta\+Parameters\+L\+W\+P\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classDmpBbo_1_1MetaParametersLWPR__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1MetaParametersLWPR_ab1b0e2e29f5b63194a8cde678b8cb398}{Meta\+Parameters\+L\+W\+P\+R} (int expected\+\_\+input\+\_\+dim, Eigen\+::\+Vector\+Xd init\+\_\+\+D=Eigen\+::\+Vector\+Xd\+::\+Ones(1), double w\+\_\+gen=0.\+2, double w\+\_\+prune=0.\+8, bool update\+\_\+\+D=true, double init\+\_\+alpha=1.\+0, double penalty=1.\+0, bool diag\+\_\+only=true, bool use\+\_\+meta=false, double meta\+\_\+rate=1.\+0, std\+::string kernel\+\_\+name=std\+::string(\char`\"{}Gaussian\char`\"{}))
+\begin{DoxyCompactList}\small\item\em Constructor for the algorithmic meta-\/parameters of the L\+W\+P\+R function approximator. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1MetaParametersLWPR}{Meta\+Parameters\+L\+W\+P\+R} $\ast$ \hyperlink{classDmpBbo_1_1MetaParametersLWPR_a5368165b50eff9fef1a99e397048f284}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1MetaParameters}{Meta\+Parameters} object. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1MetaParametersLWPR_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1MetaParametersLWPR_aaf11ea813243d01fb6c3c79a88777fea}{class {\bfseries Function\+Approximator\+L\+W\+P\+R}}\label{classDmpBbo_1_1MetaParametersLWPR_aaf11ea813243d01fb6c3c79a88777fea}
+
+\item 
+class \hyperlink{classDmpBbo_1_1MetaParametersLWPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Additional Inherited Members}
+
+
+\subsubsection{Detailed Description}
+Meta-\/parameters for the Locally Weighted Projection Regression (L\+W\+P\+R) function approximator. 
+
+Definition at line 37 of file Meta\+Parameters\+L\+W\+P\+R.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersLWPR_ab1b0e2e29f5b63194a8cde678b8cb398}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R}!Meta\+Parameters\+L\+W\+P\+R@{Meta\+Parameters\+L\+W\+P\+R}}
+\index{Meta\+Parameters\+L\+W\+P\+R@{Meta\+Parameters\+L\+W\+P\+R}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R}}
+\paragraph[{Meta\+Parameters\+L\+W\+P\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Parameters\+L\+W\+P\+R} (
+\begin{DoxyParamCaption}
+\item[{int}]{expected\+\_\+input\+\_\+dim, }
+\item[{Eigen\+::\+Vector\+Xd}]{init\+\_\+\+D = {\ttfamily Eigen\+:\+:VectorXd\+:\+:Ones(1)}, }
+\item[{double}]{w\+\_\+gen = {\ttfamily 0.2}, }
+\item[{double}]{w\+\_\+prune = {\ttfamily 0.8}, }
+\item[{bool}]{update\+\_\+\+D = {\ttfamily true}, }
+\item[{double}]{init\+\_\+alpha = {\ttfamily 1.0}, }
+\item[{double}]{penalty = {\ttfamily 1.0}, }
+\item[{bool}]{diag\+\_\+only = {\ttfamily true}, }
+\item[{bool}]{use\+\_\+meta = {\ttfamily false}, }
+\item[{double}]{meta\+\_\+rate = {\ttfamily 1.0}, }
+\item[{std\+::string}]{kernel\+\_\+name = {\ttfamily std\+:\+:string(\char`\"{}Gaussian\char`\"{})}}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1MetaParametersLWPR_ab1b0e2e29f5b63194a8cde678b8cb398}
+
+
+Constructor for the algorithmic meta-\/parameters of the L\+W\+P\+R function approximator. 
+
+The meaning of these parameters is explained here\+: \href{http://wcms.inf.ed.ac.uk/ipab/slmc/research/software-lwpr}{\tt http\+://wcms.\+inf.\+ed.\+ac.\+uk/ipab/slmc/research/software-\/lwpr}
+
+Short howto\+: \begin{DoxyItemize}
+\item Set update\+\_\+\+D=false, diag\+\_\+only=true, use\+\_\+meta=false \item Tune init\+\_\+\+D, and then w\+\_\+gen and w\+\_\+prune \item Set update\+\_\+\+D=true, then tune init\+\_\+alpha, then penalty \item Set diag\+\_\+only=false, see if it helps, if so re-\/tune init\+\_\+alpha if necessary \item Set use\+\_\+meta=true, tune meta\+\_\+rate (I never do this...)\end{DoxyItemize}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em expected\+\_\+input\+\_\+dim} & Expected dimensionality of the input data\\
+\hline
+\mbox{\tt in}  & {\em init\+\_\+\+D} & Removing/adding kernels\+: Width of a kernel when it is newly placed. Smaller $\ast$ values mean wider kernels. \\
+\hline
+\mbox{\tt in}  & {\em w\+\_\+gen} & Removing/adding kernels\+: Threshold for adding a kernel. \\
+\hline
+\mbox{\tt in}  & {\em w\+\_\+prune} & Removing/adding kernels\+: Threshold for pruning a kernel.\\
+\hline
+\mbox{\tt in}  & {\em update\+\_\+\+D} & Updating existing kernels\+: whether to update kernels \\
+\hline
+\mbox{\tt in}  & {\em init\+\_\+alpha} & Updating existing kernels\+: rate at which kernels are updated \\
+\hline
+\mbox{\tt in}  & {\em penalty} & Updating existing kernels\+: regularization term. Higher penalty means less kernels. \\
+\hline
+\mbox{\tt in}  & {\em diag\+\_\+only} & Whether to update only the diagonal of the covariance matrix of the kernel, or the full matrix.\\
+\hline
+\mbox{\tt in}  & {\em use\+\_\+meta} & Meta-\/learning of kernel update rate\+: whether meta-\/learning is enabled \\
+\hline
+\mbox{\tt in}  & {\em meta\+\_\+rate} & Meta-\/learning of kernel update rate\+: meta-\/learning rate\\
+\hline
+\mbox{\tt in}  & {\em kernel\+\_\+name} & Removing/adding kernels\+: Type of kernels \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 48 of file Meta\+Parameters\+L\+W\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+54 :
+55   \hyperlink{classDmpBbo_1_1MetaParameters_ae73979b117d45e439547c42eb1b4fc7b}{MetaParameters}(expected\_input\_dim),
+56   init\_D\_(init\_D), w\_gen\_(w\_gen), w\_prune\_(w\_prune),
+57   update\_D\_(update\_D), init\_alpha\_(init\_alpha), penalty\_(penalty), diag\_only\_(diag\_only),
+58   use\_meta\_(use\_meta), meta\_rate\_(meta\_rate), kernel\_name\_(kernel\_name)
+59 \{
+60   assert(init\_D\_.size()==expected\_input\_dim);
+61   assert(w\_gen\_>0.0 && w\_gen\_<1.0);
+62   assert(w\_prune\_>0.0 && w\_prune\_<1.0);
+63   assert(w\_gen\_<w\_prune\_);
+64 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersLWPR_a5368165b50eff9fef1a99e397048f284}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Meta\+Parameters\+L\+W\+P\+R} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1MetaParametersLWPR_a5368165b50eff9fef1a99e397048f284}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1MetaParameters}{Meta\+Parameters} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1MetaParameters_a93ea31a71a0956a7031f060b2d439641}{Meta\+Parameters}.
+
+
+
+Definition at line 67 of file Meta\+Parameters\+L\+W\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+68 \{
+69   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1MetaParametersLWPR_ab1b0e2e29f5b63194a8cde678b8cb398}{MetaParametersLWPR}(
+70     \hyperlink{classDmpBbo_1_1MetaParameters_af5a550bcf65d5a29a153a594cc4e3fa1}{getExpectedInputDim}(), 
+71     init\_D\_, w\_gen\_, w\_prune\_,
+72     update\_D\_, init\_alpha\_, penalty\_, diag\_only\_,
+73     use\_meta\_, meta\_rate\_, kernel\_name\_
+74   );  
+75 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{classDmpBbo_1_1MetaParametersLWPR_a5368165b50eff9fef1a99e397048f284_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1MetaParametersLWPR_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1MetaParametersLWPR_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1MetaParameters_af084bff2ddd6233e9a898faa23f6195c}{Meta\+Parameters}.
+
+
+
+Definition at line 77 of file Meta\+Parameters\+L\+W\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+77                                               \{
+78   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"MetaParametersLWPR"}
+      );
+79 \}
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1MetaParametersLWPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R@{Dmp\+Bbo\+::\+Meta\+Parameters\+L\+W\+P\+R}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1MetaParametersLWPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 115 of file Meta\+Parameters\+L\+W\+P\+R.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MetaParametersLWPR_8hpp}{Meta\+Parameters\+L\+W\+P\+R.\+hpp}\item 
+\hyperlink{MetaParametersLWPR_8cpp}{Meta\+Parameters\+L\+W\+P\+R.\+cpp}\end{DoxyCompactItemize}

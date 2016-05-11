@@ -1,0 +1,45 @@
+Serialization and deserialization of objects serves two purposes in this code\+:
+
+\begin{DoxyItemize}
+\item Reading parameter/experiment settings from a file. For instance, you could specify the Meta\+Parameters of a Function\+Approximator in a file, read that file in your program, and train a Function\+Approximator with those Meta\+Parameters. To try different Meta\+Parameters settings you only have to change the input file, without having to recompile. To be able to edit such parameter files, the files should be human readable. Ideally, it should be J\+S\+O\+N, because it is very readable and compact.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Saving the results of an experiment. Saving such results to binary files would be more compact, but to ensure that the same format is used for both serialization and deserialization, we use a human-\/readable format here also.\end{DoxyItemize}
+I considered the following options.
+
+\begin{DoxyItemize}
+\item Boost property tree\+: it makes a mess of arrays when saving to J\+S\+O\+N\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Google protobuf\+: I preferred to not have code generated for me\end{DoxyItemize}
+\begin{DoxyItemize}
+\item cereal\+: \href{http://uscilab.github.io/cereal/,}{\tt http\+://uscilab.\+github.\+io/cereal/,} external library. Really the best option, but I tried to avoid users having to use non-\/standard libraries.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item jsoncpp\+: Not ideal for serialization, more for read/write of J\+S\+O\+N.\end{DoxyItemize}
+In summary, I could not find any libraries that were easy to install and could serialize to/from J\+S\+O\+N. Therefore, I went for the second choice, which was X\+M\+L. Because boost is a standard, and compiles on most platforms, I decided to use boost\+:\+: serialization. I consider this to be quite a compromise, because I find boost\+::serialization quite messy, it is not well documented, and it took me quite a while to get it working properly (especially the registering of derived classes, for which you have to use a wierd combination of macros in the exact right places)
+
+Since I was writing to X\+M\+L with boost\+::serialization anyway, many classes implement a to\+String() method that simply returns the X\+M\+L code (without a header) that results from serialization. The R\+E\+T\+U\+R\+N\+\_\+\+S\+T\+R\+I\+N\+G\+\_\+\+F\+R\+O\+M\+\_\+\+B\+O\+O\+S\+T\+\_\+\+S\+E\+R\+I\+A\+L\+I\+Z\+A\+T\+I\+O\+N\+\_\+\+X\+M\+L macro does all the work for writing to an X\+M\+L archive and converting it to a string. Having X\+M\+L as output is not ideal, but it avoid lots of duplicate code. Perhaps boost\+::serialization will one day be able to write to J\+S\+O\+N also, and then this could be used instead.
+
+I decided to go for string to\+String(void) instead of ostream\& to\+Stream(ostream\&), because to\+String allows you to easily use both the output stream operator (output $<$$<$ obj.\+to\+String()) and printf (printf(\char`\"{}\%s\char`\"{},obj.\+to\+String()), whereas to\+Stream would be much more messy to use in combination with printf (not everyone likes to use the outputstream operator).\hypertarget{page_serialization_sec_boost_serialization_ugliness}{}\subsection{Boost serialization issues}\label{page_serialization_sec_boost_serialization_ugliness}
+With boost\+::serialization, it is possible to serialize classes without a default constuctor with \href{http://www.boost.org/doc/libs/1_55_0/libs/serialization/doc/serialization.html#constructors}{\tt http\+://www.\+boost.\+org/doc/libs/1\+\_\+55\+\_\+0/libs/serialization/doc/serialization.\+html\#constructors} But load\+\_\+construct\+\_\+data requires the creation of an object, which we cannot when classes are abstract. It seems no-\/one knows how to solve this\+: \begin{DoxyItemize}
+\item \href{http://lists.boost.org/boost-users/2005/09/13827.php}{\tt http\+://lists.\+boost.\+org/boost-\/users/2005/09/13827.\+php} \item \href{http://boost.2283326.n4.nabble.com/serialization-Serializing-classes-with-no-default-constructors-td2557921.html}{\tt http\+://boost.\+2283326.\+n4.\+nabble.\+com/serialization-\/\+Serializing-\/classes-\/with-\/no-\/default-\/constructors-\/td2557921.\+html}\end{DoxyItemize}
+For this reason abstract base classes that are to be serialized with boost must have a default constructor, and may not have const members. This is really a pain, because a serialization library should not enforce such design decisions... But this is the way it is in the code.\hypertarget{page_serialization_sec_eigen_boost_serialization}{}\subsection{Serializing boost matrices}\label{page_serialization_sec_eigen_boost_serialization}
+To avoid bloating the serialization of Eigen matrices with lots of X\+M\+L tags, they are serialized in a special way. The following examples show how Eigen matrices are serialized in X\+M\+L\+:
+
+\begin{DoxyItemize}
+\item Standard matrix\+: 
+\begin{DoxyCode}
+<m>2X3; 0 0 0; 1 1 1</m>
+\end{DoxyCode}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Vector\+: 
+\begin{DoxyCode}
+<m>3X1; 0 0 0</m>
+<m>1X3; 0 0 0</m>
+\end{DoxyCode}
+\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Diagonal matrix (only the diagonal is saved, indicated with D instead of X\+: 
+\begin{DoxyCode}
+<m>3D3; 1 2 3</m>
+\end{DoxyCode}
+ \end{DoxyItemize}

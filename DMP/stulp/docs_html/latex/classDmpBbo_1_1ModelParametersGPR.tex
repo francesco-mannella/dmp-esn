@@ -1,0 +1,656 @@
+\hypertarget{classDmpBbo_1_1ModelParametersGPR}{\subsection{Model\+Parameters\+G\+P\+R Class Reference}
+\label{classDmpBbo_1_1ModelParametersGPR}\index{Model\+Parameters\+G\+P\+R@{Model\+Parameters\+G\+P\+R}}
+}
+
+
+Model parameters for the Gaussian Process Regression (G\+P\+R) function approximator.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Parameters\+G\+P\+R.\+hpp$>$}
+
+
+
+Inheritance diagram for Model\+Parameters\+G\+P\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classDmpBbo_1_1ModelParametersGPR__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Model\+Parameters\+G\+P\+R\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classDmpBbo_1_1ModelParametersGPR__coll__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDmpBbo_1_1ModelParametersGPR_a86bc19c8639d6a338726668c9d833278}{Model\+Parameters\+G\+P\+R} (const Eigen\+::\+Matrix\+Xd \&train\+\_\+inputs, const Eigen\+::\+Vector\+Xd \&train\+\_\+targets, const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1ModelParametersGPR_a9020e3c52d3e8b18d8d3caf675ae409e}{gram}, double \hyperlink{classDmpBbo_1_1ModelParametersGPR_a298a9f1cca5f13135bb2b4334a56c734}{maximum\+\_\+covariance}, double length)
+\begin{DoxyCompactList}\small\item\em Constructor for the model parameters of the G\+P\+R function approximator. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1ModelParametersGPR_a4c282bb545b3d48bb4b9d095d627c7fc}{Model\+Parameters\+G\+P\+R} (const Eigen\+::\+Matrix\+Xd \&train\+\_\+inputs, const Eigen\+::\+Vector\+Xd \&train\+\_\+targets, const Eigen\+::\+Matrix\+Xd \&\hyperlink{classDmpBbo_1_1ModelParametersGPR_a9020e3c52d3e8b18d8d3caf675ae409e}{gram}, double \hyperlink{classDmpBbo_1_1ModelParametersGPR_a298a9f1cca5f13135bb2b4334a56c734}{maximum\+\_\+covariance}, const Eigen\+::\+Vector\+Xd \&sigmas)
+\begin{DoxyCompactList}\small\item\em Constructor for the model parameters of the G\+P\+R function approximator. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classDmpBbo_1_1ModelParametersGPR_a1aca816b42cf0d36118be0ab91120d77}{to\+String} (void) const 
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} $\ast$ \hyperlink{classDmpBbo_1_1ModelParametersGPR_a0a71d403a2e0560e058c03394648d773}{clone} (void) const 
+\begin{DoxyCompactList}\small\item\em Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} object. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1ModelParametersGPR_af5a550bcf65d5a29a153a594cc4e3fa1}{get\+Expected\+Input\+Dim} (void) const 
+\begin{DoxyCompactList}\small\item\em The expected dimensionality of the input data. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGPR_a887f4747734bd8b7cc4f799092ff31b4}{get\+Selectable\+Parameters} (std\+::set$<$ std\+::string $>$ \&selected\+\_\+values\+\_\+labels) const 
+\begin{DoxyCompactList}\small\item\em Return all the names of the parameter types that can be selected. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGPR_a9dba1f93e426e7511630ec1ece4ace17}{get\+Parameter\+Vector\+Mask} (const std\+::set$<$ std\+::string $>$ selected\+\_\+values\+\_\+labels, Eigen\+::\+Vector\+Xi \&selected\+\_\+mask) const 
+\begin{DoxyCompactList}\small\item\em Get a mask for selecting parameters. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGPR_a29429ff2771d1e56cfba7250d38da4b1}{get\+Parameter\+Vector\+All} (Eigen\+::\+Vector\+Xd \&all\+\_\+values) const 
+\begin{DoxyCompactList}\small\item\em Return a vector that returns all available parameter values. \end{DoxyCompactList}\item 
+int \hyperlink{classDmpBbo_1_1ModelParametersGPR_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the size of the parameter values vector when it contains all available parameter values. \end{DoxyCompactList}\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGPR_a125cc60559b55f7348beb15f25834b6f}{kernel\+Activations} (const Eigen\+::\+Matrix\+Xd \&inputs, Eigen\+::\+Matrix\+Xd \&kernel\+\_\+activations) const 
+\begin{DoxyCompactList}\small\item\em Get the normalized kernel activations for given inputs. \end{DoxyCompactList}\item 
+\hyperlink{classDmpBbo_1_1UnifiedModel}{Unified\+Model} $\ast$ \hyperlink{classDmpBbo_1_1ModelParametersGPR_a6e3534f93333334c2f0126f8fc4d29d1}{to\+Unified\+Model} (void) const 
+\begin{DoxyCompactList}\small\item\em Convert these model parameters to unified model parameters. \end{DoxyCompactList}\item 
+double \hyperlink{classDmpBbo_1_1ModelParametersGPR_a298a9f1cca5f13135bb2b4334a56c734}{maximum\+\_\+covariance} (void) const 
+\begin{DoxyCompactList}\small\item\em Get the maximum covariance value of the covariance function. \end{DoxyCompactList}\item 
+const Eigen\+::\+Vector\+Xd \& \hyperlink{classDmpBbo_1_1ModelParametersGPR_ab0065893578a0770652450ebfe930481}{weights} (void) const 
+\begin{DoxyCompactList}\small\item\em Return the weights, which is equivalent to $ \mathbf{G}^-1\mathfb{y} $, where G is the Gram matrix, and y is the target data. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classDmpBbo_1_1ModelParametersGPR_a7f75d2b936b5f42a2cee13100b9a0386}{gram\+\_\+inv} (void) const 
+\begin{DoxyCompactList}\small\item\em Return the inverse of the Gram matrix. \end{DoxyCompactList}\item 
+const Eigen\+::\+Matrix\+Xd \& \hyperlink{classDmpBbo_1_1ModelParametersGPR_a9020e3c52d3e8b18d8d3caf675ae409e}{gram} (void) const 
+\begin{DoxyCompactList}\small\item\em Return the Gram matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classDmpBbo_1_1ModelParametersGPR_a9d3c8f22e8237a805af4935a647e5a50}{set\+Parameter\+Vector\+All} (const Eigen\+::\+Vector\+Xd \&values)
+\begin{DoxyCompactList}\small\item\em Set all available parameter values with one vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a6319166a847aecabec76abe5d55ed1f0}{class {\bfseries Function\+Approximator\+G\+P\+R}}\label{classDmpBbo_1_1ModelParametersGPR_a6319166a847aecabec76abe5d55ed1f0}
+
+\item 
+class \hyperlink{classDmpBbo_1_1ModelParametersGPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Model parameters for the Gaussian Process Regression (G\+P\+R) function approximator. 
+
+Definition at line 40 of file Model\+Parameters\+G\+P\+R.\+hpp.
+
+
+
+\subsubsection{Constructor \& Destructor Documentation}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a86bc19c8639d6a338726668c9d833278}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!Model\+Parameters\+G\+P\+R@{Model\+Parameters\+G\+P\+R}}
+\index{Model\+Parameters\+G\+P\+R@{Model\+Parameters\+G\+P\+R}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{Model\+Parameters\+G\+P\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\+Parameters\+G\+P\+R} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{train\+\_\+inputs, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{train\+\_\+targets, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{gram, }
+\item[{double}]{maximum\+\_\+covariance, }
+\item[{double}]{length}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1ModelParametersGPR_a86bc19c8639d6a338726668c9d833278}
+
+
+Constructor for the model parameters of the G\+P\+R function approximator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em train\+\_\+inputs} & The training samples provided (input values) \\
+\hline
+\mbox{\tt in}  & {\em train\+\_\+targets} & The training samples provided (target values) \\
+\hline
+\mbox{\tt in}  & {\em gram} & The Gram matrix, i.\+e. the covariances between all combination of input samples \\
+\hline
+\mbox{\tt in}  & {\em maximum\+\_\+covariance} & The maximum allowable covariance of the covar function (aka sigma) \\
+\hline
+\mbox{\tt in}  & {\em length} & Length 'l' of the isotropic Gaussian covariance function, i.\+e. sigma$^\wedge$2 exp(-\/(x-\/x')$^\wedge$2/2l$^\wedge$2) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 55 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+56 :
+57   train\_inputs\_(train\_inputs),
+58   train\_targets\_(train\_targets),
+59   gram\_(\hyperlink{classDmpBbo_1_1ModelParametersGPR_a9020e3c52d3e8b18d8d3caf675ae409e}{gram}),
+60   maximum\_covariance\_(\hyperlink{classDmpBbo_1_1ModelParametersGPR_a298a9f1cca5f13135bb2b4334a56c734}{maximum\_covariance}),
+61   sigmas\_(VectorXd::Constant(train\_inputs\_.cols(),length))
+62 \{
+63   assert(gram\_.rows()==gram\_.cols());
+64   assert(train\_inputs\_.rows()==gram\_.rows());
+65   assert(train\_inputs\_.rows()==train\_targets\_.rows());
+66   assert(maximum\_covariance\_>0);
+67   assert(length>0);
+68   
+69   gram\_inv\_ = gram\_.inverse();
+70   gram\_inv\_targets\_ = gram\_inv\_ * train\_targets\_.col(0);
+71 
+72 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a4c282bb545b3d48bb4b9d095d627c7fc}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!Model\+Parameters\+G\+P\+R@{Model\+Parameters\+G\+P\+R}}
+\index{Model\+Parameters\+G\+P\+R@{Model\+Parameters\+G\+P\+R}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{Model\+Parameters\+G\+P\+R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\+Parameters\+G\+P\+R} (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{train\+\_\+inputs, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{train\+\_\+targets, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{gram, }
+\item[{double}]{maximum\+\_\+covariance, }
+\item[{const Eigen\+::\+Vector\+Xd \&}]{sigmas}
+\end{DoxyParamCaption}
+)}}\label{classDmpBbo_1_1ModelParametersGPR_a4c282bb545b3d48bb4b9d095d627c7fc}
+
+
+Constructor for the model parameters of the G\+P\+R function approximator. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em train\+\_\+inputs} & The training samples provided (input values) \\
+\hline
+\mbox{\tt in}  & {\em train\+\_\+targets} & The training samples provided (target values) \\
+\hline
+\mbox{\tt in}  & {\em gram} & The Gram matrix, i.\+e. the covariances between all combination of input samples \\
+\hline
+\mbox{\tt in}  & {\em maximum\+\_\+covariance} & The maximum allowable covariance of the covar function (aka sigma) \\
+\hline
+\mbox{\tt in}  & {\em sigmas} & Standard deviations, i.\+e. on the diagonal of the covariance matrices of the Gaussian covariance function. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 74 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+75 :
+76   train\_inputs\_(train\_inputs),
+77   train\_targets\_(train\_targets),
+78   gram\_(\hyperlink{classDmpBbo_1_1ModelParametersGPR_a9020e3c52d3e8b18d8d3caf675ae409e}{gram}),
+79   maximum\_covariance\_(\hyperlink{classDmpBbo_1_1ModelParametersGPR_a298a9f1cca5f13135bb2b4334a56c734}{maximum\_covariance}),
+80   sigmas\_(sigmas)
+81 \{
+82   assert(gram\_.rows()==gram\_.cols());
+83   assert(train\_inputs\_.rows()==gram\_.rows());
+84   assert(train\_inputs\_.rows()==train\_targets\_.rows());
+85   assert(sigmas\_.size()==train\_inputs\_.cols());
+86   assert(maximum\_covariance\_>0);
+87   
+88   gram\_inv\_ = gram\_.inverse();
+89   gram\_inv\_targets\_ = gram\_inv\_ * train\_targets\_.col(0);
+90 
+91 \}
+\end{DoxyCode}
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a1aca816b42cf0d36118be0ab91120d77}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_a1aca816b42cf0d36118be0ab91120d77}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_af084bff2ddd6233e9a898faa23f6195c}{Model\+Parameters}.
+
+
+
+Definition at line 125 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+126 \{
+127   \hyperlink{BoostSerializationToString_8hpp_a244fa2647b6577d9be517958dccbb5e8}{RETURN\_STRING\_FROM\_BOOST\_SERIALIZATION\_XML}(\textcolor{stringliteral}{"ModelParametersGPR"}
+      );
+128 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a0a71d403a2e0560e058c03394648d773}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!clone@{clone}}
+\index{clone@{clone}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Model\+Parameters} $\ast$ clone (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_a0a71d403a2e0560e058c03394648d773}
+
+
+Return a pointer to a deep copy of the \hyperlink{classDmpBbo_1_1ModelParameters}{Model\+Parameters} object. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a deep copy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_a491a5c84b21c8577748ca7e83a9b4751}{Model\+Parameters}.
+
+
+
+Definition at line 93 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+93                                                      \{
+94   \textcolor{keywordflow}{return} \textcolor{keyword}{new} \hyperlink{classDmpBbo_1_1ModelParametersGPR_a86bc19c8639d6a338726668c9d833278}{ModelParametersGPR}(train\_inputs\_,train\_targets\_,gram\_,maximum\_covariance\_,
+      sigmas\_); 
+95 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_af5a550bcf65d5a29a153a594cc4e3fa1}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}}
+\index{get\+Expected\+Input\+Dim@{get\+Expected\+Input\+Dim}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{get\+Expected\+Input\+Dim}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Expected\+Input\+Dim (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_af5a550bcf65d5a29a153a594cc4e3fa1}
+
+
+The expected dimensionality of the input data. 
+
+\begin{DoxyReturn}{Returns}
+Expected dimensionality of the input data 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_af4d8412e83487a72b7f8929c716d6d8f}{Model\+Parameters}.
+
+
+
+Definition at line 67 of file Model\+Parameters\+G\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+67                                        \{
+68     \textcolor{keywordflow}{return} train\_inputs\_.cols();
+69   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a887f4747734bd8b7cc4f799092ff31b4}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!get\+Selectable\+Parameters@{get\+Selectable\+Parameters}}
+\index{get\+Selectable\+Parameters@{get\+Selectable\+Parameters}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{get\+Selectable\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Selectable\+Parameters (
+\begin{DoxyParamCaption}
+\item[{std\+::set$<$ std\+::string $>$ \&}]{selected\+\_\+values\+\_\+labels}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_a887f4747734bd8b7cc4f799092ff31b4}
+
+
+Return all the names of the parameter types that can be selected. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em selected\+\_\+values\+\_\+labels} & Names of the parameter types that can be selected \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ac378b5f6e435af19251fb6537ba30ade}{Parameterizable}.
+
+
+
+Definition at line 130 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+131 \{
+132   selected\_values\_labels = set<string>();
+133 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a9dba1f93e426e7511630ec1ece4ace17}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}}
+\index{get\+Parameter\+Vector\+Mask@{get\+Parameter\+Vector\+Mask}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{get\+Parameter\+Vector\+Mask}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+Mask (
+\begin{DoxyParamCaption}
+\item[{const std\+::set$<$ std\+::string $>$}]{selected\+\_\+values\+\_\+labels, }
+\item[{Eigen\+::\+Vector\+Xi \&}]{selected\+\_\+mask}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_a9dba1f93e426e7511630ec1ece4ace17}
+
+
+Get a mask for selecting parameters. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em selected\+\_\+values\+\_\+labels} & Labels of the selected parameter values \\
+\hline
+\mbox{\tt out}  & {\em selected\+\_\+mask} & A mask indicating indices of selected parameters. 0 indicates not selected, $>$0 indicates selected.\\
+\hline
+\end{DoxyParams}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ In this case, if selected\+\_\+values\+\_\+labels contains \char`\"{}centers\char`\"{} and \char`\"{}slopes\char`\"{}, the mask will be\+: \begin{DoxyVerb}    centers     widths    slopes
+[   1   1   1  0  0  0   3   3   3 ]
+\end{DoxyVerb}
+ The '0' indicates that these parameters are not selected. The other ones have different numbers so that they may be discerned from one another (as required in \hyperlink{classDmpBbo_1_1Parameterizable_a83d42bcdb0962117720b028baecbfbcf}{Parameterizable\+::get\+Parameter\+Vector\+Selected\+Min\+Max} for instance. 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ae7f6cbc5723ed4734ded5f2ba59bd366}{Parameterizable}.
+
+
+
+Definition at line 136 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+137 \{
+138   selected\_mask.resize(0);
+139 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a29429ff2771d1e56cfba7250d38da4b1}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}}
+\index{get\+Parameter\+Vector\+All@{get\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{get\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void get\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_a29429ff2771d1e56cfba7250d38da4b1}
+
+
+Return a vector that returns all available parameter values. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aab955bec57f074a991b8be31d6ce54ca}{Parameterizable\+::get\+Parameter\+Vector\+Selected}, which return only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_addcd9c243e3d9e104c9a4513c81e3b5b}{Parameterizable}.
+
+
+
+Definition at line 141 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+142 \{
+143   values.resize(\hyperlink{classDmpBbo_1_1ModelParametersGPR_ab24d2485b3b795b516f4844f225100eb}{getParameterVectorAllSize}());
+144   values.resize(0);
+145 \};
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1ModelParametersGPR_a29429ff2771d1e56cfba7250d38da4b1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_ab24d2485b3b795b516f4844f225100eb}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}}
+\index{get\+Parameter\+Vector\+All\+Size@{get\+Parameter\+Vector\+All\+Size}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{get\+Parameter\+Vector\+All\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Parameter\+Vector\+All\+Size (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_ab24d2485b3b795b516f4844f225100eb}
+
+
+Get the size of the parameter values vector when it contains all available parameter values. 
+
+\begin{DoxyReturn}{Returns}
+The size of the parameter vector
+\end{DoxyReturn}
+For instance, if the parameters consists of centers, widths and slopes the parameter values vector will be something like \begin{DoxyVerb}    centers     widths    slopes
+[ 100 110 120 10 10 10 0.4 0.7 0.4 ]
+\end{DoxyVerb}
+ then \hyperlink{classDmpBbo_1_1ModelParametersGPR_ab24d2485b3b795b516f4844f225100eb}{get\+Parameter\+Vector\+All\+Size()} will return 9 
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_ab89eda9a1c1ba010db81002975e6e52c}{Parameterizable}.
+
+
+
+Definition at line 75 of file Model\+Parameters\+G\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+76   \{
+77     \textcolor{keywordflow}{return} 0;
+78   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a125cc60559b55f7348beb15f25834b6f}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!kernel\+Activations@{kernel\+Activations}}
+\index{kernel\+Activations@{kernel\+Activations}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{kernel\+Activations}]{\setlength{\rightskip}{0pt plus 5cm}void kernel\+Activations (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{inputs, }
+\item[{Eigen\+::\+Matrix\+Xd \&}]{kernel\+\_\+activations}
+\end{DoxyParamCaption}
+) const}}\label{classDmpBbo_1_1ModelParametersGPR_a125cc60559b55f7348beb15f25834b6f}
+
+
+Get the normalized kernel activations for given inputs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em inputs} & The input data (size\+: n\+\_\+samples X n\+\_\+dims) \\
+\hline
+\mbox{\tt out}  & {\em kernel\+\_\+activations} & The normalized kernel activations, computed for each of the sampels in the input data (size\+: n\+\_\+samples X n\+\_\+basis\+\_\+functions) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+98 \{
+99   
+100   MatrixXd centers = train\_inputs\_;
+101   \textcolor{keywordtype}{int} n\_basis\_functions = centers.rows();
+102   \textcolor{comment}{// All basis functions have the same width}
+103   MatrixXd widths  = sigmas\_.transpose().colwise().replicate(n\_basis\_functions); 
+104   
+105   \textcolor{keywordtype}{bool} normalize\_activations = \textcolor{keyword}{false};
+106   \textcolor{keywordtype}{bool} asymmetric\_kernels = \textcolor{keyword}{false};
+107   BasisFunction::Gaussian::activations(centers,widths,inputs,kernel\_activations,normalize\_activations,
+      asymmetric\_kernels);
+108   
+109   kernel\_activations *= maximum\_covariance\_;
+110 \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a6e3534f93333334c2f0126f8fc4d29d1}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!to\+Unified\+Model@{to\+Unified\+Model}}
+\index{to\+Unified\+Model@{to\+Unified\+Model}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{to\+Unified\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unified\+Model} $\ast$ to\+Unified\+Model (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_a6e3534f93333334c2f0126f8fc4d29d1}
+
+
+Convert these model parameters to unified model parameters. 
+
+\begin{DoxyReturn}{Returns}
+Unified model parameter representation (N\+U\+L\+L if not implemented for a particular subclass) 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classDmpBbo_1_1ModelParameters_a9d1c72e871e8fa37857f9ce7eabe5a04}{Model\+Parameters}.
+
+
+
+Definition at line 150 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+151 \{
+152  
+153   MatrixXd centers = train\_inputs\_;
+154   \textcolor{keywordtype}{int} n\_basis\_functions = centers.rows();
+155   \textcolor{comment}{// All basis functions have the same width}
+156   MatrixXd widths  = sigmas\_.transpose().colwise().replicate(n\_basis\_functions); 
+157   MatrixXd \hyperlink{classDmpBbo_1_1ModelParametersGPR_ab0065893578a0770652450ebfe930481}{weights} = gram\_inv\_targets\_*maximum\_covariance\_;
+158   \textcolor{keywordtype}{bool} normalized\_basis\_functions = \textcolor{keyword}{false};
+159 
+160   \textcolor{keywordflow}{return} \textcolor{keyword}{new} UnifiedModel(centers, widths, weights, normalized\_basis\_functions); 
+161   
+162 \}
+\end{DoxyCode}
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=257pt]{classDmpBbo_1_1ModelParametersGPR_a6e3534f93333334c2f0126f8fc4d29d1_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a298a9f1cca5f13135bb2b4334a56c734}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!maximum\+\_\+covariance@{maximum\+\_\+covariance}}
+\index{maximum\+\_\+covariance@{maximum\+\_\+covariance}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{maximum\+\_\+covariance}]{\setlength{\rightskip}{0pt plus 5cm}double maximum\+\_\+covariance (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ModelParametersGPR_a298a9f1cca5f13135bb2b4334a56c734}
+
+
+Get the maximum covariance value of the covariance function. 
+
+\begin{DoxyReturn}{Returns}
+Maximum covariance 
+\end{DoxyReturn}
+
+
+Definition at line 91 of file Model\+Parameters\+G\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+91 \{ \textcolor{keywordflow}{return} maximum\_covariance\_; \} ;
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_ab0065893578a0770652450ebfe930481}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!weights@{weights}}
+\index{weights@{weights}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{weights}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Vector\+Xd\& weights (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ModelParametersGPR_ab0065893578a0770652450ebfe930481}
+
+
+Return the weights, which is equivalent to $ \mathbf{G}^-1\mathfb{y} $, where G is the Gram matrix, and y is the target data. 
+
+\begin{DoxyReturn}{Returns}
+Weights 
+\end{DoxyReturn}
+
+
+Definition at line 97 of file Model\+Parameters\+G\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+97 \{ \textcolor{keywordflow}{return} gram\_inv\_targets\_; \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a7f75d2b936b5f42a2cee13100b9a0386}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!gram\+\_\+inv@{gram\+\_\+inv}}
+\index{gram\+\_\+inv@{gram\+\_\+inv}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{gram\+\_\+inv}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix\+Xd\& gram\+\_\+inv (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ModelParametersGPR_a7f75d2b936b5f42a2cee13100b9a0386}
+
+
+Return the inverse of the Gram matrix. 
+
+\begin{DoxyReturn}{Returns}
+Inverse of the Gram matrix 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Model\+Parameters\+G\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+103 \{ \textcolor{keywordflow}{return} gram\_inv\_; \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a9020e3c52d3e8b18d8d3caf675ae409e}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!gram@{gram}}
+\index{gram@{gram}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{gram}]{\setlength{\rightskip}{0pt plus 5cm}const Eigen\+::\+Matrix\+Xd\& gram (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{classDmpBbo_1_1ModelParametersGPR_a9020e3c52d3e8b18d8d3caf675ae409e}
+
+
+Return the Gram matrix. 
+
+\begin{DoxyReturn}{Returns}
+Gram matrix 
+\end{DoxyReturn}
+
+
+Definition at line 109 of file Model\+Parameters\+G\+P\+R.\+hpp.
+
+
+\begin{DoxyCode}
+109 \{ \textcolor{keywordflow}{return} gram\_; \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_a9d3c8f22e8237a805af4935a647e5a50}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}}
+\index{set\+Parameter\+Vector\+All@{set\+Parameter\+Vector\+All}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{set\+Parameter\+Vector\+All}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Parameter\+Vector\+All (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Vector\+Xd \&}]{values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1ModelParametersGPR_a9d3c8f22e8237a805af4935a647e5a50}
+
+
+Set all available parameter values with one vector. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em values} & All available parameter values in one vector. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Contrast this with \hyperlink{classDmpBbo_1_1Parameterizable_aee501e63a46d63eb58a6f271bf093b9d}{Parameterizable\+::set\+Parameter\+Vector\+Selected}, which sets only the S\+E\+L\+E\+C\+T\+E\+D parameter values. Selecting parameters is done with \hyperlink{classDmpBbo_1_1Parameterizable_a8a976b5db2d1809ece10e431816f0f27}{Parameterizable\+::set\+Selected\+Parameters} 
+\end{DoxyRemark}
+
+
+Implements \hyperlink{classDmpBbo_1_1Parameterizable_acef2ee975b497baf60b1f38da2b65f0d}{Parameterizable}.
+
+
+
+Definition at line 147 of file Model\+Parameters\+G\+P\+R.\+cpp.
+
+
+\begin{DoxyCode}
+147                                                                      \{
+148 \};
+\end{DoxyCode}
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1ModelParametersGPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R@{Dmp\+Bbo\+::\+Model\+Parameters\+G\+P\+R}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1ModelParametersGPR_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 131 of file Model\+Parameters\+G\+P\+R.\+hpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{ModelParametersGPR_8hpp}{Model\+Parameters\+G\+P\+R.\+hpp}\item 
+\hyperlink{ModelParametersGPR_8cpp}{Model\+Parameters\+G\+P\+R.\+cpp}\end{DoxyCompactItemize}

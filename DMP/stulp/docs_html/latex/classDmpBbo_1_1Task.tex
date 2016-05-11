@@ -1,0 +1,215 @@
+\hypertarget{classDmpBbo_1_1Task}{\subsection{Task Class Reference}
+\label{classDmpBbo_1_1Task}\index{Task@{Task}}
+}
+
+
+Interface for cost functions, which define a task.  
+
+
+
+
+{\ttfamily \#include $<$Task.\+hpp$>$}
+
+
+
+Inheritance diagram for Task\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classDmpBbo_1_1Task__inherit__graph}
+\end{center}
+\end{figure}
+\subsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classDmpBbo_1_1Task_a473ecda5052be4eb800d51699ec34eeb}{evaluate} (const Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars, Eigen\+::\+Vector\+Xd \&costs) const 
+\begin{DoxyCompactList}\small\item\em The cost function which defines the task. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classDmpBbo_1_1Task_a6534c0378bdfa540946ce2a02c914417}{evaluate} (const Eigen\+::\+Matrix\+Xd \&cost\+\_\+vars, const Eigen\+::\+Matrix\+Xd \&task\+\_\+parameters, Eigen\+::\+Vector\+Xd \&costs) const =0
+\begin{DoxyCompactList}\small\item\em The cost function which defines the task. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classDmpBbo_1_1Task_aed72bdbcdd0ed6359fa863b5a057adb7}{save\+Perform\+Rollouts\+Plot\+Script} (std\+::string directory) const 
+\begin{DoxyCompactList}\small\item\em Save a python script that is able to visualize the rollouts, given the cost-\/relevant variables stored in a file. \end{DoxyCompactList}\item 
+virtual std\+::string \hyperlink{classDmpBbo_1_1Task_af084bff2ddd6233e9a898faa23f6195c}{to\+String} (void) const =0
+\begin{DoxyCompactList}\small\item\em Returns a string representation of the object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDmpBbo_1_1Task_ac98d07dd8f7b70e16ccb9a01abf56b9c}{boost\+::serialization\+::access}
+\begin{DoxyCompactList}\small\item\em Give boost serialization access to private members. \end{DoxyCompactList}\item 
+std\+::ostream \& \hyperlink{classDmpBbo_1_1Task_aeb28524e35e48b815debf14f2cbe4543}{operator$<$$<$} (std\+::ostream \&output, const \hyperlink{classDmpBbo_1_1Task}{Task} \&task)
+\begin{DoxyCompactList}\small\item\em Write to output stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Detailed Description}
+Interface for cost functions, which define a task. 
+
+For further information see the section on \hyperlink{page_bbo_sec_bbo_task_and_task_solver}{Cost\+Function vs Task/\+Task\+Solver} 
+
+Definition at line 37 of file Task.\+hpp.
+
+
+
+\subsubsection{Member Function Documentation}
+\hypertarget{classDmpBbo_1_1Task_a473ecda5052be4eb800d51699ec34eeb}{\index{Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}}
+\paragraph[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void evaluate (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{costs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1Task_a473ecda5052be4eb800d51699ec34eeb}
+
+
+The cost function which defines the task. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cost\+\_\+vars} & All the variables relevant to computing the cost. These are determined by \hyperlink{classDmpBbo_1_1TaskSolver_aea5c8e55f828886dae52bacf466dc707}{Task\+Solver\+::perform\+Rollouts()}. For further information see the section on \hyperlink{page_bbo_sec_bbo_task_and_task_solver}{Cost\+Function vs Task/\+Task\+Solver} \\
+\hline
+\mbox{\tt out}  & {\em costs} & The scalar cost for each sample. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 45 of file Task.\+hpp.
+
+
+\begin{DoxyCode}
+46   \{
+47     \textcolor{keywordtype}{int} n\_task\_pars = 0;
+48     Eigen::MatrixXd task\_parameters(cost\_vars.rows(),n\_task\_pars);
+49     \textcolor{keywordflow}{return} \hyperlink{classDmpBbo_1_1Task_a473ecda5052be4eb800d51699ec34eeb}{evaluate}(cost\_vars,task\_parameters, costs);
+50   \};
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Task_a6534c0378bdfa540946ce2a02c914417}{\index{Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}}
+\paragraph[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}virtual void evaluate (
+\begin{DoxyParamCaption}
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{cost\+\_\+vars, }
+\item[{const Eigen\+::\+Matrix\+Xd \&}]{task\+\_\+parameters, }
+\item[{Eigen\+::\+Vector\+Xd \&}]{costs}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1Task_a6534c0378bdfa540946ce2a02c914417}
+
+
+The cost function which defines the task. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cost\+\_\+vars} & All the variables relevant to computing the cost. These are determined by \hyperlink{classDmpBbo_1_1TaskSolver_aea5c8e55f828886dae52bacf466dc707}{Task\+Solver\+::perform\+Rollouts()}. For further information see the section on \hyperlink{page_bbo_sec_bbo_task_and_task_solver}{Cost\+Function vs Task/\+Task\+Solver} \\
+\hline
+\mbox{\tt in}  & {\em task\+\_\+parameters} & Optional parameters of the task, and thus the cost function. \\
+\hline
+\mbox{\tt out}  & {\em costs} & The scalar cost for each sample. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{classDmpBbo_1_1TaskViapoint_a715d478b0c2d6b896afff04f07e86e3b}{Task\+Viapoint}.
+
+\hypertarget{classDmpBbo_1_1Task_aed72bdbcdd0ed6359fa863b5a057adb7}{\index{Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}!save\+Perform\+Rollouts\+Plot\+Script@{save\+Perform\+Rollouts\+Plot\+Script}}
+\index{save\+Perform\+Rollouts\+Plot\+Script@{save\+Perform\+Rollouts\+Plot\+Script}!Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}}
+\paragraph[{save\+Perform\+Rollouts\+Plot\+Script}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool save\+Perform\+Rollouts\+Plot\+Script (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{directory}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{classDmpBbo_1_1Task_aed72bdbcdd0ed6359fa863b5a057adb7}
+
+
+Save a python script that is able to visualize the rollouts, given the cost-\/relevant variables stored in a file. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em directory} & Directory in which to save the python script \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if saving the script was successful, false otherwise 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classDmpBbo_1_1TaskViapoint_aba32082ed78ee88beda0e8f907244e65}{Task\+Viapoint}.
+
+
+
+Definition at line 65 of file Task.\+hpp.
+
+
+\begin{DoxyCode}
+66   \{
+67     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+68   \}
+\end{DoxyCode}
+\hypertarget{classDmpBbo_1_1Task_af084bff2ddd6233e9a898faa23f6195c}{\index{Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}}
+\paragraph[{to\+String}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::string to\+String (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classDmpBbo_1_1Task_af084bff2ddd6233e9a898faa23f6195c}
+
+
+Returns a string representation of the object. 
+
+\begin{DoxyReturn}{Returns}
+A string representation of the object. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classDemoTaskApproximateQuadraticFunction_a1aca816b42cf0d36118be0ab91120d77}{Demo\+Task\+Approximate\+Quadratic\+Function}, and \hyperlink{classDmpBbo_1_1TaskViapoint_a1aca816b42cf0d36118be0ab91120d77}{Task\+Viapoint}.
+
+
+
+\subsubsection{Friends And Related Function Documentation}
+\hypertarget{classDmpBbo_1_1Task_ac98d07dd8f7b70e16ccb9a01abf56b9c}{\index{Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}!boost\+::serialization\+::access@{boost\+::serialization\+::access}}
+\index{boost\+::serialization\+::access@{boost\+::serialization\+::access}!Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}}
+\paragraph[{boost\+::serialization\+::access}]{\setlength{\rightskip}{0pt plus 5cm}friend class boost\+::serialization\+::access\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1Task_ac98d07dd8f7b70e16ccb9a01abf56b9c}
+
+
+Give boost serialization access to private members. 
+
+
+
+Definition at line 90 of file Task.\+hpp.
+
+\hypertarget{classDmpBbo_1_1Task_aeb28524e35e48b815debf14f2cbe4543}{\index{Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Dmp\+Bbo\+::\+Task@{Dmp\+Bbo\+::\+Task}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\+::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\+::ostream \&}]{output, }
+\item[{const {\bf Task} \&}]{task}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classDmpBbo_1_1Task_aeb28524e35e48b815debf14f2cbe4543}
+
+
+Write to output stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em output} & Output stream to which to write to \\
+\hline
+\mbox{\tt in}  & {\em task} & \hyperlink{classDmpBbo_1_1Task}{Task} object to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Output to which the object was written
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Calls virtual function \hyperlink{classDmpBbo_1_1Task_af084bff2ddd6233e9a898faa23f6195c}{Task\+::to\+String}, which must be implemented by subclasses\+: \href{http://stackoverflow.com/questions/4571611/virtual-operator}{\tt http\+://stackoverflow.\+com/questions/4571611/virtual-\/operator} 
+\end{DoxyRemark}
+
+
+Definition at line 83 of file Task.\+hpp.
+
+
+\begin{DoxyCode}
+83                                                                       \{
+84     output << task.toString();
+85     \textcolor{keywordflow}{return} output;
+86   \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Task_8hpp}{Task.\+hpp}\end{DoxyCompactItemize}
